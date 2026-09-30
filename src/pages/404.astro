@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/site';
+---
+
+<Base title="找不到页面">
+  <header class="page-head">
+    <h1>这页不在菜单上</h1>
+    <p class="lede">链接可能写错了，或者这篇还没写。可以从 <a href={url()}>首页</a>、<a href={url('recipes')}>菜谱</a> 或 <a href={url('principles')}>原理</a> 找起。</p>
+  </header>
+</Base>

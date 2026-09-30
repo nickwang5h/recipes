@@ -1,0 +1,201 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatQty } from '../lib/scale';
+
+interface Props {
+  recipe: CollectionEntry<'recipes'>;
+}
+
+const { recipe } = Astro.props;
+const { servings, ingredients } = recipe.data;
+---
+
+<aside class="recipe-aside" data-recipe-kit data-slug={recipe.id} data-base={servings} aria-labelledby="ingredients-title">
+  <h2 id="ingredients-title">配料</h2>
+  <p class="servings-static">{servings} 人份</p>
+  <div class="kit-controls" hidden>
+    <div class="servings" role="group" aria-label="份量">
+      <span class="servings-label">份量</span>
+      <button class="icon-btn" type="button" data-step="-1" aria-label="减少一人份">−</button>
+      <output class="servings-value" aria-live="polite">{servings}</output>
+      <button class="icon-btn" type="button" data-step="1" aria-label="增加一人份">+</button>
+      <span class="servings-label">人</span>
+    </div>
+    <div class="kit-actions">
+      <button class="text-btn" type="button" data-wake hidden aria-pressed="false">屏幕常亮</button>
+      <button class="text-btn" type="button" data-reset>重置勾选与份量</button>
+    </div>
+  </div>
+  <p class="scale-note" hidden>配料已按新份量换算；步骤里提到的用量仍按 {servings} 人份。</p>
+
+  {ingredients.map((group, g) => (
+    <>
+      {group.group && <h3>{group.group}</h3>}
+      <ul class="ingredients">
+        {group.items.map((item, i) => (
+          <li>
+            <label class="ing-row">
+              <input type="checkbox" data-ing={`${g}-${i}`} />
+              <span class="ing-text">
+                {item.qty !== undefined && (
+                  <span class="ing-qty" data-qty={item.qty} data-unit={item.unit ?? ''}>
+                    <span class="n">{formatQty(item.qty, item.unit)}</span>{item.unit && <> {item.unit}</>}
+                  </span>
+                )}
+                <span class="ing-name">{item.name}</span>
+                {item.note && <span class="ing-note">{item.note}</span>}
+              </span>
+            </label>
+          </li>
+        ))}
+      </ul>
+    </>
+  ))}
+</aside>
+
+<script>
+  import { formatQty, scaleQty } from '../lib/scale';
+
+  type State = { servings: number; ingredients: string[]; steps: number[] };
+
+  const MIN = 1;
+  const MAX = 24;
+
+  for (const kit of document.querySelectorAll<HTMLElement>('[data-recipe-kit]')) {
+    const slug = kit.dataset.slug!;
+    const base = Number(kit.dataset.base);
+    const key = `recipes:v1:${slug}`;
+    const controls = kit.querySelector<HTMLElement>('.kit-controls')!;
+    const output = kit.querySelector('output')!;
+    const note = kit.querySelector<HTMLElement>('.scale-note')!;
+    const minus = kit.querySelector<HTMLButtonElement>('[data-step="-1"]')!;
+    const plus = kit.querySelector<HTMLButtonElement>('[data-step="1"]')!;
+    const wakeBtn = kit.querySelector<HTMLButtonElement>('[data-wake]')!;
+    const resetBtn = kit.querySelector<HTMLButtonElement>('[data-reset]')!;
+    const ingBoxes = [...kit.querySelectorAll<HTMLInputElement>('input[data-ing]')];
+    const qtys = [...kit.querySelectorAll<HTMLElement>('[data-qty]')];
+    const stepItems = [...document.querySelectorAll<HTMLLIElement>('.recipe-content ol > li')];
+
+    const load = (): State => {
+      const fallback = { servings: base, ingredients: [], steps: [] };
+      try {
+        const saved = JSON.parse(localStorage.getItem(key) ?? 'null');
+        if (!saved || typeof saved !== 'object') return fallback;
+        const servings = Number.isInteger(saved.servings) && saved.servings >= MIN && saved.servings <= MAX ? saved.servings : base;
+        return {
+          servings,
+          ingredients: Array.isArray(saved.ingredients) ? saved.ingredients.filter((x: unknown) => typeof x === 'string') : [],
+          steps: Array.isArray(saved.steps) ? saved.steps.filter((x: unknown) => Number.isInteger(x)) : [],
+        };
+      } catch {
+        return fallback;
+      }
+    };
+
+    let state = load();
+
+    const save = () => {
+      try { localStorage.setItem(key, JSON.stringify(state)); } catch {}
+    };
+
+    const renderServings = () => {
+      output.textContent = String(state.servings);
+      minus.disabled = state.servings <= MIN;
+      plus.disabled = state.servings >= MAX;
+      note.hidden = state.servings === base;
+      for (const el of qtys) {
+        const qty = Number(el.dataset.qty);
+        const unit = el.dataset.unit || undefined;
+        el.querySelector('.n')!.textContent = formatQty(scaleQty(qty, base, state.servings), unit);
+      }
+    };
+
+    // Steps come from Markdown, so checkboxes are added here rather than at build time.
+    const stepBoxes = stepItems.map((li, i) => {
+      const box = document.createElement('input');
+      box.type = 'checkbox';
+      box.className = 'step-check';
+      box.setAttribute('aria-label', `第 ${i + 1} 步已完成`);
+      li.classList.add('checkable');
+      li.prepend(box);
+      li.addEventListener('click', (event) => {
+        const target = event.target as HTMLElement;
+        if (target === box || target.closest('a')) return;
+        box.checked = !box.checked;
+        box.dispatchEvent(new Event('change'));
+      });
+      box.addEventListener('change', () => {
+        li.classList.toggle('step-done', box.checked);
+        state.steps = stepBoxes.flatMap((b, j) => (b.checked ? [j] : []));
+        save();
+      });
+      return box;
+    });
+
+    const renderChecks = () => {
+      for (const box of ingBoxes) box.checked = state.ingredients.includes(box.dataset.ing!);
+      stepBoxes.forEach((box, i) => {
+        box.checked = state.steps.includes(i);
+        stepItems[i].classList.toggle('step-done', box.checked);
+      });
+    };
+
+    for (const box of ingBoxes) {
+      box.addEventListener('change', () => {
+        state.ingredients = ingBoxes.filter((b) => b.checked).map((b) => b.dataset.ing!);
+        save();
+      });
+    }
+
+    for (const btn of [minus, plus]) {
+      btn.addEventListener('click', () => {
+        state.servings = Math.min(MAX, Math.max(MIN, state.servings + Number(btn.dataset.step)));
+        renderServings();
+        save();
+      });
+    }
+
+    resetBtn.addEventListener('click', () => {
+      state = { servings: base, ingredients: [], steps: [] };
+      renderServings();
+      renderChecks();
+      save();
+    });
+
+    // Screen wake lock: offered only where the browser supports it.
+    if ('wakeLock' in navigator) {
+      let lock: WakeLockSentinel | null = null;
+      let wanted = false;
+      const request = async () => {
+        try {
+          lock = await navigator.wakeLock.request('screen');
+          lock.addEventListener('release', () => {
+            lock = null;
+            if (!wanted) wakeBtn.setAttribute('aria-pressed', 'false');
+          });
+          wakeBtn.setAttribute('aria-pressed', 'true');
+        } catch {
+          wanted = false;
+          wakeBtn.setAttribute('aria-pressed', 'false');
+        }
+      };
+      wakeBtn.hidden = false;
+      wakeBtn.addEventListener('click', async () => {
+        wanted = !wanted;
+        if (wanted) await request();
+        else {
+          await lock?.release();
+          wakeBtn.setAttribute('aria-pressed', 'false');
+        }
+      });
+      document.addEventListener('visibilitychange', () => {
+        if (wanted && !lock && document.visibilityState === 'visible') request();
+      });
+    }
+
+    kit.querySelector<HTMLElement>('.servings-static')!.hidden = true;
+    controls.hidden = false;
+    renderServings();
+    renderChecks();
+  }
+</script>

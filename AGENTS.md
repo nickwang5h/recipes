@@ -1,0 +1,26 @@
+# recipes.nickwang.xyz
+
+Astro static site: Chinese / French / Italian cooking principles and recipes, Chinese only for now.
+Design spec: `docs/superpowers/specs/2026-09-30-recipes-site-design.md`.
+
+## Content
+
+- Three collections under `src/content/<collection>/zh/`: `cuisines`, `principles`, `recipes`.
+  Schemas live in `src/content.config.ts`; a wrong field or reference fails the build.
+- File name = slug = public URL. Use English or romanized original names (`mapo-tofu`). Never rename
+  a published slug.
+- Recipes: ingredients go in front matter (`qty` only when it should scale). The body has
+  `## 步骤` as the only ordered list (each item becomes a checkable step) and `## 要点` with
+  2–4 failure causes linked to principles.
+- Principles: explain *why*; link recipes and other principles with `/principles/<slug>/` paths.
+  "用到它的菜" is generated from recipe front matter — do not write it by hand.
+- Every principle and recipe needs at least one reliable source. Do not invent personal experience.
+- Chinese prose: full-width punctuation and “” quotes; units as `g`, `ml`, `茶匙`, `汤匙`.
+
+## Commands
+
+- `npm run dev` — local dev server
+- `npm test` — scaling/rounding tests
+- `npm run build` — type check, build, internal link check
+
+Pushing `main` deploys to Netlify.

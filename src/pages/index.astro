@@ -1,0 +1,69 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { PRINCIPLE_CATEGORIES, type PrincipleCategory } from '../lib/categories';
+import { SITE_TITLE, formatDate, getCuisines, url } from '../lib/site';
+
+const cuisines = await getCuisines();
+const principles = await getCollection('principles');
+const recipes = await getCollection('recipes');
+
+const recent = [
+  ...recipes.map((r) => ({ kind: '菜谱', href: url(`recipes/${r.id}`), title: r.data.title, updated: r.data.updated })),
+  ...principles.map((p) => ({ kind: '原理', href: url(`principles/${p.id}`), title: p.data.title, updated: p.data.updated })),
+]
+  .sort((a, b) => b.updated.getTime() - a.updated.getTime())
+  .slice(0, 6);
+
+const byCategory = (Object.keys(PRINCIPLE_CATEGORIES) as PrincipleCategory[])
+  .map((category) => ({ category, items: principles.filter((p) => p.data.category === category) }))
+  .filter((g) => g.items.length > 0);
+---
+
+<Base>
+  <header class="page-head">
+    <h1>{SITE_TITLE}</h1>
+    <p class="lede">
+      中餐、法餐、意大利菜里那些经典做法，背后常常是同几条物理和化学规律：油和水怎样被留在一起，淀粉什么时候变稠，表面为什么会变褐变香。这里把原理和菜谱分开写，再用链接串起来，做菜时查步骤，闲下来看为什么。
+    </p>
+  </header>
+
+  <section aria-labelledby="cuisines-title">
+    <h2 id="cuisines-title" class="section-title">三个菜系</h2>
+    <div class="cuisine-hero-grid">
+      {cuisines.map((c) => (
+        <a class={`cuisine-hero accent-${c.data.accent}`} href={url(`cuisines/${c.id}`)}>
+          <h3>{c.data.title}</h3>
+          {c.data.original && <span class="original">{c.data.original}</span>}
+          <p>{c.data.summary}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section aria-labelledby="principles-title">
+    <h2 id="principles-title" class="section-title">原理</h2>
+    {byCategory.map(({ category, items }) => (
+      <div style="margin-bottom: 1rem">
+        <h3 style="font-size: 1rem; font-family: var(--font-sans); color: var(--muted); margin: 0 0 0.5rem">{PRINCIPLE_CATEGORIES[category]}</h3>
+        <ul class="chips">
+          {items.map((p) => <li><a class="chip" href={url(`principles/${p.id}`)}>{p.data.title}</a></li>)}
+        </ul>
+      </div>
+    ))}
+  </section>
+
+  <section aria-labelledby="recent-title">
+    <h2 id="recent-title" class="section-title">最近更新</h2>
+    <ul class="link-list">
+      {recent.map((item) => (
+        <li>
+          <a href={item.href}>
+            <span class="title">{item.title}</span>
+            <span class="meta">{item.kind} · {formatDate(item.updated)}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Base>

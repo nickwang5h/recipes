@@ -1,0 +1,66 @@
+/* Palette ported from nickwang.xyz (src/css/custom.css): warm ivory / matte graphite,
+   red primary, and the shared accent set. Cuisines use red, blue and green. */
+
+:root {
+  color-scheme: light;
+  --bg: #f3f0e8;
+  --surface: #e9e5dc;
+  --surface-strong: #dfdacf;
+  --text: #24221e;
+  --muted: #625d53;
+  --border: #d3ccbe;
+  --primary: #b83e30;
+  --primary-strong: #9e3529;
+  --accent-red: #c3473a;
+  --accent-blue: #2f6fca;
+  --accent-green: #2f8359;
+  --accent-yellow: #a66b00;
+  --check: #2f8359;
+
+  --font-sans: "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-reading: "LXGW WenKai", "Kaiti SC", "KaiTi", serif;
+
+  --radius: 10px;
+  --gutter: 16px;
+  --measure: 68ch;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #11120f;
+    --surface: #191a16;
+    --surface-strong: #23241f;
+    --text: #e8e4da;
+    --muted: #a8a397;
+    --border: #33342d;
+    --primary: #ff6855;
+    --primary-strong: #ff8475;
+    --accent-red: #ff6f61;
+    --accent-blue: #73a7ff;
+    --accent-green: #67c58e;
+    --accent-yellow: #f7be3b;
+    --check: #67c58e;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #11120f;
+  --surface: #191a16;
+  --surface-strong: #23241f;
+  --text: #e8e4da;
+  --muted: #a8a397;
+  --border: #33342d;
+  --primary: #ff6855;
+  --primary-strong: #ff8475;
+  --accent-red: #ff6f61;
+  --accent-blue: #73a7ff;
+  --accent-green: #67c58e;
+  --accent-yellow: #f7be3b;
+  --check: #67c58e;
+}
+
+.accent-red { --accent: var(--accent-red); }
+.accent-blue { --accent: var(--accent-blue); }
+.accent-green { --accent: var(--accent-green); }

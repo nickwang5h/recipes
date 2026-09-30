@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatTime, url } from '../lib/site';
+
+interface Props {
+  recipe: CollectionEntry<'recipes'>;
+  cuisine: CollectionEntry<'cuisines'>;
+}
+
+const { recipe, cuisine } = Astro.props;
+const { title, original, summary, time } = recipe.data;
+---
+
+<a class={`card accent-${cuisine.data.accent}`} href={url(`recipes/${recipe.id}`)}>
+  <h3>{title}</h3>
+  {original && <span class="original">{original}</span>}
+  <p>{summary}</p>
+  <div class="meta">
+    <span class={`cuisine-tag accent-${cuisine.data.accent}`}>{cuisine.data.title}</span>
+    <span>{formatTime(time)}</span>
+  </div>
+</a>

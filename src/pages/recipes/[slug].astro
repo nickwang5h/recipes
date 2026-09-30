@@ -1,0 +1,49 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import CuisineTag from '../../components/CuisineTag.astro';
+import RecipeKit from '../../components/RecipeKit.astro';
+import SourceList from '../../components/SourceList.astro';
+import { formatDate, formatTime, url } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const recipes = await getCollection('recipes');
+  return recipes.map((recipe) => ({ params: { slug: recipe.id }, props: { recipe } }));
+}
+
+const { recipe } = Astro.props;
+const { title, original, summary, time, sources, updated } = recipe.data;
+const cuisine = await getEntry(recipe.data.cuisine);
+const principles = await Promise.all(recipe.data.principles.map((ref) => getEntry(ref)));
+const { Content } = await render(recipe);
+---
+
+<Base title={title} description={summary}>
+  <article>
+    <header class="page-head">
+      <div class="eyebrow">
+        <CuisineTag cuisine={cuisine} />
+        <span>{formatTime(time)}</span>
+      </div>
+      <h1>{title}</h1>
+      {original && <p class="original">{original}</p>}
+      <p class="lede">{summary}</p>
+      {principles.length > 0 && (
+        <nav aria-label="用到的原理" style="margin-top: 1.25rem">
+          <ul class="chips">
+            {principles.map((p) => <li><a class="chip" href={url(`principles/${p.id}`)}>{p.data.title}</a></li>)}
+          </ul>
+        </nav>
+      )}
+    </header>
+
+    <div class="recipe-layout">
+      <RecipeKit recipe={recipe} />
+      <div class="prose recipe-body">
+        <div class="recipe-content"><Content /></div>
+        <SourceList sources={sources} />
+        <p class="meta" style="color: var(--muted); font-size: 0.9rem">更新于 {formatDate(updated)}</p>
+      </div>
+    </div>
+  </article>
+</Base>

@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import RecipeCard from '../../components/RecipeCard.astro';
+import { getCuisineMap, getCuisines, url } from '../../lib/site';
+
+const cuisines = await getCuisines();
+const cuisineMap = await getCuisineMap();
+const order = new Map(cuisines.map((c, i) => [c.id, i]));
+const recipes = (await getCollection('recipes')).sort(
+  (a, b) => order.get(a.data.cuisine.id)! - order.get(b.data.cuisine.id)! || a.data.title.localeCompare(b.data.title, 'zh'),
+);
+const base = url('recipes');
+---
+
+<Base title="菜谱" description="中餐、法餐、意大利菜的经典菜谱。">
+  <header class="page-head">
+    <h1>菜谱</h1>
+    <p class="lede">每道菜都标出它用到的原理。份量可以缩放，配料和步骤可以逐项勾掉。</p>
+  </header>
+
+  <nav class="filters chips" aria-label="按菜系筛选" data-filters>
+    <a class="chip" href={base} data-filter="" aria-current="true">全部</a>
+    {cuisines.map((c) => <a class="chip" href={`${base}?cuisine=${c.id}`} data-filter={c.id}>{c.data.title}</a>)}
+  </nav>
+
+  <ul class="card-grid" data-recipe-list>
+    {recipes.map((recipe) => (
+      <li data-cuisine={recipe.data.cuisine.id}>
+        <RecipeCard recipe={recipe} cuisine={cuisineMap.get(recipe.data.cuisine.id)!} />
+      </li>
+    ))}
+  </ul>
+  <p data-empty hidden style="color: var(--muted)">这个菜系还没有菜谱。</p>
+
+  <script>
+    const apply = () => {
+      const filter = new URLSearchParams(location.search).get('cuisine') ?? '';
+      let shown = 0;
+      for (const li of document.querySelectorAll<HTMLElement>('[data-recipe-list] > li')) {
+        const match = !filter || li.dataset.cuisine === filter;
+        li.hidden = !match;
+        if (match) shown++;
+      }
+      for (const a of document.querySelectorAll<HTMLAnchorElement>('[data-filters] a')) {
+        if (a.dataset.filter === filter) a.setAttribute('aria-current', 'true');
+        else a.removeAttribute('aria-current');
+      }
+      document.querySelector<HTMLElement>('[data-empty]')!.hidden = shown > 0;
+    };
+    document.querySelector('[data-filters]')?.addEventListener('click', (event) => {
+      const link = (event.target as HTMLElement).closest('a');
+      if (!link) return;
+      event.preventDefault();
+      history.replaceState(null, '', link.href);
+      apply();
+    });
+    apply();
+  </script>
+</Base>

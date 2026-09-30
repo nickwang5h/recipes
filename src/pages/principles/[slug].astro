@@ -1,0 +1,66 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import RecipeCard from '../../components/RecipeCard.astro';
+import SourceList from '../../components/SourceList.astro';
+import { PRINCIPLE_CATEGORIES } from '../../lib/categories';
+import { formatDate, getCuisines, recipesUsing, url } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const principles = await getCollection('principles');
+  return principles.map((principle) => ({ params: { slug: principle.id }, props: { principle } }));
+}
+
+const { principle } = Astro.props;
+const { title, aliases, category, summary, sources, updated } = principle.data;
+const related = await Promise.all(principle.data.related.map((ref) => getEntry(ref)));
+const cuisines = await getCuisines();
+const users = recipesUsing(principle.id, await getCollection('recipes'));
+const byCuisine = cuisines
+  .map((cuisine) => ({ cuisine, recipes: users.filter((r) => r.data.cuisine.id === cuisine.id) }))
+  .filter((g) => g.recipes.length > 0);
+const { Content } = await render(principle);
+---
+
+<Base title={title} description={summary}>
+  <article>
+    <header class="page-head">
+      <div class="eyebrow">
+        <a href={url('principles')}>原理</a>
+        <span>{PRINCIPLE_CATEGORIES[category]}</span>
+      </div>
+      <h1>{title}</h1>
+      {aliases.length > 0 && <p class="original">{aliases.join(' · ')}</p>}
+      <p class="lede">{summary}</p>
+    </header>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {byCuisine.length > 0 && (
+      <section>
+        <h2 class="section-title">用到它的菜</h2>
+        {byCuisine.map(({ cuisine, recipes }) => (
+          <ul class="card-grid" style="margin-bottom: 1rem">
+            {recipes.map((recipe) => <li><RecipeCard recipe={recipe} cuisine={cuisine} /></li>)}
+          </ul>
+        ))}
+      </section>
+    )}
+
+    {related.length > 0 && (
+      <section>
+        <h2 class="section-title">相关原理</h2>
+        <ul class="chips">
+          {related.map((p) => <li><a class="chip" href={url(`principles/${p.id}`)}>{p.data.title}</a></li>)}
+        </ul>
+      </section>
+    )}
+
+    <div class="prose">
+      <SourceList sources={sources} />
+      <p style="color: var(--muted); font-size: 0.9rem">更新于 {formatDate(updated)}</p>
+    </div>
+  </article>
+</Base>

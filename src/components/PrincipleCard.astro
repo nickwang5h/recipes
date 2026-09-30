@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { PRINCIPLE_CATEGORIES } from '../lib/categories';
+import { url } from '../lib/site';
+
+interface Props {
+  principle: CollectionEntry<'principles'>;
+}
+
+const { principle } = Astro.props;
+const { title, aliases, summary, category } = principle.data;
+---
+
+<a class="card" href={url(`principles/${principle.id}`)}>
+  <h3>{title}</h3>
+  {aliases[0] && <span class="original">{aliases[0]}</span>}
+  <p>{summary}</p>
+  <div class="meta"><span>{PRINCIPLE_CATEGORIES[category]}</span></div>
+</a>
