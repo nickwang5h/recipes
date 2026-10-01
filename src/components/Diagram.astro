@@ -1,0 +1,39 @@
+---
+// Inlines a hand-written SVG diagram (src/assets/diagrams/<slug>.svg) so it can use the
+// page's color tokens and follow dark mode. Renders nothing when no diagram exists.
+//
+// An inline <style> applies to the whole document, so every selector and id is prefixed
+// with a per-diagram scope before rendering.
+interface Props {
+  slug: string;
+}
+
+const svgs = import.meta.glob<string>('../assets/diagrams/*.svg', { query: '?raw', import: 'default', eager: true });
+const raw = svgs[`../assets/diagrams/${Astro.props.slug}.svg`];
+const scope = `dg-${Astro.props.slug}`;
+
+function scoped(svg: string): string {
+  const ids = [...svg.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]);
+  let out = svg.replace(/<style>([\s\S]*?)<\/style>/g, (_, css: string) =>
+    `<style>${css.replace(/\/\*[\s\S]*?\*\//g, '').replace(/(^|})(\s*)([^{}@]+?)\s*{/g, (_m, close, ws, sels: string) =>
+      `${close}${ws}${sels.split(',').map((s) => `#${scope} ${s.trim()}`).join(', ')} {`)}</style>`);
+  for (const id of ids) {
+    out = out
+      .replaceAll(`id="${id}"`, `id="${scope}-${id}"`)
+      .replaceAll(`href="#${id}"`, `href="#${scope}-${id}"`)
+      .replace(/aria-labelledby="([^"]+)"/, (_m, v: string) =>
+        `aria-labelledby="${v.split(' ').map((x) => (x === id ? `${scope}-${id}` : x)).join(' ')}"`);
+  }
+  return out.replace('<svg ', `<svg id="${scope}" `);
+}
+
+const svg = raw && scoped(raw);
+const caption = raw?.match(/<title[^>]*>([^<]+)<\/title>/)?.[1];
+---
+
+{svg && (
+  <figure class="diagram">
+    <Fragment set:html={svg} />
+    {caption && <figcaption>{caption}</figcaption>}
+  </figure>
+)}

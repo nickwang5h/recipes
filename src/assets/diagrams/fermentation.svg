@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" role="img" aria-labelledby="t d">
+  <title id="t">微生物与酶，把原料转成滋味</title>
+  <desc id="d">从左到右展示原料、微生物或其产生的酶与产物。乳酸菌和酵母利用糖产生酸或酒精与气体，霉菌等产生的蛋白酶分解蛋白质，释放带来鲜味的游离氨基酸。</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .label { font: 15px "Source Han Sans SC", "PingFang SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .guide { stroke: var(--border, #d3ccbe); stroke-width: 1.5; }
+    .sugar { fill: var(--accent-yellow, #a66b00); fill-opacity: .2; stroke: var(--accent-yellow, #a66b00); stroke-width: 2; }
+    .bacteria { fill: var(--accent-green, #2f8359); }
+    .yeast { fill: var(--accent-blue, #2f6fca); }
+    .enzyme { stroke: var(--primary, #b83e30); stroke-width: 2; fill: none; }
+    .amino { fill: var(--primary, #b83e30); }
+  </style>
+  <defs>
+    <g id="sugar">
+      <rect class="sugar" x="-12" y="-12" width="24" height="24" rx="3"/>
+    </g>
+    <g id="arrow">
+      <path class="line" d="M0 0 H30 M22 -7 L30 0 L22 7"/>
+    </g>
+  </defs>
+  <rect class="bg" width="600" height="460" rx="12"/>
+  <text class="label" x="94" y="39" text-anchor="middle">原料</text>
+  <text class="label" x="287" y="39" text-anchor="middle">微生物与酶</text>
+  <text class="label" x="488" y="39" text-anchor="middle">产物与滋味</text>
+  <line class="guide" x1="32" y1="58" x2="568" y2="58"/>
+
+  <use href="#sugar" x="78" y="101"/>
+  <use href="#sugar" x="109" y="119"/>
+  <text class="label" x="94" y="157" text-anchor="middle">糖</text>
+  <use href="#arrow" x="156" y="115"/>
+  <rect class="bacteria" x="260" y="91" width="39" height="15" rx="7.5" transform="rotate(-20 280 98)"/>
+  <rect class="bacteria" x="285" y="113" width="35" height="15" rx="7.5" transform="rotate(15 302 120)"/>
+  <text class="label" x="287" y="157" text-anchor="middle">乳酸菌</text>
+  <use href="#arrow" x="380" y="115"/>
+  <text class="label" x="432" y="110">有机酸</text>
+  <text class="label muted" x="432" y="136">如乳酸，带来酸味</text>
+
+  <use href="#sugar" x="78" y="208"/>
+  <use href="#sugar" x="109" y="226"/>
+  <text class="label" x="94" y="264" text-anchor="middle">糖</text>
+  <use href="#arrow" x="156" y="222"/>
+  <circle class="yeast" cx="280" cy="218" r="15"/>
+  <circle class="yeast" cx="299" cy="205" r="9"/>
+  <text class="label" x="287" y="264" text-anchor="middle">酵母</text>
+  <use href="#arrow" x="380" y="222"/>
+  <text class="label" x="432" y="210">酒精、二氧化碳</text>
+  <text class="label muted" x="432" y="236">也形成香气</text>
+
+  <line class="guide" x1="32" y1="282" x2="568" y2="282"/>
+  <path class="line" d="M57 330 L76 315 L96 335 L117 318 L136 332"/>
+  <circle class="sugar" cx="57" cy="330" r="5"/>
+  <circle class="sugar" cx="76" cy="315" r="5"/>
+  <circle class="sugar" cx="96" cy="335" r="5"/>
+  <circle class="sugar" cx="117" cy="318" r="5"/>
+  <circle class="sugar" cx="136" cy="332" r="5"/>
+  <text class="label" x="94" y="373" text-anchor="middle">蛋白质</text>
+  <use href="#arrow" x="156" y="330"/>
+  <path class="enzyme" d="M287 345 V307 M287 325 L266 312 M287 333 L309 316"/>
+  <circle class="amino" cx="287" cy="304" r="4"/>
+  <circle class="amino" cx="264" cy="310" r="4"/>
+  <circle class="amino" cx="311" cy="314" r="4"/>
+  <text class="label" x="287" y="373" text-anchor="middle">霉菌等产生蛋白酶</text>
+  <use href="#arrow" x="380" y="330"/>
+  <circle class="amino" cx="449" cy="322" r="5"/>
+  <circle class="amino" cx="479" cy="332" r="5"/>
+  <circle class="amino" cx="514" cy="317" r="5"/>
+  <text class="label" x="488" y="373" text-anchor="middle">游离氨基酸</text>
+  <text class="label muted" x="488" y="398" text-anchor="middle">如谷氨酸，带来鲜味</text>
+  <text class="label muted" x="32" y="437">蛋白质分解由酶完成；制曲与后续发酵可走不同的路线。</text>
+</svg>

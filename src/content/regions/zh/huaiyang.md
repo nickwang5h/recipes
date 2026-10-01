@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/regions/huaiyang.jpg
+coverAlt: 文思豆腐、清炖狮子头、菜刀和砧板
 title: 苏菜／淮扬菜
 original: Sūcài / Huáiyáng cài · Jiangsu / Huaiyang cuisine
 summary: 细致刀工改变豆腐和肉的质地，鲜汤煮入干丝，温和慢炖让狮子头松软而仍能成形。

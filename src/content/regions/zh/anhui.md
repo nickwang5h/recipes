@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/regions/anhui.jpg
+coverAlt: 红烧臭鳜鱼、煎毛豆腐和冬笋
 title: 徽菜
 original: Huīcài · Anhui cuisine
 summary: 发酵先改变鱼与豆腐的风味，煎烧再做出表层香气，烧、炖、蒸用不同火候把原料做软而保住形状。

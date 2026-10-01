@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/regions/fujian.jpg
+coverAlt: 炖盅里的蛤蜊清汤、一碗红糟和荔枝肉
 title: 闽菜
 original: Mǐncài · Fujian cuisine
 summary: 用细致制汤托住水产的鲜味，以红糟添醇香，再靠剞花、炸制和短暂拌汁做出脆嫩的反差。

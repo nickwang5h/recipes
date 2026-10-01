@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import Cover from '../../components/Cover.astro';
 import CuisineTag from '../../components/CuisineTag.astro';
 import RecipeKit from '../../components/RecipeKit.astro';
 import SourceList from '../../components/SourceList.astro';
@@ -36,6 +37,8 @@ const { Content } = await render(recipe);
         </nav>
       )}
     </header>
+
+    <Cover image={recipe.data.cover} alt={recipe.data.coverAlt} />
 
     <div class="recipe-layout">
       <RecipeKit recipe={recipe} />

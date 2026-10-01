@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" role="img" aria-labelledby="t d">
+  <title id="t">蔬菜短焯后冷却，减缓余热软化</title>
+  <desc id="d">蔬菜从沸水短焯到捞出冷水降温，用叶片和锅中水表示过程。下方小图标分别说明清理浮沫、叶菜更翠绿与调整软硬，并注明肉与骨通常冷水起锅。</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .water { fill: #9cc3d9; fill-opacity: .45; }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .label { font: 15px "Source Han Sans SC", "PingFang SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+    .leaf { fill: var(--accent-green, #2f8359); fill-opacity: .75; }
+    .vein { stroke: var(--surface, #e9e5dc); stroke-width: 1.5; fill: none; }
+    .hot { stroke: var(--primary, #b83e30); stroke-width: 2; fill: none; }
+    .cool { stroke: var(--accent-blue, #2f6fca); stroke-width: 2; fill: none; }
+    .foam { fill: var(--muted, #625d53); }
+    .guide { stroke: var(--border, #d3ccbe); stroke-width: 1.5; }
+  </style>
+  <defs>
+    <g id="leaf">
+      <path class="leaf" d="M0 18 C-22 8 -25 -17 -8 -30 C12 -26 24 2 0 18 Z"/>
+      <path class="vein" d="M0 14 L-7 -24"/>
+    </g>
+  </defs>
+  <rect class="bg" width="600" height="460" rx="12"/>
+  <text class="label" x="155" y="40" text-anchor="middle">蔬菜：沸水短焯</text>
+  <text class="label" x="446" y="40" text-anchor="middle">捞出，冷水降温</text>
+
+  <path class="water" d="M68 115 H240 V199 Q240 214 223 214 H85 Q68 214 68 199 Z"/>
+  <path class="line" d="M68 96 V199 Q68 214 85 214 H223 Q240 214 240 199 V96 M49 119 H68 M240 119 H259"/>
+  <use href="#leaf" x="117" y="159"/>
+  <use href="#leaf" x="191" y="156"/>
+  <circle class="cool" cx="91" cy="187" r="4"/>
+  <circle class="cool" cx="159" cy="198" r="5"/>
+  <circle class="cool" cx="215" cy="184" r="4"/>
+  <path class="hot" d="M111 94 C94 81 126 77 112 63 M153 94 C136 81 168 77 154 63 M195 94 C178 81 210 77 196 63"/>
+  <path class="hot" d="M86 225 H222"/>
+
+  <path class="line" d="M272 152 H318 M308 142 L318 152 L308 162"/>
+  <path class="water" d="M360 115 H533 V196 Q525 214 505 214 H388 Q368 214 360 196 Z"/>
+  <path class="line" d="M360 98 V196 Q368 214 388 214 H505 Q525 214 533 196 V98"/>
+  <use href="#leaf" x="408" y="159"/>
+  <use href="#leaf" x="486" y="156"/>
+  <path class="cool" d="M446 65 V93 M439 85 L446 93 L453 85"/>
+  <text class="label muted" x="155" y="251" text-anchor="middle">达到下一步所需的软硬就捞出</text>
+  <text class="label muted" x="446" y="251" text-anchor="middle">稍后再用：减缓余热软化</text>
+  <line class="guide" x1="32" y1="274" x2="568" y2="274"/>
+
+  <!-- Effects of blanching, with the meat route kept distinct. -->
+  <g transform="translate(118 313)">
+    <path class="line" d="M-32 0 H32 M-22 12 H22"/>
+    <circle class="foam" cx="-15" cy="-7" r="4"/>
+    <circle class="foam" cx="0" cy="-10" r="5"/>
+    <circle class="foam" cx="16" cy="-7" r="4"/>
+    <path class="line" d="M38 -3 V-23 M32 -17 L38 -23 L44 -17"/>
+  </g>
+  <text class="label" x="118" y="357" text-anchor="middle">清理浮沫、颗粒</text>
+  <text class="label muted" x="118" y="381" text-anchor="middle">肉与骨通常冷水起锅</text>
+
+  <use href="#leaf" x="300" y="322"/>
+  <text class="label" x="300" y="357" text-anchor="middle">叶菜更翠绿</text>
+  <text class="label muted" x="300" y="381" text-anchor="middle">沸水下锅，缩短软化过程</text>
+
+  <path class="line" d="M457 322 Q482 293 507 322 M459 322 Q482 336 505 322 M474 299 V287 M490 299 V287"/>
+  <text class="label" x="482" y="357" text-anchor="middle">预熟、调整软硬</text>
+  <text class="label muted" x="482" y="381" text-anchor="middle">为下一步烹调做准备</text>
+  <text class="label muted" x="32" y="430">马上炒的蔬菜，捞出沥干即可；肉焯后洗去颗粒，再换水煮。</text>
+</svg>

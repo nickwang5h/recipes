@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/cuisines/italian.jpg
+coverAlt: 番茄意面、番茄、罗勒、帕尔马干酪和橄榄油
 title: 意大利菜
 original: Cucina italiana
 summary: 食材先行，步骤少而精。面和酱最后在锅里合为一体，煮面水、mantecatura 和时机决定成败。

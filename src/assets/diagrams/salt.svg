@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 410" role="img" aria-labelledby="t d">
+  <title id="t">盐使蔬菜出水，也帮助肉馅持水</title>
+  <desc id="d">左侧盐渍蔬菜中，水从细胞向外渗出，盐向内部扩散。右侧肉馅加盐搅打，部分肌肉蛋白溶出并连接成黏性网络，吸住加入的水。</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .water { fill: #9cc3d9; fill-opacity: .45; }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .cell { stroke: var(--accent-green, #2f8359); stroke-width: 3; fill: none; }
+    .water-arrow { stroke: var(--accent-blue, #2f6fca); stroke-width: 2; fill: none; stroke-linejoin: round; }
+    .salt-arrow { stroke: var(--accent-yellow, #a66b00); stroke-width: 2; fill: none; stroke-linejoin: round; }
+    .salt { fill: var(--accent-yellow, #a66b00); }
+    .protein { stroke: var(--primary, #b83e30); stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .border { stroke: var(--border, #d3ccbe); stroke-width: 2; fill: none; }
+    .label { font: 15px "Source Han Sans SC", "PingFang SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+  </style>
+  <rect class="bg" width="600" height="410" rx="12"/>
+  <text class="label" x="32" y="42">出水与持水，取决于食物结构和处理方式</text>
+  <path class="border" d="M300 70 V370"/>
+
+  <text class="label" x="154" y="88" text-anchor="middle">蔬菜拌盐：细胞失水</text>
+  <circle class="water" cx="96" cy="202" r="54"/>
+  <circle class="cell" cx="96" cy="202" r="54"/>
+  <circle class="water" cx="74" cy="182" r="10"/>
+  <circle class="water" cx="114" cy="186" r="12"/>
+  <circle class="water" cx="91" cy="221" r="13"/>
+  <text class="label muted" x="96" y="285" text-anchor="middle">细胞内部</text>
+
+  <text class="label muted" x="215" y="139" text-anchor="middle">水向外渗出</text>
+  <path class="water-arrow" d="M132 163 H257 M249 155 L257 163 L249 171"/>
+  <circle class="water" cx="236" cy="188" r="10"/>
+  <circle class="water" cx="264" cy="188" r="9"/>
+  <path class="salt-arrow" d="M257 236 H132 M140 228 L132 236 L140 244"/>
+  <circle class="salt" cx="219" cy="213" r="4"/>
+  <circle class="salt" cx="240" cy="209" r="4"/>
+  <circle class="salt" cx="260" cy="217" r="4"/>
+  <circle class="salt" cx="126" cy="213" r="4"/>
+  <text class="label muted" x="215" y="267" text-anchor="middle">盐向内扩散</text>
+  <text class="label muted" x="154" y="329" text-anchor="middle">水与盐移动的方向相反</text>
+  <text class="label muted" x="154" y="355" text-anchor="middle">蔬菜失去部分水，组织变软</text>
+
+  <text class="label" x="444" y="88" text-anchor="middle">肉馅加盐搅打：蛋白建网</text>
+  <rect class="border" x="331" y="143" width="80" height="113" rx="12"/>
+  <path class="protein" d="M345 165 C348 148 377 152 373 169 S349 188 350 174 M345 205 C358 186 381 217 392 198 M348 239 C361 217 384 245 394 229"/>
+  <circle class="salt" cx="342" cy="131" r="4"/>
+  <circle class="salt" cx="364" cy="124" r="4"/>
+  <circle class="salt" cx="387" cy="130" r="4"/>
+  <text class="label muted" x="371" y="285" text-anchor="middle">部分蛋白溶出</text>
+  <path class="line" d="M417 200 H442 M434 192 L442 200 L434 208"/>
+  <g transform="translate(512 200)">
+    <circle class="water" cx="-23" cy="-24" r="11"/>
+    <circle class="water" cx="23" cy="-22" r="11"/>
+    <circle class="water" cx="-23" cy="24" r="12"/>
+    <circle class="water" cx="23" cy="24" r="12"/>
+    <path class="protein" d="M-48 -49 Q-24 -40 0 -48 T48 -46 M-48 0 Q-24 -10 0 0 T48 0 M-48 49 Q-23 41 0 49 T48 46 M-47 -49 Q-39 -24 -48 0 T-45 49 M0 -48 Q10 -24 0 0 T0 49 M47 -46 Q39 -23 48 0 T46 46"/>
+  </g>
+  <text class="label muted" x="512" y="285" text-anchor="middle">黏性网络</text>
+  <text class="label muted" x="444" y="329" text-anchor="middle">搅打到发黏“上劲”</text>
+  <text class="label muted" x="444" y="355" text-anchor="middle">网络吸住后面分次加入的水</text>
+  <text class="label muted" x="32" y="390">蓝色：水　黄色：盐　红色线：肌肉蛋白</text>
+</svg>

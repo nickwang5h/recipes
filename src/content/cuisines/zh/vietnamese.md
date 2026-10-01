@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/cuisines/vietnamese.jpg
+coverAlt: 一碗牛肉河粉，配香草、豆芽、青柠和鱼露蘸汁
 title: 越南菜
 original: Ẩm thực Việt Nam
 summary: 熟的部分慢慢熬，生的部分临吃才加：清汤、糖色和鱼露蘸汁打底，一大盘鲜香草让每个人在桌上自己调。

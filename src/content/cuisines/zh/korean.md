@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/cuisines/korean.jpg
+coverAlt: 石锅拌饭，周围是泡菜等小菜和一碗辣椒酱
 title: 韩国菜
 original: Hansik
 summary: 发酵是骨架：大酱、辣椒酱、酱油和泡菜，配一碗白饭和几样小菜，咸、辣、酸大多从发酵里来。

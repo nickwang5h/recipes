@@ -26,7 +26,10 @@ const source = z.object({
 
 const cuisines = defineCollection({
   loader: glob({ base: `./src/content/cuisines/${LOCALE}`, pattern: '*.md' }),
-  schema: z.object({
+  schema: ({ image }) => z.object({
+    // Optional AI-generated cover illustration, stored under src/assets/covers/.
+    cover: image().optional(),
+    coverAlt: z.string().optional(),
     title: z.string(),
     original: z.string().optional(),
     summary: z.string(),
@@ -77,7 +80,10 @@ const ingredient = z.object({
 
 const recipes = defineCollection({
   loader: glob({ base: `./src/content/recipes/${LOCALE}`, pattern: '*.md' }),
-  schema: z.object({
+  schema: ({ image }) => z.object({
+    // Optional AI-generated cover illustration, stored under src/assets/covers/.
+    cover: image().optional(),
+    coverAlt: z.string().optional(),
     title: z.string(),
     original: z.string().optional(),
     cuisine: reference('cuisines'),
@@ -95,7 +101,10 @@ const recipes = defineCollection({
 // Regional Chinese cuisines (川菜、粤菜…): technique essays shown under the chinese cuisine page.
 const regions = defineCollection({
   loader: glob({ base: `./src/content/regions/${LOCALE}`, pattern: '*.md' }),
-  schema: z.object({
+  schema: ({ image }) => z.object({
+    // Optional AI-generated cover illustration, stored under src/assets/covers/.
+    cover: image().optional(),
+    coverAlt: z.string().optional(),
     title: z.string(),
     original: z.string().optional(),
     summary: z.string(),

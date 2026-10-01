@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/cuisines/japanese.jpg
+coverAlt: 昆布和柴鱼片、味噌汤、白饭和厚蛋烧
 title: 日本料理
 original: Washoku
 summary: 出汁是底：昆布与柴鱼的鲜味相互放大，调味料少而准，突出食材本身的味道。

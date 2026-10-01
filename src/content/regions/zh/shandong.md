@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/regions/shandong.jpg
+coverAlt: 葱烧海参、一碗清汤和糖醋鲤鱼
 title: 鲁菜
 original: Lǔcài · Shandong cuisine
 summary: 爆菜靠细致改刀与短促加热取脆嫩，清汤和奶汤托住鲜味，葱油与薄芡把烧菜的香味留在表面。

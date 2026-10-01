@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="t d">
+  <title id="t">蛋白质受热成网，过热收紧出水</title>
+  <desc id="d">卷曲的蛋白质受热展开，彼此连接成留住水的网络。继续加热过头，网络收紧，把水挤到外面。</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .protein { stroke: var(--primary, #b83e30); stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .water { fill: #9cc3d9; fill-opacity: .45; }
+    .border { stroke: var(--border, #d3ccbe); stroke-width: 2; fill: none; }
+    .label { font: 15px "Source Han Sans SC", "PingFang SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+  </style>
+  <rect class="bg" width="600" height="400" rx="12"/>
+  <text class="label" x="32" y="42">加热：展开 → 连接 → 网络收紧</text>
+
+  <!-- Folded chains -->
+  <g transform="translate(82 154)">
+    <path class="protein" d="M-38 -15 C-45 -42 -5 -49 7 -25 C20 -4 -15 17 -27 -1 C-41 -25 -7 -31 1 -10 C11 13 38 7 39 -14 C42 -37 22 -45 12 -34"/>
+    <path class="protein" d="M-30 35 C-38 13 -8 6 0 25 C11 48 37 34 29 18 C19 1 3 15 13 30"/>
+  </g>
+  <text class="label" x="82" y="232" text-anchor="middle">卷曲的分子</text>
+  <text class="label muted" x="82" y="255" text-anchor="middle">原有折叠结构</text>
+
+  <path class="line" d="M142 154 H164 M157 147 L164 154 L157 161"/>
+
+  <!-- Unfolded chains -->
+  <g transform="translate(220 154)">
+    <path class="protein" d="M-43 -28 C-17 -47 -8 -8 12 -22 S31 -35 43 -15"/>
+    <path class="protein" d="M-43 4 C-27 -14 -9 25 10 9 S30 -7 43 9"/>
+    <path class="protein" d="M-43 38 C-23 14 -7 49 12 32 S32 27 43 39"/>
+  </g>
+  <text class="label" x="220" y="232" text-anchor="middle">受热展开</text>
+  <text class="label muted" x="220" y="255" text-anchor="middle">变性</text>
+
+  <path class="line" d="M276 154 H297 M290 147 L297 154 L290 161"/>
+
+  <!-- Open network with water in its spaces -->
+  <g transform="translate(362 154)">
+    <circle class="water" cx="-26" cy="-23" r="10"/>
+    <circle class="water" cx="22" cy="-20" r="11"/>
+    <circle class="water" cx="-23" cy="24" r="11"/>
+    <circle class="water" cx="24" cy="24" r="10"/>
+    <path class="protein" d="M-49 -47 Q-22 -40 0 -46 T49 -43 M-49 0 Q-24 -9 0 0 T49 2 M-49 46 Q-23 39 0 46 T49 43 M-47 -47 Q-40 -21 -47 0 T-44 46 M0 -46 Q9 -24 0 0 T1 46 M48 -43 Q40 -21 49 2 T46 43"/>
+  </g>
+  <text class="label" x="362" y="232" text-anchor="middle">连接成网</text>
+  <text class="label muted" x="362" y="255" text-anchor="middle">凝固，网里留水</text>
+
+  <path class="line" d="M422 154 H443 M436 147 L443 154 L436 161"/>
+
+  <!-- Contracted network; water has moved outside -->
+  <g transform="translate(518 154)">
+    <path class="protein" d="M-25 -26 Q0 -20 25 -26 M-26 -8 Q0 -2 26 -8 M-26 10 Q0 4 26 10 M-25 27 Q0 20 25 27 M-25 -26 Q-20 0 -25 27 M-8 -24 Q-2 0 -8 24 M9 -24 Q3 0 9 24 M25 -26 Q20 0 25 27"/>
+    <circle class="water" cx="-43" cy="-37" r="9"/>
+    <circle class="water" cx="43" cy="-34" r="9"/>
+    <circle class="water" cx="-43" cy="38" r="10"/>
+    <circle class="water" cx="42" cy="38" r="10"/>
+    <path class="line" d="M-29 0 H-48 M-42 -6 L-48 0 L-42 6 M29 0 H48 M42 -6 L48 0 L42 6"/>
+  </g>
+  <text class="label" x="518" y="232" text-anchor="middle">加热过头</text>
+  <text class="label muted" x="518" y="255" text-anchor="middle">网收紧，水被挤出</text>
+
+  <path class="border" d="M32 294 H568"/>
+  <circle class="water" cx="44" cy="322" r="9"/>
+  <text class="label muted" x="62" y="327">水</text>
+  <path class="protein" d="M113 322 H140"/>
+  <text class="label muted" x="153" y="327">蛋白质链</text>
+  <text class="label muted" x="32" y="367">温度与时间共同决定：柔软定形，还是变硬出水。</text>
+</svg>

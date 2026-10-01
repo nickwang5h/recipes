@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 430" role="img" aria-labelledby="t d">
+  <title id="t">酸改变蛋白质、果胶与泡沫结构</title>
+  <desc id="d">上方用定性 pH 轴表示数值降低时环境更酸。下方分别示意酸改变肉的表层蛋白、减慢蔬菜细胞间果胶的溶解，以及帮助蛋白泡沫保持细腻。</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .protein { stroke: var(--primary, #b83e30); stroke-width: 3; fill: none; stroke-linecap: round; }
+    .cell { stroke: var(--accent-green, #2f8359); stroke-width: 2; fill: none; }
+    .pectin { stroke: var(--accent-yellow, #a66b00); stroke-width: 3; fill: none; stroke-linecap: round; }
+    .bubble { stroke: var(--accent-blue, #2f6fca); stroke-width: 2; fill: var(--surface, #e9e5dc); }
+    .acid { fill: var(--accent-red, #c3473a); }
+    .border { stroke: var(--border, #d3ccbe); stroke-width: 2; fill: none; }
+    .label { font: 15px "Source Han Sans SC", "PingFang SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+  </style>
+  <rect class="bg" width="600" height="430" rx="12"/>
+  <text class="label" x="32" y="42">pH 越低，环境越酸</text>
+  <path class="line" d="M550 80 H50 M60 72 L50 80 L60 88"/>
+  <text class="label" x="50" y="112">pH 降低，环境更酸</text>
+  <text class="label muted" x="550" y="112" text-anchor="end">pH 较高</text>
+  <path class="border" d="M32 139 H568 M208 163 V386 M392 163 V386"/>
+
+  <!-- Acid acts first at the meat surface -->
+  <text class="label" x="120" y="180" text-anchor="middle">肉：表层蛋白变性</text>
+  <circle class="acid" cx="88" cy="208" r="4"/>
+  <circle class="acid" cx="119" cy="204" r="4"/>
+  <circle class="acid" cx="150" cy="208" r="4"/>
+  <path class="line" d="M119 216 V234 M113 228 L119 234 L125 228"/>
+  <rect class="border" x="56" y="246" width="128" height="72" rx="10"/>
+  <path class="protein" d="M67 257 Q78 249 89 257 T111 257 T133 257 T155 257 T173 257"/>
+  <path class="line" d="M74 290 C67 275 91 273 94 288 S72 304 78 290 M123 290 C116 275 140 273 143 288 S121 304 127 290"/>
+  <text class="label muted" x="120" y="347" text-anchor="middle">短时酸腌主要改变外层</text>
+  <text class="label muted" x="120" y="371" text-anchor="middle">久泡可能先损伤表面弹性</text>
+
+  <!-- Pectin connections remain between vegetable cells -->
+  <text class="label" x="300" y="180" text-anchor="middle">蔬菜：减慢果胶溶解</text>
+  <circle class="acid" cx="300" cy="206" r="4"/>
+  <path class="line" d="M300 216 V234 M294 228 L300 234 L306 228"/>
+  <rect class="cell" x="246" y="248" width="42" height="65" rx="8"/>
+  <rect class="cell" x="312" y="248" width="42" height="65" rx="8"/>
+  <path class="pectin" d="M288 260 H312 M288 280 H312 M288 301 H312"/>
+  <text class="label muted" x="300" y="347" text-anchor="middle">细胞之间的连接保留更久</text>
+  <text class="label muted" x="300" y="371" text-anchor="middle">土豆、豆子较难煮软</text>
+
+  <!-- Fine bubbles supported by a protein film -->
+  <text class="label" x="484" y="180" text-anchor="middle">蛋白：帮助稳定泡沫</text>
+  <circle class="acid" cx="484" cy="206" r="4"/>
+  <path class="line" d="M484 216 V234 M478 228 L484 234 L490 228"/>
+  <path class="protein" d="M429 279 C421 253 454 238 473 248 C493 238 541 244 542 272 C554 302 518 321 496 314 C464 326 426 309 429 279 Z"/>
+  <circle class="bubble" cx="447" cy="272" r="13"/>
+  <circle class="bubble" cx="475" cy="264" r="14"/>
+  <circle class="bubble" cx="507" cy="264" r="14"/>
+  <circle class="bubble" cx="460" cy="297" r="12"/>
+  <circle class="bubble" cx="488" cy="292" r="13"/>
+  <circle class="bubble" cx="523" cy="290" r="13"/>
+  <text class="label muted" x="484" y="347" text-anchor="middle">减少蛋白质过度聚集</text>
+  <text class="label muted" x="484" y="371" text-anchor="middle">帮助泡沫保持细腻</text>
+
+  <circle class="acid" cx="36" cy="408" r="4"/>
+  <text class="label muted" x="49" y="413">红点示意加入酸；效果取决于酸加入的食物。</text>
+</svg>

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/regions/cantonese.jpg
+coverAlt: 白切鸡配姜葱蓉、清蒸鱼和竹蒸笼
 title: 粤菜
 original: Yuècài · Cantonese cuisine
 summary: 浸与蒸把鲜嫩停在合适熟度，猛火小炒迅速散水生香，姜葱、豉油和薄浆各自完成收尾。

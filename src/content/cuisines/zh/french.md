@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/cuisines/french.jpg
+coverAlt: 铜锅里的黄油酱、打蛋器、一锅红酒炖牛肉、法棍和红葱头
 title: 法餐
 original: Cuisine française
 summary: 以酱汁为骨架：高汤打底，锅底褐渣化开，再用 roux、收汁或黄油乳化，把一锅液体变成挂得住的酱。

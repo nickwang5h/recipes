@@ -2,6 +2,7 @@
 import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import RecipeCard from '../../components/RecipeCard.astro';
+import Diagram from '../../components/Diagram.astro';
 import SourceList from '../../components/SourceList.astro';
 import { PRINCIPLE_CATEGORIES } from '../../lib/categories';
 import { formatDate, getCuisines, recipesUsing, url } from '../../lib/site';
@@ -40,6 +41,8 @@ const { Content } = await render(principle);
       {aliases.length > 0 && <p class="original">{aliases.join(' · ')}</p>}
       <p class="lede">{summary}</p>
     </header>
+
+    <Diagram slug={principle.id} />
 
     <div class="prose">
       <Content />

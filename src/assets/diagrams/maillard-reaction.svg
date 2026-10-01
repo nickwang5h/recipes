@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="t d">
+  <title id="t">表面先失水，褐变才加快</title>
+  <desc id="d">三块肉依次展示湿润、干燥和变褐的表面。温度轴标出湿表面约在水的沸点附近、干燥后褐变加快，继续过热则焦黑发苦。</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .meat { fill: var(--border, #d3ccbe); }
+    .brown { fill: #8a4f17; }
+    .char { fill: var(--text, #24221e); }
+    .water { fill: #9cc3d9; fill-opacity: .45; }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .steam { stroke: var(--accent-blue, #2f6fca); stroke-width: 2; fill: none; }
+    .warm { stroke: var(--accent-yellow, #a66b00); stroke-width: 4; fill: none; }
+    .label { font: 15px "Source Han Sans SC", "PingFang SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+    .warning { fill: var(--primary, #b83e30); }
+  </style>
+  <rect class="bg" width="600" height="400" rx="12"/>
+
+  <!-- The same surface passes from wet to dry to browned. -->
+  <text class="label" x="104" y="43" text-anchor="middle">湿表面</text>
+  <text class="label" x="300" y="43" text-anchor="middle">表面变干</text>
+  <text class="label" x="496" y="43" text-anchor="middle">表面变褐</text>
+  <path class="steam" d="M80 85 C69 74 88 70 79 59 M106 85 C95 74 114 70 105 59 M132 85 C121 74 140 70 131 59"/>
+  <rect class="meat" x="52" y="96" width="104" height="64" rx="18"/>
+  <path class="water" d="M52 116 Q52 96 72 96 H136 Q156 96 156 116 V121 H52 Z"/>
+  <rect class="line" x="52" y="96" width="104" height="64" rx="18"/>
+  <rect class="meat" x="248" y="96" width="104" height="64" rx="18"/>
+  <rect class="line" x="248" y="96" width="104" height="64" rx="18"/>
+  <path class="line" d="M266 114 H334"/>
+  <rect class="meat" x="444" y="96" width="104" height="64" rx="18"/>
+  <path class="brown" d="M444 118 Q444 96 466 96 H526 Q548 96 548 118 V126 H444 Z"/>
+  <rect class="line" x="444" y="96" width="104" height="64" rx="18"/>
+  <path class="line" d="M174 128 H225 M217 120 L225 128 L217 136 M370 128 H421 M413 120 L421 128 L413 136"/>
+  <text class="label muted" x="104" y="192" text-anchor="middle">热量先用于蒸发水</text>
+  <text class="label muted" x="300" y="192" text-anchor="middle">失水后可以继续升温</text>
+  <text class="label muted" x="496" y="192" text-anchor="middle">褐色与烤香更明显</text>
+
+  <!-- A qualitative temperature axis, with only the page's thresholds. -->
+  <text class="label" x="300" y="240" text-anchor="middle">表面温度升高</text>
+  <path class="line" d="M40 270 H560 M550 262 L560 270 L550 278"/>
+  <path class="warm" d="M276 270 H514"/>
+  <path class="line" d="M104 263 V280 M300 263 V280"/>
+  <text class="label" x="104" y="310" text-anchor="middle">约 100°C</text>
+  <text class="label" x="300" y="310" text-anchor="middle">约 120–140°C 以上</text>
+  <text class="label" x="496" y="310" text-anchor="middle">褐变明显加快</text>
+  <text class="label muted" x="104" y="333" text-anchor="middle">湿表面难以超过</text>
+  <circle class="char" cx="184" cy="368" r="7"/>
+  <text class="label warning" x="201" y="373">继续过热 → 焦黑、发苦</text>
+</svg>

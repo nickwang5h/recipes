@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/regions/hunan.jpg
+coverAlt: 剁椒鱼头、青椒炒肉和腊肉
 title: 湘菜
 original: Xiāngcài · Hunan cuisine
 summary: 鲜椒小炒、剁椒铺蒸与腊味合蒸，把鲜辣、酸咸和烟熏香分别展开，再用切配与火候保住口感。

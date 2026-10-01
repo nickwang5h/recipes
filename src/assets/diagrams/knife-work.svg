@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="t d">
+  <title id="t">切成小丁，表面更多，热路更短</title>
+  <desc id="d">同样重量的原料，整块与切成小丁并排比较。外轮廓表示暴露表面，长短箭头表示热从表面到中心的路程，小丁的中心升温更快。</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .label { font: 15px "Source Han Sans SC", "PingFang SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+    .food { fill: var(--accent-yellow, #a66b00); fill-opacity: .16; stroke: var(--accent-yellow, #a66b00); stroke-width: 2; stroke-linejoin: round; }
+    .heat { stroke: var(--primary, #b83e30); stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .center { fill: var(--text, #24221e); }
+    .guide { stroke: var(--border, #d3ccbe); stroke-width: 1.5; }
+    .arrow { stroke: var(--text, #24221e); stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <g id="cube">
+      <path class="food" d="M0 0 L11 -9 H51 V31 L40 40 H0 Z M0 0 H40 V40 M40 0 L51 -9"/>
+    </g>
+  </defs>
+  <rect class="bg" width="600" height="420" rx="12"/>
+  <text class="label" x="300" y="38" text-anchor="middle">同样重量的原料，改变切法</text>
+  <line class="guide" x1="300" y1="70" x2="300" y2="338"/>
+  <text class="label" x="152" y="80" text-anchor="middle">大块</text>
+  <text class="label" x="450" y="80" text-anchor="middle">小丁</text>
+
+  <use href="#cube" transform="translate(78 152) scale(2)"/>
+  <circle class="center" cx="118" cy="192" r="3"/>
+  <path class="heat" d="M80 192 H111 M104 186 L111 192 L104 198"/>
+  <text class="label muted" x="152" y="261" text-anchor="middle">表面到中心：路径长</text>
+
+  <!-- Eight half-edge cubes preserve the original cube's volume. -->
+  <use href="#cube" x="338" y="124"/>
+  <use href="#cube" x="402" y="124"/>
+  <use href="#cube" x="466" y="124"/>
+  <use href="#cube" x="530" y="124"/>
+  <use href="#cube" x="338" y="196"/>
+  <use href="#cube" x="402" y="196"/>
+  <use href="#cube" x="466" y="196"/>
+  <use href="#cube" x="530" y="196"/>
+  <circle class="center" cx="358" cy="216" r="3"/>
+  <path class="heat" d="M340 216 H352 M347 211 L352 216 L347 221"/>
+  <text class="label muted" x="450" y="261" text-anchor="middle">表面到中心：路径短</text>
+
+  <path class="arrow" d="M285 185 H315 M307 178 L315 185 L307 192"/>
+  <text class="label" x="152" y="305" text-anchor="middle">暴露表面少</text>
+  <text class="label" x="152" y="330" text-anchor="middle">中心升温慢</text>
+  <text class="label" x="450" y="305" text-anchor="middle">暴露表面多</text>
+  <text class="label" x="450" y="330" text-anchor="middle">中心升温快，熟得快</text>
+  <path class="heat" d="M34 375 H72 M64 369 L72 375 L64 381"/>
+  <text class="label muted" x="88" y="380">红箭头：热传向中心</text>
+  <text class="label muted" x="330" y="380">比较以相同受热条件为前提</text>
+</svg>

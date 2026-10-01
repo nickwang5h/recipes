@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" role="img" aria-labelledby="t d">
+  <title id="t">两类呈鲜物质合用，鲜味相互增强</title>
+  <desc id="d">三根条形定性比较谷氨酸、肌苷酸单独使用与合用时的鲜味。合用的鲜味强于各自单独作用的简单相加，条长不代表具体倍数。</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .label { font: 15px "Source Han Sans SC", "PingFang SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+    .glutamate { fill: var(--accent-green, #2f8359); }
+    .inosinate { fill: var(--accent-blue, #2f6fca); }
+    .combined { fill: var(--primary, #b83e30); }
+    .guide { stroke: var(--border, #d3ccbe); stroke-width: 1.5; }
+    .arrow { stroke: var(--text, #24221e); stroke-width: 2; fill: none; }
+  </style>
+  <rect class="bg" width="600" height="380" rx="12"/>
+  <text class="label" x="32" y="40">鲜味协同作用</text>
+  <text class="label muted" x="232" y="40">条形越长，表示鲜味越强</text>
+
+  <line class="guide" x1="232" y1="66" x2="232" y2="294"/>
+  <text class="label" x="32" y="91">谷氨酸单用</text>
+  <text class="label muted" x="32" y="117">昆布、番茄、熟成奶酪</text>
+  <rect class="glutamate" x="232" y="72" width="90" height="30" rx="5"/>
+
+  <text class="label" x="32" y="179">肌苷酸单用</text>
+  <text class="label muted" x="32" y="205">柴鱼、肉、鱼</text>
+  <rect class="inosinate" x="232" y="160" width="68" height="30" rx="5"/>
+
+  <!-- The two sources meet in the same bite. No quantitative scale. -->
+  <path class="arrow" d="M194 98 H207 V267 H222 M194 185 H207 M214 259 L222 267 L214 275"/>
+  <text class="label" x="32" y="270">两者合用</text>
+  <text class="label muted" x="32" y="296">如昆布与柴鱼出汁</text>
+  <rect class="combined" x="232" y="248" width="324" height="38" rx="5"/>
+
+  <text class="label" x="32" y="336">合用的鲜味强于单独作用的简单相加</text>
+  <text class="label muted" x="32" y="360">仅示意协同关系，不表示浓度、倍数或固定配比</text>
+</svg>

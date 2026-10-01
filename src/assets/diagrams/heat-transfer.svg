@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="t d">
+  <title id="t">热通过接触、流动和辐射进入食物</title>
+  <desc id="d">左栏画热锅向蛋液传导热，中栏画锅中热水环流，右栏画烤箱上火向食物辐射热。箭头分别表示热进入食物和水循环的方向。</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .food { fill: var(--accent-yellow, #a66b00); fill-opacity: .3; }
+    .water { fill: #9cc3d9; fill-opacity: .45; }
+    .metal { fill: var(--border, #d3ccbe); }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .divider { stroke: var(--border, #d3ccbe); stroke-width: 1; }
+    .heat { stroke: var(--primary, #b83e30); stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .flow { stroke: var(--accent-blue, #2f6fca); stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .label { font: 15px "Source Han Sans SC", "PingFang SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+  </style>
+  <rect class="bg" width="600" height="400" rx="12"/>
+  <line class="divider" x1="200" y1="28" x2="200" y2="329"/>
+  <line class="divider" x1="400" y1="28" x2="400" y2="329"/>
+  <text class="label" x="100" y="49" text-anchor="middle">传导</text>
+  <text class="label" x="300" y="49" text-anchor="middle">对流</text>
+  <text class="label" x="500" y="49" text-anchor="middle">辐射</text>
+  <text class="label muted" x="100" y="75" text-anchor="middle">热锅接触蛋液</text>
+  <text class="label muted" x="300" y="75" text-anchor="middle">热水循环送热</text>
+  <text class="label muted" x="500" y="75" text-anchor="middle">烤箱上火向食物送热</text>
+
+  <!-- Conduction: arrows cross the pan-food contact. -->
+  <path class="food" d="M42 213 Q40 173 78 183 Q96 166 118 185 Q158 175 159 213 Z"/>
+  <path class="line" d="M42 213 Q40 173 78 183 Q96 166 118 185 Q158 175 159 213"/>
+  <rect class="metal" x="35" y="217" width="130" height="13" rx="4"/>
+  <path class="line" d="M28 200 L35 230 H165 L172 200 M165 220 H182"/>
+  <path class="heat" d="M65 251 V201 M59 210 L65 201 L71 210 M100 251 V201 M94 210 L100 201 L106 210 M135 251 V201 M129 210 L135 201 L141 210"/>
+  <path class="heat" d="M61 280 H139"/>
+  <text class="label muted" x="100" y="306" text-anchor="middle">锅底 → 接触面 → 内部</text>
+
+  <!-- Convection: a closed circulation around the food. -->
+  <rect class="water" x="233" y="151" width="134" height="101"/>
+  <path class="line" d="M233 126 V252 H367 V126 M219 140 H233 M367 140 H381"/>
+  <path class="flow" d="M259 219 C244 202 247 172 270 165 M260 163 L270 165 L267 176 M274 162 C301 150 334 158 343 177 M344 167 L343 177 L332 174 M344 183 C356 207 339 231 319 235 M326 226 L319 235 L329 240 M310 237 C288 242 270 235 261 222 M261 232 L261 222 L272 223"/>
+  <path class="food" d="M288 187 Q303 176 313 193 Q321 211 308 220 Q286 225 285 207 Z"/>
+  <path class="line" d="M288 187 Q303 176 313 193 Q321 211 308 220 Q286 225 285 207 Z"/>
+  <path class="heat" d="M261 280 H339"/>
+  <text class="label muted" x="300" y="306" text-anchor="middle">流动的水把热带到四周</text>
+
+  <!-- Radiation: wavy rays from the oven's upper heating element. -->
+  <rect class="line" x="431" y="112" width="138" height="151" rx="5"/>
+  <path class="heat" d="M447 132 H553"/>
+  <path class="heat" d="M463 145 C448 158 478 165 463 178 C448 188 478 194 463 205 M457 197 L463 205 L470 198 M500 145 C485 158 515 165 500 178 C485 188 515 194 500 205 M494 197 L500 205 L507 198 M537 145 C522 158 552 165 537 178 C522 188 552 194 537 205 M531 197 L537 205 L544 198"/>
+  <rect class="food" x="454" y="217" width="92" height="25" rx="10"/>
+  <rect class="line" x="454" y="217" width="92" height="25" rx="10"/>
+  <path class="line" d="M445 245 H555"/>
+  <text class="label muted" x="500" y="306" text-anchor="middle">热源辐射到食物表面</text>
+  <text class="label" x="300" y="365" text-anchor="middle">一道菜往往同时用到几种传热方式</text>
+</svg>

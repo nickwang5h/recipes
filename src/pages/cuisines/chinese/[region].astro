@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
+import Cover from '../../../components/Cover.astro';
 import PrincipleCard from '../../../components/PrincipleCard.astro';
 import RecipeCard from '../../../components/RecipeCard.astro';
 import SourceList from '../../../components/SourceList.astro';
@@ -34,6 +35,8 @@ const { Content } = await render(region);
       {original && <p class="original">{original}</p>}
       <p class="lede">{summary}</p>
     </header>
+
+    <Cover image={region.data.cover} alt={region.data.coverAlt} />
 
     <div class="prose">
       <Content />

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" role="img" aria-labelledby="t d">
+  <title id="t">香气释放、入油入汤，也会挥发散失</title>
+  <desc id="d">切开或捣碎植物组织，释放香气物质，随后分别进入热油与汤中。久煮让部分香气随蒸汽散失，欧芹、罗勒等鲜嫩香草适合收尾加入。</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .water { fill: #9cc3d9; fill-opacity: .45; }
+    .oil { fill: #e2b33c; }
+    .label { font: 15px "Source Han Sans SC", "PingFang SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .cell { stroke: var(--accent-green, #2f8359); stroke-width: 2; fill: var(--accent-green, #2f8359); fill-opacity: .12; }
+    .aroma { fill: var(--accent-green, #2f8359); }
+    .steam { stroke: var(--muted, #625d53); stroke-width: 2; fill: none; stroke-linecap: round; }
+    .guide { stroke: var(--border, #d3ccbe); stroke-width: 1.5; }
+    .hot { stroke: var(--primary, #b83e30); stroke-width: 2; fill: none; }
+  </style>
+  <rect class="bg" width="600" height="440" rx="12"/>
+  <text class="label" x="32" y="38">香气分子的去向</text>
+
+  <!-- Open plant structures release aroma into the two extraction routes. -->
+  <path class="cell" d="M95 161 C51 151 45 202 77 223 L90 207 M112 167 C147 187 143 221 111 228 L101 213"/>
+  <path class="line" d="M99 150 L88 176 L106 191 L91 216 L101 239"/>
+  <circle class="aroma" cx="91" cy="189" r="4"/>
+  <circle class="aroma" cx="113" cy="199" r="4"/>
+  <circle class="aroma" cx="139" cy="179" r="4"/>
+  <circle class="aroma" cx="145" cy="213" r="4"/>
+  <text class="label" x="99" y="276" text-anchor="middle">切开或捣碎</text>
+  <text class="label muted" x="99" y="300" text-anchor="middle">破坏结构，释放香气</text>
+  <path class="line" d="M159 193 H181 V117 H208 M200 110 L208 117 L200 124 M181 193 V283 H208 M200 276 L208 283 L200 290"/>
+
+  <text class="label" x="281" y="68" text-anchor="middle">脂溶性的进入热油</text>
+  <path class="oil" d="M222 105 H340 V139 Q340 151 327 151 H235 Q222 151 222 139 Z"/>
+  <path class="line" d="M222 91 V139 Q222 151 235 151 H327 Q340 151 340 139 V91 M340 104 H360"/>
+  <circle class="aroma" cx="248" cy="124" r="4"/>
+  <circle class="aroma" cx="282" cy="134" r="4"/>
+  <circle class="aroma" cx="313" cy="119" r="4"/>
+  <path class="hot" d="M242 163 H323"/>
+  <text class="label muted" x="281" y="191" text-anchor="middle">油把香气带到菜的各处</text>
+
+  <text class="label" x="281" y="235" text-anchor="middle">水可浸出的进入汤</text>
+  <path class="water" d="M222 272 H340 V305 Q340 317 327 317 H235 Q222 317 222 305 Z"/>
+  <path class="line" d="M222 258 V305 Q222 317 235 317 H327 Q340 317 340 305 V258"/>
+  <circle class="aroma" cx="248" cy="292" r="4"/>
+  <circle class="aroma" cx="282" cy="302" r="4"/>
+  <circle class="aroma" cx="313" cy="286" r="4"/>
+  <text class="label muted" x="281" y="345" text-anchor="middle">水也能浸出部分风味</text>
+
+  <path class="line" d="M368 118 H393 V199 H417 M368 283 H393 V199 M409 191 L417 199 L409 207"/>
+  <text class="label" x="497" y="68" text-anchor="middle">久煮：香气散失</text>
+  <circle class="aroma" cx="461" cy="99" r="4"/>
+  <circle class="aroma" cx="492" cy="90" r="4"/>
+  <circle class="aroma" cx="525" cy="104" r="4"/>
+  <path class="steam" d="M462 162 C443 145 478 136 461 118 M495 162 C476 142 512 132 494 110 M528 162 C508 146 545 140 527 121"/>
+  <path class="water" d="M437 191 H557 V221 Q557 239 539 239 H455 Q437 239 437 221 Z"/>
+  <path class="line" d="M437 177 V221 Q437 239 455 239 H539 Q557 239 557 221 V177"/>
+  <circle class="aroma" cx="478" cy="214" r="4"/>
+  <text class="label muted" x="497" y="276" text-anchor="middle">部分香气随蒸汽离开</text>
+  <text class="label muted" x="497" y="300" text-anchor="middle">清新香调逐渐减少</text>
+
+  <line class="guide" x1="32" y1="365" x2="568" y2="365"/>
+  <circle class="aroma" cx="39" cy="397" r="4"/>
+  <text class="label" x="54" y="402">欧芹、罗勒等鲜嫩香草：收尾加入，保留清新香气</text>
+  <text class="label muted" x="54" y="425">百里香、月桂叶可较早入汤，建立底味。</text>
+</svg>

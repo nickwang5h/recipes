@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/regions/sichuan.jpg
+coverAlt: 一砂锅麻婆豆腐、干辣椒、花椒和铁锅
 title: 川菜
 original: Chuāncài · Sichuan cuisine
 summary: 干煸把水分炒退，小炒把碗汁迅速裹上，豆瓣红油与收尾椒香分层建立各不相同的味道。

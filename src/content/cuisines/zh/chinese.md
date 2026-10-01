@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/cuisines/chinese.jpg
+coverAlt: 铁锅炒青菜肉片、清蒸鱼、竹蒸笼里的饺子和一碗白饭
 title: 中餐
 summary: 刀工决定受热，火候决定口感，调味是一整套“味型”。炒锅、芡汁和油，是把这些串起来的工具。
 accent: red

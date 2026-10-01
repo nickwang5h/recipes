@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/regions/zhejiang.jpg
+coverAlt: 龙井虾仁、东坡肉和清汤鱼圆
 title: 浙菜
 original: Zhècài · Zhejiang cuisine
 summary: 滑炒让虾仁嫩而清香，鱼茸成胶做出轻软鱼圆，慢煨把带皮肉化成软糯而仍完整的方块。

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/cuisines/thai.jpg
+coverAlt: 装着香茅、辣椒和南姜的石臼，一碗绿咖喱和青柠
 title: 泰国菜
 original: Ahan Thai
 summary: 酸、辣、咸、甜在同一口里出现：鱼露给咸鲜，青柠和罗望子给酸，椰奶和棕榈糖把它们收圆。

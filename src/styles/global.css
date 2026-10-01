@@ -260,3 +260,12 @@ button.chip[aria-pressed="true"] { background: var(--text); border-color: var(--
 .card p.fridge-swap { color: var(--accent-yellow); font-size: 0.9rem; }
 .fridge-more { margin-top: 1rem; }
 .cuisine-hero p.cuisine-count { margin-top: 0.5rem; font-size: 0.85rem; }
+
+/* ---------- Figures ---------- */
+
+.diagram, .cover { margin: 0 0 2rem; }
+.diagram { max-width: 46rem; }
+.diagram svg { display: block; width: 100%; height: auto; }
+.cover { max-width: 46rem; }
+.cover img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
+.diagram figcaption, .cover figcaption { margin-top: 0.5rem; color: var(--muted); font-size: 0.85rem; }

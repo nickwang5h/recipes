@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" role="img" aria-labelledby="t d">
+  <title id="t">油温要结合下料后的状态判断</title>
+  <desc id="d">竖向温度计旁标出偏低、常见油炸范围、偏高与持续冒烟的状态。只有常见工作范围有数值；高低油温和烟点位置均为定性示意。</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .oil { fill: #e2b33c; }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .guide { stroke: var(--border, #d3ccbe); stroke-width: 1.5; fill: none; stroke-dasharray: 4 5; }
+    .cold { stroke: var(--accent-blue, #2f6fca); stroke-width: 4; fill: none; }
+    .work { stroke: var(--accent-green, #2f8359); stroke-width: 4; fill: none; }
+    .hot { stroke: var(--accent-red, #c3473a); stroke-width: 4; fill: none; }
+    .label { font: 15px "Source Han Sans SC", "PingFang SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+    .warning { fill: var(--primary, #b83e30); }
+  </style>
+  <rect class="bg" width="600" height="460" rx="12"/>
+  <text class="label" x="300" y="36" text-anchor="middle">下料会降温，温度恢复后再接着炸</text>
+
+  <!-- Qualitative positions: not a calibrated scale or fixed smoke point. -->
+  <path class="oil" d="M86 362 V225 H98 V362 A24 24 0 1 1 86 362 Z"/>
+  <path class="line" d="M80 360 V79 A12 12 0 0 1 104 79 V360 A28 28 0 1 1 80 360 Z"/>
+  <path class="line" d="M42 367 V79 M35 88 L42 79 L49 88"/>
+  <text class="label muted" x="28" y="398">升温</text>
+  <path class="guide" d="M111 94 H177 M111 174 H177 M111 249 H177 M111 330 H177"/>
+  <path class="hot" d="M121 80 V109 M121 155 V193"/>
+  <path class="work" d="M121 225 V272"/>
+  <path class="cold" d="M121 312 V351"/>
+
+  <text class="label warning" x="198" y="85">烟点：持续冒烟</text>
+  <text class="label muted" x="198" y="109">随油种、精炼程度和使用状态变化</text>
+  <text class="label muted" x="198" y="130">冒烟就降温，不作为下料信号</text>
+
+  <text class="label" x="198" y="169">油温偏高</text>
+  <text class="label muted" x="198" y="193">外面迅速变深，里面可能还没熟</text>
+  <text class="label muted" x="198" y="214">也要检查食材是否太厚</text>
+
+  <text class="label" x="198" y="253">常见工作范围：160–190°C</text>
+  <text class="label muted" x="198" y="277">具体目标随食材和配方选择</text>
+
+  <text class="label" x="198" y="328">下料后油温偏低</text>
+  <text class="label muted" x="198" y="352">上色慢、外壳软、炸制拖长</text>
+  <text class="label muted" x="198" y="373">减少每批数量，让油温恢复</text>
+
+  <text class="label muted" x="300" y="416" text-anchor="middle">气泡反映水汽排出的强弱，筷子冒泡不能换算固定油温</text>
+  <text class="label muted" x="300" y="440" text-anchor="middle">高低位置为定性示意，烟点没有统一数值</text>
+</svg>
