@@ -1,0 +1,34 @@
+name: Check external links
+
+on:
+  schedule:
+    - cron: '0 14 1 * *' # 1st of each month, 14:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: Check source links
+        run: node scripts/check-external-links.mjs > report.md
+      - name: Open or update an issue when links are broken
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
+          if head -1 report.md | grep -q '^BROKEN 0$'; then exit 0; fi
+          title='外部链接失效'
+          number=$(gh issue list --state open --search "$title in:title" --json number --jq '.[0].number')
+          if [ -n "$number" ]; then
+            gh issue comment "$number" --body-file report.md
+          else
+            gh issue create --title "$title" --body-file report.md
+          fi
