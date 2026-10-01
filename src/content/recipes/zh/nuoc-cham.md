@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/nuoc-cham.jpg
+coverAlt: 越南鱼露蘸汁装盘后的插画
 title: 越南鱼露蘸汁
 original: Nước chấm
 cuisine: vietnamese

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pad-kra-pao.jpg
+coverAlt: 打抛猪肉饭装盘后的插画
 title: 打抛猪肉饭
 original: Phat kaphrao mu sap
 cuisine: thai

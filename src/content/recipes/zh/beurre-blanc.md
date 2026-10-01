@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/beurre-blanc.jpg
+coverAlt: 黄油白酱装盘后的插画
 title: 黄油白酱
 original: Beurre blanc
 cuisine: french

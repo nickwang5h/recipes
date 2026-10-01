@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tom-yum-goong.jpg
+coverAlt: 冬阴功汤装盘后的插画
 title: 冬阴功汤
 original: Tom yam kung
 cuisine: thai

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cong-shao-hai-shen.jpg
+coverAlt: 葱烧海参装盘后的插画
 title: 葱烧海参
 cuisine: chinese
 course: seafood

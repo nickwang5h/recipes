@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/la-jiao-chao-rou.jpg
+coverAlt: 辣椒炒肉装盘后的插画
 title: 辣椒炒肉
 cuisine: chinese
 course: meat

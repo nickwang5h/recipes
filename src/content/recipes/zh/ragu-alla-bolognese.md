@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ragu-alla-bolognese.jpg
+coverAlt: 博洛尼亚肉酱装盘后的插画
 title: 博洛尼亚肉酱
 original: Ragù alla bolognese
 cuisine: italian

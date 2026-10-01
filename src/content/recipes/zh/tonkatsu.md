@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tonkatsu.jpg
+coverAlt: 日式炸猪排装盘后的插画
 title: 日式炸猪排
 original: Tonkatsu
 cuisine: japanese

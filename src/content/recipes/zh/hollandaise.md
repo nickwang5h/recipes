@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hollandaise.jpg
+coverAlt: 荷兰酱装盘后的插画
 title: 荷兰酱
 original: Sauce hollandaise
 cuisine: french

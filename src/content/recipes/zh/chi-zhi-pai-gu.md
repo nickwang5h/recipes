@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/chi-zhi-pai-gu.jpg
+coverAlt: 豉汁排骨装盘后的插画
 title: 豉汁排骨
 cuisine: chinese
 course: meat

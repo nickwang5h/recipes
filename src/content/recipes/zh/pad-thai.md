@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pad-thai.jpg
+coverAlt: 泰式炒河粉装盘后的插画
 title: 泰式炒河粉
 original: Phat Thai
 cuisine: thai

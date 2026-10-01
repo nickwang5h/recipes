@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/kimchi-jjigae.jpg
+coverAlt: 泡菜汤装盘后的插画
 title: 泡菜汤
 original: Kimchi-jjigae
 cuisine: korean

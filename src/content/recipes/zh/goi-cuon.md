@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/goi-cuon.jpg
+coverAlt: 越南春卷（米纸卷）装盘后的插画
 title: 越南春卷（米纸卷）
 original: Gỏi cuốn
 cuisine: vietnamese

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pho-bo.jpg
+coverAlt: 越南牛肉河粉装盘后的插画
 title: 越南牛肉河粉
 original: Phở bò
 cuisine: vietnamese

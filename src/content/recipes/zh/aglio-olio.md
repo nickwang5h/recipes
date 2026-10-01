@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/aglio-olio.jpg
+coverAlt: 蒜油辣椒意面装盘后的插画
 title: 蒜油辣椒意面
 original: Spaghetti aglio, olio e peperoncino
 cuisine: italian

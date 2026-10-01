@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/miso-shiru.jpg
+coverAlt: 味噌汤装盘后的插画
 title: 味噌汤
 original: Misoshiru
 cuisine: japanese

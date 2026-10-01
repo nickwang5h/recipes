@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zui-pai-gu.jpg
+coverAlt: 醉排骨装盘后的插画
 title: 醉排骨
 cuisine: chinese
 course: meat

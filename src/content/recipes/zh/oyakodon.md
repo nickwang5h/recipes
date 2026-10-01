@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/oyakodon.jpg
+coverAlt: 亲子丼装盘后的插画
 title: 亲子丼
 original: Oyakodon
 cuisine: japanese

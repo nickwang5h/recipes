@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/li-zhi-rou.jpg
+coverAlt: 荔枝肉装盘后的插画
 title: 荔枝肉
 cuisine: chinese
 course: meat

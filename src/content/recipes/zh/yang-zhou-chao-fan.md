@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yang-zhou-chao-fan.jpg
+coverAlt: 扬州炒饭装盘后的插画
 title: 扬州炒饭
 cuisine: chinese
 course: staple

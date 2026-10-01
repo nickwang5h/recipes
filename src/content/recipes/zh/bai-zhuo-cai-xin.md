@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bai-zhuo-cai-xin.jpg
+coverAlt: 白灼菜心装盘后的插画
 title: 白灼菜心
 cuisine: chinese
 course: veg

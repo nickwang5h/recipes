@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/carbonara.jpg
+coverAlt: 罗马蛋黄培根意面装盘后的插画
 title: 罗马蛋黄培根意面
 original: Carbonara
 cuisine: italian

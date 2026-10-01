@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/banh-mi-thit.jpg
+coverAlt: 越南法棍三明治装盘后的插画
 title: 越南法棍三明治
 original: Bánh mì thịt
 cuisine: vietnamese

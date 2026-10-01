@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/steamed-fish.jpg
+coverAlt: 清蒸鱼装盘后的插画
 title: 清蒸鱼
 cuisine: chinese
 course: seafood

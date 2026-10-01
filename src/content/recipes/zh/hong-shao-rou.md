@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hong-shao-rou.jpg
+coverAlt: 红烧肉装盘后的插画
 title: 红烧肉
 cuisine: chinese
 course: meat

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bulgogi.jpg
+coverAlt: 韩式烤牛肉装盘后的插画
 title: 韩式烤牛肉
 original: Bulgogi
 cuisine: korean

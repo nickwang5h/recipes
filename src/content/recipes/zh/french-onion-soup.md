@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/french-onion-soup.jpg
+coverAlt: 法式洋葱汤装盘后的插画
 title: 法式洋葱汤
 original: Soupe à l'oignon gratinée
 cuisine: french

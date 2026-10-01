@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/fresh-egg-pasta.jpg
+coverAlt: 手工鸡蛋面装盘后的插画
 title: 手工鸡蛋面
 original: Pasta all'uovo
 cuisine: italian

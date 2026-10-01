@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bechamel.jpg
+coverAlt: 贝夏美酱装盘后的插画
 title: 贝夏美酱
 original: Sauce béchamel
 cuisine: french

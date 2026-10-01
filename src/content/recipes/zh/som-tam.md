@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/som-tam.jpg
+coverAlt: 青木瓜沙拉装盘后的插画
 title: 青木瓜沙拉
 original: Som tam
 cuisine: thai

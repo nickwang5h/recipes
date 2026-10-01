@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xiao-chao-huang-niu-rou.jpg
+coverAlt: 小炒黄牛肉装盘后的插画
 title: 小炒黄牛肉
 cuisine: chinese
 course: meat

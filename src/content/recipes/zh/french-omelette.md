@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/french-omelette.jpg
+coverAlt: 法式蛋卷装盘后的插画
 title: 法式蛋卷
 original: Omelette
 cuisine: french

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tteokbokki.jpg
+coverAlt: 辣炒年糕装盘后的插画
 title: 辣炒年糕
 original: Tteokbokki
 cuisine: korean

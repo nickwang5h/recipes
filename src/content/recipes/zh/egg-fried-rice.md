@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/egg-fried-rice.jpg
+coverAlt: 蛋炒饭装盘后的插画
 title: 蛋炒饭
 cuisine: chinese
 course: staple

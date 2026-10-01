@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cacio-e-pepe.jpg
+coverAlt: 黑胡椒奶酪意面装盘后的插画
 title: 黑胡椒奶酪意面
 original: Cacio e pepe
 cuisine: italian

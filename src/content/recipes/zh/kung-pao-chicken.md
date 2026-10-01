@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/kung-pao-chicken.jpg
+coverAlt: 宫保鸡丁装盘后的插画
 title: 宫保鸡丁
 cuisine: chinese
 course: meat

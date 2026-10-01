@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/risotto-alla-milanese.jpg
+coverAlt: 米兰烩饭装盘后的插画
 title: 米兰烩饭
 original: Risotto alla milanese
 cuisine: italian

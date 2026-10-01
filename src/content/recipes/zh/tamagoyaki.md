@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tamagoyaki.jpg
+coverAlt: 日式厚蛋烧装盘后的插画
 title: 日式厚蛋烧
 original: Tamagoyaki
 cuisine: japanese

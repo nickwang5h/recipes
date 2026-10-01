@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bun-cha.jpg
+coverAlt: 烤肉米线装盘后的插画
 title: 烤肉米线
 original: Bún chả
 cuisine: vietnamese

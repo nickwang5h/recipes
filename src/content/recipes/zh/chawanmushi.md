@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/chawanmushi.jpg
+coverAlt: 茶碗蒸装盘后的插画
 title: 茶碗蒸
 original: Chawanmushi
 cuisine: japanese

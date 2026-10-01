@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/dashi.jpg
+coverAlt: 日式高汤装盘后的插画
 title: 日式高汤
 original: Dashi
 cuisine: japanese

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/boeuf-bourguignon.jpg
+coverAlt: 勃艮第红酒炖牛肉装盘后的插画
 title: 勃艮第红酒炖牛肉
 original: Bœuf bourguignon
 cuisine: french

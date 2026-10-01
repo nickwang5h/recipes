@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gaeng-keow-wan-gai.jpg
+coverAlt: 绿咖喱鸡装盘后的插画
 title: 绿咖喱鸡
 original: Kaeng khiao wan kai
 cuisine: thai

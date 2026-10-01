@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/baechu-kimchi.jpg
+coverAlt: 白菜泡菜装盘后的插画
 title: 白菜泡菜
 original: Baechu-kimchi
 cuisine: korean

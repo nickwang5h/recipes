@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/shui-zhu-niu-rou.jpg
+coverAlt: 水煮牛肉装盘后的插画
 title: 水煮牛肉
 cuisine: chinese
 course: meat

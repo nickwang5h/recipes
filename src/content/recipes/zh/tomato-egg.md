@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tomato-egg.jpg
+coverAlt: 番茄炒蛋装盘后的插画
 title: 番茄炒蛋
 cuisine: chinese
 course: veg

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bibimbap.jpg
+coverAlt: 石锅拌饭装盘后的插画
 title: 石锅拌饭
 original: Bibimbap
 cuisine: korean

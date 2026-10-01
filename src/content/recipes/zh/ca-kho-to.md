@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ca-kho-to.jpg
+coverAlt: 砂锅焦糖焖鱼装盘后的插画
 title: 砂锅焦糖焖鱼
 original: Cá kho tộ
 cuisine: vietnamese

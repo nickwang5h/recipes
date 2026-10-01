@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hui-guo-rou.jpg
+coverAlt: 回锅肉装盘后的插画
 title: 回锅肉
 cuisine: chinese
 course: meat

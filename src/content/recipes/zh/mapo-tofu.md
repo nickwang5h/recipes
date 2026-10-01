@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/mapo-tofu.jpg
+coverAlt: 麻婆豆腐装盘后的插画
 title: 麻婆豆腐
 original: Mápó dòufu
 cuisine: chinese

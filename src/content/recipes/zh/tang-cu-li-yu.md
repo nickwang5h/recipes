@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tang-cu-li-yu.jpg
+coverAlt: 糖醋鲤鱼装盘后的插画
 title: 糖醋鲤鱼
 cuisine: chinese
 course: seafood

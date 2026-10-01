@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/japchae.jpg
+coverAlt: 杂菜炒粉丝装盘后的插画
 title: 杂菜炒粉丝
 original: Japchae
 cuisine: korean

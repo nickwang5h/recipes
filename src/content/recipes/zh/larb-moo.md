@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/larb-moo.jpg
+coverAlt: 泰式猪肉碎沙拉装盘后的插画
 title: 泰式猪肉碎沙拉
 original: Lap mu
 cuisine: thai
