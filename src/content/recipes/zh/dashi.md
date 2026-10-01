@@ -5,6 +5,7 @@ title: 日式高汤
 original: Dashi
 cuisine: japanese
 course: sauce
+component: true
 summary: 昆布与柴鱼片短时取味，得到清澈的一番出汁；鲜味靠两种呈鲜物质相互增强。
 servings: 4
 time: { prep: 5, cook: 15 }

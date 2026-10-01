@@ -4,6 +4,7 @@ coverAlt: 煮锅蒸米饭装盘后的插画
 title: 煮锅蒸米饭
 cuisine: chinese
 course: staple
+component: true
 summary: 香米先浸泡，再用厚底带盖煮锅小火吸水；水收尽后关火焖，让中心继续熟透。
 servings: 2
 time: { prep: 25, cook: 20 }

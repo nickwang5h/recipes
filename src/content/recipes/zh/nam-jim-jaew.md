@@ -5,6 +5,7 @@ title: 泰式烤肉蘸酱
 original: Nam chim chaeo
 cuisine: thai
 course: sauce
+component: true
 summary: 干辣椒、鱼露和青柠调出酸咸辣，现炒糯米粉带来烤香，配烤鸡、烤猪肉最合适。
 servings: 4
 time: { prep: 10, cook: 10 }

@@ -5,6 +5,7 @@ title: 鱼露辣椒汁
 original: Nam phrik nam pla
 cuisine: thai
 course: sauce
+component: true
 summary: 鲜辣椒圈泡进鱼露，少量蒜片增香；用小匙浇在饭菜上，补咸、补鲜、补辣。
 servings: 4
 time: { prep: 5, cook: 0 }

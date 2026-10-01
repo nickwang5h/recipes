@@ -5,6 +5,7 @@ title: 贝夏美酱
 original: Sauce béchamel
 cuisine: french
 course: sauce
+component: true
 summary: 黄油面粉糊分散淀粉，牛奶提供水；加热后淀粉吸水膨胀，变成顺滑的白酱。
 servings: 4
 time: { prep: 5, cook: 15 }

@@ -5,6 +5,7 @@ title: 贝阿恩酱
 original: Sauce béarnaise
 cuisine: french
 course: sauce
+component: true
 summary: 龙蒿、红葱头和酒醋收汁给黄油蛋酱定味。蛋黄温和增稠，再一点点拌入黄油。
 servings: 4
 time: { prep: 10, cook: 15 }

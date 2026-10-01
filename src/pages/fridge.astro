@@ -28,6 +28,7 @@ const rec = await Promise.all(recipes.map(async (r) => {
     course: r.data.course,
     time: formatTotal(r.data.time),
     minutes: r.data.time.prep + r.data.time.cook,
+    component: r.data.component,
     img: r.data.cover ? (await getImage({ src: r.data.cover, width: 480, format: 'webp' })).src : undefined,
     req,
   };
@@ -108,6 +109,10 @@ const data = {
         <button class="chip" type="button" data-time="" aria-pressed="true">不限时间</button>
         {Object.entries(TIME_LIMITS).map(([id, t]) => <button class="chip" type="button" data-time={id} aria-pressed="false">{t.label}</button>)}
       </nav>
+      <label class="parts-toggle">
+        <input type="checkbox" data-parts />
+        也列出酱汁、高汤等半成品
+      </label>
 
       <details class="shopping-list" data-list-wrap open hidden>
         <summary><h2 class="section-title">购物清单 <span class="fridge-count" data-list-count></span></h2></summary>
@@ -143,7 +148,7 @@ const data = {
     import { addMissing, grouped, toText, type ListItem } from '../lib/shopping';
 
     interface Ingredient { id: string; zh: string; en: string; where: WhereToBuy; names: string[]; subs: string[] }
-    interface Recipe { id: string; href: string; title: string; summary: string; cuisine: string; course: string; time: string; minutes: number; img?: string; req: string[] }
+    interface Recipe { id: string; href: string; title: string; summary: string; cuisine: string; course: string; time: string; minutes: number; component: boolean; img?: string; req: string[] }
     interface Data {
       ingredients: Ingredient[];
       recipes: Recipe[];
@@ -167,16 +172,18 @@ const data = {
     let list: ListItem[] = [];
     let course = '';
     let time = '';
+    let parts = false;
     let shown = PAGE;
     try {
       const saved = JSON.parse(localStorage.getItem(STORE) ?? '{}');
       chosen = new Set((saved.chosen ?? []).filter((id: string) => byId.has(id) && !isStaple(id)));
       staplesOff = new Set((saved.staplesOff ?? []).filter(isStaple));
       list = (saved.list ?? []).filter((item: ListItem) => byId.has(item.id));
+      parts = saved.parts === true;
     } catch {}
 
     const save = () => {
-      try { localStorage.setItem(STORE, JSON.stringify({ chosen: [...chosen], staplesOff: [...staplesOff], list })); } catch {}
+      try { localStorage.setItem(STORE, JSON.stringify({ chosen: [...chosen], staplesOff: [...staplesOff], list, parts })); } catch {}
     };
     const catalog = new Map(data.ingredients.map((i) => [i.id, i]));
     const isOn = (id: string) => (isStaple(id) ? !staplesOff.has(id) : chosen.has(id));
@@ -331,7 +338,8 @@ const data = {
       for (const b of document.querySelectorAll<HTMLButtonElement>('[data-time-filter] button'))
         b.setAttribute('aria-pressed', String(b.dataset.time === time));
 
-      const pool = data.recipes.filter((r) => (!course || r.course === course) && withinTime(time, r.minutes));
+      const showParts = parts || course === 'sauce';
+      const pool = data.recipes.filter((r) => (showParts || !r.component) && (!course || r.course === course) && withinTime(time, r.minutes));
       const staples = new Set(data.staples.filter((id) => !staplesOff.has(id)));
       const matches = matchRecipes(pool, { chosen, staples, substitutes, maxMissing: 2 });
       const ready = matches.filter((m) => m.missing.length === 0);
@@ -393,6 +401,14 @@ const data = {
       }
     });
 
+    const partsBox = $<HTMLInputElement>('[data-parts]');
+    partsBox.checked = parts;
+    partsBox.addEventListener('change', () => {
+      parts = partsBox.checked;
+      shown = PAGE;
+      save();
+      render();
+    });
     search.addEventListener('input', renderSuggest);
     search.addEventListener('keydown', (event) => {
       if (event.key !== 'Enter') return;

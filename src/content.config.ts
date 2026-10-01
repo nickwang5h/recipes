@@ -88,6 +88,8 @@ const recipes = defineCollection({
     original: z.string().optional(),
     cuisine: reference('cuisines'),
     course: z.enum(keys<Course>(COURSES)),
+    /** A building block (sauce, stock, plain rice…) rather than a dish; hidden from browsing unless asked for. */
+    component: z.boolean().default(false),
     summary: z.string(),
     servings: z.number().int().positive(),
     time: z.object({ prep: z.number().int().nonnegative(), cook: z.number().int().nonnegative() }),

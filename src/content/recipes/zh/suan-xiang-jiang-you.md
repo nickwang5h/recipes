@@ -4,6 +4,7 @@ coverAlt: 蒜香酱油装盘后的插画
 title: 蒜香酱油
 cuisine: chinese
 course: sauce
+component: true
 summary: 蒜在少量油里轻炸到刚发黄，连油拌进生抽与熟芝麻，做成当天使用的咸鲜蘸料。
 servings: 2
 time: { prep: 5, cook: 2 }

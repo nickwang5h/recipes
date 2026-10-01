@@ -5,6 +5,7 @@ title: 热那亚青酱
 original: Pesto alla genovese
 cuisine: italian
 course: sauce
+component: true
 summary: 罗勒、蒜、松子和两种硬奶酪在研钵里捣匀，再拌入橄榄油；青酱靠生捣留下清新的香气。
 servings: 6
 time: { prep: 20, cook: 0 }

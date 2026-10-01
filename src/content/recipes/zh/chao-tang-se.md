@@ -4,6 +4,7 @@ coverAlt: 简易版炒糖色装盘后的插画
 title: 简易版炒糖色
 cuisine: chinese
 course: sauce
+component: true
 summary: 水油炒糖先溶糖、再蒸发水分，糖液转成红褐色就离火兑热水，用颜色控制焦香与苦味。
 servings: 1
 time: { prep: 5, cook: 10 }

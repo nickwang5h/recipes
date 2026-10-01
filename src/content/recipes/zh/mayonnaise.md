@@ -5,6 +5,7 @@ title: 蛋黄酱
 original: Mayonnaise
 cuisine: french
 course: sauce
+component: true
 summary: 蛋黄把大量植物油留在少量水分中，形成浓稠冷酱。开头滴油，等乳化建立后再加快。
 servings: 12
 time: { prep: 15, cook: 0 }

@@ -5,6 +5,7 @@ title: 意式青酱汁
 original: Salsa verde
 cuisine: italian
 course: sauce
+component: true
 summary: 欧芹切细，拌入酸豆、凤尾鱼和橄榄油；清新的酸味与浓缩的鲜咸，给水煮鱼肉增加层次。
 servings: 4
 time: { prep: 15, cook: 0 }

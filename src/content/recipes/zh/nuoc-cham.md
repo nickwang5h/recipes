@@ -5,6 +5,7 @@ title: 越南鱼露蘸汁
 original: Nước chấm
 cuisine: vietnamese
 course: sauce
+component: true
 summary: 鱼露、青柠、糖和水调成酸甜咸鲜的蘸汁，先调酸甜，再分次加鱼露，带着米线或鲜菜尝。
 servings: 4
 time: { prep: 10, cook: 0 }

@@ -50,13 +50,13 @@ export const WHERE_TO_BUY = {
 
 export type WhereToBuy = keyof typeof WHERE_TO_BUY;
 
-/** Time filters, by total minutes (prep + cook). "Within" buckets overlap on purpose: a 10-minute dish
- *  belongs in 30 分钟内 too, because that's what someone with half an hour wants to see. */
+/** Time filters by total minutes (prep + cook). The ranges don't overlap: picking 15–30 分钟
+ *  should show dishes that take about that long, not every quick egg dish as well. */
 export const TIME_LIMITS = {
   '15': { label: '15 分钟内', max: 15 },
-  '30': { label: '半小时内', max: 30 },
-  '60': { label: '1 小时内', max: 60 },
-  '120': { label: '2 小时内', max: 120 },
+  '30': { label: '15–30 分钟', min: 16, max: 30 },
+  '60': { label: '30 分钟–1 小时', min: 31, max: 60 },
+  '120': { label: '1–2 小时', min: 61, max: 120 },
   long: { label: '2 小时以上', min: 121 },
 } as const satisfies Record<string, { label: string; max?: number; min?: number }>;
 

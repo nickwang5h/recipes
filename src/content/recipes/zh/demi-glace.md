@@ -5,6 +5,7 @@ title: 半釉汁
 original: Demi-glace
 cuisine: french
 course: sauce
+component: true
 summary: 棕高汤先做成 espagnole，再与高汤等量收浓；明胶与棕色面糊共同形成能挂勺的褐色底汁。
 servings: 10
 time: { prep: 30, cook: 480 }

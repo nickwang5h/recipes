@@ -4,6 +4,7 @@ coverAlt: 炸串酱料装盘后的插画
 title: 炸串酱料
 cuisine: chinese
 course: sauce
+component: true
 summary: 辣椒、孜然和芝麻用热油分次激香，再拌入酱油与蚝油，做成能薄刷在炸串上的浓酱。
 servings: 1
 time: { prep: 10, cook: 5 }

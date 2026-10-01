@@ -4,6 +4,7 @@ coverAlt: 糖醋汁装盘后的插画
 title: 糖醋汁
 cuisine: chinese
 course: sauce
+component: true
 summary: 水、生抽、糖、醋、料酒按 5、4、3、2、1 的数字配好，盐度和收汁状态决定最终酸甜。
 servings: 1
 time: { prep: 5, cook: 10 }

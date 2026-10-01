@@ -5,6 +5,7 @@ title: 黄油洋葱番茄酱
 original: Sugo di pomodoro al burro
 cuisine: italian
 course: sauce
+component: true
 summary: 整块洋葱与番茄、黄油一起慢煮，水分收浓后取出洋葱，得到柔和、醇厚的番茄酱。
 servings: 6
 time: { prep: 5, cook: 45 }

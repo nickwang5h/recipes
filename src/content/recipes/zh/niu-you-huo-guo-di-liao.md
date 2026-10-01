@@ -4,6 +4,7 @@ coverAlt: 牛油火锅底料装盘后的插画
 title: 牛油火锅底料
 cuisine: chinese
 course: sauce
+component: true
 summary: 牛油承载辣椒与香料，豆瓣慢炒出红油，保留料渣的底料分份储存，用时兑水煮成锅汤。
 servings: 1
 time: { prep: 30, cook: 60 }

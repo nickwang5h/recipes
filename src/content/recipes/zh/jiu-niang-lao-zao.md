@@ -4,6 +4,7 @@ coverAlt: 酒酿醪糟装盘后的插画
 title: 酒酿醪糟
 cuisine: chinese
 course: drink
+component: true
 summary: 糯米煮熟、冷却后拌甜酒曲，温暖发酵到出清甜酒液；酒曲按产品比例称取，成熟后及时冷藏。
 servings: 8
 time: { prep: 30, cook: 40 }

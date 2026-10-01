@@ -4,6 +4,7 @@ coverAlt: 油泼辣子装盘后的插画
 title: 油泼辣子
 cuisine: chinese
 course: sauce
+component: true
 summary: 先用油浸出整粒香料，再分次泼入辣椒面；这版含鲜蒜与糖，质地较稠。
 servings: 20
 time: { prep: 10, cook: 20 }

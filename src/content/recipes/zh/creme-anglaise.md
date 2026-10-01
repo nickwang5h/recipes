@@ -5,6 +5,7 @@ title: 英式蛋奶酱
 original: Crème anglaise
 cuisine: french
 course: sauce
+component: true
 summary: 牛奶、蛋黄、糖和香草煮成能挂勺的流动酱汁，蛋白质刚好增稠时便离火冷却。
 servings: 6
 time: { prep: 25, cook: 10 }

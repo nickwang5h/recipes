@@ -5,6 +5,7 @@ title: 博洛尼亚肉酱
 original: Ragù alla bolognese
 cuisine: italian
 course: sauce
+component: true
 summary: 粗绞牛肉先炒出褐香，再与少量番茄慢炖；结缔组织逐渐软化，肉粒与浓汁一起挂住宽面。
 servings: 6
 time: { prep: 20, cook: 180 }

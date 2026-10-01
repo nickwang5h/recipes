@@ -5,6 +5,7 @@ title: 自制乳清奶酪
 original: Ricotta fatta in casa
 cuisine: italian
 course: sauce
+component: true
 summary: 牛奶加热到 80°C 再加柠檬汁，蛋白质在酸和热中聚成柔软凝乳；轻轻沥水，比用力挤干更重要。
 servings: 4
 time: { prep: 10, cook: 30 }

@@ -4,6 +4,7 @@ coverAlt: 油酥装盘后的插画
 title: 油酥
 cuisine: chinese
 course: sauce
+component: true
 summary: 热油拌面粉形成易涂抹的油酥，夹在饼皮之间，烙好后更容易分层。
 servings: 4
 time: { prep: 5, cook: 3 }

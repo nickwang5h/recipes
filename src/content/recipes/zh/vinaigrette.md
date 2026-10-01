@@ -5,6 +5,7 @@ title: 法式油醋汁
 original: Vinaigrette
 cuisine: french
 course: sauce
+component: true
 summary: 葡萄酒醋与油按 1∶3 混合，搅打成暂时的乳化汁。先在醋里溶盐，临吃前再拌入擦干的菜叶。
 servings: 4
 time: { prep: 5, cook: 0 }

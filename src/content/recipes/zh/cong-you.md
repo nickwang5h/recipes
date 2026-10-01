@@ -4,6 +4,7 @@ coverAlt: 葱油装盘后的插画
 title: 葱油
 cuisine: chinese
 course: sauce
+component: true
 summary: 葱、姜与洋葱低火熬进油里，可加开洋增加鲜味，金黄时捞料，留下清香油脂。
 servings: 1
 time: { prep: 15, cook: 20 }

@@ -14,6 +14,7 @@ const recipes = (await getCollection('recipes')).sort(
 );
 const usedCourses = (Object.keys(COURSES) as Course[]).filter((c) => recipes.some((r) => r.data.course === c));
 const base = url('recipes');
+const components = recipes.filter((r) => r.data.component).length;
 ---
 
 <Base title="菜谱" description="中餐、法餐、意大利菜的经典菜谱。">
@@ -36,10 +37,16 @@ const base = url('recipes');
     {Object.entries(TIME_LIMITS).map(([id, t]) => <a class="chip" href={`${base}?time=${id}`} data-value={id}>{t.label}</a>)}
   </nav>
 
-  <p class="filter-count" data-count>{recipes.length} 道菜</p>
+  <div class="filter-bar">
+    <p class="filter-count" data-count>{recipes.length - components} 道菜</p>
+    <label class="parts-toggle">
+      <input type="checkbox" data-parts />
+      显示酱汁、高汤等半成品（{components}）
+    </label>
+  </div>
   <ul class="card-grid" data-recipe-list>
     {recipes.map((recipe) => (
-      <li data-cuisine={recipe.data.cuisine.id} data-course={recipe.data.course} data-minutes={recipe.data.time.prep + recipe.data.time.cook}>
+      <li data-cuisine={recipe.data.cuisine.id} data-course={recipe.data.course} data-minutes={recipe.data.time.prep + recipe.data.time.cook} data-component={recipe.data.component ? '' : undefined} hidden={recipe.data.component}>
         <RecipeCard recipe={recipe} cuisine={cuisineMap.get(recipe.data.cuisine.id)!} />
       </li>
     ))}
@@ -53,10 +60,14 @@ const base = url('recipes');
 
     const apply = () => {
       const params = new URLSearchParams(location.search);
+      // Sauces, stocks and plain rice are building blocks, not something to browse for dinner;
+      // they show when asked for, or when the 酱汁 type is picked.
+      const parts = params.get('parts') === '1' || params.get('course') === 'sauce';
+      document.querySelector<HTMLInputElement>('[data-parts]')!.checked = params.get('parts') === '1';
       let shown = 0;
       for (const li of document.querySelectorAll<HTMLElement>('[data-recipe-list] > li')) {
         const minutes = Number(li.dataset.minutes);
-        const match = GROUPS.every((g) => {
+        const match = (parts || li.dataset.component === undefined) && GROUPS.every((g) => {
           const want = params.get(g);
           if (!want) return true;
           return g === 'time' ? withinTime(want, minutes) : li.dataset[g] === want;
@@ -81,6 +92,14 @@ const base = url('recipes');
       document.querySelector<HTMLElement>('[data-count]')!.textContent = `${shown} 道菜`;
       document.querySelector<HTMLElement>('[data-empty]')!.hidden = shown > 0;
     };
+
+    document.querySelector<HTMLInputElement>('[data-parts]')!.addEventListener('change', (event) => {
+      const params = new URLSearchParams(location.search);
+      if ((event.target as HTMLInputElement).checked) params.set('parts', '1');
+      else params.delete('parts');
+      history.replaceState(null, '', `${location.pathname}${params.size ? `?${params}` : ''}`);
+      apply();
+    });
 
     document.addEventListener('click', (event) => {
       const link = (event.target as HTMLElement).closest<HTMLAnchorElement>('[data-filter-group] a');

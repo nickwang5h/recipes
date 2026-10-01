@@ -5,6 +5,7 @@ title: 黄油白酱
 original: Beurre blanc
 cuisine: french
 course: sauce
+component: true
 summary: 卢瓦尔河下游的黄油酱：一小勺酸味收汁，托住一整块黄油。成败只在温度。
 servings: 4
 time: { prep: 10, cook: 15 }

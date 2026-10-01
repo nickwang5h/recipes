@@ -4,6 +4,7 @@ coverAlt: 电饭煲蒸米饭装盘后的插画
 title: 电饭煲蒸米饭
 cuisine: chinese
 course: staple
+component: true
 summary: 用本机米杯量米、对应水位加水，等程序结束再焖；翻松后，米粒才均匀柔软。
 servings: 2
 time: { prep: 5, cook: 45 }

@@ -417,3 +417,10 @@ button.chip[aria-pressed="true"] { background: var(--text); border-color: var(--
   /* The dish sits in the middle of every illustration, so a shorter crop loses nothing. */
   .hero .cover img { aspect-ratio: 2 / 1; object-fit: cover; }
 }
+
+.filter-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.25rem 1rem; margin: 0.5rem 0 1rem; }
+.filter-bar .filter-count { margin: 0; }
+.parts-toggle { display: inline-flex; align-items: center; gap: 0.45rem; color: var(--muted); font-size: 0.9rem; cursor: pointer; }
+.parts-toggle input { width: 1.1rem; height: 1.1rem; margin: 0; accent-color: var(--primary); cursor: pointer; }
+.parts-toggle:hover { color: var(--text); }
+.fridge-results > .parts-toggle { margin: 0.25rem 0 0.5rem; }

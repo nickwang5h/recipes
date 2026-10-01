@@ -5,6 +5,7 @@ title: 荷兰酱
 original: Sauce hollandaise
 cuisine: french
 course: sauce
+component: true
 summary: 蛋黄把温热的黄油打散在水中，做成能流动的浓酱；酸味提亮，过热则让蛋黄结块。
 servings: 6
 time: { prep: 5, cook: 15 }
