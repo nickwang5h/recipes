@@ -38,8 +38,8 @@ updated: 2026-09-30
 
 ## 在三个菜系里
 
-- **法餐**：蛋黄酱、荷兰酱靠蛋黄乳化；[黄油白酱](/recipes/beurre-blanc/) 只靠黄油自带的乳蛋白和少量收汁里的水；酱汁收尾时加冷黄油（monter au beurre），也是在做一次小乳化。
-- **意大利菜**：[cacio e pepe](/recipes/cacio-e-pepe/)、carbonara 和 risotto 的 mantecatura，都是用煮面水或高汤里的淀粉，稳定住奶酪和黄油的脂肪。
+- **法餐**：蛋黄酱、[荷兰酱](/recipes/hollandaise/)靠蛋黄乳化；[黄油白酱](/recipes/beurre-blanc/) 只靠黄油自带的乳蛋白和少量收汁里的水；酱汁收尾时加冷黄油（monter au beurre），也是在做一次小乳化。
+- **意大利菜**：[cacio e pepe](/recipes/cacio-e-pepe/)、[carbonara](/recipes/carbonara/)、[蒜油辣椒意面](/recipes/aglio-olio/)和 risotto 的 mantecatura，都是用煮面水或高汤里的淀粉，稳定住奶酪和黄油的脂肪。
 - **中餐**：奶白色的鱼汤、骨汤，一般解释为大火滚煮时，油脂被打成细滴，再由汤里溶出的明胶和蛋白质稳定下来。所以要“大火滚”，小火慢煨出来的是清汤。
 
 ## 破了怎么救

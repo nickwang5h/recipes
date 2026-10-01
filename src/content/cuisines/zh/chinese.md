@@ -2,8 +2,8 @@
 title: 中餐
 summary: 刀工决定受热，火候决定口感，调味是一整套“味型”。炒锅、芡汁和油，是把这些串起来的工具。
 accent: red
-principles: [maillard-reaction, starch-gelatinization]
-featured: [mapo-tofu]
+principles: [knife-work, oil-temperature, starch-gelatinization, maillard-reaction, umami]
+featured: [mapo-tofu, kung-pao-chicken, hong-shao-rou, steamed-fish, tomato-egg, egg-fried-rice]
 order: 1
 ---
 
@@ -11,7 +11,7 @@ order: 1
 
 ## 刀工和火候是一件事
 
-同一盘菜里的原料切成相近的大小和厚薄，才能在同一时间熟。丝、片、丁、块的选择，本质上是在控制**受热速度**：切得越细，越适合旺火速成；大块则适合烧、炖、焖。中餐讲“火候”，说的就是刀工确定之后，用多大的火、加热多久。
+同一盘菜里的原料切成相近的大小和厚薄，才能在同一时间熟。丝、片、丁、块的选择，本质上是在控制**受热速度**（见[刀工与受热](/principles/knife-work/)）：切得越细，越适合旺火速成；大块则适合烧、炖、焖。中餐讲“火候”，说的就是刀工确定之后，用多大的火、加热多久。
 
 ## 锅气：高温、少量、快
 
@@ -19,7 +19,7 @@ order: 1
 
 ## 油是调味的载体
 
-很多香味物质溶于油而不溶于水，比如辣椒的辣味、花椒的麻味。“炝锅”“爆香”“炒出红油”，都是先用热油把这些风味提取出来，再让它包住主料。所以川菜里常见到先炒豆瓣、辣椒至油色红亮这一步。
+很多香味物质溶于油而不溶于水，比如辣椒的辣味、花椒的麻味。“炝锅”“爆香”“炒出红油”，都是先用热油把这些风味提取出来（油温的讲究见[油温与油炸](/principles/oil-temperature/)），再让它包住主料。所以川菜里常见到先炒豆瓣、辣椒至油色红亮这一步。
 
 ## 调味是“味型”，不是单一味道
 
@@ -34,7 +34,7 @@ order: 1
 
 ## 高汤
 
-清汤要小火，保持汤面微沸，反复撇去浮沫；奶汤要大火滚，把油脂打散、乳化成奶白色（见 [乳化](/principles/emulsification/)）。好的高汤能让一道菜在不加味精的情况下仍然“鲜”。
+清汤要小火，保持汤面微沸，反复撇去浮沫；奶汤要大火滚，把油脂打散、乳化成奶白色（见 [乳化](/principles/emulsification/)）。好的高汤能让一道菜在不加味精的情况下仍然“鲜”，原理见[鲜味](/principles/umami/)。
 
 ## 延伸阅读
 

@@ -41,11 +41,11 @@ const { Content } = await render(principle);
     {byCuisine.length > 0 && (
       <section>
         <h2 class="section-title">用到它的菜</h2>
-        {byCuisine.map(({ cuisine, recipes }) => (
-          <ul class="card-grid" style="margin-bottom: 1rem">
-            {recipes.map((recipe) => <li><RecipeCard recipe={recipe} cuisine={cuisine} /></li>)}
-          </ul>
-        ))}
+        <ul class="card-grid">
+          {byCuisine.flatMap(({ cuisine, recipes }) =>
+            recipes.map((recipe) => <li><RecipeCard recipe={recipe} cuisine={cuisine} /></li>),
+          )}
+        </ul>
       </section>
     )}
 

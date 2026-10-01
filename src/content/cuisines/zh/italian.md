@@ -3,8 +3,8 @@ title: 意大利菜
 original: Cucina italiana
 summary: 食材先行，步骤少而精。面和酱最后在锅里合为一体，煮面水、mantecatura 和时机决定成败。
 accent: green
-principles: [emulsification, starch-gelatinization]
-featured: [cacio-e-pepe]
+principles: [emulsification, starch-gelatinization, protein-coagulation, gluten, collagen-gelatin]
+featured: [cacio-e-pepe, carbonara, aglio-olio, risotto-alla-milanese, ragu-alla-bolognese, fresh-egg-pasta]
 order: 3
 ---
 
@@ -22,7 +22,7 @@ order: 3
 
 ## Mantecatura
 
-*Mantecare* 是离火后加入黄油或奶酪，快速搅拌、甩锅，让酱汁变得像奶油一样顺滑。risotto 的最后一步和大多数奶酪面都用到它。关键是**离火**：太烫时加奶酪，奶酪会结成团。
+*Mantecare* 是离火后加入黄油或奶酪，快速搅拌、甩锅，让酱汁变得像奶油一样顺滑。[米兰烩饭](/recipes/risotto-alla-milanese/)的最后一步和大多数奶酪面都用到它。关键是**离火**：太烫时加奶酪，奶酪会结成团。
 
 ## 罗马的四道面
 
@@ -30,7 +30,7 @@ cacio e pepe、gricia、carbonara、amatriciana 常被放在一起讲，它们�
 
 - **cacio e pepe**：Pecorino + 黑胡椒
 - **gricia**：再加 guanciale（腌猪脸颊肉）
-- **carbonara**：再加蛋黄
+- **[carbonara](/recipes/carbonara/)**：再加蛋黄
 - **amatriciana**：guanciale 配番茄
 
 先把 [cacio e pepe](/recipes/cacio-e-pepe/) 做顺，后面三道就不难了。

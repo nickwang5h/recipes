@@ -3,8 +3,8 @@ title: 法餐
 original: Cuisine française
 summary: 以酱汁为骨架：高汤打底，锅底褐渣化开，再用 roux、收汁或黄油乳化，把一锅液体变成挂得住的酱。
 accent: blue
-principles: [emulsification, maillard-reaction]
-featured: [beurre-blanc]
+principles: [emulsification, maillard-reaction, starch-gelatinization, collagen-gelatin, protein-coagulation]
+featured: [beurre-blanc, hollandaise, bechamel, boeuf-bourguignon, french-onion-soup, french-omelette]
 order: 2
 ---
 
@@ -12,7 +12,7 @@ order: 2
 
 ## 高汤（fond）
 
-法语里 *fond* 的本义是“底”，高汤就叫 *fonds de cuisine*，“厨房的底子”。白色高汤用生骨头直接煮；褐色高汤先把骨头和蔬菜烤到褐色，再加水熬煮。煮的过程中，骨头里的胶原会转化为明胶，所以好高汤冷却后会凝成冻。收汁之后，酱汁能挂住、有光泽，靠的主要就是这些明胶。
+法语里 *fond* 的本义是“底”，高汤就叫 *fonds de cuisine*，“厨房的底子”。白色高汤用生骨头直接煮；褐色高汤先把骨头和蔬菜烤到褐色，再加水熬煮。煮的过程中，骨头里的胶原会转化为[明胶](/principles/collagen-gelatin/)，所以好高汤冷却后会凝成冻。收汁之后，酱汁能挂住、有光泽，靠的主要就是这些明胶。
 
 ## 锅底的褐渣
 
@@ -24,11 +24,11 @@ Carême 最早把法式酱汁归成几个大类。Escoffier 在《烹饪指南�
 
 | 母酱 | 液体 | 增稠方式 |
 |---|---|---|
-| Béchamel | 牛奶 | 白 roux |
+| [Béchamel](/recipes/bechamel/) | 牛奶 | 白 roux |
 | Velouté | 白色高汤 | 金 roux |
 | Espagnole | 褐色高汤 | 褐 roux |
 | Sauce tomate | 番茄 | 收汁（传统上也用 roux） |
-| Hollandaise | 黄油 | 蛋黄乳化 |
+| [Hollandaise](/recipes/hollandaise/) | 黄油 | 蛋黄乳化 |
 
 每个母酱再加入不同的配料，就派生出几十种子酱。学法餐的酱汁，其实是在学这张表背后的几种增稠方法。
 

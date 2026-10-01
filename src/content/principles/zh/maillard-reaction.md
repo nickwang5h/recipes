@@ -3,7 +3,7 @@ title: 美拉德反应
 aliases: [Maillard reaction, Réaction de Maillard]
 category: reactions
 summary: 糖和氨基酸在高温下的一串反应，带来褐色和烤香。关键在于把表面的水先赶走。
-related: []
+related: [caramelization, heat-transfer]
 sources:
   - title: "On Food and Cooking: The Science and Lore of the Kitchen（修订版，2004）"
     author: Harold McGee
@@ -28,7 +28,7 @@ updated: 2026-09-30
 
 - **擦干、别挤**：肉下锅前用厨房纸吸干水分。一次下锅太多，锅温骤降，食物出水，就变成了煮。
 - **锅先热，别乱翻**：让接触面有时间升温、定型。
-- **锅底的褐渣是宝**：煎完肉，锅底会粘一层褐色的东西，法餐叫 *sucs*（英文常叫 fond）。倒入酒或高汤把它化开（deglaze），就是酱汁风味的底子。
+- **锅底的褐渣是宝**：煎完肉，锅底会粘一层褐色的东西，法餐叫 *sucs*（英文常叫 fond）。倒入酒或高汤把它化开（deglaze），就是酱汁风味的底子，[勃艮第红酒炖牛肉](/recipes/boeuf-bourguignon/)就是这样起步的。
 - **中餐的“煸酥”**：肉末先炒到水分收干、颜色转褐、开始吐油，再下调料，香味会完全不同。[麻婆豆腐](/recipes/mapo-tofu/) 的牛肉末就是这么处理的。所谓锅气，成因比较复杂，一般认为包括高温下的美拉德反应、焦糖化，以及油雾碰到火焰产生的烟熏味。
 
 ## 过了头

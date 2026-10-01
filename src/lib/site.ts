@@ -32,9 +32,16 @@ export function formatDate(date: Date): string {
   return new Intl.DateTimeFormat('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(date);
 }
 
+function formatMinutes(total: number): string {
+  if (total < 60) return `${total} 分钟`;
+  const h = Math.floor(total / 60);
+  const m = total % 60;
+  return m ? `${h} 小时 ${m} 分钟` : `${h} 小时`;
+}
+
 export function formatTime({ prep, cook }: { prep: number; cook: number }): string {
   const parts = [];
-  if (prep) parts.push(`准备 ${prep} 分钟`);
-  if (cook) parts.push(`烹饪 ${cook} 分钟`);
+  if (prep) parts.push(`准备 ${formatMinutes(prep)}`);
+  if (cook) parts.push(`烹饪 ${formatMinutes(cook)}`);
   return parts.join(' · ');
 }

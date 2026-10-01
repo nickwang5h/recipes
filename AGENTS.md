@@ -5,6 +5,10 @@ Design spec: `docs/superpowers/specs/2026-09-30-recipes-site-design.md`.
 
 ## Content
 
+Before writing, reviewing or dispatching another model to draft a page, read
+`.agents/skills/writing-recipe-notes/SKILL.md` (content structure, sources, style, review checklist).
+Planned and published slugs live in `docs/content-plan.md`.
+
 - Three collections under `src/content/<collection>/zh/`: `cuisines`, `principles`, `recipes`.
   Schemas live in `src/content.config.ts`; a wrong field or reference fails the build.
 - File name = slug = public URL. Use English or romanized original names (`mapo-tofu`). Never rename
