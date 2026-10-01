@@ -23,7 +23,7 @@ const others = (await getCollection('regions'))
 const { Content } = await render(region);
 ---
 
-<Base title={title} description={summary}>
+<Base title={title} description={summary} image={region.data.cover} type="article">
   <article class="accent-red">
     <header class="page-head">
       <div class="eyebrow">

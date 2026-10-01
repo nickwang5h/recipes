@@ -20,7 +20,7 @@ const { Content } = await render(cuisine);
 const regions = cuisine.id === 'chinese' ? (await getCollection('regions')).sort((a, b) => a.data.order - b.data.order) : [];
 ---
 
-<Base title={title} description={summary}>
+<Base title={title} description={summary} image={cuisine.data.cover}>
   <article class={`accent-${accent}`}>
     <header class="page-head">
       <div class="eyebrow"><span class={`cuisine-tag accent-${accent}`}>菜系</span></div>

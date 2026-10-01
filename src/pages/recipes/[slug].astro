@@ -1,11 +1,14 @@
 ---
-import { getCollection, getEntry, render } from 'astro:content';
+import { getImage } from 'astro:assets';
+import { getCollection, getEntries, getEntry, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Cover from '../../components/Cover.astro';
 import CuisineTag from '../../components/CuisineTag.astro';
 import RecipeKit from '../../components/RecipeKit.astro';
 import SourceList from '../../components/SourceList.astro';
-import { formatDate, formatTime, url } from '../../lib/site';
+import { COURSES } from '../../lib/categories';
+import { recipeLd } from '../../lib/jsonld';
+import { SITE_TITLE, formatDate, formatTime, url } from '../../lib/site';
 
 export async function getStaticPaths() {
   const recipes = await getCollection('recipes');
@@ -17,9 +20,28 @@ const { title, original, summary, time, sources, updated } = recipe.data;
 const cuisine = await getEntry(recipe.data.cuisine);
 const principles = await Promise.all(recipe.data.principles.map((ref) => getEntry(ref)));
 const { Content } = await render(recipe);
+
+const items = recipe.data.ingredients.flatMap((g) => g.items);
+const catalog = await getEntries(items.map((i) => i.ref));
+const ld = recipeLd({
+  url: new URL(url(`recipes/${recipe.id}`), Astro.site).href,
+  title,
+  summary,
+  cuisine: cuisine.data.title,
+  course: COURSES[recipe.data.course],
+  servings: recipe.data.servings,
+  time,
+  ingredients: items.map((item, n) => ({ qty: item.qty, unit: item.unit, name: item.name ?? catalog[n].data.zh, note: item.note })),
+  body: recipe.body ?? '',
+  keywords: principles.map((p) => p.data.title),
+  image: recipe.data.cover && new URL((await getImage({ src: recipe.data.cover, width: 1200, format: 'jpg' })).src, Astro.site).href,
+  updated,
+  site: { name: SITE_TITLE, url: new URL('/', Astro.site).href },
+});
 ---
 
-<Base title={title} description={summary}>
+<Base title={title} description={summary} image={recipe.data.cover} type="article">
+  <script type="application/ld+json" slot="head" is:inline set:html={JSON.stringify(ld)} />
   <article>
     <header class="page-head">
       <div class="eyebrow">

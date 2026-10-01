@@ -18,7 +18,8 @@ const files = walk(dist).map((path) => '/' + relative(dist, path).split(sep).joi
 
 const pages = files
   .filter((f) => f.endsWith('/index.html') && !f.startsWith('/404'))
-  .map((f) => f.slice(0, -'index.html'.length));
+  .map((f) => f.slice(0, -'index.html'.length))
+  .concat('/search-index.json');
 
 const precache = [
   ...files.filter((f) => f.startsWith('/_astro/') && /\.(css|js)$/.test(f)),

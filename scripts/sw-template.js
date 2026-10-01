@@ -47,7 +47,8 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
 
-  if (request.mode === 'navigate') {
+  if (request.mode === 'navigate' || url.pathname === '/search-index.json') {
+    // The search index changes with every deploy, so it is treated like a page.
     event.respondWith(page(request));
   } else if (url.pathname.startsWith('/fonts/')) {
     event.respondWith(cacheFirst(request, FONTS));

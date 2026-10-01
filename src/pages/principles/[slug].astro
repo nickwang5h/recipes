@@ -30,7 +30,7 @@ const secondary = users.filter((r) => r.data.principles[0].id !== principle.id);
 const { Content } = await render(principle);
 ---
 
-<Base title={title} description={summary}>
+<Base title={title} description={summary} type="article">
   <article>
     <header class="page-head">
       <div class="eyebrow">

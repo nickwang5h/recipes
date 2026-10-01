@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /offline/
+
+Sitemap: https://recipes.nickwang.xyz/sitemap-index.xml
