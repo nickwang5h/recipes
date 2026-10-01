@@ -13,7 +13,9 @@ Planned and published slugs live in `docs/content-plan.md`.
   Schemas live in `src/content.config.ts`; a wrong field or reference fails the build.
 - File name = slug = public URL. Use English or romanized original names (`mapo-tofu`). Never rename
   a published slug.
-- Recipes: ingredients go in front matter (`qty` only when it should scale). The body has
+- Recipes: ingredients go in front matter as `{ ref: <id>, qty, unit, note }`, where `ref` points at the
+  shared catalog `src/data/ingredients.yaml` (Canadian shelf name, where to buy, pantry flag,
+  substitutes). Add catalog entries centrally; `qty` only when it should scale. The body has
   `## 步骤` as the only ordered list (each item becomes a checkable step) and `## 要点` with
   2–4 failure causes linked to principles.
 - Principles: explain *why*; link recipes and other principles with `/principles/<slug>/` paths.

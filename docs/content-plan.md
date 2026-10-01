@@ -42,3 +42,13 @@ slug 一旦发布就不改。✅ = 已发布。
 | ragu-alla-bolognese | 博洛尼亚肉酱 | italian | maillard-reaction, collagen-gelatin | ✅ |
 | aglio-olio | 蒜油辣椒意面 | italian | emulsification, starch-gelatinization | ✅ |
 | fresh-egg-pasta | 手工鸡蛋面 | italian | gluten, protein-coagulation | ✅ |
+
+## 第三批：HowToCook 改编
+
+清单见 `docs/howtocook/selection.json`（251 道中式家常菜，已全部改编并审稿）。配料通过 `ref` 引用 `src/data/ingredients.yaml` 食材名录，为以后按现有食材匹配菜谱预留。新增原理：
+
+| slug | 标题 | category | 状态 |
+|---|---|---|---|
+| blanching | 焯水与去腥 | prep | ✅ |
+| fermentation | 发酵调味料 | reactions | ✅ |
+| aromatics | 香料与香气提取 | seasoning | ✅ |

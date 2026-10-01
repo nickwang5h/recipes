@@ -1,0 +1,1508 @@
+[
+ {
+  "slug": "xiao-long-xia",
+  "name": "小龙虾",
+  "course": "seafood",
+  "source": "dishes/aquatic/小龙虾/小龙虾.md"
+ },
+ {
+  "slug": "gan-jian-a-gen-ting-hong-xia",
+  "name": "干煎阿根廷红虾",
+  "course": "seafood",
+  "source": "dishes/aquatic/干煎阿根廷红虾/干煎阿根廷红虾.md"
+ },
+ {
+  "slug": "wei-bo-cong-jiang-hei-xue-yu",
+  "name": "微波葱姜黑鳕鱼",
+  "course": "seafood",
+  "source": "dishes/aquatic/微波葱姜黑鳕鱼.md"
+ },
+ {
+  "slug": "shui-zhu-yu",
+  "name": "水煮鱼",
+  "course": "seafood",
+  "source": "dishes/aquatic/水煮鱼.md"
+ },
+ {
+  "slug": "you-men-da-xia",
+  "name": "油焖大虾",
+  "course": "seafood",
+  "source": "dishes/aquatic/油焖大虾/油焖大虾.md"
+ },
+ {
+  "slug": "kao-yu",
+  "name": "烤鱼",
+  "course": "seafood",
+  "source": "dishes/aquatic/混合烤鱼/烤鱼.md"
+ },
+ {
+  "slug": "qing-zheng-sheng-hao",
+  "name": "清蒸生蚝",
+  "course": "seafood",
+  "source": "dishes/aquatic/清蒸生蚝.md"
+ },
+ {
+  "slug": "bai-zhuo-xia",
+  "name": "白灼虾",
+  "course": "seafood",
+  "source": "dishes/aquatic/白灼虾/白灼虾.md"
+ },
+ {
+  "slug": "tang-cu-li-yu",
+  "name": "糖醋鲤鱼",
+  "course": "seafood",
+  "source": "dishes/aquatic/糖醋鲤鱼/糖醋鲤鱼.md"
+ },
+ {
+  "slug": "hong-shao-yu",
+  "name": "红烧鱼",
+  "course": "seafood",
+  "source": "dishes/aquatic/红烧鱼.md"
+ },
+ {
+  "slug": "hong-shao-yu-tou",
+  "name": "红烧鱼头",
+  "course": "seafood",
+  "source": "dishes/aquatic/红烧鱼头.md"
+ },
+ {
+  "slug": "hong-shao-li-yu",
+  "name": "红烧鲤鱼",
+  "course": "seafood",
+  "source": "dishes/aquatic/红烧鲤鱼.md"
+ },
+ {
+  "slug": "rou-xie-bao",
+  "name": "肉蟹煲",
+  "course": "seafood",
+  "source": "dishes/aquatic/肉蟹煲.md"
+ },
+ {
+  "slug": "jie-mo-huang-you-luo-shi-xia",
+  "name": "芥末黄油罗氏虾",
+  "course": "seafood",
+  "source": "dishes/aquatic/芥末黄油罗氏虾/芥末黄油罗氏虾.md"
+ },
+ {
+  "slug": "cong-you-gui-yu",
+  "name": "葱油桂鱼",
+  "course": "seafood",
+  "source": "dishes/aquatic/葱油桂鱼/葱油桂鱼.md"
+ },
+ {
+  "slug": "cong-shao-hai-shen",
+  "name": "葱烧海参",
+  "course": "seafood",
+  "source": "dishes/aquatic/葱烧海参/葱烧海参.md"
+ },
+ {
+  "slug": "suan-rong-xia",
+  "name": "蒜蓉虾",
+  "course": "seafood",
+  "source": "dishes/aquatic/蒜蓉虾/蒜蓉虾.md"
+ },
+ {
+  "slug": "suan-xiang-huang-you-xia",
+  "name": "蒜香黄油虾",
+  "course": "seafood",
+  "source": "dishes/aquatic/蒜香黄油虾/蒜香黄油虾.md"
+ },
+ {
+  "slug": "cheng-bao-dan",
+  "name": "蛏抱蛋",
+  "course": "seafood",
+  "source": "dishes/aquatic/蛏抱蛋/蛏抱蛋.md"
+ },
+ {
+  "slug": "jiang-dun-xie",
+  "name": "酱炖蟹",
+  "course": "seafood",
+  "source": "dishes/aquatic/酱炖蟹.md"
+ },
+ {
+  "slug": "yang-shuo-pi-jiu-yu",
+  "name": "阳朔啤酒鱼",
+  "course": "seafood",
+  "source": "dishes/aquatic/阳朔啤酒鱼/阳朔啤酒鱼.md"
+ },
+ {
+  "slug": "li-yu-dun-bai-cai",
+  "name": "鲤鱼炖白菜",
+  "course": "seafood",
+  "source": "dishes/aquatic/鲤鱼炖白菜/鲤鱼炖白菜.md"
+ },
+ {
+  "slug": "bian-yu-dun-dou-fu",
+  "name": "鳊鱼炖豆腐",
+  "course": "seafood",
+  "source": "dishes/aquatic/鳊鱼炖豆腐/鳊鱼炖豆腐.md"
+ },
+ {
+  "slug": "huang-you-jian-xia",
+  "name": "黄油煎虾",
+  "course": "seafood",
+  "source": "dishes/aquatic/黄油煎虾/黄油煎虾.md"
+ },
+ {
+  "slug": "shou-zhua-bing",
+  "name": "手抓饼",
+  "course": "breakfast",
+  "source": "dishes/breakfast/手抓饼.md"
+ },
+ {
+  "slug": "gui-yuan-hong-zao-zhou",
+  "name": "桂圆红枣粥",
+  "course": "breakfast",
+  "source": "dishes/breakfast/桂圆红枣粥.md"
+ },
+ {
+  "slug": "tang-xin-dan",
+  "name": "溏心蛋",
+  "course": "breakfast",
+  "source": "dishes/breakfast/溏心蛋.md"
+ },
+ {
+  "slug": "jian-jiao",
+  "name": "煎饺",
+  "course": "breakfast",
+  "source": "dishes/breakfast/煎饺.md"
+ },
+ {
+  "slug": "cha-ye-dan",
+  "name": "茶叶蛋",
+  "course": "breakfast",
+  "source": "dishes/breakfast/茶叶蛋.md"
+ },
+ {
+  "slug": "zheng-hua-juan",
+  "name": "蒸花卷",
+  "course": "breakfast",
+  "source": "dishes/breakfast/蒸花卷.md"
+ },
+ {
+  "slug": "dan-jian-ci-ba",
+  "name": "蛋煎糍粑",
+  "course": "breakfast",
+  "source": "dishes/breakfast/蛋煎糍粑.md"
+ },
+ {
+  "slug": "you-po-la-zi",
+  "name": "油泼辣子",
+  "course": "sauce",
+  "source": "dishes/condiment/油泼辣子/油泼辣子.md"
+ },
+ {
+  "slug": "you-su",
+  "name": "油酥",
+  "course": "sauce",
+  "source": "dishes/condiment/油酥.md"
+ },
+ {
+  "slug": "zha-chuan-jiang-liao",
+  "name": "炸串酱料",
+  "course": "sauce",
+  "source": "dishes/condiment/炸串酱料.md"
+ },
+ {
+  "slug": "chao-tang-se",
+  "name": "简易版炒糖色",
+  "course": "sauce",
+  "source": "dishes/condiment/简易版炒糖色.md"
+ },
+ {
+  "slug": "tang-cu-zhi",
+  "name": "糖醋汁",
+  "course": "sauce",
+  "source": "dishes/condiment/糖醋汁.md"
+ },
+ {
+  "slug": "cong-you",
+  "name": "葱油",
+  "course": "sauce",
+  "source": "dishes/condiment/葱油.md"
+ },
+ {
+  "slug": "suan-xiang-jiang-you",
+  "name": "蒜香酱油",
+  "course": "sauce",
+  "source": "dishes/condiment/蒜香酱油.md"
+ },
+ {
+  "slug": "fan-sha-yu-tou",
+  "name": "反沙芋头",
+  "course": "dessert",
+  "source": "dishes/dessert/反沙芋头/反沙芋头.md"
+ },
+ {
+  "slug": "zha-xian-nai",
+  "name": "炸鲜奶",
+  "course": "dessert",
+  "source": "dishes/dessert/炸鲜奶/炸鲜奶.md"
+ },
+ {
+  "slug": "kao-dan-ta",
+  "name": "烤蛋挞",
+  "course": "dessert",
+  "source": "dishes/dessert/烤蛋挞/烤蛋挞.md"
+ },
+ {
+  "slug": "yu-ni-xue-mei-niang",
+  "name": "芋泥雪媚娘",
+  "course": "dessert",
+  "source": "dishes/dessert/芋泥雪媚娘/芋泥雪媚娘.md"
+ },
+ {
+  "slug": "xue-hua-su",
+  "name": "雪花酥",
+  "course": "dessert",
+  "source": "dishes/dessert/雪花酥/雪花酥.md"
+ },
+ {
+  "slug": "gui-ling-gao",
+  "name": "龟苓膏",
+  "course": "dessert",
+  "source": "dishes/dessert/龟苓膏/龟苓膏.md"
+ },
+ {
+  "slug": "dong-gua-cha",
+  "name": "冬瓜茶",
+  "course": "drink",
+  "source": "dishes/drink/冬瓜茶.md"
+ },
+ {
+  "slug": "bing-fen",
+  "name": "冰粉",
+  "course": "drink",
+  "source": "dishes/drink/冰粉/冰粉.md"
+ },
+ {
+  "slug": "yang-zhi-gan-lu",
+  "name": "杨枝甘露",
+  "course": "drink",
+  "source": "dishes/drink/杨枝甘露.md"
+ },
+ {
+  "slug": "jiu-niang-lao-zao",
+  "name": "酒酿醪糟",
+  "course": "drink",
+  "source": "dishes/drink/酒酿醪糟/酒酿醪糟.md"
+ },
+ {
+  "slug": "suan-mei-tang",
+  "name": "酸梅汤",
+  "course": "drink",
+  "source": "dishes/drink/酸梅汤/酸梅汤.md"
+ },
+ {
+  "slug": "xiang-cun-pi-jiu-ya",
+  "name": "乡村啤酒鸭",
+  "course": "meat",
+  "source": "dishes/meat_dish/乡村啤酒鸭.md"
+ },
+ {
+  "slug": "nong-jia-yi-wan-xiang",
+  "name": "农家一碗香",
+  "course": "meat",
+  "source": "dishes/meat_dish/农家一碗香/农家一碗香.md"
+ },
+ {
+  "slug": "dong-gua-sang-na-ji",
+  "name": "冬瓜桑拿鸡",
+  "course": "meat",
+  "source": "dishes/meat_dish/冬瓜桑拿鸡.md"
+ },
+ {
+  "slug": "dong-gua-niang-rou",
+  "name": "冬瓜酿肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/冬瓜酿肉/冬瓜酿肉.md"
+ },
+ {
+  "slug": "leng-chi-tu",
+  "name": "冷吃兔",
+  "course": "meat",
+  "source": "dishes/meat_dish/冷吃兔.md"
+ },
+ {
+  "slug": "liang-ban-ji-si",
+  "name": "凉拌鸡丝",
+  "course": "meat",
+  "source": "dishes/meat_dish/凉拌鸡丝/凉拌鸡丝.md"
+ },
+ {
+  "slug": "lu-cai",
+  "name": "卤菜",
+  "course": "meat",
+  "source": "dishes/meat_dish/卤菜/卤菜.md"
+ },
+ {
+  "slug": "kou-shui-ji",
+  "name": "口水鸡",
+  "course": "meat",
+  "source": "dishes/meat_dish/口水鸡/口水鸡.md"
+ },
+ {
+  "slug": "ke-le-ji-chi",
+  "name": "可乐鸡翅",
+  "course": "meat",
+  "source": "dishes/meat_dish/可乐鸡翅.md"
+ },
+ {
+  "slug": "tai-shi-lu-rou-fan",
+  "name": "台式卤肉饭",
+  "course": "staple",
+  "source": "dishes/meat_dish/台式卤肉饭/台式卤肉饭.md"
+ },
+ {
+  "slug": "gu-lu-rou",
+  "name": "咕噜肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/咕噜肉.md"
+ },
+ {
+  "slug": "pi-jiu-ya",
+  "name": "啤酒鸭",
+  "course": "meat",
+  "source": "dishes/meat_dish/啤酒鸭/啤酒鸭.md"
+ },
+ {
+  "slug": "hui-guo-rou",
+  "name": "回锅肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/回锅肉/回锅肉.md"
+ },
+ {
+  "slug": "tu-dou-dun-pai-gu",
+  "name": "土豆炖排骨",
+  "course": "meat",
+  "source": "dishes/meat_dish/土豆炖排骨/土豆炖排骨.md"
+ },
+ {
+  "slug": "jiang-chao-ji",
+  "name": "姜炒鸡",
+  "course": "meat",
+  "source": "dishes/meat_dish/姜炒鸡/姜炒鸡.md"
+ },
+ {
+  "slug": "jiang-cong-lao-ji",
+  "name": "姜葱捞鸡",
+  "course": "meat",
+  "source": "dishes/meat_dish/姜葱捞鸡/姜葱捞鸡.md"
+ },
+ {
+  "slug": "zi-ran-niu-rou",
+  "name": "孜然牛肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/孜然牛肉.md"
+ },
+ {
+  "slug": "xiao-chao-rou",
+  "name": "小炒肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/小炒肉.md"
+ },
+ {
+  "slug": "xiao-chao-ji-gan",
+  "name": "小炒鸡肝",
+  "course": "meat",
+  "source": "dishes/meat_dish/小炒鸡肝/小炒鸡肝.md"
+ },
+ {
+  "slug": "xiao-chao-huang-niu-rou",
+  "name": "小炒黄牛肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/小炒黄牛肉/小炒黄牛肉.md"
+ },
+ {
+  "slug": "xiao-mi-la-chao-rou",
+  "name": "小米辣炒肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/小米辣炒肉.md"
+ },
+ {
+  "slug": "xiao-su-rou",
+  "name": "小酥肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/小酥肉.md"
+ },
+ {
+  "slug": "jian-jiao-niu-wa",
+  "name": "尖叫牛蛙",
+  "course": "meat",
+  "source": "dishes/meat_dish/尖叫牛蛙/尖叫牛蛙.md"
+ },
+ {
+  "slug": "jian-jiao-chao-niu-rou",
+  "name": "尖椒炒牛肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/尖椒炒牛肉.md"
+ },
+ {
+  "slug": "shan-xi-guo-you-rou",
+  "name": "山西过油肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/山西过油肉.md"
+ },
+ {
+  "slug": "dai-ba-zhou-zi",
+  "name": "带把肘子",
+  "course": "meat",
+  "source": "dishes/meat_dish/带把肘子.md"
+ },
+ {
+  "slug": "gan-bian-zi-ji",
+  "name": "干煸仔鸡",
+  "course": "meat",
+  "source": "dishes/meat_dish/干煸仔鸡/干煸仔鸡.md"
+ },
+ {
+  "slug": "guang-shi-luo-bo-niu-nan",
+  "name": "广式萝卜牛腩",
+  "course": "meat",
+  "source": "dishes/meat_dish/广式萝卜牛腩/广式萝卜牛腩.md"
+ },
+ {
+  "slug": "xin-jiang-da-pan-ji",
+  "name": "新疆大盘鸡",
+  "course": "meat",
+  "source": "dishes/meat_dish/新疆大盘鸡/新疆大盘鸡.md"
+ },
+ {
+  "slug": "wu-gu-ji-zhao",
+  "name": "无骨鸡爪",
+  "course": "meat",
+  "source": "dishes/meat_dish/无骨鸡爪/无骨鸡爪.md"
+ },
+ {
+  "slug": "sha-zhu-cai",
+  "name": "杀猪菜",
+  "course": "meat",
+  "source": "dishes/meat_dish/杀猪菜.md"
+ },
+ {
+  "slug": "zhi-zhu-yang-nan-bao",
+  "name": "枝竹羊腩煲",
+  "course": "meat",
+  "source": "dishes/meat_dish/枝竹羊腩煲/枝竹羊腩煲.md"
+ },
+ {
+  "slug": "zhu-hou-niu-nan",
+  "name": "柱候牛腩",
+  "course": "meat",
+  "source": "dishes/meat_dish/柱候牛腩/柱候牛腩.md"
+ },
+ {
+  "slug": "gui-lin-shi-ba-niang",
+  "name": "桂林十八酿",
+  "course": "meat",
+  "source": "dishes/meat_dish/桂林十八酿/桂林十八酿.md"
+ },
+ {
+  "slug": "mei-cai-kou-rou",
+  "name": "梅菜扣肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/梅菜扣肉/梅菜扣肉.md"
+ },
+ {
+  "slug": "jiao-yan-pai-tiao",
+  "name": "椒盐排条",
+  "course": "meat",
+  "source": "dishes/meat_dish/椒盐排条.md"
+ },
+ {
+  "slug": "shui-zhu-niu-rou",
+  "name": "水煮牛肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/水煮牛肉/水煮牛肉.md"
+ },
+ {
+  "slug": "shui-zhu-rou-pian",
+  "name": "水煮肉片",
+  "course": "meat",
+  "source": "dishes/meat_dish/水煮肉片.md"
+ },
+ {
+  "slug": "yang-cong-chao-zhu-rou",
+  "name": "洋葱炒猪肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/洋葱炒猪肉.md"
+ },
+ {
+  "slug": "zi-bo-shao-kao",
+  "name": "淄博烧烤",
+  "course": "meat",
+  "source": "dishes/meat_dish/淄博烧烤/淄博烧烤.md"
+ },
+ {
+  "slug": "ao-men-mian-zhi-niu-rou-fan",
+  "name": "澳门湿版免治牛肉饭",
+  "course": "staple",
+  "source": "dishes/meat_dish/澳门湿版免治牛肉饭/澳门湿版免治牛肉饭.md"
+ },
+ {
+  "slug": "zhu-pi-dong",
+  "name": "猪皮冻",
+  "course": "meat",
+  "source": "dishes/meat_dish/猪皮冻/猪皮冻.md"
+ },
+ {
+  "slug": "zhu-rou-hui-suan-cai",
+  "name": "猪肉烩酸菜",
+  "course": "meat",
+  "source": "dishes/meat_dish/猪肉烩酸菜.md"
+ },
+ {
+  "slug": "shou-rou-tu-dou-pian",
+  "name": "瘦肉土豆片",
+  "course": "meat",
+  "source": "dishes/meat_dish/瘦肉土豆片/瘦肉土豆片.md"
+ },
+ {
+  "slug": "bai-cai-zhu-rou-dun-fen-tiao",
+  "name": "白菜猪肉炖粉条",
+  "course": "meat",
+  "source": "dishes/meat_dish/白菜猪肉炖粉条.md"
+ },
+ {
+  "slug": "fen-zheng-rou",
+  "name": "粉蒸肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/粉蒸肉.md"
+ },
+ {
+  "slug": "tang-cu-pai-gu",
+  "name": "糖醋排骨",
+  "course": "meat",
+  "source": "dishes/meat_dish/糖醋排骨/糖醋排骨.md"
+ },
+ {
+  "slug": "tang-cu-li-ji",
+  "name": "糖醋里脊",
+  "course": "meat",
+  "source": "dishes/meat_dish/糖醋里脊.md"
+ },
+ {
+  "slug": "hong-shao-zhu-ti",
+  "name": "红烧猪蹄",
+  "course": "meat",
+  "source": "dishes/meat_dish/红烧猪蹄/红烧猪蹄.md"
+ },
+ {
+  "slug": "hong-shao-ji-chi",
+  "name": "红烧鸡翅",
+  "course": "meat",
+  "source": "dishes/meat_dish/红烧鸡翅.md"
+ },
+ {
+  "slug": "yang-pai-men-mian",
+  "name": "羊排焖面",
+  "course": "staple",
+  "source": "dishes/meat_dish/羊排焖面/羊排焖面.md"
+ },
+ {
+  "slug": "lao-ma-ti-hua",
+  "name": "老妈蹄花",
+  "course": "meat",
+  "source": "dishes/meat_dish/老妈蹄花/老妈蹄花.md"
+ },
+ {
+  "slug": "lao-shi-guo-bao-rou",
+  "name": "老式锅包肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/老式锅包肉/老式锅包肉.md"
+ },
+ {
+  "slug": "rou-bing-dun-dan",
+  "name": "肉饼炖蛋",
+  "course": "meat",
+  "source": "dishes/meat_dish/肉饼炖蛋.md"
+ },
+ {
+  "slug": "fu-ru-rou",
+  "name": "腐乳肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/腐乳肉.md"
+ },
+ {
+  "slug": "jie-mo-luo-shi-xia",
+  "name": "芥末罗氏虾",
+  "course": "seafood",
+  "source": "dishes/meat_dish/芥末罗氏虾/芥末罗氏虾.md"
+ },
+ {
+  "slug": "jiao-bai-chao-rou",
+  "name": "茭白炒肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/茭白炒肉/茭白炒肉.md"
+ },
+ {
+  "slug": "li-zhi-rou",
+  "name": "荔枝肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/荔枝肉/荔枝肉.md"
+ },
+ {
+  "slug": "he-lan-dou-chao-la-chang",
+  "name": "荷兰豆炒腊肠",
+  "course": "meat",
+  "source": "dishes/meat_dish/荷兰豆炒腊肠/荷兰豆炒腊肠.md"
+ },
+ {
+  "slug": "luo-bo-dun-yang-pai",
+  "name": "萝卜炖羊排",
+  "course": "meat",
+  "source": "dishes/meat_dish/萝卜炖羊排.md"
+ },
+ {
+  "slug": "cong-shao-ji-tui",
+  "name": "葱烧鸡腿",
+  "course": "meat",
+  "source": "dishes/meat_dish/葱烧鸡腿.md"
+ },
+ {
+  "slug": "suan-tai-chao-rou-mo",
+  "name": "蒜苔炒肉末",
+  "course": "meat",
+  "source": "dishes/meat_dish/蒜苔炒肉末.md"
+ },
+ {
+  "slug": "hu-pi-zhou-zi",
+  "name": "虎皮肘子",
+  "course": "meat",
+  "source": "dishes/meat_dish/虎皮肘子.md"
+ },
+ {
+  "slug": "ma-yi-shang-shu",
+  "name": "蚂蚁上树",
+  "course": "meat",
+  "source": "dishes/meat_dish/蚂蚁上树.md"
+ },
+ {
+  "slug": "xi-hong-shi-tu-dou-dun-niu-rou",
+  "name": "西红柿土豆炖牛肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/西红柿土豆炖牛肉/西红柿土豆炖牛肉.md"
+ },
+ {
+  "slug": "xi-hong-shi-niu-nan",
+  "name": "西红柿牛腩",
+  "course": "meat",
+  "source": "dishes/meat_dish/西红柿牛腩/西红柿牛腩.md"
+ },
+ {
+  "slug": "dou-chi-ling-yu-you-mai-cai",
+  "name": "豆豉鲮鱼油麦菜",
+  "course": "veg",
+  "source": "dishes/meat_dish/豆豉鲮鱼油麦菜/豆豉鲮鱼油麦菜.md"
+ },
+ {
+  "slug": "chi-zhi-pai-gu",
+  "name": "豉汁排骨",
+  "course": "meat",
+  "source": "dishes/meat_dish/豉汁排骨.md"
+ },
+ {
+  "slug": "gui-zhou-la-zi-ji",
+  "name": "贵州辣子鸡",
+  "course": "meat",
+  "source": "dishes/meat_dish/贵州辣子鸡/贵州辣子鸡.md"
+ },
+ {
+  "slug": "la-jiao-chao-rou",
+  "name": "辣椒炒肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/辣椒炒肉.md"
+ },
+ {
+  "slug": "jiang-pai-gu",
+  "name": "酱排骨",
+  "course": "meat",
+  "source": "dishes/meat_dish/酱排骨/酱排骨.md"
+ },
+ {
+  "slug": "jiang-niu-rou",
+  "name": "酱牛肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/酱牛肉/酱牛肉.md"
+ },
+ {
+  "slug": "zui-pai-gu",
+  "name": "醉排骨",
+  "course": "meat",
+  "source": "dishes/meat_dish/醉排骨/醉排骨.md"
+ },
+ {
+  "slug": "qing-jiao-tu-dou-chao-rou",
+  "name": "青椒土豆炒肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/青椒土豆炒肉/青椒土豆炒肉.md"
+ },
+ {
+  "slug": "qing-jiao-niang",
+  "name": "青椒酿",
+  "course": "meat",
+  "source": "dishes/meat_dish/青椒酿/青椒酿.md"
+ },
+ {
+  "slug": "xiang-gan-rou-si",
+  "name": "香干肉丝",
+  "course": "meat",
+  "source": "dishes/meat_dish/香干肉丝.md"
+ },
+ {
+  "slug": "xiang-gan-qin-cai-chao-rou",
+  "name": "香干芹菜炒肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/香干芹菜炒肉/香干芹菜炒肉.md"
+ },
+ {
+  "slug": "xiang-jian-wu-hua-rou",
+  "name": "香煎五花肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/香煎五花肉/香煎五花肉.md"
+ },
+ {
+  "slug": "xiang-gu-hua-ji",
+  "name": "香菇滑鸡",
+  "course": "meat",
+  "source": "dishes/meat_dish/香菇滑鸡/香菇滑鸡.md"
+ },
+ {
+  "slug": "xiang-la-ji-zhao-bao",
+  "name": "香辣鸡爪煲",
+  "course": "meat",
+  "source": "dishes/meat_dish/香辣鸡爪煲/香辣鸡爪煲.md"
+ },
+ {
+  "slug": "yu-xiang-rou-si",
+  "name": "鱼香肉丝",
+  "course": "meat",
+  "source": "dishes/meat_dish/鱼香肉丝.md"
+ },
+ {
+  "slug": "yu-xiang-qie-zi",
+  "name": "鱼香茄子",
+  "course": "meat",
+  "source": "dishes/meat_dish/鱼香茄子/鱼香茄子.md"
+ },
+ {
+  "slug": "ma-la-xiang-guo",
+  "name": "麻辣香锅",
+  "course": "meat",
+  "source": "dishes/meat_dish/麻辣香锅.md"
+ },
+ {
+  "slug": "huang-men-ji",
+  "name": "黄焖鸡",
+  "course": "meat",
+  "source": "dishes/meat_dish/黄焖鸡.md"
+ },
+ {
+  "slug": "huang-gua-chao-rou",
+  "name": "黄瓜炒肉",
+  "course": "meat",
+  "source": "dishes/meat_dish/黄瓜炒肉.md"
+ },
+ {
+  "slug": "hei-jiao-niu-liu",
+  "name": "黑椒牛柳",
+  "course": "meat",
+  "source": "dishes/meat_dish/黑椒牛柳/黑椒牛柳.md"
+ },
+ {
+  "slug": "qian-shi-la-chang-wa-wa-cai",
+  "name": "黔式腊肠娃娃菜",
+  "course": "meat",
+  "source": "dishes/meat_dish/黔式腊肠娃娃菜/黔式腊肠娃娃菜.md"
+ },
+ {
+  "slug": "liang-pi",
+  "name": "凉皮",
+  "course": "staple",
+  "source": "dishes/semi-finished/凉皮.md"
+ },
+ {
+  "slug": "niu-you-huo-guo-di-liao",
+  "name": "牛油火锅底料",
+  "course": "sauce",
+  "source": "dishes/semi-finished/牛油火锅底料.md"
+ },
+ {
+  "slug": "gou-qian-xiang-gu-tang",
+  "name": "勾芡香菇汤",
+  "course": "soup",
+  "source": "dishes/soup/勾芡香菇汤/勾芡香菇汤.md"
+ },
+ {
+  "slug": "xiao-mi-zhou",
+  "name": "小米粥",
+  "course": "soup",
+  "source": "dishes/soup/小米粥.md"
+ },
+ {
+  "slug": "shan-yao-nan-gua-dun-ji-tang",
+  "name": "山药南瓜炖鸡汤",
+  "course": "soup",
+  "source": "dishes/soup/山药南瓜炖鸡汤.md"
+ },
+ {
+  "slug": "pai-gu-shan-yao-yu-mi-tang",
+  "name": "排骨山药玉米汤",
+  "course": "soup",
+  "source": "dishes/soup/排骨山药玉米汤/排骨山药玉米汤.md"
+ },
+ {
+  "slug": "pai-gu-ku-gua-tang",
+  "name": "排骨苦瓜汤",
+  "course": "soup",
+  "source": "dishes/soup/排骨苦瓜汤/排骨苦瓜汤.md"
+ },
+ {
+  "slug": "zhu-que-tang",
+  "name": "朱雀汤",
+  "course": "soup",
+  "source": "dishes/soup/朱雀汤/朱雀汤.md"
+ },
+ {
+  "slug": "yu-mi-pai-gu-tang",
+  "name": "玉米排骨汤",
+  "course": "soup",
+  "source": "dishes/soup/玉米排骨汤/玉米排骨汤.md"
+ },
+ {
+  "slug": "sheng-cuan-wan-zi-tang",
+  "name": "生汆丸子汤",
+  "course": "soup",
+  "source": "dishes/soup/生汆丸子汤.md"
+ },
+ {
+  "slug": "fan-qie-niu-rou-dan-hua-tang",
+  "name": "番茄牛肉蛋花汤",
+  "course": "soup",
+  "source": "dishes/soup/番茄牛肉蛋花汤.md"
+ },
+ {
+  "slug": "pi-dan-shou-rou-zhou",
+  "name": "皮蛋瘦肉粥",
+  "course": "soup",
+  "source": "dishes/soup/皮蛋瘦肉粥.md"
+ },
+ {
+  "slug": "mi-zhou",
+  "name": "米粥",
+  "course": "soup",
+  "source": "dishes/soup/米粥.md"
+ },
+ {
+  "slug": "zi-cai-dan-hua-tang",
+  "name": "紫菜蛋花汤",
+  "course": "soup",
+  "source": "dishes/soup/紫菜蛋花汤.md"
+ },
+ {
+  "slug": "luo-song-tang",
+  "name": "罗宋汤",
+  "course": "soup",
+  "source": "dishes/soup/罗宋汤.md"
+ },
+ {
+  "slug": "yang-rou-tang",
+  "name": "羊肉汤",
+  "course": "soup",
+  "source": "dishes/soup/羊肉汤/羊肉汤.md"
+ },
+ {
+  "slug": "la-ba-zhou",
+  "name": "腊八粥",
+  "course": "soup",
+  "source": "dishes/soup/腊八粥.md"
+ },
+ {
+  "slug": "jun-gu-dun-ru-ge",
+  "name": "菌菇炖乳鸽",
+  "course": "soup",
+  "source": "dishes/soup/菌菇炖乳鸽/菌菇炖乳鸽.md"
+ },
+ {
+  "slug": "xi-hong-shi-ji-dan-tang",
+  "name": "西红柿鸡蛋汤",
+  "course": "soup",
+  "source": "dishes/soup/西红柿鸡蛋汤.md"
+ },
+ {
+  "slug": "jin-zhen-gu-tang",
+  "name": "金针菇汤",
+  "course": "soup",
+  "source": "dishes/soup/金针菇汤.md"
+ },
+ {
+  "slug": "yin-er-lian-zi-zhou",
+  "name": "银耳莲子粥",
+  "course": "soup",
+  "source": "dishes/soup/银耳莲子粥/银耳莲子粥.md"
+ },
+ {
+  "slug": "chen-pi-pai-gu-tang",
+  "name": "陈皮排骨汤",
+  "course": "soup",
+  "source": "dishes/soup/陈皮排骨汤.md"
+ },
+ {
+  "slug": "huang-gua-pi-dan-tang",
+  "name": "黄瓜皮蛋汤",
+  "course": "soup",
+  "source": "dishes/soup/黄瓜皮蛋汤.md"
+ },
+ {
+  "slug": "zhong-shi-xian-bing",
+  "name": "中式馅饼",
+  "course": "staple",
+  "source": "dishes/staple/中式馅饼/中式馅饼.md"
+ },
+ {
+  "slug": "liang-fen",
+  "name": "凉粉",
+  "course": "staple",
+  "source": "dishes/staple/凉粉/凉粉.md"
+ },
+ {
+  "slug": "xian-rou-cai-fan",
+  "name": "咸肉菜饭",
+  "course": "staple",
+  "source": "dishes/staple/咸肉菜饭.md"
+ },
+ {
+  "slug": "shou-gong-shui-jiao",
+  "name": "手工水饺",
+  "course": "staple",
+  "source": "dishes/staple/手工水饺.md"
+ },
+ {
+  "slug": "yang-zhou-chao-fan",
+  "name": "扬州炒饭",
+  "course": "staple",
+  "source": "dishes/staple/扬州炒饭/扬州炒饭.md"
+ },
+ {
+  "slug": "tang-mian",
+  "name": "汤面",
+  "course": "staple",
+  "source": "dishes/staple/汤面.md"
+ },
+ {
+  "slug": "he-nan-zheng-mian-tiao",
+  "name": "河南蒸面条",
+  "course": "staple",
+  "source": "dishes/staple/河南蒸面条/河南蒸面条.md"
+ },
+ {
+  "slug": "teng-zhou-cai-jian-bing",
+  "name": "滕州菜煎饼",
+  "course": "staple",
+  "source": "dishes/staple/滕州菜煎饼.md"
+ },
+ {
+  "slug": "chao-liang-fen",
+  "name": "炒凉粉",
+  "course": "staple",
+  "source": "dishes/staple/炒凉粉/炒凉粉.md"
+ },
+ {
+  "slug": "chao-nian-gao",
+  "name": "炒年糕",
+  "course": "staple",
+  "source": "dishes/staple/炒年糕.md"
+ },
+ {
+  "slug": "chao-he-fen",
+  "name": "炒河粉",
+  "course": "staple",
+  "source": "dishes/staple/炒河粉.md"
+ },
+ {
+  "slug": "chao-mo",
+  "name": "炒馍",
+  "course": "staple",
+  "source": "dishes/staple/炒馍.md"
+ },
+ {
+  "slug": "zha-jiang-mian",
+  "name": "炸酱面",
+  "course": "staple",
+  "source": "dishes/staple/炸酱面.md"
+ },
+ {
+  "slug": "lao-bing",
+  "name": "烙饼",
+  "course": "staple",
+  "source": "dishes/staple/烙饼/烙饼.md"
+ },
+ {
+  "slug": "zhi-ma-shao-bing",
+  "name": "芝麻烧饼",
+  "course": "staple",
+  "source": "dishes/staple/烧饼/芝麻烧饼.md"
+ },
+ {
+  "slug": "re-gan-mian",
+  "name": "热干面",
+  "course": "staple",
+  "source": "dishes/staple/热干面.md"
+ },
+ {
+  "slug": "zhu-you-ban-fan",
+  "name": "猪油拌饭",
+  "course": "staple",
+  "source": "dishes/staple/猪油拌饭.md"
+ },
+ {
+  "slug": "zhu-guo-zheng-mi-fan",
+  "name": "煮锅蒸米饭",
+  "course": "staple",
+  "source": "dishes/staple/米饭/煮锅蒸米饭.md"
+ },
+ {
+  "slug": "dian-fan-bao-zheng-mi-fan",
+  "name": "电饭煲蒸米饭",
+  "course": "staple",
+  "source": "dishes/staple/米饭/电饭煲蒸米饭.md"
+ },
+ {
+  "slug": "lao-you-zhu-rou-fen",
+  "name": "老友猪肉粉",
+  "course": "staple",
+  "source": "dishes/staple/老友猪肉粉/老友猪肉粉.md"
+ },
+ {
+  "slug": "rou-dan-gai-fan",
+  "name": "肉蛋盖饭",
+  "course": "staple",
+  "source": "dishes/staple/肉蛋盖饭.md"
+ },
+ {
+  "slug": "qie-zi-rou-jian-bing",
+  "name": "茄子肉煎饼",
+  "course": "staple",
+  "source": "dishes/staple/茄子肉煎饼/茄子肉煎饼.md"
+ },
+ {
+  "slug": "cong-you-ban-mian",
+  "name": "葱油拌面",
+  "course": "staple",
+  "source": "dishes/staple/葱油拌面.md"
+ },
+ {
+  "slug": "zheng-lu-mian",
+  "name": "蒸卤面",
+  "course": "staple",
+  "source": "dishes/staple/蒸卤面.md"
+ },
+ {
+  "slug": "xi-hong-shi-ji-dan-gua-mian",
+  "name": "西红柿鸡蛋挂面",
+  "course": "staple",
+  "source": "dishes/staple/西红柿鸡蛋挂面/西红柿鸡蛋挂面.md"
+ },
+ {
+  "slug": "dou-jiao-men-mian",
+  "name": "豆角焖面",
+  "course": "staple",
+  "source": "dishes/staple/豆角焖面/豆角焖面.md"
+ },
+ {
+  "slug": "jiang-ban-qiao-mai-mian",
+  "name": "酱拌荞麦面",
+  "course": "staple",
+  "source": "dishes/staple/酱拌荞麦面/酱拌荞麦面.md"
+ },
+ {
+  "slug": "suan-la-jue-gen-fen",
+  "name": "酸辣蕨根粉",
+  "course": "staple",
+  "source": "dishes/staple/酸辣蕨根粉.md"
+ },
+ {
+  "slug": "lao-zao-xiao-tang-yuan",
+  "name": "醪糟小汤圆",
+  "course": "staple",
+  "source": "dishes/staple/醪糟小汤圆.md"
+ },
+ {
+  "slug": "shan-xi-you-po-mian",
+  "name": "陕西油泼面",
+  "course": "staple",
+  "source": "dishes/staple/陕西油泼面/陕西油泼面.md"
+ },
+ {
+  "slug": "jiu-cai-he-zi",
+  "name": "韭菜盒子",
+  "course": "staple",
+  "source": "dishes/staple/韭菜盒子.md"
+ },
+ {
+  "slug": "xian-rou-shao-mai",
+  "name": "鲜肉烧卖",
+  "course": "staple",
+  "source": "dishes/staple/鲜肉烧卖.md"
+ },
+ {
+  "slug": "ma-you-ban-mian",
+  "name": "麻油拌面",
+  "course": "staple",
+  "source": "dishes/staple/麻油拌面.md"
+ },
+ {
+  "slug": "ma-la-qiao-mai-mian",
+  "name": "麻辣减脂荞麦面",
+  "course": "staple",
+  "source": "dishes/staple/麻辣减脂荞麦面.md"
+ },
+ {
+  "slug": "shang-tang-wa-wa-cai",
+  "name": "上汤娃娃菜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/上汤娃娃菜/上汤娃娃菜.md"
+ },
+ {
+  "slug": "qian-long-bai-cai",
+  "name": "乾隆白菜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/乾隆白菜/乾隆白菜.md"
+ },
+ {
+  "slug": "liang-ban-mu-er",
+  "name": "凉拌木耳",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/凉拌木耳/凉拌木耳.md"
+ },
+ {
+  "slug": "liang-ban-you-mai-cai",
+  "name": "凉拌油麦菜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/凉拌油麦菜.md"
+ },
+ {
+  "slug": "liang-ban-wo-sun",
+  "name": "凉拌莴笋",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/凉拌莴笋/凉拌莴笋.md"
+ },
+ {
+  "slug": "liang-ban-dou-fu",
+  "name": "凉拌豆腐",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/凉拌豆腐.md"
+ },
+ {
+  "slug": "liang-ban-jin-zhen-gu",
+  "name": "凉拌金针菇",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/凉拌金针菇.md"
+ },
+ {
+  "slug": "liang-ban-huang-gua",
+  "name": "凉拌黄瓜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/凉拌黄瓜.md"
+ },
+ {
+  "slug": "bao-cai-chao-ji-dan-fen-si",
+  "name": "包菜炒鸡蛋粉丝",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/包菜炒鸡蛋粉丝/包菜炒鸡蛋粉丝.md"
+ },
+ {
+  "slug": "di-san-xian",
+  "name": "地三鲜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/地三鲜/地三鲜.md"
+ },
+ {
+  "slug": "ri-ben-dou-fu",
+  "name": "家常日本豆腐",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/家常日本豆腐.md"
+ },
+ {
+  "slug": "xiao-chao-ou-ding",
+  "name": "小炒藕丁",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/小炒藕丁/小炒藕丁.md"
+ },
+ {
+  "slug": "gan-guo-hua-cai",
+  "name": "干锅花菜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/干锅花菜/干锅花菜.md"
+ },
+ {
+  "slug": "shou-si-bao-cai",
+  "name": "手撕包菜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/手撕包菜/手撕包菜.md"
+ },
+ {
+  "slug": "ba-si-tu-dou",
+  "name": "拔丝土豆",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/拔丝土豆/拔丝土豆.md"
+ },
+ {
+  "slug": "song-ren-yu-mi",
+  "name": "松仁玉米",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/松仁玉米.md"
+ },
+ {
+  "slug": "jiao-yan-yu-mi",
+  "name": "椒盐玉米",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/椒盐玉米/椒盐玉米.md"
+ },
+ {
+  "slug": "lan-cai-rou-mo-si-ji-dou",
+  "name": "榄菜肉末四季豆",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/榄菜肉末四季豆/榄菜肉末四季豆.md"
+ },
+ {
+  "slug": "shui-you-men-shu-cai",
+  "name": "水油焖蔬菜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/水油焖蔬菜.md"
+ },
+ {
+  "slug": "you-cu-bao-dan",
+  "name": "油醋爆蛋",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/油醋爆蛋.md"
+ },
+ {
+  "slug": "yang-cong-chao-ji-dan",
+  "name": "洋葱炒鸡蛋",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/洋葱炒鸡蛋/洋葱炒鸡蛋.md"
+ },
+ {
+  "slug": "qing-chao-hua-cai",
+  "name": "清炒花菜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/清炒花菜.md"
+ },
+ {
+  "slug": "qing-zheng-nan-gua",
+  "name": "清蒸南瓜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/清蒸南瓜.md"
+ },
+ {
+  "slug": "tu-dou-hu-luo-bo-zheng-cai",
+  "name": "炒土豆和胡萝卜蒸菜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/炒土豆和胡萝卜蒸菜.md"
+ },
+ {
+  "slug": "chao-hua-dan",
+  "name": "炒滑蛋",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/炒滑蛋/炒滑蛋.md"
+ },
+ {
+  "slug": "chao-qie-zi",
+  "name": "炒茄子",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/炒茄子.md"
+ },
+ {
+  "slug": "chao-qing-cai",
+  "name": "炒青菜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/炒青菜.md"
+ },
+ {
+  "slug": "kao-qie-zi",
+  "name": "烤茄子",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/烤茄子/烤茄子.md"
+ },
+ {
+  "slug": "bai-zhuo-cai-xin",
+  "name": "白灼菜心",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/白灼菜心/白灼菜心.md"
+ },
+ {
+  "slug": "pi-dan-dou-fu",
+  "name": "皮蛋豆腐",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/皮蛋豆腐.md"
+ },
+ {
+  "slug": "tang-ban-xi-hong-shi",
+  "name": "糖拌西红柿",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/糖拌西红柿/糖拌西红柿.md"
+ },
+ {
+  "slug": "su-chao-dou-jiao",
+  "name": "素炒豆角",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/素炒豆角.md"
+ },
+ {
+  "slug": "hong-shao-dong-gua",
+  "name": "红烧冬瓜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/红烧冬瓜/红烧冬瓜.md"
+ },
+ {
+  "slug": "hong-shao-qie-zi",
+  "name": "红烧茄子",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/红烧茄子.md"
+ },
+ {
+  "slug": "cui-pi-dou-fu",
+  "name": "脆皮豆腐",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/脆皮豆腐.md"
+ },
+ {
+  "slug": "qin-cai-ban-cha-shu-gu",
+  "name": "芹菜拌茶树菇",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/芹菜拌茶树菇/芹菜拌茶树菇.md"
+ },
+ {
+  "slug": "qie-zi-dun-tu-dou",
+  "name": "茄子炖土豆",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/茄子炖土豆.md"
+ },
+ {
+  "slug": "wo-sun-ye-jian-bing",
+  "name": "莴笋叶煎饼",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/莴笋叶煎饼/莴笋叶煎饼.md"
+ },
+ {
+  "slug": "bo-cai-chao-ji-dan",
+  "name": "菠菜炒鸡蛋",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/菠菜炒鸡蛋/菠菜炒鸡蛋.md"
+ },
+ {
+  "slug": "cong-jian-dou-fu",
+  "name": "葱煎豆腐",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/葱煎豆腐.md"
+ },
+ {
+  "slug": "suan-rong-chao-qin-cai",
+  "name": "蒜蓉炒芹菜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/蒜蓉炒芹菜/蒜蓉炒芹菜.md"
+ },
+ {
+  "slug": "suan-rong-kong-xin-cai",
+  "name": "蒜蓉空心菜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/蒜蓉空心菜/蒜蓉空心菜.md"
+ },
+ {
+  "slug": "suan-rong-xi-lan-hua",
+  "name": "蒜蓉西兰花",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/蒜蓉西兰花.md"
+ },
+ {
+  "slug": "hu-pi-qing-jiao",
+  "name": "虎皮青椒",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/虎皮青椒/虎皮青椒.md"
+ },
+ {
+  "slug": "hao-you-san-xian-gu",
+  "name": "蚝油三鲜菇",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/蚝油三鲜菇/蚝油三鲜菇.md"
+ },
+ {
+  "slug": "hao-you-sheng-cai",
+  "name": "蚝油生菜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/蚝油生菜.md"
+ },
+ {
+  "slug": "xi-hong-shi-dou-fu-tang-geng",
+  "name": "西红柿豆腐汤羹",
+  "course": "soup",
+  "source": "dishes/vegetable_dish/西红柿豆腐汤羹/西红柿豆腐汤羹.md"
+ },
+ {
+  "slug": "xi-hu-lu-chao-ji-dan",
+  "name": "西葫芦炒鸡蛋",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/西葫芦炒鸡蛋/西葫芦炒鸡蛋.md"
+ },
+ {
+  "slug": "hua-mei-zhu-mao-dou",
+  "name": "话梅煮毛豆",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/话梅煮毛豆/话梅煮毛豆.md"
+ },
+ {
+  "slug": "suan-la-tu-dou-si",
+  "name": "酸辣土豆丝",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/酸辣土豆丝.md"
+ },
+ {
+  "slug": "jin-zhen-gu-ri-ben-dou-fu-bao",
+  "name": "金针菇日本豆腐煲",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/金针菇日本豆腐煲.md"
+ },
+ {
+  "slug": "jin-qian-dan",
+  "name": "金钱蛋",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/金钱蛋.md"
+ },
+ {
+  "slug": "shan-bei-ao-dou-jiao",
+  "name": "陕北熬豆角",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/陕北熬豆角.md"
+ },
+ {
+  "slug": "lei-jiao-pi-dan",
+  "name": "雷椒皮蛋",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/雷椒皮蛋.md"
+ },
+ {
+  "slug": "jiu-cai-chao-dan",
+  "name": "韭菜炒蛋",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/韭菜炒蛋/韭菜炒蛋.md"
+ },
+ {
+  "slug": "ji-dan-huo-tui-chao-huang-gua",
+  "name": "鸡蛋火腿炒黄瓜",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/鸡蛋火腿炒黄瓜.md"
+ },
+ {
+  "slug": "ji-dan-geng",
+  "name": "鸡蛋羹",
+  "course": "veg",
+  "source": "dishes/vegetable_dish/鸡蛋羹/鸡蛋羹.md"
+ },
+ {
+  "slug": "ji-dan-hua",
+  "name": "鸡蛋花",
+  "course": "soup",
+  "source": "dishes/vegetable_dish/鸡蛋花/鸡蛋花.md"
+ }
+]

@@ -2,7 +2,7 @@
 title: 中餐
 summary: 刀工决定受热，火候决定口感，调味是一整套“味型”。炒锅、芡汁和油，是把这些串起来的工具。
 accent: red
-principles: [knife-work, oil-temperature, starch-gelatinization, maillard-reaction, umami]
+principles: [knife-work, oil-temperature, starch-gelatinization, maillard-reaction, umami, aromatics, fermentation]
 featured: [mapo-tofu, kung-pao-chicken, hong-shao-rou, steamed-fish, tomato-egg, egg-fried-rice]
 order: 1
 ---
@@ -19,7 +19,7 @@ order: 1
 
 ## 油是调味的载体
 
-很多香味物质溶于油而不溶于水，比如辣椒的辣味、花椒的麻味。“炝锅”“爆香”“炒出红油”，都是先用热油把这些风味提取出来（油温的讲究见[油温与油炸](/principles/oil-temperature/)），再让它包住主料。所以川菜里常见到先炒豆瓣、辣椒至油色红亮这一步。
+很多香味物质溶于油而不溶于水，比如辣椒的辣味、花椒的麻味。“炝锅”“爆香”“炒出红油”，都是先用热油把这些风味提取出来（油温的讲究见[油温与油炸](/principles/oil-temperature/)），再让它包住主料（见[香料与香气提取](/principles/aromatics/)）。所以川菜里常见到先炒豆瓣、辣椒至油色红亮这一步；豆瓣、豆豉、腐乳这些咸鲜底味，则来自[发酵](/principles/fermentation/)。
 
 ## 调味是“味型”，不是单一味道
 

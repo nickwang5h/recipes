@@ -18,6 +18,7 @@ export const COURSES = {
   breakfast: '早餐',
   dessert: '甜品',
   sauce: '酱汁',
+  drink: '饮品',
 } as const;
 
 export type Course = keyof typeof COURSES;
