@@ -64,7 +64,11 @@ const byCategory = (Object.keys(PRINCIPLE_CATEGORIES) as PrincipleCategory[])
     <section aria-labelledby="picks-title">
       <div class="section-head">
         <h2 id="picks-title" class="section-title">挑几道菜</h2>
-        <a href={url('fridge')}>按冰箱里的食材找 →</a>
+        <span class="section-links">
+          <a href={`${url('recipes')}?lucky`}>今晚吃什么？</a>
+          <a href={`${url('recipes')}?season=1`}>当季的菜</a>
+          <a href={url('fridge')}>按冰箱里的食材找 →</a>
+        </span>
       </div>
       <ul class="card-grid">
         {picks.map((r) => <li><RecipeCard recipe={r} cuisine={cuisineMap.get(r.data.cuisine.id)!} /></li>)}

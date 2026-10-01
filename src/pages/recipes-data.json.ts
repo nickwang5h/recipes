@@ -19,6 +19,8 @@ export interface RecipeData {
   img?: string;
   /** Required ingredient ids (optional ones left out). */
   req: string[];
+  /** Months in which a required ingredient is in field season. */
+  season: number[];
 }
 
 export interface SiteData {
@@ -50,6 +52,7 @@ export const GET: APIRoute = async () => {
           component: r.data.component,
           img: r.data.cover ? (await getImage({ src: r.data.cover, width: 480, format: 'webp' })).src : undefined,
           req,
+          season: [...new Set(req.flatMap((id) => catalog.find((i) => i.id === id)?.data.season ?? []))],
         };
       }),
     ),

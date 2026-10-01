@@ -15,6 +15,18 @@ const recipes = (await getCollection('recipes')).sort(
 const usedCourses = (Object.keys(COURSES) as Course[]).filter((c) => recipes.some((r) => r.data.course === c));
 const base = url('recipes');
 const components = recipes.filter((r) => r.data.component).length;
+
+// Months in which each recipe uses something in field season, and what is in season each month.
+const catalog = new Map((await getCollection('ingredients')).map((i) => [i.id, i.data]));
+const seasonOf = (recipe: (typeof recipes)[number]) => {
+  const months = new Set<number>();
+  for (const group of recipe.data.ingredients)
+    for (const item of group.items) if (!item.optional) catalog.get(item.ref.id)?.season?.forEach((m) => months.add(m));
+  return [...months].sort((a, b) => a - b).join(',');
+};
+const inSeason = Object.fromEntries(
+  Array.from({ length: 12 }, (_, i) => [i + 1, [...catalog.values()].filter((d) => d.season?.includes(i + 1)).map((d) => d.zh)]),
+);
 ---
 
 <Base title="菜谱" description="中餐、法餐、意大利菜的经典菜谱。">
@@ -39,14 +51,32 @@ const components = recipes.filter((r) => r.data.component).length;
 
   <div class="filter-bar">
     <p class="filter-count" data-count>{recipes.length - components} 道菜</p>
+    <button class="text-btn lucky-btn" type="button" data-lucky-pick>今晚吃什么？</button>
+    <label class="parts-toggle">
+      <input type="checkbox" data-season />
+      <span data-season-label>只看用当季食材的</span>
+    </label>
     <label class="parts-toggle">
       <input type="checkbox" data-parts />
       显示酱汁、高汤等半成品（{components}）
     </label>
   </div>
+  <p class="season-note" data-season-note hidden></p>
+  <aside class="lucky" data-lucky hidden aria-live="polite">
+    <div class="lucky-card" data-lucky-card></div>
+    <div class="lucky-side">
+      <h2>就做这道？</h2>
+      <p>从当前筛选出的菜里随手抽的。不想做就再抽。</p>
+      <div class="kit-actions">
+        <button class="text-btn" type="button" data-lucky-pick>换一道</button>
+        <button class="text-btn" type="button" data-lucky-close>收起</button>
+      </div>
+    </div>
+  </aside>
+  <script type="application/json" id="in-season" set:html={JSON.stringify(inSeason)} />
   <ul class="card-grid" data-recipe-list>
     {recipes.map((recipe) => (
-      <li data-cuisine={recipe.data.cuisine.id} data-course={recipe.data.course} data-minutes={recipe.data.time.prep + recipe.data.time.cook} data-component={recipe.data.component ? '' : undefined} hidden={recipe.data.component}>
+      <li data-cuisine={recipe.data.cuisine.id} data-course={recipe.data.course} data-minutes={recipe.data.time.prep + recipe.data.time.cook} data-months={seasonOf(recipe)} data-component={recipe.data.component ? '' : undefined} hidden={recipe.data.component}>
         <RecipeCard recipe={recipe} cuisine={cuisineMap.get(recipe.data.cuisine.id)!} />
       </li>
     ))}
@@ -57,17 +87,24 @@ const components = recipes.filter((r) => r.data.component).length;
     import { withinTime } from '../../lib/categories';
 
     const GROUPS = ['cuisine', 'course', 'time'] as const;
+    const month = new Date().getMonth() + 1;
+    const inSeason: Record<number, string[]> = JSON.parse(document.getElementById('in-season')!.textContent!);
 
     const apply = () => {
       const params = new URLSearchParams(location.search);
       // Sauces, stocks and plain rice are building blocks, not something to browse for dinner;
       // they show when asked for, or when the 酱汁 type is picked.
       const parts = params.get('parts') === '1' || params.get('course') === 'sauce';
+      const seasonal = params.get('season') === '1';
+      document.querySelector<HTMLInputElement>('[data-season]')!.checked = seasonal;
+      const note = document.querySelector<HTMLElement>('[data-season-note]')!;
+      note.hidden = !seasonal;
+      note.textContent = `${month} 月安大略当季：${inSeason[month].join('、') || '田里没什么在收，都是窖藏和温室的'}`;
       document.querySelector<HTMLInputElement>('[data-parts]')!.checked = params.get('parts') === '1';
       let shown = 0;
       for (const li of document.querySelectorAll<HTMLElement>('[data-recipe-list] > li')) {
         const minutes = Number(li.dataset.minutes);
-        const match = (parts || li.dataset.component === undefined) && GROUPS.every((g) => {
+        const match = (parts || li.dataset.component === undefined) && (!seasonal || li.dataset.months!.split(',').includes(String(month))) && GROUPS.every((g) => {
           const want = params.get(g);
           if (!want) return true;
           return g === 'time' ? withinTime(want, minutes) : li.dataset[g] === want;
@@ -93,13 +130,29 @@ const components = recipes.filter((r) => r.data.component).length;
       document.querySelector<HTMLElement>('[data-empty]')!.hidden = shown > 0;
     };
 
-    document.querySelector<HTMLInputElement>('[data-parts]')!.addEventListener('change', (event) => {
-      const params = new URLSearchParams(location.search);
-      if ((event.target as HTMLInputElement).checked) params.set('parts', '1');
-      else params.delete('parts');
-      history.replaceState(null, '', `${location.pathname}${params.size ? `?${params}` : ''}`);
-      apply();
-    });
+    for (const name of ['parts', 'season']) {
+      document.querySelector<HTMLInputElement>(`[data-${name}]`)!.addEventListener('change', (event) => {
+        const params = new URLSearchParams(location.search);
+        if ((event.target as HTMLInputElement).checked) params.set(name, '1');
+        else params.delete(name);
+        history.replaceState(null, '', `${location.pathname}${params.size ? `?${params}` : ''}`);
+        apply();
+      });
+    }
+
+    // 今晚吃什么: one dish at random from whatever the filters currently show.
+    const lucky = document.querySelector<HTMLElement>('[data-lucky]')!;
+    let last: HTMLElement | undefined;
+    const pick = () => {
+      const pool = [...document.querySelectorAll<HTMLElement>('[data-recipe-list] > li:not([hidden])')].filter((li) => li !== last);
+      if (!pool.length) return;
+      last = pool[Math.floor(Math.random() * pool.length)];
+      lucky.querySelector('[data-lucky-card]')!.replaceChildren(last.firstElementChild!.cloneNode(true));
+      lucky.hidden = false;
+      lucky.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    };
+    for (const b of document.querySelectorAll('[data-lucky-pick]')) b.addEventListener('click', pick);
+    document.querySelector('[data-lucky-close]')!.addEventListener('click', () => (lucky.hidden = true));
 
     document.addEventListener('click', (event) => {
       const link = (event.target as HTMLElement).closest<HTMLAnchorElement>('[data-filter-group] a');
@@ -109,5 +162,6 @@ const components = recipes.filter((r) => r.data.component).length;
       apply();
     });
     apply();
+    if (new URLSearchParams(location.search).has('lucky')) pick();
   </script>
 </Base>

@@ -46,3 +46,12 @@ describe('what the week needs', () => {
     expect([...needs]).toEqual([['tomato', ['a', 'b']], ['scallion', ['b']]]);
   });
 });
+
+describe('season', () => {
+  it('makes an in-season dish more likely', () => {
+    const veg = [r('a', 'veg'), { ...r('b', 'veg'), season: [10] }];
+    // Unweighted, 0.45 lands on a; with b weighted 1.5 the split point moves to 0.4.
+    expect(suggestDish(veg, 'veg', { ...none, random: () => 0.45 })?.id).toBe('a');
+    expect(suggestDish(veg, 'veg', { ...none, month: 10, random: () => 0.45 })?.id).toBe('b');
+  });
+});

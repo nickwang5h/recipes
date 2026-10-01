@@ -86,7 +86,7 @@ import { url } from '../lib/site';
 
     function suggestFor(day: string) {
       const planned = plannedThisWeek();
-      const table = suggestTable(dishes, { favorites: favorites(), planned, maxMinutes: maxMinutes() });
+      const table = suggestTable(dishes, { favorites: favorites(), planned, maxMinutes: maxMinutes(), month: today.getMonth() + 1 });
       suggestions.set(day, table as Partial<Record<SlotId, RecipeData>>);
       render();
     }
@@ -122,7 +122,7 @@ import { url } from '../lib/site';
           const r = table[slot.id];
           if (!r) continue;
           const swap = button('换', () => {
-            const next = suggestDish(dishes, slot.id, { favorites: favorites(), planned: plannedThisWeek(), maxMinutes: maxMinutes(), cuisine: table.main?.cuisine }, new Set([r.id]));
+            const next = suggestDish(dishes, slot.id, { favorites: favorites(), planned: plannedThisWeek(), maxMinutes: maxMinutes(), month: today.getMonth() + 1, cuisine: table.main?.cuisine }, new Set([r.id]));
             if (next) table[slot.id] = next as RecipeData;
             render();
           }, 'text-btn menu-swap');

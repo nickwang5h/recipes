@@ -5,6 +5,8 @@
 #        specialty  = 专门店或网购
 # pantry: 常备、耐放的调味料和干货；做"冰箱匹配"时默认家里有。
 # en: 加拿大超市货架或标签上常见的英文名，方便对照采购。
+# season: 安大略省田间应季的月份（1–12），依据 Foodland Ontario Availability Guide
+#         https://www.ontario.ca/foodland/page/availability-guide ；全年有货（窖藏、温室）的不标。
 
 # ---------- 调味与常备 ----------
 - { id: salt, zh: 盐, aliases: [海盐, 食用盐, 食盐, 盐巴, 精盐], en: Salt, kind: seasoning, where: mainstream, pantry: true }
@@ -226,62 +228,62 @@
 - { id: ginger, zh: 姜, aliases: [生姜, 姜片, 姜丝, 姜末, 老姜, 生姜片, 生姜末], en: Ginger, kind: aromatic, where: mainstream }
 - { id: garlic, zh: 蒜, aliases: [大蒜, 蒜瓣, 蒜末, 蒜蓉, 蒜头, 蒜片, 蒜水], en: Garlic, kind: aromatic, where: mainstream }
 - { id: garlic-sprout, zh: 蒜苗, aliases: [青蒜], en: Garlic shoots (green garlic), kind: aromatic, where: asian, substitutes: [leek, scallion] }
-- { id: leek, zh: 韭葱, aliases: [大葱, 大葱葱白], en: Leeks, kind: aromatic, where: mainstream }
+- { id: leek, zh: 韭葱, aliases: [大葱, 大葱葱白], en: Leeks, kind: aromatic, where: mainstream, season: [8, 9, 10] }
 - { id: onion, zh: 洋葱, aliases: [黄洋葱, 葱头], en: Yellow onions, kind: vegetable, where: mainstream }
 - { id: pearl-onion, zh: 小白洋葱, aliases: [珍珠洋葱], en: Pearl onions, kind: vegetable, where: mainstream }
 - { id: shallot, zh: 红葱头, aliases: [干葱头], en: Shallots, kind: aromatic, where: mainstream }
 - { id: carrot, zh: 胡萝卜, aliases: [胡箩卜, 红萝卜], en: Carrots, kind: vegetable, where: mainstream }
-- { id: celery, zh: 西芹, aliases: [芹菜, 芹菜段], en: Celery, kind: vegetable, where: mainstream }
-- { id: tomato, zh: 番茄, aliases: [西红柿], en: Tomatoes (on-the-vine), kind: vegetable, where: mainstream }
+- { id: celery, zh: 西芹, aliases: [芹菜, 芹菜段], en: Celery, kind: vegetable, where: mainstream, season: [7, 8, 9, 10] }
+- { id: tomato, zh: 番茄, aliases: [西红柿], en: Tomatoes (on-the-vine), kind: vegetable, where: mainstream, season: [7, 8, 9, 10] }
 - { id: white-mushroom, zh: 白蘑菇, aliases: [口蘑], en: White button mushrooms, kind: mushroom, where: mainstream }
 - { id: cilantro, zh: 香菜, aliases: [芫荽], en: Cilantro, kind: aromatic, where: mainstream }
 - { id: parsley, zh: 欧芹, aliases: [意大利香芹], en: Flat-leaf (Italian) parsley, kind: aromatic, where: mainstream }
 - { id: fresh-chili, zh: 新鲜辣椒, aliases: [红辣椒, 小米辣, 小米椒, 朝天椒, 辣椒], en: Fresh red chilies (Thai / Fresno), kind: vegetable, where: mainstream, substitutes: [thai-chili] }
 - { id: lemon, zh: 柠檬, aliases: [柠檬汁], en: Lemons, kind: fruit, where: mainstream }
 - { id: potato, zh: 土豆, en: Potatoes, kind: vegetable, where: mainstream }
-- { id: green-bell-pepper, zh: 青椒, en: Green peppers, kind: vegetable, where: mainstream }
-- { id: red-bell-pepper, zh: 红椒, aliases: [红甜椒], en: Red peppers, kind: vegetable, where: mainstream }
-- { id: bell-pepper, zh: 甜椒, aliases: [青红椒, 青红辣椒, 菜椒和甜椒, 菜椒], en: Bell peppers, kind: vegetable, where: mainstream }
+- { id: green-bell-pepper, zh: 青椒, en: Green peppers, kind: vegetable, where: mainstream, season: [7, 8, 9, 10] }
+- { id: red-bell-pepper, zh: 红椒, aliases: [红甜椒], en: Red peppers, kind: vegetable, where: mainstream, season: [7, 8, 9, 10] }
+- { id: bell-pepper, zh: 甜椒, aliases: [青红椒, 青红辣椒, 菜椒和甜椒, 菜椒], en: Bell peppers, kind: vegetable, where: mainstream, season: [7, 8, 9, 10] }
 - { id: long-green-chili, zh: 青尖椒, aliases: [尖椒, 青辣椒, 线椒, 螺丝椒, 长条青椒], en: Long green hot peppers, kind: vegetable, where: asian, substitutes: [jalapeno] }
 - { id: long-red-chili, zh: 红尖椒, aliases: [美人椒, 美人辣], en: Long red hot peppers, kind: vegetable, where: asian, substitutes: [fresh-chili] }
 - { id: thai-chili, zh: 泰国辣椒, en: Thai chili peppers, kind: vegetable, where: mainstream }
 - { id: jalapeno, zh: 墨西哥辣椒, en: Jalapeno peppers, kind: vegetable, where: mainstream }
 - { id: mung-bean-sprout, zh: 绿豆芽, aliases: [豆芽], en: Mung bean sprouts, kind: vegetable, where: mainstream }
-- { id: napa-cabbage, zh: 白菜, aliases: [白菜心, 大白菜], en: Napa cabbage, kind: vegetable, where: mainstream }
+- { id: napa-cabbage, zh: 白菜, aliases: [白菜心, 大白菜], en: Napa cabbage, kind: vegetable, where: mainstream, season: [6, 7, 8, 9, 10, 11] }
 - { id: baby-napa-cabbage, zh: 娃娃菜, en: Baby napa cabbage, kind: vegetable, where: asian, substitutes: [napa-cabbage] }
-- { id: lettuce, zh: 生菜, en: Lettuce, kind: vegetable, where: mainstream }
+- { id: lettuce, zh: 生菜, en: Lettuce, kind: vegetable, where: mainstream, season: [6, 7, 8, 9, 10] }
 - { id: taro, zh: 芋头, aliases: [荔浦芋头, 香芋], en: Taro root, kind: vegetable, where: asian }
 - { id: winter-melon, zh: 冬瓜, en: Winter melon, kind: vegetable, where: asian }
-- { id: daikon, zh: 白萝卜, aliases: [萝卜], en: Daikon radish, kind: vegetable, where: mainstream }
-- { id: bitter-melon, zh: 苦瓜, en: Bitter melon, kind: vegetable, where: asian }
-- { id: eggplant, zh: 茄子, aliases: [青茄子], en: Eggplant, kind: vegetable, where: mainstream }
+- { id: daikon, zh: 白萝卜, aliases: [萝卜], en: Daikon radish, kind: vegetable, where: mainstream, season: [6, 7, 8, 9, 10, 11] }
+- { id: bitter-melon, zh: 苦瓜, en: Bitter melon, kind: vegetable, where: asian, season: [8, 9, 10] }
+- { id: eggplant, zh: 茄子, aliases: [青茄子], en: Eggplant, kind: vegetable, where: mainstream, season: [8, 9, 10] }
 - { id: squash-blossom, zh: 南瓜花, en: Squash blossoms, kind: vegetable, where: specialty }
 - { id: bamboo-shoot, zh: 竹笋, aliases: [笋], en: Bamboo shoots (canned), kind: vegetable, where: mainstream }
 - { id: winter-bamboo-shoot, zh: 冬笋, en: Winter bamboo shoots, kind: vegetable, where: asian, substitutes: [bamboo-shoot] }
 - { id: water-bamboo, zh: 茭白, en: Water bamboo / jiaobai, kind: vegetable, where: specialty, substitutes: [bamboo-shoot] }
-- { id: snow-pea, zh: 荷兰豆, en: Snow peas, kind: vegetable, where: mainstream }
+- { id: snow-pea, zh: 荷兰豆, en: Snow peas, kind: vegetable, where: mainstream, season: [6, 7, 8, 9] }
 - { id: chinese-lettuce, zh: 油麦菜, en: Chinese lettuce (a choy), kind: vegetable, where: asian, substitutes: [lettuce] }
-- { id: cucumber, zh: 黄瓜, en: Cucumbers, kind: vegetable, where: mainstream }
+- { id: cucumber, zh: 黄瓜, en: Cucumbers, kind: vegetable, where: mainstream, season: [6, 7, 8, 9, 10] }
 - { id: chinese-yam, zh: 山药, en: Chinese yam / nagaimo, kind: vegetable, where: asian }
-- { id: pumpkin, zh: 南瓜, aliases: [小南瓜], en: Pumpkin / winter squash, kind: vegetable, where: mainstream }
-- { id: corn, zh: 玉米, aliases: [玉米粒], en: Sweet corn, kind: vegetable, where: mainstream }
-- { id: green-pea, zh: 豌豆, aliases: [青豆], en: Green peas, kind: vegetable, where: mainstream }
+- { id: pumpkin, zh: 南瓜, aliases: [小南瓜], en: Pumpkin / winter squash, kind: vegetable, where: mainstream, season: [9, 10] }
+- { id: corn, zh: 玉米, aliases: [玉米粒], en: Sweet corn, kind: vegetable, where: mainstream, season: [7, 8, 9, 10] }
+- { id: green-pea, zh: 豌豆, aliases: [青豆], en: Green peas, kind: vegetable, where: mainstream, season: [6, 7, 8, 9] }
 - { id: celtuce, zh: 莴笋, en: Celtuce / stem lettuce, kind: vegetable, where: asian }
 - { id: celtuce-leaf, zh: 莴笋叶, en: Celtuce leaves, kind: vegetable, where: asian, substitutes: [lettuce] }
 - { id: cabbage, zh: 包菜, en: Green cabbage, kind: vegetable, where: mainstream }
 - { id: lotus-root, zh: 莲藕, en: Lotus root, kind: vegetable, where: asian }
-- { id: cauliflower, zh: 花菜, en: Cauliflower, kind: vegetable, where: mainstream }
-- { id: green-bean, zh: 四季豆, en: Green beans, kind: vegetable, where: mainstream }
+- { id: cauliflower, zh: 花菜, en: Cauliflower, kind: vegetable, where: mainstream, season: [6, 7, 8, 9, 10, 11] }
+- { id: green-bean, zh: 四季豆, en: Green beans, kind: vegetable, where: mainstream, season: [6, 7, 8, 9, 10] }
 - { id: long-bean, zh: 豆角, en: Chinese long beans, kind: vegetable, where: asian, substitutes: [green-bean] }
-- { id: choy-sum, zh: 菜心, aliases: [新鲜菜心], en: Choy sum / yu choy, kind: vegetable, where: asian, substitutes: [bok-choy] }
-- { id: bok-choy, zh: 小白菜, en: Bok choy, kind: vegetable, where: mainstream }
-- { id: spinach, zh: 菠菜, en: Spinach, kind: vegetable, where: mainstream }
-- { id: water-spinach, zh: 空心菜, en: Water spinach / ong choy, kind: vegetable, where: asian, substitutes: [spinach] }
-- { id: broccoli, zh: 西兰花, aliases: [西蓝花], en: Broccoli, kind: vegetable, where: mainstream }
-- { id: zucchini, zh: 西葫芦, en: Zucchini, kind: vegetable, where: mainstream }
+- { id: choy-sum, zh: 菜心, aliases: [新鲜菜心], en: Choy sum / yu choy, kind: vegetable, where: asian, substitutes: [bok-choy], season: [6, 7, 8, 9, 10, 11] }
+- { id: bok-choy, zh: 小白菜, en: Bok choy, kind: vegetable, where: mainstream, season: [6, 7, 8, 9, 10, 11] }
+- { id: spinach, zh: 菠菜, en: Spinach, kind: vegetable, where: mainstream, season: [5, 6, 7, 8, 9, 10] }
+- { id: water-spinach, zh: 空心菜, en: Water spinach / ong choy, kind: vegetable, where: asian, substitutes: [spinach], season: [6, 7, 8, 9, 10, 11] }
+- { id: broccoli, zh: 西兰花, aliases: [西蓝花], en: Broccoli, kind: vegetable, where: mainstream, season: [6, 7, 8, 9, 10] }
+- { id: zucchini, zh: 西葫芦, en: Zucchini, kind: vegetable, where: mainstream, season: [7, 8, 9, 10] }
 - { id: edamame, zh: 毛豆, en: Edamame, kind: vegetable, where: mainstream }
 - { id: pickled-napa-cabbage, zh: 东北酸菜, aliases: [酸菜], en: Pickled napa cabbage (suan cai), kind: vegetable, where: asian }
-- { id: garlic-scape, zh: 蒜薹, aliases: [蒜苔], en: Garlic scapes, kind: aromatic, where: asian, substitutes: [garlic-sprout] }
+- { id: garlic-scape, zh: 蒜薹, aliases: [蒜苔], en: Garlic scapes, kind: aromatic, where: asian, substitutes: [garlic-sprout], season: [6, 7] }
 - { id: chinese-celery, zh: 香芹, en: Chinese celery, kind: aromatic, where: asian, substitutes: [celery] }
 - { id: lemongrass, zh: 香茅, en: Lemongrass, kind: aromatic, where: mainstream }
 - { id: chinese-chive, zh: 韭菜, en: Chinese chives / garlic chives, kind: aromatic, where: asian }
@@ -400,8 +402,8 @@
 - { id: dover-sole, zh: 多佛鳎鱼, aliases: [欧洲鳎鱼, Dover sole, 整条鳎鱼], en: Whole Dover sole, kind: seafood, where: specialty }
 - { id: mussels, zh: 青口, aliases: [贻贝, 青口贝, 蓝贻贝], en: Fresh blue mussels, kind: seafood, where: mainstream }
 - { id: chives, zh: 细香葱, aliases: [西式细香葱], en: Fresh chives, kind: aromatic, where: mainstream }
-- { id: radish, zh: 小红萝卜, aliases: [樱桃萝卜, 水萝卜], en: Radishes, kind: vegetable, where: mainstream }
-- { id: baby-artichoke, zh: 小洋蓟, aliases: [嫩洋蓟, 鲜小洋蓟], en: Fresh baby artichokes, kind: vegetable, where: specialty }
+- { id: radish, zh: 小红萝卜, aliases: [樱桃萝卜, 水萝卜], en: Radishes, kind: vegetable, where: mainstream, season: [5, 6, 7, 8, 9, 10, 11] }
+- { id: baby-artichoke, zh: 小洋蓟, aliases: [嫩洋蓟, 鲜小洋蓟], en: Fresh baby artichokes, kind: vegetable, where: specialty, season: [8, 9, 10] }
 - { id: fresh-fava-bean, zh: 鲜蚕豆, aliases: [嫩蚕豆, 鲜胡豆], en: Fresh fava beans / broad beans, kind: vegetable, where: asian }
 - { id: canned-tuna, zh: 金枪鱼罐头, aliases: [吞拿鱼罐头, 油浸金枪鱼, 罐装吞拿鱼], en: Canned tuna in olive oil, kind: seafood, where: mainstream, pantry: true }
 - { id: anchovy, zh: 腌鳀鱼, aliases: [鳀鱼片, 油浸鳀鱼, 盐腌鳀鱼, 凤尾鱼, 凤尾鱼柳, 腌凤尾鱼, 鳀鱼柳, 油浸凤尾鱼, 油浸凤尾鱼片, 腌凤尾鱼片, 盐渍鳀鱼片, 油浸鳀鱼片, Anchovy fillets, 凤尾鱼片, 盐渍凤尾鱼], en: Anchovy fillets in oil / salt-packed anchovies, kind: seafood, where: mainstream, pantry: true }
@@ -412,7 +414,7 @@
 - { id: orange-liqueur, zh: 橙味利口酒, aliases: [橙酒, Cointreau, Grand Marnier], en: Orange liqueur (Cointreau / Grand Marnier), kind: alcohol, where: mainstream, pantry: true }
 - { id: pasteurized-egg-white, zh: 巴氏杀菌蛋清液, aliases: [巴氏杀菌蛋白液], en: Pasteurized liquid egg whites, kind: egg-dairy, where: mainstream }
 - { id: apple, zh: 苹果, aliases: [金冠苹果], en: Apples (Golden Delicious), kind: fruit, where: mainstream }
-- { id: cherry, zh: 甜樱桃, aliases: [樱桃, 深色甜樱桃], en: Sweet cherries (Bing), kind: fruit, where: mainstream }
+- { id: cherry, zh: 甜樱桃, aliases: [樱桃, 深色甜樱桃], en: Sweet cherries (Bing), kind: fruit, where: mainstream, season: [7, 8] }
 - { id: duck-fat, zh: 鸭油, aliases: [鸭脂, 炼鸭油], en: Rendered duck fat, kind: seasoning, where: mainstream }
 - { id: baking-powder, zh: 泡打粉, aliases: [复合膨松剂], en: Baking powder, kind: seasoning, where: mainstream, pantry: true }
 - { id: cornmeal, zh: 玉米粗粉, aliases: [玉米面, 玉米粉, 波伦塔粉], en: Coarse yellow cornmeal / polenta, kind: grain, where: mainstream, pantry: true }
@@ -437,7 +439,7 @@
 - { id: borlotti-bean, zh: 花芸豆, aliases: [Borlotti, Cranberry beans, Romano beans], en: Dried Romano beans / cranberry beans, kind: dried, where: mainstream, pantry: true, substitutes: [white-bean] }
 - { id: ditalini, zh: 小管意面, aliases: [Ditalini, Ditali, 小通心粉], en: Ditalini / ditali pasta, kind: grain, where: mainstream, pantry: true }
 - { id: chickpea, zh: 鹰嘴豆, aliases: [Chickpeas, Garbanzo beans], en: Dried chickpeas / garbanzo beans, kind: dried, where: mainstream, pantry: true }
-- { id: lacinato-kale, zh: 黑羽衣甘蓝, aliases: [托斯卡纳羽衣甘蓝, 黑甘蓝, 恐龙羽衣甘蓝, Cavolo nero], en: Lacinato kale / Tuscan kale / Dinosaur kale, kind: vegetable, where: mainstream }
+- { id: lacinato-kale, zh: 黑羽衣甘蓝, aliases: [托斯卡纳羽衣甘蓝, 黑甘蓝, 恐龙羽衣甘蓝, Cavolo nero], en: Lacinato kale / Tuscan kale / Dinosaur kale, kind: vegetable, where: mainstream, season: [6, 7, 8, 9, 10, 11] }
 - { id: savoy-cabbage, zh: 皱叶甘蓝, aliases: [皱叶包菜, 萨伏伊甘蓝], en: Savoy cabbage, kind: vegetable, where: mainstream, substitutes: [cabbage] }
 - { id: swiss-chard, zh: 叶用甜菜, aliases: [瑞士甜菜, 牛皮菜], en: Swiss chard, kind: vegetable, where: mainstream, substitutes: [spinach] }
 - { id: country-bread, zh: 乡村面包, aliases: [欧式乡村面包, 托斯卡纳面包, 意式白面包, 乡村白面包], en: Country bread / Rustic bread, kind: grain, where: mainstream, substitutes: [baguette] }
@@ -450,7 +452,7 @@
 - { id: caciocavallo, zh: 卡乔卡瓦洛奶酪, aliases: [Caciocavallo], en: Caciocavallo cheese (unsmoked), kind: egg-dairy, where: specialty }
 - { id: pecorino-amatrice, zh: Amatrice 羊奶酪, aliases: [Pecorino di Amatrice, 阿马特里切羊奶酪], en: Pecorino di Amatrice (semi-aged sheep milk cheese), kind: egg-dairy, where: specialty, substitutes: [pecorino-romano] }
 - { id: fresh-orecchiette, zh: 鲜猫耳朵面, aliases: [鲜猫耳面, 鲜 Orecchiette], en: Fresh orecchiette, kind: grain, where: specialty }
-- { id: rapini, zh: 西兰花苔, aliases: [Rapini, Broccoli rabe, Broccoli raab, Cime di rapa], en: Rapini / broccoli rabe, kind: vegetable, where: mainstream }
+- { id: rapini, zh: 西兰花苔, aliases: [Rapini, Broccoli rabe, Broccoli raab, Cime di rapa], en: Rapini / broccoli rabe, kind: vegetable, where: mainstream, season: [7, 8, 9, 10] }
 - { id: gelatin, zh: 无味明胶, aliases: [吉利丁, 吉利丁片, 吉利丁粉, 明胶片, 明胶粉], en: Unflavoured gelatine (powder or sheets), kind: other, where: mainstream, pantry: true }
 - { id: marsala, zh: 马沙拉酒, aliases: [玛萨拉酒, Marsala], en: Marsala wine, kind: alcohol, where: specialty, pantry: true }
 - { id: vanilla-ice-cream, zh: 香草冰淇淋, aliases: [香草冰激凌, 香草 Gelato, 香草雪糕], en: Vanilla ice cream / vanilla gelato, kind: egg-dairy, where: mainstream }
@@ -470,7 +472,7 @@
 - { id: massaman-curry-paste, zh: 马沙文咖喱酱, aliases: [马沙文咖喱膏, Matsaman curry paste], en: Massaman curry paste, kind: seasoning, where: asian, pantry: true }
 - { id: galangal, zh: 鲜南姜, aliases: [鲜高良姜, 泰国姜, Galangal], en: Fresh galangal, kind: aromatic, where: asian }
 - { id: green-papaya, zh: 青木瓜, aliases: [生木瓜, 未熟木瓜], en: Green papaya, kind: fruit, where: asian }
-- { id: gai-lan, zh: 芥兰, aliases: [芥蓝, Chinese broccoli], en: Gai lan / Chinese broccoli, kind: vegetable, where: asian }
+- { id: gai-lan, zh: 芥兰, aliases: [芥蓝, Chinese broccoli], en: Gai lan / Chinese broccoli, kind: vegetable, where: asian, season: [6, 7, 8, 9, 10, 11] }
 - { id: mint, zh: 鲜薄荷, aliases: [薄荷叶, 新鲜薄荷, 留兰香, 鲜薄荷叶], en: Fresh mint, kind: aromatic, where: mainstream }
 - { id: rice-paper, zh: 越南米纸, aliases: [米纸, 越南春卷皮], en: Rice paper wrappers, kind: grain, where: mainstream, pantry: true }
 - { id: catfish, zh: 鲶鱼, aliases: [鲶鱼段], en: Catfish steaks / fillets, kind: seafood, where: asian, substitutes: [basa] }
@@ -502,7 +504,7 @@
 - { id: honey, zh: 蜂蜜, en: Honey, kind: seasoning, where: mainstream, pantry: true, substitutes: [sugar] }
 - { id: cooked-fernbrake, zh: 熟蕨菜, aliases: [熟制蕨菜, 熟 고사리, 熟 gosari], en: Cooked fernbrake / boiled gosari, kind: vegetable, where: asian, substitutes: [spinach] }
 - { id: dried-bellflower-root, zh: 干桔梗根, aliases: [干桔梗, 도라지, doraji], en: Dried bellflower root / doraji, kind: dried, where: asian, pantry: true }
-- { id: pear, zh: 梨, aliases: [亚洲梨, 韩国梨, Bosc 梨], en: Asian pear / Bosc pear, kind: fruit, where: mainstream }
+- { id: pear, zh: 梨, aliases: [亚洲梨, 韩国梨, Bosc 梨], en: Asian pear / Bosc pear, kind: fruit, where: mainstream, season: [8, 9, 10] }
 - { id: gochujang, zh: 韩式辣椒酱, aliases: [韩国辣椒酱, 고추장], en: Gochujang / Korean hot pepper paste, kind: seasoning, where: asian, pantry: true }
 - { id: gochugaru, zh: 韩式辣椒碎, aliases: [韩式辣椒粉, 韩国辣椒粉, 고춧가루, 韩式辣椒面], en: Gochugaru / Korean red pepper flakes, kind: seasoning, where: asian, pantry: true }
 - { id: kimchi, zh: 韩式白菜泡菜, aliases: [韩国泡菜, 白菜泡菜, 배추김치, 韩式泡菜], en: Napa cabbage kimchi, kind: vegetable, where: mainstream }

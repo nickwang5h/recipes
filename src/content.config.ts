@@ -65,6 +65,8 @@ const ingredients = defineCollection({
     where: z.enum(keys<WhereToBuy>(WHERE_TO_BUY)),
     pantry: z.boolean().default(false),
     substitutes: z.array(reference('ingredients')).default([]),
+    /** Months (1–12) the ingredient is in field season in Ontario; absent when it is year-round. */
+    season: z.array(z.number().int().min(1).max(12)).optional(),
   }),
 });
 

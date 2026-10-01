@@ -95,7 +95,7 @@ const data = {
         <details class="fridge-group">
           <summary>{INGREDIENT_KINDS[kind]} <span class="fridge-count" data-kind-count={kind}></span></summary>
           <ul class="chips" data-kind={kind}>
-            {items.map((i) => <li><button class="chip pick" type="button" data-id={i.id} aria-pressed="false">{i.data.zh}</button></li>)}
+            {items.map((i) => <li><button class="chip pick" type="button" data-id={i.id} data-months={i.data.season?.join(',')} aria-pressed="false">{i.data.zh}</button></li>)}
           </ul>
         </details>
       ))}
@@ -198,6 +198,14 @@ const data = {
     };
 
     mountShoppingList(new Map(data.ingredients.map((i) => [i.id, i])));
+
+    // A leaf on what is in field season this month.
+    const month = String(new Date().getMonth() + 1);
+    for (const b of document.querySelectorAll<HTMLElement>('button.pick[data-months]')) {
+      if (!b.dataset.months!.split(',').includes(month)) continue;
+      b.classList.add('in-season');
+      b.title = '当季';
+    }
 
     const search = $<HTMLInputElement>('[data-search]');
     const renderSuggest = () => {

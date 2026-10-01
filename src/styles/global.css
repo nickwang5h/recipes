@@ -543,3 +543,17 @@ body:has(.timer-dock) main { padding-bottom: 9rem; }
   .timer-btn { text-decoration: none; padding: 0; }
   .timer-btn::before { display: none; }
 }
+
+/* ---------- Lucky pick, season ---------- */
+
+.filter-bar { justify-content: flex-start; gap: 0.5rem 1.25rem; }
+.filter-bar .filter-count { margin-right: auto; }
+.lucky-btn { min-height: 2.25rem; font-size: 0.85rem; }
+.season-note { margin: -0.25rem 0 1rem; color: var(--muted); font-size: 0.9rem; }
+.lucky { display: grid; gap: 1rem; margin: 0 0 1.5rem; padding: 1rem; border: 1px solid var(--primary); border-radius: var(--radius); background: var(--surface); }
+.lucky h2 { margin: 0 0 0.25rem; font-size: 1.35rem; }
+.lucky p { margin: 0 0 0.75rem; color: var(--muted); font-size: 0.95rem; }
+.lucky-card .card { background: var(--bg); }
+@media (min-width: 560px) { .lucky { grid-template-columns: minmax(0, 18rem) minmax(0, 1fr); align-items: center; gap: 1.5rem; } }
+.section-links { display: inline-flex; flex-wrap: wrap; gap: 0.25rem 1.1rem; }
+.chip.in-season::after { content: ""; display: inline-block; width: 0.45rem; height: 0.45rem; margin-left: 0.35rem; border-radius: 50% 0; background: var(--accent-green); vertical-align: 0.1em; }
