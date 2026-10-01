@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jian-jiao-chao-niu-rou.jpg
+coverAlt: 尖椒炒牛肉装盘后的插画
 title: 尖椒炒牛肉
 cuisine: chinese
 course: meat

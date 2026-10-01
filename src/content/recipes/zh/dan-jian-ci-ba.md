@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/dan-jian-ci-ba.jpg
+coverAlt: 蛋煎糍粑装盘后的插画
 title: 蛋煎糍粑
 cuisine: chinese
 course: breakfast

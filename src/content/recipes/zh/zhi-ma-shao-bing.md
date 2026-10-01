@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zhi-ma-shao-bing.jpg
+coverAlt: 芝麻烧饼装盘后的插画
 title: 芝麻烧饼
 cuisine: chinese
 course: staple

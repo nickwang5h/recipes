@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/teng-zhou-cai-jian-bing.jpg
+coverAlt: 滕州菜煎饼装盘后的插画
 title: 滕州菜煎饼
 cuisine: chinese
 course: staple

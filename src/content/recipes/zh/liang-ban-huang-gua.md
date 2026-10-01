@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/liang-ban-huang-gua.jpg
+coverAlt: 凉拌黄瓜装盘后的插画
 title: 凉拌黄瓜
 cuisine: chinese
 course: veg

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cong-shao-ji-tui.jpg
+coverAlt: 葱烧鸡腿装盘后的插画
 title: 葱烧鸡腿
 cuisine: chinese
 course: meat

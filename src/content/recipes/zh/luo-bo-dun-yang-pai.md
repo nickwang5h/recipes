@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/luo-bo-dun-yang-pai.jpg
+coverAlt: 萝卜炖羊排装盘后的插画
 title: 萝卜炖羊排
 cuisine: chinese
 course: meat

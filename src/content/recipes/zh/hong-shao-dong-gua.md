@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hong-shao-dong-gua.jpg
+coverAlt: 红烧冬瓜装盘后的插画
 title: 红烧冬瓜
 cuisine: chinese
 course: veg

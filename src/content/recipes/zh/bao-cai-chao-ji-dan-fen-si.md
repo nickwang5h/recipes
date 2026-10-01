@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bao-cai-chao-ji-dan-fen-si.jpg
+coverAlt: 包菜炒鸡蛋粉丝装盘后的插画
 title: 包菜炒鸡蛋粉丝
 cuisine: chinese
 course: veg

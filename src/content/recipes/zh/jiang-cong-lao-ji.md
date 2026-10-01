@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jiang-cong-lao-ji.jpg
+coverAlt: 姜葱捞鸡装盘后的插画
 title: 姜葱捞鸡
 cuisine: chinese
 course: meat

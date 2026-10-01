@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xi-hong-shi-ji-dan-gua-mian.jpg
+coverAlt: 西红柿鸡蛋挂面装盘后的插画
 title: 西红柿鸡蛋挂面
 cuisine: chinese
 course: staple

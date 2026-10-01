@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/dian-fan-bao-zheng-mi-fan.jpg
+coverAlt: 电饭煲蒸米饭装盘后的插画
 title: 电饭煲蒸米饭
 cuisine: chinese
 course: staple

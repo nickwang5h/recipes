@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gougeres.jpg
+coverAlt: 奶酪泡芙装盘后的插画
 title: 奶酪泡芙
 original: Gougères
 cuisine: french

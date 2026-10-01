@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/suan-xiang-jiang-you.jpg
+coverAlt: 蒜香酱油装盘后的插画
 title: 蒜香酱油
 cuisine: chinese
 course: sauce

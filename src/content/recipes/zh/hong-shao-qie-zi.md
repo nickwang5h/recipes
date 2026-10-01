@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hong-shao-qie-zi.jpg
+coverAlt: 红烧茄子装盘后的插画
 title: 红烧茄子
 cuisine: chinese
 course: veg

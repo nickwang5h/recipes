@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/qing-chao-hua-cai.jpg
+coverAlt: 清炒花菜装盘后的插画
 title: 清炒花菜
 cuisine: chinese
 course: veg

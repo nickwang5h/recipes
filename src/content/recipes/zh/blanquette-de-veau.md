@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/blanquette-de-veau.jpg
+coverAlt: 白汁烩小牛肉装盘后的插画
 title: 白汁烩小牛肉
 original: Blanquette de veau
 cuisine: french

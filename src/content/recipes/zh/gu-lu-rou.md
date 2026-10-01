@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gu-lu-rou.jpg
+coverAlt: 咕噜肉装盘后的插画
 title: 咕噜肉
 cuisine: chinese
 course: meat

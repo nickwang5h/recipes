@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/you-su.jpg
+coverAlt: 油酥装盘后的插画
 title: 油酥
 cuisine: chinese
 course: sauce

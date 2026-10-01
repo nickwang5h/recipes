@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/fan-qie-niu-rou-dan-hua-tang.jpg
+coverAlt: 番茄牛肉蛋花汤装盘后的插画
 title: 番茄牛肉蛋花汤
 cuisine: chinese
 course: soup

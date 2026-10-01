@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xi-hong-shi-tu-dou-dun-niu-rou.jpg
+coverAlt: 西红柿土豆炖牛肉装盘后的插画
 title: 西红柿土豆炖牛肉
 cuisine: chinese
 course: meat

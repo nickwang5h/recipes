@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gan-bian-zi-ji.jpg
+coverAlt: 干煸仔鸡装盘后的插画
 title: 干煸仔鸡
 cuisine: chinese
 course: meat

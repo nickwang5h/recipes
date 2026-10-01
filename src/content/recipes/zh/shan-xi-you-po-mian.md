@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/shan-xi-you-po-mian.jpg
+coverAlt: 陕西油泼面装盘后的插画
 title: 陕西油泼面
 cuisine: chinese
 course: staple

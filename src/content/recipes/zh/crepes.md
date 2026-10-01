@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/crepes.jpg
+coverAlt: 法式可丽饼装盘后的插画
 title: 法式可丽饼
 original: Crêpes
 cuisine: french

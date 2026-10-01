@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xiao-chao-rou.jpg
+coverAlt: 小炒肉装盘后的插画
 title: 小炒肉
 cuisine: chinese
 course: meat

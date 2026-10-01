@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/kao-qie-zi.jpg
+coverAlt: 烤茄子装盘后的插画
 title: 烤茄子
 cuisine: chinese
 course: veg

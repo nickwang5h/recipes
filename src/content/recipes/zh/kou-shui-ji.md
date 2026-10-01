@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/kou-shui-ji.jpg
+coverAlt: 口水鸡装盘后的插画
 title: 口水鸡
 cuisine: chinese
 course: meat

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/liang-ban-you-mai-cai.jpg
+coverAlt: 凉拌油麦菜装盘后的插画
 title: 凉拌油麦菜
 cuisine: chinese
 course: veg

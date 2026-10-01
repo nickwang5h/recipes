@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zheng-hua-juan.jpg
+coverAlt: 蒸花卷装盘后的插画
 title: 蒸花卷
 cuisine: chinese
 course: breakfast

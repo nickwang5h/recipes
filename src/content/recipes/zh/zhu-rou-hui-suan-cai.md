@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zhu-rou-hui-suan-cai.jpg
+coverAlt: 猪肉烩酸菜装盘后的插画
 title: 猪肉烩酸菜
 cuisine: chinese
 course: meat

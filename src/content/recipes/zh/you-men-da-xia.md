@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/you-men-da-xia.jpg
+coverAlt: 油焖大虾装盘后的插画
 title: 油焖大虾
 cuisine: chinese
 course: seafood

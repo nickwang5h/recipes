@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jiu-niang-lao-zao.jpg
+coverAlt: 酒酿醪糟装盘后的插画
 title: 酒酿醪糟
 cuisine: chinese
 course: drink

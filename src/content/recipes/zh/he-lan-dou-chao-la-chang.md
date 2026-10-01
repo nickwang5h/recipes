@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/he-lan-dou-chao-la-chang.jpg
+coverAlt: 荷兰豆炒腊肠装盘后的插画
 title: 荷兰豆炒腊肠
 cuisine: chinese
 course: meat

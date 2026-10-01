@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jiao-yan-yu-mi.jpg
+coverAlt: 椒盐玉米装盘后的插画
 title: 椒盐玉米
 cuisine: chinese
 course: veg

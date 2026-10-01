@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yu-xiang-qie-zi.jpg
+coverAlt: 鱼香茄子装盘后的插画
 title: 鱼香茄子
 cuisine: chinese
 course: meat

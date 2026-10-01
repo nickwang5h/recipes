@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yu-mi-pai-gu-tang.jpg
+coverAlt: 玉米排骨汤装盘后的插画
 title: 玉米排骨汤
 cuisine: chinese
 course: soup

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ma-la-xiang-guo.jpg
+coverAlt: 麻辣香锅装盘后的插画
 title: 麻辣香锅
 cuisine: chinese
 course: meat

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/huang-men-ji.jpg
+coverAlt: 黄焖鸡装盘后的插画
 title: 黄焖鸡
 cuisine: chinese
 course: meat

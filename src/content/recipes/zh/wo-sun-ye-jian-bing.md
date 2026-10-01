@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/wo-sun-ye-jian-bing.jpg
+coverAlt: 莴笋叶煎饼装盘后的插画
 title: 莴笋叶煎饼
 cuisine: chinese
 course: veg

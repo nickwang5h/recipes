@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gan-jian-a-gen-ting-hong-xia.jpg
+coverAlt: 干煎阿根廷红虾装盘后的插画
 title: 干煎阿根廷红虾
 cuisine: chinese
 course: seafood

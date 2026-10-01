@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/huang-gua-chao-rou.jpg
+coverAlt: 黄瓜炒肉装盘后的插画
 title: 黄瓜炒肉
 cuisine: chinese
 course: meat

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/wei-bo-cong-jiang-hei-xue-yu.jpg
+coverAlt: 微波葱姜黑鳕鱼装盘后的插画
 title: 微波葱姜黑鳕鱼
 cuisine: chinese
 course: seafood

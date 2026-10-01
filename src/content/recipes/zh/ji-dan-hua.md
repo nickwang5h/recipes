@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ji-dan-hua.jpg
+coverAlt: 鸡蛋花装盘后的插画
 title: 鸡蛋花
 cuisine: chinese
 course: soup

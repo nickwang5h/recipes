@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zi-cai-dan-hua-tang.jpg
+coverAlt: 紫菜蛋花汤装盘后的插画
 title: 紫菜蛋花汤
 cuisine: chinese
 course: soup

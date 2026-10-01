@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tai-shi-lu-rou-fan.jpg
+coverAlt: 台式卤肉饭装盘后的插画
 title: 台式卤肉饭
 cuisine: chinese
 course: staple

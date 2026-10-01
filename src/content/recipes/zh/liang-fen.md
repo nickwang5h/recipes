@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/liang-fen.jpg
+coverAlt: 凉粉装盘后的插画
 title: 凉粉
 cuisine: chinese
 course: staple

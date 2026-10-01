@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xiao-su-rou.jpg
+coverAlt: 小酥肉装盘后的插画
 title: 小酥肉
 cuisine: chinese
 course: meat

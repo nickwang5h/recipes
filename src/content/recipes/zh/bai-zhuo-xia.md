@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bai-zhuo-xia.jpg
+coverAlt: 白灼虾装盘后的插画
 title: 白灼虾
 cuisine: chinese
 course: seafood

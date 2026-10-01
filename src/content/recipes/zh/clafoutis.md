@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/clafoutis.jpg
+coverAlt: 樱桃克拉芙缇装盘后的插画
 title: 樱桃克拉芙缇
 original: Clafoutis aux cerises
 cuisine: french

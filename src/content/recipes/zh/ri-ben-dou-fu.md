@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ri-ben-dou-fu.jpg
+coverAlt: 家常日本豆腐装盘后的插画
 title: 家常日本豆腐
 cuisine: chinese
 course: veg

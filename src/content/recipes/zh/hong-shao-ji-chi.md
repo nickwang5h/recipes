@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hong-shao-ji-chi.jpg
+coverAlt: 红烧鸡翅装盘后的插画
 title: 红烧鸡翅
 cuisine: chinese
 course: meat

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/mayonnaise.jpg
+coverAlt: 蛋黄酱装盘后的插画
 title: 蛋黄酱
 original: Mayonnaise
 cuisine: french

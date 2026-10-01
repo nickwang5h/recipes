@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yu-xiang-rou-si.jpg
+coverAlt: 鱼香肉丝装盘后的插画
 title: 鱼香肉丝
 cuisine: chinese
 course: meat

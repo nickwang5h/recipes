@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bai-cai-zhu-rou-dun-fen-tiao.jpg
+coverAlt: 白菜猪肉炖粉条装盘后的插画
 title: 白菜猪肉炖粉条
 cuisine: chinese
 course: meat

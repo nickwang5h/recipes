@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ma-you-ban-mian.jpg
+coverAlt: 麻油拌面装盘后的插画
 title: 麻油拌面
 cuisine: chinese
 course: staple

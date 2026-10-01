@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yang-pai-men-mian.jpg
+coverAlt: 羊排焖面装盘后的插画
 title: 羊排焖面
 cuisine: chinese
 course: staple

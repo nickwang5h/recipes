@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/chao-qing-cai.jpg
+coverAlt: 炒青菜装盘后的插画
 title: 炒青菜
 cuisine: chinese
 course: veg

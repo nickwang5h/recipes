@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/qing-zheng-nan-gua.jpg
+coverAlt: 清蒸南瓜装盘后的插画
 title: 清蒸南瓜
 cuisine: chinese
 course: veg

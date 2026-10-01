@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ba-si-tu-dou.jpg
+coverAlt: 拔丝土豆装盘后的插画
 title: 拔丝土豆
 cuisine: chinese
 course: veg

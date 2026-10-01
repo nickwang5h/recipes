@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yu-ni-xue-mei-niang.jpg
+coverAlt: 芋泥雪媚娘装盘后的插画
 title: 芋泥雪媚娘
 cuisine: chinese
 course: dessert

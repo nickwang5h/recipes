@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/qing-jiao-niang.jpg
+coverAlt: 青椒酿装盘后的插画
 title: 青椒酿
 cuisine: chinese
 course: meat

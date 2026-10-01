@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cong-jian-dou-fu.jpg
+coverAlt: 葱煎豆腐装盘后的插画
 title: 葱煎豆腐
 cuisine: chinese
 course: veg

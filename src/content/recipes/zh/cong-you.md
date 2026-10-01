@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cong-you.jpg
+coverAlt: 葱油装盘后的插画
 title: 葱油
 cuisine: chinese
 course: sauce

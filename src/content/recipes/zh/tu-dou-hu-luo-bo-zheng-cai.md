@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tu-dou-hu-luo-bo-zheng-cai.jpg
+coverAlt: 炒土豆和胡萝卜蒸菜装盘后的插画
 title: 炒土豆和胡萝卜蒸菜
 cuisine: chinese
 course: veg

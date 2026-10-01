@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/lao-bing.jpg
+coverAlt: 烙饼装盘后的插画
 title: 烙饼
 cuisine: chinese
 course: staple

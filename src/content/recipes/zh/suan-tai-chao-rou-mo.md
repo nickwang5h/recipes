@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/suan-tai-chao-rou-mo.jpg
+coverAlt: 蒜苔炒肉末装盘后的插画
 title: 蒜苔炒肉末
 cuisine: chinese
 course: meat

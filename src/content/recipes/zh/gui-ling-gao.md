@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gui-ling-gao.jpg
+coverAlt: 龟苓膏装盘后的插画
 title: 龟苓膏
 cuisine: chinese
 course: dessert

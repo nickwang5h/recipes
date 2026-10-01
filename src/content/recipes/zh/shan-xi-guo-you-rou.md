@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/shan-xi-guo-you-rou.jpg
+coverAlt: 山西过油肉装盘后的插画
 title: 山西过油肉
 cuisine: chinese
 course: meat

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pi-dan-dou-fu.jpg
+coverAlt: 皮蛋豆腐装盘后的插画
 title: 皮蛋豆腐
 cuisine: chinese
 course: veg

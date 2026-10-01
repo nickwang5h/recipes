@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/lu-cai.jpg
+coverAlt: 卤菜装盘后的插画
 title: 卤菜
 cuisine: chinese
 course: meat

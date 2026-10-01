@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/huang-gua-pi-dan-tang.jpg
+coverAlt: 黄瓜皮蛋汤装盘后的插画
 title: 黄瓜皮蛋汤
 cuisine: chinese
 course: soup

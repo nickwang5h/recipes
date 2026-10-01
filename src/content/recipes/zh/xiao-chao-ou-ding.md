@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xiao-chao-ou-ding.jpg
+coverAlt: 小炒藕丁装盘后的插画
 title: 小炒藕丁
 cuisine: chinese
 course: veg

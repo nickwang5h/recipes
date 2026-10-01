@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/liang-ban-mu-er.jpg
+coverAlt: 凉拌木耳装盘后的插画
 title: 凉拌木耳
 cuisine: chinese
 course: veg

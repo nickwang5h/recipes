@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bing-fen.jpg
+coverAlt: 冰粉装盘后的插画
 title: 冰粉
 cuisine: chinese
 course: drink

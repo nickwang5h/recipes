@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yang-shuo-pi-jiu-yu.jpg
+coverAlt: 阳朔啤酒鱼装盘后的插画
 title: 阳朔啤酒鱼
 cuisine: chinese
 course: seafood

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/shui-you-men-shu-cai.jpg
+coverAlt: 水油焖蔬菜装盘后的插画
 title: 水油焖蔬菜
 cuisine: chinese
 course: veg

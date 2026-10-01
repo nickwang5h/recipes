@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/lei-jiao-pi-dan.jpg
+coverAlt: 雷椒皮蛋装盘后的插画
 title: 雷椒皮蛋
 cuisine: chinese
 course: veg

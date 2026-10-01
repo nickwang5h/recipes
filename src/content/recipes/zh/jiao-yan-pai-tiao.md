@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jiao-yan-pai-tiao.jpg
+coverAlt: 椒盐排条装盘后的插画
 title: 椒盐排条
 cuisine: chinese
 course: meat

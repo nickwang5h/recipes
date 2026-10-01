@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/lao-zao-xiao-tang-yuan.jpg
+coverAlt: 醪糟小汤圆装盘后的插画
 title: 醪糟小汤圆
 cuisine: chinese
 course: staple

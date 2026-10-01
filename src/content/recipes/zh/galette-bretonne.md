@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/galette-bretonne.jpg
+coverAlt: 布列塔尼荞麦饼装盘后的插画
 title: 布列塔尼荞麦饼
 original: Galette bretonne
 cuisine: french

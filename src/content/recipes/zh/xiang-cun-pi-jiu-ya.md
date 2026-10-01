@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xiang-cun-pi-jiu-ya.jpg
+coverAlt: 乡村啤酒鸭装盘后的插画
 title: 乡村啤酒鸭
 cuisine: chinese
 course: meat

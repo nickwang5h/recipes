@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gan-guo-hua-cai.jpg
+coverAlt: 干锅花菜装盘后的插画
 title: 干锅花菜
 cuisine: chinese
 course: veg

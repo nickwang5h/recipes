@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xiao-mi-la-chao-rou.jpg
+coverAlt: 小米辣炒肉装盘后的插画
 title: 小米辣炒肉
 cuisine: chinese
 course: meat

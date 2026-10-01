@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hua-mei-zhu-mao-dou.jpg
+coverAlt: 话梅煮毛豆装盘后的插画
 title: 话梅煮毛豆
 cuisine: chinese
 course: veg

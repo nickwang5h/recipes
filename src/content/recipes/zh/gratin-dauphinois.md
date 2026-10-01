@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gratin-dauphinois.jpg
+coverAlt: 多菲内焗土豆装盘后的插画
 title: 多菲内焗土豆
 original: Gratin dauphinois
 cuisine: french

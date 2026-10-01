@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gou-qian-xiang-gu-tang.jpg
+coverAlt: 勾芡香菇汤装盘后的插画
 title: 勾芡香菇汤
 cuisine: chinese
 course: soup

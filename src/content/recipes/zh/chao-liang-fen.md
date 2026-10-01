@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/chao-liang-fen.jpg
+coverAlt: 炒凉粉装盘后的插画
 title: 炒凉粉
 cuisine: chinese
 course: staple

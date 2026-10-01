@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/qin-cai-ban-cha-shu-gu.jpg
+coverAlt: 芹菜拌茶树菇装盘后的插画
 title: 芹菜拌茶树菇
 cuisine: chinese
 course: veg

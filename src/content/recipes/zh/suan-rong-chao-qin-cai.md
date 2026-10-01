@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/suan-rong-chao-qin-cai.jpg
+coverAlt: 蒜蓉炒芹菜装盘后的插画
 title: 蒜蓉炒芹菜
 cuisine: chinese
 course: veg

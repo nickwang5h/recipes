@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/shui-zhu-rou-pian.jpg
+coverAlt: 水煮肉片装盘后的插画
 title: 水煮肉片
 cuisine: chinese
 course: meat

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/suan-mei-tang.jpg
+coverAlt: 酸梅汤装盘后的插画
 title: 酸梅汤
 cuisine: chinese
 course: drink

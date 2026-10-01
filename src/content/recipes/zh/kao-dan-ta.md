@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/kao-dan-ta.jpg
+coverAlt: 烤蛋挞装盘后的插画
 title: 烤蛋挞
 cuisine: chinese
 course: dessert

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/chao-hua-dan.jpg
+coverAlt: 炒滑蛋装盘后的插画
 title: 炒滑蛋
 cuisine: chinese
 course: veg

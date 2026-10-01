@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jiang-chao-ji.jpg
+coverAlt: 姜炒鸡装盘后的插画
 title: 姜炒鸡
 cuisine: chinese
 course: meat

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/song-ren-yu-mi.jpg
+coverAlt: 松仁玉米装盘后的插画
 title: 松仁玉米
 cuisine: chinese
 course: veg

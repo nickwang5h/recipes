@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/li-yu-dun-bai-cai.jpg
+coverAlt: 鲤鱼炖白菜装盘后的插画
 title: 鲤鱼炖白菜
 cuisine: chinese
 course: seafood

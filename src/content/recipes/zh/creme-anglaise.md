@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/creme-anglaise.jpg
+coverAlt: 英式蛋奶酱装盘后的插画
 title: 英式蛋奶酱
 original: Crème anglaise
 cuisine: french

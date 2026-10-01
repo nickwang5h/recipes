@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jin-zhen-gu-ri-ben-dou-fu-bao.jpg
+coverAlt: 金针菇日本豆腐煲装盘后的插画
 title: 金针菇日本豆腐煲
 cuisine: chinese
 course: veg

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zhu-guo-zheng-mi-fan.jpg
+coverAlt: 煮锅蒸米饭装盘后的插画
 title: 煮锅蒸米饭
 cuisine: chinese
 course: staple

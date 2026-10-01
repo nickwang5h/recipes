@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ji-dan-huo-tui-chao-huang-gua.jpg
+coverAlt: 鸡蛋火腿炒黄瓜装盘后的插画
 title: 鸡蛋火腿炒黄瓜
 cuisine: chinese
 course: veg

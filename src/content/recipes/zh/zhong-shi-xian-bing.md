@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zhong-shi-xian-bing.jpg
+coverAlt: 中式馅饼装盘后的插画
 title: 中式馅饼
 cuisine: chinese
 course: staple

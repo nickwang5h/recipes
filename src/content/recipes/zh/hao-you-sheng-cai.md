@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hao-you-sheng-cai.jpg
+coverAlt: 蚝油生菜装盘后的插画
 title: 蚝油生菜
 cuisine: chinese
 course: veg

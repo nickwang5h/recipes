@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cong-you-gui-yu.jpg
+coverAlt: 葱油桂鱼装盘后的插画
 title: 葱油桂鱼
 cuisine: chinese
 course: seafood

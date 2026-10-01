@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/lan-cai-rou-mo-si-ji-dou.jpg
+coverAlt: 榄菜肉末四季豆装盘后的插画
 title: 榄菜肉末四季豆
 cuisine: chinese
 course: veg

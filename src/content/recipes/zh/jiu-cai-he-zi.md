@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jiu-cai-he-zi.jpg
+coverAlt: 韭菜盒子装盘后的插画
 title: 韭菜盒子
 cuisine: chinese
 course: staple

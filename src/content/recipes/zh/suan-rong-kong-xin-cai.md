@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/suan-rong-kong-xin-cai.jpg
+coverAlt: 蒜蓉空心菜装盘后的插画
 title: 蒜蓉空心菜
 cuisine: chinese
 course: veg

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pi-dan-shou-rou-zhou.jpg
+coverAlt: 皮蛋瘦肉粥装盘后的插画
 title: 皮蛋瘦肉粥
 cuisine: chinese
 course: soup

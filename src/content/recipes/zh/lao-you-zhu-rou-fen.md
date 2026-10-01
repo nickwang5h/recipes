@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/lao-you-zhu-rou-fen.jpg
+coverAlt: 老友猪肉粉装盘后的插画
 title: 老友猪肉粉
 cuisine: chinese
 course: staple

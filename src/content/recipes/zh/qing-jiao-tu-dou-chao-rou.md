@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/qing-jiao-tu-dou-chao-rou.jpg
+coverAlt: 青椒土豆炒肉装盘后的插画
 title: 青椒土豆炒肉
 cuisine: chinese
 course: meat

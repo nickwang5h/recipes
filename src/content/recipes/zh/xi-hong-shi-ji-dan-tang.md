@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xi-hong-shi-ji-dan-tang.jpg
+coverAlt: 西红柿鸡蛋汤装盘后的插画
 title: 西红柿鸡蛋汤
 cuisine: chinese
 course: soup

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/leng-chi-tu.jpg
+coverAlt: 冷吃兔装盘后的插画
 title: 冷吃兔
 cuisine: chinese
 course: meat

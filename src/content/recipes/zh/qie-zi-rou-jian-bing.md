@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/qie-zi-rou-jian-bing.jpg
+coverAlt: 茄子肉煎饼装盘后的插画
 title: 茄子肉煎饼
 cuisine: chinese
 course: staple

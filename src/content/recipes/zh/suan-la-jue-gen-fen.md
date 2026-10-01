@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/suan-la-jue-gen-fen.jpg
+coverAlt: 酸辣蕨根粉装盘后的插画
 title: 酸辣蕨根粉
 cuisine: chinese
 course: staple

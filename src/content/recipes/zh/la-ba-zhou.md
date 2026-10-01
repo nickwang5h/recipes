@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/la-ba-zhou.jpg
+coverAlt: 腊八粥装盘后的插画
 title: 腊八粥
 cuisine: chinese
 course: soup

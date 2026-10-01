@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/liang-pi.jpg
+coverAlt: 凉皮装盘后的插画
 title: 凉皮
 cuisine: chinese
 course: staple

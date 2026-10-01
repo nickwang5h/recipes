@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gui-zhou-la-zi-ji.jpg
+coverAlt: 贵州辣子鸡装盘后的插画
 title: 贵州辣子鸡
 cuisine: chinese
 course: meat

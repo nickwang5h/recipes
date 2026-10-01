@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xiao-long-xia.jpg
+coverAlt: 小龙虾装盘后的插画
 title: 小龙虾
 cuisine: chinese
 course: seafood

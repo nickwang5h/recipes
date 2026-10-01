@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/qie-zi-dun-tu-dou.jpg
+coverAlt: 茄子炖土豆装盘后的插画
 title: 茄子炖土豆
 cuisine: chinese
 course: veg

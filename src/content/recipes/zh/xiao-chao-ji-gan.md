@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xiao-chao-ji-gan.jpg
+coverAlt: 小炒鸡肝装盘后的插画
 title: 小炒鸡肝
 cuisine: chinese
 course: meat

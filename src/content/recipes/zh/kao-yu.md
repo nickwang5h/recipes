@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/kao-yu.jpg
+coverAlt: 烤鱼装盘后的插画
 title: 烤鱼
 cuisine: chinese
 course: seafood

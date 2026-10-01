@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/rou-xie-bao.jpg
+coverAlt: 肉蟹煲装盘后的插画
 title: 肉蟹煲
 cuisine: chinese
 course: seafood

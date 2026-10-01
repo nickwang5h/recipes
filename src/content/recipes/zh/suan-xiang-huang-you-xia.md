@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/suan-xiang-huang-you-xia.jpg
+coverAlt: 蒜香黄油虾装盘后的插画
 title: 蒜香黄油虾
 cuisine: chinese
 course: seafood

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bisque-de-homard.jpg
+coverAlt: 龙虾浓汤装盘后的插画
 title: 龙虾浓汤
 original: Bisque de homard
 cuisine: french

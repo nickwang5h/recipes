@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/dong-gua-sang-na-ji.jpg
+coverAlt: 冬瓜桑拿鸡装盘后的插画
 title: 冬瓜桑拿鸡
 cuisine: chinese
 course: meat

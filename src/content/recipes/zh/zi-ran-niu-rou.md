@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zi-ran-niu-rou.jpg
+coverAlt: 孜然牛肉装盘后的插画
 title: 孜然牛肉
 cuisine: chinese
 course: meat

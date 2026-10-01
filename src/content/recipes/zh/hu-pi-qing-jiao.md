@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hu-pi-qing-jiao.jpg
+coverAlt: 虎皮青椒装盘后的插画
 title: 虎皮青椒
 cuisine: chinese
 course: veg

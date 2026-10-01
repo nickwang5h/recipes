@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gui-lin-shi-ba-niang.jpg
+coverAlt: 桂林十八酿装盘后的插画
 title: 桂林十八酿
 cuisine: chinese
 course: meat

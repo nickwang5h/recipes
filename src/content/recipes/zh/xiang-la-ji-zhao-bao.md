@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xiang-la-ji-zhao-bao.jpg
+coverAlt: 香辣鸡爪煲装盘后的插画
 title: 香辣鸡爪煲
 cuisine: chinese
 course: meat

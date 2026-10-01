@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jiang-pai-gu.jpg
+coverAlt: 酱排骨装盘后的插画
 title: 酱排骨
 cuisine: chinese
 course: meat

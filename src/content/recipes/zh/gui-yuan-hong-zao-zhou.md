@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gui-yuan-hong-zao-zhou.jpg
+coverAlt: 桂圆红枣粥装盘后的插画
 title: 桂圆红枣粥
 cuisine: chinese
 course: breakfast

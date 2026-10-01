@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jun-gu-dun-ru-ge.jpg
+coverAlt: 菌菇炖乳鸽装盘后的插画
 title: 菌菇炖乳鸽
 cuisine: chinese
 course: soup

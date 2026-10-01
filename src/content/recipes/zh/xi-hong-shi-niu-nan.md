@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xi-hong-shi-niu-nan.jpg
+coverAlt: 西红柿牛腩装盘后的插画
 title: 西红柿牛腩
 cuisine: chinese
 course: meat

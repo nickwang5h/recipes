@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hong-shao-yu-tou.jpg
+coverAlt: 红烧鱼头装盘后的插画
 title: 红烧鱼头
 cuisine: chinese
 course: seafood

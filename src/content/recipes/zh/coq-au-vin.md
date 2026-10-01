@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/coq-au-vin.jpg
+coverAlt: 红酒烩鸡装盘后的插画
 title: 红酒烩鸡
 original: Coq au vin
 cuisine: french

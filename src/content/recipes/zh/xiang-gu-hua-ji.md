@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xiang-gu-hua-ji.jpg
+coverAlt: 香菇滑鸡装盘后的插画
 title: 香菇滑鸡
 cuisine: chinese
 course: meat

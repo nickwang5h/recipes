@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/dou-jiao-men-mian.jpg
+coverAlt: 豆角焖面装盘后的插画
 title: 豆角焖面
 cuisine: chinese
 course: staple

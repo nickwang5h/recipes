@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/creme-caramel.jpg
+coverAlt: 焦糖布丁装盘后的插画
 title: 焦糖布丁
 original: Crème caramel
 cuisine: french

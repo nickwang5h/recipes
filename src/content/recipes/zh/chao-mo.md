@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/chao-mo.jpg
+coverAlt: 炒馍装盘后的插画
 title: 炒馍
 cuisine: chinese
 course: staple

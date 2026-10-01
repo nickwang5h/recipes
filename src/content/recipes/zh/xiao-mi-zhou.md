@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xiao-mi-zhou.jpg
+coverAlt: 小米粥装盘后的插画
 title: 小米粥
 cuisine: chinese
 course: soup

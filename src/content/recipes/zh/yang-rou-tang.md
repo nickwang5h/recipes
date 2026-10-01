@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yang-rou-tang.jpg
+coverAlt: 羊肉汤装盘后的插画
 title: 羊肉汤
 cuisine: chinese
 course: soup

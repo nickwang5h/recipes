@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/he-nan-zheng-mian-tiao.jpg
+coverAlt: 河南蒸面条装盘后的插画
 title: 河南蒸面条
 cuisine: chinese
 course: staple

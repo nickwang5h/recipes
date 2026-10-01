@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hu-pi-zhou-zi.jpg
+coverAlt: 虎皮肘子装盘后的插画
 title: 虎皮肘子
 cuisine: chinese
 course: meat

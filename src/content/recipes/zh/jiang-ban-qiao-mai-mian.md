@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jiang-ban-qiao-mai-mian.jpg
+coverAlt: 酱拌荞麦面装盘后的插画
 title: 酱拌荞麦面
 cuisine: chinese
 course: staple

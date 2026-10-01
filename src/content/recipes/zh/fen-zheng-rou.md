@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/fen-zheng-rou.jpg
+coverAlt: 粉蒸肉装盘后的插画
 title: 粉蒸肉
 cuisine: chinese
 course: meat

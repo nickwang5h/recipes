@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tu-dou-dun-pai-gu.jpg
+coverAlt: 土豆炖排骨装盘后的插画
 title: 土豆炖排骨
 cuisine: chinese
 course: meat

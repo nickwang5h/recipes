@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zi-bo-shao-kao.jpg
+coverAlt: 淄博烧烤装盘后的插画
 title: 淄博烧烤
 cuisine: chinese
 course: meat

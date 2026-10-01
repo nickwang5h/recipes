@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cui-pi-dou-fu.jpg
+coverAlt: 脆皮豆腐装盘后的插画
 title: 脆皮豆腐
 cuisine: chinese
 course: veg

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/suan-rong-xi-lan-hua.jpg
+coverAlt: 蒜蓉西兰花装盘后的插画
 title: 蒜蓉西兰花
 cuisine: chinese
 course: veg

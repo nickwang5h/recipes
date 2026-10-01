@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zhu-que-tang.jpg
+coverAlt: 朱雀汤装盘后的插画
 title: 朱雀汤
 cuisine: chinese
 course: soup

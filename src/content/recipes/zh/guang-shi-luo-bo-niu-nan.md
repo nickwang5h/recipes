@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/guang-shi-luo-bo-niu-nan.jpg
+coverAlt: 广式萝卜牛腩装盘后的插画
 title: 广式萝卜牛腩
 cuisine: chinese
 course: meat

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cong-you-ban-mian.jpg
+coverAlt: 葱油拌面装盘后的插画
 title: 葱油拌面
 cuisine: chinese
 course: staple

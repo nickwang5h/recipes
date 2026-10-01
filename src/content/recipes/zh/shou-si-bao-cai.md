@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/shou-si-bao-cai.jpg
+coverAlt: 手撕包菜装盘后的插画
 title: 手撕包菜
 cuisine: chinese
 course: veg

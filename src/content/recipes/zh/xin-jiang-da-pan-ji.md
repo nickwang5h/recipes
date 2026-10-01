@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xin-jiang-da-pan-ji.jpg
+coverAlt: 新疆大盘鸡装盘后的插画
 title: 新疆大盘鸡
 cuisine: chinese
 course: meat

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/croque-monsieur.jpg
+coverAlt: 法式火腿芝士三明治装盘后的插画
 title: 法式火腿芝士三明治
 original: Croque-monsieur
 cuisine: french

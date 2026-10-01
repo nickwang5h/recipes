@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/confit-de-canard.jpg
+coverAlt: 油封鸭腿装盘后的插画
 title: 油封鸭腿
 original: Confit de canard
 cuisine: french

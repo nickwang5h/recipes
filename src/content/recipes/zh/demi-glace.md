@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/demi-glace.jpg
+coverAlt: 半釉汁装盘后的插画
 title: 半釉汁
 original: Demi-glace
 cuisine: french

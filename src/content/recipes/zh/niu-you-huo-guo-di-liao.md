@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/niu-you-huo-guo-di-liao.jpg
+coverAlt: 牛油火锅底料装盘后的插画
 title: 牛油火锅底料
 cuisine: chinese
 course: sauce

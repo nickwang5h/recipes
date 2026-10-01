@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/madeleines.jpg
+coverAlt: 玛德琳装盘后的插画
 title: 玛德琳
 original: Madeleines
 cuisine: french

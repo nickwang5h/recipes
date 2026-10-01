@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/di-san-xian.jpg
+coverAlt: 地三鲜装盘后的插画
 title: 地三鲜
 cuisine: chinese
 course: veg

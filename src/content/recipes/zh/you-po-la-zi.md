@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/you-po-la-zi.jpg
+coverAlt: 油泼辣子装盘后的插画
 title: 油泼辣子
 cuisine: chinese
 course: sauce

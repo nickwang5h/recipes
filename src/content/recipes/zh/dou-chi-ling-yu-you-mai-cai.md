@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/dou-chi-ling-yu-you-mai-cai.jpg
+coverAlt: 豆豉鲮鱼油麦菜装盘后的插画
 title: 豆豉鲮鱼油麦菜
 cuisine: chinese
 course: veg

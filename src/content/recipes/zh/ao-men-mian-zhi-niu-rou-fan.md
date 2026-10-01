@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ao-men-mian-zhi-niu-rou-fan.jpg
+coverAlt: 澳门湿版免治牛肉饭装盘后的插画
 title: 澳门湿版免治牛肉饭
 cuisine: chinese
 course: staple

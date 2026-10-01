@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/fan-sha-yu-tou.jpg
+coverAlt: 反沙芋头装盘后的插画
 title: 反沙芋头
 cuisine: chinese
 course: dessert

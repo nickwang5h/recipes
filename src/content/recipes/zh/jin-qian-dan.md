@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jin-qian-dan.jpg
+coverAlt: 金钱蛋装盘后的插画
 title: 金钱蛋
 cuisine: chinese
 course: veg

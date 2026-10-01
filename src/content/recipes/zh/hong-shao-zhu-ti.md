@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hong-shao-zhu-ti.jpg
+coverAlt: 红烧猪蹄装盘后的插画
 title: 红烧猪蹄
 cuisine: chinese
 course: meat

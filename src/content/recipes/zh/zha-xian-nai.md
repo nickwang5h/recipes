@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zha-xian-nai.jpg
+coverAlt: 炸鲜奶装盘后的插画
 title: 炸鲜奶
 cuisine: chinese
 course: dessert

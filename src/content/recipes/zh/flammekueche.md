@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/flammekueche.jpg
+coverAlt: 阿尔萨斯火焰薄饼装盘后的插画
 title: 阿尔萨斯火焰薄饼
 original: Flammekueche
 cuisine: french

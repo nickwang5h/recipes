@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pai-gu-shan-yao-yu-mi-tang.jpg
+coverAlt: 排骨山药玉米汤装盘后的插画
 title: 排骨山药玉米汤
 cuisine: chinese
 course: soup

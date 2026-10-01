@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/lao-ma-ti-hua.jpg
+coverAlt: 老妈蹄花装盘后的插画
 title: 老妈蹄花
 cuisine: chinese
 course: meat

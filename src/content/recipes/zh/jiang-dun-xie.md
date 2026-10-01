@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jiang-dun-xie.jpg
+coverAlt: 酱炖蟹装盘后的插画
 title: 酱炖蟹
 cuisine: chinese
 course: seafood

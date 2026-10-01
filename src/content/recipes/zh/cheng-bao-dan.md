@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cheng-bao-dan.jpg
+coverAlt: 蛏抱蛋装盘后的插画
 title: 蛏抱蛋
 cuisine: chinese
 course: seafood

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/mei-cai-kou-rou.jpg
+coverAlt: 梅菜扣肉装盘后的插画
 title: 梅菜扣肉
 cuisine: chinese
 course: meat

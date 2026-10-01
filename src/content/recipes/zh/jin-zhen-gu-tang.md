@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jin-zhen-gu-tang.jpg
+coverAlt: 金针菇汤装盘后的插画
 title: 金针菇汤
 cuisine: chinese
 course: soup

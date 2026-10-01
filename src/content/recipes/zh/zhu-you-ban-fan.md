@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zhu-you-ban-fan.jpg
+coverAlt: 猪油拌饭装盘后的插画
 title: 猪油拌饭
 cuisine: chinese
 course: staple

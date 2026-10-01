@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/re-gan-mian.jpg
+coverAlt: 热干面装盘后的插画
 title: 热干面
 cuisine: chinese
 course: staple

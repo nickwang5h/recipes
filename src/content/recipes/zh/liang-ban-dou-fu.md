@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/liang-ban-dou-fu.jpg
+coverAlt: 凉拌豆腐装盘后的插画
 title: 凉拌豆腐
 cuisine: chinese
 course: veg

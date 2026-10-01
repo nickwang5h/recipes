@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/moules-marinieres.jpg
+coverAlt: 白酒青口装盘后的插画
 title: 白酒青口
 original: Moules marinières
 cuisine: french

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/sha-zhu-cai.jpg
+coverAlt: 杀猪菜装盘后的插画
 title: 杀猪菜
 cuisine: chinese
 course: meat

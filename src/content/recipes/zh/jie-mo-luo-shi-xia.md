@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jie-mo-luo-shi-xia.jpg
+coverAlt: 芥末罗氏虾装盘后的插画
 title: 芥末罗氏虾
 cuisine: chinese
 course: seafood

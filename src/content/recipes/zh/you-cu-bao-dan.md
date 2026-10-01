@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/you-cu-bao-dan.jpg
+coverAlt: 油醋爆蛋装盘后的插画
 title: 油醋爆蛋
 cuisine: chinese
 course: veg

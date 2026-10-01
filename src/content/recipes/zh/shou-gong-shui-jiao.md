@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/shou-gong-shui-jiao.jpg
+coverAlt: 手工水饺装盘后的插画
 title: 手工水饺
 cuisine: chinese
 course: staple

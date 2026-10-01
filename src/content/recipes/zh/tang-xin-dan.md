@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tang-xin-dan.jpg
+coverAlt: 溏心蛋装盘后的插画
 title: 溏心蛋
 cuisine: chinese
 course: breakfast

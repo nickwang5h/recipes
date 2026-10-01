@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/dong-gua-cha.jpg
+coverAlt: 冬瓜茶装盘后的插画
 title: 冬瓜茶
 cuisine: chinese
 course: drink

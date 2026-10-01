@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xian-rou-cai-fan.jpg
+coverAlt: 咸肉菜饭装盘后的插画
 title: 咸肉菜饭
 cuisine: chinese
 course: staple

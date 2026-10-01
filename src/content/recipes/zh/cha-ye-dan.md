@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cha-ye-dan.jpg
+coverAlt: 茶叶蛋装盘后的插画
 title: 茶叶蛋
 cuisine: chinese
 course: breakfast

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/wu-gu-ji-zhao.jpg
+coverAlt: 无骨鸡爪装盘后的插画
 title: 无骨鸡爪
 cuisine: chinese
 course: meat

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/lao-shi-guo-bao-rou.jpg
+coverAlt: 老式锅包肉装盘后的插画
 title: 老式锅包肉
 cuisine: chinese
 course: meat

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xiang-jian-wu-hua-rou.jpg
+coverAlt: 香煎五花肉装盘后的插画
 title: 香煎五花肉
 cuisine: chinese
 course: meat

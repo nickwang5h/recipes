@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bo-cai-chao-ji-dan.jpg
+coverAlt: 菠菜炒鸡蛋装盘后的插画
 title: 菠菜炒鸡蛋
 cuisine: chinese
 course: veg

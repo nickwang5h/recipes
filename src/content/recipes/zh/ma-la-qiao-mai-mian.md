@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ma-la-qiao-mai-mian.jpg
+coverAlt: 麻辣荞麦面装盘后的插画
 title: 麻辣荞麦面
 cuisine: chinese
 course: staple

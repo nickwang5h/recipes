@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xian-rou-shao-mai.jpg
+coverAlt: 鲜肉烧卖装盘后的插画
 title: 鲜肉烧卖
 cuisine: chinese
 course: staple

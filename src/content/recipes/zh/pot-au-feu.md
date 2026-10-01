@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pot-au-feu.jpg
+coverAlt: 法式蔬菜炖牛肉装盘后的插画
 title: 法式蔬菜炖牛肉
 original: Pot-au-feu
 cuisine: french

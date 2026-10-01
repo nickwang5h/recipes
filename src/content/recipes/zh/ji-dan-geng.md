@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ji-dan-geng.jpg
+coverAlt: 鸡蛋羹装盘后的插画
 title: 鸡蛋羹
 cuisine: chinese
 course: veg

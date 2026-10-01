@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xiang-gan-qin-cai-chao-rou.jpg
+coverAlt: 香干芹菜炒肉装盘后的插画
 title: 香干芹菜炒肉
 cuisine: chinese
 course: meat

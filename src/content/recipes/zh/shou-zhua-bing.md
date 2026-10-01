@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/shou-zhua-bing.jpg
+coverAlt: 手抓饼装盘后的插画
 title: 手抓饼
 cuisine: chinese
 course: breakfast

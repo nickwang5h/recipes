@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zha-chuan-jiang-liao.jpg
+coverAlt: 炸串酱料装盘后的插画
 title: 炸串酱料
 cuisine: chinese
 course: sauce

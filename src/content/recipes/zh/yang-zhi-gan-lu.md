@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yang-zhi-gan-lu.jpg
+coverAlt: 杨枝甘露装盘后的插画
 title: 杨枝甘露
 cuisine: chinese
 course: drink

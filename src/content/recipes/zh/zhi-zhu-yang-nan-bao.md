@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zhi-zhu-yang-nan-bao.jpg
+coverAlt: 枝竹羊腩煲装盘后的插画
 title: 枝竹羊腩煲
 cuisine: chinese
 course: meat

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hei-jiao-niu-liu.jpg
+coverAlt: 黑椒牛柳装盘后的插画
 title: 黑椒牛柳
 cuisine: chinese
 course: meat

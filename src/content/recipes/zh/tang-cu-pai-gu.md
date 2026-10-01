@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tang-cu-pai-gu.jpg
+coverAlt: 糖醋排骨装盘后的插画
 title: 糖醋排骨
 cuisine: chinese
 course: meat

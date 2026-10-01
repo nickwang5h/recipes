@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/rou-dan-gai-fan.jpg
+coverAlt: 肉蛋盖饭装盘后的插画
 title: 肉蛋盖饭
 cuisine: chinese
 course: staple

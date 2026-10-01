@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/shou-rou-tu-dou-pian.jpg
+coverAlt: 瘦肉土豆片装盘后的插画
 title: 瘦肉土豆片
 cuisine: chinese
 course: meat

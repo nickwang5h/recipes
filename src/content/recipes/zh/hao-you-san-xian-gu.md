@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hao-you-san-xian-gu.jpg
+coverAlt: 蚝油三鲜菇装盘后的插画
 title: 蚝油三鲜菇
 cuisine: chinese
 course: veg

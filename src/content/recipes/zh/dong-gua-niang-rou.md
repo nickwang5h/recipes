@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/dong-gua-niang-rou.jpg
+coverAlt: 冬瓜酿肉装盘后的插画
 title: 冬瓜酿肉
 cuisine: chinese
 course: meat

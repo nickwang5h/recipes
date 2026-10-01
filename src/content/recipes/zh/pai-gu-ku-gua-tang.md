@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pai-gu-ku-gua-tang.jpg
+coverAlt: 排骨苦瓜汤装盘后的插画
 title: 排骨苦瓜汤
 cuisine: chinese
 course: soup

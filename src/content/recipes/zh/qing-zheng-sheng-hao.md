@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/qing-zheng-sheng-hao.jpg
+coverAlt: 清蒸生蚝装盘后的插画
 title: 清蒸生蚝
 cuisine: chinese
 course: seafood

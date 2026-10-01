@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jian-jiao.jpg
+coverAlt: 煎饺装盘后的插画
 title: 煎饺
 cuisine: chinese
 course: breakfast

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/mousse-au-chocolat.jpg
+coverAlt: 巧克力慕斯装盘后的插画
 title: 巧克力慕斯
 original: Mousse au chocolat
 cuisine: french

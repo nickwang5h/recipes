@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/liang-ban-jin-zhen-gu.jpg
+coverAlt: 凉拌金针菇装盘后的插画
 title: 凉拌金针菇
 cuisine: chinese
 course: veg

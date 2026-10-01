@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tang-cu-li-ji.jpg
+coverAlt: 糖醋里脊装盘后的插画
 title: 糖醋里脊
 cuisine: chinese
 course: meat

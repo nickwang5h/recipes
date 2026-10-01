@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/sheng-cuan-wan-zi-tang.jpg
+coverAlt: 生汆丸子汤装盘后的插画
 title: 生汆丸子汤
 cuisine: chinese
 course: soup

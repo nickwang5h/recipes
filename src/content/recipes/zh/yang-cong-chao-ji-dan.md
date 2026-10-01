@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yang-cong-chao-ji-dan.jpg
+coverAlt: 洋葱炒鸡蛋装盘后的插画
 title: 洋葱炒鸡蛋
 cuisine: chinese
 course: veg

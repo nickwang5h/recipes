@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hong-shao-yu.jpg
+coverAlt: 红烧鱼装盘后的插画
 title: 红烧鱼
 cuisine: chinese
 course: seafood

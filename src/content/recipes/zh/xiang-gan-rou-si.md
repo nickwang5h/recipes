@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xiang-gan-rou-si.jpg
+coverAlt: 香干肉丝装盘后的插画
 title: 香干肉丝
 cuisine: chinese
 course: meat

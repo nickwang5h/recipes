@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/fu-ru-rou.jpg
+coverAlt: 腐乳肉装盘后的插画
 title: 腐乳肉
 cuisine: chinese
 course: meat

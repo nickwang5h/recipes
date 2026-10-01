@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jian-jiao-niu-wa.jpg
+coverAlt: 尖叫牛蛙装盘后的插画
 title: 尖叫牛蛙
 cuisine: chinese
 course: meat

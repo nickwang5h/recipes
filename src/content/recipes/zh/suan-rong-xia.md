@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/suan-rong-xia.jpg
+coverAlt: 蒜蓉虾装盘后的插画
 title: 蒜蓉虾
 cuisine: chinese
 course: seafood

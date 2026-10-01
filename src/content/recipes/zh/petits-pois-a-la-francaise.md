@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/petits-pois-a-la-francaise.jpg
+coverAlt: 法式豌豆装盘后的插画
 title: 法式豌豆
 original: Petits pois à la française
 cuisine: french

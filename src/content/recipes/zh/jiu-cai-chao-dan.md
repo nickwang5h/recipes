@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jiu-cai-chao-dan.jpg
+coverAlt: 韭菜炒蛋装盘后的插画
 title: 韭菜炒蛋
 cuisine: chinese
 course: veg

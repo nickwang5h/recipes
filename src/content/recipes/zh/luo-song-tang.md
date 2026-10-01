@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/luo-song-tang.jpg
+coverAlt: 罗宋汤装盘后的插画
 title: 罗宋汤
 cuisine: chinese
 course: soup

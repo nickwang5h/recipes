@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/chao-tang-se.jpg
+coverAlt: 简易版炒糖色装盘后的插画
 title: 简易版炒糖色
 cuisine: chinese
 course: sauce

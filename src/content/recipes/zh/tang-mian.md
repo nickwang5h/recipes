@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tang-mian.jpg
+coverAlt: 汤面装盘后的插画
 title: 汤面
 cuisine: chinese
 course: staple

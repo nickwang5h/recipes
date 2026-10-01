@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/qian-long-bai-cai.jpg
+coverAlt: 乾隆白菜装盘后的插画
 title: 乾隆白菜
 cuisine: chinese
 course: veg

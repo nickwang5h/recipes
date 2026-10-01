@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xi-hong-shi-dou-fu-tang-geng.jpg
+coverAlt: 西红柿豆腐汤羹装盘后的插画
 title: 西红柿豆腐汤羹
 cuisine: chinese
 course: soup

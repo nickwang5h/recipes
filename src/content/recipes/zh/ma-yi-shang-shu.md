@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ma-yi-shang-shu.jpg
+coverAlt: 蚂蚁上树装盘后的插画
 title: 蚂蚁上树
 cuisine: chinese
 course: meat

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yang-cong-chao-zhu-rou.jpg
+coverAlt: 洋葱炒猪肉装盘后的插画
 title: 洋葱炒猪肉
 cuisine: chinese
 course: meat

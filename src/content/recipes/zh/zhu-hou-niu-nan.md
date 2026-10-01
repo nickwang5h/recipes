@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zhu-hou-niu-nan.jpg
+coverAlt: 柱侯牛腩装盘后的插画
 title: 柱侯牛腩
 cuisine: chinese
 course: meat

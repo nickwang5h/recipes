@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/shang-tang-wa-wa-cai.jpg
+coverAlt: 上汤娃娃菜装盘后的插画
 title: 上汤娃娃菜
 cuisine: chinese
 course: veg

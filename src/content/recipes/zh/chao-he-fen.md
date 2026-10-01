@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/chao-he-fen.jpg
+coverAlt: 炒河粉装盘后的插画
 title: 炒河粉
 cuisine: chinese
 course: staple

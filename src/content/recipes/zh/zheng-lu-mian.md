@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zheng-lu-mian.jpg
+coverAlt: 蒸卤面装盘后的插画
 title: 蒸卤面
 cuisine: chinese
 course: staple

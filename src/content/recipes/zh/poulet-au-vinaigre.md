@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/poulet-au-vinaigre.jpg
+coverAlt: 里昂醋焖鸡装盘后的插画
 title: 里昂醋焖鸡
 original: Poulet au vinaigre
 cuisine: french

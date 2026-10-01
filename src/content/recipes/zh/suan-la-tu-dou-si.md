@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/suan-la-tu-dou-si.jpg
+coverAlt: 酸辣土豆丝装盘后的插画
 title: 酸辣土豆丝
 cuisine: chinese
 course: veg

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/nong-jia-yi-wan-xiang.jpg
+coverAlt: 农家一碗香装盘后的插画
 title: 农家一碗香
 cuisine: chinese
 course: meat

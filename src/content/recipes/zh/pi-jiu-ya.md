@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pi-jiu-ya.jpg
+coverAlt: 啤酒鸭装盘后的插画
 title: 啤酒鸭
 cuisine: chinese
 course: meat

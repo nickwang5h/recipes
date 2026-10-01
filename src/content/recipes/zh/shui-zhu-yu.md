@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/shui-zhu-yu.jpg
+coverAlt: 水煮鱼装盘后的插画
 title: 水煮鱼
 cuisine: chinese
 course: seafood

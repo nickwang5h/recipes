@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bian-yu-dun-dou-fu.jpg
+coverAlt: 鳊鱼炖豆腐装盘后的插画
 title: 鳊鱼炖豆腐
 cuisine: chinese
 course: seafood

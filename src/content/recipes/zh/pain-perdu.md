@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pain-perdu.jpg
+coverAlt: 法式吐司装盘后的插画
 title: 法式吐司
 original: Pain perdu
 cuisine: french

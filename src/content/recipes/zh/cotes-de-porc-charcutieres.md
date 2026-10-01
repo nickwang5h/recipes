@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cotes-de-porc-charcutieres.jpg
+coverAlt: 芥末酸黄瓜酱猪排装盘后的插画
 title: 芥末酸黄瓜酱猪排
 original: Côtes de porc charcutière
 cuisine: french

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xue-hua-su.jpg
+coverAlt: 雪花酥装盘后的插画
 title: 雪花酥
 cuisine: chinese
 course: dessert

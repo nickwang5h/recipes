@@ -147,6 +147,7 @@ const data = {
     }
 
     const STORE = 'recipes:v1:fridge';
+    const PLATE = '<svg viewBox="0 0 120 72" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="60" cy="38" rx="54" ry="28"/><ellipse cx="60" cy="38" rx="36" ry="17"/></svg>';
     const PAGE = 24;
     const data: Data = JSON.parse(document.getElementById('fridge-data')!.textContent!);
     const byId = new Map(data.ingredients.map((i) => [i.id, i]));
@@ -211,7 +212,7 @@ const data = {
         Object.assign(img, { className: 'card-img', src: r.img, alt: '', loading: 'lazy', width: 480, height: 320 });
         a.append(img);
       } else {
-        const ph = el('div', { className: 'card-img card-ph' }, el('span', { textContent: r.title.slice(0, 1) }));
+        const ph = el('div', { className: 'card-img card-ph', innerHTML: PLATE });
         ph.setAttribute('aria-hidden', 'true');
         a.append(ph);
       }

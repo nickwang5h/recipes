@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/dai-ba-zhou-zi.jpg
+coverAlt: 带把肘子装盘后的插画
 title: 带把肘子
 cuisine: chinese
 course: meat

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/huang-you-jian-xia.jpg
+coverAlt: 黄油煎虾装盘后的插画
 title: 黄油煎虾
 cuisine: chinese
 course: seafood

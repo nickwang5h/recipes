@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/liang-ban-ji-si.jpg
+coverAlt: 凉拌鸡丝装盘后的插画
 title: 凉拌鸡丝
 cuisine: chinese
 course: meat

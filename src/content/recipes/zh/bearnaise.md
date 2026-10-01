@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bearnaise.jpg
+coverAlt: 贝阿恩酱装盘后的插画
 title: 贝阿恩酱
 original: Sauce béarnaise
 cuisine: french

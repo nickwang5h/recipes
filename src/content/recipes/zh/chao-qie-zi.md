@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/chao-qie-zi.jpg
+coverAlt: 炒茄子装盘后的插画
 title: 炒茄子
 cuisine: chinese
 course: veg

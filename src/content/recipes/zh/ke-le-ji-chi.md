@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ke-le-ji-chi.jpg
+coverAlt: 可乐鸡翅装盘后的插画
 title: 可乐鸡翅
 cuisine: chinese
 course: meat

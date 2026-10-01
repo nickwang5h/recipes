@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hachis-parmentier.jpg
+coverAlt: 法式牧羊人派装盘后的插画
 title: 法式牧羊人派
 original: Hachis parmentier
 cuisine: french

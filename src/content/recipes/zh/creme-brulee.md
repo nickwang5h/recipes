@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/creme-brulee.jpg
+coverAlt: 焦糖布蕾装盘后的插画
 title: 焦糖布蕾
 original: Crème brûlée
 cuisine: french

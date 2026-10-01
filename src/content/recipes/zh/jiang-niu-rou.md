@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jiang-niu-rou.jpg
+coverAlt: 酱牛肉装盘后的插画
 title: 酱牛肉
 cuisine: chinese
 course: meat

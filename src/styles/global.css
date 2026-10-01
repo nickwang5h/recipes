@@ -135,10 +135,8 @@ a.chip:hover { border-color: var(--primary); color: var(--text); background: var
 .card.has-cover { padding: 0; border-left-width: 1px; }
 .card.has-cover .card-body { padding: 0.75rem 0.9rem 0.85rem; }
 .card.has-cover .card-summary { -webkit-line-clamp: 2; line-clamp: 2; }
-.card-img.card-ph {
-  display: grid; place-items: center; background: color-mix(in srgb, var(--accent, var(--primary)) 12%, var(--surface));
-  font-family: var(--font-reading); font-size: 3.5rem; line-height: 1; color: color-mix(in srgb, var(--accent, var(--primary)) 55%, transparent);
-}
+.card-img.card-ph { display: grid; place-items: center; background: var(--surface-strong); color: var(--border); }
+.card-ph svg { width: 42%; height: auto; }
 .card-img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; background: var(--surface-strong); border-bottom: 1px solid var(--border); }
 /* Phones: picture cards two to a row, the way recipe apps do it. */
 @media (max-width: 559px) {

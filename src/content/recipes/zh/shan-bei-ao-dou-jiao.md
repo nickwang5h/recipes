@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/shan-bei-ao-dou-jiao.jpg
+coverAlt: 陕北熬豆角装盘后的插画
 title: 陕北熬豆角
 cuisine: chinese
 course: veg

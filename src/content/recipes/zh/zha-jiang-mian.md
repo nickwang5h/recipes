@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zha-jiang-mian.jpg
+coverAlt: 炸酱面装盘后的插画
 title: 炸酱面
 cuisine: chinese
 course: staple

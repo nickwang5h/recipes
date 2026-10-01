@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zhu-pi-dong.jpg
+coverAlt: 猪皮冻装盘后的插画
 title: 猪皮冻
 cuisine: chinese
 course: meat

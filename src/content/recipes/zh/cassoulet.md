@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cassoulet.jpg
+coverAlt: 卡酥来砂锅装盘后的插画
 title: 卡酥来砂锅
 original: Cassoulet
 cuisine: french

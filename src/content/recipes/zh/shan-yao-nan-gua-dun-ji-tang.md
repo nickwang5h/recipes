@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/shan-yao-nan-gua-dun-ji-tang.jpg
+coverAlt: 山药南瓜炖鸡汤装盘后的插画
 title: 山药南瓜炖鸡汤
 cuisine: chinese
 course: soup

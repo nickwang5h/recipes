@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/carottes-vichy.jpg
+coverAlt: 维希胡萝卜装盘后的插画
 title: 维希胡萝卜
 original: Carottes Vichy
 cuisine: french

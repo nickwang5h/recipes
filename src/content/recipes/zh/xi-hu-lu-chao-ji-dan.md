@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xi-hu-lu-chao-ji-dan.jpg
+coverAlt: 西葫芦炒鸡蛋装盘后的插画
 title: 西葫芦炒鸡蛋
 cuisine: chinese
 course: veg

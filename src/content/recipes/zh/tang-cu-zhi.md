@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tang-cu-zhi.jpg
+coverAlt: 糖醋汁装盘后的插画
 title: 糖醋汁
 cuisine: chinese
 course: sauce

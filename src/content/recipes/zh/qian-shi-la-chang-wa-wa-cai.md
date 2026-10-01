@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/qian-shi-la-chang-wa-wa-cai.jpg
+coverAlt: 黔式腊肠娃娃菜装盘后的插画
 title: 黔式腊肠娃娃菜
 cuisine: chinese
 course: meat

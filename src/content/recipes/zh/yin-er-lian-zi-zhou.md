@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yin-er-lian-zi-zhou.jpg
+coverAlt: 银耳莲子粥装盘后的插画
 title: 银耳莲子粥
 cuisine: chinese
 course: soup

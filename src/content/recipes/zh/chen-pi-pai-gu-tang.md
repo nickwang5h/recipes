@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/chen-pi-pai-gu-tang.jpg
+coverAlt: 陈皮排骨汤装盘后的插画
 title: 陈皮排骨汤
 cuisine: chinese
 course: soup

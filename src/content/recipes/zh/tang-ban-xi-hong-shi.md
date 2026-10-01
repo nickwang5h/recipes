@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tang-ban-xi-hong-shi.jpg
+coverAlt: 糖拌西红柿装盘后的插画
 title: 糖拌西红柿
 cuisine: chinese
 course: veg

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jie-mo-huang-you-luo-shi-xia.jpg
+coverAlt: 芥末黄油罗氏虾装盘后的插画
 title: 芥末黄油罗氏虾
 cuisine: chinese
 course: seafood

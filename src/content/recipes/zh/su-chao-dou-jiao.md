@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/su-chao-dou-jiao.jpg
+coverAlt: 素炒豆角装盘后的插画
 title: 素炒豆角
 cuisine: chinese
 course: veg

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jiao-bai-chao-rou.jpg
+coverAlt: 茭白炒肉装盘后的插画
 title: 茭白炒肉
 cuisine: chinese
 course: meat

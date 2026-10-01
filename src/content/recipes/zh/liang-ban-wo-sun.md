@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/liang-ban-wo-sun.jpg
+coverAlt: 凉拌莴笋装盘后的插画
 title: 凉拌莴笋
 cuisine: chinese
 course: veg

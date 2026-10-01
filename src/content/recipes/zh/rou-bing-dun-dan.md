@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/rou-bing-dun-dan.jpg
+coverAlt: 肉饼炖蛋装盘后的插画
 title: 肉饼炖蛋
 cuisine: chinese
 course: meat
