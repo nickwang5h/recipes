@@ -25,18 +25,19 @@ const { Content } = await render(region);
 
 <Base title={title} description={summary} image={region.data.cover} type="article">
   <article class="accent-red">
-    <header class="page-head">
-      <div class="eyebrow">
-        <a href={url('cuisines')}>菜系</a>
-        <a class="cuisine-tag accent-red" href={url('cuisines/chinese')}>{chinese.data.title}</a>
-        <span>地方菜</span>
-      </div>
-      <h1>{title}</h1>
-      {original && <p class="original">{original}</p>}
-      <p class="lede">{summary}</p>
-    </header>
-
-    <Cover image={region.data.cover} alt={region.data.coverAlt} />
+    <div class="hero">
+      <header class="page-head">
+        <div class="eyebrow">
+          <a href={url('cuisines')}>菜系</a>
+          <a class="cuisine-tag accent-red" href={url('cuisines/chinese')}>{chinese.data.title}</a>
+          <span>地方菜</span>
+        </div>
+        <h1>{title}</h1>
+        {original && <p class="original">{original}</p>}
+        <p class="lede">{summary}</p>
+      </header>
+      <Cover image={region.data.cover} alt={region.data.coverAlt} />
+    </div>
 
     <div class="prose">
       <Content />

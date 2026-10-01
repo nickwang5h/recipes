@@ -22,14 +22,15 @@ const regions = cuisine.id === 'chinese' ? (await getCollection('regions')).sort
 
 <Base title={title} description={summary} image={cuisine.data.cover}>
   <article class={`accent-${accent}`}>
-    <header class="page-head">
-      <div class="eyebrow"><span class={`cuisine-tag accent-${accent}`}>菜系</span></div>
-      <h1>{title}</h1>
-      {original && <p class="original">{original}</p>}
-      <p class="lede">{summary}</p>
-    </header>
-
-    <Cover image={cuisine.data.cover} alt={cuisine.data.coverAlt} />
+    <div class="hero">
+      <header class="page-head">
+        <div class="eyebrow"><span class={`cuisine-tag accent-${accent}`}>菜系</span></div>
+        <h1>{title}</h1>
+        {original && <p class="original">{original}</p>}
+        <p class="lede">{summary}</p>
+      </header>
+      <Cover image={cuisine.data.cover} alt={cuisine.data.coverAlt} />
+    </div>
 
     <div class="prose">
       <Content />

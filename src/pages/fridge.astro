@@ -1,9 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
+import { getImage } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import { COURSES, INGREDIENT_KINDS, type Course, type IngredientKind } from '../lib/categories';
 import { ALWAYS_HAVE, DEFAULT_STAPLES } from '../lib/fridge';
-import { formatTime, getCuisines, url } from '../lib/site';
+import { formatTotal, getCuisines, url } from '../lib/site';
 
 const cuisines = await getCuisines();
 const order = new Map(cuisines.map((c, i) => [c.id, i]));
@@ -14,7 +15,7 @@ const catalog = await getCollection('ingredients');
 
 // How many recipes use each ingredient; the pickers list common ones first.
 const uses = new Map<string, number>();
-const rec = recipes.map((r) => {
+const rec = await Promise.all(recipes.map(async (r) => {
   const all = new Set(r.data.ingredients.flatMap((g) => g.items.map((i) => i.ref.id)));
   for (const id of all) uses.set(id, (uses.get(id) ?? 0) + 1);
   const req = [...new Set(r.data.ingredients.flatMap((g) => g.items.filter((i) => !i.optional).map((i) => i.ref.id)))];
@@ -25,10 +26,11 @@ const rec = recipes.map((r) => {
     summary: r.data.summary,
     cuisine: r.data.cuisine.id,
     course: r.data.course,
-    time: formatTime(r.data.time),
+    time: formatTotal(r.data.time),
+    img: r.data.cover ? (await getImage({ src: r.data.cover, width: 480, format: 'webp' })).src : undefined,
     req,
   };
-});
+}));
 
 const hidden = new Set([...ALWAYS_HAVE, ...DEFAULT_STAPLES]);
 const used = catalog.filter((i) => uses.has(i.id) || catalog.some((o) => uses.has(o.id) && o.data.substitutes.some((s) => s.id === i.id)));
@@ -136,7 +138,7 @@ const data = {
     import { addMissing, grouped, toText, type ListItem } from '../lib/shopping';
 
     interface Ingredient { id: string; zh: string; en: string; where: WhereToBuy; names: string[]; subs: string[] }
-    interface Recipe { id: string; href: string; title: string; summary: string; cuisine: string; course: string; time: string; req: string[] }
+    interface Recipe { id: string; href: string; title: string; summary: string; cuisine: string; course: string; time: string; img?: string; req: string[] }
     interface Data {
       ingredients: Ingredient[];
       recipes: Recipe[];
@@ -195,14 +197,25 @@ const data = {
     const card = (m: Match<Recipe>) => {
       const r = m.recipe;
       const c = data.cuisines[r.cuisine];
-      const a = el('a', { className: `card accent-${c.accent}`, href: r.href }, el('h3', { textContent: r.title }));
-      if (m.missing.length) a.append(el('p', { className: 'fridge-missing', textContent: `还缺：${m.missing.map(nameOf).join('、')}` }));
+      const body = el('div', { className: 'card-body' }, el('h3', { textContent: r.title }));
+      if (m.missing.length) body.append(el('p', { className: 'fridge-missing', textContent: `还缺：${m.missing.map(nameOf).join('、')}` }));
       if (m.swaps.length)
-        a.append(el('p', { className: 'fridge-swap', textContent: m.swaps.map(([need, sub]) => `用${nameOf(sub)}代替${nameOf(need)}`).join('；') }));
-      a.append(
-        el('p', { textContent: r.summary }),
+        body.append(el('p', { className: 'fridge-swap', textContent: m.swaps.map(([need, sub]) => `用${nameOf(sub)}代替${nameOf(need)}`).join('；') }));
+      body.append(
+        el('p', { className: 'card-summary', textContent: r.summary }),
         el('div', { className: 'meta' }, el('span', { className: `cuisine-tag accent-${c.accent}`, textContent: c.title }), el('span', { textContent: r.time })),
       );
+      const a = el('a', { className: `card has-cover accent-${c.accent}`, href: r.href });
+      if (r.img) {
+        const img = document.createElement('img');
+        Object.assign(img, { className: 'card-img', src: r.img, alt: '', loading: 'lazy', width: 480, height: 320 });
+        a.append(img);
+      } else {
+        const ph = el('div', { className: 'card-img card-ph' }, el('span', { textContent: r.title.slice(0, 1) }));
+        ph.setAttribute('aria-hidden', 'true');
+        a.append(ph);
+      }
+      a.append(body);
       const li = el('li', { className: 'fridge-card' }, a);
       if (m.missing.length) {
         const listed = () => m.missing.every((id) => list.some((item) => item.id === id && item.for.includes(r.title)));

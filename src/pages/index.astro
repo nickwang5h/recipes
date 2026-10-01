@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import CuisineCard from '../components/CuisineCard.astro';
+import RecipeCard from '../components/RecipeCard.astro';
 import { PRINCIPLE_CATEGORIES, type PrincipleCategory } from '../lib/categories';
 import { SITE_TITLE, formatDate, getCuisines, url } from '../lib/site';
 
@@ -15,6 +17,22 @@ const recent = [
   .sort((a, b) => b.updated.getTime() - a.updated.getTime())
   .slice(0, 6);
 
+const count = (id: string) => recipes.filter((r) => r.data.cuisine.id === id).length;
+const cuisineMap = new Map(cuisines.map((c) => [c.id, c]));
+
+// A handful of illustrated dishes, one cuisine at a time so no single cuisine crowds the
+// row; the starting point moves with the build date so the home page doesn't go stale.
+const recipeById = new Map(recipes.map((r) => [r.id, r]));
+const lists = cuisines.map((c) => c.data.featured.map((ref) => recipeById.get(ref.id)!).filter((r) => r?.data.cover));
+const picks: typeof recipes = [];
+const day = Math.floor(Date.now() / 86_400_000);
+for (let round = 0; picks.length < 8 && lists.some((l) => l.length > round); round++) {
+  for (const list of lists) {
+    const r = list[(round + day) % Math.max(list.length, 1)];
+    if (r && !picks.includes(r) && picks.length < 8) picks.push(r);
+  }
+}
+
 const byCategory = (Object.keys(PRINCIPLE_CATEGORIES) as PrincipleCategory[])
   .map((category) => ({ category, items: principles.filter((p) => p.data.category === category) }))
   .filter((g) => g.items.length > 0);
@@ -26,31 +44,49 @@ const byCategory = (Object.keys(PRINCIPLE_CATEGORIES) as PrincipleCategory[])
     <p class="lede">
       中餐、法餐、意大利菜，还有泰国、越南、日本、韩国的家常菜，背后常常是同几条物理和化学规律：油和水怎样被留在一起，淀粉什么时候变稠，表面为什么会变褐变香。这里把原理和菜谱分开写，再用链接串起来，做菜时查步骤，闲下来看为什么。
     </p>
+    <form class="home-search search-box" action={url('search')} method="get" role="search">
+      <label class="visually-hidden" for="home-q">搜索</label>
+      <input id="home-q" type="search" name="q" placeholder="搜菜名、食材或原理" autocomplete="off" />
+    </form>
   </header>
 
   <section aria-labelledby="cuisines-title">
-    <h2 id="cuisines-title" class="section-title">菜系</h2>
+    <div class="section-head">
+      <h2 id="cuisines-title" class="section-title">菜系</h2>
+      <a href={url('recipes')}>全部 {recipes.length} 道菜 →</a>
+    </div>
     <div class="cuisine-hero-grid">
-      {cuisines.map((c) => (
-        <a class={`cuisine-hero accent-${c.data.accent}`} href={url(`cuisines/${c.id}`)}>
-          <h3>{c.data.title}</h3>
-          {c.data.original && <span class="original">{c.data.original}</span>}
-          <p>{c.data.summary}</p>
-        </a>
-      ))}
+      {cuisines.map((c) => <CuisineCard cuisine={c} count={count(c.id)} />)}
     </div>
   </section>
 
-  <section aria-labelledby="principles-title">
-    <h2 id="principles-title" class="section-title">原理</h2>
-    {byCategory.map(({ category, items }) => (
-      <div style="margin-bottom: 1rem">
-        <h3 style="font-size: 1rem; font-family: var(--font-sans); color: var(--muted); margin: 0 0 0.5rem">{PRINCIPLE_CATEGORIES[category]}</h3>
-        <ul class="chips">
-          {items.map((p) => <li><a class="chip" href={url(`principles/${p.id}`)}>{p.data.title}</a></li>)}
-        </ul>
+  {picks.length > 0 && (
+    <section aria-labelledby="picks-title">
+      <div class="section-head">
+        <h2 id="picks-title" class="section-title">挑几道菜</h2>
+        <a href={url('fridge')}>按冰箱里的食材找 →</a>
       </div>
-    ))}
+      <ul class="card-grid">
+        {picks.map((r) => <li><RecipeCard recipe={r} cuisine={cuisineMap.get(r.data.cuisine.id)!} /></li>)}
+      </ul>
+    </section>
+  )}
+
+  <section aria-labelledby="principles-title">
+    <div class="section-head">
+      <h2 id="principles-title" class="section-title">原理</h2>
+      <a href={url('principles')}>全部原理 →</a>
+    </div>
+    <div class="principle-groups">
+      {byCategory.map(({ category, items }) => (
+        <div>
+          <h3>{PRINCIPLE_CATEGORIES[category]}</h3>
+          <ul class="chips">
+            {items.map((p) => <li><a class="chip" href={url(`principles/${p.id}`)}>{p.data.title}</a></li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
   </section>
 
   <section aria-labelledby="recent-title">

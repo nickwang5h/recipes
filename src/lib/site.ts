@@ -45,3 +45,8 @@ export function formatTime({ prep, cook }: { prep: number; cook: number }): stri
   if (cook) parts.push(`烹饪 ${formatMinutes(cook)}`);
   return parts.join(' · ');
 }
+
+/** Short form for cards: the whole time from start to table. */
+export function formatTotal({ prep, cook }: { prep: number; cook: number }): string {
+  return `共 ${formatMinutes(prep + cook)}`;
+}

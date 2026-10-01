@@ -45,7 +45,7 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 
 /* ---------- Shell ---------- */
 
-.wrap { width: 100%; max-width: 72rem; margin: 0 auto; padding: 0 var(--gutter); }
+.wrap { width: 100%; max-width: 80rem; margin: 0 auto; padding: 0 var(--gutter); }
 
 .site-header { border-bottom: 1px solid var(--border); }
 .site-header .wrap {
@@ -63,8 +63,9 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 .site-nav a { white-space: nowrap; }
 @media (max-width: 640px) {
   .site-header .wrap { gap: 0.25rem; padding-top: 0.6rem; padding-bottom: 0.4rem; }
-  .site-nav { width: 100%; flex-wrap: wrap; gap: 0.1rem; margin-left: -0.55rem; }
+  .site-nav { width: calc(100% + 0.55rem); gap: 0.1rem; margin-left: -0.55rem; }
   .site-nav a { padding: 0.35rem 0.55rem; }
+  .site-nav .theme-toggle { width: 2.25rem; height: 2.25rem; }
   .site-nav .theme-toggle { margin-left: auto; }
 }
 
@@ -97,6 +98,7 @@ main { padding: 2.5rem 0 4rem; }
 .eyebrow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.9rem; color: var(--muted); font-size: 0.95rem; margin-bottom: 0.75rem; }
 .original { font-style: italic; color: var(--muted); font-family: var(--font-sans); }
 .page-head { margin-bottom: 2rem; }
+.page-head + section > .section-head:first-child .section-title, .page-head + section > .section-title:first-child { margin-top: 2.5rem; }
 .section-title { font-size: 1.35rem; margin: 3rem 0 1rem; }
 
 /* ---------- Tags, chips, cards ---------- */
@@ -116,27 +118,50 @@ a.cuisine-tag:hover { color: var(--primary); }
 }
 a.chip:hover { border-color: var(--primary); color: var(--text); background: var(--surface); }
 
-.card-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); list-style: none; padding: 0; margin: 0; }
+.card-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); list-style: none; padding: 0; margin: 0; }
 .card {
-  position: relative; display: block; height: 100%;
-  padding: 1rem 1.1rem 1.1rem 1.25rem; border: 1px solid var(--border); border-left: 4px solid var(--accent, var(--border));
+  position: relative; display: flex; flex-direction: column; height: 100%; overflow: hidden;
+  padding: 0.9rem 1rem 1rem 1.1rem; border: 1px solid var(--border); border-left: 3px solid var(--accent, var(--border));
   border-radius: var(--radius); background: var(--surface); color: var(--text); text-decoration: none;
-  transition: border-color 120ms ease, transform 120ms ease;
+  transition: border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
 }
-.card:hover { border-color: var(--accent, var(--primary)); color: var(--text); }
-.card h3 { margin: 0 0 0.25rem; font-size: 1.25rem; }
-.card p { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
-.card .meta { display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; }
+.card:hover { border-color: var(--accent, var(--primary)); color: var(--text); transform: translateY(-2px); box-shadow: 0 6px 18px -10px rgb(0 0 0 / 0.35); }
+.card h3 { margin: 0 0 0.15rem; font-size: 1.15rem; }
+.card .original { font-size: 0.85rem; line-height: 1.4; }
+.card p { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+.card-summary { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+.card .meta { display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; font-size: 0.8rem; color: var(--muted); margin-top: auto; padding-top: 0.6rem; }
+.card-body { display: flex; flex-direction: column; flex: 1; }
+.card.has-cover { padding: 0; border-left-width: 1px; }
+.card.has-cover .card-body { padding: 0.75rem 0.9rem 0.85rem; }
+.card.has-cover .card-summary { -webkit-line-clamp: 2; line-clamp: 2; }
+.card-img.card-ph {
+  display: grid; place-items: center; background: color-mix(in srgb, var(--accent, var(--primary)) 12%, var(--surface));
+  font-family: var(--font-reading); font-size: 3.5rem; line-height: 1; color: color-mix(in srgb, var(--accent, var(--primary)) 55%, transparent);
+}
+.card-img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; background: var(--surface-strong); border-bottom: 1px solid var(--border); }
+/* Phones: picture cards two to a row, the way recipe apps do it. */
+@media (max-width: 559px) {
+  .card-grid:has(.has-cover) { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; }
+  .card-grid:has(.has-cover) .card-body { padding: 0.55rem 0.65rem 0.65rem; }
+  .card-grid:has(.has-cover) .card h3 { font-size: 1rem; }
+  .card-grid:has(.has-cover) :is(.card-summary, .original) { display: none; }
+  .card-grid:has(.has-cover) .card .meta { padding-top: 0.35rem; font-size: 0.75rem; }
+  .card-grid:has(.has-cover) .card p:is(.fridge-missing, .fridge-swap) { font-size: 0.8rem; }
+}
 
-.cuisine-hero-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+.cuisine-hero-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
 .cuisine-hero {
-  display: block; padding: 1.25rem; border-radius: var(--radius); border: 1px solid var(--border);
-  border-top: 4px solid var(--accent); background: var(--surface); color: var(--text); text-decoration: none;
+  display: flex; flex-direction: column; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--border);
+  background: var(--surface); color: var(--text); text-decoration: none;
+  transition: border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
 }
-.cuisine-hero:hover { border-color: var(--accent); color: var(--text); }
-.cuisine-hero h3 { margin: 0; font-size: 1.6rem; }
-.cuisine-hero .original { display: block; margin-top: 0.1rem; }
-.cuisine-hero p { margin: 0.75rem 0 0; color: var(--muted); font-size: 0.975rem; line-height: 1.65; }
+.cuisine-hero:hover { border-color: var(--accent); color: var(--text); transform: translateY(-2px); box-shadow: 0 6px 18px -10px rgb(0 0 0 / 0.35); }
+.cuisine-hero .card-img { border-bottom: 3px solid var(--accent); }
+.cuisine-hero-body { padding: 0.9rem 1.1rem 1.1rem; }
+.cuisine-hero h3 { margin: 0; font-size: 1.45rem; }
+.cuisine-hero .original { display: block; margin-top: 0.1rem; font-size: 0.9rem; }
+.cuisine-hero p { margin: 0.6rem 0 0; color: var(--muted); font-size: 0.925rem; line-height: 1.65; }
 
 .link-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--border); }
 .link-list li { border-bottom: 1px solid var(--border); }
@@ -215,6 +240,7 @@ a.chip:hover { border-color: var(--primary); color: var(--text); background: var
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; }
+  .card:hover, .cuisine-hero:hover { transform: none; }
 }
 
 @media print {
@@ -233,7 +259,7 @@ a.chip:hover { border-color: var(--primary); color: var(--text); background: var
 
 .fridge-layout { display: grid; gap: 2rem; }
 @media (min-width: 900px) {
-  .fridge-layout { grid-template-columns: minmax(18rem, 22rem) minmax(0, 1fr); gap: 3rem; align-items: start; }
+  .fridge-layout { grid-template-columns: minmax(16rem, 20rem) minmax(0, 1fr); gap: 2.5rem; align-items: start; }
   .fridge-picker { position: sticky; top: 1rem; max-height: calc(100vh - 2rem); overflow-y: auto; }
 }
 .fridge-search input {
@@ -260,6 +286,12 @@ button.chip[aria-pressed="true"] { background: var(--text); border-color: var(--
 .card p.fridge-swap { color: var(--accent-yellow); font-size: 0.9rem; }
 .fridge-more { margin-top: 1rem; }
 .cuisine-hero p.cuisine-count { margin-top: 0.5rem; font-size: 0.85rem; }
+
+.principle-groups { display: grid; gap: 1.25rem 2rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); }
+.principle-groups h3 { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 0.5rem; }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.section-head .section-title { margin-bottom: 1rem; }
+.section-head a { font-size: 0.95rem; }
 
 /* ---------- Figures ---------- */
 
@@ -320,6 +352,7 @@ button.chip[aria-pressed="true"] { background: var(--text); border-color: var(--
   main { padding: 0; }
   .wrap { max-width: none; padding: 0; }
   .page-head { margin-bottom: 1rem; }
+  .hero { display: block !important; margin-bottom: 0; }
   h1 { font-size: 20pt; }
   .lede { font-size: 11pt; }
   a { color: inherit; text-decoration: none; }
@@ -339,4 +372,50 @@ button.chip[aria-pressed="true"] { background: var(--text); border-color: var(--
   .ing-text { font-size: 10.5pt; }
   .ing-note { font-size: 9pt; }
   .ing-tag, .ing-tag.where-asian, .ing-tag.where-specialty { color: #000; border-color: #999; font-size: 8pt; }
+}
+
+.home-search { margin-top: 1.5rem; }
+
+/* ---------- Phones: less vertical chrome before the content ---------- */
+
+@media (max-width: 559px) {
+  main { padding-top: 1.5rem; }
+  .lede { font-size: 1.075rem; line-height: 1.75; }
+  .page-head { margin-bottom: 1.25rem; }
+  /* One swipeable row of filter chips instead of three wrapped rows. */
+  .filters {
+    flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+    margin-left: calc(-1 * var(--gutter)); margin-right: calc(-1 * var(--gutter)); padding: 0.1rem var(--gutter);
+  }
+  .filters::-webkit-scrollbar { display: none; }
+  .filters > * { flex: none; }
+  .section-title { margin-top: 2.25rem; }
+}
+
+/* Illustrations sit on near-white paper; dim them a little so they don't glare in dark mode. */
+:root[data-theme="dark"] :is(img.card-img, .cover img) { filter: brightness(0.86); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) :is(img.card-img, .cover img) { filter: brightness(0.86); }
+}
+
+@media (max-width: 559px) {
+  .cuisine-hero-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; }
+  .cuisine-hero-body { padding: 0.6rem 0.7rem 0.7rem; }
+  .cuisine-hero h3 { font-size: 1.15rem; }
+  .cuisine-hero :is(.original, p:not(.cuisine-count)) { display: none; }
+  .cuisine-hero p.cuisine-count { margin-top: 0.2rem; }
+}
+
+/* Title on the left, illustration on the right, so the recipe itself starts above the fold. */
+.hero { margin-bottom: 2rem; }
+.hero .page-head { margin-bottom: 1.25rem; }
+.hero .cover { margin: 0; }
+@media (min-width: 900px) {
+  .hero:has(.cover) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(18rem, 28rem); gap: 3rem; align-items: center; }
+  .hero:has(.cover) .page-head { margin-bottom: 0; }
+}
+.cover img { border: 1px solid var(--border); }
+@media (max-width: 559px) {
+  /* The dish sits in the middle of every illustration, so a shorter crop loses nothing. */
+  .hero .cover img { aspect-ratio: 2 / 1; object-fit: cover; }
 }

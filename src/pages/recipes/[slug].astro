@@ -57,24 +57,25 @@ const ld = recipeLd({
 <Base title={title} description={summary} image={recipe.data.cover} type="article">
   <script type="application/ld+json" slot="head" is:inline set:html={JSON.stringify(ld)} />
   <article>
-    <header class="page-head">
-      <div class="eyebrow">
-        <CuisineTag cuisine={cuisine} />
-        <span>{formatTime(time)}</span>
-      </div>
-      <h1>{title}</h1>
-      {original && <p class="original">{original}</p>}
-      <p class="lede">{summary}</p>
-      {principles.length > 0 && (
-        <nav aria-label="用到的原理" style="margin-top: 1.25rem">
-          <ul class="chips">
-            {principles.map((p) => <li><a class="chip" href={url(`principles/${p.id}`)}>{p.data.title}</a></li>)}
-          </ul>
-        </nav>
-      )}
-    </header>
-
-    <Cover image={recipe.data.cover} alt={recipe.data.coverAlt} />
+    <div class="hero">
+      <header class="page-head">
+        <div class="eyebrow">
+          <CuisineTag cuisine={cuisine} />
+          <span>{formatTime(time)}</span>
+        </div>
+        <h1>{title}</h1>
+        {original && <p class="original">{original}</p>}
+        <p class="lede">{summary}</p>
+        {principles.length > 0 && (
+          <nav aria-label="用到的原理" style="margin-top: 1.25rem">
+            <ul class="chips">
+              {principles.map((p) => <li><a class="chip" href={url(`principles/${p.id}`)}>{p.data.title}</a></li>)}
+            </ul>
+          </nav>
+        )}
+      </header>
+      <Cover image={recipe.data.cover} alt={recipe.data.coverAlt} />
+    </div>
 
     <div class="recipe-layout">
       <RecipeKit recipe={recipe} />

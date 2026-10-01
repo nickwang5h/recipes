@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { formatTime, url } from '../lib/site';
+import { Image } from 'astro:assets';
+import { formatTotal, url } from '../lib/site';
 
 interface Props {
   recipe: CollectionEntry<'recipes'>;
@@ -8,15 +9,22 @@ interface Props {
 }
 
 const { recipe, cuisine } = Astro.props;
-const { title, original, summary, time } = recipe.data;
+const { title, original, summary, time, cover } = recipe.data;
 ---
 
-<a class={`card accent-${cuisine.data.accent}`} href={url(`recipes/${recipe.id}`)}>
-  <h3>{title}</h3>
-  {original && <span class="original">{original}</span>}
-  <p>{summary}</p>
-  <div class="meta">
-    <span class={`cuisine-tag accent-${cuisine.data.accent}`}>{cuisine.data.title}</span>
-    <span>{formatTime(time)}</span>
+<a class={`card has-cover accent-${cuisine.data.accent}`} href={url(`recipes/${recipe.id}`)}>
+  {cover ? (
+    <Image class="card-img" src={cover} alt="" widths={[320, 480, 640]} sizes="(min-width: 48rem) 300px, 50vw" loading="lazy" />
+  ) : (
+    <div class="card-img card-ph" aria-hidden="true"><span>{title.slice(0, 1)}</span></div>
+  )}
+  <div class="card-body">
+    <h3>{title}</h3>
+    {original && <span class="original">{original}</span>}
+    <p class="card-summary">{summary}</p>
+    <div class="meta">
+      <span class={`cuisine-tag accent-${cuisine.data.accent}`}>{cuisine.data.title}</span>
+      <span>{formatTotal(time)}</span>
+    </div>
   </div>
 </a>
