@@ -3,12 +3,14 @@ import { getImage } from 'astro:assets';
 import { getCollection, getEntries, getEntry, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Cover from '../../components/Cover.astro';
+import RecipeCard from '../../components/RecipeCard.astro';
 import CuisineTag from '../../components/CuisineTag.astro';
 import RecipeKit from '../../components/RecipeKit.astro';
 import SourceList from '../../components/SourceList.astro';
 import { COURSES } from '../../lib/categories';
 import { recipeLd } from '../../lib/jsonld';
-import { SITE_TITLE, formatDate, formatTime, url } from '../../lib/site';
+import { related } from '../../lib/related';
+import { SITE_TITLE, formatDate, formatTime, getCuisineMap, url } from '../../lib/site';
 
 export async function getStaticPaths() {
   const recipes = await getCollection('recipes');
@@ -20,6 +22,18 @@ const { title, original, summary, time, sources, updated } = recipe.data;
 const cuisine = await getEntry(recipe.data.cuisine);
 const principles = await Promise.all(recipe.data.principles.map((ref) => getEntry(ref)));
 const { Content } = await render(recipe);
+
+const all = await getCollection('recipes');
+const shape = (r: (typeof all)[number]) => ({
+  id: r.id,
+  cuisine: r.data.cuisine.id,
+  course: r.data.course,
+  principles: r.data.principles.map((p) => p.id),
+  ingredients: r.data.ingredients.flatMap((g) => g.items.filter((i) => !i.optional).map((i) => i.ref.id)),
+  entry: r,
+});
+const cuisineMap = await getCuisineMap();
+const relatedRecipes = related(shape(recipe), all.map(shape)).map((r) => r.entry);
 
 const items = recipe.data.ingredients.flatMap((g) => g.items);
 const catalog = await getEntries(items.map((i) => i.ref));
@@ -70,5 +84,14 @@ const ld = recipeLd({
         <p class="meta" style="color: var(--muted); font-size: 0.9rem">更新于 {formatDate(updated)}</p>
       </div>
     </div>
+
+    {relatedRecipes.length > 0 && (
+      <section class="related-recipes">
+        <h2 class="section-title">相关的菜</h2>
+        <ul class="card-grid">
+          {relatedRecipes.map((r) => <li><RecipeCard recipe={r} cuisine={cuisineMap.get(r.data.cuisine.id)!} /></li>)}
+        </ul>
+      </section>
+    )}
   </article>
 </Base>

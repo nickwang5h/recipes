@@ -46,6 +46,8 @@ const data = {
     .map((i) => ({
       id: i.id,
       zh: i.data.zh,
+      en: i.data.en,
+      where: i.data.where,
       names: [i.data.zh, ...i.data.aliases, i.data.en],
       subs: i.data.substitutes.map((s) => s.id),
     })),
@@ -100,6 +102,17 @@ const data = {
         {usedCourses.map((c) => <button class="chip" type="button" data-course={c} aria-pressed="false">{COURSES[c]}</button>)}
       </nav>
 
+      <details class="shopping-list" data-list-wrap open hidden>
+        <summary><h2 class="section-title">购物清单 <span class="fridge-count" data-list-count></span></h2></summary>
+        <div data-list></div>
+        <div class="kit-actions shopping-actions">
+          <button class="text-btn" type="button" data-list-copy>复制清单</button>
+          <button class="text-btn" type="button" data-list-stock>买到的放进冰箱</button>
+          <button class="text-btn" type="button" data-list-clear>清空</button>
+          <span class="offline-status" data-list-status aria-live="polite"></span>
+        </div>
+      </details>
+
       <p class="fridge-empty" data-hint>先在左边选几样食材。</p>
 
       <div data-ready-wrap hidden>
@@ -118,9 +131,11 @@ const data = {
   <script type="application/json" id="fridge-data" set:html={JSON.stringify(data)} />
 
   <script>
+    import type { WhereToBuy } from '../lib/categories';
     import { matchRecipes, searchIngredients, type Match } from '../lib/fridge';
+    import { addMissing, grouped, toText, type ListItem } from '../lib/shopping';
 
-    interface Ingredient { id: string; zh: string; names: string[]; subs: string[] }
+    interface Ingredient { id: string; zh: string; en: string; where: WhereToBuy; names: string[]; subs: string[] }
     interface Recipe { id: string; href: string; title: string; summary: string; cuisine: string; course: string; time: string; req: string[] }
     interface Data {
       ingredients: Ingredient[];
@@ -141,17 +156,20 @@ const data = {
     // State: chosen ingredients, plus the staples the cook says they lack.
     let chosen = new Set<string>();
     let staplesOff = new Set<string>();
+    let list: ListItem[] = [];
     let course = '';
     let shown = PAGE;
     try {
       const saved = JSON.parse(localStorage.getItem(STORE) ?? '{}');
       chosen = new Set((saved.chosen ?? []).filter((id: string) => byId.has(id) && !isStaple(id)));
       staplesOff = new Set((saved.staplesOff ?? []).filter(isStaple));
+      list = (saved.list ?? []).filter((item: ListItem) => byId.has(item.id));
     } catch {}
 
     const save = () => {
-      try { localStorage.setItem(STORE, JSON.stringify({ chosen: [...chosen], staplesOff: [...staplesOff] })); } catch {}
+      try { localStorage.setItem(STORE, JSON.stringify({ chosen: [...chosen], staplesOff: [...staplesOff], list })); } catch {}
     };
+    const catalog = new Map(data.ingredients.map((i) => [i.id, i]));
     const isOn = (id: string) => (isStaple(id) ? !staplesOff.has(id) : chosen.has(id));
     const setOn = (id: string, on: boolean) => {
       if (isStaple(id)) on ? staplesOff.delete(id) : staplesOff.add(id);
@@ -185,8 +203,87 @@ const data = {
         el('p', { textContent: r.summary }),
         el('div', { className: 'meta' }, el('span', { className: `cuisine-tag accent-${c.accent}`, textContent: c.title }), el('span', { textContent: r.time })),
       );
-      return el('li', {}, a);
+      const li = el('li', { className: 'fridge-card' }, a);
+      if (m.missing.length) {
+        const listed = () => m.missing.every((id) => list.some((item) => item.id === id && item.for.includes(r.title)));
+        const add = el('button', { type: 'button', className: 'text-btn add-to-list', textContent: listed() ? '已在购物清单里' : '缺的加入购物清单' });
+        add.disabled = listed();
+        add.addEventListener('click', () => {
+          list = addMissing(list, r.title, m.missing);
+          save();
+          renderList();
+          add.textContent = '已在购物清单里';
+          add.disabled = true;
+        });
+        li.append(add);
+      }
+      return li;
     };
+
+    function renderList() {
+      $('[data-list-wrap]').hidden = list.length === 0;
+      $('[data-list-count]').textContent = `· ${list.filter((i) => !i.bought).length} 样`;
+      $('[data-list]').replaceChildren(
+        ...grouped(list, catalog).map((group) => {
+          const ul: HTMLUListElement = el('ul', { className: 'ingredients' });
+          ul.append(
+              ...group.items.map((item) => {
+                const info = catalog.get(item.id)!;
+                const box = document.createElement('input');
+                box.type = 'checkbox';
+                box.checked = item.bought;
+                box.addEventListener('change', () => {
+                  item.bought = box.checked;
+                  save();
+                  renderList();
+                });
+                const text: HTMLSpanElement = el('span', { className: 'ing-text' });
+                text.append(
+                  el('span', { className: 'ing-name', textContent: info.zh }),
+                  el('span', { className: 'ing-en', textContent: info.en }),
+                  el('span', { className: 'ing-note', textContent: `用于：${item.for.join('、')}` }),
+                );
+                const label = document.createElement('label');
+                label.className = 'ing-row';
+                label.append(box, text);
+                const li: HTMLLIElement = el('li');
+                li.append(label);
+                return li;
+              }),
+          );
+          const div: HTMLDivElement = el('div', { className: 'shopping-group' });
+          div.append(el('h3', { textContent: group.label }), ul);
+          return div;
+        }),
+      );
+    }
+
+    const listStatus = (text: string) => {
+      $('[data-list-status]').textContent = text;
+      setTimeout(() => ($('[data-list-status]').textContent = ''), 2500);
+    };
+    $('[data-list-copy]').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(toText(list, catalog));
+        listStatus('已复制');
+      } catch {
+        listStatus('复制失败，请手动选择文字');
+      }
+    });
+    $('[data-list-stock]').addEventListener('click', () => {
+      const bought = list.filter((i) => i.bought);
+      if (!bought.length) return listStatus('先勾选买到的');
+      list = list.filter((i) => !i.bought);
+      for (const item of bought) setOn(item.id, true);
+      save();
+      renderList();
+    });
+    $('[data-list-clear]').addEventListener('click', () => {
+      list = [];
+      save();
+      renderList();
+      render();
+    });
 
     const search = $<HTMLInputElement>('[data-search]');
     const renderSuggest = () => {
@@ -276,6 +373,7 @@ const data = {
       renderSuggest();
     });
 
+    renderList();
     render();
   </script>
 </Base>
