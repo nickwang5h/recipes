@@ -7,7 +7,7 @@ related: [maillard-reaction, protein-coagulation, salt]
 sources:
   - title: "On Food and Cooking: The Science and Lore of the Kitchen（修订版，2004）"
     author: Harold McGee
-updated: 2026-09-30
+updated: 2026-10-01
 ---
 
 ## 是什么
@@ -40,8 +40,10 @@ updated: 2026-09-30
 
 逆纹切改变的是咀嚼时面对的结构。筋膜和结缔组织仍在，过火后收紧的肌肉也不会因此重新多汁。适合快炒的肉切薄、逆纹，再控制[蛋白质凝固](/principles/protein-coagulation/)；富含结缔组织的部位则留给[慢炖](/principles/collagen-gelatin/)。
 
-## 在三个菜系里
+## 在各个菜系里
 
 - **中餐**：[宫保鸡丁](/recipes/kung-pao-chicken/)的鸡丁、葱段和花生大小相近，一锅里同时熟，入口也是一口一样。腰花、鱿鱼要“剞花刀”：斜着划出不切断的网格，表面积变大，几十秒就熟透，受热后还会卷成花，更容易挂住芡汁。
 - **法餐**：经典厨房给切法起了名字，如 *julienne*（细丝）、*brunoise*（细丁）。调味蔬菜丁（*mirepoix*）切多大，看它要煮多久：快手酱汁切细丁，[勃艮第红酒炖牛肉](/recipes/boeuf-bourguignon/)和高汤要煮几个小时，就切大块。
 - **意大利菜**：*Aglio e olio*（[蒜油辣椒意面](/recipes/aglio-olio/)）中的蒜片厚薄要接近，才容易一起变成浅金色；薄末先焦，会让整锅油带上苦味。
+- **日本料理**：*乱切り*（滚刀切）每切一刀就转动食材，切出斜面多、大小接近的块；[土豆炖肉](/recipes/nikujaga/)里的胡萝卜就适合这样处理。粗端和细端要调整下刀位置，让每块厚度接近，才容易一起煮软。
+- **韩国菜**：[韩式烤牛肉](/recipes/bulgogi/)先逆着肌肉纹理切薄片，把长纤维截短，入口更容易嚼开。薄片摊开后能很快烤熟，厚薄一致才不会有的已经干硬，有的还没熟。

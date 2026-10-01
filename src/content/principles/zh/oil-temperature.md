@@ -10,7 +10,7 @@ sources:
   - title: "Introduction to Biosystems Engineering：Deep Fat Frying of Food"
     author: Ram Yamsaengsung、Bandhita Saibandith
     url: https://eng.libretexts.org/Bookshelves/Biological_Engineering/Introduction_to_Biosystems_Engineering_(Holden_et_al.)/06:_Processing_Systems/6.03:_Deep_Fat_Frying_of_Food
-updated: 2026-09-30
+updated: 2026-10-01
 ---
 
 ## 是什么
@@ -43,8 +43,11 @@ updated: 2026-09-30
 
 **烟点**是油开始持续冒烟的温度，和油的精炼程度、杂质及使用状态有关。选适合高温烹调的油，并把实际油温控制在烟点以下。冒烟说明该降温，不能拿它当作下料信号。炸完后留下的碎屑会在下一锅继续变焦，也会污染味道。
 
-## 在三个菜系里
+## 在各个菜系里
 
 - **中餐**：习惯用“几成热”描述油温，看的是油面波纹和冒烟程度，没有统一的温度对照。上浆的肉丁常先在温油里“滑油”，让浆定型、肉变白而不上色；干炸、复炸则要更高的油温。[宫保鸡丁](/recipes/kung-pao-chicken/)的鸡丁也是靠热锅热油快速定型。
 - **法餐**：炸薯条把内部熟化和表面脱水分开处理，复炸后的脆壳来自水分继续减少，机制可对照[淀粉糊化](/principles/starch-gelatinization/)。
 - **意大利菜**：西西里炸饭团（*arancini*）外层面包屑失水变脆，内部米饭保持柔软；米粒吸水受热的过程见[米兰烩饭](/recipes/risotto-alla-milanese/)。
+- **越南菜**：米纸包的炸春卷（*chả giò*）可以先用较低油温炸，再提高油温复炸，让外皮更脆。米纸本身不容易上色，不能为了追求深褐色一直延长炸制。
+- **日本料理**：[日式炸鸡块](/recipes/karaage/)先沥去腌汁、薄裹粉，再分批入油。薄衣容易失水变脆；一次下太多，油温下降，外衣干燥就会拖慢。
+- **韩国菜**：韩式裹酱炸鸡（*dakgangjeong*）先裹淀粉炸制，捞出沥油、稍歇，再回锅炸到金黄酥脆。复炸后才拌上甜咸酱汁，先把脆壳做好，再让酱挂在表面。

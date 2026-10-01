@@ -17,7 +17,7 @@ description: Use when writing, drafting, reviewing or revising a recipe, cooking
 
 1. `## 是什么`：一两段讲清机制，第一次出现的术语加粗。
 2. 两到三个 `##` 小节，讲决定结果的变量（温度、水、比例、时间等）。能用表格对比的就用表格。
-3. `## 在三个菜系里`：中餐、法餐、意大利菜各一条（其他菜系的例子可以在正文里提，不单列）。每条举这个菜系**最有代表性的具体技法或菜**（如拔丝、剞花刀、上汤、*monter au beurre*、*mantecatura*），站里有对应菜谱就链接过去。不要只把原理换个说法再讲一遍。
+3. `## 在各个菜系里`：中餐、法餐、意大利菜各一条；泰国、越南、日本、韩国**只在有招牌技法或菜时**各加一条，没有就不写，不为凑齐硬编。每条举这个菜系**最有代表性的具体技法或菜**（如拔丝、剞花刀、上汤、*monter au beurre*、*mantecatura*、出汁、糖色 *nước màu*），站里有对应菜谱就链接过去。不要只把原理换个说法再讲一遍。
 4. 可选：`## 失败了怎么办` 或 `## 过了头`。
 
 **菜谱页**，正文约 600–1000 字：
@@ -25,6 +25,13 @@ description: Use when writing, drafting, reviewing or revising a recipe, cooking
 1. 开头一到两段：这道菜是什么，它靠哪条原理成立（链接原理页）。历史只写一句，传说要标明是"相传"。
 2. `## 步骤`：正文里唯一的有序列表，每步一个动作。关键判断写成可观察的状态，例如"收到只剩约 2 汤匙、像糖浆"，不要只写时间。
 3. `## 要点`：2–4 条，格式为 `- **症状**：原因（链接原理）。补救或预防。`
+
+**地方菜系页**（`src/content/regions/zh/`，如川菜、粤菜），正文约 900–1400 字：
+
+1. 开头一段：这个地方菜的整体特点和地理、物产背景，一两句即可，不写“历史悠久”“博大精深”之类的套话。
+2. 2–4 个 `##` 小节，每节讲一种**招牌技法**（如川菜的干煸、粤菜的白切与浸、鲁菜的爆与吊汤、淮扬菜的刀工与炖）：是什么、为什么这样做能成立（链接原理页）、代表菜。代表菜在站里有菜谱就链接，没有就只写菜名。
+3. 可选 `## 在家能试的`：指向站里已有的菜谱，说明家里能做到哪一步、哪一步需要专业灶具。
+4. front matter 的 `featured` 只放站里已有、确实属于这个地方的菜谱 slug；不确定归属就不放。
 
 **front matter**：
 - `course` 必填：`veg` 素菜、`meat` 荤菜、`seafood` 水产、`soup` 汤粥、`staple` 主食、`breakfast` 早餐、`dessert` 甜品、`sauce` 酱汁、`drink` 饮品。
@@ -59,7 +66,7 @@ Wikibooks Cookbook 是 CC BY-SA，**不要改写或翻译它的文字**；只能
 - 每篇 1–3 条来源，挑真正用到的，不要凑数。
 - 首选经典书籍：
   - 通用：McGee《On Food and Cooking》（2004）、López-Alt《The Food Lab》（2015）。
-  - 中餐：Dunlop《The Food of Sichuan》（2019）。
+  - 中餐：Dunlop《The Food of Sichuan》（2019）、《Revolutionary Chinese Cookbook》（湘菜，2006）、《Land of Fish and Rice》（江南，2016）、《Invitation to a Banquet》（2023）；Grace Young《The Breath of a Wok》（2004）；《中国烹饪百科全书》（1992）。
   - 法餐：Child 等《Mastering the Art of French Cooking》（1961）、Pépin《Jacques Pépin's Complete Techniques》（2001）、Escoffier《Le Guide culinaire》（1903）。
   - 意大利菜：Hazan《Essentials of Classic Italian Cooking》（1992）、Artusi《La scienza in cucina e l'arte di mangiar bene》（1891）、Accademia Italiana della Cucina 登记的传统配方。
   - 泰国菜：Thompson《Thai Food》（2002）、Punyaratabandhu《Simple Thai Food》（2014）。
@@ -106,7 +113,7 @@ Wikibooks Cookbook 是 CC BY-SA，**不要改写或翻译它的文字**；只能
 - [ ] **机制正确**：温度、比例、化学解释和 McGee 一致；有疑问就查，查不到就删掉。
 - [ ] **用量合理**：主要比例和经典配方一致，份量与用量对得上。
 - [ ] **来源真实**：书名、作者、年份都对；每个 `url` 都打开核实过。
-- [ ] **结构达标**：步骤是唯一的有序列表；要点 2–4 条；原理页有"在三个菜系里"，并且每条都是该菜系的招牌例子。
+- [ ] **结构达标**：步骤是唯一的有序列表；要点 2–4 条；原理页有"在各个菜系里"，并且每条都是该菜系的招牌例子。
 - [ ] **地方做法属实**：标题里的"粤式""罗马"等限定，与来源里的做法一致。
 - [ ] **长度达标**：原理 800–1300 字，菜谱 600–1000 字。超出的部分先删限定语和重复内容。
 - [ ] **文风**：没有元叙述、免责段落、层层叠加的否定。

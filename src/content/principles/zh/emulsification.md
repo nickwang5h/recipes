@@ -9,7 +9,7 @@ sources:
     author: Harold McGee
   - title: "The Food Lab: Better Home Cooking Through Science（2015）"
     author: J. Kenji López-Alt
-updated: 2026-09-30
+updated: 2026-10-01
 ---
 
 ## 是什么
@@ -36,11 +36,14 @@ updated: 2026-09-30
 
 还有一个常被忽略的因素：**连续相要够**。水包油的酱汁里，水是连续相。油加得太快、水太少，酱汁会先变得又稠又硬，接着突然出油。蛋黄酱开始时要一滴一滴加油，就是这个道理。
 
-## 在三个菜系里
+## 在各个菜系里
 
 - **法餐**：蛋黄酱、[荷兰酱](/recipes/hollandaise/)靠蛋黄乳化；[黄油白酱](/recipes/beurre-blanc/) 只靠黄油自带的乳蛋白和少量收汁里的水；酱汁收尾时加冷黄油（monter au beurre），也是在做一次小乳化。
 - **意大利菜**：[cacio e pepe](/recipes/cacio-e-pepe/)、[carbonara](/recipes/carbonara/)、[蒜油辣椒意面](/recipes/aglio-olio/)和 risotto 的 mantecatura，都是用煮面水或高汤里的淀粉，稳定住奶酪和黄油的脂肪。
 - **中餐**：奶白色的鱼汤、骨汤，一般解释为大火滚煮时，油脂被打成细滴，再由汤里溶出的明胶和蛋白质稳定下来。所以要“大火滚”，小火慢煨出来的是清汤。
+- **泰国菜**：[绿咖喱](/recipes/gaeng-keow-wan-gai/)先把浓椰浆煮到析出油珠，再用这层油炒香咖喱酱。椰奶原本是水包油的乳化液，这一步是有意让它分离。
+- **日本料理**：博多式豚骨拉面（*tonkotsu ramen*）的浓汤让猪骨持续滚煮，把脂肪打散进汤里。乳化的油滴与悬浮的细小颗粒一起，让汤呈不透明的浓白色。
+- **韩国菜**：雪浓汤（*seolleongtang*）把牛骨持续滚煮到汤色乳白。沸腾让脂肪分散进汤里，是形成浓汤质地的一部分；火力要能维持滚沸。
 
 ## 破了怎么救
 

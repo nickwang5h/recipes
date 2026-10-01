@@ -1,0 +1,72 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import PrincipleCard from '../../../components/PrincipleCard.astro';
+import RecipeCard from '../../../components/RecipeCard.astro';
+import SourceList from '../../../components/SourceList.astro';
+import { formatDate, url } from '../../../lib/site';
+
+export async function getStaticPaths() {
+  const regions = await getCollection('regions');
+  return regions.map((region) => ({ params: { region: region.id }, props: { region } }));
+}
+
+const { region } = Astro.props;
+const { title, original, summary, sources, updated } = region.data;
+const chinese = (await getEntry('cuisines', 'chinese'))!;
+const principles = await Promise.all(region.data.principles.map((ref) => getEntry(ref)));
+const featured = await Promise.all(region.data.featured.map((ref) => getEntry(ref)));
+const others = (await getCollection('regions'))
+  .filter((r) => r.id !== region.id)
+  .sort((a, b) => a.data.order - b.data.order);
+const { Content } = await render(region);
+---
+
+<Base title={title} description={summary}>
+  <article class="accent-red">
+    <header class="page-head">
+      <div class="eyebrow">
+        <a href={url('cuisines')}>菜系</a>
+        <a class="cuisine-tag accent-red" href={url('cuisines/chinese')}>{chinese.data.title}</a>
+        <span>地方菜</span>
+      </div>
+      <h1>{title}</h1>
+      {original && <p class="original">{original}</p>}
+      <p class="lede">{summary}</p>
+    </header>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {featured.length > 0 && (
+      <section>
+        <h2 class="section-title">站里能做的菜</h2>
+        <ul class="card-grid">
+          {featured.map((recipe) => <li><RecipeCard recipe={recipe} cuisine={chinese} /></li>)}
+        </ul>
+      </section>
+    )}
+
+    {principles.length > 0 && (
+      <section>
+        <h2 class="section-title">相关原理</h2>
+        <ul class="card-grid">
+          {principles.map((principle) => <li><PrincipleCard principle={principle} /></li>)}
+        </ul>
+      </section>
+    )}
+
+    <section>
+      <h2 class="section-title">其他地方菜</h2>
+      <ul class="chips">
+        {others.map((r) => <li><a class="chip" href={url(`cuisines/chinese/${r.id}`)}>{r.data.title}</a></li>)}
+      </ul>
+    </section>
+
+    <div class="prose">
+      <SourceList sources={sources} />
+      <p style="color: var(--muted); font-size: 0.9rem">更新于 {formatDate(updated)}</p>
+    </div>
+  </article>
+</Base>

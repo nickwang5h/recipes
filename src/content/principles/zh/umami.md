@@ -10,7 +10,7 @@ sources:
   - title: "Umami synergy as the scientific principle behind taste-pairing champagne and oysters（2020）"
     author: Charlotte Vinther Schmidt, Karsten Olsen, Ole G. Mouritsen
     url: https://www.nature.com/articles/s41598-020-77107-w
-updated: 2026-09-30
+updated: 2026-10-01
 ---
 
 ## 是什么
@@ -41,8 +41,12 @@ updated: 2026-09-30
 
 鲜味丰富的配料往往自带盐。味精提供鲜味，也含钠；它和食盐的入口效果不同，调味时分别少量补充。若汤已经咸，却仍缺少厚实的滋味，可以增加无盐的番茄、菌菇或肉汤；继续加酱油会把咸味推得更高。若连鲜味都过重，就用无盐汤汁稀释。
 
-## 在三个菜系里
+## 在各个菜系里
 
 - **中餐**：粤菜的上汤用金华火腿、老母鸡和瘦肉一起吊，熟成火腿的谷氨酸配上鸡肉的肌苷酸，正是协同作用。[麻婆豆腐](/recipes/mapo-tofu/)里的豆瓣酱、豆豉配牛肉末，也是同一个组合。
 - **法餐**：[法式洋葱汤](/recipes/french-onion-soup/)用牛肉高汤托住洋葱，上面的熟成奶酪再补一层滋味；洋葱的褐色烤香则靠加热形成。
 - **意大利菜**：*Ragù alla bolognese*（[博洛尼亚肉酱](/recipes/ragu-alla-bolognese/)）用番茄和肉搭配。上桌时加的熟成奶酪还能提供游离谷氨酸。
+- **泰国菜**：[青木瓜沙拉](/recipes/som-tam/)把鱼露和虾米捣进酸甜调味汁，让生蔬果也有咸鲜底味。鱼露在发酵中释放的游离谷氨酸，是这份鲜味的重要来源。
+- **越南菜**：[鱼露蘸汁](/recipes/nuoc-cham/)用水、青柠汁和糖稀释鱼露，把它的鲜味送进米线、生菜和米纸卷的一整口里。鱼露提供的游离谷氨酸带来鲜味，盐分则决定咸度，调汁时要一起考虑。
+- **日本料理**：[日式高汤](/recipes/dashi/)把昆布的谷氨酸与柴鱼的肌苷酸合在一锅里，是鲜味协同作用的典型。取好的出汁再用于[味噌汤](/recipes/miso-shiru/)或[茶碗蒸](/recipes/chawanmushi/)，用少量调味就能托住整道菜的滋味。
+- **韩国菜**：[大酱汤](/recipes/doenjang-jjigae/)用发酵大酱配干鳀鱼和少量虾煮汤，大酱中的游离氨基酸与水产的鲜味共同撑起汤底。先把这几样煮出味，再判断咸度，避免靠不断加大酱把汤调得过咸。

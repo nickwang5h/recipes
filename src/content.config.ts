@@ -92,4 +92,19 @@ const recipes = defineCollection({
   }),
 });
 
-export const collections = { cuisines, principles, recipes, ingredients };
+// Regional Chinese cuisines (川菜、粤菜…): technique essays shown under the chinese cuisine page.
+const regions = defineCollection({
+  loader: glob({ base: `./src/content/regions/${LOCALE}`, pattern: '*.md' }),
+  schema: z.object({
+    title: z.string(),
+    original: z.string().optional(),
+    summary: z.string(),
+    order: z.number(),
+    principles: z.array(reference('principles')).default([]),
+    featured: z.array(reference('recipes')).default([]),
+    sources: z.array(source).min(1),
+    updated: z.coerce.date(),
+  }),
+});
+
+export const collections = { cuisines, principles, recipes, ingredients, regions };

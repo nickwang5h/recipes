@@ -58,3 +58,8 @@ slug 一旦发布就不改。✅ = 已发布。
 清单见 `docs/round4/selection.json`（151 道：法餐 42、意大利菜 52、泰国菜 20、越南菜 11、日本料理 14、韩国菜 12）。其中 37 道改编自 [based.cooking](https://github.com/LukeSmithxyz/based.cooking)（The Unlicense），其余按 skill 列出的各菜系经典书写；Wikibooks（CC BY-SA）只用于核对事实，不改写文字。
 
 新增菜系：泰国菜（thai）、越南菜（vietnamese）、日本料理（japanese）、韩国菜（korean）。导航改为单一“菜系”入口（`/cuisines/`）。
+
+## 第五批：原理页补新菜系、中国地方菜
+
+- 16 篇原理页的“在三个菜系里”改为“在各个菜系里”，泰、越、日、韩只在有招牌例子时补条目。
+- 新增 `regions` 集合（`src/content/regions/zh/`）：鲁、川、粤、苏／淮扬、闽、浙、湘、徽八篇地方菜技法页，挂在 `/cuisines/chinese/<slug>/`。

@@ -13,7 +13,7 @@ sources:
   - title: "Eggs again, old and new: whipping whites（2025）"
     author: Harold McGee
     url: https://haroldmcgee.substack.com/p/eggs-again-old-and-new-whipping-whites
-updated: 2026-09-30
+updated: 2026-10-01
 ---
 
 ## 是什么
@@ -44,8 +44,12 @@ updated: 2026-09-30
 
 蛋白泡沫加少量酸能更耐打发，继续猛打仍可能失水。酸也不能保证所有乳制品酱汁都稳定；往热牛奶里直接倒酸汁，可能得到凝块。做蛋酱时，酸和温度要一起控制，见[蛋白质变性与凝固](/principles/protein-coagulation/)。
 
-## 在三个菜系里
+## 在各个菜系里
 
 - **中餐**：[宫保鸡丁](/recipes/kung-pao-chicken/)的荔枝味靠醋和糖平衡，入口先甜后酸。很多菜在出锅前沿锅边“烹醋”：醋碰到热锅迅速汽化，香气冲出来，留在菜里的酸味反而更柔和。
 - **法餐**：*Beurre blanc*（[黄油白酱](/recipes/beurre-blanc/)）用酒醋收汁平衡黄油的浓厚；顺滑的结构还要靠水分和[乳化](/principles/emulsification/)。
-- **意大利菜**：西西里的 *caponata* 用醋和糖调出酸甜（*agrodolce*）味，平衡炸茄子的油润；它常放凉或隔夜再吃，酸甜味会更融合。
+- **意大利菜**：西西里的 [*caponata*](/recipes/caponata/) 用醋和糖调出酸甜（*agrodolce*）味，平衡炸茄子的油润；它常放凉或隔夜再吃，酸甜味会更融合。
+- **泰国菜**：[青木瓜沙拉](/recipes/som-tam/)用青柠汁、鱼露和棕榈糖调出酸、咸、甜，再与辣椒一起捣拌。青柠的酸味要鲜明，糖则缓和入口的酸感；调味时连木瓜丝一起尝。
+- **越南菜**：[鱼露蘸汁](/recipes/nuoc-cham/)先把青柠汁、糖和水调成酸甜底，再加鱼露调咸鲜。蘸上鲜菜或拌进米线后，酸甜咸的比例才是整口的味道。
+- **日本料理**：寿司饭把醋、糖和盐拌入煮好的米饭，酸味直接成为饭的底味。散寿司、卷寿司和握寿司都以这样的醋饭搭配其他食材。
+- **韩国菜**：[泡菜汤](/recipes/kimchi-jjigae/)用已发酸的老泡菜和泡菜汁建立酸味底子，酸来自[乳酸发酵](/principles/fermentation/)。新泡菜还没有同样的酸味；汤中少量糖能缓和酸感。

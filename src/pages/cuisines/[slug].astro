@@ -1,5 +1,5 @@
 ---
-import { getEntry, render } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PrincipleCard from '../../components/PrincipleCard.astro';
 import RecipeCard from '../../components/RecipeCard.astro';
@@ -15,6 +15,8 @@ const { title, original, summary, accent } = cuisine.data;
 const principles = await Promise.all(cuisine.data.principles.map((ref) => getEntry(ref)));
 const featured = await Promise.all(cuisine.data.featured.map((ref) => getEntry(ref)));
 const { Content } = await render(cuisine);
+// Only the chinese page has regional sub-pages.
+const regions = cuisine.id === 'chinese' ? (await getCollection('regions')).sort((a, b) => a.data.order - b.data.order) : [];
 ---
 
 <Base title={title} description={summary}>
@@ -29,6 +31,23 @@ const { Content } = await render(cuisine);
     <div class="prose">
       <Content />
     </div>
+
+    {regions.length > 0 && (
+      <section>
+        <h2 class="section-title">地方菜</h2>
+        <ul class="card-grid">
+          {regions.map((r) => (
+            <li>
+              <a class={`card accent-${accent}`} href={url(`cuisines/chinese/${r.id}`)}>
+                <h3>{r.data.title}</h3>
+                {r.data.original && <span class="original">{r.data.original}</span>}
+                <p>{r.data.summary}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
 
     {featured.length > 0 && (
       <section>

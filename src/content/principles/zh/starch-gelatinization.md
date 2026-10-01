@@ -9,7 +9,7 @@ sources:
     author: Harold McGee
   - title: "The Food Lab: Better Home Cooking Through Science（2015）"
     author: J. Kenji López-Alt
-updated: 2026-09-30
+updated: 2026-10-01
 ---
 
 ## 是什么
@@ -37,8 +37,12 @@ updated: 2026-09-30
 - **糖**：和淀粉争夺水分，会让糊化温度升高、稠度下降。
 - **回生**：冷却后，直链淀粉会重新排列、结晶，于是变硬、析水。隔夜米饭变硬，冷藏后的芡汁出水，都是回生。隔夜饭适合做[蛋炒饭](/recipes/egg-fried-rice/)，正是因为它更干、更硬、不粘连。
 
-## 在三个菜系里
+## 在各个菜系里
 
 - **中餐**：勾芡要在汤汁沸腾时分次淋入，边淋边推，每次等汤汁重新变亮再淋下一次，见 [麻婆豆腐](/recipes/mapo-tofu/)。上浆（肉片裹蛋清和淀粉）则是用糊化的淀粉在肉表面形成一层保护膜，让肉保持嫩滑。
 - **法餐**：五个母酱里，[béchamel](/recipes/bechamel/)、velouté、espagnole 三个都靠 roux 增稠。
 - **意大利菜**：煮面水里溶着从面条表面析出的淀粉，它不只是增稠，还是[乳化](/principles/emulsification/)的稳定剂，见 [cacio e pepe](/recipes/cacio-e-pepe/)。[米兰烩饭](/recipes/risotto-alla-milanese/)的奶油感，也来自米粒外层慢慢释放出的淀粉。
+- **泰国菜**：[芒果糯米饭](/recipes/khao-niao-mamuang/)先浸泡糯米，让米粒吸足水，再蒸到中心没有硬芯；淀粉在受热时糊化，米粒才黏软。甜椰浆在米蒸透后趁热拌入，淋酱则另用少量米粉煮稠。
+- **越南菜**：蒸米卷 *bánh cuốn* 把米粉、木薯淀粉和水调成浆，薄薄摊在蒸锅口绷紧的布上，加盖蒸成半透明的米皮。淀粉糊化让粉浆成形，米皮揭下后就能包住肉末与木耳馅。
+- **日本料理**：[日式咖喱饭](/recipes/japanese-curry/)靠咖喱 roux 中的面粉增稠，油脂先把粉分散，再让淀粉在汤里吸水糊化。用咖喱块时先离火化匀，再回到小火搅拌煮稠，减少结块和糊底。
+- **韩国菜**：[白菜泡菜](/recipes/baechu-kimchi/)的抹酱先把糯米粉与水煮成米糊，放凉后才拌辣椒粉、蒜和鱼露。糊化后的米糊让调味料附在叶片上，抹酱不易流走。

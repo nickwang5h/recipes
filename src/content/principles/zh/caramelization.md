@@ -10,7 +10,7 @@ sources:
   - title: "Science of Candy：Caramelization & Caramels"
     author: Exploratorium
     url: https://annex.exploratorium.edu/cooking/bread/caramels-story.html
-updated: 2026-09-30
+updated: 2026-10-01
 ---
 
 ## 是什么
@@ -46,8 +46,10 @@ updated: 2026-09-30
 
 还没上色就返砂，可以加水重新溶解，再继续煮。已经烧焦的苦味无法靠加水消除。结晶和焦糖化分别改变物理结构与化学组成，处理方法也就不同。
 
-## 在三个菜系里
+## 在各个菜系里
 
-- **中餐**：[红烧肉](/recipes/hong-shao-rou/)炒糖色，把糖炒到枣红色，带来颜色和微苦的焦香；拔丝菜则把糖熬到刚变色、能拉出细丝，再趁热裹住原料。
-- **法餐**：焦糖布丁（*crème caramel*）先在模具底部浇一层焦糖，蛋奶部分靠[蛋白质变性与凝固](/principles/protein-coagulation/)成形。[法式洋葱汤](/recipes/french-onion-soup/)里洋葱慢慢变成深褐色，既有糖的焦糖化，也有[美拉德反应](/principles/maillard-reaction/)。
+- **中餐**：[红烧肉](/recipes/hong-shao-rou/)炒糖色，把糖炒到枣红色，带来颜色和微苦的焦香；[拔丝菜](/recipes/ba-si-tu-dou/)则把糖熬到刚变色、能拉出细丝，再趁热裹住原料。
+- **法餐**：[焦糖布丁](/recipes/creme-caramel/)（*crème caramel*）先在模具底部浇一层焦糖，蛋奶部分靠[蛋白质变性与凝固](/principles/protein-coagulation/)成形。[法式洋葱汤](/recipes/french-onion-soup/)里洋葱慢慢变成深褐色，既有糖的焦糖化，也有[美拉德反应](/principles/maillard-reaction/)。
 - **意大利菜**：杏仁脆糖（*croccante*）把糖熬成琥珀色的焦糖，拌入烤过的杏仁，趁热压平，冷却后变脆。
+- **越南菜**：糖色 *nước màu* 先把糖熬到深褐色，再加水稀释，给焖菜带来颜色和微苦焦香。[砂锅焦糖焖鱼](/recipes/ca-kho-to/)和[椰汁卤肉蛋](/recipes/thit-kho-trung/)都用它；糖色在主料入锅前就已熬好。
+- **韩国菜**：糖饼 *dalgona* 把白糖小火熬化、变成浅褐色糖液，再拌入小苏打使其膨胀，冷却后形成多孔脆糖。焦糖化带来颜色和焦香，膨松则靠后加入的小苏打。

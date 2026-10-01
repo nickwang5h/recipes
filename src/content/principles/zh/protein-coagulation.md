@@ -13,7 +13,7 @@ sources:
   - title: "Protein: coagulation"
     author: Institute of Food Science & Technology
     url: https://www.ifst.org/lovefoodlovescience/resources/protein-coagulation
-updated: 2026-09-30
+updated: 2026-10-01
 ---
 
 ## 是什么
@@ -46,8 +46,10 @@ updated: 2026-09-30
 
 蛋白质表面的电荷会使分子互相排斥。盐能削弱这种排斥，酸能改变蛋白质的电荷状态，让蛋液在较低的温度开始变稠。用于调味的盐和酸，还能让蛋白质较早连接、少些紧密缠绕，做出的蛋更嫩。
 
-## 在三个菜系里
+## 在各个菜系里
 
 - **中餐**：蒸蛋靠稀释后的蛋白质网络留住水；[番茄炒蛋](/recipes/tomato-egg/)要在蛋液刚凝成大块时出锅；[清蒸鱼](/recipes/steamed-fish/)则要在鱼肉刚变白、贴骨处还略带透明时停火。
 - **法餐**：[法式蛋卷](/recipes/french-omelette/)靠快速搅拌让蛋液凝成细小的凝乳，外面定形、里面仍软；[荷兰酱](/recipes/hollandaise/)同时利用蛋黄的增稠和[乳化](/principles/emulsification/)，要边搅拌边温和加热。
 - **意大利菜**：[罗马蛋黄培根意面](/recipes/carbonara/)用热面和温热的锅让蛋黄酱逐渐变稠，离火翻拌，停在顺滑裹面的阶段。
+- **日本料理**：[茶碗蒸](/recipes/chawanmushi/)用出汁稀释蛋液，再温和蒸凝，让蛋白质网络托住汤汁，形成细滑的咸蛋羹。蒸汽太猛或蒸得太久，网络收紧，就会粗硬、出水。
+- **韩国菜**：[韩式蒸蛋](/recipes/gyeran-jjim/)把加水的蛋液放在小陶锅里，直接用中小火加盖加热，凝成蓬松柔软的蛋体。锅底先热，中心后热，火力过大会让底部焦硬而中心还未凝固。
