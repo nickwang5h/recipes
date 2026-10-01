@@ -1,0 +1,49 @@
+// Writes dist/sw.js and dist/offline-pages.json after `astro build`.
+// The version hashes every built file name, so any change to CSS, JS or images gets a
+// fresh static cache; page HTML is refreshed by the network-first strategy instead.
+import { createHash } from 'node:crypto';
+import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import { join, relative, sep } from 'node:path';
+
+const dist = new URL('../dist/', import.meta.url).pathname;
+
+function walk(dir) {
+  return readdirSync(dir).flatMap((name) => {
+    const path = join(dir, name);
+    return statSync(path).isDirectory() ? walk(path) : [path];
+  });
+}
+
+const files = walk(dist).map((path) => '/' + relative(dist, path).split(sep).join('/'));
+
+const pages = files
+  .filter((f) => f.endsWith('/index.html') && !f.startsWith('/404'))
+  .map((f) => f.slice(0, -'index.html'.length));
+
+const precache = [
+  ...files.filter((f) => f.startsWith('/_astro/') && /\.(css|js)$/.test(f)),
+  '/offline/',
+  '/manifest.webmanifest',
+  '/favicon.svg',
+  '/icons/icon-192.png',
+  '/',
+  '/recipes/',
+  '/fridge/',
+];
+
+const hash = createHash('sha256');
+for (const f of files.sort()) {
+  hash.update(f);
+  if (f.endsWith('.html') || f.endsWith('.css') || f.endsWith('.js')) hash.update(readFileSync(join(dist, f)));
+}
+const version = hash.digest('hex').slice(0, 12);
+
+const template = readFileSync(new URL('./sw-template.js', import.meta.url), 'utf8');
+const sw = template
+  .replace('__VERSION__', version)
+  .replace('__PRECACHE__', JSON.stringify(precache, null, 2))
+  .replace('__PAGE_LIST__', '/offline-pages.json');
+
+writeFileSync(join(dist, 'sw.js'), sw);
+writeFileSync(join(dist, 'offline-pages.json'), JSON.stringify(pages));
+console.log(`sw.js ${version}: ${precache.length} precached, ${pages.length} pages listed`);

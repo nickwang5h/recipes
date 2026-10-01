@@ -269,3 +269,6 @@ button.chip[aria-pressed="true"] { background: var(--text); border-color: var(--
 .cover { max-width: 46rem; }
 .cover img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
 .diagram figcaption, .cover figcaption { margin-top: 0.5rem; color: var(--muted); font-size: 0.85rem; }
+
+.offline-save { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; margin-top: 1rem; }
+.offline-status { color: var(--muted); font-size: 0.9rem; }

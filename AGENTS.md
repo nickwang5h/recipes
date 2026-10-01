@@ -30,6 +30,7 @@ Planned and published slugs live in `docs/content-plan.md`.
 
 - `npm run dev` — local dev server
 - `npm test` — scaling/rounding tests
-- `npm run build` — type check, build, internal link check
+- `npm run build` — type check, build, internal link check, then `scripts/build-sw.mjs` writes `dist/sw.js`
+  (from `scripts/sw-template.js`) and `dist/offline-pages.json` for the PWA offline cache
 
 Pushing `main` deploys to Netlify.

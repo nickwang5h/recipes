@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import OfflineSave from '../../components/OfflineSave.astro';
 import RecipeCard from '../../components/RecipeCard.astro';
 import { COURSES, type Course } from '../../lib/categories';
 import { getCuisineMap, getCuisines, url } from '../../lib/site';
@@ -19,6 +20,7 @@ const base = url('recipes');
   <header class="page-head">
     <h1>菜谱</h1>
     <p class="lede">每道菜都标出它用到的原理。份量可以缩放，配料和步骤可以逐项勾掉；配料附英文名，方便在加拿大的超市对照采购。想按手头的食材找菜，去<a href={url('fridge')}>冰箱</a>。</p>
+    <OfflineSave />
   </header>
 
   <nav class="filters chips" aria-label="按菜系筛选" data-filter-group="cuisine">

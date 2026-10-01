@@ -1,0 +1,45 @@
+---
+// "Save every page for offline use". Hidden until a service worker controls the page.
+---
+
+<div class="offline-save" data-offline-save hidden>
+  <button class="text-btn" type="button" data-save-all>离线保存全部菜谱（约 10 MB）</button>
+  <span class="offline-status" data-save-status aria-live="polite"></span>
+</div>
+
+<script>
+  const box = document.querySelector<HTMLElement>('[data-offline-save]');
+  const button = document.querySelector<HTMLButtonElement>('[data-save-all]');
+  const status = document.querySelector<HTMLElement>('[data-save-status]');
+
+  const showSaved = async () => {
+    try {
+      const [keys, list] = await Promise.all([
+        caches.open('pages').then((c) => c.keys()),
+        fetch('/offline-pages.json').then((r) => r.json() as Promise<string[]>),
+      ]);
+      const saved = new Set(keys.map((k) => new URL(k.url).pathname));
+      const n = list.filter((p) => saved.has(p)).length;
+      status!.textContent = n === list.length ? `已全部离线保存（${n} 页）` : `已离线保存 ${n} / ${list.length} 页`;
+    } catch {}
+  };
+
+  if (box && 'serviceWorker' in navigator && 'caches' in window) {
+    navigator.serviceWorker.ready.then(() => {
+      box.hidden = false;
+      showSaved();
+    });
+    navigator.serviceWorker.addEventListener('message', (event) => {
+      if (event.data?.type !== 'save-all-progress') return;
+      const { done, total, failed } = event.data;
+      status!.textContent = done < total ? `正在保存 ${done} / ${total} 页…` : failed ? `完成，${failed} 页失败，可稍后再试` : `已全部离线保存（${total} 页）`;
+      if (done >= total) button!.disabled = false;
+    });
+    button?.addEventListener('click', async () => {
+      const registration = await navigator.serviceWorker.ready;
+      button.disabled = true;
+      status!.textContent = '准备中…';
+      registration.active?.postMessage({ type: 'save-all' });
+    });
+  }
+</script>
