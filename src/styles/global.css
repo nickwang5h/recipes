@@ -504,3 +504,42 @@ button.chip[aria-pressed="true"] { background: var(--text); border-color: var(--
 .needs-list li.is-listed { opacity: 0.55; }
 [data-needs-wrap] { margin-bottom: 1.5rem; }
 [data-needs-wrap] .kit-actions { margin-top: 1rem; align-items: center; }
+
+/* ---------- Step timers ---------- */
+
+.timer-btn {
+  cursor: pointer; border-radius: 4px; padding: 0 0.1em;
+  text-decoration: underline dotted var(--primary); text-decoration-thickness: 2px; text-underline-offset: 0.25em;
+}
+.timer-btn::before {
+  content: ""; display: inline-block; width: 0.85em; height: 0.85em; margin-right: 0.2em; vertical-align: -0.08em; background: var(--primary);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='12' cy='13' r='8'/%3E%3Cpath d='M12 9v4l2.5 2M9.5 2.5h5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.timer-btn:hover { background: var(--surface); }
+.timer-btn[aria-pressed="true"] { background: var(--primary); color: var(--bg); text-decoration: none; padding: 0 0.35em; }
+.timer-btn[aria-pressed="true"]::before { background: var(--bg); }
+
+.timer-dock {
+  position: fixed; z-index: 20; left: 50%; bottom: calc(0.75rem + env(safe-area-inset-bottom)); transform: translateX(-50%);
+  width: min(30rem, calc(100vw - 1.5rem)); display: grid; gap: 0.35rem; padding: 0.5rem;
+  background: var(--text); color: var(--bg); border-radius: 14px; box-shadow: 0 8px 28px -8px rgb(0 0 0 / 0.5);
+}
+.timer-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.3rem 0.4rem 0.3rem 0.6rem; border-radius: 9px; }
+.timer-clock { flex: none; min-width: 3.4em; font-size: 1.35rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.timer-row a { flex: 1; min-width: 0; color: inherit; text-decoration: none; font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; opacity: 0.85; }
+.timer-row a:hover { opacity: 1; text-decoration: underline; }
+.timer-row button {
+  flex: none; min-height: 2.25rem; padding: 0 0.8rem; font: inherit; font-size: 0.85rem; color: inherit; cursor: pointer;
+  background: transparent; border: 1px solid color-mix(in srgb, var(--bg) 35%, transparent); border-radius: 999px;
+}
+.timer-row.is-done { background: var(--primary); color: var(--bg); animation: timer-pulse 1s ease-in-out infinite alternate; }
+.timer-row.is-done button { border-color: color-mix(in srgb, var(--bg) 60%, transparent); }
+@keyframes timer-pulse { to { filter: brightness(1.25); } }
+/* Room for the dock so it never covers the last step. */
+body:has(.timer-dock) main { padding-bottom: 9rem; }
+@media (prefers-reduced-motion: reduce) { .timer-row.is-done { animation: none; } }
+@media print {
+  .timer-dock { display: none !important; }
+  .timer-btn { text-decoration: none; padding: 0; }
+  .timer-btn::before { display: none; }
+}
