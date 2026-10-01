@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { getCuisines, url } from '../../lib/site';
+
+const cuisines = await getCuisines();
+const recipes = await getCollection('recipes');
+const count = (id: string) => recipes.filter((r) => r.data.cuisine.id === id).length;
+---
+
+<Base title="菜系" description="按菜系浏览：每个菜系一篇总览，讲它靠哪几条原理成立。">
+  <header class="page-head">
+    <h1>菜系</h1>
+    <p class="lede">每个菜系一篇总览，讲它靠哪几条原理成立，再列出代表菜。</p>
+  </header>
+
+  <div class="cuisine-hero-grid">
+    {cuisines.map((c) => (
+      <a class={`cuisine-hero accent-${c.data.accent}`} href={url(`cuisines/${c.id}`)}>
+        <h3>{c.data.title}</h3>
+        {c.data.original && <span class="original">{c.data.original}</span>}
+        <p>{c.data.summary}</p>
+        <p class="cuisine-count">{count(c.id)} 道菜</p>
+      </a>
+    ))}
+  </div>
+</Base>

@@ -52,3 +52,9 @@ slug 一旦发布就不改。✅ = 已发布。
 | blanching | 焯水与去腥 | prep | ✅ |
 | fermentation | 发酵调味料 | reactions | ✅ |
 | aromatics | 香料与香气提取 | seasoning | ✅ |
+
+## 第四批：法餐、意大利菜补充与亚洲四国
+
+清单见 `docs/round4/selection.json`（151 道：法餐 42、意大利菜 52、泰国菜 20、越南菜 11、日本料理 14、韩国菜 12）。其中 37 道改编自 [based.cooking](https://github.com/LukeSmithxyz/based.cooking)（The Unlicense），其余按 skill 列出的各菜系经典书写；Wikibooks（CC BY-SA）只用于核对事实，不改写文字。
+
+新增菜系：泰国菜（thai）、越南菜（vietnamese）、日本料理（japanese）、韩国菜（korean）。导航改为单一“菜系”入口（`/cuisines/`）。

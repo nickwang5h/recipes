@@ -44,7 +44,7 @@ export type IngredientKind = keyof typeof INGREDIENT_KINDS;
 
 export const WHERE_TO_BUY = {
   mainstream: '主流超市',
-  asian: '华人超市',
+  asian: '亚洲超市',
   specialty: '专门店',
 } as const;
 

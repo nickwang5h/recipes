@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { MAIN_SITE, SITE_DESCRIPTION, SITE_TITLE, getCuisines, url } from '../lib/site';
+import { MAIN_SITE, SITE_DESCRIPTION, SITE_TITLE, url } from '../lib/site';
 
 interface Props {
   title?: string;
@@ -11,9 +11,8 @@ const { title, description = SITE_DESCRIPTION } = Astro.props;
 const fullTitle = title ? `${title} · ${SITE_TITLE}` : SITE_TITLE;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const path = Astro.url.pathname;
-const cuisines = await getCuisines();
 const nav = [
-  ...cuisines.map((c) => ({ href: url(`cuisines/${c.id}`), label: c.data.title, match: `/cuisines/${c.id}/` })),
+  { href: url('cuisines'), label: '菜系', match: '/cuisines/' },
   { href: url('principles'), label: '原理', match: '/principles/' },
   { href: url('recipes'), label: '菜谱', match: '/recipes/' },
   { href: url('fridge'), label: '冰箱', match: '/fridge/' },
@@ -69,7 +68,7 @@ const nav = [
     </main>
     <footer class="site-footer">
       <div class="wrap">
-        <span>{SITE_TITLE} · 中法意经典菜的原理与做法</span>
+        <span>{SITE_TITLE} · 家常与经典菜的原理与做法</span>
         <a href={MAIN_SITE}>nickwang.xyz</a>
       </div>
     </footer>

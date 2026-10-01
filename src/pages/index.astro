@@ -24,12 +24,12 @@ const byCategory = (Object.keys(PRINCIPLE_CATEGORIES) as PrincipleCategory[])
   <header class="page-head">
     <h1>{SITE_TITLE}</h1>
     <p class="lede">
-      中餐、法餐、意大利菜里那些经典做法，背后常常是同几条物理和化学规律：油和水怎样被留在一起，淀粉什么时候变稠，表面为什么会变褐变香。这里把原理和菜谱分开写，再用链接串起来，做菜时查步骤，闲下来看为什么。
+      中餐、法餐、意大利菜，还有泰国、越南、日本、韩国的家常菜，背后常常是同几条物理和化学规律：油和水怎样被留在一起，淀粉什么时候变稠，表面为什么会变褐变香。这里把原理和菜谱分开写，再用链接串起来，做菜时查步骤，闲下来看为什么。
     </p>
   </header>
 
   <section aria-labelledby="cuisines-title">
-    <h2 id="cuisines-title" class="section-title">三个菜系</h2>
+    <h2 id="cuisines-title" class="section-title">菜系</h2>
     <div class="cuisine-hero-grid">
       {cuisines.map((c) => (
         <a class={`cuisine-hero accent-${c.data.accent}`} href={url(`cuisines/${c.id}`)}>

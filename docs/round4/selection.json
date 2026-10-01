@@ -1,0 +1,1210 @@
+[
+ {
+  "slug": "galette-bretonne",
+  "name": "布列塔尼荞麦饼",
+  "original": "Galette bretonne",
+  "cuisine": "french",
+  "course": "staple",
+  "base": "breton-crepes"
+ },
+ {
+  "slug": "crepes",
+  "name": "法式可丽饼",
+  "original": "Crêpes",
+  "cuisine": "french",
+  "course": "dessert",
+  "base": "french-crepes"
+ },
+ {
+  "slug": "poulet-au-vinaigre",
+  "name": "里昂醋焖鸡",
+  "original": "Poulet au vinaigre",
+  "cuisine": "french",
+  "course": "meat",
+  "base": "chicken-in-red-wine-vinegar-sauce"
+ },
+ {
+  "slug": "creme-brulee",
+  "name": "焦糖布蕾",
+  "original": "Crème brûlée",
+  "cuisine": "french",
+  "course": "dessert",
+  "base": "creme-brulee"
+ },
+ {
+  "slug": "croque-monsieur",
+  "name": "法式火腿芝士三明治",
+  "original": "Croque-monsieur",
+  "cuisine": "french",
+  "course": "breakfast",
+  "base": "croque-monsieur"
+ },
+ {
+  "slug": "demi-glace",
+  "name": "半釉汁",
+  "original": "Demi-glace",
+  "cuisine": "french",
+  "course": "sauce",
+  "base": "demi-glace"
+ },
+ {
+  "slug": "tomates-farcies",
+  "name": "法式酿番茄",
+  "original": "Tomates farcies",
+  "cuisine": "french",
+  "course": "meat",
+  "base": "farci-tomatoes"
+ },
+ {
+  "slug": "flammekueche",
+  "name": "阿尔萨斯火焰薄饼",
+  "original": "Flammekueche",
+  "cuisine": "french",
+  "course": "staple",
+  "base": "flammkuchen"
+ },
+ {
+  "slug": "pain-perdu",
+  "name": "法式吐司",
+  "original": "Pain perdu",
+  "cuisine": "french",
+  "course": "breakfast",
+  "base": "french-toast"
+ },
+ {
+  "slug": "cotes-de-porc-charcutieres",
+  "name": "芥末酸黄瓜酱猪排",
+  "original": "Côtes de porc charcutière",
+  "cuisine": "french",
+  "course": "meat",
+  "base": "french-mustard-sauce-porkchops"
+ },
+ {
+  "slug": "bisque-de-homard",
+  "name": "龙虾浓汤",
+  "original": "Bisque de homard",
+  "cuisine": "french",
+  "course": "soup",
+  "base": "lobster-bisque"
+ },
+ {
+  "slug": "quiche-lorraine",
+  "name": "洛林咸派",
+  "original": "Quiche lorraine",
+  "cuisine": "french",
+  "course": "staple",
+  "base": "quiche"
+ },
+ {
+  "slug": "ratatouille",
+  "name": "普罗旺斯炖菜",
+  "original": "Ratatouille",
+  "cuisine": "french",
+  "course": "veg",
+  "base": "ratatouille"
+ },
+ {
+  "slug": "coq-au-vin",
+  "name": "红酒烩鸡",
+  "original": "Coq au vin",
+  "cuisine": "french",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "blanquette-de-veau",
+  "name": "白汁烩小牛肉",
+  "original": "Blanquette de veau",
+  "cuisine": "french",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "pot-au-feu",
+  "name": "法式蔬菜炖牛肉",
+  "original": "Pot-au-feu",
+  "cuisine": "french",
+  "course": "soup",
+  "base": null
+ },
+ {
+  "slug": "gratin-dauphinois",
+  "name": "多菲内焗土豆",
+  "original": "Gratin dauphinois",
+  "cuisine": "french",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "puree-de-pommes-de-terre",
+  "name": "法式土豆泥",
+  "original": "Purée de pommes de terre",
+  "cuisine": "french",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "vinaigrette",
+  "name": "法式油醋汁",
+  "original": "Vinaigrette",
+  "cuisine": "french",
+  "course": "sauce",
+  "base": null
+ },
+ {
+  "slug": "mayonnaise",
+  "name": "蛋黄酱",
+  "original": "Mayonnaise",
+  "cuisine": "french",
+  "course": "sauce",
+  "base": null
+ },
+ {
+  "slug": "bearnaise",
+  "name": "贝阿恩酱",
+  "original": "Sauce béarnaise",
+  "cuisine": "french",
+  "course": "sauce",
+  "base": null
+ },
+ {
+  "slug": "steak-au-poivre",
+  "name": "黑胡椒牛排",
+  "original": "Steak au poivre",
+  "cuisine": "french",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "sole-meuniere",
+  "name": "黄油煎鳎鱼",
+  "original": "Sole meunière",
+  "cuisine": "french",
+  "course": "seafood",
+  "base": null
+ },
+ {
+  "slug": "moules-marinieres",
+  "name": "白酒青口",
+  "original": "Moules marinières",
+  "cuisine": "french",
+  "course": "seafood",
+  "base": null
+ },
+ {
+  "slug": "vichyssoise",
+  "name": "韭葱土豆冷汤",
+  "original": "Vichyssoise",
+  "cuisine": "french",
+  "course": "soup",
+  "base": null
+ },
+ {
+  "slug": "salade-nicoise",
+  "name": "尼斯沙拉",
+  "original": "Salade niçoise",
+  "cuisine": "french",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "mousse-au-chocolat",
+  "name": "巧克力慕斯",
+  "original": "Mousse au chocolat",
+  "cuisine": "french",
+  "course": "dessert",
+  "base": null
+ },
+ {
+  "slug": "creme-caramel",
+  "name": "焦糖布丁",
+  "original": "Crème caramel",
+  "cuisine": "french",
+  "course": "dessert",
+  "base": null
+ },
+ {
+  "slug": "tarte-tatin",
+  "name": "反烤苹果挞",
+  "original": "Tarte Tatin",
+  "cuisine": "french",
+  "course": "dessert",
+  "base": null
+ },
+ {
+  "slug": "clafoutis",
+  "name": "樱桃克拉芙缇",
+  "original": "Clafoutis aux cerises",
+  "cuisine": "french",
+  "course": "dessert",
+  "base": null
+ },
+ {
+  "slug": "gougeres",
+  "name": "奶酪泡芙",
+  "original": "Gougères",
+  "cuisine": "french",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "souffle-au-fromage",
+  "name": "奶酪舒芙蕾",
+  "original": "Soufflé au fromage",
+  "cuisine": "french",
+  "course": "breakfast",
+  "base": null
+ },
+ {
+  "slug": "poulet-roti",
+  "name": "法式烤鸡",
+  "original": "Poulet rôti",
+  "cuisine": "french",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "confit-de-canard",
+  "name": "油封鸭腿",
+  "original": "Confit de canard",
+  "cuisine": "french",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "hachis-parmentier",
+  "name": "法式牧羊人派",
+  "original": "Hachis parmentier",
+  "cuisine": "french",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "carottes-vichy",
+  "name": "维希胡萝卜",
+  "original": "Carottes Vichy",
+  "cuisine": "french",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "petits-pois-a-la-francaise",
+  "name": "法式豌豆",
+  "original": "Petits pois à la française",
+  "cuisine": "french",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "madeleines",
+  "name": "玛德琳",
+  "original": "Madeleines",
+  "cuisine": "french",
+  "course": "dessert",
+  "base": null
+ },
+ {
+  "slug": "profiteroles",
+  "name": "巧克力泡芙",
+  "original": "Profiteroles",
+  "cuisine": "french",
+  "course": "dessert",
+  "base": null
+ },
+ {
+  "slug": "creme-anglaise",
+  "name": "英式蛋奶酱",
+  "original": "Crème anglaise",
+  "cuisine": "french",
+  "course": "sauce",
+  "base": null
+ },
+ {
+  "slug": "cassoulet",
+  "name": "卡酥来砂锅",
+  "original": "Cassoulet",
+  "cuisine": "french",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "salade-lyonnaise",
+  "name": "里昂沙拉",
+  "original": "Salade lyonnaise",
+  "cuisine": "french",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "castagnole",
+  "name": "狂欢节小炸球",
+  "original": "Castagnole",
+  "cuisine": "italian",
+  "course": "dessert",
+  "base": "castagnole"
+ },
+ {
+  "slug": "polenta",
+  "name": "玉米粥",
+  "original": "Polenta",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": "corn-polenta"
+ },
+ {
+  "slug": "crostata",
+  "name": "果酱格子挞",
+  "original": "Crostata di marmellata",
+  "cuisine": "italian",
+  "course": "dessert",
+  "base": "crostata"
+ },
+ {
+  "slug": "frittata",
+  "name": "意式烘蛋",
+  "original": "Frittata",
+  "cuisine": "italian",
+  "course": "breakfast",
+  "base": "frittata"
+ },
+ {
+  "slug": "gnocchi-di-patate",
+  "name": "土豆团子",
+  "original": "Gnocchi di patate",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": "gnocchi"
+ },
+ {
+  "slug": "granita-al-limone",
+  "name": "柠檬冰沙",
+  "original": "Granita al limone",
+  "cuisine": "italian",
+  "course": "dessert",
+  "base": "granita"
+ },
+ {
+  "slug": "pizza-margherita",
+  "name": "玛格丽特披萨",
+  "original": "Pizza Margherita",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "lasagne-alla-bolognese",
+  "name": "博洛尼亚千层面",
+  "original": "Lasagne alla bolognese",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": "lasagna"
+ },
+ {
+  "slug": "risotto-ai-funghi",
+  "name": "蘑菇烩饭",
+  "original": "Risotto ai funghi",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": "mushroom-risotto"
+ },
+ {
+  "slug": "penne-allarrabbiata",
+  "name": "香辣番茄笔管面",
+  "original": "Penne all'arrabbiata",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": "pasta-arrabbiata"
+ },
+ {
+  "slug": "pasta-alla-norma",
+  "name": "诺尔玛茄子面",
+  "original": "Pasta alla Norma",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": "pasta-alla-norma"
+ },
+ {
+  "slug": "ragu-napoletano",
+  "name": "那不勒斯肉酱",
+  "original": "Ragù napoletano",
+  "cuisine": "italian",
+  "course": "meat",
+  "base": "ragu-napoletano"
+ },
+ {
+  "slug": "ricotta",
+  "name": "自制乳清奶酪",
+  "original": "Ricotta fatta in casa",
+  "cuisine": "italian",
+  "course": "sauce",
+  "base": "ricotta"
+ },
+ {
+  "slug": "ravioli-ricotta-spinaci",
+  "name": "菠菜乳清奶酪饺",
+  "original": "Ravioli ricotta e spinaci",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": "ravioli"
+ },
+ {
+  "slug": "spaghetti-allamatriciana",
+  "name": "阿马特里切面",
+  "original": "Spaghetti all'amatriciana",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": "spaghetti-all-amatriciana"
+ },
+ {
+  "slug": "spaghetti-alla-puttanesca",
+  "name": "烟花女面",
+  "original": "Spaghetti alla puttanesca",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": "spaghetti-alla-puttanesca"
+ },
+ {
+  "slug": "arista-alla-fiorentina",
+  "name": "佛罗伦萨烤猪里脊",
+  "original": "Arista alla fiorentina",
+  "cuisine": "italian",
+  "course": "meat",
+  "base": "tuscan-style-pork-roast"
+ },
+ {
+  "slug": "tiramisu",
+  "name": "提拉米苏",
+  "original": "Tiramisù",
+  "cuisine": "italian",
+  "course": "dessert",
+  "base": "tiramisu"
+ },
+ {
+  "slug": "tortellini-in-brodo",
+  "name": "清汤馄饨",
+  "original": "Tortellini in brodo",
+  "cuisine": "italian",
+  "course": "soup",
+  "base": "tortellini"
+ },
+ {
+  "slug": "polpette-al-sugo",
+  "name": "番茄汁肉丸",
+  "original": "Polpette al sugo",
+  "cuisine": "italian",
+  "course": "meat",
+  "base": "basic-meatballs"
+ },
+ {
+  "slug": "fettuccine-al-burro",
+  "name": "黄油奶酪宽面",
+  "original": "Fettuccine al burro",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "pesto-alla-genovese",
+  "name": "热那亚青酱",
+  "original": "Pesto alla genovese",
+  "cuisine": "italian",
+  "course": "sauce",
+  "base": null
+ },
+ {
+  "slug": "pasta-e-fagioli",
+  "name": "意式豆子面汤",
+  "original": "Pasta e fagioli",
+  "cuisine": "italian",
+  "course": "soup",
+  "base": null
+ },
+ {
+  "slug": "pasta-e-ceci",
+  "name": "鹰嘴豆面汤",
+  "original": "Pasta e ceci",
+  "cuisine": "italian",
+  "course": "soup",
+  "base": null
+ },
+ {
+  "slug": "minestrone",
+  "name": "意式蔬菜汤",
+  "original": "Minestrone",
+  "cuisine": "italian",
+  "course": "soup",
+  "base": null
+ },
+ {
+  "slug": "ribollita",
+  "name": "托斯卡纳面包蔬菜汤",
+  "original": "Ribollita",
+  "cuisine": "italian",
+  "course": "soup",
+  "base": null
+ },
+ {
+  "slug": "ossobuco-alla-milanese",
+  "name": "米兰炖小牛膝",
+  "original": "Ossobuco alla milanese",
+  "cuisine": "italian",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "saltimbocca-alla-romana",
+  "name": "罗马火腿鼠尾草小牛排",
+  "original": "Saltimbocca alla romana",
+  "cuisine": "italian",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "vitello-tonnato",
+  "name": "金枪鱼酱小牛肉",
+  "original": "Vitello tonnato",
+  "cuisine": "italian",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "pollo-alla-cacciatora",
+  "name": "猎人烩鸡",
+  "original": "Pollo alla cacciatora",
+  "cuisine": "italian",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "scaloppine-al-limone",
+  "name": "柠檬煎肉片",
+  "original": "Scaloppine al limone",
+  "cuisine": "italian",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "cotoletta-alla-milanese",
+  "name": "米兰炸肉排",
+  "original": "Cotoletta alla milanese",
+  "cuisine": "italian",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "parmigiana-di-melanzane",
+  "name": "焗茄子",
+  "original": "Parmigiana di melanzane",
+  "cuisine": "italian",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "caponata",
+  "name": "西西里酸甜茄子",
+  "original": "Caponata",
+  "cuisine": "italian",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "bruschetta-al-pomodoro",
+  "name": "番茄烤面包",
+  "original": "Bruschetta al pomodoro",
+  "cuisine": "italian",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "panzanella",
+  "name": "托斯卡纳面包沙拉",
+  "original": "Panzanella",
+  "cuisine": "italian",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "insalata-caprese",
+  "name": "卡普里沙拉",
+  "original": "Insalata caprese",
+  "cuisine": "italian",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "focaccia-genovese",
+  "name": "热那亚佛卡夏",
+  "original": "Focaccia genovese",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "arancini",
+  "name": "西西里炸饭团",
+  "original": "Arancini",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "risi-e-bisi",
+  "name": "威尼斯豌豆饭",
+  "original": "Risi e bisi",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "spaghetti-alle-vongole",
+  "name": "蛤蜊意面",
+  "original": "Spaghetti alle vongole",
+  "cuisine": "italian",
+  "course": "seafood",
+  "base": null
+ },
+ {
+  "slug": "sugo-di-pomodoro",
+  "name": "黄油洋葱番茄酱",
+  "original": "Sugo di pomodoro al burro",
+  "cuisine": "italian",
+  "course": "sauce",
+  "base": null
+ },
+ {
+  "slug": "pasta-alla-gricia",
+  "name": "格里查面",
+  "original": "Pasta alla gricia",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "orecchiette-con-cime-di-rapa",
+  "name": "西兰花苔猫耳朵面",
+  "original": "Orecchiette con cime di rapa",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "panna-cotta",
+  "name": "意式奶冻",
+  "original": "Panna cotta",
+  "cuisine": "italian",
+  "course": "dessert",
+  "base": null
+ },
+ {
+  "slug": "zabaione",
+  "name": "沙巴雍",
+  "original": "Zabaione",
+  "cuisine": "italian",
+  "course": "dessert",
+  "base": null
+ },
+ {
+  "slug": "affogato",
+  "name": "阿芙佳朵",
+  "original": "Affogato",
+  "cuisine": "italian",
+  "course": "dessert",
+  "base": null
+ },
+ {
+  "slug": "cantucci",
+  "name": "意式杏仁脆饼",
+  "original": "Cantucci",
+  "cuisine": "italian",
+  "course": "dessert",
+  "base": null
+ },
+ {
+  "slug": "peperonata",
+  "name": "炖甜椒",
+  "original": "Peperonata",
+  "cuisine": "italian",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "fagioli-alluccelletto",
+  "name": "鼠尾草番茄白豆",
+  "original": "Fagioli all'uccelletto",
+  "cuisine": "italian",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "salsa-verde",
+  "name": "意式青酱汁",
+  "original": "Salsa verde",
+  "cuisine": "italian",
+  "course": "sauce",
+  "base": null
+ },
+ {
+  "slug": "piadina",
+  "name": "罗马涅薄饼",
+  "original": "Piadina romagnola",
+  "cuisine": "italian",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "pad-kra-pao",
+  "name": "打抛猪肉饭",
+  "original": "Phat kaphrao mu sap",
+  "cuisine": "thai",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "pad-thai",
+  "name": "泰式炒河粉",
+  "original": "Phat Thai",
+  "cuisine": "thai",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "gaeng-keow-wan-gai",
+  "name": "绿咖喱鸡",
+  "original": "Kaeng khiao wan kai",
+  "cuisine": "thai",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "gaeng-phed-moo",
+  "name": "红咖喱猪肉",
+  "original": "Kaeng phet mu",
+  "cuisine": "thai",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "panang-neua",
+  "name": "帕能咖喱牛肉",
+  "original": "Phanaeng neua",
+  "cuisine": "thai",
+  "course": "meat",
+  "base": "panang-style-beef-curry"
+ },
+ {
+  "slug": "gaeng-massaman",
+  "name": "马沙文咖喱",
+  "original": "Kaeng matsaman",
+  "cuisine": "thai",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "tom-yum-goong",
+  "name": "冬阴功汤",
+  "original": "Tom yam kung",
+  "cuisine": "thai",
+  "course": "soup",
+  "base": null
+ },
+ {
+  "slug": "tom-kha-gai",
+  "name": "椰汁南姜鸡汤",
+  "original": "Tom kha kai",
+  "cuisine": "thai",
+  "course": "soup",
+  "base": null
+ },
+ {
+  "slug": "som-tam",
+  "name": "青木瓜沙拉",
+  "original": "Som tam",
+  "cuisine": "thai",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "larb-moo",
+  "name": "泰式猪肉碎沙拉",
+  "original": "Lap mu",
+  "cuisine": "thai",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "khao-pad",
+  "name": "泰式炒饭",
+  "original": "Khao phat",
+  "cuisine": "thai",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "pad-see-ew",
+  "name": "泰式酱油炒河粉",
+  "original": "Phat si-io",
+  "cuisine": "thai",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "pad-pak-boong",
+  "name": "清炒空心菜（泰式）",
+  "original": "Phat phak bung fai daeng",
+  "cuisine": "thai",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "gai-yang",
+  "name": "泰式烤鸡",
+  "original": "Kai yang",
+  "cuisine": "thai",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "satay-gai",
+  "name": "沙爹鸡串配花生酱",
+  "original": "Sate kai",
+  "cuisine": "thai",
+  "course": "meat",
+  "base": "chicken-satay"
+ },
+ {
+  "slug": "khao-man-gai",
+  "name": "泰式海南鸡饭",
+  "original": "Khao man kai",
+  "cuisine": "thai",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "yam-woon-sen",
+  "name": "凉拌粉丝",
+  "original": "Yam wun sen",
+  "cuisine": "thai",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "khao-niao-mamuang",
+  "name": "芒果糯米饭",
+  "original": "Khao niao mamuang",
+  "cuisine": "thai",
+  "course": "dessert",
+  "base": null
+ },
+ {
+  "slug": "nam-jim-jaew",
+  "name": "泰式烤肉蘸酱",
+  "original": "Nam chim chaeo",
+  "cuisine": "thai",
+  "course": "sauce",
+  "base": null
+ },
+ {
+  "slug": "nam-prik-pla",
+  "name": "鱼露辣椒汁",
+  "original": "Nam phrik nam pla",
+  "cuisine": "thai",
+  "course": "sauce",
+  "base": null
+ },
+ {
+  "slug": "pho-bo",
+  "name": "越南牛肉河粉",
+  "original": "Phở bò",
+  "cuisine": "vietnamese",
+  "course": "soup",
+  "base": "pho-soup"
+ },
+ {
+  "slug": "bun-cha",
+  "name": "烤肉米线",
+  "original": "Bún chả",
+  "cuisine": "vietnamese",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "goi-cuon",
+  "name": "越南春卷（米纸卷）",
+  "original": "Gỏi cuốn",
+  "cuisine": "vietnamese",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "ca-kho-to",
+  "name": "砂锅焦糖焖鱼",
+  "original": "Cá kho tộ",
+  "cuisine": "vietnamese",
+  "course": "seafood",
+  "base": null
+ },
+ {
+  "slug": "thit-kho-trung",
+  "name": "椰汁卤肉蛋",
+  "original": "Thịt kho trứng",
+  "cuisine": "vietnamese",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "canh-chua-ca",
+  "name": "越南酸鱼汤",
+  "original": "Canh chua cá",
+  "cuisine": "vietnamese",
+  "course": "soup",
+  "base": null
+ },
+ {
+  "slug": "banh-mi-thit",
+  "name": "越南法棍三明治",
+  "original": "Bánh mì thịt",
+  "cuisine": "vietnamese",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "nuoc-cham",
+  "name": "越南鱼露蘸汁",
+  "original": "Nước chấm",
+  "cuisine": "vietnamese",
+  "course": "sauce",
+  "base": null
+ },
+ {
+  "slug": "bo-luc-lac",
+  "name": "越南骰子牛肉",
+  "original": "Bò lúc lắc",
+  "cuisine": "vietnamese",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "ga-xao-sa-ot",
+  "name": "香茅辣椒炒鸡",
+  "original": "Gà xào sả ớt",
+  "cuisine": "vietnamese",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "bun-thit-nuong",
+  "name": "烤猪肉米线沙拉",
+  "original": "Bún thịt nướng",
+  "cuisine": "vietnamese",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "dashi",
+  "name": "日式高汤",
+  "original": "Dashi",
+  "cuisine": "japanese",
+  "course": "sauce",
+  "base": null
+ },
+ {
+  "slug": "miso-shiru",
+  "name": "味噌汤",
+  "original": "Misoshiru",
+  "cuisine": "japanese",
+  "course": "soup",
+  "base": "miso-soup"
+ },
+ {
+  "slug": "oyakodon",
+  "name": "亲子丼",
+  "original": "Oyakodon",
+  "cuisine": "japanese",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "gyudon",
+  "name": "牛丼",
+  "original": "Gyūdon",
+  "cuisine": "japanese",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "tamagoyaki",
+  "name": "日式厚蛋烧",
+  "original": "Tamagoyaki",
+  "cuisine": "japanese",
+  "course": "breakfast",
+  "base": null
+ },
+ {
+  "slug": "chawanmushi",
+  "name": "茶碗蒸",
+  "original": "Chawanmushi",
+  "cuisine": "japanese",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "chicken-teriyaki",
+  "name": "照烧鸡腿",
+  "original": "Tori no teriyaki",
+  "cuisine": "japanese",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "tonkatsu",
+  "name": "日式炸猪排",
+  "original": "Tonkatsu",
+  "cuisine": "japanese",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "karaage",
+  "name": "日式炸鸡块",
+  "original": "Karaage",
+  "cuisine": "japanese",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "nikujaga",
+  "name": "土豆炖肉",
+  "original": "Nikujaga",
+  "cuisine": "japanese",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "okonomiyaki",
+  "name": "大阪烧",
+  "original": "Okonomiyaki",
+  "cuisine": "japanese",
+  "course": "staple",
+  "base": "okonomiyaki"
+ },
+ {
+  "slug": "onigiri",
+  "name": "饭团",
+  "original": "Onigiri",
+  "cuisine": "japanese",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "japanese-curry",
+  "name": "日式咖喱饭",
+  "original": "Karē raisu",
+  "cuisine": "japanese",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "horenso-no-gomaae",
+  "name": "芝麻拌菠菜",
+  "original": "Hōrensō no goma-ae",
+  "cuisine": "japanese",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "bibimbap",
+  "name": "石锅拌饭",
+  "original": "Bibimbap",
+  "cuisine": "korean",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "bulgogi",
+  "name": "韩式烤牛肉",
+  "original": "Bulgogi",
+  "cuisine": "korean",
+  "course": "meat",
+  "base": null
+ },
+ {
+  "slug": "kimchi-jjigae",
+  "name": "泡菜汤",
+  "original": "Kimchi-jjigae",
+  "cuisine": "korean",
+  "course": "soup",
+  "base": null
+ },
+ {
+  "slug": "doenjang-jjigae",
+  "name": "大酱汤",
+  "original": "Doenjang-jjigae",
+  "cuisine": "korean",
+  "course": "soup",
+  "base": null
+ },
+ {
+  "slug": "japchae",
+  "name": "杂菜炒粉丝",
+  "original": "Japchae",
+  "cuisine": "korean",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "tteokbokki",
+  "name": "辣炒年糕",
+  "original": "Tteokbokki",
+  "cuisine": "korean",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "sundubu-jjigae",
+  "name": "嫩豆腐汤",
+  "original": "Sundubu-jjigae",
+  "cuisine": "korean",
+  "course": "soup",
+  "base": null
+ },
+ {
+  "slug": "baechu-kimchi",
+  "name": "白菜泡菜",
+  "original": "Baechu-kimchi",
+  "cuisine": "korean",
+  "course": "veg",
+  "base": null
+ },
+ {
+  "slug": "kimchi-bokkeumbap",
+  "name": "泡菜炒饭",
+  "original": "Kimchi-bokkeumbap",
+  "cuisine": "korean",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "haemul-pajeon",
+  "name": "海鲜葱饼",
+  "original": "Haemul-pajeon",
+  "cuisine": "korean",
+  "course": "staple",
+  "base": null
+ },
+ {
+  "slug": "gyeran-jjim",
+  "name": "韩式蒸蛋",
+  "original": "Gyeran-jjim",
+  "cuisine": "korean",
+  "course": "breakfast",
+  "base": null
+ },
+ {
+  "slug": "kongnamul-muchim",
+  "name": "凉拌黄豆芽",
+  "original": "Kongnamul-muchim",
+  "cuisine": "korean",
+  "course": "veg",
+  "base": null
+ }
+]

@@ -1,5 +1,5 @@
 /* Palette ported from nickwang.xyz (src/css/custom.css): warm ivory / matte graphite,
-   red primary, and the shared accent set. Cuisines use red, blue and green. */
+   red primary, and the shared accent set. Each cuisine picks one accent. */
 
 :root {
   color-scheme: light;
@@ -15,6 +15,9 @@
   --accent-blue: #2f6fca;
   --accent-green: #2f8359;
   --accent-yellow: #a66b00;
+  --accent-teal: #1d7d84;
+  --accent-purple: #7650ad;
+  --accent-orange: #b95a1b;
   --check: #2f8359;
 
   --font-sans: "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -40,6 +43,9 @@
     --accent-blue: #73a7ff;
     --accent-green: #67c58e;
     --accent-yellow: #f7be3b;
+    --accent-teal: #5cc6cc;
+    --accent-purple: #b996f0;
+    --accent-orange: #ff9c5c;
     --check: #67c58e;
   }
 }
@@ -58,9 +64,16 @@
   --accent-blue: #73a7ff;
   --accent-green: #67c58e;
   --accent-yellow: #f7be3b;
+  --accent-teal: #5cc6cc;
+  --accent-purple: #b996f0;
+  --accent-orange: #ff9c5c;
   --check: #67c58e;
 }
 
 .accent-red { --accent: var(--accent-red); }
 .accent-blue { --accent: var(--accent-blue); }
 .accent-green { --accent: var(--accent-green); }
+.accent-yellow { --accent: var(--accent-yellow); }
+.accent-teal { --accent: var(--accent-teal); }
+.accent-purple { --accent: var(--accent-purple); }
+.accent-orange { --accent: var(--accent-orange); }

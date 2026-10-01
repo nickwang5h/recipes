@@ -1,6 +1,7 @@
 # recipes.nickwang.xyz
 
-Astro static site: Chinese / French / Italian cooking principles and recipes, Chinese only for now.
+Astro static site: cooking principles and recipes (Chinese, French, Italian, Thai, Vietnamese, Japanese,
+Korean), written in Chinese only for now.
 Design spec: `docs/superpowers/specs/2026-09-30-recipes-site-design.md`.
 
 ## Content

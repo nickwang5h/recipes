@@ -386,3 +386,138 @@
 - { id: grapefruit, zh: 葡萄柚, aliases: [西柚], en: Grapefruit, kind: fruit, where: mainstream }
 - { id: coconut-milk, zh: 椰奶, en: Unsweetened coconut milk, kind: other, where: mainstream, pantry: true }
 - { id: food-grade-slaked-lime, zh: 食用熟石灰, aliases: [食品级氢氧化钙], en: Food-grade calcium hydroxide / pickling lime, kind: seasoning, where: specialty, pantry: true }
+- { id: buckwheat-flour, zh: 荞麦粉, aliases: [荞麦面粉, 纯荞麦粉], en: Buckwheat flour, kind: grain, where: mainstream, pantry: true }
+- { id: red-wine-vinegar, zh: 红葡萄酒醋, aliases: [红酒醋], en: Red wine vinegar, kind: seasoning, where: mainstream, pantry: true, substitutes: [white-wine-vinegar] }
+- { id: vanilla-extract, zh: 香草精, aliases: [天然香草精, 香草提取液], en: Pure vanilla extract, kind: seasoning, where: mainstream, pantry: true }
+- { id: white-sandwich-bread, zh: 白吐司, aliases: [白切片面包, 白方包, 白土司, 白吐司面包, 白面包], en: White sandwich bread, kind: grain, where: mainstream }
+- { id: dijon-mustard, zh: 第戎芥末酱, aliases: [法式芥末酱, Dijon 芥末, 第戎芥末, Dijon mustard], en: Dijon mustard, kind: seasoning, where: mainstream, pantry: true }
+- { id: madeira, zh: 马德拉酒, aliases: [马德拉葡萄酒], en: Dry Madeira wine, kind: alcohol, where: mainstream, pantry: true }
+- { id: creme-fraiche, zh: 发酵厚奶油, aliases: [法式酸奶油, crème fraîche], en: "Crème fraîche (35% M.F.)", kind: egg-dairy, where: mainstream }
+- { id: cornichons, zh: 小酸黄瓜, aliases: [法式酸黄瓜, 酸黄瓜], en: Cornichons / sour gherkins, kind: seasoning, where: mainstream, pantry: true }
+- { id: demi-glace, zh: 褐色浓酱, aliases: [半浓缩褐色酱, demi-glace], en: Demi-glace sauce / demi-glace sauce mix, kind: seasoning, where: mainstream }
+- { id: lobster, zh: 龙虾, aliases: [加拿大龙虾, 美洲龙虾], en: Whole lobster, kind: seafood, where: mainstream }
+- { id: tarragon, zh: 龙蒿, aliases: [法国龙蒿, 法式龙蒿, Estragon], en: Fresh tarragon, kind: aromatic, where: mainstream }
+- { id: dover-sole, zh: 多佛鳎鱼, aliases: [欧洲鳎鱼, Dover sole, 整条鳎鱼], en: Whole Dover sole, kind: seafood, where: specialty }
+- { id: mussels, zh: 青口, aliases: [贻贝, 青口贝, 蓝贻贝], en: Fresh blue mussels, kind: seafood, where: mainstream }
+- { id: chives, zh: 细香葱, aliases: [西式细香葱], en: Fresh chives, kind: aromatic, where: mainstream }
+- { id: radish, zh: 小红萝卜, aliases: [樱桃萝卜, 水萝卜], en: Radishes, kind: vegetable, where: mainstream }
+- { id: baby-artichoke, zh: 小洋蓟, aliases: [嫩洋蓟, 鲜小洋蓟], en: Fresh baby artichokes, kind: vegetable, where: specialty }
+- { id: fresh-fava-bean, zh: 鲜蚕豆, aliases: [嫩蚕豆, 鲜胡豆], en: Fresh fava beans / broad beans, kind: vegetable, where: asian }
+- { id: canned-tuna, zh: 金枪鱼罐头, aliases: [吞拿鱼罐头, 油浸金枪鱼, 罐装吞拿鱼], en: Canned tuna in olive oil, kind: seafood, where: mainstream, pantry: true }
+- { id: anchovy, zh: 腌鳀鱼, aliases: [鳀鱼片, 油浸鳀鱼, 盐腌鳀鱼, 凤尾鱼, 凤尾鱼柳, 腌凤尾鱼, 鳀鱼柳, 油浸凤尾鱼, 油浸凤尾鱼片, 腌凤尾鱼片, 盐渍鳀鱼片, 油浸鳀鱼片, Anchovy fillets, 凤尾鱼片, 盐渍凤尾鱼], en: Anchovy fillets in oil / salt-packed anchovies, kind: seafood, where: mainstream, pantry: true }
+- { id: black-olive, zh: 黑橄榄, aliases: [尼斯橄榄, Kalamata 橄榄, Gaeta 橄榄, 盐水浸黑橄榄], en: Niçoise olives / Kalamata olives, kind: vegetable, where: mainstream, pantry: true }
+- { id: basil, zh: 罗勒, aliases: [甜罗勒, 鲜罗勒, 意大利罗勒, Genovese basil, Sweet basil, 新鲜罗勒, Basil], en: Fresh basil, kind: aromatic, where: mainstream }
+- { id: dark-chocolate, zh: 半甜巧克力, aliases: [半甜烘焙巧克力, 苦甜巧克力, 黑巧克力], en: Semisweet baking chocolate, kind: other, where: mainstream, pantry: true }
+- { id: coffee, zh: 咖啡, aliases: [浓咖啡, 咖啡粉, 意式浓缩咖啡, Espresso, 浓缩咖啡], en: Ground coffee / instant coffee, kind: other, where: mainstream, pantry: true }
+- { id: orange-liqueur, zh: 橙味利口酒, aliases: [橙酒, Cointreau, Grand Marnier], en: Orange liqueur (Cointreau / Grand Marnier), kind: alcohol, where: mainstream, pantry: true }
+- { id: pasteurized-egg-white, zh: 巴氏杀菌蛋清液, aliases: [巴氏杀菌蛋白液], en: Pasteurized liquid egg whites, kind: egg-dairy, where: mainstream }
+- { id: apple, zh: 苹果, aliases: [金冠苹果], en: Apples (Golden Delicious), kind: fruit, where: mainstream }
+- { id: cherry, zh: 甜樱桃, aliases: [樱桃, 深色甜樱桃], en: Sweet cherries (Bing), kind: fruit, where: mainstream }
+- { id: duck-fat, zh: 鸭油, aliases: [鸭脂, 炼鸭油], en: Rendered duck fat, kind: seasoning, where: mainstream }
+- { id: baking-powder, zh: 泡打粉, aliases: [复合膨松剂], en: Baking powder, kind: seasoning, where: mainstream, pantry: true }
+- { id: cornmeal, zh: 玉米粗粉, aliases: [玉米面, 玉米粉, 波伦塔粉], en: Coarse yellow cornmeal / polenta, kind: grain, where: mainstream, pantry: true }
+- { id: fruit-jam, zh: 果酱, aliases: [杏果酱, 樱桃果酱], en: Apricot jam / cherry jam, kind: seasoning, where: mainstream, pantry: true }
+- { id: sage, zh: 鼠尾草, aliases: [鲜鼠尾草, 鼠尾草叶, 新鲜鼠尾草, 新鲜鼠尾草叶, Salvia], en: Fresh sage, kind: aromatic, where: mainstream }
+- { id: anise-liqueur, zh: 茴香酒, aliases: [茴香利口酒, 珊布卡, Sambuca], en: Anise liqueur (Sambuca), kind: alcohol, where: specialty, pantry: true, substitutes: [rum] }
+- { id: vanilla-bean, zh: 香草荚, aliases: [香草豆荚, 香草籽, 香草棒, Vanilla bean, 香草豆], en: Vanilla beans, kind: seasoning, where: mainstream, pantry: true }
+- { id: fresh-mozzarella, zh: 新鲜马苏里拉奶酪, aliases: [鲜马苏里拉, fior di latte, Mozzarella, 马苏里拉奶酪, 新鲜莫扎雷拉奶酪, 鲜莫扎里拉, 马苏里拉鲜奶酪, Fiordilatte, Fior di latte, Bocconcini, 鲜马苏里拉奶酪], en: Fresh mozzarella, kind: egg-dairy, where: mainstream }
+- { id: dried-porcini, zh: 干牛肝菌, aliases: [干 porcini], en: Dried porcini mushrooms, kind: dried, where: mainstream, pantry: true }
+- { id: penne, zh: 笔管面, aliases: [斜管面, penne rigate], en: Penne rigate pasta, kind: grain, where: mainstream, pantry: true, substitutes: [spaghetti] }
+- { id: ricotta-salata, zh: 盐渍熟成里科塔, aliases: [咸里科塔, ricotta salata], en: Ricotta salata cheese, kind: egg-dairy, where: specialty, substitutes: [pecorino-romano] }
+- { id: ricotta, zh: 乳清奶酪, aliases: [瑞可塔, Ricotta], en: Whole milk ricotta cheese, kind: egg-dairy, where: mainstream }
+- { id: rosemary, zh: 迷迭香, aliases: [新鲜迷迭香, Rosemary], en: Fresh rosemary, kind: aromatic, where: mainstream }
+- { id: capers, zh: 酸豆, aliases: [刺山柑花蕾, 水瓜柳, 盐渍酸豆, 醋渍刺山柑, 刺山柑, 腌刺山柑, Capers], en: Capers, kind: seasoning, where: mainstream, pantry: true }
+- { id: mascarpone, zh: 马斯卡彭奶酪, aliases: [马斯卡波尼, Mascarpone], en: Mascarpone cheese, kind: egg-dairy, where: mainstream }
+- { id: ladyfinger, zh: 意式手指饼干, aliases: [手指饼干, Savoiardi], en: Lady fingers / savoiardi biscuits, kind: grain, where: mainstream, pantry: true }
+- { id: cocoa-powder, zh: 无糖可可粉, aliases: [可可粉], en: Unsweetened cocoa powder, kind: seasoning, where: mainstream, pantry: true }
+- { id: prosciutto, zh: 意式风干火腿, aliases: [Prosciutto crudo, 帕尔马火腿, 意式生火腿], en: Prosciutto, kind: meat, where: mainstream }
+- { id: mortadella, zh: 意式摩泰台拉香肠, aliases: [Mortadella, 博洛尼亚香肠], en: Mortadella, kind: meat, where: mainstream }
+- { id: fresh-fettuccine, zh: 鲜鸡蛋宽面, aliases: [Fettuccine, 鲜意大利宽面], en: Fresh egg fettuccine, kind: grain, where: mainstream }
+- { id: fiore-sardo, zh: 沙丁岛羊奶酪, aliases: [Fiore Sardo, 沙丁岛硬羊奶酪], en: "Fiore Sardo (aged Sardinian sheep's milk cheese)", kind: egg-dairy, where: specialty, substitutes: [pecorino-romano] }
+- { id: borlotti-bean, zh: 花芸豆, aliases: [Borlotti, Cranberry beans, Romano beans], en: Dried Romano beans / cranberry beans, kind: dried, where: mainstream, pantry: true, substitutes: [white-bean] }
+- { id: ditalini, zh: 小管意面, aliases: [Ditalini, Ditali, 小通心粉], en: Ditalini / ditali pasta, kind: grain, where: mainstream, pantry: true }
+- { id: chickpea, zh: 鹰嘴豆, aliases: [Chickpeas, Garbanzo beans], en: Dried chickpeas / garbanzo beans, kind: dried, where: mainstream, pantry: true }
+- { id: lacinato-kale, zh: 黑羽衣甘蓝, aliases: [托斯卡纳羽衣甘蓝, 黑甘蓝, 恐龙羽衣甘蓝, Cavolo nero], en: Lacinato kale / Tuscan kale / Dinosaur kale, kind: vegetable, where: mainstream }
+- { id: savoy-cabbage, zh: 皱叶甘蓝, aliases: [皱叶包菜, 萨伏伊甘蓝], en: Savoy cabbage, kind: vegetable, where: mainstream, substitutes: [cabbage] }
+- { id: swiss-chard, zh: 叶用甜菜, aliases: [瑞士甜菜, 牛皮菜], en: Swiss chard, kind: vegetable, where: mainstream, substitutes: [spinach] }
+- { id: country-bread, zh: 乡村面包, aliases: [欧式乡村面包, 托斯卡纳面包, 意式白面包, 乡村白面包], en: Country bread / Rustic bread, kind: grain, where: mainstream, substitutes: [baguette] }
+- { id: veal-shank, zh: 带骨小牛腱, aliases: [小牛膝, 小牛腿骨切片], en: Veal shank / Osso buco, kind: meat, where: mainstream }
+- { id: veal-cutlet, zh: 小牛肉薄排, aliases: [小牛肉片, 小牛腿肉薄片, 小牛腿肉片, 小牛肉薄片], en: Veal scallopini / Veal cutlets, kind: meat, where: mainstream }
+- { id: veal-leg-roast, zh: 去骨小牛腿肉, aliases: [小牛腿肉整块, 小牛后腿肉], en: Boneless veal leg roast / Veal eye of round, kind: meat, where: mainstream }
+- { id: veal-rib-chop, zh: 带骨小牛肋排, aliases: [小牛肋骨肉排], en: Veal rib chops, kind: meat, where: mainstream }
+- { id: green-olives, zh: 绿橄榄, aliases: [盐水绿橄榄, 去核绿橄榄], en: Pitted green olives in brine, kind: seasoning, where: mainstream, pantry: true }
+- { id: clam, zh: 蛤蜊, aliases: [活蛤蜊, 带壳蛤蜊, 花蛤, 蚬], en: Live clams (Manila / littleneck), kind: seafood, where: mainstream }
+- { id: caciocavallo, zh: 卡乔卡瓦洛奶酪, aliases: [Caciocavallo], en: Caciocavallo cheese (unsmoked), kind: egg-dairy, where: specialty }
+- { id: pecorino-amatrice, zh: Amatrice 羊奶酪, aliases: [Pecorino di Amatrice, 阿马特里切羊奶酪], en: Pecorino di Amatrice (semi-aged sheep milk cheese), kind: egg-dairy, where: specialty, substitutes: [pecorino-romano] }
+- { id: fresh-orecchiette, zh: 鲜猫耳朵面, aliases: [鲜猫耳面, 鲜 Orecchiette], en: Fresh orecchiette, kind: grain, where: specialty }
+- { id: rapini, zh: 西兰花苔, aliases: [Rapini, Broccoli rabe, Broccoli raab, Cime di rapa], en: Rapini / broccoli rabe, kind: vegetable, where: mainstream }
+- { id: gelatin, zh: 无味明胶, aliases: [吉利丁, 吉利丁片, 吉利丁粉, 明胶片, 明胶粉], en: Unflavoured gelatine (powder or sheets), kind: other, where: mainstream, pantry: true }
+- { id: marsala, zh: 马沙拉酒, aliases: [玛萨拉酒, Marsala], en: Marsala wine, kind: alcohol, where: specialty, pantry: true }
+- { id: vanilla-ice-cream, zh: 香草冰淇淋, aliases: [香草冰激凌, 香草 Gelato, 香草雪糕], en: Vanilla ice cream / vanilla gelato, kind: egg-dairy, where: mainstream }
+- { id: almond, zh: 杏仁, aliases: [甜杏仁, 扁桃仁, 去皮杏仁, 生杏仁], en: Whole almonds / blanched whole almonds, kind: other, where: mainstream, pantry: true }
+- { id: anise-seed, zh: 茴芹籽, aliases: [洋茴香籽, Anise seed, Aniseed], en: Anise seed / aniseed, kind: seasoning, where: mainstream, pantry: true }
+- { id: holy-basil, zh: 圣罗勒, aliases: [打抛叶, 泰国圣罗勒, Kaphrao], en: Fresh holy basil, kind: aromatic, where: specialty, substitutes: [thai-basil] }
+- { id: thai-basil, zh: 泰国甜罗勒, aliases: [泰国罗勒, Horapha, 九层塔, 越南罗勒], en: Thai basil, kind: aromatic, where: asian, substitutes: [basil] }
+- { id: thai-sweet-soy-sauce, zh: 泰式甜黑酱油, aliases: [泰式甜酱油, Sweet dark soy sauce, 泰式黑甜酱油], en: Thai sweet soy sauce, kind: seasoning, where: asian, pantry: true }
+- { id: palm-sugar, zh: 棕榈糖, aliases: [泰国棕榈糖, 泰式棕榈糖], en: Palm sugar, kind: seasoning, where: asian, pantry: true, substitutes: [brown-sugar] }
+- { id: tamarind-pulp, zh: 罗望子果肉, aliases: [酸角果肉, 罗望子果肉块, 罗望子块], en: Tamarind pulp, kind: seasoning, where: asian, pantry: true }
+- { id: lime, zh: 青柠, aliases: [青柠檬, 莱姆, 青柠汁, 酸橙], en: Limes, kind: fruit, where: mainstream, substitutes: [lemon] }
+- { id: coconut-cream, zh: 无糖椰浆, aliases: [浓椰浆, 椰奶浓脂层], en: Unsweetened coconut cream, kind: other, where: mainstream, pantry: true, substitutes: [coconut-milk] }
+- { id: thai-eggplant, zh: 泰国圆茄, aliases: [泰国小圆茄, 泰国茄子], en: Thai eggplant, kind: vegetable, where: asian, substitutes: [eggplant] }
+- { id: makrut-lime-leaf, zh: 马蜂橙叶, aliases: [泰国柠檬叶, 泰式青柠叶, Makrut lime leaves], en: Makrut lime leaves / kaffir lime leaves, kind: aromatic, where: asian }
+- { id: green-curry-paste, zh: 泰式绿咖喱酱, aliases: [绿咖喱膏], en: Thai green curry paste, kind: seasoning, where: mainstream, pantry: true }
+- { id: red-curry-paste, zh: 泰式红咖喱酱, aliases: [红咖喱膏], en: Thai red curry paste, kind: seasoning, where: mainstream, pantry: true }
+- { id: massaman-curry-paste, zh: 马沙文咖喱酱, aliases: [马沙文咖喱膏, Matsaman curry paste], en: Massaman curry paste, kind: seasoning, where: asian, pantry: true }
+- { id: galangal, zh: 鲜南姜, aliases: [鲜高良姜, 泰国姜, Galangal], en: Fresh galangal, kind: aromatic, where: asian }
+- { id: green-papaya, zh: 青木瓜, aliases: [生木瓜, 未熟木瓜], en: Green papaya, kind: fruit, where: asian }
+- { id: gai-lan, zh: 芥兰, aliases: [芥蓝, Chinese broccoli], en: Gai lan / Chinese broccoli, kind: vegetable, where: asian }
+- { id: mint, zh: 鲜薄荷, aliases: [薄荷叶, 新鲜薄荷, 留兰香, 鲜薄荷叶], en: Fresh mint, kind: aromatic, where: mainstream }
+- { id: rice-paper, zh: 越南米纸, aliases: [米纸, 越南春卷皮], en: Rice paper wrappers, kind: grain, where: mainstream, pantry: true }
+- { id: catfish, zh: 鲶鱼, aliases: [鲶鱼段], en: Catfish steaks / fillets, kind: seafood, where: asian, substitutes: [basa] }
+- { id: coconut-water, zh: 椰子水, aliases: [椰青水, 椰汁], en: Unsweetened coconut water, kind: other, where: mainstream, pantry: true }
+- { id: okra, zh: 秋葵, aliases: [羊角豆], en: Okra, kind: vegetable, where: mainstream }
+- { id: rice-paddy-herb, zh: 稻田香草, aliases: [稻田草, ngò om, rau om], en: Rice paddy herb (ngo om), kind: aromatic, where: specialty }
+- { id: mayonnaise, zh: 蛋黄酱, aliases: [美乃滋, 原味蛋黄酱, 沙拉酱], en: Mayonnaise, kind: seasoning, where: mainstream, pantry: true }
+- { id: liver-pate, zh: 肝酱, aliases: [肝泥, 肝肉酱], en: Liver pâté, kind: meat, where: mainstream }
+- { id: cha-lua, zh: 越南熟肉肠, aliases: [越南猪肉肠, 越南扎肉, Chả lụa, Giò lụa], en: Cooked Vietnamese pork sausage (Cha lua), kind: meat, where: asian, substitutes: [ham] }
+- { id: watercress, zh: 西洋菜, aliases: [豆瓣菜], en: Watercress, kind: vegetable, where: mainstream, substitutes: [lettuce] }
+- { id: madras-curry-powder, zh: 马德拉斯咖喱粉, aliases: [Madras 咖喱粉], en: Madras curry powder, kind: seasoning, where: mainstream, pantry: true }
+- { id: kombu, zh: 出汁昆布, aliases: [昆布, 日式干昆布, 干昆布, Kombu, Konbu, 干海带, 다시마, dashima], en: Dried kombu kelp, kind: dried, where: asian, pantry: true }
+- { id: katsuobushi, zh: 柴鱼片, aliases: [木鱼花, 鲣鱼片, 鲣节薄片, Katsuobushi, Bonito flakes, 鰹節], en: Dried bonito flakes, kind: dried, where: asian, pantry: true }
+- { id: dashi-stock, zh: 日式高汤, aliases: [出汁, 昆布柴鱼高汤, Dashi], en: Dashi stock (bonito and kombu), kind: seasoning, where: asian }
+- { id: miso, zh: 味噌, aliases: [味噌酱, 红味噌, 赤味噌, 白味噌, Miso], en: Japanese miso paste, kind: soy, where: asian, pantry: true }
+- { id: wakame, zh: 干裙带菜, aliases: [裙带菜, Wakame], en: Dried wakame seaweed, kind: dried, where: asian, pantry: true }
+- { id: japanese-soy-sauce, zh: 日式浓口酱油, aliases: [日式酱油, 浓口酱油, Koikuchi shoyu], en: Japanese soy sauce (Kikkoman Soy Sauce), kind: seasoning, where: mainstream, pantry: true, substitutes: [light-soy-sauce] }
+- { id: mirin, zh: 味醂, aliases: [本味醂, 本味淋, 味淋, Mirin, Hon mirin], en: Hon mirin (sweet rice cooking wine), kind: alcohol, where: asian, pantry: true }
+- { id: cooking-sake, zh: 日式清酒, aliases: [清酒, 料理清酒, Cooking sake, 日本清酒, 日式料理酒], en: Japanese sake (unsalted), kind: alcohol, where: asian, pantry: true }
+- { id: short-grain-rice, zh: 日式粳米, aliases: [日式短粒米, 寿司米, Sushi rice, 短粒粳米, 粳米, 短粒米], en: Sushi rice (short or medium grain), kind: grain, where: mainstream, pantry: true }
+- { id: japanese-light-soy-sauce, zh: 日式淡口酱油, aliases: [薄口酱油, Usukuchi shoyu], en: Usukuchi light colour soy sauce, kind: seasoning, where: asian, pantry: true, substitutes: [japanese-soy-sauce] }
+- { id: tonkatsu-sauce, zh: 日式炸猪排酱, aliases: [猪排酱, Tonkatsu sauce], en: Tonkatsu sauce, kind: seasoning, where: asian, pantry: true }
+- { id: nori, zh: 烤海苔, aliases: [寿司海苔, 烧海苔], en: Sushi nori / roasted seaweed sheets, kind: dried, where: mainstream, pantry: true }
+- { id: okonomiyaki-sauce, zh: 大阪烧酱, aliases: [御好烧酱, 好烧酱], en: Okonomiyaki sauce, kind: seasoning, where: asian, pantry: true, substitutes: [tonkatsu-sauce] }
+- { id: tenkasu, zh: 天妇罗碎, aliases: [天かす, 揚げ玉, Agedama], en: Tenkasu / tempura flakes, kind: grain, where: specialty, pantry: true }
+- { id: beni-shoga, zh: 红腌姜, aliases: [红生姜, 紅しょうが], en: Beni shoga / red pickled ginger, kind: seasoning, where: asian, pantry: true }
+- { id: aonori, zh: 青海苔粉, aliases: [青のり, 青海苔碎], en: Aonori / green seaweed flakes, kind: dried, where: asian, pantry: true, substitutes: [nori] }
+- { id: soybean-sprout, zh: 黄豆芽, aliases: [大豆芽, 콩나물], en: Soybean sprouts, kind: vegetable, where: asian, substitutes: [mung-bean-sprout] }
+- { id: honey, zh: 蜂蜜, en: Honey, kind: seasoning, where: mainstream, pantry: true, substitutes: [sugar] }
+- { id: cooked-fernbrake, zh: 熟蕨菜, aliases: [熟制蕨菜, 熟 고사리, 熟 gosari], en: Cooked fernbrake / boiled gosari, kind: vegetable, where: asian, substitutes: [spinach] }
+- { id: dried-bellflower-root, zh: 干桔梗根, aliases: [干桔梗, 도라지, doraji], en: Dried bellflower root / doraji, kind: dried, where: asian, pantry: true }
+- { id: pear, zh: 梨, aliases: [亚洲梨, 韩国梨, Bosc 梨], en: Asian pear / Bosc pear, kind: fruit, where: mainstream }
+- { id: gochujang, zh: 韩式辣椒酱, aliases: [韩国辣椒酱, 고추장], en: Gochujang / Korean hot pepper paste, kind: seasoning, where: asian, pantry: true }
+- { id: gochugaru, zh: 韩式辣椒碎, aliases: [韩式辣椒粉, 韩国辣椒粉, 고춧가루, 韩式辣椒面], en: Gochugaru / Korean red pepper flakes, kind: seasoning, where: asian, pantry: true }
+- { id: kimchi, zh: 韩式白菜泡菜, aliases: [韩国泡菜, 白菜泡菜, 배추김치, 韩式泡菜], en: Napa cabbage kimchi, kind: vegetable, where: mainstream }
+- { id: doenjang, zh: 韩式大酱, aliases: [韩国大酱, 된장], en: Doenjang / Korean fermented soybean paste, kind: seasoning, where: asian, pantry: true }
+- { id: dried-anchovy, zh: 干鳀鱼, aliases: [煮汤鳀鱼, 멸치], en: Large dried anchovies for soup stock, kind: dried, where: asian, pantry: true }
+- { id: korean-fish-cake, zh: 韩式鱼糕, aliases: [韩国鱼糕, 어묵, eomuk], en: Korean fish cake / eomuk, kind: seafood, where: asian }
+- { id: squid, zh: 鱿鱼, aliases: [鱿鱼筒, 鱿鱼圈], en: Squid / calamari, kind: seafood, where: mainstream }
+- { id: beef-short-ribs, zh: 牛短肋, aliases: [带骨牛短肋, 带骨牛小排], en: Beef short ribs (bone-in), kind: meat, where: mainstream }
+- { id: turnip, zh: 芜菁, aliases: [蔓菁, 白肉芜菁], en: Turnips (white-fleshed), kind: vegetable, where: mainstream }
+- { id: parsnip, zh: 欧防风, aliases: [欧洲防风, 防风根], en: Parsnips, kind: vegetable, where: mainstream }
+- { id: chervil, zh: 细叶芹, aliases: [法式细叶芹, 法国细叶芹, 蝉翼芹], en: Fresh chervil, kind: aromatic, where: specialty, substitutes: [parsley] }
+- { id: frisee, zh: 卷叶菊苣, aliases: [卷叶苦苣, 法式苦苣, Frisée, Curly endive], en: Frisée / curly endive, kind: vegetable, where: specialty, substitutes: [lettuce] }
+- { id: french-garlic-sausage, zh: 法式蒜肠, aliases: [法式蒜香猪肉香肠, "Saucisson à l'ail"], en: "French garlic sausage (saucisson à l'ail)", kind: meat, where: specialty, substitutes: [fresh-pork-sausage] }
+- { id: fresh-pork-sausage, zh: 生鲜猪肉香肠, aliases: [未烟熏猪肉香肠], en: Fresh pork sausages, kind: meat, where: mainstream }
+- { id: japanese-curry-roux, zh: 日式咖喱块, aliases: [咖喱块, 咖喱酱块], en: Japanese curry sauce mix / curry roux blocks, kind: seasoning, where: mainstream, pantry: true }
+- { id: turmeric, zh: 姜黄粉, aliases: [姜黄], en: Ground turmeric, kind: seasoning, where: mainstream, pantry: true }
+- { id: coriander-seed, zh: 芫荽籽, aliases: [芫荽籽粉, 香菜籽], en: Coriander seed / ground coriander, kind: seasoning, where: mainstream, pantry: true }
+- { id: veal-shoulder, zh: 小牛肩肉, en: Veal shoulder / veal stewing meat, kind: meat, where: mainstream, substitutes: [beef-chuck] }

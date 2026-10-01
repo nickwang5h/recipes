@@ -30,7 +30,7 @@ const cuisines = defineCollection({
     title: z.string(),
     original: z.string().optional(),
     summary: z.string(),
-    accent: z.enum(['red', 'blue', 'green']),
+    accent: z.enum(['red', 'blue', 'green', 'yellow', 'teal', 'purple', 'orange']),
     principles: z.array(reference('principles')).default([]),
     featured: z.array(reference('recipes')).default([]),
     order: z.number(),
