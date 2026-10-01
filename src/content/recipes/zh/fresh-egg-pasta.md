@@ -2,6 +2,7 @@
 title: 手工鸡蛋面
 original: Pasta all'uovo
 cuisine: italian
+course: staple
 summary: 鸡蛋与面粉揉成结实面团，静置后擀薄切条；揉面建立面筋，煮面时蛋白质凝固，让面条柔韧而完整。
 servings: 4
 time: { prep: 75, cook: 5 }
@@ -9,12 +10,12 @@ principles: [gluten, protein-coagulation]
 ingredients:
   - group: 面团
     items:
-      - { name: 普通小麦面粉, qty: 400, unit: g, note: 意大利 0 或 00 型适合鲜面的面粉；普通中筋面粉也可 }
-      - { name: 鸡蛋, qty: 4, unit: 个, note: 中等大小，面粉分次加入 }
+      - { ref: flour, name: 普通小麦面粉, qty: 400, unit: g, note: 意大利 0 或 00 型适合鲜面的面粉；普通中筋面粉也可 }
+      - { ref: egg, qty: 4, unit: 个, note: 中等大小，面粉分次加入 }
   - group: 擀面与煮面
     items:
-      - { name: 面粉, note: 少量，撒在操作台和切好的面条上防粘 }
-      - { name: 盐, note: 煮面用，适量 }
+      - { ref: flour, name: 面粉, note: 少量，撒在操作台和切好的面条上防粘 }
+      - { ref: salt, note: 煮面用，适量 }
 sources:
   - title: "Essentials of Classic Italian Cooking（1992）"
     author: Marcella Hazan

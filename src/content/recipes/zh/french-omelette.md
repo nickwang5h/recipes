@@ -2,15 +2,17 @@
 title: 法式蛋卷
 original: Omelette
 cuisine: french
+course: breakfast
 summary: 浅黄而光滑的外皮，包住细小、柔软的蛋凝块；快速搅动和及时离火决定口感。
 servings: 1
 time: { prep: 5, cook: 2 }
 principles: [protein-coagulation, heat-transfer]
 ingredients:
   - items:
-      - { name: 鸡蛋, qty: 3, unit: 个, note: 大号；中心不全熟，给孕妇、老人、小孩吃用巴氏杀菌蛋 }
-      - { name: 无盐黄油, qty: 14, unit: g }
-      - { name: 盐、白胡椒, note: 适量 }
+      - { ref: egg, qty: 3, unit: 个, note: 大号；中心不全熟，给孕妇、老人、小孩吃用巴氏杀菌蛋 }
+      - { ref: unsalted-butter, qty: 14, unit: g }
+      - { ref: salt, note: 适量 }
+      - { ref: white-pepper, name: 白胡椒, note: 适量 }
 sources:
   - title: "Mastering the Art of French Cooking, Vol. 1（1961）"
     author: Julia Child, Louisette Bertholle, Simone Beck

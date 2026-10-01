@@ -2,6 +2,7 @@
 title: 黑胡椒奶酪意面
 original: Cacio e pepe
 cuisine: italian
+course: staple
 summary: 只有面、Pecorino、黑胡椒和煮面水。酱汁顺不顺，取决于两件事：淀粉够不够，奶酪下锅时烫不烫。
 servings: 2
 time: { prep: 10, cook: 15 }
@@ -9,14 +10,14 @@ principles: [emulsification, starch-gelatinization]
 ingredients:
   - group: 主料
     items:
-      - { name: 意面, qty: 200, unit: g, note: tonnarelli 或粗一点的 spaghetti }
-      - { name: Pecorino Romano, qty: 100, unit: g, note: 用最细的擦板擦碎 }
-      - { name: 整粒黑胡椒, qty: 2, unit: 茶匙, note: 粗粗压碎 }
-      - { name: 盐, note: 煮面用，比平时少放；Pecorino 已经很咸 }
+      - { ref: spaghetti, qty: 200, unit: g, note: tonnarelli 或粗一点的 spaghetti }
+      - { ref: pecorino-romano, qty: 100, unit: g, note: 用最细的擦板擦碎 }
+      - { ref: black-pepper, name: 整粒黑胡椒, qty: 2, unit: 茶匙, note: 粗粗压碎 }
+      - { ref: salt, note: 煮面用，比平时少放；Pecorino 已经很咸 }
   - group: 保险（可选）
     items:
-      - { name: 玉米淀粉或土豆淀粉, qty: 2.5, unit: g, note: 约为奶酪重量的 2–3% }
-      - { name: 冷水, qty: 50, unit: ml, note: 用来糊化淀粉 }
+      - { ref: cornstarch, name: 玉米淀粉或土豆淀粉, qty: 2.5, unit: g, note: 约为奶酪重量的 2–3% }
+      - { ref: water, name: 冷水, qty: 50, unit: ml, note: 用来糊化淀粉 }
 sources:
   - title: "Phase behavior of Cacio e Pepe sauce, Physics of Fluids 37, 044122（2025）"
     author: G. Bartolucci, D. M. Busiello, M. Ciarchi, A. Corticelli, I. Di Terlizzi, F. Olmeda, D. Revignas, V. M. Schimmenti

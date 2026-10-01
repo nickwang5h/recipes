@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import RecipeCard from '../../components/RecipeCard.astro';
+import { COURSES, type Course } from '../../lib/categories';
 import { getCuisineMap, getCuisines, url } from '../../lib/site';
 
 const cuisines = await getCuisines();
@@ -10,46 +11,64 @@ const order = new Map(cuisines.map((c, i) => [c.id, i]));
 const recipes = (await getCollection('recipes')).sort(
   (a, b) => order.get(a.data.cuisine.id)! - order.get(b.data.cuisine.id)! || a.data.title.localeCompare(b.data.title, 'zh'),
 );
+const usedCourses = (Object.keys(COURSES) as Course[]).filter((c) => recipes.some((r) => r.data.course === c));
 const base = url('recipes');
 ---
 
 <Base title="菜谱" description="中餐、法餐、意大利菜的经典菜谱。">
   <header class="page-head">
     <h1>菜谱</h1>
-    <p class="lede">每道菜都标出它用到的原理。份量可以缩放，配料和步骤可以逐项勾掉。</p>
+    <p class="lede">每道菜都标出它用到的原理。份量可以缩放，配料和步骤可以逐项勾掉；配料附英文名，方便在加拿大的超市对照采购。</p>
   </header>
 
-  <nav class="filters chips" aria-label="按菜系筛选" data-filters>
-    <a class="chip" href={base} data-filter="" aria-current="true">全部</a>
-    {cuisines.map((c) => <a class="chip" href={`${base}?cuisine=${c.id}`} data-filter={c.id}>{c.data.title}</a>)}
+  <nav class="filters chips" aria-label="按菜系筛选" data-filter-group="cuisine">
+    <a class="chip" href={base} data-value="">全部菜系</a>
+    {cuisines.map((c) => <a class="chip" href={`${base}?cuisine=${c.id}`} data-value={c.id}>{c.data.title}</a>)}
+  </nav>
+  <nav class="filters chips" aria-label="按类型筛选" data-filter-group="course">
+    <a class="chip" href={base} data-value="">全部类型</a>
+    {usedCourses.map((c) => <a class="chip" href={`${base}?course=${c}`} data-value={c}>{COURSES[c]}</a>)}
   </nav>
 
+  <p class="filter-count" data-count>{recipes.length} 道菜</p>
   <ul class="card-grid" data-recipe-list>
     {recipes.map((recipe) => (
-      <li data-cuisine={recipe.data.cuisine.id}>
+      <li data-cuisine={recipe.data.cuisine.id} data-course={recipe.data.course}>
         <RecipeCard recipe={recipe} cuisine={cuisineMap.get(recipe.data.cuisine.id)!} />
       </li>
     ))}
   </ul>
-  <p data-empty hidden style="color: var(--muted)">这个菜系还没有菜谱。</p>
+  <p data-empty hidden style="color: var(--muted)">没有符合条件的菜谱。</p>
 
   <script>
+    const GROUPS = ['cuisine', 'course'] as const;
+
     const apply = () => {
-      const filter = new URLSearchParams(location.search).get('cuisine') ?? '';
+      const params = new URLSearchParams(location.search);
       let shown = 0;
       for (const li of document.querySelectorAll<HTMLElement>('[data-recipe-list] > li')) {
-        const match = !filter || li.dataset.cuisine === filter;
+        const match = GROUPS.every((g) => !params.get(g) || li.dataset[g] === params.get(g));
         li.hidden = !match;
         if (match) shown++;
       }
-      for (const a of document.querySelectorAll<HTMLAnchorElement>('[data-filters] a')) {
-        if (a.dataset.filter === filter) a.setAttribute('aria-current', 'true');
-        else a.removeAttribute('aria-current');
+      for (const nav of document.querySelectorAll<HTMLElement>('[data-filter-group]')) {
+        const group = nav.dataset.filterGroup!;
+        for (const a of nav.querySelectorAll<HTMLAnchorElement>('a')) {
+          // Each link keeps the other group's current filter.
+          const next = new URLSearchParams(params);
+          if (a.dataset.value) next.set(group, a.dataset.value);
+          else next.delete(group);
+          a.href = `${location.pathname}${next.size ? `?${next}` : ''}`;
+          if ((params.get(group) ?? '') === a.dataset.value) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        }
       }
+      document.querySelector<HTMLElement>('[data-count]')!.textContent = `${shown} 道菜`;
       document.querySelector<HTMLElement>('[data-empty]')!.hidden = shown > 0;
     };
-    document.querySelector('[data-filters]')?.addEventListener('click', (event) => {
-      const link = (event.target as HTMLElement).closest('a');
+
+    document.addEventListener('click', (event) => {
+      const link = (event.target as HTMLElement).closest<HTMLAnchorElement>('[data-filter-group] a');
       if (!link) return;
       event.preventDefault();
       history.replaceState(null, '', link.href);

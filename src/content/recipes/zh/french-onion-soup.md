@@ -2,6 +2,7 @@
 title: 法式洋葱汤
 original: Soupe à l'oignon gratinée
 cuisine: french
+course: soup
 summary: 洋葱先炒到深褐色，再用牛肉高汤慢煮；面包和奶酪封住汤面，烤成一层金黄的壳。
 servings: 6
 time: { prep: 20, cook: 145 }
@@ -9,19 +10,20 @@ principles: [maillard-reaction, caramelization]
 ingredients:
   - group: 汤底
     items:
-      - { name: 黄洋葱, qty: 1100, unit: g, note: 去皮后称重，切薄丝 }
-      - { name: 无盐黄油, qty: 42, unit: g }
-      - { name: 食用油, qty: 1, unit: 汤匙 }
-      - { name: 糖, qty: 0.5, unit: 茶匙 }
-      - { name: 普通面粉, qty: 2, unit: 汤匙 }
-      - { name: 牛肉高汤, qty: 2400, unit: ml, note: 低盐，预先加热 }
-      - { name: 干型白味美思酒, qty: 240, unit: ml }
-      - { name: 干邑或其他白兰地, qty: 60, unit: ml }
-      - { name: 盐、黑胡椒, note: 适量 }
+      - { ref: onion, qty: 1100, unit: g, note: 去皮后称重，切薄丝 }
+      - { ref: unsalted-butter, qty: 42, unit: g }
+      - { ref: vegetable-oil, qty: 1, unit: 汤匙 }
+      - { ref: sugar, qty: 0.5, unit: 茶匙 }
+      - { ref: flour, qty: 2, unit: 汤匙 }
+      - { ref: beef-stock, qty: 2400, unit: ml, note: 低盐，预先加热 }
+      - { ref: dry-vermouth, name: 干型白味美思酒, qty: 240, unit: ml }
+      - { ref: brandy, name: 干邑或其他白兰地, qty: 60, unit: ml }
+      - { ref: salt, note: 适量 }
+      - { ref: black-pepper, note: 适量 }
   - group: 焗烤
     items:
-      - { name: 法棍面包, qty: 150, unit: g, note: 切成厚片，每碗一片，大小以盖住汤面为准 }
-      - { name: 格鲁耶尔奶酪（Gruyère）, qty: 150, unit: g, note: 刨碎 }
+      - { ref: baguette, name: 法棍面包, qty: 150, unit: g, note: 切成厚片，每碗一片，大小以盖住汤面为准 }
+      - { ref: gruyere, name: 格鲁耶尔奶酪（Gruyère）, qty: 150, unit: g, note: 刨碎 }
 sources:
   - title: "The Way to Cook（1989），French Onion Soup（Smithsonian 国家美国历史博物馆转载）"
     author: Julia Child

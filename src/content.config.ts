@@ -1,7 +1,18 @@
 import { defineCollection, reference } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { file, glob } from 'astro/loaders';
 import { z } from 'astro/zod';
-import { PRINCIPLE_CATEGORIES, type PrincipleCategory } from './lib/categories';
+import {
+  COURSES,
+  INGREDIENT_KINDS,
+  PRINCIPLE_CATEGORIES,
+  WHERE_TO_BUY,
+  type Course,
+  type IngredientKind,
+  type PrincipleCategory,
+  type WhereToBuy,
+} from './lib/categories';
+
+const keys = <T extends string>(o: Record<T, string>) => Object.keys(o) as [T, ...T[]];
 
 // Only Chinese is published for now. Each collection reads its `zh/` folder so
 // entry ids stay equal to the public slug; another locale becomes a sibling folder.
@@ -31,7 +42,7 @@ const principles = defineCollection({
   schema: z.object({
     title: z.string(),
     aliases: z.array(z.string()).default([]),
-    category: z.enum(Object.keys(PRINCIPLE_CATEGORIES) as [PrincipleCategory, ...PrincipleCategory[]]),
+    category: z.enum(keys<PrincipleCategory>(PRINCIPLE_CATEGORIES)),
     summary: z.string(),
     related: z.array(reference('principles')).default([]),
     sources: z.array(source).min(1),
@@ -39,11 +50,29 @@ const principles = defineCollection({
   }),
 });
 
+// The shared ingredient catalog. Recipes reference entries by id, which is what
+// makes ingredient-based features (fridge matching, shopping lists) possible.
+const ingredients = defineCollection({
+  loader: file('./src/data/ingredients.yaml'),
+  schema: z.object({
+    zh: z.string(),
+    aliases: z.array(z.string()).default([]),
+    en: z.string(),
+    kind: z.enum(keys<IngredientKind>(INGREDIENT_KINDS)),
+    where: z.enum(keys<WhereToBuy>(WHERE_TO_BUY)),
+    pantry: z.boolean().default(false),
+    substitutes: z.array(reference('ingredients')).default([]),
+  }),
+});
+
 const ingredient = z.object({
-  name: z.string(),
+  ref: reference('ingredients'),
+  // Display name when the recipe calls the ingredient something more specific.
+  name: z.string().optional(),
   qty: z.number().positive().optional(),
   unit: z.string().optional(),
   note: z.string().optional(),
+  optional: z.boolean().default(false),
 });
 
 const recipes = defineCollection({
@@ -52,6 +81,7 @@ const recipes = defineCollection({
     title: z.string(),
     original: z.string().optional(),
     cuisine: reference('cuisines'),
+    course: z.enum(keys<Course>(COURSES)),
     summary: z.string(),
     servings: z.number().int().positive(),
     time: z.object({ prep: z.number().int().nonnegative(), cook: z.number().int().nonnegative() }),
@@ -62,4 +92,4 @@ const recipes = defineCollection({
   }),
 });
 
-export const collections = { cuisines, principles, recipes };
+export const collections = { cuisines, principles, recipes, ingredients };

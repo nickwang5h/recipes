@@ -2,17 +2,19 @@
 title: 贝夏美酱
 original: Sauce béchamel
 cuisine: french
+course: sauce
 summary: 黄油面粉糊分散淀粉，牛奶提供水；加热后淀粉吸水膨胀，变成顺滑的白酱。
 servings: 4
 time: { prep: 5, cook: 15 }
 principles: [starch-gelatinization]
 ingredients:
   - items:
-      - { name: 无盐黄油, qty: 30, unit: g }
-      - { name: 普通面粉, qty: 30, unit: g }
-      - { name: 全脂牛奶, qty: 500, unit: ml }
-      - { name: 盐、白胡椒, note: 适量 }
-      - { name: 肉豆蔻, note: 少量，现刨 }
+      - { ref: unsalted-butter, qty: 30, unit: g }
+      - { ref: flour, qty: 30, unit: g }
+      - { ref: whole-milk, qty: 500, unit: ml }
+      - { ref: salt, note: 适量 }
+      - { ref: white-pepper, name: 白胡椒, note: 适量 }
+      - { ref: nutmeg, note: 少量，现刨 }
 sources:
   - title: "Mastering the Art of French Cooking, Vol. 1（1961）"
     author: Julia Child, Louisette Bertholle, Simone Beck

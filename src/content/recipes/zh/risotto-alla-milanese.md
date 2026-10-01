@@ -2,6 +2,7 @@
 title: 米兰烩饭
 original: Risotto alla milanese
 cuisine: italian
+course: staple
 summary: 藏红花给米饭染色，牛骨髓与黄油托住香气；米粒在热汤里释出淀粉，形成能流动的稠汁。
 servings: 4
 time: { prep: 10, cook: 30 }
@@ -9,18 +10,18 @@ principles: [starch-gelatinization]
 ingredients:
   - group: 米与底味
     items:
-      - { name: 烩饭米（Carnaroli）, qty: 320, unit: g, note: 不淘洗；也可用 Arborio }
-      - { name: 牛骨髓, qty: 50, unit: g, note: 从骨中取出，切碎 }
-      - { name: 洋葱, qty: 0.5, unit: 个, note: 切细末 }
-      - { name: 无盐黄油, qty: 40, unit: g, note: 炒洋葱用 }
-      - { name: 干白葡萄酒, qty: 50, unit: ml }
+      - { ref: risotto-rice, name: 烩饭米（Carnaroli）, qty: 320, unit: g, note: 不淘洗；也可用 Arborio }
+      - { ref: beef-marrow, qty: 50, unit: g, note: 从骨中取出，切碎 }
+      - { ref: onion, qty: 0.5, unit: 个, note: 切细末 }
+      - { ref: unsalted-butter, qty: 40, unit: g, note: 炒洋葱用 }
+      - { ref: dry-white-wine, qty: 50, unit: ml }
   - group: 汤与收尾
     items:
-      - { name: 牛肉高汤, qty: 1500, unit: ml, note: 清淡少盐，全程保持微沸 }
-      - { name: 藏红花, qty: 0.3, unit: g, note: 用一小勺热高汤泡开 }
-      - { name: 无盐黄油, qty: 40, unit: g, note: 冷藏，收尾用 }
-      - { name: Parmigiano Reggiano, qty: 80, unit: g, note: 细细擦碎 }
-      - { name: 盐, note: 适量，最后尝味再加 }
+      - { ref: beef-stock, qty: 1500, unit: ml, note: 清淡少盐，全程保持微沸 }
+      - { ref: saffron, qty: 0.3, unit: g, note: 用一小勺热高汤泡开 }
+      - { ref: unsalted-butter, qty: 40, unit: g, note: 冷藏，收尾用 }
+      - { ref: parmigiano-reggiano, qty: 80, unit: g, note: 细细擦碎 }
+      - { ref: salt, note: 适量，最后尝味再加 }
 sources:
   - title: "La scienza in cucina e l'arte di mangiar bene（1891），第 79 道 Risotto alla milanese II"
     author: Pellegrino Artusi

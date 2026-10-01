@@ -1,6 +1,7 @@
 ---
 title: 蛋炒饭
 cuisine: chinese
+course: staple
 summary: 煮熟的米饭先散去表面水分，再与鸡蛋快炒。米粒能分开，靠的是饭的状态、锅温和下锅的量。
 servings: 2
 time: { prep: 5, cook: 10 }
@@ -8,13 +9,13 @@ principles: [starch-gelatinization, oil-temperature]
 ingredients:
   - group: 主料
     items:
-      - { name: 熟米饭, qty: 450, unit: g, note: 长粒米饭，表面干爽；用安全冷藏的剩饭或刚煮好后摊开的饭 }
-      - { name: 鸡蛋, qty: 3, unit: 个 }
-      - { name: 葱, qty: 3, unit: 根, note: 切葱花 }
+      - { ref: jasmine-rice, name: 熟米饭, qty: 450, unit: g, note: 长粒米饭，表面干爽；用安全冷藏的剩饭或刚煮好后摊开的饭 }
+      - { ref: egg, qty: 3, unit: 个 }
+      - { ref: scallion, qty: 3, unit: 根, note: 切葱花 }
   - group: 调味
     items:
-      - { name: 植物油, qty: 3, unit: 汤匙, note: 分次用 }
-      - { name: 生抽, qty: 2, unit: 茶匙 }
+      - { ref: vegetable-oil, qty: 3, unit: 汤匙, note: 分次用 }
+      - { ref: light-soy-sauce, qty: 2, unit: 茶匙 }
 sources:
   - title: "On Food and Cooking: The Science and Lore of the Kitchen（修订版，2004）"
     author: Harold McGee

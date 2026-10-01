@@ -1,6 +1,7 @@
 ---
 title: 宫保鸡丁
 cuisine: chinese
+course: meat
 summary: 川式宫保鸡丁的荔枝味来自糖醋配合，干辣椒与花椒出香，薄芡裹肉，花生最后入锅保持脆口。
 servings: 2
 time: { prep: 20, cook: 10 }
@@ -8,30 +9,30 @@ principles: [starch-gelatinization, oil-temperature, knife-work]
 ingredients:
   - group: 主料与香料
     items:
-      - { name: 去骨鸡胸肉, qty: 325, unit: g, note: 切约 1.5 cm 的丁 }
-      - { name: 熟花生米, qty: 75, unit: g, note: 无盐，去皮，保持干燥 }
-      - { name: 葱, qty: 5, unit: 根, note: 只用葱白，切与鸡丁相近的小段 }
-      - { name: 蒜, qty: 3, unit: 瓣, note: 切薄片 }
-      - { name: 姜, note: 与蒜等量，切薄片 }
-      - { name: 干辣椒, qty: 10, unit: 个, note: 剪段去籽，按辣度减少 }
-      - { name: 花椒, qty: 1, unit: 茶匙 }
-      - { name: 植物油, qty: 2, unit: 汤匙 }
+      - { ref: chicken-breast, name: 去骨鸡胸肉, qty: 325, unit: g, note: 切约 1.5 cm 的丁 }
+      - { ref: roasted-peanuts, qty: 75, unit: g, note: 无盐，去皮，保持干燥 }
+      - { ref: scallion, qty: 5, unit: 根, note: 只用葱白，切与鸡丁相近的小段 }
+      - { ref: garlic, qty: 3, unit: 瓣, note: 切薄片 }
+      - { ref: ginger, note: 与蒜等量，切薄片 }
+      - { ref: dried-chili, qty: 10, unit: 个, note: 剪段去籽，按辣度减少 }
+      - { ref: sichuan-pepper, qty: 1, unit: 茶匙 }
+      - { ref: vegetable-oil, qty: 2, unit: 汤匙 }
   - group: 腌料
     items:
-      - { name: 盐, qty: 0.5, unit: 茶匙 }
-      - { name: 生抽, qty: 2, unit: 茶匙 }
-      - { name: 绍兴酒, qty: 1, unit: 茶匙 }
-      - { name: 土豆淀粉, qty: 1.5, unit: 茶匙 }
-      - { name: 清水, qty: 1, unit: 汤匙 }
+      - { ref: salt, qty: 0.5, unit: 茶匙 }
+      - { ref: light-soy-sauce, qty: 2, unit: 茶匙 }
+      - { ref: shaoxing-wine, qty: 1, unit: 茶匙 }
+      - { ref: potato-starch, qty: 1.5, unit: 茶匙 }
+      - { ref: water, qty: 1, unit: 汤匙 }
   - group: 碗汁
     items:
-      - { name: 白糖, qty: 1, unit: 汤匙 }
-      - { name: 镇江香醋, qty: 1, unit: 汤匙 }
-      - { name: 生抽, qty: 1, unit: 茶匙 }
-      - { name: 老抽, qty: 1, unit: 茶匙 }
-      - { name: 土豆淀粉, qty: 0.75, unit: 茶匙 }
-      - { name: 香油, qty: 1, unit: 茶匙 }
-      - { name: 清水, qty: 1, unit: 汤匙 }
+      - { ref: sugar, qty: 1, unit: 汤匙 }
+      - { ref: chinkiang-vinegar, qty: 1, unit: 汤匙 }
+      - { ref: light-soy-sauce, qty: 1, unit: 茶匙 }
+      - { ref: dark-soy-sauce, qty: 1, unit: 茶匙 }
+      - { ref: potato-starch, qty: 0.75, unit: 茶匙 }
+      - { ref: sesame-oil, qty: 1, unit: 茶匙 }
+      - { ref: water, qty: 1, unit: 汤匙 }
 sources:
   - title: "The Food of Sichuan（2019）"
     author: Fuchsia Dunlop

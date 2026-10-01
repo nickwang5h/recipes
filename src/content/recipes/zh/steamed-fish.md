@@ -1,6 +1,7 @@
 ---
 title: 清蒸鱼
 cuisine: chinese
+course: seafood
 summary: 粤式蒸全鱼：猛火蒸到刚熟，倒掉腥水，铺姜葱丝，淋滚油，再浇豉油。考的是火候，不是调料。
 servings: 3
 time: { prep: 15, cook: 15 }
@@ -8,23 +9,23 @@ principles: [heat-transfer, protein-coagulation]
 ingredients:
   - group: 鱼
     items:
-      - { name: 整条鲈鱼, qty: 680, unit: g, note: 去鳞、鳃和内脏，洗净擦干 }
-      - { name: 姜, qty: 3, unit: 片, note: 垫在鱼底下 }
+      - { ref: sea-bass, name: 整条鲈鱼, qty: 680, unit: g, note: 去鳞、鳃和内脏，洗净擦干 }
+      - { ref: ginger, qty: 3, unit: 片, note: 垫在鱼底下 }
   - group: 姜葱
     items:
-      - { name: 姜丝, qty: 3, unit: 汤匙, note: 切得越细越好 }
-      - { name: 葱, qty: 2, unit: 根, note: 切细丝，葱白和葱绿分开 }
-      - { name: 香菜, qty: 8, unit: 根, note: 切段 }
+      - { ref: ginger, name: 姜丝, qty: 3, unit: 汤匙, note: 切得越细越好 }
+      - { ref: scallion, qty: 2, unit: 根, note: 切细丝，葱白和葱绿分开 }
+      - { ref: cilantro, qty: 8, unit: 根, note: 切段 }
   - group: 豉油汁
     items:
-      - { name: 生抽, qty: 60, unit: ml }
-      - { name: 清水, qty: 60, unit: ml }
-      - { name: 白糖, qty: 0.75, unit: 茶匙 }
-      - { name: 盐, qty: 0.25, unit: 茶匙 }
-      - { name: 白胡椒粉, note: 少许 }
+      - { ref: light-soy-sauce, qty: 60, unit: ml }
+      - { ref: water, qty: 60, unit: ml }
+      - { ref: sugar, qty: 0.75, unit: 茶匙 }
+      - { ref: salt, qty: 0.25, unit: 茶匙 }
+      - { ref: white-pepper, note: 少许 }
   - group: 热油
     items:
-      - { name: 花生油或其他植物油, qty: 90, unit: ml }
+      - { ref: vegetable-oil, name: 花生油或其他植物油, qty: 90, unit: ml }
 sources:
   - title: "Cantonese Steamed Whole Fish"
     author: The Woks of Life

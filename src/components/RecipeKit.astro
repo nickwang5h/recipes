@@ -1,5 +1,6 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import { getEntries, type CollectionEntry } from 'astro:content';
+import { WHERE_TO_BUY } from '../lib/categories';
 import { formatQty } from '../lib/scale';
 
 interface Props {
@@ -8,6 +9,9 @@ interface Props {
 
 const { recipe } = Astro.props;
 const { servings, ingredients } = recipe.data;
+const catalog = new Map(
+  (await getEntries(ingredients.flatMap((group) => group.items.map((item) => item.ref)))).map((entry) => [entry.id, entry]),
+);
 ---
 
 <aside class="recipe-aside" data-recipe-kit data-slug={recipe.id} data-base={servings} aria-labelledby="ingredients-title">
@@ -32,7 +36,9 @@ const { servings, ingredients } = recipe.data;
     <>
       {group.group && <h3>{group.group}</h3>}
       <ul class="ingredients">
-        {group.items.map((item, i) => (
+        {group.items.map((item, i) => {
+          const info = catalog.get(item.ref.id)!.data;
+          return (
           <li>
             <label class="ing-row">
               <input type="checkbox" data-ing={`${g}-${i}`} />
@@ -42,12 +48,16 @@ const { servings, ingredients } = recipe.data;
                     <span class="n">{formatQty(item.qty, item.unit)}</span>{item.unit && <> {item.unit}</>}
                   </span>
                 )}
-                <span class="ing-name">{item.name}</span>
+                <span class="ing-name">{item.name ?? info.zh}</span>
+                {item.optional && <span class="ing-tag">可选</span>}
+                {info.where !== 'mainstream' && <span class={`ing-tag where-${info.where}`}>{WHERE_TO_BUY[info.where]}</span>}
+                <span class="ing-en" lang="en">{info.en}</span>
                 {item.note && <span class="ing-note">{item.note}</span>}
               </span>
             </label>
           </li>
-        ))}
+          );
+        })}
       </ul>
     </>
   ))}

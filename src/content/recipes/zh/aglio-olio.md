@@ -2,6 +2,7 @@
 title: 蒜油辣椒意面
 original: Spaghetti aglio, olio e peperoncino
 cuisine: italian
+course: staple
 summary: 蒜与辣椒在橄榄油里释香，煮面水提供淀粉和水相；翻拌把油打成细滴，让薄薄的酱裹住长面。
 servings: 2
 time: { prep: 5, cook: 15 }
@@ -9,15 +10,15 @@ principles: [emulsification, starch-gelatinization]
 ingredients:
   - group: 面与蒜油
     items:
-      - { name: 干制细长意面（spaghetti）, qty: 160, unit: g }
-      - { name: 特级初榨橄榄油, qty: 40, unit: g }
-      - { name: 蒜, qty: 1, unit: 瓣, note: 切薄片 }
-      - { name: 新鲜辣椒, qty: 1, unit: 个, note: 切碎，按辣度与口味减量 }
-      - { name: 欧芹, note: 少量，切碎 }
+      - { ref: spaghetti, name: 干制细长意面（spaghetti）, qty: 160, unit: g }
+      - { ref: extra-virgin-olive-oil, qty: 40, unit: g }
+      - { ref: garlic, qty: 1, unit: 瓣, note: 切薄片 }
+      - { ref: fresh-chili, qty: 1, unit: 个, note: 切碎，按辣度与口味减量 }
+      - { ref: parsley, note: 少量，切碎 }
   - group: 煮面与拌汁
     items:
-      - { name: 盐, note: 煮面用，适量 }
-      - { name: 煮面水, note: 捞面前留出一碗，分次补入锅中 }
+      - { ref: salt, note: 煮面用，适量 }
+      - { ref: water, name: 煮面水, note: 捞面前留出一碗，分次补入锅中 }
 sources:
   - title: "On Food and Cooking: The Science and Lore of the Kitchen（修订版，2004）"
     author: Harold McGee

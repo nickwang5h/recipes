@@ -2,6 +2,7 @@
 title: 麻婆豆腐
 original: Mápó dòufu
 cuisine: chinese
+course: meat
 summary: 嫩豆腐浸在红亮的芡汁里，麻、辣、烫、香都靠芡挂在豆腐上。重点是肉末煸酥和分次勾芡。
 servings: 3
 time: { prep: 15, cook: 15 }
@@ -9,26 +10,26 @@ principles: [starch-gelatinization, maillard-reaction]
 ingredients:
   - group: 主料
     items:
-      - { name: 嫩豆腐（南豆腐）, qty: 500, unit: g, note: 切 2 cm 方块 }
-      - { name: 牛肉末, qty: 100, unit: g, note: 带一点肥；也可用猪肉末 }
-      - { name: 蒜苗, qty: 3, unit: 根, note: 斜切小段；没有就用葱 }
+      - { ref: tofu-soft, name: 嫩豆腐（南豆腐）, qty: 500, unit: g, note: 切 2 cm 方块 }
+      - { ref: ground-beef, qty: 100, unit: g, note: 带一点肥；也可用猪肉末 }
+      - { ref: garlic-sprout, qty: 3, unit: 根, note: 斜切小段；没有就用葱 }
   - group: 调料
     items:
-      - { name: 郫县豆瓣, qty: 2.5, unit: 汤匙, note: 剁细 }
-      - { name: 豆豉, qty: 1, unit: 汤匙, note: 略剁 }
-      - { name: 辣椒面, qty: 2, unit: 茶匙, note: 按口味增减 }
-      - { name: 姜, qty: 10, unit: g, note: 切末 }
-      - { name: 蒜, qty: 3, unit: 瓣, note: 切末 }
-      - { name: 料酒, qty: 1, unit: 汤匙 }
-      - { name: 生抽, qty: 1, unit: 茶匙 }
-      - { name: 花椒面, qty: 1, unit: 茶匙, note: 花椒小火焙香后现磨 }
+      - { ref: doubanjiang, qty: 2.5, unit: 汤匙, note: 剁细 }
+      - { ref: douchi, qty: 1, unit: 汤匙, note: 略剁 }
+      - { ref: chili-flakes, qty: 2, unit: 茶匙, note: 按口味增减 }
+      - { ref: ginger, qty: 10, unit: g, note: 切末 }
+      - { ref: garlic, qty: 3, unit: 瓣, note: 切末 }
+      - { ref: shaoxing-wine, name: 料酒, qty: 1, unit: 汤匙 }
+      - { ref: light-soy-sauce, qty: 1, unit: 茶匙 }
+      - { ref: sichuan-pepper, name: 花椒面, qty: 1, unit: 茶匙, note: 花椒小火焙香后现磨 }
   - group: 液体与芡
     items:
-      - { name: 菜籽油或其他植物油, qty: 60, unit: ml }
-      - { name: 高汤或清水, qty: 250, unit: ml }
-      - { name: 土豆淀粉, qty: 1.5, unit: 汤匙 }
-      - { name: 冷水, qty: 3, unit: 汤匙, note: 与淀粉调成水淀粉 }
-      - { name: 盐, note: 焯豆腐用，一小撮 }
+      - { ref: vegetable-oil, name: 菜籽油或其他植物油, qty: 60, unit: ml }
+      - { ref: chicken-stock, name: 高汤或清水, qty: 250, unit: ml }
+      - { ref: potato-starch, qty: 1.5, unit: 汤匙 }
+      - { ref: water, name: 冷水, qty: 3, unit: 汤匙, note: 与淀粉调成水淀粉 }
+      - { ref: salt, note: 焯豆腐用，一小撮 }
 sources:
   - title: "The Food of Sichuan（2019），Mapo Tofu"
     author: Fuchsia Dunlop

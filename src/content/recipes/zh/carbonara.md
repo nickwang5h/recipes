@@ -2,6 +2,7 @@
 title: 罗马蛋黄培根意面
 original: Carbonara
 cuisine: italian
+course: staple
 summary: 蛋黄、Pecorino、腌猪颊肉和黑胡椒，不加奶油。酱汁的浓滑，靠的是离火后用余热让蛋黄刚好变稠。
 servings: 2
 time: { prep: 10, cook: 20 }
@@ -9,14 +10,14 @@ principles: [protein-coagulation, emulsification]
 ingredients:
   - group: 主料
     items:
-      - { name: 意面（spaghetti）, qty: 160, unit: g }
-      - { name: 腌猪颊肉（guanciale）, qty: 75, unit: g, note: 去皮，切成约 1 cm 宽的条；买不到可用未烟熏的 pancetta }
-      - { name: 蛋黄, qty: 3, unit: 个, note: 中等大小的鸡蛋 }
-      - { name: Pecorino Romano, qty: 25, unit: g, note: 用细擦板擦碎，另备少许装盘 }
+      - { ref: spaghetti, name: 意面（spaghetti）, qty: 160, unit: g }
+      - { ref: guanciale, name: 腌猪颊肉（guanciale）, qty: 75, unit: g, note: 去皮，切成约 1 cm 宽的条；买不到可用未烟熏的 pancetta }
+      - { ref: egg, name: 蛋黄, qty: 3, unit: 个, note: 中等大小的鸡蛋 }
+      - { ref: pecorino-romano, qty: 25, unit: g, note: 用细擦板擦碎，另备少许装盘 }
   - group: 调味
     items:
-      - { name: 黑胡椒, note: 现磨，适量 }
-      - { name: 盐, note: 煮面用，少放；肉和奶酪都很咸 }
+      - { ref: black-pepper, note: 现磨，适量 }
+      - { ref: salt, note: 煮面用，少放；肉和奶酪都很咸 }
 sources:
   - title: "Spaghetti alla Carbonara"
     author: GialloZafferano

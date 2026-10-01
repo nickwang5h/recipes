@@ -2,18 +2,21 @@
 title: 荷兰酱
 original: Sauce hollandaise
 cuisine: french
+course: sauce
 summary: 蛋黄把温热的黄油打散在水中，做成能流动的浓酱；酸味提亮，过热则让蛋黄结块。
 servings: 6
 time: { prep: 5, cook: 15 }
 principles: [emulsification, protein-coagulation]
 ingredients:
   - items:
-      - { name: 蛋黄, qty: 2, unit: 个, note: 大号，优先用巴氏杀菌蛋黄 }
-      - { name: 澄清黄油, qty: 225, unit: g, note: 净重；已除去水分与乳固形物 }
-      - { name: 水, qty: 75, unit: ml }
-      - { name: 白葡萄酒醋, qty: 2, unit: 茶匙 }
-      - { name: 柠檬汁, note: 适量，用于最后调酸味 }
-      - { name: 盐、白胡椒、卡宴辣椒粉, note: 适量 }
+      - { ref: egg, name: 蛋黄, qty: 2, unit: 个, note: 大号，优先用巴氏杀菌蛋黄 }
+      - { ref: unsalted-butter, name: 澄清黄油, qty: 225, unit: g, note: 净重；已除去水分与乳固形物 }
+      - { ref: water, qty: 75, unit: ml }
+      - { ref: white-wine-vinegar, qty: 2, unit: 茶匙 }
+      - { ref: lemon, name: 柠檬汁, note: 适量，用于最后调酸味 }
+      - { ref: salt, note: 适量 }
+      - { ref: white-pepper, name: 白胡椒, note: 适量 }
+      - { ref: cayenne, note: 适量 }
 sources:
   - title: "Mastering the Art of French Cooking, Vol. 1（1961）"
     author: Julia Child, Louisette Bertholle, Simone Beck

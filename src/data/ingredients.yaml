@@ -1,0 +1,98 @@
+# 食材名录：菜谱配料通过 `ref` 引用这里的 id。
+# id 用英文小写连字符，一旦被引用就不改。
+# where: mainstream = Loblaws/Superstore、Metro、Sobeys、Walmart、Costco 等主流超市能买到
+#        asian      = 通常要去 T&T、大统华等华人/亚洲超市
+#        specialty  = 专门店或网购
+# pantry: 常备、耐放的调味料和干货；做"冰箱匹配"时默认家里有。
+# en: 加拿大超市货架或标签上常见的英文名，方便对照采购。
+
+# ---------- 调味与常备 ----------
+- { id: salt, zh: 盐, en: Salt, kind: seasoning, where: mainstream, pantry: true }
+- { id: sugar, zh: 白糖, aliases: [糖, 白砂糖], en: Granulated sugar, kind: seasoning, where: mainstream, pantry: true }
+- { id: water, zh: 清水, aliases: [水, 冷水, 开水], en: Water, kind: other, where: mainstream, pantry: true }
+- { id: light-soy-sauce, zh: 生抽, aliases: [酱油, 淡口酱油], en: Light soy sauce, kind: seasoning, where: mainstream, pantry: true }
+- { id: dark-soy-sauce, zh: 老抽, en: Dark soy sauce, kind: seasoning, where: mainstream, pantry: true }
+- { id: shaoxing-wine, zh: 绍兴酒, aliases: [料酒, 黄酒, 绍酒], en: Shaoxing cooking wine, kind: seasoning, where: asian, pantry: true }
+- { id: sesame-oil, zh: 香油, aliases: [芝麻油, 麻油], en: Toasted sesame oil, kind: seasoning, where: mainstream, pantry: true }
+- { id: vegetable-oil, zh: 植物油, aliases: [食用油, 菜籽油, 花生油, 色拉油], en: Vegetable oil / canola oil, kind: seasoning, where: mainstream, pantry: true }
+- { id: extra-virgin-olive-oil, zh: 特级初榨橄榄油, aliases: [橄榄油], en: Extra virgin olive oil, kind: seasoning, where: mainstream, pantry: true }
+- { id: white-pepper, zh: 白胡椒粉, aliases: [白胡椒], en: Ground white pepper, kind: seasoning, where: mainstream, pantry: true }
+- { id: black-pepper, zh: 黑胡椒, aliases: [黑胡椒粒, 黑胡椒碎], en: Black peppercorns, kind: seasoning, where: mainstream, pantry: true }
+- { id: chinkiang-vinegar, zh: 镇江香醋, aliases: [香醋, 黑醋], en: Chinkiang black vinegar, kind: seasoning, where: asian, pantry: true }
+- { id: white-wine-vinegar, zh: 白葡萄酒醋, en: White wine vinegar, kind: seasoning, where: mainstream, pantry: true }
+- { id: doubanjiang, zh: 郫县豆瓣, aliases: [郫县豆瓣酱, 豆瓣酱], en: Pixian chili bean paste (doubanjiang), kind: seasoning, where: asian, pantry: true }
+- { id: douchi, zh: 豆豉, aliases: [豆豉粒], en: Fermented black beans, kind: seasoning, where: asian, pantry: true }
+- { id: chili-flakes, zh: 辣椒面, aliases: [辣椒粉], en: Chinese chili flakes, kind: seasoning, where: asian, pantry: true }
+- { id: dried-chili, zh: 干辣椒, aliases: [干红辣椒], en: Dried red chilies, kind: seasoning, where: mainstream, pantry: true }
+- { id: sichuan-pepper, zh: 花椒, aliases: [花椒粒, 花椒面, 红花椒], en: Sichuan peppercorns, kind: seasoning, where: asian, pantry: true }
+- { id: star-anise, zh: 八角, aliases: [大料], en: Star anise, kind: seasoning, where: mainstream, pantry: true }
+- { id: cassia, zh: 桂皮, aliases: [肉桂], en: Cassia bark / cinnamon stick, kind: seasoning, where: mainstream, pantry: true }
+- { id: potato-starch, zh: 土豆淀粉, aliases: [生粉, 淀粉, 马铃薯淀粉], en: Potato starch, kind: seasoning, where: mainstream, pantry: true, substitutes: [cornstarch] }
+- { id: cornstarch, zh: 玉米淀粉, aliases: [粟粉], en: Cornstarch, kind: seasoning, where: mainstream, pantry: true, substitutes: [potato-starch] }
+- { id: flour, zh: 普通面粉, aliases: [面粉, 中筋面粉], en: All-purpose flour, kind: grain, where: mainstream, pantry: true }
+- { id: tomato-paste, zh: 番茄膏, aliases: [浓缩番茄膏], en: Tomato paste, kind: seasoning, where: mainstream, pantry: true }
+- { id: passata, zh: 番茄泥, aliases: [过滤番茄泥], en: Passata (strained tomatoes), kind: seasoning, where: mainstream, pantry: true }
+- { id: bay-leaf, zh: 月桂叶, aliases: [香叶], en: Bay leaves, kind: seasoning, where: mainstream, pantry: true }
+- { id: thyme, zh: 百里香, en: Thyme, kind: seasoning, where: mainstream, pantry: true }
+- { id: nutmeg, zh: 肉豆蔻, en: Nutmeg, kind: seasoning, where: mainstream, pantry: true }
+- { id: cayenne, zh: 卡宴辣椒粉, en: Cayenne pepper, kind: seasoning, where: mainstream, pantry: true }
+- { id: saffron, zh: 藏红花, en: Saffron threads, kind: seasoning, where: mainstream, pantry: true }
+- { id: beef-stock, zh: 牛肉高汤, aliases: [牛高汤], en: Beef stock (low-sodium), kind: seasoning, where: mainstream }
+- { id: chicken-stock, zh: 鸡汤, aliases: [高汤, 鸡高汤, 清汤], en: Chicken stock (low-sodium), kind: seasoning, where: mainstream }
+
+# ---------- 酒 ----------
+- { id: dry-white-wine, zh: 干白葡萄酒, aliases: [白葡萄酒], en: Dry white wine, kind: alcohol, where: mainstream }
+- { id: dry-red-wine, zh: 干红葡萄酒, aliases: [红葡萄酒], en: Dry red wine, kind: alcohol, where: mainstream }
+- { id: dry-vermouth, zh: 干型白味美思, en: Dry white vermouth, kind: alcohol, where: mainstream }
+- { id: brandy, zh: 白兰地, aliases: [干邑], en: Brandy / Cognac, kind: alcohol, where: mainstream }
+
+# ---------- 蛋奶 ----------
+- { id: egg, zh: 鸡蛋, aliases: [蛋, 蛋黄, 蛋清, 蛋白], en: Eggs (large), kind: egg-dairy, where: mainstream }
+- { id: unsalted-butter, zh: 无盐黄油, aliases: [黄油, 澄清黄油], en: Unsalted butter, kind: egg-dairy, where: mainstream }
+- { id: whole-milk, zh: 全脂牛奶, aliases: [牛奶], en: Homogenized milk (3.25%), kind: egg-dairy, where: mainstream }
+- { id: whipping-cream, zh: 淡奶油, aliases: [鲜奶油], en: Whipping cream (35%), kind: egg-dairy, where: mainstream }
+- { id: pecorino-romano, zh: Pecorino Romano, aliases: [罗马羊奶酪], en: Pecorino Romano, kind: egg-dairy, where: mainstream, substitutes: [parmigiano-reggiano] }
+- { id: parmigiano-reggiano, zh: Parmigiano Reggiano, aliases: [帕尔马干酪, 帕玛森芝士], en: Parmigiano-Reggiano, kind: egg-dairy, where: mainstream }
+- { id: gruyere, zh: 格鲁耶尔奶酪, aliases: [Gruyère], en: Gruyère cheese, kind: egg-dairy, where: mainstream }
+
+# ---------- 肉 ----------
+- { id: pork-belly, zh: 五花肉, aliases: [带皮五花肉, 猪五花], en: Pork belly (skin-on at Asian stores), kind: meat, where: mainstream }
+- { id: guanciale, zh: 腌猪颊肉, aliases: [guanciale], en: Guanciale, kind: meat, where: specialty, substitutes: [pancetta] }
+- { id: pancetta, zh: 意式腌五花肉, aliases: [pancetta], en: Pancetta, kind: meat, where: mainstream }
+- { id: slab-bacon, zh: 整块培根, aliases: [培根], en: Slab bacon, kind: meat, where: mainstream, substitutes: [pancetta] }
+- { id: ground-beef, zh: 牛肉末, aliases: [绞牛肉, 牛绞肉, 粗绞牛肉], en: Ground beef (medium), kind: meat, where: mainstream }
+- { id: beef-chuck, zh: 牛肩肉, aliases: [炖牛肉], en: Beef chuck / blade (stewing beef), kind: meat, where: mainstream }
+- { id: beef-marrow, zh: 牛骨髓, aliases: [牛骨髓骨], en: Beef marrow bones, kind: meat, where: mainstream }
+- { id: chicken-breast, zh: 鸡胸肉, aliases: [去骨鸡胸肉], en: Boneless skinless chicken breast, kind: poultry, where: mainstream, substitutes: [chicken-thigh] }
+- { id: chicken-thigh, zh: 鸡腿肉, aliases: [去骨鸡腿肉], en: Boneless skinless chicken thighs, kind: poultry, where: mainstream, substitutes: [chicken-breast] }
+
+# ---------- 水产 ----------
+- { id: sea-bass, zh: 鲈鱼, aliases: [海鲈鱼], en: Whole sea bass / branzino, kind: seafood, where: mainstream }
+
+# ---------- 蔬菜、香料植物 ----------
+- { id: scallion, zh: 葱, aliases: [小葱, 青葱, 香葱, 葱花], en: Green onions, kind: aromatic, where: mainstream }
+- { id: ginger, zh: 姜, aliases: [生姜, 姜片, 姜丝, 姜末], en: Ginger, kind: aromatic, where: mainstream }
+- { id: garlic, zh: 蒜, aliases: [大蒜, 蒜瓣, 蒜末, 蒜蓉], en: Garlic, kind: aromatic, where: mainstream }
+- { id: garlic-sprout, zh: 蒜苗, aliases: [青蒜], en: Garlic shoots (green garlic), kind: aromatic, where: asian, substitutes: [leek, scallion] }
+- { id: leek, zh: 韭葱, aliases: [大葱], en: Leeks, kind: aromatic, where: mainstream }
+- { id: onion, zh: 洋葱, aliases: [黄洋葱], en: Yellow onions, kind: vegetable, where: mainstream }
+- { id: pearl-onion, zh: 小白洋葱, aliases: [珍珠洋葱], en: Pearl onions, kind: vegetable, where: mainstream }
+- { id: shallot, zh: 红葱头, aliases: [干葱头], en: Shallots, kind: aromatic, where: mainstream }
+- { id: carrot, zh: 胡萝卜, en: Carrots, kind: vegetable, where: mainstream }
+- { id: celery, zh: 西芹, aliases: [芹菜], en: Celery, kind: vegetable, where: mainstream }
+- { id: tomato, zh: 番茄, aliases: [西红柿], en: Tomatoes (on-the-vine), kind: vegetable, where: mainstream }
+- { id: white-mushroom, zh: 白蘑菇, aliases: [口蘑], en: White button mushrooms, kind: mushroom, where: mainstream }
+- { id: cilantro, zh: 香菜, aliases: [芫荽], en: Cilantro, kind: aromatic, where: mainstream }
+- { id: parsley, zh: 欧芹, aliases: [意大利香芹], en: Flat-leaf (Italian) parsley, kind: aromatic, where: mainstream }
+- { id: fresh-chili, zh: 新鲜辣椒, aliases: [红辣椒, 小米辣], en: Fresh red chilies (Thai / Fresno), kind: vegetable, where: mainstream }
+- { id: lemon, zh: 柠檬, aliases: [柠檬汁], en: Lemons, kind: fruit, where: mainstream }
+
+# ---------- 豆制品 ----------
+- { id: tofu-soft, zh: 嫩豆腐, aliases: [南豆腐], en: Soft tofu, kind: soy, where: mainstream }
+
+# ---------- 主食、坚果 ----------
+- { id: spaghetti, zh: 意面, aliases: [意大利面, spaghetti], en: Spaghetti, kind: grain, where: mainstream, pantry: true }
+- { id: risotto-rice, zh: 烩饭米, aliases: [Carnaroli, Arborio], en: Carnaroli or Arborio rice, kind: grain, where: mainstream, pantry: true }
+- { id: jasmine-rice, zh: 大米, aliases: [米饭, 熟米饭, 长粒米, 泰国香米], en: Jasmine rice / long-grain rice, kind: grain, where: mainstream, pantry: true }
+- { id: baguette, zh: 法棍, aliases: [法棍面包], en: Baguette, kind: grain, where: mainstream }
+- { id: roasted-peanuts, zh: 熟花生米, aliases: [花生, 花生米], en: Roasted unsalted peanuts, kind: other, where: mainstream, pantry: true }

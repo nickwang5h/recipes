@@ -1,6 +1,7 @@
 ---
 title: 番茄炒蛋
 cuisine: chinese
+course: veg
 summary: 鸡蛋先炒成嫩块，番茄单独炒出汁，再短暂合锅。把两种食材的火候分开，蛋才不老，汁才浓。
 servings: 2
 time: { prep: 10, cook: 10 }
@@ -8,18 +9,18 @@ principles: [protein-coagulation, salt]
 ingredients:
   - group: 主料
     items:
-      - { name: 番茄, qty: 500, unit: g, note: 熟透的，去蒂切小瓣 }
-      - { name: 鸡蛋, qty: 4, unit: 个 }
-      - { name: 葱, qty: 1, unit: 根, note: 切葱花 }
+      - { ref: tomato, qty: 500, unit: g, note: 熟透的，去蒂切小瓣 }
+      - { ref: egg, qty: 4, unit: 个 }
+      - { ref: scallion, qty: 1, unit: 根, note: 切葱花 }
   - group: 调味
     items:
-      - { name: 植物油, qty: 3, unit: 汤匙, note: 分两次用 }
-      - { name: 盐, qty: 0.75, unit: 茶匙, note: 蛋液用 0.25 茶匙，其余调番茄；可按口味减少 }
-      - { name: 白糖, qty: 2, unit: 茶匙, note: 番茄很甜时减少 }
-      - { name: 白胡椒粉, qty: 0.25, unit: 茶匙 }
-      - { name: 香油, qty: 0.5, unit: 茶匙 }
-      - { name: 绍兴酒, qty: 1, unit: 茶匙 }
-      - { name: 清水, qty: 60, unit: ml, note: 先备好，番茄汁少时再加 }
+      - { ref: vegetable-oil, qty: 3, unit: 汤匙, note: 分两次用 }
+      - { ref: salt, qty: 0.75, unit: 茶匙, note: 蛋液用 0.25 茶匙，其余调番茄；可按口味减少 }
+      - { ref: sugar, qty: 2, unit: 茶匙, note: 番茄很甜时减少 }
+      - { ref: white-pepper, qty: 0.25, unit: 茶匙 }
+      - { ref: sesame-oil, qty: 0.5, unit: 茶匙 }
+      - { ref: shaoxing-wine, qty: 1, unit: 茶匙 }
+      - { ref: water, qty: 60, unit: ml, note: 先备好，番茄汁少时再加 }
 sources:
   - title: "On Food and Cooking: The Science and Lore of the Kitchen（修订版，2004）"
     author: Harold McGee

@@ -2,6 +2,7 @@
 title: 博洛尼亚肉酱
 original: Ragù alla bolognese
 cuisine: italian
+course: sauce
 summary: 粗绞牛肉先炒出褐香，再与少量番茄慢炖；结缔组织逐渐软化，肉粒与浓汁一起挂住宽面。
 servings: 6
 time: { prep: 20, cook: 180 }
@@ -9,21 +10,21 @@ principles: [maillard-reaction, collagen-gelatin]
 ingredients:
   - group: 肉与蔬菜
     items:
-      - { name: 粗绞牛肉, qty: 400, unit: g, note: 选肩部或胸部等适合炖煮的部位，避免过瘦 }
-      - { name: 新鲜猪五花肉, qty: 150, unit: g, note: 切细末，不用烟熏培根 }
-      - { name: 洋葱, qty: 60, unit: g, note: 切细末 }
-      - { name: 胡萝卜, qty: 60, unit: g, note: 切细末 }
-      - { name: 西芹, qty: 60, unit: g, note: 切细末 }
-      - { name: 特级初榨橄榄油, qty: 3, unit: 汤匙 }
+      - { ref: ground-beef, name: 粗绞牛肉, qty: 400, unit: g, note: 选肩部或胸部等适合炖煮的部位，避免过瘦 }
+      - { ref: pork-belly, name: 新鲜猪五花肉, qty: 150, unit: g, note: 切细末，不用烟熏培根 }
+      - { ref: onion, qty: 60, unit: g, note: 切细末 }
+      - { ref: carrot, qty: 60, unit: g, note: 切细末 }
+      - { ref: celery, qty: 60, unit: g, note: 切细末 }
+      - { ref: extra-virgin-olive-oil, qty: 3, unit: 汤匙 }
   - group: 炖汁
     items:
-      - { name: 干白或干红葡萄酒, qty: 120, unit: ml }
-      - { name: 番茄泥（passata）, qty: 200, unit: g, note: 无额外调味 }
-      - { name: 双倍浓缩番茄膏, qty: 1, unit: 汤匙 }
-      - { name: 全脂牛奶, qty: 120, unit: ml, note: 可选，传统做法之一 }
-      - { name: 清淡肉高汤, note: 适量，保持热，炖煮时补入 }
-      - { name: 盐, note: 适量 }
-      - { name: 黑胡椒, note: 适量 }
+      - { ref: dry-white-wine, name: 干白或干红葡萄酒, qty: 120, unit: ml }
+      - { ref: passata, name: 番茄泥（passata）, qty: 200, unit: g, note: 无额外调味 }
+      - { ref: tomato-paste, name: 双倍浓缩番茄膏, qty: 1, unit: 汤匙 }
+      - { ref: whole-milk, qty: 120, unit: ml, note: 可选，传统做法之一 }
+      - { ref: chicken-stock, name: 清淡肉高汤, note: 适量，保持热，炖煮时补入 }
+      - { ref: salt, note: 适量 }
+      - { ref: black-pepper, note: 适量 }
 sources:
   - title: "On Food and Cooking: The Science and Lore of the Kitchen（修订版，2004）"
     author: Harold McGee

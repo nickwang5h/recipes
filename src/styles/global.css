@@ -143,7 +143,8 @@ a.chip:hover { border-color: var(--primary); color: var(--text); background: var
 
 /* ---------- Filters ---------- */
 
-.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.5rem; }
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 0.75rem; }
+.filter-count { color: var(--muted); font-size: 0.9rem; margin: 0.5rem 0 1rem; }
 .filters a[aria-current="true"] { background: var(--text); border-color: var(--text); color: var(--bg); }
 
 /* ---------- Recipe page ---------- */
@@ -188,6 +189,13 @@ a.chip:hover { border-color: var(--primary); color: var(--text); background: var
 .ing-text { display: flex; flex-wrap: wrap; column-gap: 0.5rem; line-height: 1.55; }
 .ing-qty { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
 .ing-note { color: var(--muted); font-size: 0.9rem; flex-basis: 100%; }
+.ing-en { color: var(--muted); font-size: 0.8rem; flex-basis: 100%; line-height: 1.4; }
+.ing-tag {
+  align-self: center; padding: 0 0.45rem; border: 1px solid var(--border); border-radius: 999px;
+  font-size: 0.75rem; line-height: 1.6; color: var(--muted); white-space: nowrap;
+}
+.ing-tag.where-asian { border-color: var(--accent-red); color: var(--accent-red); }
+.ing-tag.where-specialty { border-color: var(--accent-yellow); color: var(--accent-yellow); }
 .ing-row:has(input:checked) .ing-text { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--border); }
 
 .recipe-content ol { list-style: none; padding: 0; counter-reset: step; }

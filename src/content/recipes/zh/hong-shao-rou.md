@@ -1,6 +1,7 @@
 ---
 title: 红烧肉
 cuisine: chinese
+course: meat
 summary: 先把白糖炒成红褐色糖色，再小火焖带皮五花肉。颜色靠焦糖化，皮与筋膜的软糯靠胶原转化。
 servings: 3
 time: { prep: 20, cook: 75 }
@@ -8,21 +9,21 @@ principles: [caramelization, collagen-gelatin]
 ingredients:
   - group: 主料
     items:
-      - { name: 带皮五花肉, qty: 500, unit: g, note: 肥瘦相间，无骨 }
-      - { name: 植物油, qty: 2, unit: 汤匙 }
-      - { name: 白糖, qty: 2, unit: 汤匙, note: 炒糖色用 }
-      - { name: 绍兴酒, qty: 1, unit: 汤匙 }
+      - { ref: pork-belly, name: 带皮五花肉, qty: 500, unit: g, note: 肥瘦相间，无骨 }
+      - { ref: vegetable-oil, qty: 2, unit: 汤匙 }
+      - { ref: sugar, qty: 2, unit: 汤匙, note: 炒糖色用 }
+      - { ref: shaoxing-wine, qty: 1, unit: 汤匙 }
   - group: 焖煮与调味
     items:
-      - { name: 姜, qty: 20, unit: g, note: 切片 }
-      - { name: 八角, qty: 1, unit: 个 }
-      - { name: 干辣椒, qty: 2, unit: 个 }
-      - { name: 桂皮, note: 一小片，约 5 cm 长 }
-      - { name: 葱, qty: 3, unit: 根, note: 切段，留少许出锅用 }
-      - { name: 清水, note: 适量，刚好没过肉；焯肉另备水 }
-      - { name: 生抽, note: 适量，收汁时调味 }
-      - { name: 盐, note: 适量，尝过汁后再加 }
-      - { name: 白糖, note: 适量，最后尝味后决定是否补加 }
+      - { ref: ginger, qty: 20, unit: g, note: 切片 }
+      - { ref: star-anise, qty: 1, unit: 个 }
+      - { ref: dried-chili, qty: 2, unit: 个 }
+      - { ref: cassia, note: 一小片，约 5 cm 长 }
+      - { ref: scallion, qty: 3, unit: 根, note: 切段，留少许出锅用 }
+      - { ref: water, note: 适量，刚好没过肉；焯肉另备水 }
+      - { ref: light-soy-sauce, note: 适量，收汁时调味 }
+      - { ref: salt, note: 适量，尝过汁后再加 }
+      - { ref: sugar, note: 适量，最后尝味后决定是否补加 }
 sources:
   - title: "Revolutionary Chinese Cookbook: Recipes from Hunan Province（2007）"
     author: Fuchsia Dunlop

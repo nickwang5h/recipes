@@ -2,6 +2,7 @@
 title: 勃艮第红酒炖牛肉
 original: Bœuf bourguignon
 cuisine: french
+course: meat
 summary: 先煎出肉香，再用红酒和高汤慢炖，把牛肩肉的结缔组织变成润口的明胶。
 servings: 6
 time: { prep: 30, cook: 210 }
@@ -9,27 +10,28 @@ principles: [collagen-gelatin, maillard-reaction]
 ingredients:
   - group: 炖肉
     items:
-      - { name: 牛肩肉, qty: 1360, unit: g, note: 切约 5 cm 大块，擦干 }
-      - { name: 整块培根, qty: 170, unit: g, note: 切粗条 }
-      - { name: 食用油, qty: 1, unit: 汤匙 }
-      - { name: 胡萝卜, qty: 1, unit: 根, note: 切片 }
-      - { name: 洋葱, qty: 1, unit: 个, note: 切片 }
-      - { name: 普通面粉, qty: 2, unit: 汤匙 }
-      - { name: 干红葡萄酒, qty: 720, unit: ml, note: 勃艮第红酒或其他酒体充实的干红 }
-      - { name: 牛肉高汤, qty: 600, unit: ml, note: 低盐，按锅内液面增减，刚好没过肉 }
-      - { name: 番茄膏, qty: 1, unit: 汤匙 }
-      - { name: 蒜, qty: 2, unit: 瓣, note: 拍碎 }
-      - { name: 干百里香, qty: 0.5, unit: 茶匙 }
-      - { name: 月桂叶, qty: 1, unit: 个, note: 整叶 }
-      - { name: 盐、黑胡椒, note: 适量 }
+      - { ref: beef-chuck, qty: 1360, unit: g, note: 切约 5 cm 大块，擦干 }
+      - { ref: slab-bacon, qty: 170, unit: g, note: 切粗条 }
+      - { ref: vegetable-oil, qty: 1, unit: 汤匙 }
+      - { ref: carrot, qty: 1, unit: 根, note: 切片 }
+      - { ref: onion, qty: 1, unit: 个, note: 切片 }
+      - { ref: flour, qty: 2, unit: 汤匙 }
+      - { ref: dry-red-wine, qty: 720, unit: ml, note: 勃艮第红酒或其他酒体充实的干红 }
+      - { ref: beef-stock, qty: 600, unit: ml, note: 低盐，按锅内液面增减，刚好没过肉 }
+      - { ref: tomato-paste, qty: 1, unit: 汤匙 }
+      - { ref: garlic, qty: 2, unit: 瓣, note: 拍碎 }
+      - { ref: thyme, name: 干百里香, qty: 0.5, unit: 茶匙 }
+      - { ref: bay-leaf, qty: 1, unit: 个, note: 整叶 }
+      - { ref: salt, note: 适量 }
+      - { ref: black-pepper, note: 适量 }
   - group: 配菜
     items:
-      - { name: 小白洋葱, qty: 20, unit: 个, note: 去皮，保持完整 }
-      - { name: 白蘑菇, qty: 450, unit: g, note: 擦净，切成四瓣 }
-      - { name: 无盐黄油, qty: 50, unit: g, note: 洋葱用约 20 g，其余炒蘑菇 }
-      - { name: 食用油, qty: 2.5, unit: 汤匙, note: 洋葱用约 1.5 汤匙，其余炒蘑菇 }
-      - { name: 牛肉高汤, qty: 120, unit: ml, note: 用于焖小洋葱 }
-      - { name: 欧芹, note: 适量，切碎 }
+      - { ref: pearl-onion, qty: 20, unit: 个, note: 去皮，保持完整 }
+      - { ref: white-mushroom, qty: 450, unit: g, note: 擦净，切成四瓣 }
+      - { ref: unsalted-butter, qty: 50, unit: g, note: 洋葱用约 20 g，其余炒蘑菇 }
+      - { ref: vegetable-oil, qty: 2.5, unit: 汤匙, note: 洋葱用约 1.5 汤匙，其余炒蘑菇 }
+      - { ref: beef-stock, qty: 120, unit: ml, note: 用于焖小洋葱 }
+      - { ref: parsley, note: 适量，切碎 }
 sources:
   - title: "Julia's Kitchen Wisdom（2000），Boeuf Bourguignon（Knopf 发布的配方页）"
     author: Julia Child

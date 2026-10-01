@@ -2,6 +2,7 @@
 title: 黄油白酱
 original: Beurre blanc
 cuisine: french
+course: sauce
 summary: 卢瓦尔河下游的黄油酱：一小勺酸味收汁，托住一整块黄油。成败只在温度。
 servings: 4
 time: { prep: 10, cook: 15 }
@@ -9,17 +10,17 @@ principles: [emulsification]
 ingredients:
   - group: 收汁
     items:
-      - { name: 红葱头（échalote）, qty: 40, unit: g, note: 切成极细的末 }
-      - { name: 干白葡萄酒, qty: 80, unit: ml, note: 最传统的是 Muscadet }
-      - { name: 白葡萄酒醋, qty: 60, unit: ml }
+      - { ref: shallot, name: 红葱头（échalote）, qty: 40, unit: g, note: 切成极细的末 }
+      - { ref: dry-white-wine, qty: 80, unit: ml, note: 最传统的是 Muscadet }
+      - { ref: white-wine-vinegar, qty: 60, unit: ml }
   - group: 乳化
     items:
-      - { name: 无盐黄油, qty: 200, unit: g, note: 冷藏，切成 2 cm 小块 }
-      - { name: 淡奶油, qty: 1, unit: 汤匙, note: 可选，让酱更耐温 }
+      - { ref: unsalted-butter, qty: 200, unit: g, note: 冷藏，切成 2 cm 小块 }
+      - { ref: whipping-cream, qty: 1, unit: 汤匙, note: 可选，让酱更耐温 }
   - group: 调味
     items:
-      - { name: 盐, note: 适量 }
-      - { name: 白胡椒, note: 适量 }
+      - { ref: salt, note: 适量 }
+      - { ref: white-pepper, name: 白胡椒, note: 适量 }
 sources:
   - title: "Mastering the Art of French Cooking, Vol. 1（1961），Beurre Blanc"
     author: Julia Child, Louisette Bertholle, Simone Beck
