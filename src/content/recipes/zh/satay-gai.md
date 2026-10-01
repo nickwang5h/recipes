@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/satay-gai.jpg
+coverAlt: 沙爹鸡串配花生酱装盘后的插画
 title: 沙爹鸡串配花生酱
 original: Sate kai
 cuisine: thai

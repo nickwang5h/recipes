@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bruschetta-al-pomodoro.jpg
+coverAlt: 番茄烤面包装盘后的插画
 title: 番茄烤面包
 original: Bruschetta al pomodoro
 cuisine: italian

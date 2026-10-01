@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/salsa-verde.jpg
+coverAlt: 意式青酱汁装盘后的插画
 title: 意式青酱汁
 original: Salsa verde
 cuisine: italian

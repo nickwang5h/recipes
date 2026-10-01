@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pad-pak-boong.jpg
+coverAlt: 泰式炒空心菜装盘后的插画
 title: 泰式炒空心菜
 original: Phat phak bung fai daeng
 cuisine: thai

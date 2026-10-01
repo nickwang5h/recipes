@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/castagnole.jpg
+coverAlt: 狂欢节小炸球装盘后的插画
 title: 狂欢节小炸球
 original: Castagnole
 cuisine: italian

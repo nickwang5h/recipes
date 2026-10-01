@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yam-woon-sen.jpg
+coverAlt: 凉拌粉丝装盘后的插画
 title: 凉拌粉丝
 original: Yam wun sen
 cuisine: thai

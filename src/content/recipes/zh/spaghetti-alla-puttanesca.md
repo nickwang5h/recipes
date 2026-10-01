@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/spaghetti-alla-puttanesca.jpg
+coverAlt: 烟花女面装盘后的插画
 title: 烟花女面
 original: Spaghetti alla puttanesca
 cuisine: italian

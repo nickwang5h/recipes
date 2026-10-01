@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/okonomiyaki.jpg
+coverAlt: 大阪烧装盘后的插画
 title: 大阪烧
 original: Okonomiyaki
 cuisine: japanese

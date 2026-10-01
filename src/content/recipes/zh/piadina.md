@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/piadina.jpg
+coverAlt: 罗马涅薄饼装盘后的插画
 title: 罗马涅薄饼
 original: Piadina romagnola
 cuisine: italian

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/zabaione.jpg
+coverAlt: 沙巴雍装盘后的插画
 title: 沙巴雍
 original: Zabaione
 cuisine: italian

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tom-kha-gai.jpg
+coverAlt: 椰汁南姜鸡汤装盘后的插画
 title: 椰汁南姜鸡汤
 original: Tom kha kai
 cuisine: thai

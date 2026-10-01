@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/arista-alla-fiorentina.jpg
+coverAlt: 佛罗伦萨烤猪里脊装盘后的插画
 title: 佛罗伦萨烤猪里脊
 original: Arista alla fiorentina
 cuisine: italian

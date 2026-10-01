@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/fettuccine-al-burro.jpg
+coverAlt: 黄油奶酪宽面装盘后的插画
 title: 黄油奶酪宽面
 original: Fettuccine al burro
 cuisine: italian

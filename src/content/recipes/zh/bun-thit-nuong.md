@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bun-thit-nuong.jpg
+coverAlt: 烤猪肉米线沙拉装盘后的插画
 title: 烤猪肉米线沙拉
 original: Bún thịt nướng
 cuisine: vietnamese

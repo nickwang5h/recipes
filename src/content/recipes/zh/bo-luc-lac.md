@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bo-luc-lac.jpg
+coverAlt: 越南骰子牛肉装盘后的插画
 title: 越南骰子牛肉
 original: Bò lúc lắc
 cuisine: vietnamese

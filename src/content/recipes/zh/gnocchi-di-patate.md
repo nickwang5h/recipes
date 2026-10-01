@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gnocchi-di-patate.jpg
+coverAlt: 土豆团子装盘后的插画
 title: 土豆团子
 original: Gnocchi di patate
 cuisine: italian

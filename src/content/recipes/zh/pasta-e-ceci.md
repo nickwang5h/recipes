@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pasta-e-ceci.jpg
+coverAlt: 鹰嘴豆面汤装盘后的插画
 title: 鹰嘴豆面汤
 original: Pasta e ceci
 cuisine: italian

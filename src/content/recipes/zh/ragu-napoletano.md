@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ragu-napoletano.jpg
+coverAlt: 那不勒斯肉酱装盘后的插画
 title: 那不勒斯肉酱
 original: Ragù napoletano
 cuisine: italian

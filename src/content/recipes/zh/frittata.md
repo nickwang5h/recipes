@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/frittata.jpg
+coverAlt: 意式烘蛋装盘后的插画
 title: 意式烘蛋
 original: Frittata
 cuisine: italian

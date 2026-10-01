@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/onigiri.jpg
+coverAlt: 饭团装盘后的插画
 title: 饭团
 original: Onigiri
 cuisine: japanese

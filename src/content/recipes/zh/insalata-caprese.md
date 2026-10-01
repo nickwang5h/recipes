@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/insalata-caprese.jpg
+coverAlt: 卡普里沙拉装盘后的插画
 title: 卡普里沙拉
 original: Insalata caprese
 cuisine: italian

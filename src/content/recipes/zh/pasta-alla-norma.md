@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pasta-alla-norma.jpg
+coverAlt: 诺尔玛茄子面装盘后的插画
 title: 诺尔玛茄子面
 original: Pasta alla Norma
 cuisine: italian

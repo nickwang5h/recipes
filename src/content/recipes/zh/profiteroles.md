@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/profiteroles.jpg
+coverAlt: 巧克力泡芙装盘后的插画
 title: 巧克力泡芙
 original: Profiteroles
 cuisine: french

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tortellini-in-brodo.jpg
+coverAlt: 清汤馄饨装盘后的插画
 title: 清汤馄饨
 original: Tortellini in brodo
 cuisine: italian

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tiramisu.jpg
+coverAlt: 提拉米苏装盘后的插画
 title: 提拉米苏
 original: Tiramisù
 cuisine: italian

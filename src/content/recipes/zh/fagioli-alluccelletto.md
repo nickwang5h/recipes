@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/fagioli-alluccelletto.jpg
+coverAlt: 鼠尾草番茄白豆装盘后的插画
 title: 鼠尾草番茄白豆
 original: Fagioli all'uccelletto
 cuisine: italian

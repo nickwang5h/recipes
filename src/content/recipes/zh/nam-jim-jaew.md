@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/nam-jim-jaew.jpg
+coverAlt: 泰式烤肉蘸酱装盘后的插画
 title: 泰式烤肉蘸酱
 original: Nam chim chaeo
 cuisine: thai

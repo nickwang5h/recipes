@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/sugo-di-pomodoro.jpg
+coverAlt: 黄油洋葱番茄酱装盘后的插画
 title: 黄油洋葱番茄酱
 original: Sugo di pomodoro al burro
 cuisine: italian

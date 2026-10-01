@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gyeran-jjim.jpg
+coverAlt: 韩式蒸蛋装盘后的插画
 title: 韩式蒸蛋
 original: Gyeran-jjim
 cuisine: korean

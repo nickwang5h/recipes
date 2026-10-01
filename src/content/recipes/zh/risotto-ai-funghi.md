@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/risotto-ai-funghi.jpg
+coverAlt: 蘑菇烩饭装盘后的插画
 title: 蘑菇烩饭
 original: Risotto ai funghi
 cuisine: italian

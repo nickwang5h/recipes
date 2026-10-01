@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gyudon.jpg
+coverAlt: 牛丼装盘后的插画
 title: 牛丼
 original: Gyūdon
 cuisine: japanese

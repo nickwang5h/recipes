@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/panna-cotta.jpg
+coverAlt: 意式奶冻装盘后的插画
 title: 意式奶冻
 original: Panna cotta
 cuisine: italian

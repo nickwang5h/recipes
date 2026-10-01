@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/focaccia-genovese.jpg
+coverAlt: 热那亚佛卡夏装盘后的插画
 title: 热那亚佛卡夏
 original: Focaccia genovese
 cuisine: italian

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/polenta.jpg
+coverAlt: 玉米粥装盘后的插画
 title: 玉米粥
 original: Polenta
 cuisine: italian

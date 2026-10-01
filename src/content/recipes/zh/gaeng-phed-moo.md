@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gaeng-phed-moo.jpg
+coverAlt: 红咖喱猪肉装盘后的插画
 title: 红咖喱猪肉
 original: Kaeng phet mu
 cuisine: thai

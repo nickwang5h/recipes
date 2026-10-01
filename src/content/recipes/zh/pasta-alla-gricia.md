@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pasta-alla-gricia.jpg
+coverAlt: 格里查面装盘后的插画
 title: 格里查面
 original: Pasta alla gricia
 cuisine: italian

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/parmigiana-di-melanzane.jpg
+coverAlt: 焗茄子装盘后的插画
 title: 焗茄子
 original: Parmigiana di melanzane
 cuisine: italian

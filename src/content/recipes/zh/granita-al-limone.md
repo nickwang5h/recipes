@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/granita-al-limone.jpg
+coverAlt: 柠檬冰沙装盘后的插画
 title: 柠檬冰沙
 original: Granita al limone
 cuisine: italian

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/arancini.jpg
+coverAlt: 西西里炸饭团装盘后的插画
 title: 西西里炸饭团
 original: Arancini
 cuisine: italian

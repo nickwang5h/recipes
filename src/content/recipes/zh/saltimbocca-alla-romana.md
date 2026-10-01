@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/saltimbocca-alla-romana.jpg
+coverAlt: 罗马火腿鼠尾草小牛排装盘后的插画
 title: 罗马火腿鼠尾草小牛排
 original: Saltimbocca alla romana
 cuisine: italian

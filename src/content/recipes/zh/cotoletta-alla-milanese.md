@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cotoletta-alla-milanese.jpg
+coverAlt: 米兰炸肉排装盘后的插画
 title: 米兰炸肉排
 original: Cotoletta alla milanese
 cuisine: italian

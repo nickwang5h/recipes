@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/vitello-tonnato.jpg
+coverAlt: 金枪鱼酱小牛肉装盘后的插画
 title: 金枪鱼酱小牛肉
 original: Vitello tonnato
 cuisine: italian

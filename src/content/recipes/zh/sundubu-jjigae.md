@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/sundubu-jjigae.jpg
+coverAlt: 嫩豆腐汤装盘后的插画
 title: 嫩豆腐汤
 original: Sundubu-jjigae
 cuisine: korean

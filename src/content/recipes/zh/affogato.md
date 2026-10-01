@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/affogato.jpg
+coverAlt: 阿芙佳朵装盘后的插画
 title: 阿芙佳朵
 original: Affogato
 cuisine: italian

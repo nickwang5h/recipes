@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/scaloppine-al-limone.jpg
+coverAlt: 柠檬煎肉片装盘后的插画
 title: 柠檬煎肉片
 original: Scaloppine al limone
 cuisine: italian

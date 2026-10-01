@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/orecchiette-con-cime-di-rapa.jpg
+coverAlt: 西兰花苔猫耳朵面装盘后的插画
 title: 西兰花苔猫耳朵面
 original: Orecchiette con cime di rapa
 cuisine: italian

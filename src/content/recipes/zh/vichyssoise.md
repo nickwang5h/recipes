@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/vichyssoise.jpg
+coverAlt: 韭葱土豆冷汤装盘后的插画
 title: 韭葱土豆冷汤
 original: Vichyssoise
 cuisine: french

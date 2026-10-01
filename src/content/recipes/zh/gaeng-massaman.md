@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gaeng-massaman.jpg
+coverAlt: 马沙文咖喱装盘后的插画
 title: 马沙文咖喱
 original: Kaeng matsaman
 cuisine: thai

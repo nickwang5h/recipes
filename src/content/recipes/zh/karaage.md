@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/karaage.jpg
+coverAlt: 日式炸鸡块装盘后的插画
 title: 日式炸鸡块
 original: Karaage
 cuisine: japanese

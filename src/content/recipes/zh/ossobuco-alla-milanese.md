@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ossobuco-alla-milanese.jpg
+coverAlt: 米兰炖小牛膝装盘后的插画
 title: 米兰炖小牛膝
 original: Ossobuco alla milanese
 cuisine: italian

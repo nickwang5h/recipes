@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/vinaigrette.jpg
+coverAlt: 法式油醋汁装盘后的插画
 title: 法式油醋汁
 original: Vinaigrette
 cuisine: french

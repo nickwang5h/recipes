@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pasta-e-fagioli.jpg
+coverAlt: 意式豆子面汤装盘后的插画
 title: 意式豆子面汤
 original: Pasta e fagioli
 cuisine: italian

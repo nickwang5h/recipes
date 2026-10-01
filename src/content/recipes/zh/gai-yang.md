@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gai-yang.jpg
+coverAlt: 泰式烤鸡装盘后的插画
 title: 泰式烤鸡
 original: Kai yang
 cuisine: thai

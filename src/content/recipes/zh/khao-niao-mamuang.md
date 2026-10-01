@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/khao-niao-mamuang.jpg
+coverAlt: 芒果糯米饭装盘后的插画
 title: 芒果糯米饭
 original: Khao niao mamuang
 cuisine: thai

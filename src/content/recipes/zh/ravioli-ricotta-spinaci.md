@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ravioli-ricotta-spinaci.jpg
+coverAlt: 菠菜乳清奶酪饺装盘后的插画
 title: 菠菜乳清奶酪饺
 original: Ravioli ricotta e spinaci
 cuisine: italian

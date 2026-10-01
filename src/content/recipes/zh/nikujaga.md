@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/nikujaga.jpg
+coverAlt: 土豆炖肉装盘后的插画
 title: 土豆炖肉
 original: Nikujaga
 cuisine: japanese

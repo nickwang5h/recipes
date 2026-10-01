@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/chicken-teriyaki.jpg
+coverAlt: 照烧鸡腿装盘后的插画
 title: 照烧鸡腿
 original: Tori no teriyaki
 cuisine: japanese

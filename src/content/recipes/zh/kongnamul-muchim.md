@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/kongnamul-muchim.jpg
+coverAlt: 凉拌黄豆芽装盘后的插画
 title: 凉拌黄豆芽
 original: Kongnamul-muchim
 cuisine: korean

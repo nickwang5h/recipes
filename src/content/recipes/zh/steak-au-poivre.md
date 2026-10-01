@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/steak-au-poivre.jpg
+coverAlt: 黑胡椒牛排装盘后的插画
 title: 黑胡椒牛排
 original: Steak au poivre
 cuisine: french

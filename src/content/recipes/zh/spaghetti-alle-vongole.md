@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/spaghetti-alle-vongole.jpg
+coverAlt: 蛤蜊意面装盘后的插画
 title: 蛤蜊意面
 original: Spaghetti alle vongole
 cuisine: italian

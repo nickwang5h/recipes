@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/khao-man-gai.jpg
+coverAlt: 泰式海南鸡饭装盘后的插画
 title: 泰式海南鸡饭
 original: Khao man kai
 cuisine: thai

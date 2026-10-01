@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/peperonata.jpg
+coverAlt: 炖甜椒装盘后的插画
 title: 炖甜椒
 original: Peperonata
 cuisine: italian

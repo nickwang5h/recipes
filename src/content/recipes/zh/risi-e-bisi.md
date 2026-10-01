@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/risi-e-bisi.jpg
+coverAlt: 威尼斯豌豆饭装盘后的插画
 title: 威尼斯豌豆饭
 original: Risi e bisi
 cuisine: italian

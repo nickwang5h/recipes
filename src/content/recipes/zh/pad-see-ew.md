@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pad-see-ew.jpg
+coverAlt: 泰式酱油炒河粉装盘后的插画
 title: 泰式酱油炒河粉
 original: Phat si-io
 cuisine: thai

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/minestrone.jpg
+coverAlt: 意式蔬菜汤装盘后的插画
 title: 意式蔬菜汤
 original: Minestrone
 cuisine: italian

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ribollita.jpg
+coverAlt: 托斯卡纳面包蔬菜汤装盘后的插画
 title: 托斯卡纳面包蔬菜汤
 original: Ribollita
 cuisine: italian

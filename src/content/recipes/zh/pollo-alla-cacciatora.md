@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pollo-alla-cacciatora.jpg
+coverAlt: 猎人烩鸡装盘后的插画
 title: 猎人烩鸡
 original: Pollo alla cacciatora
 cuisine: italian

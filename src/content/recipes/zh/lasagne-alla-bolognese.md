@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/lasagne-alla-bolognese.jpg
+coverAlt: 博洛尼亚千层面装盘后的插画
 title: 博洛尼亚千层面
 original: Lasagne alla bolognese
 cuisine: italian

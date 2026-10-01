@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/japanese-curry.jpg
+coverAlt: 日式咖喱饭装盘后的插画
 title: 日式咖喱饭
 original: Karē raisu
 cuisine: japanese

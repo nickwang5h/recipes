@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/doenjang-jjigae.jpg
+coverAlt: 大酱汤装盘后的插画
 title: 大酱汤
 original: Doenjang-jjigae
 cuisine: korean

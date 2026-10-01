@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tomates-farcies.jpg
+coverAlt: 法式酿番茄装盘后的插画
 title: 法式酿番茄
 original: Tomates farcies
 cuisine: french

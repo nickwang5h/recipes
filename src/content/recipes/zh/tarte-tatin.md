@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tarte-tatin.jpg
+coverAlt: 反烤苹果挞装盘后的插画
 title: 反烤苹果挞
 original: Tarte Tatin
 cuisine: french

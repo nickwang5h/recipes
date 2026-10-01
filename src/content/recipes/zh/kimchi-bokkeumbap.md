@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/kimchi-bokkeumbap.jpg
+coverAlt: 泡菜炒饭装盘后的插画
 title: 泡菜炒饭
 original: Kimchi-bokkeumbap
 cuisine: korean

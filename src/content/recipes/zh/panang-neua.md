@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/panang-neua.jpg
+coverAlt: 帕能咖喱牛肉装盘后的插画
 title: 帕能咖喱牛肉
 original: Phanaeng neua
 cuisine: thai

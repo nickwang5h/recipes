@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ga-xao-sa-ot.jpg
+coverAlt: 香茅辣椒炒鸡装盘后的插画
 title: 香茅辣椒炒鸡
 original: Gà xào sả ớt
 cuisine: vietnamese

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/salade-nicoise.jpg
+coverAlt: 尼斯沙拉装盘后的插画
 title: 尼斯沙拉
 original: Salade niçoise
 cuisine: french

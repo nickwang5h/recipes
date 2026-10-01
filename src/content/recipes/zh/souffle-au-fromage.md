@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/souffle-au-fromage.jpg
+coverAlt: 奶酪舒芙蕾装盘后的插画
 title: 奶酪舒芙蕾
 original: Soufflé au fromage
 cuisine: french

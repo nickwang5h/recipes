@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pizza-margherita.jpg
+coverAlt: 玛格丽特披萨装盘后的插画
 title: 玛格丽特披萨
 original: Pizza Margherita
 cuisine: italian

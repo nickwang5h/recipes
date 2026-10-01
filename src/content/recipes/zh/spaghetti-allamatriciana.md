@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/spaghetti-allamatriciana.jpg
+coverAlt: 阿马特里切面装盘后的插画
 title: 阿马特里切面
 original: Spaghetti all'amatriciana
 cuisine: italian

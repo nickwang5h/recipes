@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/nam-prik-pla.jpg
+coverAlt: 鱼露辣椒汁装盘后的插画
 title: 鱼露辣椒汁
 original: Nam phrik nam pla
 cuisine: thai

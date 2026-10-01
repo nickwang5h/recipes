@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ratatouille.jpg
+coverAlt: 普罗旺斯炖菜装盘后的插画
 title: 普罗旺斯炖菜
 original: Ratatouille
 cuisine: french

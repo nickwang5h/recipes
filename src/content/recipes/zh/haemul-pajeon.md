@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/haemul-pajeon.jpg
+coverAlt: 海鲜葱饼装盘后的插画
 title: 海鲜葱饼
 original: Haemul-pajeon
 cuisine: korean

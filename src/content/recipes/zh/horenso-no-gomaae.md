@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/horenso-no-gomaae.jpg
+coverAlt: 芝麻拌菠菜装盘后的插画
 title: 芝麻拌菠菜
 original: Hōrensō no goma-ae
 cuisine: japanese

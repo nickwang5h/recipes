@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ricotta.jpg
+coverAlt: 自制乳清奶酪装盘后的插画
 title: 自制乳清奶酪
 original: Ricotta fatta in casa
 cuisine: italian

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/crostata.jpg
+coverAlt: 果酱格子挞装盘后的插画
 title: 果酱格子挞
 original: Crostata di marmellata
 cuisine: italian

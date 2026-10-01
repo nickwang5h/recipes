@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/puree-de-pommes-de-terre.jpg
+coverAlt: 法式土豆泥装盘后的插画
 title: 法式土豆泥
 original: Purée de pommes de terre
 cuisine: french

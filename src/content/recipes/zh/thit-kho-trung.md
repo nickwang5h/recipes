@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/thit-kho-trung.jpg
+coverAlt: 椰汁卤肉蛋装盘后的插画
 title: 椰汁卤肉蛋
 original: Thịt kho trứng
 cuisine: vietnamese

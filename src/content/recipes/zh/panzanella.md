@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/panzanella.jpg
+coverAlt: 托斯卡纳面包沙拉装盘后的插画
 title: 托斯卡纳面包沙拉
 original: Panzanella
 cuisine: italian

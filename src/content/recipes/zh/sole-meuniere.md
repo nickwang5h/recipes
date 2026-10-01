@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/sole-meuniere.jpg
+coverAlt: 黄油煎鳎鱼装盘后的插画
 title: 黄油煎鳎鱼
 original: Sole meunière
 cuisine: french

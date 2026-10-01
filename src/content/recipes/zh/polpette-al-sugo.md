@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/polpette-al-sugo.jpg
+coverAlt: 番茄汁肉丸装盘后的插画
 title: 番茄汁肉丸
 original: Polpette al sugo
 cuisine: italian

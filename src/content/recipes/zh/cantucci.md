@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cantucci.jpg
+coverAlt: 意式杏仁脆饼装盘后的插画
 title: 意式杏仁脆饼
 original: Cantucci
 cuisine: italian

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/salade-lyonnaise.jpg
+coverAlt: 里昂沙拉装盘后的插画
 title: 里昂沙拉
 original: Salade lyonnaise
 cuisine: french

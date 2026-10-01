@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pesto-alla-genovese.jpg
+coverAlt: 热那亚青酱装盘后的插画
 title: 热那亚青酱
 original: Pesto alla genovese
 cuisine: italian

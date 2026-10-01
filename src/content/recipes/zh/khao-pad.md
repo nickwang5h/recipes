@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/khao-pad.jpg
+coverAlt: 泰式炒饭装盘后的插画
 title: 泰式炒饭
 original: Khao phat
 cuisine: thai

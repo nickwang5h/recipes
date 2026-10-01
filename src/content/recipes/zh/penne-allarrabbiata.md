@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/penne-allarrabbiata.jpg
+coverAlt: 香辣番茄笔管面装盘后的插画
 title: 香辣番茄笔管面
 original: Penne all'arrabbiata
 cuisine: italian

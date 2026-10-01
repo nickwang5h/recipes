@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/quiche-lorraine.jpg
+coverAlt: 洛林咸派装盘后的插画
 title: 洛林咸派
 original: Quiche lorraine
 cuisine: french

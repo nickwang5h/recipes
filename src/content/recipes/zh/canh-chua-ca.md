@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/canh-chua-ca.jpg
+coverAlt: 越南酸鱼汤装盘后的插画
 title: 越南酸鱼汤
 original: Canh chua cá
 cuisine: vietnamese

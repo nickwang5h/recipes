@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/caponata.jpg
+coverAlt: 西西里酸甜茄子装盘后的插画
 title: 西西里酸甜茄子
 original: Caponata
 cuisine: italian
