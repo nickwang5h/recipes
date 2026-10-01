@@ -16,6 +16,7 @@ const nav = [
   ...cuisines.map((c) => ({ href: url(`cuisines/${c.id}`), label: c.data.title, match: `/cuisines/${c.id}/` })),
   { href: url('principles'), label: '原理', match: '/principles/' },
   { href: url('recipes'), label: '菜谱', match: '/recipes/' },
+  { href: url('fridge'), label: '冰箱', match: '/fridge/' },
 ];
 ---
 

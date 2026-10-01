@@ -60,6 +60,13 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
   transition: background-color 120ms ease;
 }
 .site-nav a:hover, .site-nav a[aria-current="page"] { background: var(--surface); color: var(--text); }
+.site-nav a { white-space: nowrap; }
+@media (max-width: 640px) {
+  .site-header .wrap { gap: 0.25rem; padding-top: 0.6rem; padding-bottom: 0.4rem; }
+  .site-nav { width: 100%; flex-wrap: wrap; gap: 0.1rem; margin-left: -0.55rem; }
+  .site-nav a { padding: 0.35rem 0.55rem; }
+  .site-nav .theme-toggle { margin-left: auto; }
+}
 
 .theme-toggle {
   display: inline-grid; place-items: center; width: 2.5rem; height: 2.5rem; margin-left: 0.25rem;
@@ -221,3 +228,34 @@ a.chip:hover { border-color: var(--primary); color: var(--text); background: var
 .more-recipes { margin-top: 1.25rem; }
 .more-recipes summary { cursor: pointer; color: var(--muted); margin-bottom: 0.75rem; }
 .more-recipes summary:hover { color: var(--text); }
+
+/* ---------- Fridge ---------- */
+
+.fridge-layout { display: grid; gap: 2rem; }
+@media (min-width: 900px) {
+  .fridge-layout { grid-template-columns: minmax(18rem, 22rem) minmax(0, 1fr); gap: 3rem; align-items: start; }
+  .fridge-picker { position: sticky; top: 1rem; max-height: calc(100vh - 2rem); overflow-y: auto; }
+}
+.fridge-search input {
+  width: 100%; padding: 0.6rem 0.85rem; font: inherit; color: var(--text); background: var(--bg);
+  border: 1px solid var(--border); border-radius: var(--radius);
+}
+.fridge-search input:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
+.fridge-suggest:not(:empty) { margin-top: 0.6rem; }
+.fridge-have-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.25rem; }
+.fridge-have-head h2 { margin: 0; }
+.fridge-have-head + .chips { margin-top: 0.6rem; }
+.fridge-empty { color: var(--muted); font-size: 0.95rem; margin: 0.5rem 0 0; }
+.fridge-help { color: var(--muted); font-size: 0.85rem; margin: 0 0 0.6rem; }
+.fridge-count { color: var(--muted); font-weight: 400; font-size: 0.9em; }
+.fridge-group { border-top: 1px solid var(--border); padding: 0.6rem 0; }
+.fridge-group:first-of-type { margin-top: 1.25rem; }
+.fridge-group summary { cursor: pointer; padding: 0.2rem 0; font-weight: 600; }
+.fridge-group[open] summary { margin-bottom: 0.6rem; }
+button.chip { font: inherit; font-size: 0.9rem; cursor: pointer; }
+button.chip:hover { border-color: var(--primary); }
+button.chip[aria-pressed="true"] { background: var(--text); border-color: var(--text); color: var(--bg); }
+.fridge-results .section-title:first-of-type { margin-top: 1.5rem; }
+.card p.fridge-missing { color: var(--accent-red); font-size: 0.9rem; }
+.card p.fridge-swap { color: var(--accent-yellow); font-size: 0.9rem; }
+.fridge-more { margin-top: 1rem; }
