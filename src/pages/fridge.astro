@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import { getImage } from 'astro:assets';
 import Base from '../layouts/Base.astro';
-import { COURSES, INGREDIENT_KINDS, type Course, type IngredientKind } from '../lib/categories';
+import { COURSES, INGREDIENT_KINDS, TIME_LIMITS, type Course, type IngredientKind } from '../lib/categories';
 import { ALWAYS_HAVE, DEFAULT_STAPLES } from '../lib/fridge';
 import { formatTotal, getCuisines, url } from '../lib/site';
 
@@ -27,6 +27,7 @@ const rec = await Promise.all(recipes.map(async (r) => {
     cuisine: r.data.cuisine.id,
     course: r.data.course,
     time: formatTotal(r.data.time),
+    minutes: r.data.time.prep + r.data.time.cook,
     img: r.data.cover ? (await getImage({ src: r.data.cover, width: 480, format: 'webp' })).src : undefined,
     req,
   };
@@ -103,6 +104,10 @@ const data = {
         <button class="chip" type="button" data-course="" aria-pressed="true">全部</button>
         {usedCourses.map((c) => <button class="chip" type="button" data-course={c} aria-pressed="false">{COURSES[c]}</button>)}
       </nav>
+      <nav class="filters chips" aria-label="按用时筛选" data-time-filter>
+        <button class="chip" type="button" data-time="" aria-pressed="true">不限时间</button>
+        {Object.entries(TIME_LIMITS).map(([id, t]) => <button class="chip" type="button" data-time={id} aria-pressed="false">{t.label}</button>)}
+      </nav>
 
       <details class="shopping-list" data-list-wrap open hidden>
         <summary><h2 class="section-title">购物清单 <span class="fridge-count" data-list-count></span></h2></summary>
@@ -133,12 +138,12 @@ const data = {
   <script type="application/json" id="fridge-data" set:html={JSON.stringify(data)} />
 
   <script>
-    import type { WhereToBuy } from '../lib/categories';
+    import { withinTime, type WhereToBuy } from '../lib/categories';
     import { matchRecipes, searchIngredients, type Match } from '../lib/fridge';
     import { addMissing, grouped, toText, type ListItem } from '../lib/shopping';
 
     interface Ingredient { id: string; zh: string; en: string; where: WhereToBuy; names: string[]; subs: string[] }
-    interface Recipe { id: string; href: string; title: string; summary: string; cuisine: string; course: string; time: string; img?: string; req: string[] }
+    interface Recipe { id: string; href: string; title: string; summary: string; cuisine: string; course: string; time: string; minutes: number; img?: string; req: string[] }
     interface Data {
       ingredients: Ingredient[];
       recipes: Recipe[];
@@ -161,6 +166,7 @@ const data = {
     let staplesOff = new Set<string>();
     let list: ListItem[] = [];
     let course = '';
+    let time = '';
     let shown = PAGE;
     try {
       const saved = JSON.parse(localStorage.getItem(STORE) ?? '{}');
@@ -322,10 +328,14 @@ const data = {
       for (const b of document.querySelectorAll<HTMLButtonElement>('[data-course-filter] button'))
         b.setAttribute('aria-pressed', String(b.dataset.course === course));
 
-      const pool = course ? data.recipes.filter((r) => r.course === course) : data.recipes;
+      for (const b of document.querySelectorAll<HTMLButtonElement>('[data-time-filter] button'))
+        b.setAttribute('aria-pressed', String(b.dataset.time === time));
+
+      const pool = data.recipes.filter((r) => (!course || r.course === course) && withinTime(time, r.minutes));
       const staples = new Set(data.staples.filter((id) => !staplesOff.has(id)));
       const matches = matchRecipes(pool, { chosen, staples, substitutes, maxMissing: 2 });
       const ready = matches.filter((m) => m.missing.length === 0);
+      if (time) ready.sort((x, y) => x.recipe.minutes - y.recipe.minutes);
       const almost = matches.filter((m) => m.missing.length > 0);
 
       $('[data-hint]').hidden = chosen.size > 0;
@@ -359,6 +369,13 @@ const data = {
       const courseBtn = target.closest<HTMLButtonElement>('[data-course-filter] button');
       if (courseBtn) {
         course = courseBtn.dataset.course ?? '';
+        shown = PAGE;
+        render();
+        return;
+      }
+      const timeBtn = target.closest<HTMLButtonElement>('[data-time-filter] button');
+      if (timeBtn) {
+        time = timeBtn.dataset.time ?? '';
         shown = PAGE;
         render();
         return;

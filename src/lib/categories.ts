@@ -49,3 +49,21 @@ export const WHERE_TO_BUY = {
 } as const;
 
 export type WhereToBuy = keyof typeof WHERE_TO_BUY;
+
+/** Time filters, by total minutes (prep + cook). "Within" buckets overlap on purpose: a 10-minute dish
+ *  belongs in 30 分钟内 too, because that's what someone with half an hour wants to see. */
+export const TIME_LIMITS = {
+  '15': { label: '15 分钟内', max: 15 },
+  '30': { label: '半小时内', max: 30 },
+  '60': { label: '1 小时内', max: 60 },
+  '120': { label: '2 小时内', max: 120 },
+  long: { label: '2 小时以上', min: 121 },
+} as const satisfies Record<string, { label: string; max?: number; min?: number }>;
+
+export type TimeLimit = keyof typeof TIME_LIMITS;
+
+export function withinTime(limit: string, minutes: number): boolean {
+  const bucket = TIME_LIMITS[limit as TimeLimit] as { max?: number; min?: number } | undefined;
+  if (!bucket) return true;
+  return minutes <= (bucket.max ?? Infinity) && minutes >= (bucket.min ?? 0);
+}

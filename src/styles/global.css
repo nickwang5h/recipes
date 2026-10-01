@@ -114,7 +114,7 @@ a.cuisine-tag:hover { color: var(--primary); }
 .chip {
   display: inline-block; padding: 0.2rem 0.75rem; border: 1px solid var(--border); border-radius: 999px;
   color: var(--text); text-decoration: none; font-size: 0.9rem; background: var(--bg);
-  transition: border-color 120ms ease, background-color 120ms ease;
+  transition: border-color 120ms ease, background-color 120ms ease, color 120ms ease;
 }
 a.chip:hover { border-color: var(--primary); color: var(--text); background: var(--surface); }
 

@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import OfflineSave from '../../components/OfflineSave.astro';
 import RecipeCard from '../../components/RecipeCard.astro';
-import { COURSES, type Course } from '../../lib/categories';
+import { COURSES, TIME_LIMITS, type Course } from '../../lib/categories';
 import { getCuisineMap, getCuisines, url } from '../../lib/site';
 
 const cuisines = await getCuisines();
@@ -31,11 +31,15 @@ const base = url('recipes');
     <a class="chip" href={base} data-value="">全部类型</a>
     {usedCourses.map((c) => <a class="chip" href={`${base}?course=${c}`} data-value={c}>{COURSES[c]}</a>)}
   </nav>
+  <nav class="filters chips" aria-label="按用时筛选" data-filter-group="time">
+    <a class="chip" href={base} data-value="">不限时间</a>
+    {Object.entries(TIME_LIMITS).map(([id, t]) => <a class="chip" href={`${base}?time=${id}`} data-value={id}>{t.label}</a>)}
+  </nav>
 
   <p class="filter-count" data-count>{recipes.length} 道菜</p>
   <ul class="card-grid" data-recipe-list>
     {recipes.map((recipe) => (
-      <li data-cuisine={recipe.data.cuisine.id} data-course={recipe.data.course}>
+      <li data-cuisine={recipe.data.cuisine.id} data-course={recipe.data.course} data-minutes={recipe.data.time.prep + recipe.data.time.cook}>
         <RecipeCard recipe={recipe} cuisine={cuisineMap.get(recipe.data.cuisine.id)!} />
       </li>
     ))}
@@ -43,20 +47,29 @@ const base = url('recipes');
   <p data-empty hidden style="color: var(--muted)">没有符合条件的菜谱。</p>
 
   <script>
-    const GROUPS = ['cuisine', 'course'] as const;
+    import { withinTime } from '../../lib/categories';
+
+    const GROUPS = ['cuisine', 'course', 'time'] as const;
 
     const apply = () => {
       const params = new URLSearchParams(location.search);
       let shown = 0;
       for (const li of document.querySelectorAll<HTMLElement>('[data-recipe-list] > li')) {
-        const match = GROUPS.every((g) => !params.get(g) || li.dataset[g] === params.get(g));
+        const minutes = Number(li.dataset.minutes);
+        const match = GROUPS.every((g) => {
+          const want = params.get(g);
+          if (!want) return true;
+          return g === 'time' ? withinTime(want, minutes) : li.dataset[g] === want;
+        });
         li.hidden = !match;
+        // With a time limit set, quickest first.
+        li.style.order = params.get('time') ? String(minutes) : '';
         if (match) shown++;
       }
       for (const nav of document.querySelectorAll<HTMLElement>('[data-filter-group]')) {
         const group = nav.dataset.filterGroup!;
         for (const a of nav.querySelectorAll<HTMLAnchorElement>('a')) {
-          // Each link keeps the other group's current filter.
+          // Each link keeps the other groups' current filters.
           const next = new URLSearchParams(params);
           if (a.dataset.value) next.set(group, a.dataset.value);
           else next.delete(group);
