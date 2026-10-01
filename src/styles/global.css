@@ -63,10 +63,11 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 .site-nav a { white-space: nowrap; }
 @media (max-width: 640px) {
   .site-header .wrap { gap: 0.25rem; padding-top: 0.6rem; padding-bottom: 0.4rem; }
-  .site-nav { width: calc(100% + 0.55rem); gap: 0.1rem; margin-left: -0.55rem; }
-  .site-nav a { padding: 0.35rem 0.55rem; }
-  .site-nav .theme-toggle { width: 2.25rem; height: 2.25rem; }
-  .site-nav .theme-toggle { margin-left: auto; }
+  /* Six links, search and the theme button fit one row at 360px; larger system fonts wrap. */
+  .site-nav { width: calc(100% + 0.35rem); gap: 0; margin-left: -0.35rem; font-size: 1rem; flex-wrap: wrap; }
+  .site-nav a { padding: 0.35rem; }
+  .site-nav a.nav-icon { width: 2rem; height: 2rem; margin-left: auto; }
+  .site-nav .theme-toggle { flex: none; width: 2rem; height: 2rem; margin-left: 0.15rem; }
 }
 
 .theme-toggle {
@@ -424,3 +425,82 @@ button.chip[aria-pressed="true"] { background: var(--text); border-color: var(--
 .parts-toggle input { width: 1.1rem; height: 1.1rem; margin: 0; accent-color: var(--primary); cursor: pointer; }
 .parts-toggle:hover { color: var(--text); }
 .fridge-results > .parts-toggle { margin: 0.25rem 0 0.5rem; }
+
+/* ---------- Mine: favorites, notes, menu ---------- */
+
+.mine-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 1.25rem; }
+.fav-btn { display: inline-flex; align-items: center; gap: 0.4rem; }
+.fav-btn svg { width: 1.05rem; height: 1.05rem; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.fav-btn[aria-pressed="true"] { background: var(--bg); color: var(--primary); border-color: var(--primary); }
+.fav-btn[aria-pressed="true"] svg { fill: var(--primary); stroke: var(--primary); }
+.menu-pick { position: relative; display: inline-flex; align-items: center; gap: 0.3rem; }
+.menu-pick::after { content: "▾"; font-size: 0.75em; color: var(--muted); }
+/* The native select sits invisibly over the button so phones get their own day picker. */
+.menu-pick select { position: absolute; inset: 0; opacity: 0; cursor: pointer; font: inherit; }
+.mine-note { margin-top: 0.9rem; max-width: 40rem; }
+.mine-note summary { cursor: pointer; color: var(--muted); font-size: 0.95rem; }
+.mine-note summary:hover { color: var(--text); }
+.mine-note textarea {
+  display: block; width: 100%; margin-top: 0.5rem; padding: 0.6rem 0.75rem; font: inherit; font-size: 0.95rem; line-height: 1.6;
+  color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); resize: vertical;
+}
+.mine-note textarea:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
+.mine-note-hint { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.8rem; }
+@media print {
+  .mine-bar, .mine-note:not([open]), .mine-note-hint { display: none !important; }
+  .mine-note textarea { border: 0; padding: 0; resize: none; }
+}
+
+/* Favorite marker on cards, set by the script in Base.astro. */
+.card.is-fav::after {
+  content: ""; position: absolute; top: 0.55rem; right: 0.55rem; width: 1.6rem; height: 1.6rem; border-radius: 50%;
+  background: var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23c3473a' d='M12 20.5s-7.5-4.6-7.5-10.1A4.4 4.4 0 0 1 12 7.6a4.4 4.4 0 0 1 7.5 2.8c0 5.5-7.5 10.1-7.5 10.1z'/%3E%3C/svg%3E") center / 1rem no-repeat;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.15);
+}
+.card p.mine-card-note { color: var(--text); font-size: 0.85rem; padding: 0.35rem 0.5rem; margin-top: 0.4rem; background: var(--bg); border-radius: 6px; }
+.family { max-width: 46rem; }
+.family p { margin: 0.5rem 0; }
+.family-join { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 1.25rem; }
+.family-join label { width: 100%; color: var(--muted); font-size: 0.95rem; }
+.family-join input {
+  flex: 1 1 14rem; max-width: 22rem; padding: 0.55rem 0.8rem; font: inherit; font-family: ui-monospace, monospace; letter-spacing: 0.04em;
+  color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+}
+.family-code { font-family: ui-monospace, monospace; font-size: 1.05rem; letter-spacing: 0.04em; padding: 0.15em 0.5em; user-select: all; }
+.family-sync { color: var(--muted); font-size: 0.95rem; }
+.family-note { color: var(--muted); font-size: 0.85rem; margin-top: 1.25rem !important; }
+
+/* ---------- Weekly menu ---------- */
+
+.menu-controls { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem; color: var(--muted); font-size: 0.95rem; }
+.menu-controls select { font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 0.2rem 0.4rem; margin-left: 0.25rem; }
+.menu-week { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); align-items: start; }
+.menu-day { padding: 0.9rem 1rem 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.menu-day-head { display: flex; align-items: center; gap: 0.4rem; }
+.menu-day-head h2 { flex: 1; margin: 0; font-size: 1.2rem; }
+.menu-day-head .text-btn { min-height: 2.25rem; padding: 0 0.7rem; font-size: 0.85rem; }
+.menu-empty { margin: 0.6rem 0 0; color: var(--muted); font-size: 0.9rem; list-style: none; }
+.menu-dishes { list-style: none; padding: 0; margin: 0.6rem 0 0; display: grid; gap: 0.4rem; }
+.menu-dish { display: flex; align-items: center; gap: 0.5rem; }
+.menu-dish-link { flex: 1; min-width: 0; display: flex; align-items: center; gap: 0.6rem; color: var(--text); text-decoration: none; }
+.menu-dish-link:hover .menu-dish-title { color: var(--primary); }
+.menu-thumb { flex: none; width: 3.6rem; height: 2.4rem; object-fit: cover; border-radius: 6px; border: 1px solid var(--border); background: var(--surface-strong); }
+.menu-thumb.card-ph { display: grid; place-items: center; color: var(--border); }
+.menu-thumb.card-ph svg { width: 60%; }
+.menu-dish-text { min-width: 0; display: flex; flex-direction: column; line-height: 1.35; }
+.menu-dish-title { font-family: var(--font-reading); font-size: 1.05rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.menu-dish-time { color: var(--muted); font-size: 0.78rem; }
+.menu-remove { flex: none; width: 2rem; height: 2rem; border: 0; border-radius: 50%; background: none; color: var(--muted); font-size: 1.2rem; cursor: pointer; }
+.menu-remove:hover { background: var(--surface-strong); color: var(--text); }
+.menu-swap { flex: none; min-height: 2rem; padding: 0 0.7rem; font-size: 0.85rem; }
+.menu-slot { flex: none; width: 2.4rem; color: var(--muted); font-size: 0.8rem; }
+.menu-panel { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px dashed var(--border); }
+.menu-panel .kit-actions { margin-top: 0.6rem; }
+.menu-search { width: 100%; padding: 0.5rem 0.75rem; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); }
+.needs-list { list-style: none; padding: 0; margin: 0; columns: 2 16rem; column-gap: 2rem; }
+.needs-list li { break-inside: avoid; padding: 0.3rem 0; border-bottom: 1px dashed var(--border); }
+.needs-list .ing-en, .needs-list .ing-note { color: var(--muted); font-size: 0.8rem; }
+.needs-list .ing-note { display: block; }
+.needs-list li.is-listed { opacity: 0.55; }
+[data-needs-wrap] { margin-bottom: 1.5rem; }
+[data-needs-wrap] .kit-actions { margin-top: 1rem; align-items: center; }

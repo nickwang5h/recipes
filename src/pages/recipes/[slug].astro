@@ -3,6 +3,7 @@ import { getImage } from 'astro:assets';
 import { getCollection, getEntries, getEntry, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Cover from '../../components/Cover.astro';
+import RecipeMine from '../../components/RecipeMine.astro';
 import RecipeCard from '../../components/RecipeCard.astro';
 import CuisineTag from '../../components/CuisineTag.astro';
 import RecipeKit from '../../components/RecipeKit.astro';
@@ -73,6 +74,7 @@ const ld = recipeLd({
             </ul>
           </nav>
         )}
+        <RecipeMine id={recipe.id} />
       </header>
       <Cover image={recipe.data.cover} alt={recipe.data.coverAlt} />
     </div>

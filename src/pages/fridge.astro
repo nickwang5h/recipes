@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { getImage } from 'astro:assets';
 import Base from '../layouts/Base.astro';
+import ShoppingList from '../components/ShoppingList.astro';
 import { COURSES, INGREDIENT_KINDS, TIME_LIMITS, type Course, type IngredientKind } from '../lib/categories';
 import { ALWAYS_HAVE, DEFAULT_STAPLES } from '../lib/fridge';
 import { formatTotal, getCuisines, url } from '../lib/site';
@@ -114,16 +115,7 @@ const data = {
         也列出酱汁、高汤等半成品
       </label>
 
-      <details class="shopping-list" data-list-wrap open hidden>
-        <summary><h2 class="section-title">购物清单 <span class="fridge-count" data-list-count></span></h2></summary>
-        <div data-list></div>
-        <div class="kit-actions shopping-actions">
-          <button class="text-btn" type="button" data-list-copy>复制清单</button>
-          <button class="text-btn" type="button" data-list-stock>买到的放进冰箱</button>
-          <button class="text-btn" type="button" data-list-clear>清空</button>
-          <span class="offline-status" data-list-status aria-live="polite"></span>
-        </div>
-      </details>
+      <ShoppingList />
 
       <p class="fridge-empty" data-hint>先在左边选几样食材。</p>
 
@@ -145,7 +137,9 @@ const data = {
   <script>
     import { withinTime, type WhereToBuy } from '../lib/categories';
     import { matchRecipes, searchIngredients, type Match } from '../lib/fridge';
-    import { addMissing, grouped, toText, type ListItem } from '../lib/shopping';
+    import { get, keys, set, setMany, subscribe } from '../scripts/store';
+    import { addToList, isListed, mountShoppingList } from '../scripts/shopping-list';
+    import { el, recipeCard } from '../scripts/ui';
 
     interface Ingredient { id: string; zh: string; en: string; where: WhereToBuy; names: string[]; subs: string[] }
     interface Recipe { id: string; href: string; title: string; summary: string; cuisine: string; course: string; time: string; minutes: number; component: boolean; img?: string; req: string[] }
@@ -156,8 +150,6 @@ const data = {
       staples: string[];
     }
 
-    const STORE = 'recipes:v1:fridge';
-    const PLATE = '<svg viewBox="0 0 120 72" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="60" cy="38" rx="54" ry="28"/><ellipse cx="60" cy="38" rx="36" ry="17"/></svg>';
     const PAGE = 24;
     const data: Data = JSON.parse(document.getElementById('fridge-data')!.textContent!);
     const byId = new Map(data.ingredients.map((i) => [i.id, i]));
@@ -166,39 +158,19 @@ const data = {
     const nameOf = (id: string) => byId.get(id)?.zh ?? id;
     const $ = <T extends HTMLElement>(sel: string) => document.querySelector<T>(sel)!;
 
-    // State: chosen ingredients, plus the staples the cook says they lack.
-    let chosen = new Set<string>();
-    let staplesOff = new Set<string>();
-    let list: ListItem[] = [];
+    // What's in the fridge lives in the shared store (`have:<id>`), as do the staples the cook
+    // says they're out of (`staple-off:<id>`), so the whole family sees the same fridge.
+    const chosen = () => new Set(keys('have:').filter((id) => byId.has(id) && !isStaple(id)));
+    const staplesOff = () => new Set(keys('staple-off:').filter(isStaple));
     let course = '';
     let time = '';
-    let parts = false;
     let shown = PAGE;
-    try {
-      const saved = JSON.parse(localStorage.getItem(STORE) ?? '{}');
-      chosen = new Set((saved.chosen ?? []).filter((id: string) => byId.has(id) && !isStaple(id)));
-      staplesOff = new Set((saved.staplesOff ?? []).filter(isStaple));
-      list = (saved.list ?? []).filter((item: ListItem) => byId.has(item.id));
-      parts = saved.parts === true;
-    } catch {}
 
-    const save = () => {
-      try { localStorage.setItem(STORE, JSON.stringify({ chosen: [...chosen], staplesOff: [...staplesOff], list, parts })); } catch {}
-    };
-    const catalog = new Map(data.ingredients.map((i) => [i.id, i]));
-    const isOn = (id: string) => (isStaple(id) ? !staplesOff.has(id) : chosen.has(id));
+    const isOn = (id: string) => (isStaple(id) ? !staplesOff().has(id) : chosen().has(id));
     const setOn = (id: string, on: boolean) => {
-      if (isStaple(id)) on ? staplesOff.delete(id) : staplesOff.add(id);
-      else on ? chosen.add(id) : chosen.delete(id);
       shown = PAGE;
-      save();
-      render();
-    };
-
-    const el = <K extends keyof HTMLElementTagNameMap>(tag: K, props: Partial<HTMLElementTagNameMap[K]> = {}, ...kids: (Node | string)[]) => {
-      const node = Object.assign(document.createElement(tag), props);
-      node.append(...kids);
-      return node;
+      if (isStaple(id)) set(`staple-off:${id}`, on ? null : true);
+      else set(`have:${id}`, on ? true : null);
     };
 
     const pickButton = (id: string, label = nameOf(id)) => {
@@ -210,107 +182,22 @@ const data = {
 
     const card = (m: Match<Recipe>) => {
       const r = m.recipe;
-      const c = data.cuisines[r.cuisine];
-      const body = el('div', { className: 'card-body' }, el('h3', { textContent: r.title }));
-      if (m.missing.length) body.append(el('p', { className: 'fridge-missing', textContent: `还缺：${m.missing.map(nameOf).join('、')}` }));
+      const extra: HTMLElement[] = [];
+      if (m.missing.length) extra.push(el('p', { className: 'fridge-missing', textContent: `还缺：${m.missing.map(nameOf).join('、')}` }));
       if (m.swaps.length)
-        body.append(el('p', { className: 'fridge-swap', textContent: m.swaps.map(([need, sub]) => `用${nameOf(sub)}代替${nameOf(need)}`).join('；') }));
-      body.append(
-        el('p', { className: 'card-summary', textContent: r.summary }),
-        el('div', { className: 'meta' }, el('span', { className: `cuisine-tag accent-${c.accent}`, textContent: c.title }), el('span', { textContent: r.time })),
-      );
-      const a = el('a', { className: `card has-cover accent-${c.accent}`, href: r.href });
-      if (r.img) {
-        const img = document.createElement('img');
-        Object.assign(img, { className: 'card-img', src: r.img, alt: '', loading: 'lazy', width: 480, height: 320 });
-        a.append(img);
-      } else {
-        const ph = el('div', { className: 'card-img card-ph', innerHTML: PLATE });
-        ph.setAttribute('aria-hidden', 'true');
-        a.append(ph);
-      }
-      a.append(body);
-      const li = el('li', { className: 'fridge-card' }, a);
+        extra.push(el('p', { className: 'fridge-swap', textContent: m.swaps.map(([need, sub]) => `用${nameOf(sub)}代替${nameOf(need)}`).join('；') }));
+      const li = el('li', { className: 'fridge-card' }, recipeCard(r, data.cuisines[r.cuisine], extra));
       if (m.missing.length) {
-        const listed = () => m.missing.every((id) => list.some((item) => item.id === id && item.for.includes(r.title)));
-        const add = el('button', { type: 'button', className: 'text-btn add-to-list', textContent: listed() ? '已在购物清单里' : '缺的加入购物清单' });
-        add.disabled = listed();
-        add.addEventListener('click', () => {
-          list = addMissing(list, r.title, m.missing);
-          save();
-          renderList();
-          add.textContent = '已在购物清单里';
-          add.disabled = true;
-        });
+        const listed = isListed(r.title, m.missing);
+        const add = el('button', { type: 'button', className: 'text-btn add-to-list', textContent: listed ? '已在购物清单里' : '缺的加入购物清单' });
+        add.disabled = listed;
+        add.addEventListener('click', () => addToList(r.title, m.missing));
         li.append(add);
       }
       return li;
     };
 
-    function renderList() {
-      $('[data-list-wrap]').hidden = list.length === 0;
-      $('[data-list-count]').textContent = `· ${list.filter((i) => !i.bought).length} 样`;
-      $('[data-list]').replaceChildren(
-        ...grouped(list, catalog).map((group) => {
-          const ul: HTMLUListElement = el('ul', { className: 'ingredients' });
-          ul.append(
-              ...group.items.map((item) => {
-                const info = catalog.get(item.id)!;
-                const box = document.createElement('input');
-                box.type = 'checkbox';
-                box.checked = item.bought;
-                box.addEventListener('change', () => {
-                  item.bought = box.checked;
-                  save();
-                  renderList();
-                });
-                const text: HTMLSpanElement = el('span', { className: 'ing-text' });
-                text.append(
-                  el('span', { className: 'ing-name', textContent: info.zh }),
-                  el('span', { className: 'ing-en', textContent: info.en }),
-                  el('span', { className: 'ing-note', textContent: `用于：${item.for.join('、')}` }),
-                );
-                const label = document.createElement('label');
-                label.className = 'ing-row';
-                label.append(box, text);
-                const li: HTMLLIElement = el('li');
-                li.append(label);
-                return li;
-              }),
-          );
-          const div: HTMLDivElement = el('div', { className: 'shopping-group' });
-          div.append(el('h3', { textContent: group.label }), ul);
-          return div;
-        }),
-      );
-    }
-
-    const listStatus = (text: string) => {
-      $('[data-list-status]').textContent = text;
-      setTimeout(() => ($('[data-list-status]').textContent = ''), 2500);
-    };
-    $('[data-list-copy]').addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText(toText(list, catalog));
-        listStatus('已复制');
-      } catch {
-        listStatus('复制失败，请手动选择文字');
-      }
-    });
-    $('[data-list-stock]').addEventListener('click', () => {
-      const bought = list.filter((i) => i.bought);
-      if (!bought.length) return listStatus('先勾选买到的');
-      list = list.filter((i) => !i.bought);
-      for (const item of bought) setOn(item.id, true);
-      save();
-      renderList();
-    });
-    $('[data-list-clear]').addEventListener('click', () => {
-      list = [];
-      save();
-      renderList();
-      render();
-    });
+    mountShoppingList(new Map(data.ingredients.map((i) => [i.id, i])));
 
     const search = $<HTMLInputElement>('[data-search]');
     const renderSuggest = () => {
@@ -319,15 +206,17 @@ const data = {
     };
 
     function render() {
+      const mine = chosen();
       // Pickers rendered on the server and in the suggestion list.
       for (const b of document.querySelectorAll<HTMLButtonElement>('button.pick')) b.setAttribute('aria-pressed', String(isOn(b.dataset.id!)));
       for (const list of document.querySelectorAll<HTMLElement>('[data-kind]')) {
-        const n = [...list.querySelectorAll<HTMLButtonElement>('button.pick')].filter((b) => chosen.has(b.dataset.id!)).length;
+        const n = [...list.querySelectorAll<HTMLButtonElement>('button.pick')].filter((b) => mine.has(b.dataset.id!)).length;
         $(`[data-kind-count="${list.dataset.kind}"]`).textContent = n ? `· ${n}` : '';
       }
-      $('[data-staple-count]').textContent = `· ${data.staples.length - staplesOff.size}/${data.staples.length}`;
+      const off = staplesOff();
+      $('[data-staple-count]').textContent = `· ${data.staples.length - off.size}/${data.staples.length}`;
 
-      const have = [...chosen].sort((a, b) => nameOf(a).localeCompare(nameOf(b), 'zh'));
+      const have = [...mine].sort((a, b) => nameOf(a).localeCompare(nameOf(b), 'zh'));
       $('[data-have]').replaceChildren(...have.map((id) => pickButton(id, `${nameOf(id)} ×`)));
       $('[data-have-empty]').hidden = have.length > 0;
       $('[data-clear]').hidden = have.length === 0;
@@ -338,16 +227,17 @@ const data = {
       for (const b of document.querySelectorAll<HTMLButtonElement>('[data-time-filter] button'))
         b.setAttribute('aria-pressed', String(b.dataset.time === time));
 
-      const showParts = parts || course === 'sauce';
+      $<HTMLInputElement>('[data-parts]').checked = get('pref:parts') === true;
+      const showParts = get('pref:parts') === true || course === 'sauce';
       const pool = data.recipes.filter((r) => (showParts || !r.component) && (!course || r.course === course) && withinTime(time, r.minutes));
-      const staples = new Set(data.staples.filter((id) => !staplesOff.has(id)));
-      const matches = matchRecipes(pool, { chosen, staples, substitutes, maxMissing: 2 });
+      const staples = new Set(data.staples.filter((id) => !off.has(id)));
+      const matches = matchRecipes(pool, { chosen: new Set(have), staples, substitutes, maxMissing: 2 });
       const ready = matches.filter((m) => m.missing.length === 0);
       if (time) ready.sort((x, y) => x.recipe.minutes - y.recipe.minutes);
       const almost = matches.filter((m) => m.missing.length > 0);
 
-      $('[data-hint]').hidden = chosen.size > 0;
-      $('[data-none]').hidden = chosen.size === 0 || matches.length > 0;
+      $('[data-hint]').hidden = have.length > 0;
+      $('[data-none]').hidden = have.length === 0 || matches.length > 0;
       $('[data-ready-wrap]').hidden = ready.length === 0;
       $('[data-ready-count]').textContent = `· ${ready.length}`;
       $('[data-ready]').replaceChildren(...ready.map(card));
@@ -394,20 +284,15 @@ const data = {
         return;
       }
       if (target.closest('[data-clear]')) {
-        chosen.clear();
         shown = PAGE;
-        save();
-        render();
+        setMany(Object.fromEntries([...chosen()].map((id) => [`have:${id}`, null])));
       }
     });
 
     const partsBox = $<HTMLInputElement>('[data-parts]');
-    partsBox.checked = parts;
     partsBox.addEventListener('change', () => {
-      parts = partsBox.checked;
       shown = PAGE;
-      save();
-      render();
+      set('pref:parts', partsBox.checked || null);
     });
     search.addEventListener('input', renderSuggest);
     search.addEventListener('keydown', (event) => {
@@ -420,7 +305,7 @@ const data = {
       renderSuggest();
     });
 
-    renderList();
+    subscribe(render);
     render();
   </script>
 </Base>

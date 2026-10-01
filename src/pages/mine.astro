@@ -1,0 +1,140 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/site';
+---
+
+<Base title="我的" description="家里常做的菜、自己的笔记，以及和家人共享的设置。">
+  <header class="page-head">
+    <h1>我的</h1>
+    <p class="lede">在菜谱页点「常做」或写笔记，都会收到这里。加入家庭后，常做的菜、笔记、<a href={url('menu')}>菜单</a>、冰箱和购物清单在家里每台手机上都一样。</p>
+  </header>
+
+  <section aria-labelledby="fav-title">
+    <h2 id="fav-title" class="section-title">常做的菜 <span class="fridge-count" data-fav-count></span></h2>
+    <p class="fridge-empty" data-fav-empty hidden>还没有。在菜谱页点「常做」，那道菜就会出现在这里。</p>
+    <ul class="card-grid" data-favs></ul>
+  </section>
+
+  <section aria-labelledby="notes-title" data-notes-wrap hidden>
+    <h2 id="notes-title" class="section-title">写过笔记的其他菜</h2>
+    <ul class="card-grid" data-notes></ul>
+  </section>
+
+  <section aria-labelledby="family-title" class="family">
+    <h2 id="family-title" class="section-title">家庭共享</h2>
+    <div data-family-off>
+      <p>家里每人的手机各自打开这个网站时，数据只存在自己手机上。建一个家庭，再把邀请链接发给家人，大家就共用一份。</p>
+      <div class="kit-actions">
+        <button class="text-btn" type="button" data-family-create>建一个家庭</button>
+      </div>
+      <form class="family-join" data-family-join>
+        <label for="family-code">已经有家庭码？</label>
+        <input id="family-code" name="code" autocomplete="off" spellcheck="false" placeholder="xxxx-xxxx-xxxx-xxxx-xxxx" />
+        <button class="text-btn" type="submit">加入</button>
+        <span class="offline-status" data-join-status aria-live="polite"></span>
+      </form>
+    </div>
+    <div data-family-on hidden>
+      <p>家庭码 <code class="family-code" data-family-code></code></p>
+      <p class="family-sync"><span data-sync-state></span></p>
+      <div class="kit-actions">
+        <button class="text-btn" type="button" data-family-invite>复制邀请链接</button>
+        <button class="text-btn" type="button" data-family-sync>立即同步</button>
+        <button class="text-btn" type="button" data-family-leave>这台设备退出家庭</button>
+        <span class="offline-status" data-family-status aria-live="polite"></span>
+      </div>
+    </div>
+    <p class="family-note">拿到家庭码或邀请链接的人都能查看和修改这份数据，只发给家人。这里存的只是菜名、笔记和清单，不需要账号。</p>
+  </section>
+
+  <script>
+    import type { SiteData } from './recipes-data.json';
+    import { formatFamilyCode, normalizeFamilyCode } from '../lib/sync';
+    import { createFamily, get, joinFamily, keys, leaveFamily, subscribe, syncNow, syncStatus } from '../scripts/store';
+    import { el, flash, recipeCard } from '../scripts/ui';
+
+    const $ = <T extends HTMLElement>(sel: string) => document.querySelector<T>(sel)!;
+
+    // ---------- Family ----------
+
+    const STATES = { local: '只在这台设备上', syncing: '同步中…', synced: '已同步', offline: '离线，联网后自动同步', error: '同步失败，稍后会再试' };
+    const renderFamily = () => {
+      const s = syncStatus();
+      $('[data-family-off]').hidden = !!s.family;
+      $('[data-family-on]').hidden = !s.family;
+      if (!s.family) return;
+      $('[data-family-code]').textContent = formatFamilyCode(s.family);
+      const at = s.lastSynced ? ` · ${new Date(s.lastSynced).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })}` : '';
+      $('[data-sync-state]').textContent = STATES[s.state] + (s.state === 'synced' ? at : '');
+    };
+
+    $('[data-family-create]').addEventListener('click', () => void createFamily());
+    $('[data-family-join]').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const code = normalizeFamilyCode($<HTMLInputElement>('#family-code').value);
+      if (!code) return flash($('[data-join-status]'), '家庭码不对，应该是 20 位字母和数字');
+      void joinFamily(code);
+    });
+    $('[data-family-invite]').addEventListener('click', async () => {
+      const link = `${location.origin}/mine/#join=${syncStatus().family}`;
+      try {
+        if (navigator.share) await navigator.share({ title: '厨房原理笔记 · 加入家庭', url: link });
+        else {
+          await navigator.clipboard.writeText(link);
+          flash($('[data-family-status]'), '已复制，发给家人打开即可');
+        }
+      } catch {}
+    });
+    $('[data-family-sync]').addEventListener('click', () => void syncNow());
+    $('[data-family-leave]').addEventListener('click', () => {
+      if (confirm('这台设备退出家庭？已经同步下来的内容会留在这台设备上，之后不再和家人同步。')) leaveFamily();
+    });
+
+    // An invite link opens this page with #join=<code>.
+    const acceptInvite = () => {
+      const invited = normalizeFamilyCode(new URLSearchParams(location.hash.slice(1)).get('join') ?? '');
+      if (!invited) return;
+      history.replaceState(null, '', location.pathname);
+      const current = syncStatus().family;
+      if (current === invited) return;
+      const question = current ? '换到这个家庭？这台设备的内容会并进新的家庭。' : '加入这个家庭？这台设备上已有的常做、笔记和清单会并进去。';
+      if (confirm(question)) void joinFamily(invited);
+    };
+    window.addEventListener('hashchange', acceptInvite);
+    acceptInvite();
+
+    // ---------- Favorites and notes ----------
+
+    let data: SiteData | null = null;
+    const renderMine = () => {
+      if (!data) return;
+      const byId = new Map(data.recipes.map((r) => [r.id, r]));
+      const card = (id: string) => {
+        const r = byId.get(id)!;
+        const note = get<string>('note:' + id);
+        const extra = note ? [el('p', { className: 'mine-card-note', textContent: `笔记：${note}` })] : [];
+        return el('li', {}, recipeCard(r, data!.cuisines[r.cuisine], extra));
+      };
+      const byTitle = (a: string, b: string) => byId.get(a)!.title.localeCompare(byId.get(b)!.title, 'zh');
+      const favs = keys('fav:').filter((id) => byId.has(id)).sort(byTitle);
+      const noted = keys('note:').filter((id) => byId.has(id) && !favs.includes(id)).sort(byTitle);
+      $('[data-fav-count]').textContent = favs.length ? `· ${favs.length}` : '';
+      $('[data-fav-empty]').hidden = favs.length > 0;
+      $('[data-favs]').replaceChildren(...favs.map(card));
+      $('[data-notes-wrap]').hidden = noted.length === 0;
+      $('[data-notes]').replaceChildren(...noted.map(card));
+    };
+
+    subscribe(() => {
+      renderFamily();
+      renderMine();
+    });
+    renderFamily();
+    fetch('/recipes-data.json')
+      .then((res) => res.json())
+      .then((json: SiteData) => {
+        data = json;
+        renderMine();
+      });
+  </script>
+</Base>

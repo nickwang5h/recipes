@@ -1,0 +1,228 @@
+---
+import Base from '../layouts/Base.astro';
+import ShoppingList from '../components/ShoppingList.astro';
+import { url } from '../lib/site';
+---
+
+<Base title="菜单" description="安排接下来一周做什么菜，一键配出一荤一素一汤，再合并成购物清单。">
+  <header class="page-head">
+    <h1>菜单</h1>
+    <p class="lede">安排接下来一周做什么。每天可以手动加菜，也可以让它配一桌：一荤一素一汤，常做的菜更容易被挑中。最后把缺的食材合并进购物清单，<a href={url('fridge')}>冰箱</a>里有的会自动扣掉。</p>
+  </header>
+
+  <div class="menu-controls">
+    <label>
+      配菜时每道不超过
+      <select data-max>
+        <option value="">不限时间</option>
+        <option value="30">30 分钟</option>
+        <option value="45">45 分钟</option>
+        <option value="60" selected>1 小时</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="menu-week" data-week>
+    <p class="fridge-empty">加载中…</p>
+  </div>
+
+  <section aria-labelledby="needs-title" data-needs-wrap hidden>
+    <h2 id="needs-title" class="section-title">这周要买 <span class="fridge-count" data-needs-count></span></h2>
+    <p class="fridge-help">按菜单里的菜算，冰箱里有的和常备调料已经扣掉。</p>
+    <div data-needs></div>
+    <div class="kit-actions">
+      <button class="text-btn" type="button" data-needs-add>全部加入购物清单</button>
+      <span class="offline-status" data-needs-status aria-live="polite"></span>
+    </div>
+  </section>
+
+  <ShoppingList />
+
+  <script>
+    import type { RecipeData, SiteData } from './recipes-data.json';
+    import { dayKey, dayLabel, upcoming } from '../lib/days';
+    import { SLOTS, suggestDish, suggestTable, weekNeeds, type SlotId } from '../lib/menu';
+    import { grouped } from '../lib/shopping';
+    import { get, keys, set, subscribe } from '../scripts/store';
+    import { addToList, listItems, mountShoppingList } from '../scripts/shopping-list';
+    import { el, flash, PLATE } from '../scripts/ui';
+
+    const $ = <T extends HTMLElement>(sel: string) => document.querySelector<T>(sel)!;
+    const data: SiteData = await (await fetch('/recipes-data.json')).json();
+    const byId = new Map(data.recipes.map((r) => [r.id, r]));
+    const dishes = data.recipes.filter((r) => !r.component);
+    const catalog = new Map(Object.entries(data.ingredients));
+    const today = new Date();
+    const days = upcoming(today);
+
+    const menuOf = (day: string) => (get<string[]>('menu:' + day) ?? []).filter((id) => byId.has(id));
+    const setMenu = (day: string, ids: string[]) => set('menu:' + day, ids.length ? ids : null);
+    const plannedThisWeek = () => new Set(days.flatMap((d) => menuOf(dayKey(d))));
+    const favorites = () => new Set(keys('fav:'));
+    const maxMinutes = () => Number($<HTMLSelectElement>('[data-max]').value) || undefined;
+
+    // Open panels survive re-renders triggered by sync.
+    const suggestions = new Map<string, Partial<Record<SlotId, RecipeData>>>();
+    const adding = new Map<string, string>(); // day → search text
+
+    const thumb = (r: RecipeData) => {
+      if (r.img) return Object.assign(document.createElement('img'), { className: 'menu-thumb', src: r.img, alt: '', loading: 'lazy', width: 96, height: 64 });
+      const ph = el('span', { className: 'menu-thumb card-ph', innerHTML: PLATE });
+      ph.setAttribute('aria-hidden', 'true');
+      return ph;
+    };
+
+    const dishRow = (r: RecipeData, actions: HTMLElement[]) =>
+      el('li', { className: 'menu-dish' },
+        el('a', { href: r.href, className: 'menu-dish-link' }, thumb(r),
+          el('span', { className: 'menu-dish-text' }, el('span', { className: 'menu-dish-title', textContent: r.title }), el('span', { className: 'menu-dish-time', textContent: r.time }))),
+        ...actions);
+
+    const button = (text: string, onClick: () => void, className = 'text-btn') => {
+      const b = el('button', { type: 'button', className, textContent: text });
+      b.addEventListener('click', onClick);
+      return b;
+    };
+
+    function suggestFor(day: string) {
+      const planned = plannedThisWeek();
+      const table = suggestTable(dishes, { favorites: favorites(), planned, maxMinutes: maxMinutes() });
+      suggestions.set(day, table as Partial<Record<SlotId, RecipeData>>);
+      render();
+    }
+
+    function renderDay(date: Date) {
+      const day = dayKey(date);
+      const ids = menuOf(day);
+      const section = el('section', { className: 'menu-day' });
+      const head = el('div', { className: 'menu-day-head' },
+        el('h2', { textContent: dayLabel(date, today) }),
+        button('配一桌', () => suggestFor(day)),
+        button('加菜', () => {
+          adding.has(day) ? adding.delete(day) : adding.set(day, '');
+          render();
+          section.querySelector<HTMLInputElement>('input')?.focus();
+        }),
+      );
+      section.append(head);
+
+      const list = el('ul', { className: 'menu-dishes' });
+      for (const id of ids) {
+        const r = byId.get(id)!;
+        list.append(dishRow(r, [button('×', () => setMenu(day, menuOf(day).filter((x) => x !== id)), 'menu-remove')]));
+        list.lastElementChild!.querySelector('.menu-remove')!.setAttribute('aria-label', `从${dayLabel(date, today)}去掉${r.title}`);
+      }
+      if (ids.length) section.append(list);
+      else if (!suggestions.has(day) && !adding.has(day)) section.append(el('p', { className: 'menu-empty', textContent: '还没安排' }));
+
+      const table = suggestions.get(day);
+      if (table) {
+        const ul = el('ul', { className: 'menu-dishes menu-suggest' });
+        for (const slot of SLOTS) {
+          const r = table[slot.id];
+          if (!r) continue;
+          const swap = button('换', () => {
+            const next = suggestDish(dishes, slot.id, { favorites: favorites(), planned: plannedThisWeek(), maxMinutes: maxMinutes(), cuisine: table.main?.cuisine }, new Set([r.id]));
+            if (next) table[slot.id] = next as RecipeData;
+            render();
+          }, 'text-btn menu-swap');
+          const li = dishRow(r, [swap]);
+          li.prepend(el('span', { className: 'menu-slot', textContent: slot.label }));
+          ul.append(li);
+        }
+        section.append(
+          el('div', { className: 'menu-panel' }, ul,
+            el('div', { className: 'kit-actions' },
+              button('都加上', () => {
+                suggestions.delete(day);
+                const add = Object.values(table).map((r) => r!.id).filter((id) => !menuOf(day).includes(id));
+                setMenu(day, [...menuOf(day), ...add]);
+              }),
+              button('算了', () => {
+                suggestions.delete(day);
+                render();
+              }),
+            )),
+        );
+      }
+
+      if (adding.has(day)) {
+        const q = adding.get(day)!;
+        const input = document.createElement('input');
+        Object.assign(input, { type: 'search', value: q, placeholder: '搜菜名…', className: 'menu-search' });
+        const results: HTMLUListElement = el('ul', { className: 'menu-dishes' });
+        const fill = () => {
+          const text = input.value.trim().toLowerCase();
+          adding.set(day, input.value);
+          const favs = favorites();
+          const hits = (text
+            ? dishes.filter((r) => r.title.toLowerCase().includes(text))
+            : dishes.filter((r) => favs.has(r.id))
+          ).filter((r) => !menuOf(day).includes(r.id)).slice(0, 8);
+          results.replaceChildren(...hits.map((r) => dishRow(r, [button('加', () => setMenu(day, [...menuOf(day), r.id]), 'text-btn menu-swap')])));
+          if (!hits.length) results.append(el('li', { className: 'menu-empty', textContent: text ? '没找到' : '输入菜名搜索；常做的菜会先列在这里' }));
+        };
+        input.addEventListener('input', fill);
+        fill();
+        const done: HTMLDivElement = el('div', { className: 'kit-actions' });
+        done.append(button('完成', () => {
+          adding.delete(day);
+          render();
+        }));
+        const panel: HTMLDivElement = el('div', { className: 'menu-panel' });
+        panel.append(input, results, done);
+        section.append(panel);
+      }
+      return section;
+    }
+
+    function renderNeeds() {
+      const planned = days.flatMap((d) => menuOf(dayKey(d))).map((id) => byId.get(id)!);
+      const staples = new Set(data.staples.filter((id) => get('staple-off:' + id) !== true));
+      const needs = weekNeeds(planned, new Set(keys('have:')), staples);
+      const listed = new Set(listItems().map((i) => i.id));
+      const items = [...needs].map(([id, titles]) => ({ id, for: titles, bought: false }));
+      $('[data-needs-wrap]').hidden = items.length === 0;
+      $('[data-needs-count]').textContent = `· ${items.length} 样`;
+      $('[data-needs]').replaceChildren(
+        ...grouped(items, catalog).map((group) => {
+          const ul = el('ul', { className: 'needs-list' });
+          for (const item of group.items) {
+            const info = catalog.get(item.id)!;
+            ul.append(el('li', { className: listed.has(item.id) ? 'is-listed' : '' },
+              el('span', { className: 'ing-name', textContent: info.zh }),
+              el('span', { className: 'ing-en', textContent: ` ${info.en}` }),
+              el('span', { className: 'ing-note', textContent: `用于：${item.for.join('、')}${listed.has(item.id) ? ' · 已在清单' : ''}` })));
+          }
+          return el('div', { className: 'shopping-group' }, el('h3', { textContent: group.label }), ul);
+        }),
+      );
+      return needs;
+    }
+
+    $('[data-needs-add]').addEventListener('click', () => {
+      const needs = renderNeeds();
+      const byDish = new Map<string, string[]>();
+      for (const [id, titles] of needs) for (const t of titles) byDish.set(t, [...(byDish.get(t) ?? []), id]);
+      for (const [title, ids] of byDish) addToList(title, ids);
+      flash($('[data-needs-status]'), '已加入，见下面的购物清单');
+    });
+
+    function render() {
+      $('[data-week]').replaceChildren(...days.map(renderDay));
+      renderNeeds();
+    }
+
+    try {
+      const saved = localStorage.getItem('recipes:menu-max');
+      if (saved !== null) $<HTMLSelectElement>('[data-max]').value = saved;
+    } catch {}
+    $('[data-max]').addEventListener('change', (event) => {
+      try { localStorage.setItem('recipes:menu-max', (event.target as HTMLSelectElement).value); } catch {}
+    });
+
+    mountShoppingList(catalog);
+    subscribe(render);
+    render();
+  </script>
+</Base>

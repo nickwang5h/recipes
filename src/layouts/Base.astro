@@ -23,6 +23,8 @@ const nav = [
   { href: url('principles'), label: '原理', match: '/principles/' },
   { href: url('recipes'), label: '菜谱', match: '/recipes/' },
   { href: url('fridge'), label: '冰箱', match: '/fridge/' },
+  { href: url('menu'), label: '菜单', match: '/menu/' },
+  { href: url('mine'), label: '我的', match: '/mine/' },
 ];
 ---
 
@@ -92,12 +94,26 @@ const nav = [
       </div>
     </footer>
     <script>
+      import { get, subscribe } from '../scripts/store';
+
       document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
         const root = document.documentElement;
         const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
         root.dataset.theme = next;
         try { localStorage.setItem('recipes:theme', next); } catch {}
       });
+
+      // Mark the family's 常做 dishes on every recipe card, server- or client-rendered.
+      // Loading the store here also keeps family sync running on every page.
+      const markFavorites = () => {
+        for (const card of document.querySelectorAll<HTMLAnchorElement>('a.card[href*="/recipes/"]')) {
+          const id = card.pathname.split('/').filter(Boolean)[1];
+          card.classList.toggle('is-fav', get('fav:' + id) === true);
+        }
+      };
+      subscribe(markFavorites);
+      new MutationObserver(markFavorites).observe(document.querySelector('main')!, { childList: true, subtree: true });
+      markFavorites();
 
       if (import.meta.env.PROD && 'serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(() => {});
