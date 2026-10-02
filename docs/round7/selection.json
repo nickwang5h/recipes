@@ -1,0 +1,698 @@
+[
+ {
+  "slug": "dou-jiang",
+  "name": "豆浆",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "drink",
+  "component": false
+ },
+ {
+  "slug": "you-tiao",
+  "name": "油条",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "breakfast",
+  "component": false
+ },
+ {
+  "slug": "jian-bing-guo-zi",
+  "name": "煎饼果子",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "breakfast",
+  "component": false
+ },
+ {
+  "slug": "sheng-jian-bao",
+  "name": "生煎包",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "breakfast",
+  "component": false
+ },
+ {
+  "slug": "xiao-long-bao",
+  "name": "小笼包",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "breakfast",
+  "component": false
+ },
+ {
+  "slug": "cong-you-bing",
+  "name": "葱油饼",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "breakfast",
+  "component": false
+ },
+ {
+  "slug": "chang-fen",
+  "name": "广式肠粉",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "breakfast",
+  "component": false
+ },
+ {
+  "slug": "dou-fu-nao",
+  "name": "咸豆腐脑",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "breakfast",
+  "component": false
+ },
+ {
+  "slug": "ji-dan-guan-bing",
+  "name": "鸡蛋灌饼",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "breakfast",
+  "component": false
+ },
+ {
+  "slug": "xian-rou-bao-zi",
+  "name": "鲜肉包子",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "breakfast",
+  "component": false
+ },
+ {
+  "slug": "luo-bo-gao",
+  "name": "萝卜糕",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "breakfast",
+  "component": false
+ },
+ {
+  "slug": "hu-la-tang",
+  "name": "胡辣汤",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "xian-rou-xiao-hun-tun",
+  "name": "鲜肉小馄饨",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "man-tou",
+  "name": "馒头",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "chun-bing",
+  "name": "春饼",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "bai-qie-ji",
+  "name": "白切鸡",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "mi-zhi-cha-shao",
+  "name": "蜜汁叉烧",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "chi-you-ji",
+  "name": "豉油鸡",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "hao-you-niu-rou",
+  "name": "蚝油牛肉",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "la-wei-bao-zai-fan",
+  "name": "腊味煲仔饭",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "yun-tun-mian",
+  "name": "云吞面",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "xia-jiao",
+  "name": "虾饺",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "xian-yu-ji-li-chao-fan",
+  "name": "咸鱼鸡粒炒饭",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "suan-rong-fen-si-zheng-shan-bei",
+  "name": "蒜蓉粉丝蒸扇贝",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "jiang-cong-chao-xie",
+  "name": "姜葱炒蟹",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "bi-feng-tang-chao-xia",
+  "name": "避风塘炒虾",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "sheng-gun-yu-pian-zhou",
+  "name": "生滚鱼片粥",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "xi-yang-cai-zhu-gu-tang",
+  "name": "西洋菜猪骨汤",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "shuang-pi-nai",
+  "name": "双皮奶",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "jiang-zhuang-nai",
+  "name": "姜撞奶",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "ma-la-gao",
+  "name": "马拉糕",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "chen-pi-hong-dou-sha",
+  "name": "陈皮红豆沙",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "gang-shi-nai-cha",
+  "name": "港式奶茶",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "drink",
+  "component": false
+ },
+ {
+  "slug": "dong-ning-cha",
+  "name": "冻柠茶",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "drink",
+  "component": false
+ },
+ {
+  "slug": "dan-dan-mian",
+  "name": "担担面",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "hong-you-chao-shou",
+  "name": "红油抄手",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "suan-la-fen",
+  "name": "酸辣粉",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "fu-qi-fei-pian",
+  "name": "夫妻肺片",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "suan-ni-bai-rou",
+  "name": "蒜泥白肉",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "bang-bang-ji",
+  "name": "棒棒鸡",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "chong-qing-la-zi-ji",
+  "name": "重庆辣子鸡",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "gan-bian-si-ji-dou",
+  "name": "干煸四季豆",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "suan-cai-yu",
+  "name": "酸菜鱼",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "gan-shao-yu",
+  "name": "干烧鱼",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "dou-ban-yu",
+  "name": "豆瓣鱼",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "dong-po-rou",
+  "name": "东坡肉",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "qing-dun-shi-zi-tou",
+  "name": "清炖狮子头",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "cong-you-ji",
+  "name": "葱油鸡",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "zui-ji",
+  "name": "醉鸡",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "long-jing-xia-ren",
+  "name": "龙井虾仁",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "xi-hu-cu-yu",
+  "name": "西湖醋鱼",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "you-bao-xia",
+  "name": "油爆虾",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "xie-fen-dou-fu",
+  "name": "蟹粉豆腐",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "song-shu-gui-yu",
+  "name": "松鼠桂鱼",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "yan-du-xian",
+  "name": "腌笃鲜",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "wen-si-dou-fu",
+  "name": "文思豆腐",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "da-zhu-gan-si",
+  "name": "大煮干丝",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "si-xi-kao-fu",
+  "name": "四喜烤麸",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "ji-cai-da-hun-tun",
+  "name": "荠菜鲜肉大馄饨",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "duo-jiao-yu-tou",
+  "name": "剁椒鱼头",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "mao-shi-hong-shao-rou",
+  "name": "毛氏红烧肉",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "dong-an-zi-ji",
+  "name": "东安子鸡",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "la-wei-he-zheng",
+  "name": "腊味合蒸",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "suan-dou-jiao-rou-mo",
+  "name": "酸豆角炒肉末",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "jing-jiang-rou-si",
+  "name": "京酱肉丝",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "mu-xu-rou",
+  "name": "木须肉",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "cong-bao-yang-rou",
+  "name": "葱爆羊肉",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "xiao-ji-dun-mo-gu",
+  "name": "小鸡炖蘑菇",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "liu-rou-duan",
+  "name": "溜肉段",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "yang-rou-chuan",
+  "name": "羊肉串",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "san-bei-ji",
+  "name": "三杯鸡",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "guo-ta-dou-fu",
+  "name": "锅塌豆腐",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "suan-la-tang",
+  "name": "酸辣汤",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "rou-jia-mo",
+  "name": "肉夹馍",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "lan-zhou-niu-rou-mian",
+  "name": "兰州牛肉面",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "qi-shan-sao-zi-mian",
+  "name": "岐山臊子面",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "xin-jiang-shou-zhua-fan",
+  "name": "新疆手抓饭",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "tai-shi-niu-rou-mian",
+  "name": "台式红烧牛肉面",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "hei-zhi-ma-tang-yuan",
+  "name": "黑芝麻汤圆",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "ba-bao-fan",
+  "name": "八宝饭",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "lv-dou-tang",
+  "name": "绿豆汤",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "hei-zhi-ma-hu",
+  "name": "黑芝麻糊",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "bing-tang-hu-lu",
+  "name": "冰糖葫芦",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "lv-da-gun",
+  "name": "驴打滚",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "dan-huang-su",
+  "name": "蛋黄酥",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "zhen-zhu-nai-cha",
+  "name": "珍珠奶茶",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "drink",
+  "component": false
+ },
+ {
+  "slug": "hong-zao-jiang-cha",
+  "name": "红枣姜茶",
+  "original": "",
+  "cuisine": "chinese",
+  "course": "drink",
+  "component": false
+ }
+]

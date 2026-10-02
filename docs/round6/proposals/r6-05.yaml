@@ -1,0 +1,5 @@
+- { id: sweet-potato, zh: 红薯, aliases: [地瓜, 番薯, 甘薯, 고구마, goguma], en: Sweet potato, kind: vegetable, where: mainstream, pantry: false, substitutes: [] }
+- { id: perilla-leaf, zh: 韩式苏子叶, aliases: [苏子叶, 韩式紫苏叶, 깻잎, kkaennip], en: Perilla leaves (Kkaennip), kind: aromatic, where: asian, pantry: false, substitutes: [] }
+- { id: korean-curry-powder, zh: 韩式咖喱调味粉, aliases: [韩式咖喱粉, 카레가루], en: Korean curry powder (Ottogi Curry), kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: rice-syrup, zh: 韩式米糖浆, aliases: [米糖浆, 쌀엿, ssal-yeot], en: Korean rice syrup, kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: saeujeot, zh: 韩式盐渍小虾, aliases: [盐渍小虾, 새우젓, saeujeot], en: Salted fermented shrimp (Saeujeot), kind: seasoning, where: asian, pantry: false, substitutes: [] }

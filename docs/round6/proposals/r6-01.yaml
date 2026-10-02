@@ -1,0 +1,3 @@
+- { id: korean-radish, zh: 韩国萝卜, aliases: [韩式萝卜, 韩国白萝卜, 무, Mu], en: Korean radish (mu), kind: vegetable, where: asian, pantry: false, substitutes: [daikon] }
+- { id: korean-perilla-leaf, zh: 韩式苏子叶, aliases: [苏子叶, 韩国紫苏叶, 깻잎, Kkaennip, Sesame leaves], en: Fresh perilla leaves (kkaennip / sesame leaves), kind: aromatic, where: asian, pantry: false, substitutes: [] }
+- { id: ssamjang, zh: 包饭酱, aliases: [韩式包饭酱, 쌈장, Ssamjang], en: Ssamjang (seasoned soybean paste / Korean BBQ dipping sauce), kind: seasoning, where: asian, pantry: true, substitutes: [] }

@@ -1,0 +1,2 @@
+- { id: danmuji, zh: 韩式腌萝卜, aliases: [黄腌萝卜, 紫菜包饭萝卜, 단무지, Danmuji], en: Pickled radish for kimbap (Danmuji), kind: vegetable, where: asian, pantry: false, substitutes: [] }
+- { id: chunjang, zh: 韩式春酱, aliases: [韩式黑豆酱, 炸酱面酱, 춘장, Chunjang], en: Korean black bean paste (Chunjang), kind: seasoning, where: asian, pantry: true, substitutes: [] }

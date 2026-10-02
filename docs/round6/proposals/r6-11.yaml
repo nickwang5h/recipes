@@ -1,0 +1,2 @@
+- { id: tilapia, zh: 罗非鱼, aliases: [整条罗非鱼, Tilapia], en: Whole tilapia, kind: seafood, where: asian, pantry: false, substitutes: [sea-bass] }
+- { id: thai-tamarind-paste, zh: 泰式罗望子汁, aliases: [泰式罗望子酱, Thai tamarind paste, 泰式酸角汁], en: Thai tamarind paste / Concentrate cooking tamarind, kind: seasoning, where: asian, pantry: true, substitutes: [] }

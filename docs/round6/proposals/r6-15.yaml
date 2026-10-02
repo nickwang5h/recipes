@@ -1,0 +1,4 @@
+- { id: pork-stock, zh: 猪骨高汤, aliases: [猪骨汤, 猪肉高汤, 清淡猪骨汤], en: Pork stock / Pork broth, kind: seasoning, where: specialty, pantry: false, substitutes: [chicken-stock] }
+- { id: tapioca-starch, zh: 木薯淀粉, aliases: [木薯粉, Tapioca starch, Tapioca flour], en: Tapioca starch / Tapioca flour, kind: seasoning, where: mainstream, pantry: true, substitutes: [cornstarch] }
+- { id: thai-fermented-soybean-paste, zh: 泰式黄豆酱, aliases: [泰式发酵黄豆酱, Tao jiew, Tao jeow, เต้าเจี้ยว], en: Thai Soy Bean Paste / Yellow Bean Sauce (Tao Jiew), kind: seasoning, where: asian, pantry: true, substitutes: [miso] }
+- { id: golden-mountain-sauce, zh: 金山调味酱, aliases: [金山酱, Golden Mountain Sauce], en: Golden Mountain Seasoning Sauce, kind: seasoning, where: asian, pantry: true, substitutes: [light-soy-sauce] }

@@ -1,0 +1,2 @@
+- { id: dill, zh: 鲜莳萝, aliases: [莳萝, 莳萝叶, Dill, Thì là], en: Fresh dill, kind: aromatic, where: mainstream, pantry: false, substitutes: [] }
+- { id: vietnamese-fermented-rice, zh: 越南酸发酵米, aliases: [酸米糟, Mẻ, Cơm mẻ, Com me], en: Vietnamese fermented rice (Me / Com me), kind: seasoning, where: specialty, pantry: false, substitutes: [] }

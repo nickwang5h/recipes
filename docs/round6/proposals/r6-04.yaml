@@ -1,0 +1,2 @@
+- { id: salmon, zh: 三文鱼, aliases: [鲑鱼, 鮭, Salmon], en: Salmon fillets (skin-on), kind: seafood, where: mainstream, pantry: false, substitutes: [] }
+- { id: burdock-root, zh: 牛蒡, aliases: [牛蒡根, ごぼう, Gobo], en: Burdock root / Gobo, kind: vegetable, where: asian, pantry: false, substitutes: [] }

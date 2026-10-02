@@ -1,0 +1,9 @@
+- { id: pork-leg-bones, zh: 猪腿骨, aliases: [猪筒骨, 猪关节骨, 豚骨, Genkotsu], en: Pork leg bones / pork femur and knuckle bones, kind: meat, where: asian, pantry: false, substitutes: [] }
+- { id: chicken-fat, zh: 熟炼鸡油, aliases: [鸡油, 鸡脂, Schmaltz], en: Rendered chicken fat / Schmaltz (plain), kind: seasoning, where: specialty, pantry: false, substitutes: [] }
+- { id: menma, zh: 日式调味笋干, aliases: [メンマ, 面麻, Menma], en: Menma / seasoned bamboo shoots, kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: shungiku, zh: 茼蒿, aliases: [春菊, Shungiku, Chrysanthemum greens], en: Chrysanthemum greens / Tong ho / Shungiku, kind: vegetable, where: asian, pantry: false, substitutes: [spinach] }
+- { id: shirataki, zh: 蒟蒻丝, aliases: [白滝, Shirataki, 魔芋丝, 蒟蒻面], en: Shirataki noodles / Konjac noodles (plain), kind: grain, where: mainstream, pantry: false, substitutes: [] }
+- { id: konnyaku, zh: 蒟蒻块, aliases: [こんにゃく, Konnyaku, 魔芋块], en: Konnyaku / Konjac yam cake (plain block), kind: other, where: asian, pantry: false, substitutes: [] }
+- { id: oden-fish-cakes, zh: 关东煮鱼糕组合, aliases: [关东煮料包, 日式鱼糕, Oden set, 竹轮, 萨摩扬], en: Oden set / Assorted Japanese fish cakes (chikuwa and satsuma-age), kind: seafood, where: asian, pantry: false, substitutes: [] }
+- { id: atsuage, zh: 日式厚油豆腐, aliases: [厚揚げ, 厚扬, Atsuage], en: Atsuage / Deep-fried firm tofu, kind: soy, where: asian, pantry: false, substitutes: [] }
+- { id: karashi-powder, zh: 日式黄芥末粉, aliases: [和芥子, 辛子粉, Karashi], en: Japanese hot mustard powder / Karashi powder, kind: seasoning, where: asian, pantry: true, substitutes: [] }

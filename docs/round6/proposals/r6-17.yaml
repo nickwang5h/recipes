@@ -1,0 +1,1 @@
+- { id: dumpling-wrapper, zh: 圆形饺子皮, aliases: [饺子皮, 韩式饺子皮, 만두피, Mandu pi, Mandu skins], en: Dumpling wrappers / Mandu skins, kind: grain, where: asian, pantry: false, substitutes: [gyoza-wrapper] }

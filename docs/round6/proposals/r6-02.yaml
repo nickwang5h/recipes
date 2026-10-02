@@ -1,0 +1,4 @@
+- { id: mam-ruoc, zh: 顺化发酵虾酱, aliases: [mắm ruốc, Mam Ruoc Hue, 顺化虾酱], en: Salted shrimp paste (Mam Ruoc Hue), kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: mam-tom, zh: 越南发酵虾酱, aliases: [mắm tôm, Mam Tom, Fine Shrimp Sauce], en: Fine shrimp sauce (Mam Tom), kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: rice-field-crab, zh: 田蟹, aliases: [稻田蟹, 越南田蟹, cua đồng, Cua dong], en: Rice field crab (cua dong), kind: seafood, where: specialty, pantry: false, substitutes: [] }
+- { id: giam-bong, zh: 越南酒糟醋, aliases: [giấm bỗng, dấm bỗng, Giam bong], en: Vietnamese fermented rice vinegar (giam bong), kind: seasoning, where: specialty, pantry: true, substitutes: [rice-vinegar] }

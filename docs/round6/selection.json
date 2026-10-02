@@ -1,0 +1,970 @@
+[
+ {
+  "slug": "katsudon",
+  "name": "猪排丼",
+  "original": "カツ丼",
+  "cuisine": "japanese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "tempura",
+  "name": "天妇罗",
+  "original": "天ぷら",
+  "cuisine": "japanese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "yakitori",
+  "name": "日式烤鸡串",
+  "original": "焼き鳥",
+  "cuisine": "japanese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "buta-no-shogayaki",
+  "name": "姜烧猪肉",
+  "original": "豚の生姜焼き",
+  "cuisine": "japanese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "saba-no-misoni",
+  "name": "味噌煮青花鱼",
+  "original": "鯖の味噌煮",
+  "cuisine": "japanese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "sake-no-shioyaki",
+  "name": "盐烤三文鱼",
+  "original": "鮭の塩焼き",
+  "cuisine": "japanese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "kinpira-gobo",
+  "name": "金平牛蒡",
+  "original": "きんぴらごぼう",
+  "cuisine": "japanese",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "agedashi-dofu",
+  "name": "扬出豆腐",
+  "original": "揚げ出し豆腐",
+  "cuisine": "japanese",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "nasu-dengaku",
+  "name": "味噌烤茄子",
+  "original": "茄子田楽",
+  "cuisine": "japanese",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "kyuri-no-sunomono",
+  "name": "醋拌黄瓜",
+  "original": "きゅうりの酢の物",
+  "cuisine": "japanese",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "hambagu",
+  "name": "日式汉堡肉排",
+  "original": "ハンバーグ",
+  "cuisine": "japanese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "korokke",
+  "name": "可乐饼",
+  "original": "コロッケ",
+  "cuisine": "japanese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "yaki-gyoza",
+  "name": "日式煎饺",
+  "original": "焼き餃子",
+  "cuisine": "japanese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "yakisoba",
+  "name": "日式炒面",
+  "original": "焼きそば",
+  "cuisine": "japanese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "kitsune-udon",
+  "name": "油豆腐乌冬面",
+  "original": "きつねうどん",
+  "cuisine": "japanese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "zaru-soba",
+  "name": "冷荞麦面",
+  "original": "ざるそば",
+  "cuisine": "japanese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "shoyu-ramen",
+  "name": "酱油拉面",
+  "original": "醤油ラーメン",
+  "cuisine": "japanese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "nibuta-chashu",
+  "name": "日式叉烧",
+  "original": "チャーシュー",
+  "cuisine": "japanese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "sukiyaki",
+  "name": "寿喜烧",
+  "original": "すき焼き",
+  "cuisine": "japanese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "oden",
+  "name": "关东煮",
+  "original": "おでん",
+  "cuisine": "japanese",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "tonjiru",
+  "name": "猪肉味噌汤",
+  "original": "豚汁",
+  "cuisine": "japanese",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "takikomi-gohan",
+  "name": "什锦炊饭",
+  "original": "炊き込みご飯",
+  "cuisine": "japanese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "omurice",
+  "name": "蛋包饭",
+  "original": "オムライス",
+  "cuisine": "japanese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "chikuzenni",
+  "name": "筑前煮",
+  "original": "筑前煮",
+  "cuisine": "japanese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "kabocha-no-nimono",
+  "name": "煮南瓜",
+  "original": "かぼちゃの煮物",
+  "cuisine": "japanese",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "tamago-sando",
+  "name": "鸡蛋三明治",
+  "original": "たまごサンド",
+  "cuisine": "japanese",
+  "course": "breakfast",
+  "component": false
+ },
+ {
+  "slug": "dorayaki",
+  "name": "铜锣烧",
+  "original": "どら焼き",
+  "cuisine": "japanese",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "purin",
+  "name": "日式焦糖布丁",
+  "original": "プリン",
+  "cuisine": "japanese",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "ponzu",
+  "name": "柚子醋",
+  "original": "ポン酢",
+  "cuisine": "japanese",
+  "course": "sauce",
+  "component": true
+ },
+ {
+  "slug": "mentsuyu",
+  "name": "日式面汁",
+  "original": "めんつゆ",
+  "cuisine": "japanese",
+  "course": "sauce",
+  "component": true
+ },
+ {
+  "slug": "galbi-jjim",
+  "name": "炖牛排骨",
+  "original": "갈비찜",
+  "cuisine": "korean",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "la-galbi",
+  "name": "烤牛仔骨",
+  "original": "LA갈비",
+  "cuisine": "korean",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "samgyeopsal-gui",
+  "name": "烤五花肉",
+  "original": "삼겹살구이",
+  "cuisine": "korean",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "ssamjang",
+  "name": "包饭酱",
+  "original": "쌈장",
+  "cuisine": "korean",
+  "course": "sauce",
+  "component": true
+ },
+ {
+  "slug": "jeyuk-bokkeum",
+  "name": "辣炒猪肉",
+  "original": "제육볶음",
+  "cuisine": "korean",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "dak-galbi",
+  "name": "辣炒鸡排",
+  "original": "닭갈비",
+  "cuisine": "korean",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "dakbokkeumtang",
+  "name": "辣炖鸡块",
+  "original": "닭볶음탕",
+  "cuisine": "korean",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "yangnyeom-chicken",
+  "name": "韩式炸鸡",
+  "original": "양념치킨",
+  "cuisine": "korean",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "bossam",
+  "name": "菜包白切肉",
+  "original": "보쌈",
+  "cuisine": "korean",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "jangjorim",
+  "name": "韩式酱牛肉",
+  "original": "장조림",
+  "cuisine": "korean",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "samgyetang",
+  "name": "参鸡汤",
+  "original": "삼계탕",
+  "cuisine": "korean",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "miyeok-guk",
+  "name": "海带汤",
+  "original": "미역국",
+  "cuisine": "korean",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "galbitang",
+  "name": "牛排骨汤",
+  "original": "갈비탕",
+  "cuisine": "korean",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "yukgaejang",
+  "name": "辣牛肉汤",
+  "original": "육개장",
+  "cuisine": "korean",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "budae-jjigae",
+  "name": "部队锅",
+  "original": "부대찌개",
+  "cuisine": "korean",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "tteokguk",
+  "name": "年糕汤",
+  "original": "떡국",
+  "cuisine": "korean",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "kongnamul-guk",
+  "name": "豆芽汤",
+  "original": "콩나물국",
+  "cuisine": "korean",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "dakjuk",
+  "name": "鸡粥",
+  "original": "닭죽",
+  "cuisine": "korean",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "gimbap",
+  "name": "紫菜包饭",
+  "original": "김밥",
+  "cuisine": "korean",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "jjajangmyeon",
+  "name": "韩式炸酱面",
+  "original": "짜장면",
+  "cuisine": "korean",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "bibim-guksu",
+  "name": "辣拌面",
+  "original": "비빔국수",
+  "cuisine": "korean",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "janchi-guksu",
+  "name": "宴会面",
+  "original": "잔치국수",
+  "cuisine": "korean",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "kalguksu",
+  "name": "刀切面",
+  "original": "칼국수",
+  "cuisine": "korean",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "mandu",
+  "name": "韩式饺子",
+  "original": "만두",
+  "cuisine": "korean",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "kimchi-jeon",
+  "name": "泡菜饼",
+  "original": "김치전",
+  "cuisine": "korean",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "gamja-jorim",
+  "name": "酱土豆",
+  "original": "감자조림",
+  "cuisine": "korean",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "sigeumchi-namul",
+  "name": "凉拌菠菜",
+  "original": "시금치나물",
+  "cuisine": "korean",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "oi-muchim",
+  "name": "辣拌黄瓜",
+  "original": "오이무침",
+  "cuisine": "korean",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "kkakdugi",
+  "name": "萝卜块泡菜",
+  "original": "깍두기",
+  "cuisine": "korean",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "dubu-jorim",
+  "name": "辣烧豆腐",
+  "original": "두부조림",
+  "cuisine": "korean",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "gyeran-mari",
+  "name": "韩式鸡蛋卷",
+  "original": "계란말이",
+  "cuisine": "korean",
+  "course": "breakfast",
+  "component": false
+ },
+ {
+  "slug": "godeungeo-gui",
+  "name": "烤青花鱼",
+  "original": "고등어구이",
+  "cuisine": "korean",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "ojingeo-bokkeum",
+  "name": "辣炒鱿鱼",
+  "original": "오징어볶음",
+  "cuisine": "korean",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "hotteok",
+  "name": "糖饼",
+  "original": "호떡",
+  "cuisine": "korean",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "pho-ga",
+  "name": "鸡肉河粉",
+  "original": "Phở gà",
+  "cuisine": "vietnamese",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "bun-bo-hue",
+  "name": "顺化牛肉米线",
+  "original": "Bún bò Huế",
+  "cuisine": "vietnamese",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "bun-rieu",
+  "name": "蟹肉番茄米线",
+  "original": "Bún riêu",
+  "cuisine": "vietnamese",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "mien-ga",
+  "name": "鸡肉粉丝汤",
+  "original": "Miến gà",
+  "cuisine": "vietnamese",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "chao-ga",
+  "name": "越南鸡粥",
+  "original": "Cháo gà",
+  "cuisine": "vietnamese",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "canh-kho-qua",
+  "name": "苦瓜酿肉汤",
+  "original": "Canh khổ qua",
+  "cuisine": "vietnamese",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "com-tam-suon-nuong",
+  "name": "碎米饭配烤猪排",
+  "original": "Cơm tấm sườn nướng",
+  "cuisine": "vietnamese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "com-ga-hoi-an",
+  "name": "会安鸡饭",
+  "original": "Cơm gà Hội An",
+  "cuisine": "vietnamese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "banh-xeo",
+  "name": "越南煎饼",
+  "original": "Bánh xèo",
+  "cuisine": "vietnamese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "bun-bo-xao",
+  "name": "牛肉拌米线",
+  "original": "Bún bò xào",
+  "cuisine": "vietnamese",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "cha-gio",
+  "name": "越南炸春卷",
+  "original": "Chả giò",
+  "cuisine": "vietnamese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "bo-kho",
+  "name": "越南炖牛肉",
+  "original": "Bò kho",
+  "cuisine": "vietnamese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "ga-kho-gung",
+  "name": "姜焖鸡",
+  "original": "Gà kho gừng",
+  "cuisine": "vietnamese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "ga-nuong-sa",
+  "name": "香茅烤鸡",
+  "original": "Gà nướng sả",
+  "cuisine": "vietnamese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "suon-ram-man",
+  "name": "焦糖排骨",
+  "original": "Sườn ram mặn",
+  "cuisine": "vietnamese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "ca-ri-ga",
+  "name": "越南咖喱鸡",
+  "original": "Cà ri gà",
+  "cuisine": "vietnamese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "goi-ga",
+  "name": "鸡丝卷心菜沙拉",
+  "original": "Gỏi gà",
+  "cuisine": "vietnamese",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "tom-rim",
+  "name": "焦糖虾",
+  "original": "Tôm rim",
+  "cuisine": "vietnamese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "ca-chien-sot-ca",
+  "name": "番茄汁煎鱼",
+  "original": "Cá chiên sốt cà",
+  "cuisine": "vietnamese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "cha-ca-la-vong",
+  "name": "河内姜黄莳萝鱼",
+  "original": "Chả cá Lã Vọng",
+  "cuisine": "vietnamese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "ngheu-hap-sa",
+  "name": "香茅蒸蛤蜊",
+  "original": "Nghêu hấp sả",
+  "cuisine": "vietnamese",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "rau-muong-xao-toi",
+  "name": "蒜炒空心菜",
+  "original": "Rau muống xào tỏi",
+  "cuisine": "vietnamese",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "dau-sot-ca-chua",
+  "name": "番茄烧豆腐",
+  "original": "Đậu sốt cà chua",
+  "cuisine": "vietnamese",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "do-chua",
+  "name": "越南腌萝卜胡萝卜",
+  "original": "Đồ chua",
+  "cuisine": "vietnamese",
+  "course": "sauce",
+  "component": true
+ },
+ {
+  "slug": "mo-hanh",
+  "name": "越南葱油",
+  "original": "Mỡ hành",
+  "cuisine": "vietnamese",
+  "course": "sauce",
+  "component": true
+ },
+ {
+  "slug": "tuong-dau-phong",
+  "name": "花生海鲜酱蘸汁",
+  "original": "Tương đậu phộng",
+  "cuisine": "vietnamese",
+  "course": "sauce",
+  "component": true
+ },
+ {
+  "slug": "banh-flan",
+  "name": "越南焦糖布丁",
+  "original": "Bánh flan",
+  "cuisine": "vietnamese",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "che-chuoi",
+  "name": "香蕉椰奶西米",
+  "original": "Chè chuối",
+  "cuisine": "vietnamese",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "ca-phe-sua-da",
+  "name": "越南冰咖啡",
+  "original": "Cà phê sữa đá",
+  "cuisine": "vietnamese",
+  "course": "drink",
+  "component": false
+ },
+ {
+  "slug": "gaeng-garee-gai",
+  "name": "黄咖喱鸡",
+  "original": "แกงกะหรี่ไก่",
+  "cuisine": "thai",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "khao-soi",
+  "name": "清迈咖喱面",
+  "original": "ข้าวซอย",
+  "cuisine": "thai",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "pad-prik-king",
+  "name": "红咖喱酱炒四季豆猪肉",
+  "original": "ผัดพริกขิง",
+  "cuisine": "thai",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "gai-pad-med-mamuang",
+  "name": "泰式腰果鸡丁",
+  "original": "ไก่ผัดเม็ดมะม่วงหิมพานต์",
+  "cuisine": "thai",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "moo-ping",
+  "name": "泰式烤猪肉串",
+  "original": "หมูปิ้ง",
+  "cuisine": "thai",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "kor-moo-yang",
+  "name": "泰式烤猪颈肉",
+  "original": "คอหมูย่าง",
+  "cuisine": "thai",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "nam-tok-neua",
+  "name": "泰式烤牛肉沙拉",
+  "original": "น้ำตกเนื้อ",
+  "cuisine": "thai",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "gai-tod-hat-yai",
+  "name": "合艾炸鸡",
+  "original": "ไก่ทอดหาดใหญ่",
+  "cuisine": "thai",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "khao-kha-moo",
+  "name": "泰式猪脚饭",
+  "original": "ข้าวขาหมู",
+  "cuisine": "thai",
+  "course": "meat",
+  "component": false
+ },
+ {
+  "slug": "pla-neung-manao",
+  "name": "青柠蒸鱼",
+  "original": "ปลานึ่งมะนาว",
+  "cuisine": "thai",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "pla-rad-prik",
+  "name": "辣酱炸鱼",
+  "original": "ปลาราดพริก",
+  "cuisine": "thai",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "goong-ob-woonsen",
+  "name": "砂锅虾粉丝",
+  "original": "กุ้งอบวุ้นเส้น",
+  "cuisine": "thai",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "hoy-lai-pad-nam-prik-pao",
+  "name": "辣椒膏炒蛤蜊",
+  "original": "หอยลายผัดน้ำพริกเผา",
+  "cuisine": "thai",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "tod-mun-pla",
+  "name": "泰式鱼饼",
+  "original": "ทอดมันปลา",
+  "cuisine": "thai",
+  "course": "seafood",
+  "component": false
+ },
+ {
+  "slug": "kai-jeow",
+  "name": "泰式煎蛋",
+  "original": "ไข่เจียว",
+  "cuisine": "thai",
+  "course": "breakfast",
+  "component": false
+ },
+ {
+  "slug": "jok",
+  "name": "泰式猪肉粥",
+  "original": "โจ๊ก",
+  "cuisine": "thai",
+  "course": "breakfast",
+  "component": false
+ },
+ {
+  "slug": "rad-na",
+  "name": "芡汁河粉",
+  "original": "ราดหน้า",
+  "cuisine": "thai",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "pad-kee-mao",
+  "name": "泰式醉面",
+  "original": "ผัดขี้เมา",
+  "cuisine": "thai",
+  "course": "staple",
+  "component": false
+ },
+ {
+  "slug": "khao-niao",
+  "name": "泰式糯米饭",
+  "original": "ข้าวเหนียว",
+  "cuisine": "thai",
+  "course": "staple",
+  "component": true
+ },
+ {
+  "slug": "gaeng-jued-woonsen",
+  "name": "粉丝豆腐清汤",
+  "original": "แกงจืดวุ้นเส้น",
+  "cuisine": "thai",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "tom-saep",
+  "name": "东北酸辣排骨汤",
+  "original": "ต้มแซ่บ",
+  "cuisine": "thai",
+  "course": "soup",
+  "component": false
+ },
+ {
+  "slug": "pad-pak-ruam",
+  "name": "泰式炒杂菜",
+  "original": "ผัดผักรวม",
+  "cuisine": "thai",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "yam-khai-dao",
+  "name": "煎蛋沙拉",
+  "original": "ยำไข่ดาว",
+  "cuisine": "thai",
+  "course": "veg",
+  "component": false
+ },
+ {
+  "slug": "nam-prik-pao",
+  "name": "泰式辣椒膏",
+  "original": "น้ำพริกเผา",
+  "cuisine": "thai",
+  "course": "sauce",
+  "component": true
+ },
+ {
+  "slug": "nam-jim-seafood",
+  "name": "泰式海鲜蘸酱",
+  "original": "น้ำจิ้มซีฟู้ด",
+  "cuisine": "thai",
+  "course": "sauce",
+  "component": true
+ },
+ {
+  "slug": "tub-tim-krob",
+  "name": "红宝石椰奶",
+  "original": "ทับทิมกรอบ",
+  "cuisine": "thai",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "kluay-buat-chi",
+  "name": "椰奶煮香蕉",
+  "original": "กล้วยบวชชี",
+  "cuisine": "thai",
+  "course": "dessert",
+  "component": false
+ },
+ {
+  "slug": "cha-yen",
+  "name": "泰式奶茶",
+  "original": "ชาเย็น",
+  "cuisine": "thai",
+  "course": "drink",
+  "component": false
+ }
+]

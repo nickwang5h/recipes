@@ -1,0 +1,2 @@
+- { id: broken-rice, zh: 碎米, aliases: [越南碎米, 碎香米, Cơm tấm, Gạo tấm], en: Broken jasmine rice / broken rice, kind: grain, where: asian, pantry: true, substitutes: [jasmine-rice] }
+- { id: vietnamese-coriander, zh: 越南香菜, aliases: [越南芫荽, 叻沙叶, Rau răm, Rau ram, Vietnamese mint], en: Vietnamese coriander / rau ram / laksa leaves, kind: aromatic, where: asian, pantry: false, substitutes: [cilantro] }

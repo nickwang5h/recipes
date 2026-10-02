@@ -1,0 +1,5 @@
+- { id: gyoza-wrapper, zh: 日式饺子皮, aliases: [煎饺皮, 日式薄饺子皮, 餃子の皮], en: Gyoza wrappers, kind: grain, where: asian, pantry: false, substitutes: [] }
+- { id: yakisoba-noodle, zh: 日式熟炒面, aliases: [日式炒面面条, 蒸熟中华面, 焼きそば麺], en: Yakisoba noodles (pre-steamed), kind: grain, where: asian, pantry: false, substitutes: [alkaline-noodle] }
+- { id: worcestershire-sauce, zh: 伍斯特酱, aliases: [喼汁, 伍斯特沙司, Worcestershire sauce], en: Worcestershire Sauce, kind: seasoning, where: mainstream, pantry: true, substitutes: [] }
+- { id: aburaage, zh: 日式薄片油豆腐, aliases: [油揚げ, 日式炸豆腐袋, 无调味油豆腐皮], en: Aburaage / deep-fried tofu pouches (unseasoned), kind: soy, where: specialty, pantry: false, substitutes: [] }
+- { id: udon, zh: 乌冬面, aliases: [讃岐乌冬, うどん, 乌冬], en: Udon noodles, kind: grain, where: asian, pantry: false, substitutes: [] }

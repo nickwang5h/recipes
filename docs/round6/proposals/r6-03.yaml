@@ -1,0 +1,5 @@
+- { id: yellow-curry-paste, zh: 泰式黄咖喱酱, aliases: [黄咖喱膏, Karee curry paste, Gaeng garee curry paste], en: Thai yellow curry paste / Karee curry paste, kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: thai-black-soy-sauce, zh: 泰式黑酱油, aliases: [Thai black soy sauce, See ew dam], en: Thai black soy sauce, kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: thai-chili-paste, zh: 泰式烤辣椒膏, aliases: [Nam prik pao, 泰式辣椒膏, 泰式辣椒油膏], en: Thai chili paste / Roasted chili paste (Nam Prik Pao), kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: cashew, zh: 腰果, aliases: [腰果仁, 无盐腰果, 生腰果], en: Unsalted cashews / Raw cashews, kind: other, where: mainstream, pantry: true, substitutes: [] }
+- { id: pickled-mustard-green, zh: 酸芥菜, aliases: [泰式酸芥菜, 腌芥菜, Pickled mustard greens], en: Thai pickled mustard greens, kind: vegetable, where: asian, pantry: true, substitutes: [] }

@@ -1,0 +1,2 @@
+- { id: pork-jowl, zh: 未腌制猪颈肉, aliases: [猪颈肉, 猪颊肉, Pork jowl], en: Pork jowl (fresh and unsmoked), kind: meat, where: asian, pantry: false, substitutes: [pork-shoulder] }
+- { id: pickled-mustard-green, zh: 酸芥菜, aliases: [泰式酸芥菜, 腌芥菜, Pickled mustard greens], en: Pickled sour mustard, kind: vegetable, where: asian, pantry: true, substitutes: [] }
