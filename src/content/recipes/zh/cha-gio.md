@@ -6,7 +6,7 @@ original: Chả giò
 cuisine: vietnamese
 course: meat
 summary: 米纸包住猪肉、虾、芋头和粉丝，分批炸到外皮干脆；馅料少水、米纸少湿，才能避免炸裂。
-servings: 4
+servings: 8
 time: { prep: 60, cook: 60 }
 principles: [oil-temperature, starch-gelatinization, heat-transfer]
 ingredients:

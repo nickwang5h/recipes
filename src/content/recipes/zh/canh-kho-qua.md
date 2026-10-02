@@ -12,25 +12,25 @@ principles: [protein-coagulation, heat-transfer]
 ingredients:
   - group: 酿苦瓜
     items:
-      - { ref: bitter-melon, qty: 2, unit: 个, note: 共约 700 g，选宽圆疙瘩的浅绿色长苦瓜；在 T&T 或华人超市买 }
-      - { ref: ground-pork, qty: 220, unit: g, note: 带一点肥肉 }
+      - { ref: bitter-melon, qty: 1.5, unit: 个, note: 共约 525 g，选宽圆疙瘩的浅绿色长苦瓜；在 T&T 或华人超市买 }
+      - { ref: ground-pork, qty: 180, unit: g, note: 带一点肥肉 }
       - { ref: wood-ear, qty: 5, unit: g, note: 干重；在 T&T 或 H Mart 买 }
-      - { ref: glass-noodle, qty: 30, unit: g, note: 干重，选细绿豆粉丝 }
+      - { ref: glass-noodle, qty: 20, unit: g, note: 干重，选细绿豆粉丝 }
       - { ref: shallot, qty: 20, unit: g, note: 切细末 }
-      - { ref: scallion, qty: 2, unit: 根, note: 葱白入馅，葱绿撒汤 }
+      - { ref: scallion, qty: 1.5, unit: 根, note: 葱白入馅，葱绿撒汤 }
       - { ref: chicken-bouillon, qty: 0.5, unit: 茶匙, note: 肉馅用；在亚洲超市买 }
-      - { ref: fish-sauce, qty: 2, unit: 茶匙, note: 肉馅用 }
-      - { ref: sugar, qty: 1, unit: 茶匙, note: 肉馅用 }
+      - { ref: fish-sauce, qty: 1.5, unit: 茶匙, note: 肉馅用 }
+      - { ref: sugar, qty: 0.75, unit: 茶匙, note: 肉馅用 }
       - { ref: salt, qty: 0.25, unit: 茶匙, note: 肉馅用 }
       - { ref: black-pepper, qty: 0.25, unit: 茶匙, note: 现磨，肉馅用 }
       - { ref: water, qty: 500, unit: ml, note: 泡木耳和粉丝用，泡后倒掉 }
   - group: 汤
     items:
-      - { ref: water, qty: 1400, unit: ml }
-      - { ref: chicken-bouillon, qty: 1, unit: 茶匙 }
-      - { ref: fish-sauce, qty: 2, unit: 茶匙 }
-      - { ref: sugar, qty: 2, unit: 茶匙 }
-      - { ref: salt, qty: 1, unit: 茶匙, note: 先放一半，再按鸡粉和鱼露的咸度补 }
+      - { ref: water, qty: 1150, unit: ml }
+      - { ref: chicken-bouillon, qty: 0.75, unit: 茶匙 }
+      - { ref: fish-sauce, qty: 1.5, unit: 茶匙 }
+      - { ref: sugar, qty: 1.5, unit: 茶匙 }
+      - { ref: salt, qty: 0.75, unit: 茶匙, note: 先放一半，再按鸡粉和鱼露的咸度补 }
       - { ref: black-pepper, qty: 0.25, unit: 茶匙, note: 现磨 }
 sources:
   - title: "Vietnamese Stuffed Bitter Melon Soup (Canh Khổ Qua Nhồi Thịt)"
@@ -55,7 +55,7 @@ updated: 2026-10-02
 2. 把猪肉末、木耳、粉丝、红葱头和葱白放入碗里，加入肉馅组的鸡粉、鱼露、糖、盐和胡椒。沿一个方向搅 2 分钟，到馅料发黏、能被筷子带起成团。
 3. 苦瓜去两端，横切成 4 cm 高的筒，用小匙挖掉籽和白瓤，保留完整瓜壁。把肉馅分次压进去，填平两端；剩下的馅捏成直径约 3 cm 的肉丸，一起入汤。
 4. 锅里加入汤用的水、鸡粉、糖和一半盐，加盖中大火煮约 6–8 分钟，到水面连续冒泡。轻放苦瓜和肉丸，重新煮开约 2 分钟，撇去浮沫，转小火。
-5. 半盖锅盖煮 30–35 分钟，汤面只有零星小泡，瓜肉变成暗橄榄绿，筷子能轻松扎透瓜壁。测最厚一段肉馅的中心，达到 71°C；若仍偏硬或温度不足，每次续煮 5 分钟再检查。
+5. 半盖锅盖煮 30 分钟，汤面只有零星小泡，瓜肉变成暗橄榄绿，筷子能轻松扎透瓜壁。测最厚一段肉馅的中心，达到 71°C；若仍偏硬或温度不足，每次续煮 5 分钟再检查。
 6. 加入汤用鱼露和胡椒，尝后决定是否补剩余盐。小火煮 1 分钟，到汤味均匀，撒葱绿。用大匙连瓜带馅托起装碗，配白米饭吃。
 
 ## 要点

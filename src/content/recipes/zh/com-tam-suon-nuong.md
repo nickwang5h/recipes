@@ -12,16 +12,16 @@ principles: [maillard-reaction, starch-gelatinization, heat-transfer]
 ingredients:
   - group: 烤猪排
     items:
-      - { ref: pork-chop, qty: 900, unit: g, note: 4 块带骨猪排，约 1.5 cm 厚，选边缘有脂肪的 }
-      - { ref: lemongrass, name: 香茅末, qty: 4, unit: 汤匙, note: 只取茎底柔嫩部分，切极细 }
-      - { ref: garlic, name: 蒜末, qty: 1, unit: 汤匙 }
-      - { ref: scallion, qty: 2, unit: 根, note: 葱白入腌料，葱绿做葱油 }
-      - { ref: fish-sauce, qty: 3, unit: 汤匙 }
-      - { ref: oyster-sauce, qty: 2, unit: 汤匙 }
-      - { ref: sugar, qty: 1, unit: 汤匙 }
-      - { ref: honey, qty: 1, unit: 汤匙 }
-      - { ref: black-pepper, qty: 0.5, unit: 茶匙, note: 现磨 }
-      - { ref: vegetable-oil, qty: 2, unit: 汤匙, note: 腌肉和葱油各 1 汤匙 }
+      - { ref: pork-chop, qty: 605, unit: g, note: 4 块带骨猪排，约 1.5 cm 厚，选边缘有脂肪的 }
+      - { ref: lemongrass, name: 香茅末, qty: 40, unit: ml, note: 只取茎底柔嫩部分，切极细 }
+      - { ref: garlic, name: 蒜末, qty: 10, unit: ml }
+      - { ref: scallion, qty: 1.5, unit: 根, note: 葱白入腌料，葱绿做葱油 }
+      - { ref: fish-sauce, qty: 2, unit: 汤匙 }
+      - { ref: oyster-sauce, qty: 20, unit: ml }
+      - { ref: sugar, qty: 8, unit: g }
+      - { ref: honey, qty: 10, unit: ml }
+      - { ref: black-pepper, qty: 0.25, unit: 茶匙, note: 现磨 }
+      - { ref: vegetable-oil, qty: 20, unit: ml, note: 腌肉和葱油各 10 ml }
       - { ref: vegetable-oil, qty: 1, unit: 茶匙, note: 刷烤架用 }
   - group: 碎米与鲜菜
     items:
@@ -33,10 +33,10 @@ ingredients:
     items:
       - { ref: daikon, qty: 300, unit: g, note: 去皮切细条 }
       - { ref: carrot, qty: 100, unit: g, note: 去皮切细条 }
-      - { ref: salt, qty: 1.5, unit: 茶匙, note: 杀水用 }
-      - { ref: sugar, qty: 50, unit: g }
-      - { ref: water, qty: 120, unit: ml, note: 温水，腌菜用 }
-      - { ref: white-vinegar, qty: 60, unit: ml }
+      - { ref: salt, qty: 1.25, unit: 茶匙, note: 杀水用 }
+      - { ref: sugar, qty: 40, unit: g }
+      - { ref: water, qty: 95, unit: ml, note: 温水，腌菜用 }
+      - { ref: white-vinegar, qty: 50, unit: ml }
   - group: 鱼露汁
     items:
       - { ref: lime, name: 青柠汁, qty: 60, unit: ml }
@@ -64,13 +64,13 @@ updated: 2026-10-02
 
 ## 步骤
 
-1. 将香茅、蒜、葱白、鱼露、蚝油、糖、蜂蜜、胡椒和 1 汤匙油拌匀，抹满猪排两面。盖好冷藏 2 小时，到肉表面均匀裹着腌料，香茅和蒜贴住肉面。
-2. 萝卜和胡萝卜拌盐，放 1 小时，到细条柔软、碗底出水。挤掉水，装入窄口容器；把 50 g 糖溶进 120 ml 温水，加白醋，倒入并压住菜条，冷藏腌 1 小时，到萝卜带酸甜味且仍脆。
+1. 将香茅、蒜、葱白、鱼露、蚝油、糖、蜂蜜、胡椒和 10 ml 油拌匀，抹满猪排两面。盖好冷藏 2 小时，到肉表面均匀裹着腌料，香茅和蒜贴住肉面。
+2. 萝卜和胡萝卜拌盐，放 1 小时，到细条柔软、碗底出水。挤掉水，装入窄口容器；把 40 g 糖溶进 95 ml 温水，加白醋，倒入并压住菜条，冷藏腌 1 小时，到萝卜带酸甜味且仍脆。
 3. 碎米淘净、沥水 5 分钟，到筛底不再滴水。放进电饭锅，加入 480 ml 水，用白米程序煮约 25–35 分钟，到米粒没有硬芯；跳档后焖 10 分钟，再轻轻拨松。
 4. 把鱼露汁组的糖、青柠汁和温水搅 1 分钟，到糖溶尽，再加入 45 ml 鱼露、蒜和辣椒。用黄瓜蘸着尝，决定是否补余下鱼露。
 5. 烧烤炉中高火预热约 10 分钟，到烤架足够热、放肉会响，刷上 1 茶匙油。刮掉猪排表面厚堆的香茅蒜末，沥去多余腌汁，把四块肉摊开。
-6. 猪排每面烤约 6–8 分钟，到出现深褐烤纹、边缘略焦。颜色已足而中心未熟时，移到较凉区域，每次再烤 2 分钟检查；从侧面测最厚处，避开骨头，达到 71°C 再取下。
-7. 猪排松盖放 5 分钟，到切开时汁水不大量流出。葱绿与剩下 1 汤匙油放小锅，中火加热约 1 分钟，到葱绿变软、油轻轻冒泡，离火。
+6. 猪排每面烤约 8 分钟，到出现深褐烤纹、边缘略焦。颜色已足而中心未熟时，移到较凉区域，每次再烤 2 分钟检查；从侧面测最厚处，避开骨头，达到 71°C 再取下。
+7. 猪排松盖放 5 分钟，到切开时汁水不大量流出。葱绿与剩下 10 ml 油放小锅，中火加热约 1 分钟，到葱绿变软、油轻轻冒泡，离火。
 8. 四盘各盛碎米、猪排和鲜菜，放沥干的酸萝卜，淋葱油。鱼露汁另供，吃时逐次淋入饭里。
 
 ## 要点

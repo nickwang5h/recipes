@@ -23,7 +23,8 @@ ingredients:
       - { ref: oyster-sauce, qty: 1, unit: 汤匙 }
       - { ref: cornstarch, qty: 1, unit: 茶匙 }
       - { ref: water, qty: 1, unit: 汤匙, note: 拌鸡粒用 }
-      - { ref: white-pepper, note: 适量，腌鸡粒和炒饭时分别加 }
+      - { ref: white-pepper, qty: 0.25, unit: 茶匙, note: 腌鸡粒用 }
+      - { ref: white-pepper, qty: 0.25, unit: 茶匙, note: 炒饭用 }
       - { ref: vegetable-oil, qty: 2, unit: 汤匙, note: 分给炒蛋、鸡粒、咸鱼和收尾 }
       - { ref: fish-sauce, qty: 2, unit: 茶匙, optional: true, note: 咸鱼已很咸，尝味后分次补入，最多用完这份量 }
 sources:

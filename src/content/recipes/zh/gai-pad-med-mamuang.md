@@ -15,8 +15,8 @@ ingredients:
       - { ref: chicken-thigh, qty: 400, unit: g, note: 去骨去皮，切成约 2.5 cm 的丁 }
       - { ref: cashew, qty: 100, unit: g, note: 用生的无盐腰果 }
       - { ref: onion, qty: 0.5, unit: 个, note: 中等大小，切成约 2.5 cm 块 }
-      - { ref: green-bell-pepper, qty: 100, unit: g, note: 去籽切块 }
-      - { ref: red-bell-pepper, qty: 175, unit: g, note: 去籽切块 }
+      - { ref: green-bell-pepper, qty: 75, unit: g, note: 去籽切块 }
+      - { ref: red-bell-pepper, qty: 125, unit: g, note: 去籽切块 }
       - { ref: garlic, qty: 4, unit: 瓣, note: 粗切 }
       - { ref: scallion, qty: 2, unit: 根, note: 纵剖后切成约 4 cm 段 }
       - { ref: dried-chili, qty: 7, unit: 个, optional: true, note: 小到中等大小的整条干辣椒，炸香后装盘 }

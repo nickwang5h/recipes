@@ -5,7 +5,7 @@ title: 虾饺
 cuisine: chinese
 course: staple
 summary: 澄粉烫成薄皮，包住虾粒与笋末，沸水上锅短蒸，皮半透明、馅鲜嫩。
-servings: 3
+servings: 6
 time: { prep: 55, cook: 25 }
 principles: [starch-gelatinization, protein-coagulation, heat-transfer]
 ingredients:

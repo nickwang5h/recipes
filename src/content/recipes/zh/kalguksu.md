@@ -12,27 +12,27 @@ principles: [gluten, starch-gelatinization, umami]
 ingredients:
   - group: 手擀面
     items:
-      - { ref: flour, qty: 375, unit: g }
-      - { ref: flour, name: 撒面用面粉, qty: 30, unit: g, note: 分次薄撒，不一定用完 }
-      - { ref: water, qty: 240, unit: ml, note: 先用 180 ml，其余分次揉入，达到偏硬而无干粉的状态 }
-      - { ref: salt, qty: 0.75, unit: 茶匙 }
-      - { ref: vegetable-oil, qty: 1, unit: 汤匙 }
+      - { ref: flour, qty: 500, unit: g }
+      - { ref: flour, name: 撒面用面粉, qty: 40, unit: g, note: 分次薄撒，不一定用完 }
+      - { ref: water, qty: 300, unit: ml, note: 先用 180 ml，其余分次揉入，达到偏硬而无干粉的状态 }
+      - { ref: salt, qty: 1, unit: 茶匙 }
+      - { ref: vegetable-oil, qty: 2, unit: 汤匙 }
       - { ref: water, note: 另备煮面水适量 }
   - group: 鸡汤
     items:
       - { ref: whole-chicken, qty: 1200, unit: g, note: 小鸡一只，分切成 4 块带骨肉 }
-      - { ref: water, qty: 2850, unit: ml }
+      - { ref: water, qty: 3840, unit: ml }
       - { ref: onion, qty: 100, unit: g, note: 切大块，煮汤用 }
-      - { ref: garlic, qty: 8, unit: 瓣, note: 整瓣，煮汤用 }
+      - { ref: garlic, qty: 16, unit: 瓣, note: 整瓣，煮汤用 }
       - { ref: ginger, qty: 4, unit: 片, note: 切薄片 }
-      - { ref: scallion, qty: 2, unit: 根, note: 葱白煮汤，葱绿留作装碗 }
-      - { ref: korean-soup-soy-sauce, qty: 1, unit: 汤匙, note: 在 H Mart 买 Guk-ganjang；没有可用生抽 }
+      - { ref: scallion, qty: 4, unit: 根, note: 2 根的葱白煮汤，另 2 根的葱绿留作装碗 }
+      - { ref: korean-soup-soy-sauce, qty: 2, unit: 茶匙, note: 在 H Mart 买 Guk-ganjang；没有可用生抽 }
       - { ref: salt, note: 适量 }
       - { ref: black-pepper, note: 适量 }
   - group: 鸡丝与蔬菜
     items:
       - { ref: garlic, name: 蒜末, qty: 1, unit: 茶匙 }
-      - { ref: sesame-oil, qty: 1, unit: 茶匙 }
+      - { ref: sesame-oil, qty: 2, unit: 茶匙 }
       - { ref: onion, qty: 50, unit: g, note: 切薄片 }
       - { ref: zucchini, qty: 200, unit: g, note: 切细丝 }
 sources:
@@ -54,9 +54,9 @@ updated: 2026-10-02
 
 ## 步骤
 
-1. 把 375 g 面粉、盐、油与 180 ml 水拌成碎团，余下 60 ml 水分次揉入，到没有干粉、面团偏硬而能成团。揉约 5 分钟，到表面较平整，盖严静置 30–60 分钟，到按下不再立刻强烈回弹。
-2. 鸡块、煮汤洋葱、整瓣蒜、姜和葱白放进锅，加 2850 ml 水。中大火约 10–15 分钟煮沸，到泡沫浮起，撇去泡沫；盖锅转小火煮约 40 分钟，到肉能轻松从骨边拉开，每块最厚处达到 74°C。
-3. 西葫芦丝拌少许盐，放 15 分钟，到碗底出水、菜丝柔软，挤去水。鸡肉捞出放凉约 10 分钟，到能拿稳，去骨撕丝，拌蒜末、香油、盐和胡椒。汤过滤回锅，去掉浮沫和大块浮油。
+1. 把 500 g 面粉、盐、油与 180 ml 水拌成碎团，余下 120 ml 水分次揉入，到没有干粉、面团偏硬而能成团。揉约 5 分钟，到表面较平整，盖严静置 10 分钟，到按下不再立刻强烈回弹。
+2. 鸡块、煮汤洋葱、整瓣蒜、姜和葱白放进锅，加 3840 ml 水。中大火约 10–15 分钟煮沸，到泡沫浮起，撇去泡沫；盖锅转小火煮约 60 分钟，到肉能轻松从骨边拉开，每块最厚处达到 74°C。
+3. 西葫芦丝拌少许盐，放 5–10 分钟，到碗底出水、菜丝柔软，挤去水。鸡肉捞出放凉约 10 分钟，到能拿稳，去骨撕丝，拌蒜末、香油、盐和胡椒。汤过滤回锅，去掉浮沫和大块浮油。
 4. 面团再揉 2–3 分钟，到表面光滑，分成两块。用撒面粉薄撒台面，逐块擀成约 1–2 mm 厚的面片；中间和四边摸起来应同样薄，随时翻面防粘。
 5. 面片两面薄撒粉，松松折成 3–4 层，切成约 6 mm 宽的条。立即展开，抖掉多余浮粉，排成松散的小把；面条能单根提起，折痕处没有粘成厚块。
 6. 鸡汤加汤酱油和洋葱片，中火煮约 3–5 分钟，到汤重新翻滚、洋葱开始变透明。另锅水大火烧约 5–10 分钟，到水面翻滚后下面，拨散煮 2–3 分钟，到面条浮起、表面软化，中心仍未全熟。

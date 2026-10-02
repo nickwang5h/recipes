@@ -6,7 +6,7 @@ original: Cà ri gà
 cuisine: vietnamese
 course: meat
 summary: 带骨鸡腿用香茅和马德拉斯咖喱粉焖熟，最后加入椰奶与土豆；汤汁保留流动的浓度，适合蘸法棍。
-servings: 4
+servings: 6
 time: { prep: 135, cook: 60 }
 principles: [aromatics, protein-coagulation, salt]
 ingredients:

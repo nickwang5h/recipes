@@ -11,16 +11,16 @@ principles: [heat-transfer, maillard-reaction, protein-coagulation]
 ingredients:
   - group: 肉与腌料
     items:
-      - { ref: pork-shoulder, name: 去骨梅头肉, qty: 700, unit: g, note: 选带细脂肪纹的 pork shoulder／pork butt，切成约 2.5 cm 厚的长片 }
-      - { ref: char-siu-sauce, qty: 8, unit: 汤匙, note: 选李锦记这类甜咸叉烧酱 }
-      - { ref: oyster-sauce, qty: 2, unit: 汤匙 }
-      - { ref: light-soy-sauce, qty: 1, unit: 汤匙 }
-      - { ref: five-spice, qty: 0.5, unit: 茶匙 }
-      - { ref: garlic, qty: 8, unit: 瓣, note: 切片 }
-      - { ref: ginger, qty: 10, unit: 片, note: 薄片 }
+      - { ref: pork-shoulder, name: 去骨梅头肉, qty: 465, unit: g, note: 选带细脂肪纹的 pork shoulder／pork butt，切成约 2.5 cm 厚的长片 }
+      - { ref: char-siu-sauce, qty: 5.25, unit: 汤匙, note: 选李锦记这类甜咸叉烧酱 }
+      - { ref: oyster-sauce, qty: 1.25, unit: 汤匙 }
+      - { ref: light-soy-sauce, qty: 2, unit: 茶匙 }
+      - { ref: five-spice, qty: 0.25, unit: 茶匙 }
+      - { ref: garlic, qty: 5.5, unit: 瓣, note: 切片 }
+      - { ref: ginger, qty: 6.5, unit: 片, note: 薄片 }
   - group: 烘烤与上光
     items:
-      - { ref: honey, qty: 4, unit: 茶匙 }
+      - { ref: honey, qty: 2.75, unit: 茶匙 }
       - { ref: water, qty: 1000, unit: ml, note: 烤盘先放 500 ml，余下 500 ml 留作补水 }
 sources:
   - title: Easy Char Siu（Chinese BBQ pork，叉烧）
@@ -38,11 +38,11 @@ updated: 2026-10-02
 
 ## 步骤
 
-1. 将梅头肉切成约 2.5 cm 厚的长片，保留夹在瘦肉里的脂肪。叉烧酱、蚝油、生抽、五香粉、蒜片和姜片拌匀，先盛出 4 茶匙放入干净小碗，盖好冷藏，留作蜜汁；余下腌料与肉抓匀。
+1. 将梅头肉切成约 2.5 cm 厚的长片，保留夹在瘦肉里的脂肪。叉烧酱、蚝油、生抽、五香粉、蒜片和姜片拌匀，先盛出 2.75 茶匙放入干净小碗，盖好冷藏，留作蜜汁；余下腌料与肉抓匀。
 2. 肉装入带盖容器，冷藏腌 6–12 小时，到每片肉都裹着均匀酱色，中途翻面一次。肉片铺开，别把厚薄不同的几块紧压成一团。
 3. 烤箱上下火预热到 220°C，约需 15 分钟，以预热提示完成为准。烤盘放 500 ml 热水，上架烤网，水面低于烤网。肉从腌料中夹出，拨去黏着的姜蒜，单层摆放，肉片之间留空隙。
 4. 放烤箱中层，220°C 烤 15 分钟，到表面酱层不再流淌、边缘开始上色。取出翻面，刷一层原容器里的腌料，再烤 10 分钟，到第二面也干下来。查看接汁盘，若已接近收干，每次补 250 ml 热水，保持滴汁落在水里。
-5. 将蜂蜜与预留的 4 茶匙干净腌料拌匀。取出肉，两面薄刷蜜汁；烤箱升至 240°C，烤 5 分钟，到表面发亮、边缘出现深褐色。再翻面刷蜜，烤 3 分钟，到蜜层黏亮而未焦黑。
+5. 将蜂蜜与预留的 2.75 茶匙干净腌料拌匀。取出肉，两面薄刷蜜汁；烤箱升至 240°C，烤 5 分钟，到表面发亮、边缘出现深褐色。再翻面刷蜜，烤 3 分钟，到蜜层黏亮而未焦黑。
 6. 用探针从侧面插到最厚处，中心须达到 71°C。若尚未达到，降回 220°C，每次续烤 5 分钟后复测；颜色已足的部位盖上锡纸，避免继续焦化。
 7. 出炉静置 5 分钟，到表面不再强烈冒汽，切成约 0.5 cm 厚的片，连同少量盘中肉汁上桌。接触生肉的余腌料不用作冷蘸汁。
 

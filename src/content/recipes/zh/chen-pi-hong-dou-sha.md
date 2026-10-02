@@ -14,7 +14,7 @@ ingredients:
       - { ref: adzuki-bean, qty: 200, unit: g, note: 在 T&T 干货区找 Dried adzuki beans；用小粒红豆 }
       - { ref: dried-tangerine-peel, qty: 1, unit: 片, note: 在 T&T 干货区找 Dried tangerine peel，选一瓣完整干橘皮 }
       - { ref: rock-sugar, qty: 60, unit: g, note: 敲成小块；没有冰糖可用 60 g 白糖 }
-      - { ref: salt, qty: 1, unit: g }
+      - { ref: salt, note: 一小撮 }
   - group: 清水
     items:
       - { ref: water, name: 浸豆水, qty: 1000, unit: ml, note: 浸好后倒掉 }

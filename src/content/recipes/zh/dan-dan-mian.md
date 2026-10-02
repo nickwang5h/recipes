@@ -11,7 +11,7 @@ principles: [maillard-reaction, aromatics, starch-gelatinization]
 ingredients:
   - group: 面与配菜
     items:
-      - { ref: wheat-noodle, name: 细干面条, qty: 200, unit: g, note: 选细圆小麦面，煮约 4–6 分钟的品种 }
+      - { ref: wheat-noodle, name: 细干面条, qty: 150, unit: g, note: 选细圆小麦面，煮约 4–6 分钟的品种 }
       - { ref: bok-choy, qty: 100, unit: g, note: 洗净，粗茎纵切开 }
       - { ref: scallion, qty: 1, unit: 根, note: 切葱花 }
       - { ref: roasted-peanuts, qty: 2, unit: 汤匙, note: 压成粗碎 }
@@ -34,7 +34,7 @@ ingredients:
       - { ref: chinkiang-vinegar, qty: 1, unit: 汤匙, note: 在 T&T 买 Chinkiang black vinegar }
       - { ref: sichuan-pepper, name: 花椒粉, qty: 0.5, unit: 茶匙, note: 在 T&T 买 Sichuan peppercorn powder，选不含盐的纯花椒粉 }
       - { ref: chili-oil, name: 红油辣椒, qty: 2, unit: 汤匙, note: 油和辣椒碎拌匀后量取，选无豆豉的四川红油 }
-      - { ref: sugar, qty: 0.25, unit: 茶匙 }
+      - { ref: sugar, qty: 0.75, unit: 茶匙 }
 sources:
   - title: Dan Dan Noodles（Spicy Sichuan Noodles，担担面）
     author: Wei Guo，Red House Spice

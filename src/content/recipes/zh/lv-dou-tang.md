@@ -9,10 +9,10 @@ principles: [starch-gelatinization, heat-transfer]
 ingredients:
   - group: 主料
     items:
-      - { ref: mung-bean, qty: 200, unit: g, note: 用带绿皮的整粒干绿豆 }
+      - { ref: mung-bean, qty: 100, unit: g, note: 用带绿皮的整粒干绿豆 }
       - { ref: water, qty: 1000, unit: ml, note: 浸泡用，泡好后倒掉 }
-      - { ref: water, qty: 1500, unit: ml, note: 煮汤用 }
-      - { ref: sugar, qty: 40, unit: g }
+      - { ref: water, qty: 950, unit: ml, note: 煮汤用 }
+      - { ref: sugar, qty: 55, unit: g, note: 可按口味加至 75 g }
 sources:
   - title: Mung Bean Soup
     author: Judy Leung，The Woks of Life
@@ -30,10 +30,10 @@ updated: 2026-10-02
 ## 步骤
 
 1. 挑掉破损、虫蛀的绿豆，冲洗干净。加入浸泡用的 1000 ml 水，盖好放冰箱泡 8 小时，到豆粒明显鼓起，表皮绷紧。倒掉泡豆水，沥干。
-2. 把绿豆和煮汤用的 1500 ml 清水放进容量至少 3 L 的锅。中大火加热约 8–10 分钟，到水面连续冒泡，撇去浮沫。
+2. 把绿豆和煮汤用的 950 ml 清水放进容量至少 3 L 的锅。中大火加热约 8–10 分钟，到水面连续冒泡，撇去浮沫。
 3. 转小火，锅盖留一道缝，煮约 50 分钟。保持水面轻轻翻动，每隔 10 分钟从锅底轻推一次；此时多数豆皮应裂开，豆芯用勺背能压散。
 4. 再煮 10 分钟，到豆芯完全粉软、尝不到硬粒，汤里有散开的豆沙。若豆芯仍硬，每次延长 10 分钟再尝；以软熟状态决定停火，不靠搅碎生硬豆子增加稠度。
-5. 加入 40 g 白糖，小火搅煮 2 分钟，到糖完全溶解。舀起应是能流动的汤，夹着软豆粒，趁温热分碗食用。
+5. 加入 55–75 g 白糖，小火搅煮 2 分钟，到糖完全溶解。舀起应是能流动的汤，夹着软豆粒，趁温热分碗食用。
 
 ## 要点
 

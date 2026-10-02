@@ -3,7 +3,7 @@ title: 红枣姜茶
 cuisine: chinese
 course: drink
 summary: 红枣的果甜与鲜姜的辛香一起小火煮出，再加红糖。切开枣、切薄姜，比大火久滚更容易把味道煮匀。
-servings: 2
+servings: 1
 time: { prep: 5, cook: 25 }
 principles: [aromatics, heat-transfer]
 ingredients:

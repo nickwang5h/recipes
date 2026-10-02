@@ -12,18 +12,18 @@ principles: [protein-coagulation, salt, acid]
 ingredients:
   - group: 煮鸡
     items:
-      - { ref: chicken-thigh, qty: 230, unit: g, note: 去骨去皮，展开成厚度均匀的肉片 }
-      - { ref: water, qty: 1000, unit: ml }
+      - { ref: chicken-thigh, qty: 150, unit: g, note: 去骨去皮，展开成厚度均匀的肉片 }
+      - { ref: water, qty: 680, unit: ml }
       - { ref: onion, qty: 0.5, unit: 个, note: 切大块，煮鸡用 }
-      - { ref: salt, qty: 1, unit: 茶匙 }
-      - { ref: sugar, qty: 1, unit: 茶匙 }
+      - { ref: salt, qty: 0.75, unit: 茶匙 }
+      - { ref: sugar, qty: 0.75, unit: 茶匙 }
   - group: 蔬菜与拌汁
     items:
       - { ref: cabbage, name: 绿卷心菜, qty: 450, unit: g, note: 去芯后的重量，切约 3 mm 宽的丝 }
       - { ref: carrot, qty: 100, unit: g, note: 切细丝 }
       - { ref: onion, qty: 150, unit: g, note: 切薄片，酸腌用 }
-      - { ref: rice-vinegar, qty: 1, unit: 汤匙, note: 腌洋葱用，无糖无盐米醋 }
-      - { ref: water, qty: 2, unit: 汤匙, note: 腌洋葱用 }
+      - { ref: rice-vinegar, qty: 10, unit: ml, note: 腌洋葱用，无糖无盐米醋 }
+      - { ref: water, qty: 20, unit: ml, note: 腌洋葱用 }
       - { ref: vietnamese-coriander, qty: 2, unit: 汤匙, note: 切碎的叶子；到亚洲或越南超市找 rau răm，买不到用香菜 }
       - { ref: roasted-peanuts, qty: 50, unit: g, note: 粗压碎 }
       - { ref: fresh-chili, qty: 1, unit: 个, optional: true, note: 切碎，可省略 }
@@ -44,9 +44,9 @@ updated: 2026-10-02
 
 ## 步骤
 
-1. 煮鸡。锅中放 1000 ml 水、大块洋葱、盐和煮鸡用的糖，中大火煮 5–7 分钟，到水沸腾。放入展开的鸡腿肉，转小火煮 15–20 分钟，到肉中心达到 74°C、整块肉已不透明；锅边持续冒小泡，水面不要翻滚。温度不足时每次续煮 2 分钟再检查。
+1. 煮鸡。锅中放 680 ml 水、大块洋葱、盐和煮鸡用的糖，中大火煮 5–7 分钟，到水沸腾。放入展开的鸡腿肉，转小火煮 15–20 分钟，到肉中心达到 74°C、整块肉已不透明；锅边持续冒小泡，水面不要翻滚。温度不足时每次续煮 2 分钟再检查。
 2. 放凉撕丝。鸡肉捞到浅盘，放凉约 10 分钟，到手能拿住而不烫。顺着纤维撕成一口长的细丝，粗厚的肉块再分开；煮鸡的洋葱不放进沙拉。
-3. 酸腌洋葱。把薄洋葱片与 1 汤匙米醋、2 汤匙水拌匀，浸 10–15 分钟，到薄片柔韧、辛辣感减弱。用筛网沥 2 分钟，到不再滴水。腌汁倒掉，避免带进沙拉稀释拌汁。
+3. 酸腌洋葱。把薄洋葱片与 10 ml 米醋、20 ml 水拌匀，浸 10–15 分钟，到薄片柔韧、辛辣感减弱。用筛网沥 2 分钟，到不再滴水。腌汁倒掉，避免带进沙拉稀释拌汁。
 4. 做拌汁。把蒜、可选辣椒与拌汁中的 0.5 茶匙糖捣成细泥。加入余下的 1 茶匙糖、鱼露和 5 汤匙米醋，搅拌约 1 分钟，到碗底没有糖粒、汁液均匀。
 5. 合拌。卷心菜、胡萝卜和香草洗净沥干，与鸡丝、酸腌洋葱放入大碗。临上桌倒入拌汁，轻翻约 1 分钟，到菜丝和鸡丝都沾上汁、卷心菜仍挺脆。撒花生，夹到盘里，碗底剩余汁水留在碗中。
 

@@ -170,7 +170,7 @@ front matter：servings＝3，与 A 的 2–3 份范围对得上；time.prep＝1
 
 来源打开结果：
 
-- [Helen Le，Cha Ca La Vong](https://helenrecipes.com/recipe-74-cha-ca-la-vong-hanoi-tumeric-fish-with-dill/)：网页阅读工具返回 `Internal Error`；直接 HTTP 读取返回 `HTTP Error 403: Forbidden`。未取得配方正文。
+- [Helen Le，Cha Ca La Vong](https://helenrecipes.com/recipe-74-cha-ca-la-vong-hanoi-tumeric-fish-with-dill/)：网页阅读工具返回 `Internal Error`；直接 HTTP 读取返回 `HTTP Error 403: Forbidden`；浏览器导航另返回 `PageNavigationTimeoutError`（等待 load 超过 15000 ms）。未取得可确认属于该 URL 的配方正文。
 - [Andrea Nguyen，Fine Shrimp Sauce](https://www.vietworldkitchen.com/blog/2009/09/stinky-but-stealthily-good-fine-shrimp-sauce-mam-tom.html)：读取成功；是虾酱选购说明，没有本菜配料数量、份数或烹调分钟数。
 
 下表只登记本稿数字；整篇未作数值一致性判断，结论留空。

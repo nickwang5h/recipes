@@ -14,7 +14,7 @@ ingredients:
       - { ref: jasmine-rice, name: 长粒香米, qty: 215, unit: g, note: 生米 }
       - { ref: water, qty: 300, unit: ml, note: 浸米煮饭用 240 ml，另留 60 ml 处理夹生 }
       - { ref: chinese-sausage, name: 广式腊肠, qty: 100, unit: g, note: 约 2 根；在 T&T 或 H Mart 买甜口 lap cheong }
-      - { ref: chinese-cured-pork, name: 广式腊肉, qty: 60, unit: g, note: T&T 的腊味货架购买 Chinese cured pork belly，选非烟熏甜咸口味 }
+      - { ref: chinese-cured-pork, name: 广式腊肉, qty: 1, unit: 块, note: 约 7.6 cm 长；T&T 的腊味货架购买 Chinese cured pork belly，选非烟熏甜咸口味 }
       - { ref: vegetable-oil, qty: 2, unit: 茶匙, note: 做锅巴用 }
   - group: 煲仔饭豉油
     items:

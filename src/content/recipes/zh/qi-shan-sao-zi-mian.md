@@ -9,23 +9,23 @@ principles: [acid, aromatics, gluten]
 ingredients:
   - group: 肉臊子
     items:
-      - { ref: pork-belly, qty: 450, unit: g, note: 去皮，肥瘦分开切成薄小片 }
-      - { ref: vegetable-oil, qty: 60, unit: ml, note: 菜籽油 }
+      - { ref: pork-belly, qty: 360, unit: g, note: 去皮，肥瘦分开切成薄小片 }
+      - { ref: vegetable-oil, qty: 50, unit: ml, note: 菜籽油 }
       - { ref: ginger, qty: 20, unit: g, note: 切末 }
-      - { ref: aged-vinegar, qty: 120, unit: ml, note: 首选岐山醋；T&T 可找陕西醋，买不到用陈醋 }
-      - { ref: chili-flakes, qty: 2, unit: 汤匙, note: 选香而不过辣的陕西辣椒面 }
-      - { ref: five-spice, qty: 0.5, unit: 茶匙 }
-      - { ref: salt, qty: 0.5, unit: 茶匙 }
+      - { ref: aged-vinegar, qty: 65, unit: ml, note: 可按口味用 65–95 ml；首选岐山醋；T&T 可找陕西醋，买不到用陈醋 }
+      - { ref: chili-flakes, qty: 1.5, unit: 汤匙, note: 选香而不过辣的陕西辣椒面 }
+      - { ref: five-spice, qty: 1.25, unit: 茶匙 }
+      - { ref: salt, qty: 0.75, unit: 茶匙 }
   - group: 底菜与漂菜
     items:
-      - { ref: carrot, qty: 80, unit: g, note: 切成 5 mm 小丁 }
-      - { ref: potato, qty: 100, unit: g, note: 切成 5 mm 小丁 }
+      - { ref: carrot, qty: 50, unit: g, note: 切成 5 mm 小丁 }
+      - { ref: potato, qty: 70, unit: g, note: 切成 5 mm 小丁 }
       - { ref: tofu-firm, qty: 100, unit: g, note: 切成 5 mm 小丁 }
-      - { ref: wood-ear, qty: 10, unit: g, note: 干重，在 T&T 干货区买 }
+      - { ref: wood-ear, qty: 8, unit: g, note: 干重，在 T&T 干货区买 }
       - { ref: daylily-bud, qty: 10, unit: g, note: 干重，在 T&T 干货区买干黄花菜 }
       - { ref: egg, qty: 1, unit: 个 }
-      - { ref: vegetable-oil, qty: 3, unit: 汤匙, note: 1 汤匙摊蛋皮，2 汤匙炒底菜 }
-      - { ref: chinese-chive, qty: 20, unit: g, note: 切短段，在 T&T 买 Chinese chives }
+      - { ref: vegetable-oil, qty: 2.25, unit: 汤匙, note: 0.75 汤匙摊蛋皮，1.5 汤匙炒底菜 }
+      - { ref: chinese-chive, qty: 15, unit: g, note: 切短段，在 T&T 买 Chinese chives }
   - group: 汤与面
     items:
       - { ref: fresh-wheat-noodle, name: 鲜细面, qty: 600, unit: g, note: 在 T&T 冷藏面食区选薄细小麦面，或用 400 g 细挂面 }
@@ -47,10 +47,10 @@ updated: 2026-10-02
 ## 步骤
 
 1. 泡发干货。木耳和黄花菜分别用 300 ml 冷水浸泡 30–40 分钟，到木耳舒展、黄花菜能弯折。洗净，去硬根，切成小片和短段。
-2. 炒肉臊子。锅中放 60 ml 油和肥肉，小火炒 8–10 分钟，到肥肉半透明、油明显增多。加入瘦肉和 20 g 姜末，中火炒 5 分钟，到肉片全部变色。
-3. 腩熟臊子。加入肉臊子用的醋、盐和五香粉，转小火加盖煨 25–30 分钟，到肉片柔软、锅底仍有油汁。揭盖，撒辣椒面，小火翻炒 1 分钟，到油色变红、闻到辣椒香，盛出。
-4. 摊蛋皮。鸡蛋打散，平底锅放 1 汤匙油，倒入蛋液铺薄，中小火煎 1 分钟，到表面凝固。翻面再煎 30 秒，到两面没有流动蛋液，盛出切小菱形片。
-5. 炒底菜。锅中放余下 2 汤匙油和 10 g 姜末，中火炒 30 秒，到姜香出来。加胡萝卜、土豆炒 5 分钟，到边缘略透明，再加豆腐、木耳和黄花菜炒 3 分钟，到配料热透。
+2. 炒肉臊子。锅中放 50 ml 油和肥肉，小火炒 8–10 分钟，到肥肉半透明、油明显增多。加入瘦肉和 20 g 姜末，中火炒 5 分钟，到肉片全部变色。
+3. 腩熟臊子。加入肉臊子用的醋、盐和五香粉，转小火加盖煨 5–6 分钟，到肉片柔软、锅底仍有油汁。揭盖，撒辣椒面，小火翻炒 5 分钟，到油色变红、闻到辣椒香，盛出。
+4. 摊蛋皮。鸡蛋打散，平底锅放 0.75 汤匙油，倒入蛋液铺薄，中小火煎 1 分钟，到表面凝固。翻面再煎 10–20 秒，到两面没有流动蛋液，盛出切小菱形片。
+5. 炒底菜。锅中放余下 1.5 汤匙油和 10 g 姜末，中火炒 30 秒，到姜香出来。加胡萝卜、土豆炒 5 分钟，到边缘略透明，再加豆腐、木耳和黄花菜炒 3 分钟，到配料热透。
 6. 调酸汤。沿锅边倒入 80 ml 醋，加 1900 ml 水和全部肉臊子，大火煮 5 分钟，到汤滚开。转小火煮 10 分钟，到土豆丁能轻松压碎；尝汤补盐，放入蛋皮和韭菜。
 7. 煮面浇汤。另锅大火加热煮面水约 8–10 分钟，到水充分滚开。鲜细面分批煮 2–3 分钟，到中心没有生粉芯、咬下仍有弹性；包装标时不同就按标时检查。每碗捞一小份面，立即浇上热汤与底菜。
 

@@ -5,7 +5,7 @@ title: 荠菜鲜肉大馄饨
 cuisine: chinese
 course: staple
 summary: 荠菜挤水切碎，与带脂肪的猪肉拌成黏馅；白色方皮包得饱满，清汤托出菜香。
-servings: 4
+servings: 6
 time: { prep: 80, cook: 30 }
 principles: [salt, protein-coagulation, heat-transfer]
 ingredients:

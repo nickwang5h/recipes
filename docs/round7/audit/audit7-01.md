@@ -3,6 +3,7 @@
 - ji-dan-guan-bing.md｜面团面粉｜170 g｜A：1¼ cups（170 grams）；B：250 g（about 2 cups）；折算后：A：170 g；B：250 g｜按 A 为 170 g；按 B 为 250 g，两个来源不同
 - ji-dan-guan-bing.md｜和面水｜120 ml｜A：½ cup；B：160 g（about ⅔ cup）；折算后：A：120 ml；B：160 ml（水）｜按 A 为 120 ml；按 B 为 160 ml
 - ji-dan-guan-bing.md｜面团盐｜0.25 茶匙｜A：1/8 teaspoon；B：面团未列盐，¼ teaspoon 是油酥用盐；折算后：A：0.625 ml｜0.125 茶匙
+- ji-dan-guan-bing.md｜面团表面抹油（步骤 1）｜0.5 茶匙＝2.5 ml｜A：1 teaspoon＝5 ml｜按 A 抹面团表面为 1 茶匙；其余案板油来源未定量
 - ji-dan-guan-bing.md｜油酥面粉｜20 g｜A：无油酥；B：2 tablespoon；折算后：B：15.625 g（125 g/cup÷16×2）｜约 15–16 g
 - ji-dan-guan-bing.md｜油酥油｜1 汤匙，共 15 ml｜A：无油酥；B：2 tablespoon melted lard，允许换其他油；折算后：B：30 ml｜2 汤匙
 - ji-dan-guan-bing.md｜烙饼油｜4 茶匙，共 20 ml｜A：每张入锅 1 teaspoon，翻面前再 1 teaspoon；B：1 tablespoon；折算后：A：4×2×5＝40 ml；B：15 ml｜按 A 为 8 茶匙；按 B 为 1 汤匙
@@ -130,6 +131,7 @@
 | 和面水 | 120 ml | A：½ cup；B：160 g（about ⅔ cup） | A：120 ml；B：160 ml（水） | 不一致（对 B 少 40 ml，25%；对 A 一致） |
 | 面团盐 | 0.25 茶匙 | A：1/8 teaspoon；B：面团未列盐，¼ teaspoon 是油酥用盐 | A：0.625 ml | 不一致（对 A 多 0.125 茶匙，100%） |
 | 抹面团、案板、擀面杖的油 | 1 茶匙，共 5 ml | A：面团 1 teaspoon，另给面团、手、案板、擀面杖加油但未定量；B：Cooking oil, for coating，未定量 | A：面团单项 5 ml，其余无数值；B：无数值 | 来源没有这一项 |
+| 面团表面抹油（步骤 1） | 抹面组的一半，即 0.5 茶匙＝2.5 ml | A：Coat the dough with 1 teaspoon；B：涂油未定量 | A：5 ml | 不一致（对 A 少 2.5 ml，50%） |
 | 油酥面粉 | 20 g | A：无油酥；B：2 tablespoon | B：15.625 g（125 g/cup÷16×2） | 不一致（对 B 多 4.375 g，28%） |
 | 油酥油 | 1 汤匙，共 15 ml | A：无油酥；B：2 tablespoon melted lard，允许换其他油 | B：30 ml | 不一致（对 B 少 15 ml，50%） |
 | 鸡蛋 | 4 个 | A：4 eggs；B：无 | A：4 个 | 一致 |
@@ -291,6 +293,7 @@ front matter：servings＝6，与来源 6 一致；time.prep＝155 分钟，来�
 | 汤中盐 | 0.5 茶匙，共 2.5 ml | B：1 tsp. or to taste；腌肉另列 1/4 tsp.，见另行 | B 汤中定量 1.5 茶匙＝7.5 ml，可按味调整 | 不一致（相对 B 所列定量少 1 茶匙，66.7%） |
 | 香油（定量） | 2 茶匙 | B：sesame oil for drizzling，未给数量 | 无数值 | 来源没有这一项 |
 | 醋 | 2 茶匙，共 10 ml | B：3 tbsp. black vinegar | B：67.5 ml | 不一致（少 57.5 ml，85.2%；B 是黑醋，未列 aged vinegar） |
+| 调香料的热汤（步骤 8，取自锅中） | 2 汤匙＝30 ml | A、B：均未给以热汤调香料的用量 | 无数值 | 来源没有这一项 |
 | 干香菇 | 未写 | B：3 dried shiitake mushrooms | 4.5 个 | 本稿没有这一项 |
 | 猪肉丝 | 未写 | B：50 g pork shreds | 75 g | 本稿没有这一项 |
 | 笋 | 未写 | B：4 bamboo shoots | 6 个，未给重量 | 本稿没有这一项 |
@@ -388,6 +391,7 @@ front matter：servings＝4，与来源 4 一致；time.prep＝50 分钟，来�
 | 面团面粉 | 300 g | A：300 g；B：250 g | A：300 g；B：333.333 g；核对说明：（B 少 10%，A 相同） | 一致 |
 | 和面水 | 150 ml | A：150 g；B：130 g | A：150 ml；B：173.333 ml（水）；核对说明：（对 B 少 13.5%，在 15% 内；对 A 相同） | 一致 |
 | 调整水 | 另备 20 ml | A：or 20ml more if needed；B：按面粉吸水调整，未定量 | A：20 ml；核对说明：（A） | 一致 |
+| 每次调整用水（步骤 2） | 每次 5 ml，取自另备 20 ml | A：另备 20ml，未给每次量；B：按面团调整，未给每次量 | 无每次的数值 | 来源没有这一项 |
 | 酵母 | 1.5 茶匙，活性干酵母 | A：1 and 1/2 tsp. instant yeast；B：1 teaspoon instant yeast, or dry active yeast | A：7.5 ml；B：6.667 ml；核对说明：（数量对 A 相同；对 B 多 12.5%；A 酵母类型为即发，B 允许活性干酵母） | 一致 |
 | 面团油 | 1 汤匙 | A：1 tbsp.；B：面团未列油 | A：15 ml；核对说明：（A） | 一致 |
 | 撒粉 | 15 g | A：2 tbsp. more for dusting；B：未给撒粉数值 | A：15.625 g（2×125/16）；核对说明：（少 4%） | 一致 |

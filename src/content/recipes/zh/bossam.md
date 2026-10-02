@@ -12,15 +12,15 @@ principles: [collagen-gelatin, protein-coagulation, salt]
 ingredients:
   - group: 煮肉
     items:
-      - { ref: pork-belly, qty: 1100, unit: g, note: 整块，切成约 7 cm 宽的两条；带皮肉可在 T&T 或 H Mart 买，主流超市无皮五花肉也可用 }
-      - { ref: water, qty: 1800, unit: ml, note: 选肉能紧凑平放的锅，让水盖过肉；另备 200 ml，仅延长煮肉时补入 }
-      - { ref: onion, qty: 0.5, unit: 个, note: 中等大小，切两块 }
+      - { ref: pork-belly, qty: 1360, unit: g, note: 整块，切成约 7 cm 宽的两条；带皮肉可在 T&T 或 H Mart 买，主流超市无皮五花肉也可用 }
+      - { ref: water, qty: 2400, unit: ml, note: 选肉能紧凑平放的锅，让水盖过肉；另备 200 ml，仅延长煮肉时补入 }
+      - { ref: onion, qty: 1, unit: 个, note: 大洋葱，切两块 }
       - { ref: scallion, qty: 3, unit: 根, note: 用葱白和浅绿色部分，切长段 }
-      - { ref: garlic, qty: 8, unit: 瓣, note: 去皮保持完整 }
+      - { ref: garlic, qty: 12, unit: 瓣, note: 去皮保持完整 }
       - { ref: ginger, qty: 20, unit: g, note: 切薄片 }
       - { ref: black-pepper, qty: 1, unit: 茶匙, note: 整粒 }
-      - { ref: doenjang, qty: 1.5, unit: 汤匙, note: T&T 或 H Mart 买 Doenjang }
-      - { ref: coffee, name: 原味速溶咖啡, qty: 1, unit: 茶匙, note: 不含糖、奶精和香料 }
+      - { ref: doenjang, qty: 2, unit: 汤匙, note: T&T 或 H Mart 买 Doenjang }
+      - { ref: coffee, name: 原味速溶咖啡, qty: 1, unit: 汤匙, note: 不含糖、奶精和香料 }
       - { ref: salt, qty: 1, unit: 茶匙 }
   - group: 包肉配菜
     items:
@@ -46,9 +46,9 @@ updated: 2026-10-02
 
 ## 步骤
 
-1. 把五花肉修成约 7 cm 宽的长条，保持整块，不先切薄。选能平放两条肉的锅，加入 1800 ml 水、大酱、洋葱、葱、蒜、姜、黑胡椒、速溶咖啡和盐，搅开大酱。
+1. 把五花肉修成约 7 cm 宽的长条，保持整块，不先切薄。选能平放两条肉的锅，加入 2400 ml 水、大酱、洋葱、葱、蒜、姜、黑胡椒、速溶咖啡和盐，搅开大酱。
 2. 中大火加热约 8–10 分钟，到汤持续沸腾，再煮 5 分钟，到葱姜蒜香气明显、大酱完全散开。
-3. 放入五花肉，中大火加热约 3 分钟，到汤重新沸腾，敞盖再煮 5 分钟，撇去浮沫。转中小火加盖煮 45–50 分钟，让汤保持轻轻冒泡，肉条不被翻滚的水掀动。
+3. 放入五花肉，中大火加热约 3 分钟，到汤重新沸腾，敞盖再煮 5 分钟，撇去浮沫。中大火加盖煮至下肉起共 60 分钟，再转小火煮 15 分钟，让汤保持轻轻冒泡，肉条不被翻滚的水掀动。
 4. 煮到 40 分钟时翻一次肉，检查最厚处。最终中心须达到 71°C，筷子能轻松穿过肥瘦层和皮。若仍有韧劲，加入预备的 200 ml 水，每次多煮 10 分钟再试；软嫩但还能完整夹起时关火。
 5. 肉留在汤中静置 10 分钟，到表面不再猛烈冒汽、能稳定夹起。此时把洗净沥干的生菜、泡菜和盐渍小虾分别装盘，小虾用小碟盛，方便少量取用。
 6. 将温热猪肉捞到干净砧板上，横着肉纹切约 3–4 mm 薄片，肥瘦和皮尽量连在一起。立即上桌，每片菜叶放一两片肉、一段泡菜和一点小虾，包成一口大小。

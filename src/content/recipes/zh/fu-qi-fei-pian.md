@@ -50,7 +50,7 @@ ingredients:
       - { ref: garlic, qty: 3, unit: 瓣, note: 捣成泥 }
       - { ref: ginger, qty: 1, unit: 茶匙, note: 磨成细泥 }
       - { ref: scallion, qty: 2, unit: 根, note: 切葱花 }
-      - { ref: salt, note: 适量 }
+      - { ref: salt, qty: 0.25, unit: 茶匙 }
       - { ref: roasted-peanuts, qty: 20, unit: g, note: 压成粗碎 }
       - { ref: sesame-seed, name: 熟白芝麻, qty: 1, unit: 茶匙, optional: true, note: 装饰用 }
       - { ref: cilantro, qty: 5, unit: g, optional: true, note: 装饰用 }

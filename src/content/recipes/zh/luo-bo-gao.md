@@ -12,7 +12,7 @@ ingredients:
   - group: 糕体
     items:
       - { ref: daikon, qty: 570, unit: g, note: 去皮后的重量，擦成粗丝 }
-      - { ref: rice-flour, name: 粘米粉, qty: 200, unit: g, note: 选白米制成的细米粉；T&T 有粘米粉，不要买糯米粉 }
+      - { ref: rice-flour, name: 粘米粉, qty: 155, unit: g, note: 选白米制成的细米粉；T&T 有粘米粉，不要买糯米粉 }
       - { ref: cornstarch, qty: 1, unit: 汤匙 }
       - { ref: water, qty: 360, unit: ml, note: 240 ml 煮萝卜，120 ml 调粉浆 }
       - { ref: salt, qty: 0.5, unit: 茶匙 }

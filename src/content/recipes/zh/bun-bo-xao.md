@@ -6,7 +6,7 @@ original: Bún bò xào
 cuisine: vietnamese
 course: staple
 summary: 香茅蒜香牛肉快炒后铺在米线和鲜菜上，配花生、炸红葱头与酸甜鱼露汁；肉分批炒，面菜沥净再拌。
-servings: 3
+servings: 2
 time: { prep: 30, cook: 20 }
 principles: [maillard-reaction, starch-gelatinization, acid]
 ingredients:

@@ -12,14 +12,14 @@ principles: [collagen-gelatin, starch-gelatinization, aromatics]
 ingredients:
   - group: 鸡与填料
     items:
-      - { ref: whole-chicken, name: 小整鸡, qty: 1, unit: 个, note: 约 700 g，选 Cornish hen 或相近大小的幼鸡，去内脏 }
-      - { ref: glutinous-rice, qty: 40, unit: g, note: 干重，短粒糯米 }
-      - { ref: fresh-korean-ginseng, qty: 1, unit: 根, note: 主流超市少见，向 H Mart 或韩国食材店询购鲜水参（susam） }
-      - { ref: garlic, qty: 6, unit: 瓣, note: 去皮，2 瓣放腹腔，4 瓣入汤 }
-      - { ref: jujube, qty: 3, unit: 个, note: 在 T&T 或 H Mart 干货区买原味红枣 }
+      - { ref: whole-chicken, name: 小整鸡, qty: 2, unit: 个, note: 每只约 680 g，选 Cornish hen 或相近大小的幼鸡，去内脏 }
+      - { ref: glutinous-rice, qty: 100, unit: g, note: 干重，短粒糯米 }
+      - { ref: fresh-korean-ginseng, qty: 2, unit: 根, note: 主流超市少见，向 H Mart 或韩国食材店询购鲜水参（susam） }
+      - { ref: garlic, qty: 16, unit: 瓣, note: 去皮，每只鸡的腹腔放 2 瓣，12 瓣入汤 }
+      - { ref: jujube, qty: 2, unit: 个, note: 大红枣，在 T&T 或 H Mart 干货区买原味红枣 }
       - { ref: ginger, qty: 2, unit: 片, note: 每片约 2.5 cm 宽，薄切 }
-      - { ref: scallion, qty: 1, unit: 根, note: 葱白入汤，葱绿切碎留作装盘 }
-      - { ref: water, qty: 1400, unit: ml, note: 熬汤用，选能让水覆盖鸡身大部分的窄锅 }
+      - { ref: scallion, qty: 2, unit: 根, note: 用量范围 2–3 根；葱白入汤，葱绿切碎留作装盘 }
+      - { ref: water, qty: 1920, unit: ml, note: 熬汤用，选能让水覆盖鸡身大部分的窄锅 }
       - { ref: water, qty: 500, unit: ml, note: 泡糯米用，泡后倒掉 }
       - { ref: water, name: 补汤热水, qty: 200, unit: ml, note: 预留，水位下降时分次补入 }
   - group: 上桌调味
@@ -46,10 +46,10 @@ updated: 2026-10-02
 ## 步骤
 
 1. 糯米淘洗后加 500 ml 冷水，浸泡 1 小时，到米粒吸水饱满、指甲能掐开，再沥干。人参刷净表面泥土，红枣洗净。
-2. 取出鸡腹腔里的内脏包，剪去开口处多余脂肪，用厨房纸擦掉腹腔残留的肉汁。把颈部皮折进上方开口，放入糯米和 2 瓣蒜；腹腔留出约四分之一空间。
-3. 两只鸡腿交叉，用棉质厨房绳系住，收拢腹腔开口。把鸡放进窄而深的锅，加入人参、红枣、姜、葱白和余下 4 瓣蒜，倒入 1400 ml 水。
-4. 中大火加热约 10 分钟，到汤面持续冒泡，撇掉浮沫。加盖煮 15 分钟，保持稳定沸腾；若水位降到鸡身一半以下，从预留热水中先补 100 ml。
-5. 转中小火加盖煮 25 分钟，到鸡腿关节松动、筷子容易穿过腿肉。测大腿最厚处，避开骨头，须达到 82°C；腹腔糯米中心须达到 74°C。未达到就每次续煮 5 分钟后复测。
+2. 取出鸡腹腔里的内脏包，剪去开口处多余脂肪，用厨房纸擦掉腹腔残留的肉汁。把每只鸡的颈部皮折进上方开口，分放糯米和各 2 瓣蒜；腹腔留出约四分之一空间。
+3. 每只鸡的两只鸡腿交叉，用棉质厨房绳系住，收拢腹腔开口。把鸡放进窄而深的锅，加入人参、红枣、姜、葱白和余下 12 瓣蒜，倒入 1920 ml 水。
+4. 中大火加热约 10 分钟，到汤面持续冒泡，撇掉浮沫。加盖继续煮至中大火阶段共 30 分钟，保持稳定沸腾；若水位降到鸡身一半以下，从预留热水中先补 100 ml。
+5. 转中火加盖煮 40 分钟，到鸡腿关节松动、筷子容易穿过腿肉。测大腿最厚处，避开骨头，须达到 82°C；腹腔糯米中心须达到 74°C。未达到就每次续煮 5 分钟后复测。
 6. 关火盖着静置 10 分钟，再解开绑绳。拨开米团中心，米粒应黏软、没有白色硬芯；若仍夹生，补入剩余预留热水，小火续煮 10 分钟，再检查中心。
 7. 鸡和汤分到碗里，撒葱绿，另上盐和黑胡椒，让每人调自己的汤。鸡肉应能从骨架上轻轻拨下，米饭仍集中在腹腔附近。
 

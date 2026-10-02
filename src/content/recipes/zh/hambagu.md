@@ -19,7 +19,7 @@ ingredients:
       - { ref: whole-milk, qty: 30, unit: ml }
       - { ref: egg, qty: 1, unit: 个 }
       - { ref: nutmeg, name: 肉豆蔻粉, qty: 0.5, unit: 茶匙 }
-      - { ref: salt, qty: 0.5, unit: 茶匙, note: Diamond Crystal kosher salt }
+      - { ref: salt, qty: 0.5, unit: 茶匙, note: 按 Diamond Crystal 粗盐计，用细盐减半 }
       - { ref: black-pepper, note: 现磨，适量 }
       - { ref: vegetable-oil, qty: 2, unit: 汤匙, note: 炒洋葱和煎肉排各用 1 汤匙 }
       - { ref: dry-red-wine, qty: 45, unit: ml, note: 加盖焖肉排用 }

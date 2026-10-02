@@ -5,7 +5,7 @@ title: 东坡肉
 cuisine: chinese
 course: meat
 summary: 带皮五花肉以葱姜垫底，用绍兴酒、酱油和冰糖慢煨，皮软肉酥，方块仍完整。
-servings: 6
+servings: 8
 time: { prep: 20, cook: 195 }
 principles: [collagen-gelatin, heat-transfer, salt]
 ingredients:

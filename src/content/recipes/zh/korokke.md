@@ -19,7 +19,7 @@ ingredients:
       - { ref: shiitake, qty: 2, unit: 个, note: 去硬蒂，切细末 }
       - { ref: vegetable-oil, qty: 2, unit: 汤匙, note: 炒馅用 }
       - { ref: egg, qty: 1, unit: 个, note: 拌进馅料 }
-      - { ref: salt, qty: 1, unit: 茶匙, note: Diamond Crystal kosher salt }
+      - { ref: salt, qty: 1, unit: 茶匙, note: 按 Diamond Crystal 粗盐计，用细盐减半 }
       - { ref: white-pepper, qty: 0.25, unit: 茶匙 }
       - { ref: black-pepper, note: 适量 }
       - { ref: water, note: 煮土豆用 1500 ml，选能让水没过土豆的小锅；不按份量机械加倍 }

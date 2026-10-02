@@ -5,7 +5,7 @@ title: 西洋菜猪骨汤
 cuisine: chinese
 course: soup
 summary: 带肉猪骨先慢煲，再下西洋菜煮出菜香；汤清而有厚度，菜茎柔软，骨边肉能轻松拨开。
-servings: 6
+servings: 8
 time: { prep: 15, cook: 180 }
 principles: [blanching, collagen-gelatin, heat-transfer]
 ingredients:

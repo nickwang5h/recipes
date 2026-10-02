@@ -12,9 +12,9 @@ principles: [blanching, collagen-gelatin, salt]
 ingredients:
   - group: 排骨与蔬菜
     items:
-      - { ref: beef-short-ribs, name: 厚切带骨牛短肋, qty: 1350, unit: g, note: 每块约 5 cm，买 English-cut short ribs；锯口有碎骨时先清理 }
+      - { ref: beef-short-ribs, name: 厚切带骨牛短肋, qty: 2000, unit: g, note: 每块约 5 cm，买 English-cut short ribs；锯口有碎骨时先清理 }
       - { ref: korean-radish, qty: 450, unit: g, note: 在 H Mart 买 Mu；没有可等量用白萝卜，切大块 }
-      - { ref: onion, qty: 200, unit: g, note: 去皮，对半切，保留根部使其不散 }
+      - { ref: onion, qty: 2, unit: 个, note: 中等大小，去皮，对半切，保留根部使其不散 }
       - { ref: scallion, qty: 2, unit: 根, note: 葱白入汤 }
       - { ref: garlic, qty: 8, unit: 瓣, note: 去皮，整瓣入汤 }
       - { ref: ginger, qty: 3, unit: 片, note: 每片约 2.5 cm 宽，薄切 }
@@ -22,11 +22,11 @@ ingredients:
     items:
       - { ref: water, qty: 2000, unit: ml, note: 冷藏浸泡排骨用，泡后倒掉 }
       - { ref: water, qty: 2000, unit: ml, note: 焯水用，焯后倒掉 }
-      - { ref: water, qty: 3300, unit: ml, note: 正式熬汤用 }
+      - { ref: water, qty: 5760, unit: ml, note: 正式熬汤用 }
       - { ref: water, name: 补汤热水, qty: 500, unit: ml, note: 中途补入 }
       - { ref: korean-soup-soy-sauce, qty: 2, unit: 汤匙, note: H Mart 有 Guk-ganjang；没有可用 1 汤匙生抽，再用盐补味 }
       - { ref: garlic, name: 蒜末, qty: 1, unit: 茶匙, note: 收尾入汤 }
-      - { ref: salt, note: 适量 }
+      - { ref: salt, qty: 1, unit: 茶匙, note: 初段熬汤用，最后按口味补加 }
       - { ref: black-pepper, note: 适量 }
   - group: 收尾
     items:
@@ -50,8 +50,8 @@ updated: 2026-10-02
 ## 步骤
 
 1. 排骨去掉锯口碎骨，放入 2000 ml 冷水中，冷藏浸泡 30 分钟，到水明显变红，再沥干。另锅把 2000 ml 水加热约 10 分钟，到持续沸腾。
-2. 排骨放入沸水，待重新沸腾后煮 3 分钟，到表面变灰、浮沫集中升起。倒掉焯水，逐块冲掉附着的灰沫，洗净锅底。
-3. 排骨回锅，加入 3300 ml 水、萝卜大块、洋葱、葱白、整瓣蒜和姜。中大火加热约 10 分钟，到汤面沸腾；撇沫后转中火，开盖煮 30 分钟，保持汤面持续冒泡。
+2. 排骨放入沸水，待重新沸腾后煮 10 分钟，到表面变灰、浮沫集中升起。倒掉焯水，逐块冲掉附着的灰沫，洗净锅底。
+3. 排骨回锅，加入 5760 ml 水、萝卜大块、洋葱、葱白、整瓣蒜、姜和 1 茶匙盐。中大火加热约 10 分钟，到汤面沸腾；撇沫后保持中大火，开盖煮至本步骤共 60 分钟，保持汤面持续冒泡。
 4. 捞出萝卜，丢掉洋葱、葱白、姜和整瓣蒜。萝卜放在盘上晾 5 分钟，到不烫手，切成约 2 cm 厚的一口大小块。锅中补入 500 ml 热水和汤酱油。
 5. 转中小火加盖炖 1 小时，到筷子能穿过最厚肉块，骨边筋膜柔软、轻扭时肉容易分开。若仍韧，每次续煮 15 分钟再检查；汤面保持轻缓冒泡。
 6. 若加粉条，在排骨最后 20 分钟炖煮时，用 500 ml 温水泡粉条 20 分钟，到能弯折，再沥干。萝卜、蒜末和粉条一起回锅，中火煮 4 分钟，到粉条透明、咬开没有硬芯，萝卜中心热透。

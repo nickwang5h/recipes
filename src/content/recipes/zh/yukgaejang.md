@@ -13,23 +13,23 @@ ingredients:
   - group: 牛肉底汤
     items:
       - { ref: beef-brisket, qty: 450, unit: g, note: 修去厚脂肪，顺纹分成约 8 cm 长的块 }
-      - { ref: onion, qty: 200, unit: g, note: 去皮，对半切 }
-      - { ref: dried-shiitake, qty: 4, unit: 个, note: 在 T&T 或 H Mart 干货区买原味干香菇，直接入底汤煮软 }
-      - { ref: water, qty: 3000, unit: ml, note: 熬牛肉汤用，后续量取 2400 ml }
-      - { ref: water, name: 补汤热水, qty: 300, unit: ml, note: 预留，滤汤后不足 2400 ml 时补入 }
+      - { ref: onion, qty: 0.5, unit: 个, note: 去皮，对半切 }
+      - { ref: dried-shiitake, qty: 3, unit: 个, note: 在 T&T 或 H Mart 干货区买原味干香菇，直接入底汤煮软 }
+      - { ref: water, qty: 3000, unit: ml, note: 熬牛肉汤用，后续量取 1680–1920 ml }
+      - { ref: water, name: 补汤热水, qty: 300, unit: ml, note: 预留，滤汤后不足 1680 ml 时补入 }
   - group: 蔬菜
     items:
       - { ref: cooked-fernbrake, qty: 170, unit: g, note: 沥干后的熟制重量，在 H Mart 冷藏区买 Boiled gosari；选原味已煮熟产品 }
-      - { ref: mung-bean-sprout, qty: 340, unit: g, note: 去坏芽，洗净 }
+      - { ref: mung-bean-sprout, qty: 225, unit: g, note: 去坏芽，洗净 }
       - { ref: scallion, qty: 14, unit: 根, note: 普通青葱，约 250 g，切成约 6 cm 长段 }
       - { ref: water, qty: 1500, unit: ml, note: 焯豆芽用，焯后倒掉 }
   - group: 辣椒调味
     items:
-      - { ref: sesame-oil, qty: 2, unit: 汤匙 }
-      - { ref: gochugaru, qty: 2, unit: 汤匙, note: 在 H Mart 或 T&T 买无盐韩式辣椒碎，选常规辣度 }
+      - { ref: sesame-oil, qty: 1, unit: 汤匙 }
+      - { ref: gochugaru, qty: 4, unit: 汤匙, note: 在 H Mart 或 T&T 买无盐韩式辣椒碎，选常规辣度 }
       - { ref: garlic, name: 蒜末, qty: 1, unit: 汤匙 }
-      - { ref: korean-soup-soy-sauce, qty: 2, unit: 汤匙, note: H Mart 有 Guk-ganjang；没有可用 1 汤匙生抽，再用盐补味 }
-      - { ref: salt, note: 适量，最后加 }
+      - { ref: korean-soup-soy-sauce, qty: 1, unit: 汤匙, note: H Mart 有 Guk-ganjang；没有可用 0.5 汤匙生抽，再用盐补味 }
+      - { ref: salt, qty: 1, unit: 汤匙, note: 调味酱用，最后按口味补加 }
       - { ref: black-pepper, note: 适量 }
 sources:
   - title: "Yukgaejang (Spicy Beef Soup with Vegetables)"
@@ -49,11 +49,11 @@ updated: 2026-10-02
 
 1. 牛腩分成约 8 cm 长的块，与洋葱、冲净的干香菇和 3000 ml 水入锅。中大火加热约 10 分钟，到汤面沸腾，撇掉浮沫。
 2. 转中火炖 1 小时，锅盖留缝，维持稳定冒泡，到叉子能把最厚肉块顺纹分开。仍难撕开就每次续煮 10 分钟后检查，先让牛肉软下来。
-3. 捞出牛肉和香菇，放盘上晾 10 分钟，到能用手处理；丢掉洋葱。汤过筛并撇去多余脂肪，量取 2400 ml，不足的从预留热水补入，余汤另留。
+3. 捞出牛肉和香菇，放盘上晾 10 分钟，到能用手处理；丢掉洋葱。汤过筛并撇去多余脂肪，量取 1680–1920 ml，不足的从预留热水补入，余汤另留。
 4. 牛肉顺纹撕成约 6 cm 长的粗丝，香菇切片。熟蕨菜冲净、沥干，去掉硬梗，切成约 6 cm 长段。葱白纵向剖开，再与葱绿一起切段。
 5. 另锅把 1500 ml 水加热约 8 分钟，到持续沸腾。放入豆芽焯 1 分钟，到芽身稍软而仍能挺住，捞出冲凉、沥干。
-6. 小锅加香油，最小火加热 30 秒，到油能轻松流动。加入辣椒碎搅拌约 15 秒，到油变红、粉末呈湿润糊状，立即关火；拌入牛肉、蕨菜、香菇、蒜末和 1 汤匙汤酱油。
-7. 把辣椒肉菜倒回底汤，加剩下 1 汤匙汤酱油，中大火加热约 5 分钟，到重新沸腾，转中火加盖煮 10 分钟，到蕨菜和肉丝都裹上红汤。
+6. 小锅加香油，最小火加热 30 秒，到油能轻松流动。加入辣椒碎搅拌约 15 秒，到油变红、粉末呈湿润糊状，立即关火；拌入牛肉、蕨菜、香菇、蒜末、1 汤匙盐和 0.5 汤匙汤酱油。
+7. 把辣椒肉菜倒回底汤，加剩下 0.5 汤匙汤酱油，中大火加热约 5 分钟，到重新沸腾，转中火加盖煮 10 分钟，到蕨菜和肉丝都裹上红汤。
 8. 加豆芽与葱段，中火煮 10 分钟，到葱白软下来、豆芽没有生味，蕨菜仍能夹起。最后尝汤加盐和黑胡椒，盛入深碗配白饭。
 
 ## 要点

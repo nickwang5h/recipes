@@ -27,7 +27,7 @@ ingredients:
     items:
       - { ref: roasted-peanuts, qty: 2, unit: 汤匙, note: 无盐熟花生米 }
       - { ref: zha-cai, qty: 2, unit: 汤匙, note: 切碎；T&T 腌菜区买 Preserved mustard stem，选原味 }
-      - { ref: scallion, qty: 1, unit: 根, note: 切葱花 }
+      - { ref: scallion, qty: 2, unit: 根, note: 切葱花 }
       - { ref: cilantro, qty: 5, unit: g, optional: true, note: 切碎，装饰用 }
 sources:
   - title: Suan La Fen（Hot and Sour Noodle Soup，酸辣粉）

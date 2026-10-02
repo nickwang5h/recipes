@@ -12,16 +12,16 @@ principles: [salt, fermentation]
 ingredients:
   - group: 盐渍
     items:
-      - { ref: korean-radish, qty: 900, unit: g, note: T&T 或 H Mart 找 Korean radish（mu）；没有可用主流超市的 Daikon radish，质地稍有不同 }
-      - { ref: salt, name: 粗粒 kosher 盐, qty: 1, unit: 汤匙, note: 用粗粒盐，不以同体积细盐替换 }
-      - { ref: sugar, qty: 1, unit: 汤匙 }
+      - { ref: korean-radish, qty: 1815, unit: g, note: T&T 或 H Mart 找 Korean radish（mu）；没有可用主流超市的 Daikon radish，质地稍有不同 }
+      - { ref: salt, name: 粗粒 kosher 盐, qty: 2, unit: 汤匙, note: 用粗粒盐，不以同体积细盐替换 }
+      - { ref: sugar, qty: 2, unit: 汤匙 }
   - group: 拌料
     items:
-      - { ref: fish-sauce, qty: 2, unit: 汤匙, note: 用鱼露调咸鲜，不再另加盐 }
-      - { ref: gochugaru, qty: 5.25, unit: 汤匙, note: T&T 或 H Mart 找泡菜用 Korean red pepper flakes }
-      - { ref: garlic, name: 蒜末, qty: 1, unit: 汤匙 }
-      - { ref: ginger, name: 姜末, qty: 0.5, unit: 茶匙 }
-      - { ref: scallion, qty: 2, unit: 根, note: 切小段 }
+      - { ref: fish-sauce, qty: 4, unit: 汤匙, note: 用鱼露调咸鲜，不再另加盐 }
+      - { ref: gochugaru, qty: 10.75, unit: 汤匙, note: T&T 或 H Mart 找泡菜用 Korean red pepper flakes }
+      - { ref: garlic, name: 蒜末, qty: 2, unit: 汤匙 }
+      - { ref: ginger, name: 姜末, qty: 1, unit: 茶匙 }
+      - { ref: scallion, qty: 4, unit: 根, note: 切小段 }
 sources:
   - title: "Cubed radish kimchi (Kkakdugi)"
     author: Maangchi
@@ -40,7 +40,7 @@ updated: 2026-10-02
 
 1. 用干净的刀和砧板处理萝卜，洗去泥沙，削去粗皮和损伤处，擦干。切成约 2–2.5 cm 的方块，放入大碗；大小一致，盐渍和后续入味才较均匀。
 2. 撒入粗粒 kosher 盐和糖，翻匀后静置 30 分钟，到碗底出现明显汁水、萝卜表面湿润，边角稍微变软。中途翻动一次，让底部和上层交换位置。
-3. 把析出的汁水倒入小碗，量出 40 ml 留用，其余倒掉。萝卜不再冲洗，放回拌菜碗；留用的是刚盐渍出的萝卜汁，不另外兑清水。
+3. 把析出的汁水倒入小碗，量出 80 ml 留用，其余倒掉。萝卜不再冲洗，放回拌菜碗；留用的是刚盐渍出的萝卜汁，不另外兑清水。
 4. 加入鱼露、辣椒碎、蒜末、姜末、葱段和留好的萝卜汁，戴干净手套翻拌。拌到每块都有均匀红色、细碎调味料贴住切面，碗底留下湿润的红汁。
 5. 装入洗净的食品级发酵容器，轻压萝卜，排掉块与块之间的大空隙，倒入拌汁。容器上部留出空间，使用能排气的盖子；汁水随后还会增加。
 6. 放在阴凉室温处发酵约 48–72 小时，每 24 小时检查一次，到出现细小气泡、闻到清楚酸香时转入冰箱；若提前出现酸香，就提前冷藏。暖气旁或闷热厨房不适合这段等待，可直接冷藏，让它慢慢发酸。

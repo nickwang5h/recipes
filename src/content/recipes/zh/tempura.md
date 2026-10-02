@@ -12,7 +12,7 @@ principles: [gluten, oil-temperature]
 ingredients:
   - group: 虾与蔬菜
     items:
-      - { ref: shrimp, qty: 4, unit: 个, note: 生大虾，去头去壳后约 200 g，保留尾壳，去虾线 }
+      - { ref: shrimp, qty: 4, unit: 个, note: 生大虾，去头去壳后约 100 g，保留尾壳，去虾线 }
       - { ref: eggplant, qty: 100, unit: g, note: 选细长茄子，切约 5 mm 厚的片 }
       - { ref: pumpkin, name: 日本南瓜（kabocha）, qty: 100, unit: g, note: 去籽，留皮，切约 5 mm 厚的片；T&T 或 H Mart 找 kabocha }
   - group: 面糊与炸油

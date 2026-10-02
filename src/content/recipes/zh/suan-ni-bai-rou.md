@@ -5,7 +5,7 @@ title: 蒜泥白肉
 cuisine: chinese
 course: meat
 summary: 肥瘦相间的猪肉清煮后切薄片，用蒜泥、复制酱油和红油调味；肉薄，蒜香才不会只留在表面。
-servings: 4
+servings: 2
 time: { prep: 100, cook: 50 }
 principles: [protein-coagulation, knife-work, aromatics]
 ingredients:

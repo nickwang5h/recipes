@@ -11,27 +11,27 @@ principles: [collagen-gelatin, gluten, heat-transfer]
 ingredients:
   - group: 腊汁肉
     items:
-      - { ref: pork-belly, name: 带皮五花肉, qty: 450, unit: g, note: T&T 的鲜肉柜较容易买到带皮整块五花肉 }
+      - { ref: pork-belly, name: 带皮五花肉, qty: 300, unit: g, note: T&T 的鲜肉柜较容易买到带皮整块五花肉 }
       - { ref: water, qty: 1500, unit: ml, note: 焯肉用 }
-      - { ref: water, qty: 750, unit: ml, note: 卤肉用，选能使肉浸在水里的小锅 }
-      - { ref: ginger, qty: 5, unit: 片 }
-      - { ref: scallion, qty: 2, unit: 根, note: 切段 }
-      - { ref: star-anise, qty: 1, unit: 个 }
+      - { ref: water, qty: 240, unit: ml, note: 卤肉用，选能使肉浸在水里的小锅 }
+      - { ref: ginger, qty: 1, unit: 片 }
+      - { ref: scallion, qty: 1.5, unit: 根, note: 切段 }
+      - { ref: star-anise, qty: 0.5, unit: 个 }
       - { ref: bay-leaf, qty: 1, unit: 片 }
       - { ref: cassia, qty: 3, unit: g, note: 一小段 }
       - { ref: fennel-seed, qty: 0.25, unit: 茶匙 }
       - { ref: clove, qty: 2, unit: 个 }
-      - { ref: sichuan-pepper, qty: 0.5, unit: 茶匙 }
+      - { ref: sichuan-pepper, qty: 0.25, unit: 茶匙 }
       - { ref: dried-chili, qty: 4, unit: 个 }
-      - { ref: light-soy-sauce, qty: 1, unit: 汤匙 }
-      - { ref: dark-soy-sauce, qty: 0.5, unit: 汤匙 }
-      - { ref: shaoxing-wine, qty: 1, unit: 汤匙 }
-      - { ref: sugar, qty: 0.5, unit: 汤匙 }
+      - { ref: light-soy-sauce, qty: 10, unit: ml }
+      - { ref: dark-soy-sauce, qty: 1, unit: 茶匙 }
+      - { ref: shaoxing-wine, qty: 20, unit: ml }
+      - { ref: sugar, qty: 0.25, unit: 汤匙 }
       - { ref: salt, qty: 0.5, unit: 茶匙 }
   - group: 白吉馍
     items:
-      - { ref: flour, qty: 250, unit: g }
-      - { ref: water, qty: 120, unit: ml, note: 和面用 }
+      - { ref: flour, qty: 175, unit: g }
+      - { ref: water, qty: 80, unit: ml, note: 和面用，用量范围 80–100 ml }
       - { ref: instant-yeast, qty: 1, unit: 茶匙 }
       - { ref: sugar, qty: 1, unit: 茶匙 }
       - { ref: vegetable-oil, qty: 1, unit: 茶匙, note: 和入面团；烙馍时不加油 }
@@ -52,10 +52,10 @@ updated: 2026-10-02
 ## 步骤
 
 1. 五花肉切成 2 块，放入焯肉水，中大火加热 8–10 分钟，到水沸、浮沫聚起、肉外层变白。捞出冲掉浮沫，弃水，洗净锅。
-2. 把肉、750 ml 卤肉水和腊汁肉组的其余配料放回锅中，中火煮 5 分钟，到汤沸。盖锅转小火煨 90–120 分钟，到筷子能轻松穿过肉皮和瘦肉，肉仍能整块捞起；中途翻一次，保持轻沸。
+2. 把肉、240 ml 卤肉水和腊汁肉组的其余配料放回锅中，中火煮 5 分钟，到汤沸。盖锅转小火煨 90–120 分钟，到筷子能轻松穿过肉皮和瘦肉，肉仍能整块捞起；中途翻一次，保持轻沸。
 3. 煨肉时和面。混合面粉、即发酵母、和面糖、水和油，揉 8–10 分钟，到面团较硬、表面光滑、没有干粉。盖住发酵 40–90 分钟，到体积约为原来的两倍，掰开有细小气孔。
-4. 发好的面团揉 3–5 分钟，到大气泡排出。分成 4 份，每份擀成长椭圆，从短端卷成筒，竖起压扁，再擀成约 10 cm 直径、1 cm 厚的饼。其余面团盖住，避免表面结皮。
-5. 厚底平底锅小火预热 2 分钟，到放入面饼时只有轻微响声。放入面饼，不加油，加盖每面烙 5 分钟，到两面有金黄斑点、饼边定形。试剖一个，中心应没有湿黏生面；若仍夹生，再每面加盖烙 1–2 分钟。
+4. 发好的面团揉 3–5 分钟，到大气泡排出。分成 4 份，每份擀成长椭圆，从短端卷成筒，竖起压扁，再擀成约 10 cm 直径、1 cm 厚的饼。其余面团盖住，避免表面结皮。整形后盖住静置 20 分钟。
+5. 厚底平底锅小火预热 2 分钟，到放入面饼时只有轻微响声。放入面饼，不加油，加盖每面烙 2 分钟，再不加盖每面烙约 1 分钟，到两面有金黄斑点、饼边定形。试剖一个，中心应没有湿黏生面；若仍夹生，再每面加盖烙 1–2 分钟。
 6. 捞出热肉，剁成细小块，取锅里的卤汁 2 汤匙拌入，到肉馅湿润、碗底没有积汤。热馍从侧面剖开，保留一边相连，分装肉馅，趁热吃。
 
 ## 要点

@@ -11,19 +11,19 @@ principles: [heat-transfer, aromatics, maillard-reaction]
 ingredients:
   - group: 主料
     items:
-      - { ref: green-bean, qty: 350, unit: g, note: 掐去两端和老筋，掰成约 5 cm 长的段 }
+      - { ref: green-bean, qty: 225, unit: g, note: 掐去两端和老筋，掰成约 5 cm 长的段 }
       - { ref: ground-pork, qty: 80, unit: g, note: 带一点肥的肉末，用来煸香 }
-      - { ref: ya-cai, name: 碎米芽菜, qty: 1.5, unit: 汤匙, note: T&T 的四川腌菜区找宜宾碎米芽菜，小袋装，开袋可用 }
+      - { ref: ya-cai, name: 碎米芽菜, qty: 1, unit: 汤匙, note: T&T 的四川腌菜区找宜宾碎米芽菜，小袋装，开袋可用 }
   - group: 调味
     items:
-      - { ref: vegetable-oil, qty: 2, unit: 汤匙, note: 煸豆与炒肉各用 1 汤匙 }
+      - { ref: vegetable-oil, qty: 1, unit: 汤匙, note: 煸豆与炒肉各用 0.5 汤匙 }
       - { ref: salt, qty: 0.25, unit: 茶匙, note: 煸豆用 }
       - { ref: sichuan-pepper, qty: 1, unit: 茶匙 }
-      - { ref: dried-chili, qty: 6, unit: 个, note: 剪段，筛去散籽 }
-      - { ref: shaoxing-wine, qty: 1, unit: 茶匙 }
+      - { ref: dried-chili, qty: 1, unit: 个, note: 剪段，筛去散籽 }
+      - { ref: shaoxing-wine, qty: 0.5, unit: 茶匙 }
       - { ref: garlic, name: 蒜末, qty: 1, unit: 汤匙 }
       - { ref: ginger, name: 姜末, qty: 1, unit: 茶匙 }
-      - { ref: light-soy-sauce, qty: 1, unit: 茶匙 }
+      - { ref: light-soy-sauce, qty: 0.75, unit: 茶匙 }
       - { ref: dark-soy-sauce, qty: 0.5, unit: 茶匙 }
 sources:
   - title: Sichuan Dry Fried Green Beans (干煸四季豆)
@@ -42,9 +42,9 @@ updated: 2026-10-02
 ## 步骤
 
 1. 四季豆洗净，去两端和老筋，掰段后用厨房纸擦干。姜蒜剁末，干辣椒剪段；芽菜放在小碗里，捏散结块，备好两种酱油。
-2. 宽锅倒入 1 汤匙油，加四季豆和盐，中火煸炒 12–15 分钟，频繁翻面，到大部分豆皮起皱、出现浅褐斑，夹起一段能弯曲。豆段铺开，避免叠成一堆；保持敞锅，让蒸汽散掉。
+2. 宽锅倒入 0.5 汤匙油，加四季豆和盐，中火煸炒约 20 分钟，频繁翻面，到大部分豆皮起皱、出现浅褐斑，夹起一段能弯曲。豆段铺开，避免叠成一堆；保持敞锅，让蒸汽散掉。
 3. 剖开最粗的一段检查，豆肉应全部软熟、没有硬脆的生芯。若仍偏硬，再用中小火煸 2–3 分钟，到断面软透，然后盛出。表皮起皱后仍要检查内部，不能只凭颜色停火。
-4. 原锅加剩余 1 汤匙油，中小火下花椒和干辣椒炒 30 秒，到闻到椒香、辣椒仍红。加入猪肉末，转中火压散，淋绍兴酒，煸炒 3 分钟，到肉末熟透、达到 71°C，散成细粒，边缘微褐。
+4. 原锅加剩余 0.5 汤匙油，中小火下花椒和干辣椒炒 30 秒，到闻到椒香、辣椒仍红。加入猪肉末，转中火压散，淋绍兴酒，煸炒约 2 分钟，到肉末熟透、达到 71°C，散成细粒，边缘微褐。
 5. 加入姜末、蒜末、芽菜、生抽和老抽，中火炒 1 分钟，到芽菜散开、姜蒜生味消失。芽菜已有咸味，先按清单的酱油量调味。
 6. 四季豆回锅，中火翻炒 1 分钟，到肉末与芽菜均匀附着、锅底没有游离液体。盛到宽盘里，趁热夹豆段和肉末一起吃。
 
