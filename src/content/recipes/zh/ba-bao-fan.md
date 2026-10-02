@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ba-bao-fan.jpg
+coverAlt: 八宝饭装盘后的插画
 title: 八宝饭
 cuisine: chinese
 course: dessert

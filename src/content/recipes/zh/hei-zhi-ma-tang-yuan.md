@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hei-zhi-ma-tang-yuan.jpg
+coverAlt: 黑芝麻汤圆装盘后的插画
 title: 黑芝麻汤圆
 cuisine: chinese
 course: dessert

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/qi-shan-sao-zi-mian.jpg
+coverAlt: 岐山臊子面装盘后的插画
 title: 岐山臊子面
 cuisine: chinese
 course: staple

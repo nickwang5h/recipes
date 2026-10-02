@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/lv-dou-tang.jpg
+coverAlt: 绿豆汤装盘后的插画
 title: 绿豆汤
 cuisine: chinese
 course: dessert

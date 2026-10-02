@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bing-tang-hu-lu.jpg
+coverAlt: 冰糖葫芦装盘后的插画
 title: 冰糖葫芦
 cuisine: chinese
 course: dessert

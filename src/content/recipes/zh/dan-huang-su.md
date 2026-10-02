@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/dan-huang-su.jpg
+coverAlt: 蛋黄酥装盘后的插画
 title: 蛋黄酥
 cuisine: chinese
 course: dessert

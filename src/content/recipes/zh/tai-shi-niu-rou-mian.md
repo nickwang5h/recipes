@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tai-shi-niu-rou-mian.jpg
+coverAlt: 台式红烧牛肉面装盘后的插画
 title: 台式红烧牛肉面
 cuisine: chinese
 course: staple

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/xin-jiang-shou-zhua-fan.jpg
+coverAlt: 新疆手抓饭装盘后的插画
 title: 新疆手抓饭
 cuisine: chinese
 course: staple

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hong-zao-jiang-cha.jpg
+coverAlt: 红枣姜茶装盘后的插画
 title: 红枣姜茶
 cuisine: chinese
 course: drink

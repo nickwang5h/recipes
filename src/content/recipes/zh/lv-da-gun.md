@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/lv-da-gun.jpg
+coverAlt: 驴打滚装盘后的插画
 title: 驴打滚
 cuisine: chinese
 course: dessert

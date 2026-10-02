@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hei-zhi-ma-hu.jpg
+coverAlt: 黑芝麻糊装盘后的插画
 title: 黑芝麻糊
 cuisine: chinese
 course: dessert
