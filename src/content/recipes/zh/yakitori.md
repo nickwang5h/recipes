@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yakitori.jpg
+coverAlt: 日式烤鸡串装盘后的插画
 title: 日式烤鸡串
 original: 焼き鳥
 cuisine: japanese

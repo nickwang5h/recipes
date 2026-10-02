@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/bibim-guksu.jpg
+coverAlt: 辣拌面装盘后的插画
 title: 辣拌面
 original: 비빔국수
 cuisine: korean

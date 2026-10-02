@@ -6,7 +6,7 @@ cuisine: chinese
 course: staple
 summary: 肉丝、鸡蛋与河粉分开受热，最后合炒；沥干配菜、轻手翻拌，河粉才软韧完整。
 servings: 1
-time: { prep: 20, cook: 10 }
+time: { prep: 20, cook: 20 }
 principles: [heat-transfer, starch-gelatinization, salt]
 ingredients:
   - group: 主料与配菜

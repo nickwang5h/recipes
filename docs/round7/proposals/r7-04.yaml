@@ -1,0 +1,2 @@
+- { id: chinese-salted-fish, zh: 中式咸鱼, aliases: [咸鱼, 梅香咸鱼, 广式咸鱼, Mui Heong salted fish], en: Chinese salted fish / Mui Heong salted fish, kind: seafood, where: asian, pantry: false, substitutes: [] }
+- { id: scallop, zh: 扇贝, aliases: [扇贝肉, 鲜扇贝, 海扇贝, 半壳扇贝], en: Sea scallops (raw) / Half-shell scallops, kind: seafood, where: mainstream, pantry: false, substitutes: [] }

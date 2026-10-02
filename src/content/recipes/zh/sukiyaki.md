@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/sukiyaki.jpg
+coverAlt: 寿喜烧装盘后的插画
 title: 寿喜烧
 original: すき焼き
 cuisine: japanese

@@ -1,0 +1,2 @@
+- { id: banana, zh: 香蕉, aliases: [熟香蕉, 短香蕉, 亚洲香蕉, Chuối], en: Bananas / Asian bananas, kind: fruit, where: mainstream, pantry: false, substitutes: [] }
+- { id: small-tapioca-pearls, zh: 小粒木薯西米, aliases: [小西米, 小粒西米, 木薯西米, Bột báng], en: Small tapioca pearls, kind: grain, where: asian, pantry: true, substitutes: [] }

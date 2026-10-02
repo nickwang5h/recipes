@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/khao-kha-moo.jpg
+coverAlt: 泰式猪脚饭装盘后的插画
 title: 泰式猪脚饭
 original: ข้าวขาหมู
 cuisine: thai

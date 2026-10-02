@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/kor-moo-yang.jpg
+coverAlt: 泰式烤猪颈肉装盘后的插画
 title: 泰式烤猪颈肉
 original: คอหมูย่าง
 cuisine: thai

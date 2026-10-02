@@ -7,7 +7,7 @@ cuisine: thai
 course: staple
 summary: 香米冷饭与鸡肉、番茄、芥兰一起炒热，甜黑酱油和鱼露调味，青柠与辣椒鱼露在桌边补酸辣。
 servings: 4
-time: { prep: 15, cook: 15 }
+time: { prep: 15, cook: 20 }
 principles: [starch-gelatinization, heat-transfer, protein-coagulation]
 ingredients:
   - group: 主料

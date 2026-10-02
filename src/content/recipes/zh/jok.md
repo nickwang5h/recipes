@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/jok.jpg
+coverAlt: 泰式猪肉粥装盘后的插画
 title: 泰式猪肉粥
 original: โจ๊ก
 cuisine: thai

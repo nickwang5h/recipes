@@ -1,0 +1,1 @@
+- { id: water-buffalo-milk, zh: 水牛奶, aliases: [全脂水牛奶, 巴氏杀菌水牛奶], en: Water Buffalo Whole Milk (pasteurized), kind: egg-dairy, where: specialty, pantry: false, substitutes: [whole-milk] }

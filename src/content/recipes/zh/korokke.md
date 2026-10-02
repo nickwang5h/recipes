@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/korokke.jpg
+coverAlt: 可乐饼装盘后的插画
 title: 可乐饼
 original: コロッケ
 cuisine: japanese

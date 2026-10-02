@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/budae-jjigae.jpg
+coverAlt: 部队锅装盘后的插画
 title: 部队锅
 original: 부대찌개
 cuisine: korean

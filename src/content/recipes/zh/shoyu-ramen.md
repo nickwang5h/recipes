@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/shoyu-ramen.jpg
+coverAlt: 酱油拉面装盘后的插画
 title: 酱油拉面
 original: 醤油ラーメン
 cuisine: japanese
@@ -10,7 +12,7 @@ principles: [umami, collagen-gelatin, protein-coagulation, salt]
 ingredients:
   - group: 无盐汤底
     items:
-      - { ref: pork-leg-bones, qty: 600, unit: g, note: T&T、H Mart 肉柜或肉店买猪腿骨、关节骨，请店员锯开 }
+      - { ref: pork-bones, name: 猪腿骨, qty: 600, unit: g, note: T&T、H Mart 肉柜或肉店买猪腿骨、关节骨，请店员锯开 }
       - { ref: pork-belly, qty: 900, unit: g, note: 去皮，切两条约 4 × 5 × 25 cm 的长块，煮汤后转入酱油汁 }
       - { ref: water, qty: 11400, unit: ml, note: 全批熬汤总用水；先加 9500 ml，其余分两次加入 }
       - { ref: onion, qty: 0.5, unit: 个, note: 大洋葱，去根，保留干净外皮 }

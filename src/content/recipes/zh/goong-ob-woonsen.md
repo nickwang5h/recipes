@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/goong-ob-woonsen.jpg
+coverAlt: 砂锅虾粉丝装盘后的插画
 title: 砂锅虾粉丝
 original: กุ้งอบวุ้นเส้น
 cuisine: thai

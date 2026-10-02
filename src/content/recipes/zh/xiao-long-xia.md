@@ -13,7 +13,7 @@ ingredients:
     items:
       - { ref: crayfish, qty: 1000, unit: g, note: 鲜活小龙虾，或按标签妥善解冻的生冻品 }
       - { ref: vegetable-oil, qty: 70, unit: ml }
-      - { ref: bay-leaf, name: 香叶, qty: 2, unit: 个, note: 整片 }
+      - { ref: bay-leaf, name: 香叶, qty: 2, unit: 片 }
       - { ref: star-anise, qty: 1, unit: 个 }
       - { ref: cassia, qty: 3, unit: g }
       - { ref: green-sichuan-pepper, qty: 10, unit: g, note: 没有可用普通花椒，清香不同 }

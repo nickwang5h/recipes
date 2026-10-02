@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/samgyetang.jpg
+coverAlt: 参鸡汤装盘后的插画
 title: 参鸡汤
 original: 삼계탕
 cuisine: korean
@@ -10,7 +12,7 @@ principles: [collagen-gelatin, starch-gelatinization, aromatics]
 ingredients:
   - group: 鸡与填料
     items:
-      - { ref: whole-chicken, name: 小整鸡, qty: 1, unit: 只, note: 约 700 g，选 Cornish hen 或相近大小的幼鸡，去内脏 }
+      - { ref: whole-chicken, name: 小整鸡, qty: 1, unit: 个, note: 约 700 g，选 Cornish hen 或相近大小的幼鸡，去内脏 }
       - { ref: glutinous-rice, qty: 40, unit: g, note: 干重，短粒糯米 }
       - { ref: fresh-korean-ginseng, qty: 1, unit: 根, note: 主流超市少见，向 H Mart 或韩国食材店询购鲜水参（susam） }
       - { ref: garlic, qty: 6, unit: 瓣, note: 去皮，2 瓣放腹腔，4 瓣入汤 }

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yakisoba.jpg
+coverAlt: 日式炒面装盘后的插画
 title: 日式炒面
 original: 焼きそば
 cuisine: japanese

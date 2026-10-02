@@ -1,0 +1,2 @@
+- { id: zha-cai, zh: 榨菜, aliases: [榨菜丝, 榨菜头, 四川榨菜], en: Preserved mustard stem (Zha Cai), kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: beef-tripe, zh: 牛肚, aliases: [蜂窝牛肚, 金钱肚], en: Beef tripe (honeycomb tripe), kind: meat, where: asian, pantry: false, substitutes: [] }

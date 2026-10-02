@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/pla-neung-manao.jpg
+coverAlt: 青柠蒸鱼装盘后的插画
 title: 青柠蒸鱼
 original: ปลานึ่งมะนาว
 cuisine: thai

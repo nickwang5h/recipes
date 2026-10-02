@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/suon-ram-man.jpg
+coverAlt: 焦糖排骨装盘后的插画
 title: 焦糖排骨
 original: Sườn ram mặn
 cuisine: vietnamese

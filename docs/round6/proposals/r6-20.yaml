@@ -1,0 +1,2 @@
+- { id: sweet-red-bean-paste, zh: 甜红豆馅, aliases: [日式红豆馅, 红豆沙, Anko, Tsubuan, Koshian, 粒あん, こしあん], en: Sweet red bean paste (anko / tsubuan / koshian), kind: other, where: asian, pantry: true, substitutes: [] }
+- { id: yuzu-juice, zh: 日本柚子汁, aliases: [Yuzu juice, 无盐柚子汁, ゆず果汁], en: "100% pure yuzu juice (unsalted, unsweetened)", kind: seasoning, where: specialty, pantry: true, substitutes: [lemon] }

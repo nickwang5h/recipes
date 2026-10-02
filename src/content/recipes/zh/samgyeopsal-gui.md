@@ -19,7 +19,7 @@ ingredients:
   - group: 包肉
     items:
       - { ref: lettuce, qty: 24, unit: 片, note: 选叶片柔软的 green leaf 或 red leaf lettuce，洗净擦干 }
-      - { ref: korean-perilla-leaf, qty: 24, unit: 片, optional: true, note: 在 H Mart 买鲜 kkaennip；没有可只用生菜 }
+      - { ref: perilla-leaf, name: 韩式苏子叶, qty: 24, unit: 片, optional: true, note: 在 H Mart 买鲜 kkaennip；没有可只用生菜 }
       - { ref: ssamjang, qty: 4, unit: 汤匙, note: 可按本站包饭酱配方调制，或在 H Mart、T&T 买标有 Ssamjang 的成品 }
 sources:
   - title: "Grilled pork belly BBQ（Samgyeopsal-gui）"

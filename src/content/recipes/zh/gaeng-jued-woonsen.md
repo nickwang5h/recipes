@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gaeng-jued-woonsen.jpg
+coverAlt: 粉丝豆腐清汤装盘后的插画
 title: 粉丝豆腐清汤
 original: แกงจืดวุ้นเส้น
 cuisine: thai

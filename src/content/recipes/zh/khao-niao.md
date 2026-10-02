@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/khao-niao.jpg
+coverAlt: 泰式糯米饭装盘后的插画
 title: 泰式糯米饭
 original: ข้าวเหนียว
 cuisine: thai

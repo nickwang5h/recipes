@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cha-ca-la-vong.jpg
+coverAlt: 河内姜黄莳萝鱼装盘后的插画
 title: 河内姜黄莳萝鱼
 original: Chả cá Lã Vọng
 cuisine: vietnamese

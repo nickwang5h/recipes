@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tempura.jpg
+coverAlt: 天妇罗装盘后的插画
 title: 天妇罗
 original: 天ぷら
 cuisine: japanese

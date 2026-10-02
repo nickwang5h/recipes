@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/nam-tok-neua.jpg
+coverAlt: 泰式烤牛肉沙拉装盘后的插画
 title: 泰式烤牛肉沙拉
 original: น้ำตกเนื้อ
 cuisine: thai

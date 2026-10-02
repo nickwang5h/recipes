@@ -4,7 +4,7 @@ coverAlt: 越南春卷（米纸卷）装盘后的插画
 title: 越南春卷（米纸卷）
 original: Gỏi cuốn
 cuisine: vietnamese
-course: veg
+course: seafood
 summary: 薄米纸包住熟虾、猪肉、细米线和鲜香草，轻蘸水后边放边软，卷紧而不挤破。
 servings: 6
 time: { prep: 40, cook: 25 }

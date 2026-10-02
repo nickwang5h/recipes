@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/kimchi-jeon.jpg
+coverAlt: 泡菜饼装盘后的插画
 title: 泡菜饼
 original: 김치전
 cuisine: korean

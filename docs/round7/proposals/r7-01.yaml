@@ -1,0 +1,3 @@
+- { id: wheat-starch, zh: 澄粉, aliases: [澄面, 小麦淀粉, Wheat starch], en: Wheat starch, kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: unsweetened-soy-milk, zh: 无糖豆浆, aliases: [无糖熟豆浆, Unsweetened soy milk], en: Unsweetened soy milk, kind: soy, where: asian, pantry: false, substitutes: [] }
+- { id: food-grade-gypsum, zh: 食用石膏粉, aliases: [食用硫酸钙, 豆腐石膏粉, Gypsum powder], en: Food-grade gypsum powder / Calcium sulfate, kind: seasoning, where: specialty, pantry: true, substitutes: [] }

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/kitsune-udon.jpg
+coverAlt: 油豆腐乌冬面装盘后的插画
 title: 油豆腐乌冬面
 original: きつねうどん
 cuisine: japanese

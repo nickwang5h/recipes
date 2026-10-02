@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/yaki-gyoza.jpg
+coverAlt: 日式煎饺装盘后的插画
 title: 日式煎饺
 original: 焼き餃子
 cuisine: japanese
@@ -23,7 +25,7 @@ ingredients:
       - { ref: black-pepper, note: 适量 }
   - group: 饺子皮与煎蒸
     items:
-      - { ref: gyoza-wrapper, qty: 52, unit: 片, note: 亚洲超市冷藏或冷冻区找 Gyoza wrappers，选直径约 8 cm 的薄圆皮 }
+      - { ref: dumpling-wrapper, name: 日式饺子皮, qty: 52, unit: 片, note: 亚洲超市冷藏或冷冻区找 Gyoza wrappers，选直径约 8 cm 的薄圆皮 }
       - { ref: water, qty: 30, unit: ml, note: 湿润饺子皮边缘用 }
       - { ref: vegetable-oil, qty: 3, unit: 汤匙, note: 分 3 批煎，每批 1 汤匙 }
       - { ref: sesame-oil, qty: 3, unit: 茶匙, note: 收干后每批淋 1 茶匙 }

@@ -6,7 +6,7 @@ cuisine: chinese
 course: staple
 summary: 煮熟的米饭先散去表面水分，再与鸡蛋快炒。米粒能分开，靠的是饭的状态、锅温和下锅的量。
 servings: 2
-time: { prep: 5, cook: 10 }
+time: { prep: 20, cook: 10 }
 principles: [starch-gelatinization, oil-temperature]
 ingredients:
   - group: 主料

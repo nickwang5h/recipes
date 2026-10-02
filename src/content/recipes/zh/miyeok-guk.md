@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/miyeok-guk.jpg
+coverAlt: 海带汤装盘后的插画
 title: 海带汤
 original: 미역국
 cuisine: korean

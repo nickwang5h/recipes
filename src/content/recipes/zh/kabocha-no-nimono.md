@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/kabocha-no-nimono.jpg
+coverAlt: 煮南瓜装盘后的插画
 title: 煮南瓜
 original: かぼちゃの煮物
 cuisine: japanese

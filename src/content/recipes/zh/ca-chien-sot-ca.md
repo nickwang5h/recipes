@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ca-chien-sot-ca.jpg
+coverAlt: 番茄汁煎鱼装盘后的插画
 title: 番茄汁煎鱼
 original: Cá chiên sốt cà
 cuisine: vietnamese

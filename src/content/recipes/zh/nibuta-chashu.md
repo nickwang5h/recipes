@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/nibuta-chashu.jpg
+coverAlt: 日式叉烧装盘后的插画
 title: 日式叉烧
 original: チャーシュー
 cuisine: japanese

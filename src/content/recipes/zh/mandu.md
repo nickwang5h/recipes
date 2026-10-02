@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/mandu.jpg
+coverAlt: 韩式饺子装盘后的插画
 title: 韩式饺子
 original: 만두
 cuisine: korean

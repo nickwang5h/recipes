@@ -1,0 +1,3 @@
+- { id: fresh-hawthorn, zh: 鲜山楂, aliases: [山楂, 红果, 新鲜山楂], en: Fresh Chinese hawthorn berries, kind: fruit, where: specialty, pantry: false, substitutes: [] }
+- { id: roasted-soybean-flour, zh: 熟黄豆粉, aliases: [熟豆面, 炒熟黄豆面, 烘焙黄豆粉, Kinako], en: Roasted soybean powder / Kinako (unsweetened), kind: grain, where: asian, pantry: true, substitutes: [] }
+- { id: salted-duck-egg-yolk, zh: 咸鸭蛋黄, aliases: [咸蛋黄, 熟咸鸭蛋黄], en: Salted duck egg yolks, kind: egg-dairy, where: asian, pantry: false, substitutes: [] }

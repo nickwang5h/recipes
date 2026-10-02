@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/hambagu.jpg
+coverAlt: 日式汉堡肉排装盘后的插画
 title: 日式汉堡肉排
 original: ハンバーグ
 cuisine: japanese

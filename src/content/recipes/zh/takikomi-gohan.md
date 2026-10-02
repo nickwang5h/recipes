@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/takikomi-gohan.jpg
+coverAlt: 什锦炊饭装盘后的插画
 title: 什锦炊饭
 original: 炊き込みご飯
 cuisine: japanese

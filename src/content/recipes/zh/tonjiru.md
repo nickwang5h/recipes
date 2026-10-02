@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tonjiru.jpg
+coverAlt: 猪肉味噌汤装盘后的插画
 title: 猪肉味噌汤
 original: 豚汁
 cuisine: japanese

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/kalguksu.jpg
+coverAlt: 刀切面装盘后的插画
 title: 刀切面
 original: 칼국수
 cuisine: korean

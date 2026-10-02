@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/gai-tod-hat-yai.jpg
+coverAlt: 合艾炸鸡装盘后的插画
 title: 合艾炸鸡
 original: ไก่ทอดหาดใหญ่
 cuisine: thai

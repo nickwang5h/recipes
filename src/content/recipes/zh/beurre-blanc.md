@@ -19,7 +19,7 @@ ingredients:
   - group: 乳化
     items:
       - { ref: unsalted-butter, qty: 200, unit: g, note: 冷藏，切成 2 cm 小块 }
-      - { ref: whipping-cream, qty: 1, unit: 汤匙, note: 可选，让酱更耐温 }
+      - { ref: whipping-cream, qty: 1, unit: 汤匙, optional: true, note: 让酱更耐温 }
   - group: 调味
     items:
       - { ref: salt, note: 适量 }

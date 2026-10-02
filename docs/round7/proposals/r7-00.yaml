@@ -1,0 +1,4 @@
+- { id: mung-bean-flour, zh: 绿豆面, aliases: [绿豆粉, 绿豆面粉, 整豆绿豆粉, Mung bean flour, Moong flour], en: Mung bean flour / Moong flour (not starch), kind: grain, where: specialty, pantry: true, substitutes: [] }
+- { id: youtiao, zh: 油条, aliases: [炸油条, 油炸鬼, Chinese doughnut sticks, Chinese crullers], en: Chinese dough sticks / Chinese donuts (youtiao), kind: grain, where: asian, pantry: false, substitutes: [] }
+- { id: instant-yeast, zh: 即发干酵母, aliases: [即溶干酵母, 速发干酵母, Instant yeast, Quick-rise yeast], en: Instant yeast / Quick-rise instant yeast, kind: seasoning, where: mainstream, pantry: true, substitutes: [active-dry-yeast] }
+- { id: pork-neck-bones, zh: 猪颈骨, aliases: [带肉猪颈骨, 猪脖骨, 猪颈骨头], en: Pork neck bones, kind: meat, where: asian, pantry: false, substitutes: [pork-leg-bones] }

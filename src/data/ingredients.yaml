@@ -523,3 +523,91 @@
 - { id: turmeric, zh: 姜黄粉, aliases: [姜黄], en: Ground turmeric, kind: seasoning, where: mainstream, pantry: true }
 - { id: coriander-seed, zh: 芫荽籽, aliases: [芫荽籽粉, 香菜籽], en: Coriander seed / ground coriander, kind: seasoning, where: mainstream, pantry: true }
 - { id: veal-shoulder, zh: 小牛肩肉, en: Veal shoulder / veal stewing meat, kind: meat, where: mainstream, substitutes: [beef-chuck] }
+
+# 第六、七轮新增（2026-10-02）
+- { id: mackerel, zh: 青花鱼, aliases: [鲭鱼, 鯖, Saba, 生青花鱼], en: Fresh or frozen mackerel (unsalted), kind: seafood, where: asian, pantry: false, substitutes: [] }
+- { id: korean-radish, zh: 韩国萝卜, aliases: [韩式萝卜, 韩国白萝卜, 무, Mu], en: Korean radish (mu), kind: vegetable, where: asian, pantry: false, substitutes: [daikon] }
+- { id: ssamjang, zh: 包饭酱, aliases: [韩式包饭酱, 쌈장, Ssamjang], en: Ssamjang (seasoned soybean paste / Korean BBQ dipping sauce), kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: mam-ruoc, zh: 顺化发酵虾酱, aliases: [mắm ruốc, Mam Ruoc Hue, 顺化虾酱], en: Salted shrimp paste (Mam Ruoc Hue), kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: mam-tom, zh: 越南发酵虾酱, aliases: [mắm tôm, Mam Tom, Fine Shrimp Sauce], en: Fine shrimp sauce (Mam Tom), kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: rice-field-crab, zh: 田蟹, aliases: [稻田蟹, 越南田蟹, cua đồng, Cua dong], en: Rice field crab (cua dong), kind: seafood, where: specialty, pantry: false, substitutes: [] }
+- { id: giam-bong, zh: 越南酒糟醋, aliases: [giấm bỗng, dấm bỗng, Giam bong], en: Vietnamese fermented rice vinegar (giam bong), kind: seasoning, where: specialty, pantry: true, substitutes: [rice-vinegar] }
+- { id: yellow-curry-paste, zh: 泰式黄咖喱酱, aliases: [黄咖喱膏, Karee curry paste, Gaeng garee curry paste], en: Thai yellow curry paste / Karee curry paste, kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: thai-black-soy-sauce, zh: 泰式黑酱油, aliases: [Thai black soy sauce, See ew dam], en: Thai black soy sauce, kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: thai-chili-paste, zh: 泰式烤辣椒膏, aliases: [Nam prik pao, 泰式辣椒膏, 泰式辣椒油膏], en: Thai chili paste / Roasted chili paste (Nam Prik Pao), kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: cashew, zh: 腰果, aliases: [腰果仁, 无盐腰果, 生腰果], en: Unsalted cashews / Raw cashews, kind: other, where: mainstream, pantry: true, substitutes: [] }
+- { id: pickled-mustard-green, zh: 酸芥菜, aliases: [泰式酸芥菜, 腌芥菜, Pickled mustard greens], en: Thai pickled mustard greens, kind: vegetable, where: asian, pantry: true, substitutes: [] }
+- { id: salmon, zh: 三文鱼, aliases: [鲑鱼, 鮭, Salmon], en: Salmon fillets (skin-on), kind: seafood, where: mainstream, pantry: false, substitutes: [] }
+- { id: burdock-root, zh: 牛蒡, aliases: [牛蒡根, ごぼう, Gobo], en: Burdock root / Gobo, kind: vegetable, where: asian, pantry: false, substitutes: [] }
+- { id: sweet-potato, zh: 红薯, aliases: [地瓜, 番薯, 甘薯, 고구마, goguma], en: Sweet potato, kind: vegetable, where: mainstream, pantry: false, substitutes: [] }
+- { id: perilla-leaf, zh: 苏子叶, aliases: [韩式苏子叶, 韩式紫苏叶, 깻잎, kkaennip], en: Perilla leaves (Kkaennip), kind: aromatic, where: asian, pantry: false, substitutes: [] }
+- { id: korean-curry-powder, zh: 韩式咖喱调味粉, aliases: [韩式咖喱粉, 카레가루], en: Korean curry powder (Ottogi Curry), kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: rice-syrup, zh: 韩式米糖浆, aliases: [米糖浆, 쌀엿, ssal-yeot], en: Korean rice syrup, kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: saeujeot, zh: 韩式盐渍小虾, aliases: [盐渍小虾, 새우젓, saeujeot], en: Salted fermented shrimp (Saeujeot), kind: seasoning, where: asian, pantry: false, substitutes: [] }
+- { id: broken-rice, zh: 碎米, aliases: [越南碎米, 碎香米, Cơm tấm, Gạo tấm], en: Broken jasmine rice / broken rice, kind: grain, where: asian, pantry: true, substitutes: [jasmine-rice] }
+- { id: vietnamese-coriander, zh: 越南香菜, aliases: [越南芫荽, 叻沙叶, Rau răm, Rau ram, Vietnamese mint], en: Vietnamese coriander / rau ram / laksa leaves, kind: aromatic, where: asian, pantry: false, substitutes: [cilantro] }
+- { id: pork-jowl, zh: 未腌制猪颈肉, aliases: [猪颈肉, 猪颊肉, Pork jowl], en: Pork jowl (fresh and unsmoked), kind: meat, where: asian, pantry: false, substitutes: [pork-shoulder] }
+- { id: yakisoba-noodle, zh: 日式熟炒面, aliases: [日式炒面面条, 蒸熟中华面, 焼きそば麺], en: Yakisoba noodles (pre-steamed), kind: grain, where: asian, pantry: false, substitutes: [alkaline-noodle] }
+- { id: worcestershire-sauce, zh: 伍斯特酱, aliases: [喼汁, 伍斯特沙司, Worcestershire sauce], en: Worcestershire Sauce, kind: seasoning, where: mainstream, pantry: true, substitutes: [] }
+- { id: aburaage, zh: 日式薄片油豆腐, aliases: [油揚げ, 日式炸豆腐袋, 无调味油豆腐皮], en: Aburaage / deep-fried tofu pouches (unseasoned), kind: soy, where: specialty, pantry: false, substitutes: [] }
+- { id: udon, zh: 乌冬面, aliases: [讃岐乌冬, うどん, 乌冬], en: Udon noodles, kind: grain, where: asian, pantry: false, substitutes: [] }
+- { id: fresh-korean-ginseng, zh: 鲜人参, aliases: [鲜水参, 韩国水参, 수삼, susam], en: Fresh Korean ginseng root (susam), kind: vegetable, where: asian, pantry: false, substitutes: [] }
+- { id: korean-soup-soy-sauce, zh: 韩式汤酱油, aliases: [汤用酱油, 国酱油, 국간장, guk-ganjang], en: Korean soup soy sauce (guk-ganjang), kind: seasoning, where: asian, pantry: true, substitutes: [light-soy-sauce] }
+- { id: hot-dog, zh: 热狗肠, aliases: [法兰克福肠, Frankfurter], en: Fully cooked hot dogs / frankfurters, kind: meat, where: mainstream, pantry: false, substitutes: [] }
+- { id: tilapia, zh: 罗非鱼, aliases: [整条罗非鱼, Tilapia], en: Whole tilapia, kind: seafood, where: mainstream, pantry: false, substitutes: [sea-bass] }
+- { id: thai-tamarind-paste, zh: 泰式罗望子汁, aliases: [泰式罗望子酱, Thai tamarind paste, 泰式酸角汁], en: Thai tamarind paste / Concentrate cooking tamarind, kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: chicken-fat, zh: 熟炼鸡油, aliases: [鸡油, 鸡脂, Schmaltz], en: Rendered chicken fat / Schmaltz (plain), kind: seasoning, where: specialty, pantry: false, substitutes: [] }
+- { id: menma, zh: 日式调味笋干, aliases: [メンマ, 面麻, Menma], en: Menma / seasoned bamboo shoots, kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: shungiku, zh: 茼蒿, aliases: [春菊, Shungiku, Chrysanthemum greens], en: Chrysanthemum greens / Tong ho / Shungiku, kind: vegetable, where: asian, pantry: false, substitutes: [spinach] }
+- { id: shirataki, zh: 蒟蒻丝, aliases: [白滝, Shirataki, 魔芋丝, 蒟蒻面], en: Shirataki noodles / Konjac noodles (plain), kind: grain, where: mainstream, pantry: false, substitutes: [] }
+- { id: konnyaku, zh: 蒟蒻块, aliases: [こんにゃく, Konnyaku, 魔芋块], en: Konnyaku / Konjac yam cake (plain block), kind: other, where: asian, pantry: false, substitutes: [] }
+- { id: oden-fish-cakes, zh: 关东煮鱼糕组合, aliases: [关东煮料包, 日式鱼糕, Oden set, 竹轮, 萨摩扬], en: Oden set / Assorted Japanese fish cakes (chikuwa and satsuma-age), kind: seafood, where: asian, pantry: false, substitutes: [] }
+- { id: atsuage, zh: 日式厚油豆腐, aliases: [厚揚げ, 厚扬, Atsuage], en: Atsuage / Deep-fried firm tofu, kind: soy, where: asian, pantry: false, substitutes: [] }
+- { id: karashi-powder, zh: 日式黄芥末粉, aliases: [和芥子, 辛子粉, Karashi], en: Japanese hot mustard powder / Karashi powder, kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: danmuji, zh: 韩式腌萝卜, aliases: [黄腌萝卜, 紫菜包饭萝卜, 단무지, Danmuji], en: Pickled radish for kimbap (Danmuji), kind: vegetable, where: asian, pantry: false, substitutes: [] }
+- { id: chunjang, zh: 韩式春酱, aliases: [韩式黑豆酱, 炸酱面酱, 춘장, Chunjang], en: Korean black bean paste (Chunjang), kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: dill, zh: 鲜莳萝, aliases: [莳萝, 莳萝叶, Dill, Thì là], en: Fresh dill, kind: aromatic, where: mainstream, pantry: false, substitutes: [] }
+- { id: vietnamese-fermented-rice, zh: 越南酸发酵米, aliases: [酸米糟, Mẻ, Cơm mẻ, Com me], en: Vietnamese fermented rice (Me / Com me), kind: seasoning, where: specialty, pantry: false, substitutes: [] }
+- { id: pork-stock, zh: 猪骨高汤, aliases: [猪骨汤, 猪肉高汤, 清淡猪骨汤], en: Pork stock / Pork broth, kind: seasoning, where: specialty, pantry: false, substitutes: [chicken-stock] }
+- { id: tapioca-starch, zh: 木薯淀粉, aliases: [木薯粉, Tapioca starch, Tapioca flour], en: Tapioca starch / Tapioca flour, kind: seasoning, where: mainstream, pantry: true, substitutes: [cornstarch] }
+- { id: thai-fermented-soybean-paste, zh: 泰式黄豆酱, aliases: [泰式发酵黄豆酱, Tao jiew, Tao jeow, เต้าเจี้ยว], en: Thai Soy Bean Paste / Yellow Bean Sauce (Tao Jiew), kind: seasoning, where: asian, pantry: true, substitutes: [miso] }
+- { id: golden-mountain-sauce, zh: 金山调味酱, aliases: [金山酱, Golden Mountain Sauce], en: Golden Mountain Seasoning Sauce, kind: seasoning, where: asian, pantry: true, substitutes: [light-soy-sauce] }
+- { id: dumpling-wrapper, zh: 圆形饺子皮, aliases: [日式饺子皮, Gyoza wrappers, 饺子皮, 韩式饺子皮, 만두피, Mandu pi, Mandu skins], en: Dumpling wrappers / Mandu skins, kind: grain, where: asian, pantry: false, substitutes: [] }
+- { id: thai-shrimp-paste, zh: 泰式发酵虾酱, aliases: [泰国虾酱, Gapi, Kapi, กะปิ], en: Thai shrimp paste / Shrimp paste (Gapi), kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: sweet-red-bean-paste, zh: 甜红豆馅, aliases: [日式红豆馅, 红豆沙, Anko, Tsubuan, Koshian, 粒あん, こしあん], en: Sweet red bean paste (anko / tsubuan / koshian), kind: other, where: asian, pantry: true, substitutes: [] }
+- { id: yuzu-juice, zh: 日本柚子汁, aliases: [Yuzu juice, 无盐柚子汁, ゆず果汁], en: "100% pure yuzu juice (unsalted, unsweetened)", kind: seasoning, where: specialty, pantry: true, substitutes: [lemon] }
+- { id: banana, zh: 香蕉, aliases: [熟香蕉, 短香蕉, 亚洲香蕉, Chuối], en: Bananas / Asian bananas, kind: fruit, where: mainstream, pantry: false, substitutes: [] }
+- { id: small-tapioca-pearls, zh: 小粒木薯西米, aliases: [小西米, 小粒西米, 木薯西米, Bột báng], en: Small tapioca pearls, kind: grain, where: asian, pantry: true, substitutes: [] }
+- { id: water-chestnut, zh: 荸荠, aliases: [马蹄, 水栗, 清水浸荸荠罐头], en: Whole water chestnuts in water, kind: vegetable, where: mainstream, pantry: true, substitutes: [] }
+- { id: pandan-leaf, zh: 斑兰叶, aliases: [香兰叶, 班兰叶, Pandan leaves, Screwpine leaves], en: Frozen pandan leaves / Screwpine leaves, kind: aromatic, where: asian, pantry: false, substitutes: [] }
+- { id: burro-banana, zh: 短胖香蕉, aliases: [Burro 香蕉, Burro banana], en: Burro bananas, kind: fruit, where: specialty, pantry: false, substitutes: [] }
+- { id: thai-tea-mix, zh: 泰式茶叶, aliases: [泰式红茶, 泰国茶叶, 手标泰茶, Thai tea mix], en: Thai Tea Mix (ChaTraMue loose tea), kind: dried, where: asian, pantry: true, substitutes: [] }
+- { id: red-food-colouring, zh: 红色食用色素, aliases: [液体红色食用色素, Red food colouring], en: Red liquid food colour, kind: seasoning, where: mainstream, pantry: true, substitutes: [] }
+- { id: sweetened-condensed-milk, zh: 炼乳, aliases: [甜炼乳, 加糖炼乳, Sweetened condensed milk], en: Sweetened condensed milk, kind: egg-dairy, where: mainstream, pantry: true, substitutes: [] }
+- { id: evaporated-milk, zh: 淡奶, aliases: [蒸发奶, 无糖淡奶, Evaporated milk], en: Evaporated milk (whole), kind: egg-dairy, where: mainstream, pantry: true, substitutes: [] }
+- { id: ground-cinnamon, zh: 肉桂粉, aliases: [桂皮粉, Cinnamon powder, Ground cinnamon], en: Ground cinnamon, kind: seasoning, where: mainstream, pantry: true, substitutes: [] }
+- { id: mung-bean-flour, zh: 绿豆面, aliases: [绿豆粉, 绿豆面粉, 整豆绿豆粉, Mung bean flour, Moong flour], en: Mung bean flour / Moong flour (not starch), kind: grain, where: specialty, pantry: true, substitutes: [] }
+- { id: youtiao, zh: 油条, aliases: [炸油条, 油炸鬼, Chinese doughnut sticks, Chinese crullers], en: Chinese dough sticks / Chinese donuts (youtiao), kind: grain, where: asian, pantry: false, substitutes: [] }
+- { id: instant-yeast, zh: 即发干酵母, aliases: [即溶干酵母, 速发干酵母, Instant yeast, Quick-rise yeast], en: Instant yeast / Quick-rise instant yeast, kind: seasoning, where: mainstream, pantry: true, substitutes: [active-dry-yeast] }
+- { id: wheat-starch, zh: 澄粉, aliases: [澄面, 小麦淀粉, Wheat starch], en: Wheat starch, kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: unsweetened-soy-milk, zh: 无糖豆浆, aliases: [无糖熟豆浆, Unsweetened soy milk], en: Unsweetened soy milk, kind: soy, where: asian, pantry: false, substitutes: [] }
+- { id: food-grade-gypsum, zh: 食用石膏粉, aliases: [食用硫酸钙, 豆腐石膏粉, Gypsum powder], en: Food-grade gypsum powder / Calcium sulfate, kind: seasoning, where: specialty, pantry: true, substitutes: [] }
+- { id: chicken-bones, zh: 鸡骨架, aliases: [鸡架, 生鸡架, 鸡骨], en: Chicken carcass / chicken bones, kind: poultry, where: asian, pantry: false, substitutes: [] }
+- { id: oyster-mushroom, zh: 平菇, aliases: [蚝菇, 鲜平菇, Oyster mushrooms], en: Fresh oyster mushrooms, kind: mushroom, where: mainstream, pantry: false, substitutes: [] }
+- { id: chinese-salted-fish, zh: 中式咸鱼, aliases: [咸鱼, 梅香咸鱼, 广式咸鱼, Mui Heong salted fish], en: Chinese salted fish / Mui Heong salted fish, kind: seafood, where: asian, pantry: false, substitutes: [] }
+- { id: scallop, zh: 扇贝, aliases: [扇贝肉, 鲜扇贝, 海扇贝, 半壳扇贝], en: Sea scallops (raw) / Half-shell scallops, kind: seafood, where: mainstream, pantry: false, substitutes: [] }
+- { id: water-buffalo-milk, zh: 水牛奶, aliases: [全脂水牛奶, 巴氏杀菌水牛奶], en: Water Buffalo Whole Milk (pasteurized), kind: egg-dairy, where: specialty, pantry: false, substitutes: [whole-milk] }
+- { id: ya-cai, zh: 芽菜, aliases: [碎米芽菜, 宜宾芽菜, 宜宾碎米芽菜, Sui Mi Ya Cai], en: Preserved mustard leaves (Sui Mi Ya Cai), kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: zha-cai, zh: 榨菜, aliases: [榨菜丝, 榨菜头, 四川榨菜], en: Preserved mustard stem (Zha Cai), kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: beef-tripe, zh: 牛肚, aliases: [蜂窝牛肚, 金钱肚], en: Beef tripe (honeycomb tripe), kind: meat, where: asian, pantry: false, substitutes: [] }
+- { id: pineapple-juice, zh: 菠萝汁, aliases: [无糖菠萝汁, 凤梨汁], en: Unsweetened pineapple juice / 100% pineapple juice, kind: fruit, where: mainstream, pantry: true, substitutes: [] }
+- { id: shepherds-purse, zh: 荠菜, aliases: [冷冻荠菜, 薺菜, Ji cai], en: Frozen shepherd's purse (Ji cai), kind: vegetable, where: asian, pantry: false, substitutes: [bok-choy] }
+- { id: chinese-cured-chicken, zh: 腊鸡, aliases: [湖南腊鸡, 烟熏腊鸡], en: Chinese cured chicken / smoked cured chicken, kind: poultry, where: specialty, pantry: false, substitutes: [] }
+- { id: chinese-cured-fish, zh: 腊鱼, aliases: [湖南腊鱼, 烟熏腊鱼], en: Chinese cured fish / cured silver carp, kind: seafood, where: specialty, pantry: false, substitutes: [] }
+- { id: black-sesame-seed, zh: 黑芝麻, aliases: [黑芝麻粒, 生黑芝麻, 熟黑芝麻, 烤黑芝麻], en: Black sesame seeds / Roasted black sesame seeds (unsweetened), kind: other, where: asian, pantry: true, substitutes: [] }
+- { id: candied-winter-melon, zh: 冬瓜糖, aliases: [糖冬瓜, 糖冬瓜条, 冬瓜蜜饯], en: Candied winter melon strips, kind: dried, where: asian, pantry: true, substitutes: [] }
+- { id: fresh-hawthorn, zh: 鲜山楂, aliases: [山楂, 红果, 新鲜山楂], en: Fresh Chinese hawthorn berries, kind: fruit, where: specialty, pantry: false, substitutes: [] }
+- { id: roasted-soybean-flour, zh: 熟黄豆粉, aliases: [熟豆面, 炒熟黄豆面, 烘焙黄豆粉, Kinako], en: Roasted soybean powder / Kinako (unsweetened), kind: grain, where: asian, pantry: true, substitutes: [] }
+- { id: salted-duck-egg-yolk, zh: 咸鸭蛋黄, aliases: [咸蛋黄, 熟咸鸭蛋黄], en: Salted duck egg yolks, kind: egg-dairy, where: asian, pantry: false, substitutes: [] }
+- { id: black-tapioca-pearls, zh: 快煮黑木薯珍珠, aliases: [黑珍珠, 奶茶珍珠, 黑糖珍珠, 粉圆, 波霸], en: Instant black tapioca pearls (5-minute), kind: grain, where: asian, pantry: true, substitutes: [] }
+- { id: pork-bones, zh: 猪骨, aliases: [猪腿骨, 猪颈骨, 筒骨, 猪大骨], en: Pork bones (neck bones / leg bones), kind: meat, where: asian, pantry: false, substitutes: [] }

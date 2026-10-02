@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/ca-ri-ga.jpg
+coverAlt: 越南咖喱鸡装盘后的插画
 title: 越南咖喱鸡
 original: Cà ri gà
 cuisine: vietnamese

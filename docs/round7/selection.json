@@ -344,14 +344,6 @@
   "component": false
  },
  {
-  "slug": "gan-shao-yu",
-  "name": "干烧鱼",
-  "original": "",
-  "cuisine": "chinese",
-  "course": "seafood",
-  "component": false
- },
- {
   "slug": "dou-ban-yu",
   "name": "豆瓣鱼",
   "original": "",
@@ -392,32 +384,8 @@
   "component": false
  },
  {
-  "slug": "long-jing-xia-ren",
-  "name": "龙井虾仁",
-  "original": "",
-  "cuisine": "chinese",
-  "course": "seafood",
-  "component": false
- },
- {
-  "slug": "xi-hu-cu-yu",
-  "name": "西湖醋鱼",
-  "original": "",
-  "cuisine": "chinese",
-  "course": "seafood",
-  "component": false
- },
- {
   "slug": "you-bao-xia",
   "name": "油爆虾",
-  "original": "",
-  "cuisine": "chinese",
-  "course": "seafood",
-  "component": false
- },
- {
-  "slug": "xie-fen-dou-fu",
-  "name": "蟹粉豆腐",
   "original": "",
   "cuisine": "chinese",
   "course": "seafood",
@@ -528,24 +496,8 @@
   "component": false
  },
  {
-  "slug": "cong-bao-yang-rou",
-  "name": "葱爆羊肉",
-  "original": "",
-  "cuisine": "chinese",
-  "course": "meat",
-  "component": false
- },
- {
   "slug": "xiao-ji-dun-mo-gu",
   "name": "小鸡炖蘑菇",
-  "original": "",
-  "cuisine": "chinese",
-  "course": "meat",
-  "component": false
- },
- {
-  "slug": "liu-rou-duan",
-  "name": "溜肉段",
   "original": "",
   "cuisine": "chinese",
   "course": "meat",

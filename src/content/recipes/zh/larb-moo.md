@@ -7,7 +7,7 @@ cuisine: thai
 course: meat
 summary: 熟猪肉碎拌青柠、鱼露和烘香糯米粉，薄荷与红葱头最后加入，入口酸辣、带米香。
 servings: 2
-time: { prep: 20, cook: 10 }
+time: { prep: 20, cook: 25 }
 principles: [aromatics, acid, protein-coagulation]
 ingredients:
   - group: 肉与烘米粉

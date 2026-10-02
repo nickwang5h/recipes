@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/galbitang.jpg
+coverAlt: 牛排骨汤装盘后的插画
 title: 牛排骨汤
 original: 갈비탕
 cuisine: korean

@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/goi-ga.jpg
+coverAlt: 鸡丝卷心菜沙拉装盘后的插画
 title: 鸡丝卷心菜沙拉
 original: Gỏi gà
 cuisine: vietnamese

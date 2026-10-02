@@ -1,0 +1,7 @@
+- { id: water-chestnut, zh: 荸荠, aliases: [马蹄, 水栗, 清水浸荸荠罐头], en: Whole water chestnuts in water, kind: vegetable, where: mainstream, pantry: true, substitutes: [] }
+- { id: pandan-leaf, zh: 斑兰叶, aliases: [香兰叶, 班兰叶, Pandan leaves, Screwpine leaves], en: Frozen pandan leaves / Screwpine leaves, kind: aromatic, where: asian, pantry: false, substitutes: [] }
+- { id: burro-banana, zh: 短胖香蕉, aliases: [Burro 香蕉, Burro banana], en: Burro bananas, kind: fruit, where: specialty, pantry: false, substitutes: [] }
+- { id: thai-tea-mix, zh: 泰式茶叶, aliases: [泰式红茶, 泰国茶叶, 手标泰茶, Thai tea mix], en: Thai Tea Mix (ChaTraMue loose tea), kind: dried, where: asian, pantry: true, substitutes: [] }
+- { id: red-food-colouring, zh: 红色食用色素, aliases: [液体红色食用色素, Red food colouring], en: Red liquid food colour, kind: seasoning, where: mainstream, pantry: true, substitutes: [] }
+- { id: sweetened-condensed-milk, zh: 炼乳, aliases: [甜炼乳, 加糖炼乳, Sweetened condensed milk], en: Sweetened condensed milk, kind: egg-dairy, where: mainstream, pantry: true, substitutes: [] }
+- { id: evaporated-milk, zh: 淡奶, aliases: [蒸发奶, 无糖淡奶, Evaporated milk], en: Evaporated milk (whole), kind: egg-dairy, where: mainstream, pantry: true, substitutes: [] }

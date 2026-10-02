@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/dakjuk.jpg
+coverAlt: 鸡粥装盘后的插画
 title: 鸡粥
 original: 닭죽
 cuisine: korean

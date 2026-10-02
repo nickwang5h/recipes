@@ -1,0 +1,2 @@
+- { id: chinese-cured-chicken, zh: 腊鸡, aliases: [湖南腊鸡, 烟熏腊鸡], en: Chinese cured chicken / smoked cured chicken, kind: poultry, where: specialty, pantry: false, substitutes: [] }
+- { id: chinese-cured-fish, zh: 腊鱼, aliases: [湖南腊鱼, 烟熏腊鱼], en: Chinese cured fish / cured silver carp, kind: seafood, where: specialty, pantry: false, substitutes: [] }
