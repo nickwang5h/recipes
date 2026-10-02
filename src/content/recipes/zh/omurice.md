@@ -12,20 +12,20 @@ principles: [protein-coagulation, heat-transfer, starch-gelatinization]
 ingredients:
   - group: 鸡肉炒饭
     items:
-      - { ref: short-grain-rice, name: 熟日式米饭, qty: 330, unit: g, note: 熟重，用冷藏保存的米饭，或现煮后短时摊开散汽的米饭 }
-      - { ref: chicken-thigh, qty: 85, unit: g, note: 去骨去皮，切约 1.5 cm 的薄丁 }
-      - { ref: onion, qty: 110, unit: g, note: 切约 3 mm 的细丁 }
-      - { ref: green-pea, name: 熟豌豆, qty: 1, unit: 汤匙, optional: true }
-      - { ref: ketchup, qty: 5, unit: 汤匙 }
-      - { ref: worcestershire-sauce, qty: 1, unit: 茶匙, note: 主流超市调味品区找 Worcestershire Sauce }
+      - { ref: short-grain-rice, name: 熟日式米饭, qty: 495, unit: g, note: 熟重，用冷藏保存的米饭，或现煮后短时摊开散汽的米饭 }
+      - { ref: chicken-thigh, qty: 130, unit: g, note: 去骨去皮，切约 1.5 cm 的薄丁 }
+      - { ref: onion, qty: 170, unit: g, note: 切约 3 mm 的细丁 }
+      - { ref: green-pea, name: 熟豌豆, qty: 1.5, unit: 汤匙, optional: true }
+      - { ref: ketchup, qty: 7.5, unit: 汤匙 }
+      - { ref: worcestershire-sauce, qty: 1.5, unit: 茶匙, note: 主流超市调味品区找 Worcestershire Sauce }
       - { ref: unsalted-butter, qty: 15, unit: g }
-      - { ref: salt, note: 适量 }
+      - { ref: salt, qty: 0.75, unit: 茶匙 }
       - { ref: black-pepper, note: 适量 }
   - group: 蛋皮与装盘
     items:
       - { ref: egg, qty: 6, unit: 个, note: 大号鸡蛋，每份用 2 个 }
       - { ref: unsalted-butter, qty: 45, unit: g, note: 分成三份，每张蛋皮用 15 g }
-      - { ref: salt, note: 适量 }
+      - { ref: salt, qty: 0.75, unit: 茶匙, note: 每张蛋皮用 0.25 茶匙 }
       - { ref: ketchup, qty: 1.5, unit: 汤匙, optional: true, note: 装盘淋在三份蛋包饭上 }
 sources:
   - title: "Omurice (Japanese Omelette Rice)"
@@ -47,9 +47,9 @@ updated: 2026-10-02
 
 1. 洋葱切细丁，鸡肉切薄丁，熟饭用饭勺轻轻拨松。若用现煮米饭，摊在盘上散汽 5 分钟，到表面不再水亮、仍温热；冷藏饭直接留待入锅炒热。
 2. 大平底锅中火融化 15 g 黄油约 1 分钟，到泡沫细密而没有褐色。加洋葱炒 3–4 分钟，到细丁软透、边缘透明。
-3. 加鸡肉、盐和黑胡椒，炒 3–4 分钟，到肉丁内外不再粉红、中心达到 74°C。转中小火，加入 5 汤匙番茄酱和伍斯特酱，再炒 1–2 分钟，到酱变稠，铲子划过后锅底短暂露出来。
+3. 加鸡肉、盐和黑胡椒，炒 3–4 分钟，到肉丁内外不再粉红、中心达到 74°C。转中小火，加入 7.5 汤匙番茄酱和伍斯特酱，再炒 1–2 分钟，到酱变稠，铲子划过后锅底短暂露出来。
 4. 加入米饭，用铲沿饭团边缘切开再翻拌，炒 3–4 分钟，到每粒都染成均匀的橙红色、饭中心热透至 74°C。加入熟豌豆炒 1 分钟，到豌豆热透；尝味、调整盐和胡椒，把炒饭分成三份，松松整理成短椭圆。
-5. 一次做一份。打散 2 个鸡蛋，加盐后过细筛，到没有长条蛋白。约 20 cm 的不粘锅中火融化 15 g 黄油约 30–60 秒，到泡沫铺开；倒入蛋液，边晃锅边用筷子搅 30 秒，到蛋液变成细小软块。
+5. 一次做一份。打散 2 个鸡蛋，加 0.25 茶匙盐后过细筛，到没有长条蛋白。约 20 cm 的不粘锅中火融化 15 g 黄油约 30–60 秒，到泡沫铺开；倒入蛋液，边晃锅边用筷子搅 30 秒，到蛋液变成细小软块。
 6. 摊平软蛋块，转小火再煎 30–60 秒，到整张蛋皮连成一片、表面不再有流动蛋液。把一份炒饭沿中央放成长椭圆，两侧留出折边，用软铲把两边折向饭上。
 7. 让包好的蛋卷在小火上再定形约 30 秒，到接缝能保持合拢、蛋层熟透至 74°C，立即离火。将盘沿靠近锅边，翻扣使接缝朝下；照样做第二、第三份，装盘淋番茄酱。
 

@@ -19,7 +19,7 @@ ingredients:
   - group: 浸味
     items:
       - { ref: kombu, qty: 5, unit: g, note: 在 T&T、H Mart 找出汁用 Dried kombu }
-      - { ref: katsuobushi, qty: 5, unit: g, note: 在亚洲超市找薄削 Bonito flakes }
+      - { ref: katsuobushi, qty: 10, unit: g, note: 在亚洲超市找薄削 Bonito flakes }
 sources:
   - title: "Yuzu Ponzu ゆずポン"
     author: Namiko Hirasawa Chen

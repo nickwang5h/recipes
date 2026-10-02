@@ -6,7 +6,7 @@ original: プリン
 cuisine: japanese
 course: dessert
 summary: 全蛋、牛奶和糖隔水烤成细滑布丁，倒扣后焦糖流下来。水浴放慢受热，凝固到能撑住形状就停。
-servings: 6
+servings: 5
 time: { prep: 170, cook: 50 }
 principles: [protein-coagulation, caramelization, heat-transfer]
 ingredients:

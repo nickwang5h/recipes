@@ -18,7 +18,7 @@ ingredients:
       - { ref: shungiku, qty: 100, unit: g, note: 亚洲超市买茼蒿，找不到可用菠菜 }
       - { ref: leek, qty: 1, unit: 根, note: 用白色部分，斜切约 1 cm 厚；日式长葱也可 }
       - { ref: onion, qty: 100, unit: g, note: 横切厚片 }
-      - { ref: shiitake, qty: 100, unit: g, note: 鲜香菇，去硬柄 }
+      - { ref: shiitake, qty: 50, unit: g, note: 鲜香菇，去硬柄 }
       - { ref: enoki, qty: 50, unit: g, note: 去根，分小束 }
       - { ref: burdock-root, qty: 45, unit: g, optional: true, note: 亚洲超市买牛蒡；刮净表皮，削薄片 }
       - { ref: shirataki, qty: 100, unit: g, note: 沥水重，选原味蒟蒻丝；主流超市冷藏区或亚洲超市均可找 }

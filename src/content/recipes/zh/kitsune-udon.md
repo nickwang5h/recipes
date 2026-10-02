@@ -25,7 +25,7 @@ ingredients:
       - { ref: mirin, qty: 1, unit: 汤匙 }
       - { ref: japanese-light-soy-sauce, qty: 1, unit: 汤匙, note: 亚洲超市找 Usukuchi soy sauce；买不到用相同量日式浓口酱油，汤色会深些 }
       - { ref: sugar, qty: 1, unit: 茶匙 }
-      - { ref: salt, note: 适量，尝过汤底再补 }
+      - { ref: salt, qty: 0.5, unit: 茶匙, note: Diamond Crystal kosher salt，尝过汤底再补 }
       - { ref: scallion, qty: 1, unit: 根, note: 切薄圈 }
       - { ref: water, note: 煮面水适量 }
 sources:
