@@ -100,3 +100,27 @@ export function safetyNotes(items: Item[], foods: Foods, marks: Marks | undefine
     rice: cooked.has('rice'),
   };
 }
+
+export interface Lighter {
+  target: 'sodium' | 'fat' | 'satfat';
+  changes: ({ key: string; qty: number } | { key: string; remove: true })[];
+  add: { ref: string; qty: number; unit: string; note: string }[];
+  how: string;
+}
+
+export const LIGHTER_LABELS: Record<Lighter['target'], { label: string; nutrient: string; unit: string }> = {
+  sodium: { label: '少盐版', nutrient: '钠', unit: 'mg' },
+  fat: { label: '少油版', nutrient: '脂肪', unit: 'g' },
+  satfat: { label: '少饱和脂肪版', nutrient: '饱和脂肪', unit: 'g' },
+};
+
+/** The recipe's items with the lighter version's cuts, removals and additions applied. */
+export function lighterItems<T extends Item>(items: T[], lighter: Lighter): Item[] {
+  const changes = new Map(lighter.changes.map((change) => [change.key, change]));
+  const kept: Item[] = items.flatMap((item) => {
+    const change = changes.get(item.key);
+    if (!change) return [item];
+    return 'remove' in change ? [] : [{ ...item, qty: change.qty }];
+  });
+  return [...kept, ...lighter.add.map((extra, n) => ({ key: `add-${n}`, ref: extra.ref, qty: extra.qty, unit: extra.unit }))];
+}

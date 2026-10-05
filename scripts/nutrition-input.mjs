@@ -16,6 +16,7 @@ const recipes = readdirSync(dir).filter((name) => name.endsWith('.md')).sort().m
     title: data.title,
     servings: data.servings,
     component: data.component ?? false,
+    cuisine: data.cuisine,
     items: data.ingredients.flatMap((group, g) => group.items.map((item, i) => ({ key: `${g}-${i}`, group: group.group, ...item }))),
     body: rest.join('---').trim(),
   };

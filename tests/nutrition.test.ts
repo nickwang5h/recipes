@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { dailyValue, perServing, safetyNotes, worthShowing, type Foods } from '../src/lib/nutrition';
+import { dailyValue, lighterItems, perServing, safetyNotes, worthShowing, type Foods } from '../src/lib/nutrition';
 
 const foods: Foods = {
   'chicken-thigh': { per100g: { kcal: 121, protein: 19.7, fat: 4.1, satfat: 1, carb: 0, sugar: 0, fiber: 0, sodium: 95 }, grams: {}, density: null, safety: 'poultry' },
@@ -69,5 +69,18 @@ describe('food safety notes', () => {
     const notes = safetyNotes([{ key: '0-0', ref: 'egg', qty: 2, unit: '个' }], foods, { eaten: {}, raw: ['0-0'] });
     expect(notes.temperatures).toEqual([]);
     expect(notes.raw[0]).toContain('巴氏');
+  });
+});
+
+describe('lighter versions', () => {
+  it('applies cuts, removals and additions, and the numbers follow', () => {
+    const lighter = { target: 'sodium' as const, changes: [{ key: '0-1', qty: 1 }, { key: '0-2', remove: true as const }], add: [{ ref: 'egg', qty: 1, unit: '个', note: '' }], how: '出锅前尝味。' };
+    const changed = lighterItems(items, lighter);
+    expect(changed.find((item) => item.key === '0-1')!.qty).toBe(1);
+    expect(changed.some((item) => item.key === '0-2')).toBe(false);
+    expect(changed.at(-1)).toMatchObject({ key: 'add-0', ref: 'egg', qty: 1 });
+    const before = perServing(items, 2, foods, undefined)!.per.sodium;
+    const after = perServing(changed, 2, foods, undefined)!.per.sodium;
+    expect(after).toBeLessThan(before);
   });
 });

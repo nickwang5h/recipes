@@ -1,7 +1,7 @@
 ---
 import { getEntries, type CollectionEntry } from 'astro:content';
 import data from '../data/nutrition.json';
-import { dailyValue, perServing, safetyNotes, worthShowing, type Foods, type Key, type Marks } from '../lib/nutrition';
+import { LIGHTER_LABELS, dailyValue, lighterItems, perServing, safetyNotes, worthShowing, type Foods, type Key, type Lighter, type Marks } from '../lib/nutrition';
 
 interface Props {
   recipe: CollectionEntry<'recipes'>;
@@ -22,6 +22,15 @@ const nameOf = (key: string) => {
 const counted = marks ? perServing(items, servings, foods, marks) : null;
 const result = counted && worthShowing(counted, items, (ref) => catalog.get(ref)!.data.kind) ? counted : null;
 const safety = marks ? safetyNotes(items, foods, marks) : null;
+const lighter = result ? ((data as unknown as { lighter?: Record<string, Lighter> }).lighter ?? {})[recipe.id] : undefined;
+const lighterAfter = lighter ? perServing(lighterItems(items, lighter), servings, foods, marks) : null;
+const lighterCatalog = lighter ? new Map((await getEntries(lighter.add.map((extra) => ({ collection: 'ingredients' as const, id: extra.ref })))).map((entry) => [entry.id, entry])) : new Map();
+const itemText = (key: string) => {
+  const item = items.find((entry) => entry.key === key)!;
+  const twin = items.some((other) => other.key !== key && nameOf(other.key) === nameOf(key));   // the same ingredient used twice
+  const group = ingredients[Number(key.split('-')[0])]?.group;
+  return `${nameOf(key)}${twin && group ? `（${group}）` : ''} ${item.qty ?? ''} ${item.unit ?? ''}`.trim();
+};
 
 const amount = (value: number, unit: string) => `${value >= 10 || unit === 'mg' ? Math.round(value) : Math.round(value * 10) / 10} ${unit}`;
 const rows: { label: string; key: Key; unit: string; sub?: boolean }[] = [
@@ -68,6 +77,20 @@ for (const [key, fraction] of Object.entries(marks?.eaten ?? {})) {
       {[...shares].map(([share, names]) => <>{names.join('、')}按吃进约 {share}% 计。</>)}
       {result.leftOut.length > 0 && <>没有计入：{result.leftOut.map(nameOf).join('、')}（没有定量或缺少数据）。</>}
     </p>
+    {lighter && lighterAfter && (() => {
+      const { label, nutrient, unit } = LIGHTER_LABELS[lighter.target];
+      return (
+        <div class="lighter">
+          <h3>{label}</h3>
+          <ul>
+            {lighter.changes.map((change) => <li>{'remove' in change ? <>不放{nameOf(change.key)}</> : <>{itemText(change.key)} → {change.qty} {items.find((item) => item.key === change.key)!.unit}</>}</li>)}
+            {lighter.add.map((extra) => <li>加 {lighterCatalog.get(extra.ref)?.data.zh ?? extra.ref} {extra.qty} {extra.unit}{extra.note && `（${extra.note}）`}</li>)}
+          </ul>
+          <p>{lighter.how}</p>
+          <p class="nutrition-note">改完每份{nutrient}约 {amount(result.per[lighter.target], unit)} → {amount(lighterAfter.per[lighter.target], unit)}，热量约 {Math.round(lighterAfter.per.kcal)} 千卡。</p>
+        </div>
+      );
+    })()}
   </section>
 )}
 

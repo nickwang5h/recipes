@@ -180,6 +180,10 @@ a.chip:hover { border-color: var(--primary); color: var(--text); background: var
 .nutrition-table .dv { color: var(--muted); width: 3.5rem; }
 .nutrition-table tr.sub th { padding-left: 1.75rem; color: var(--muted); }
 .nutrition-note { font-size: 0.875rem; color: var(--muted); line-height: 1.7; }
+.lighter { margin-top: 1.25rem; padding: 0.9rem 1.1rem; border: 1px solid var(--border); border-radius: var(--radius); }
+.lighter h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+.lighter ul { margin: 0 0 0.5rem; padding-left: 1.2rem; }
+.lighter p { margin: 0.4rem 0 0; }
 .food-safety ul { padding-left: 1.2rem; }
 .food-safety li + li { margin-top: 0.35rem; }
 
