@@ -8,6 +8,7 @@ import RecipeCard from '../../components/RecipeCard.astro';
 import CuisineTag from '../../components/CuisineTag.astro';
 import RecipeKit from '../../components/RecipeKit.astro';
 import SourceList from '../../components/SourceList.astro';
+import NutritionPanel from '../../components/NutritionPanel.astro';
 import { COURSES } from '../../lib/categories';
 import { recipeLd } from '../../lib/jsonld';
 import { related } from '../../lib/related';
@@ -83,6 +84,7 @@ const ld = recipeLd({
       <RecipeKit recipe={recipe} />
       <div class="prose recipe-body">
         <div class="recipe-content"><Content /></div>
+        <NutritionPanel recipe={recipe} />
         <SourceList sources={sources} />
         <p class="meta" style="color: var(--muted); font-size: 0.9rem">更新于 {formatDate(updated)}</p>
       </div>

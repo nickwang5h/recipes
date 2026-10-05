@@ -21,6 +21,10 @@ Planned and published slugs live in `docs/content-plan.md`.
   `optional: true`, and keep `substitutes` honest — they count as having the ingredient. The body has
   `## 步骤` as the only ordered list (each item becomes a checkable step) and `## 要点` with
   2–4 failure causes linked to principles.
+- Nutrition: `src/data/nutrition.json` is generated in knowledge-compiler (`study.py recipes match|audit|eaten|export
+  --to ~/Projects/recipes/src/data`): each catalog ingredient matched to a Canadian Nutrient File food with piece
+  weights and densities, and per recipe what is not all eaten and what is served raw. `src/lib/nutrition.ts` sums it
+  per serving; `NutritionPanel.astro` shows it with food-safety notes. New ingredients or recipes need a re-run.
 - Principles: explain *why*; link recipes and other principles with `/principles/<slug>/` paths.
   "用到它的菜" is generated from recipe front matter — do not write it by hand.
 - Every principle and recipe needs at least one reliable source. Do not invent personal experience.

@@ -1,0 +1,83 @@
+---
+import { getEntries, type CollectionEntry } from 'astro:content';
+import data from '../data/nutrition.json';
+import { dailyValue, perServing, safetyNotes, worthShowing, type Foods, type Key, type Marks } from '../lib/nutrition';
+
+interface Props {
+  recipe: CollectionEntry<'recipes'>;
+}
+
+const { recipe } = Astro.props;
+const { servings, ingredients } = recipe.data;
+const foods = data.ingredients as unknown as Foods;
+const marks = (data.recipes as unknown as Record<string, Marks>)[recipe.id];
+const items = ingredients.flatMap((group, g) => group.items.map((item, i) => ({
+  key: `${g}-${i}`, ref: item.ref.id, qty: item.qty, unit: item.unit, optional: item.optional, name: item.name,
+})));
+const catalog = new Map((await getEntries(ingredients.flatMap((group) => group.items.map((item) => item.ref)))).map((entry) => [entry.id, entry]));
+const nameOf = (key: string) => {
+  const item = items.find((entry) => entry.key === key)!;
+  return item.name ?? catalog.get(item.ref)!.data.zh;
+};
+const counted = marks ? perServing(items, servings, foods, marks) : null;
+const result = counted && worthShowing(counted, items, (ref) => catalog.get(ref)!.data.kind) ? counted : null;
+const safety = marks ? safetyNotes(items, foods, marks) : null;
+
+const amount = (value: number, unit: string) => `${value >= 10 || unit === 'mg' ? Math.round(value) : Math.round(value * 10) / 10} ${unit}`;
+const rows: { label: string; key: Key; unit: string; sub?: boolean }[] = [
+  { label: '蛋白质', key: 'protein', unit: 'g' },
+  { label: '脂肪', key: 'fat', unit: 'g' },
+  { label: '其中饱和脂肪', key: 'satfat', unit: 'g', sub: true },
+  { label: '碳水化合物', key: 'carb', unit: 'g' },
+  { label: '其中糖', key: 'sugar', unit: 'g', sub: true },
+  { label: '膳食纤维', key: 'fiber', unit: 'g' },
+  { label: '钠', key: 'sodium', unit: 'mg' },
+];
+// Items not all eaten, grouped by share; water and other items with nothing to count are left out of the note.
+const shares = new Map<number, string[]>();
+for (const [key, fraction] of Object.entries(marks?.eaten ?? {})) {
+  const item = items.find((entry) => entry.key === key);
+  const food = item && foods[item.ref];
+  if (!item || item.optional || item.qty === undefined || !food || !Object.values(food.per100g).some(Boolean)) continue;
+  const share = Math.round(fraction * 100);
+  shares.set(share, [...(shares.get(share) ?? []), nameOf(key)]);
+}
+---
+
+{result && (
+  <section class="nutrition" aria-labelledby="nutrition-title">
+    <h2 class="section-title" id="nutrition-title">每份营养</h2>
+    <p class="nutrition-energy"><strong>{Math.round(result.per.kcal)}</strong> 千卡</p>
+    <table class="nutrition-table">
+      <tbody>
+        {rows.map((row) => {
+          const value = result.per[row.key];
+          const dv = dailyValue(row.key, value);
+          return (
+            <tr class={row.sub ? 'sub' : undefined}>
+              <th scope="row">{row.label}</th>
+              <td>{amount(value, row.unit)}</td>
+              <td class="dv">{dv !== null && `${dv}%`}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+    <p class="nutrition-note">
+      按加拿大营养成分数据库估算，{servings} 人份平分；百分比是占每日营养标签参考值的比例。
+      {[...shares].map(([share, names]) => <>{names.join('、')}按吃进约 {share}% 计。</>)}
+      {result.leftOut.length > 0 && <>没有计入：{result.leftOut.map(nameOf).join('、')}（没有定量或缺少数据）。</>}
+    </p>
+  </section>
+)}
+
+{safety && (safety.temperatures.length > 0 || safety.raw.length > 0 || safety.rice) && (
+  <section class="food-safety" aria-labelledby="safety-title">
+    <h2 class="section-title" id="safety-title">食品安全</h2>
+    <ul>
+      {safety.temperatures.length > 0 && <li>用食物温度计测最厚处中心：{safety.temperatures.join('；')}。</li>}
+      {safety.raw.map((note) => <li>{note}。孕妇、幼儿、老人和免疫力低的人宜吃全熟。</li>)}
+      {safety.rice && <li>米饭和剩菜两小时内放凉冷藏，三天内吃完；复热到中心 74℃。</li>}
+    </ul>
+  </section>
+)}
