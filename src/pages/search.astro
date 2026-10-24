@@ -1,5 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
+import CatNote from '../components/CatNote.astro';
+import { url } from '../lib/site';
+import potCat from '../assets/cats/search-empty.png';
 ---
 
 <Base title="搜索" description="按菜名、食材或原理搜索全站的菜谱和笔记。">
@@ -21,6 +24,11 @@ import Base from '../layouts/Base.astro';
 
   <p class="filter-count" data-count aria-live="polite"></p>
   <ol class="search-results" data-results></ol>
+  <CatNote cat={potCat} hidden data-none>
+    <p class="cat-note-title">锅里空空的</p>
+    <p>没有找到。换个说法试试，比如只搜主料“茄子”，或者做法“红烧”。</p>
+    <p><a class="cat-note-btn" href={url('recipes')}>翻翻全部菜谱</a></p>
+  </CatNote>
 
   <script>
     import { search, terms, type SearchHit } from '../lib/search';
@@ -29,6 +37,7 @@ import Base from '../layouts/Base.astro';
     const input = document.querySelector<HTMLInputElement>('[data-q]')!;
     const list = document.querySelector<HTMLOListElement>('[data-results]')!;
     const count = document.querySelector<HTMLElement>('[data-count]')!;
+    const none = document.querySelector<HTMLElement>('[data-none]')!;
     const PAGE = 30;
     let type = '';
     let docs: SearchDoc[] | null = null;
@@ -80,6 +89,7 @@ import Base from '../layouts/Base.astro';
       if (!q) {
         list.replaceChildren();
         count.textContent = '';
+        none.hidden = true;
         return;
       }
       const all = await load();
@@ -87,7 +97,8 @@ import Base from '../layouts/Base.astro';
       const hits = search(all, q, type);
       count.textContent = hits.length
         ? `${hits.length} 条结果${hits.length > PAGE ? `，显示前 ${PAGE} 条` : ''}`
-        : '没有找到，换个说法试试。';
+        : '';
+      none.hidden = hits.length > 0;
       const qs = terms(q);
       list.replaceChildren(...hits.slice(0, PAGE).map((hit) => row(hit, qs)));
     };

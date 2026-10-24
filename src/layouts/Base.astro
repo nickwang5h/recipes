@@ -1,6 +1,8 @@
 ---
 import type { ImageMetadata } from 'astro';
-import { getImage } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
+import logoCat from '../assets/cats/logo.png';
+import waveCat from '../assets/cats/wave.png';
 import '../styles/global.css';
 import { MAIN_SITE, SITE_DESCRIPTION, SITE_TITLE, url } from '../lib/site';
 
@@ -11,9 +13,11 @@ interface Props {
   image?: ImageMetadata;
   /** og:type, e.g. "article" for recipes and principles. */
   type?: string;
+  /** A narrower column for pages that are mostly pictures, like the home page. */
+  narrow?: boolean;
 }
 
-const { title, description = SITE_DESCRIPTION, image, type = 'website' } = Astro.props;
+const { title, description = SITE_DESCRIPTION, image, type = 'website', narrow = false } = Astro.props;
 const ogImage = new URL(image ? (await getImage({ src: image, width: 1200, format: 'jpg' })).src : '/og-default.png', Astro.site);
 const fullTitle = title ? `${title} · ${SITE_TITLE}` : SITE_TITLE;
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -39,7 +43,7 @@ const nav = [
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="厨房笔记" />
+    <meta name="apple-mobile-web-app-title" content="猫饭" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
@@ -63,11 +67,11 @@ const nav = [
       })();
     </script>
   </head>
-  <body>
+  <body class={narrow ? 'narrow' : undefined}>
     <a class="visually-hidden" href="#main">跳到正文</a>
     <header class="site-header">
       <div class="wrap">
-        <a class="brand" href={url()}>{SITE_TITLE}</a>
+        <a class="brand" href={url()}><Image class="brand-cat" src={logoCat} alt="" width={72} height={72} loading="eager" />{SITE_TITLE}</a>
         <nav class="site-nav" aria-label="主导航">
           {nav.map((item) => (
             <a href={item.href} aria-current={path.startsWith(item.match) ? 'page' : undefined}>{item.label}</a>
@@ -88,8 +92,9 @@ const nav = [
       </div>
     </main>
     <footer class="site-footer">
+      <span class="footer-cat" aria-hidden="true"><Image src={waveCat} alt="" width={176} loading="lazy" /></span>
       <div class="wrap">
-        <span>{SITE_TITLE} · 家常与经典菜的原理与做法</span>
+        <span>{SITE_TITLE} · 家常菜和背后的道理</span>
         <a href={MAIN_SITE}>nickwang.xyz</a>
       </div>
     </footer>

@@ -3,6 +3,8 @@ import { getImage } from 'astro:assets';
 import { getCollection, getEntries, getEntry, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Cover from '../../components/Cover.astro';
+import CatNote from '../../components/CatNote.astro';
+import serveCat from '../../assets/cats/serve.png';
 import RecipeMine from '../../components/RecipeMine.astro';
 import RecipeCard from '../../components/RecipeCard.astro';
 import CuisineTag from '../../components/CuisineTag.astro';
@@ -77,13 +79,17 @@ const ld = recipeLd({
         )}
         <RecipeMine id={recipe.id} />
       </header>
-      <Cover image={recipe.data.cover} alt={recipe.data.coverAlt} />
+      <Cover image={recipe.data.cover} alt={recipe.data.coverAlt} stamp={time.prep + time.cook <= 30 ? '快手' : undefined} />
     </div>
 
     <div class="recipe-layout">
       <RecipeKit recipe={recipe} />
       <div class="prose recipe-body">
         <div class="recipe-content"><Content /></div>
+        <CatNote cat={serveCat} hidden data-served>
+          <p class="cat-note-title">开饭啦</p>
+          <p>步骤都做完了，趁热吃。</p>
+        </CatNote>
         <NutritionPanel recipe={recipe} />
         <SourceList sources={sources} />
         <p class="meta" style="color: var(--muted); font-size: 0.9rem">更新于 {formatDate(updated)}</p>

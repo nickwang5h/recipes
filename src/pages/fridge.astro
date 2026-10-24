@@ -3,6 +3,9 @@ import { getCollection } from 'astro:content';
 import { getImage } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import ShoppingList from '../components/ShoppingList.astro';
+import CatNote from '../components/CatNote.astro';
+import fridgeCat from '../assets/cats/fridge.png';
+import potCat from '../assets/cats/search-empty.png';
 import { COURSES, INGREDIENT_KINDS, TIME_LIMITS, type Course, type IngredientKind } from '../lib/categories';
 import { ALWAYS_HAVE, DEFAULT_STAPLES } from '../lib/fridge';
 import { formatTotal, getCuisines, url } from '../lib/site';
@@ -117,7 +120,10 @@ const data = {
 
       <ShoppingList />
 
-      <p class="fridge-empty" data-hint>先在左边选几样食材。</p>
+      <CatNote cat={fridgeCat} data-hint>
+        <p class="cat-note-title">先看看冰箱里有什么</p>
+        <p>在旁边搜索或点选手头的食材，能做的菜会排在这里。</p>
+      </CatNote>
 
       <div data-ready-wrap hidden>
         <h2 class="section-title">现在就能做 <span class="fridge-count" data-ready-count></span></h2>
@@ -128,7 +134,10 @@ const data = {
         <ul class="card-grid" data-almost></ul>
         <button class="text-btn fridge-more" type="button" data-more hidden></button>
       </div>
-      <p class="fridge-empty" data-none hidden>没有找到合适的菜。多选几样食材试试。</p>
+      <CatNote cat={potCat} hidden data-none>
+        <p class="cat-note-title">还凑不出一道菜</p>
+        <p>多选几样食材试试。常备调料默认算家里有，不用再选。</p>
+      </CatNote>
     </section>
   </div>
 

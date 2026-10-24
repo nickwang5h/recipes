@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A 冰箱门</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* A: restrained. One full cat (hero), one peeking sticker, otherwise today's site, softened. */
+  .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; padding: 48px 0 8px; }
+  .hero h1 { margin: 0 0 12px; font: 46px/1.2 var(--font-reading); }
+  .hero p { margin: 0 0 26px; max-width: 30em; color: var(--muted); font-size: 17px; }
+  .hero-art img { width: 100%; }
+  .hero-links { display: flex; gap: 18px; margin-top: 18px; font-size: 15px; }
+  .hero-links a { color: var(--primary); }
+
+  .cuisines { display: grid; grid-template-columns: repeat(7, 1fr); gap: 14px; }
+  .cuisine { background: var(--paper); border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+  .cuisine img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+  .cuisine div { padding: 10px 12px 12px; }
+  .cuisine b { display: block; font: 17px/1.3 var(--font-reading); font-weight: normal; }
+  .cuisine span { color: var(--muted); font-size: 13px; }
+
+  .picks { position: relative; }
+  .picks .sticker { width: 92px; height: 92px; right: -12px; top: -58px; transform: rotate(6deg); }
+  .card { background: var(--paper); border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+  .card div { padding: 12px 14px 14px; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 0; }
+  .chips a { display: block; padding: 6px 14px; border-radius: 999px; background: var(--paper); border: 1px solid var(--border); font-size: 15px; }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; gap: 16px; padding-top: 28px; }
+    .hero h1 { font-size: 34px; }
+    .cuisines { grid-template-columns: repeat(3, 1fr); }
+    .picks .sticker { width: 64px; height: 64px; top: -44px; right: 0; }
+  }
+</style>
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="#"><span class="logo-cat" aria-hidden="true"></span>猫饭</a>
+  <nav><a href="#">菜系</a><a href="#">原理</a><a href="#">菜谱</a><a href="#">冰箱</a><a href="#">菜单</a><a href="#">我的</a></nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <h1>今天在家做点什么？</h1>
+      <p>622 道七国家常菜，每道都写清楚为什么这样做。</p>
+      <div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>搜菜名、食材或原理</div>
+      <div class="hero-links"><a href="#">今晚吃什么？</a><a href="#">按冰箱里的食材找 →</a></div>
+    </div>
+    <div class="hero-art"><img src="/src/assets/cats/hero-duo.png" alt="两只暹罗猫在灶台前一起做饭"></div>
+  </section>
+
+  <div class="section-head"><h2>菜系</h2><a href="#">全部 622 道菜 →</a></div>
+  <div class="cuisines">
+    <a class="cuisine" href="#"><img src="/src/assets/covers/cuisines/chinese.jpg" alt=""><div><b>中餐</b><span>338 道</span></div></a>
+    <a class="cuisine" href="#"><img src="/src/assets/covers/cuisines/french.jpg" alt=""><div><b>法餐</b><span>48 道</span></div></a>
+    <a class="cuisine" href="#"><img src="/src/assets/covers/cuisines/italian.jpg" alt=""><div><b>意大利菜</b><span>58 道</span></div></a>
+    <a class="cuisine" href="#"><img src="/src/assets/covers/cuisines/thai.jpg" alt=""><div><b>泰国菜</b><span>48 道</span></div></a>
+    <a class="cuisine" href="#"><img src="/src/assets/covers/cuisines/vietnamese.jpg" alt=""><div><b>越南菜</b><span>40 道</span></div></a>
+    <a class="cuisine" href="#"><img src="/src/assets/covers/cuisines/japanese.jpg" alt=""><div><b>日本料理</b><span>44 道</span></div></a>
+    <a class="cuisine" href="#"><img src="/src/assets/covers/cuisines/korean.jpg" alt=""><div><b>韩国菜</b><span>46 道</span></div></a>
+  </div>
+
+  <section class="picks">
+    <div class="section-head"><h2>挑几道菜</h2><a href="#">当季的菜 →</a></div>
+    <span class="sticker" aria-hidden="true"><img src="/src/assets/cats/wave.png" alt=""></span>
+    <ul class="cards">
+      <li class="card"><img src="/src/assets/covers/recipes/mapo-tofu.jpg" alt=""><div><h3>麻婆豆腐</h3><span class="meta">中餐 · 30 分钟</span></div></li>
+      <li class="card"><img src="/src/assets/covers/recipes/carbonara.jpg" alt=""><div><h3>罗马蛋黄培根意面</h3><span class="meta">意大利菜 · 30 分钟</span></div></li>
+      <li class="card"><img src="/src/assets/covers/recipes/oyakodon.jpg" alt=""><div><h3>亲子丼</h3><span class="meta">日本料理 · 20 分钟</span></div></li>
+      <li class="card"><img src="/src/assets/covers/recipes/pad-thai.jpg" alt=""><div><h3>泰式炒河粉</h3><span class="meta">泰国菜 · 50 分钟</span></div></li>
+      <li class="card"><img src="/src/assets/covers/recipes/hong-shao-rou.jpg" alt=""><div><h3>红烧肉</h3><span class="meta">中餐 · 1 小时 35 分</span></div></li>
+      <li class="card"><img src="/src/assets/covers/recipes/coq-au-vin.jpg" alt=""><div><h3>红酒烩鸡</h3><span class="meta">法餐 · 1 小时 40 分</span></div></li>
+      <li class="card"><img src="/src/assets/covers/recipes/pho-bo.jpg" alt=""><div><h3>越南牛肉河粉</h3><span class="meta">越南菜 · 3 小时 30 分</span></div></li>
+      <li class="card"><img src="/src/assets/covers/recipes/egg-fried-rice.jpg" alt=""><div><h3>蛋炒饭</h3><span class="meta">中餐 · 30 分钟</span></div></li>
+    </ul>
+  </section>
+
+  <div class="section-head"><h2>原理</h2><a href="#">全部原理 →</a></div>
+  <ul class="chips">
+    <li><a href="#">传热</a></li><li><a href="#">油温与油炸</a></li><li><a href="#">美拉德反应</a></li><li><a href="#">焦糖化</a></li>
+    <li><a href="#">发酵调味料</a></li><li><a href="#">乳化</a></li><li><a href="#">淀粉糊化</a></li><li><a href="#">蛋白质凝固</a></li>
+    <li><a href="#">面筋</a></li><li><a href="#">胶原与明胶</a></li><li><a href="#">盐</a></li><li><a href="#">酸</a></li>
+    <li><a href="#">鲜味</a></li><li><a href="#">香料与香气</a></li><li><a href="#">焯水与去腥</a></li><li><a href="#">刀工与受热</a></li>
+  </ul>
+</main>
+<footer><div class="wrap">插图由 AI 生成</div></footer>
+</body>
+</html>

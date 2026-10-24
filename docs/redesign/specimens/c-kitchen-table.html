@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C 餐桌拼贴</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* C: the fullest. The hero is a table top: cats cooking in the middle, the seven cuisines
+     stuck around them as die-cut stickers with handwritten labels. Below the fold it calms down. */
+  .table {
+    position: relative; margin-top: 28px; height: 560px; border-radius: 24px;
+    background:
+      radial-gradient(circle at 1px 1px, rgb(184 62 48 / .10) 1px, transparent 1.5px) 0 0 / 18px 18px,
+      #ece5d6;
+    overflow: hidden;
+  }
+  .table h1 { position: absolute; left: 44px; top: 36px; margin: 0; font: 46px/1.2 var(--font-reading); }
+  .table .sub { position: absolute; left: 46px; top: 100px; margin: 0; color: var(--muted); }
+  .table .search { position: absolute; left: 44px; bottom: 40px; width: 380px; }
+  .table .duo { position: absolute; left: 50%; top: 50%; width: 520px; transform: translate(-46%, -44%); }
+
+  .dish { position: absolute; text-align: center; }
+  .dish .sticker { position: relative; display: block; width: var(--s, 110px); height: var(--s, 110px); margin: 0 auto; }
+  .dish .note { display: block; margin-top: 4px; font-size: 18px; }
+  .dish .note small { font: 12px var(--font-sans); color: var(--muted); }
+  .dish:hover .sticker { transform: scale(1.06) rotate(0deg) !important; transition: transform .2s; }
+
+  .picks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; list-style: none; margin: 0; padding: 0; }
+  .polaroid { position: relative; background: #fff; padding: 10px 10px 14px; box-shadow: 0 2px 8px rgb(60 40 20 / .14); }
+  .picks li:nth-child(odd) .polaroid { transform: rotate(-1.5deg); }
+  .picks li:nth-child(even) .polaroid { transform: rotate(1.2deg); }
+  .polaroid img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+  .polaroid h3 { margin: 10px 0 0; font: 18px/1.3 var(--font-reading); }
+  .polaroid .note { font-size: 15px; }
+  .tape { position: absolute; top: -10px; left: 50%; width: 80px; height: 22px; margin-left: -40px; background: rgb(232 196 120 / .6); transform: rotate(-4deg); }
+
+  .bottom-row { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 64px; align-items: center; }
+  .magnet-card { position: relative; background: var(--kraft); border-radius: 6px; padding: 30px 26px 22px; transform: rotate(-2deg); box-shadow: 0 6px 16px rgb(60 40 20 / .14); }
+  .magnet-card::before { content: ""; position: absolute; top: -10px; left: 50%; width: 22px; height: 22px; margin-left: -11px; border-radius: 50%; background: var(--primary); }
+  .magnet-card h3 { margin: 0 0 8px; font: 20px/1.3 var(--font-reading); }
+  .magnet-card ul { margin: 0; padding-left: 18px; }
+  .fridge-cta { display: flex; align-items: center; gap: 18px; }
+  .fridge-cta img { width: 180px; }
+  .fridge-cta h3 { margin: 0 0 6px; font: 24px/1.3 var(--font-reading); }
+  .fridge-cta a { color: var(--primary); }
+
+  @media (max-width: 900px) {
+    .table { height: auto; padding: 28px 20px 24px; }
+    .table h1, .table .sub, .table .search, .table .duo { position: static; transform: none; width: 100%; }
+    .table h1 { font-size: 32px; }
+    .table .sub { margin: 6px 0 14px; }
+    .table .duo { margin: 8px 0 12px; }
+    .table .dishes { display: flex; gap: 14px; overflow-x: auto; padding: 8px 0 4px; }
+    .dish { position: static; flex: none; --s: 84px !important; }
+    .picks, .bottom-row { grid-template-columns: repeat(2, 1fr); }
+    .bottom-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="#"><span class="logo-cat" aria-hidden="true"></span>猫饭</a>
+  <nav><a href="#">菜系</a><a href="#">原理</a><a href="#">菜谱</a><a href="#">冰箱</a><a href="#">菜单</a><a href="#">我的</a></nav>
+</div></header>
+
+<main class="wrap">
+  <section class="table">
+    <h1>今天在家做点什么？</h1>
+    <p class="sub">622 道七国家常菜，每道都写清楚为什么这样做。</p>
+    <img class="duo" src="/src/assets/cats/hero-duo.png" alt="两只暹罗猫在灶台前一起做饭">
+    <div class="dishes">
+      <a class="dish" href="#" style="right:60px;top:40px;--s:128px"><span class="sticker" style="transform:rotate(5deg)"><img src="/src/assets/covers/cuisines/chinese.jpg" alt=""></span><span class="note">中餐 <small>338</small></span></a>
+      <a class="dish" href="#" style="right:210px;top:24px"><span class="sticker" style="transform:rotate(-6deg)"><img src="/src/assets/covers/cuisines/japanese.jpg" alt=""></span><span class="note">日本料理 <small>44</small></span></a>
+      <a class="dish" href="#" style="right:40px;top:236px"><span class="sticker" style="transform:rotate(-4deg)"><img src="/src/assets/covers/cuisines/italian.jpg" alt=""></span><span class="note">意大利菜 <small>58</small></span></a>
+      <a class="dish" href="#" style="right:72px;bottom:28px;--s:100px"><span class="sticker" style="transform:rotate(6deg)"><img src="/src/assets/covers/cuisines/french.jpg" alt=""></span><span class="note">法餐 <small>48</small></span></a>
+      <a class="dish" href="#" style="left:48px;top:170px;--s:100px"><span class="sticker" style="transform:rotate(-5deg)"><img src="/src/assets/covers/cuisines/thai.jpg" alt=""></span><span class="note">泰国菜 <small>48</small></span></a>
+      <a class="dish" href="#" style="left:190px;top:196px;--s:96px"><span class="sticker" style="transform:rotate(4deg)"><img src="/src/assets/covers/cuisines/vietnamese.jpg" alt=""></span><span class="note">越南菜 <small>40</small></span></a>
+      <a class="dish" href="#" style="left:430px;bottom:30px;--s:96px"><span class="sticker" style="transform:rotate(-3deg)"><img src="/src/assets/covers/cuisines/korean.jpg" alt=""></span><span class="note">韩国菜 <small>46</small></span></a>
+    </div>
+    <div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>搜菜名、食材或原理</div>
+  </section>
+
+  <div class="section-head"><h2>今晚可以做</h2><a href="#">换一批 ↻</a></div>
+  <ul class="picks">
+    <li><div class="polaroid"><span class="tape"></span><img src="/src/assets/covers/recipes/oyakodon.jpg" alt=""><h3>亲子丼</h3><span class="note">20 分钟</span></div></li>
+    <li><div class="polaroid"><span class="tape"></span><img src="/src/assets/covers/recipes/mapo-tofu.jpg" alt=""><h3>麻婆豆腐</h3><span class="note">30 分钟</span></div></li>
+    <li><div class="polaroid"><span class="tape"></span><img src="/src/assets/covers/recipes/carbonara.jpg" alt=""><h3>罗马蛋黄培根意面</h3><span class="note">30 分钟</span></div></li>
+    <li><div class="polaroid"><span class="tape"></span><img src="/src/assets/covers/recipes/pad-thai.jpg" alt=""><h3>泰式炒河粉</h3><span class="note">50 分钟</span></div></li>
+  </ul>
+
+  <div class="bottom-row">
+    <div class="fridge-cta">
+      <img src="/src/assets/cats/fridge.png" alt="头巾猫打开冰箱往里看">
+      <div><h3>冰箱里有什么？</h3><p>选几样手头的食材，找出能做的菜。</p><a href="#">按冰箱找菜 →</a></div>
+    </div>
+    <div class="magnet-card">
+      <h3>油温速查</h3>
+      <ul>
+        <li>常压深油炸：约 160–190°C</li>
+        <li>下料后油温会掉，等它回到目标再下一批</li>
+        <li>冒烟说明该降温，不是下料信号</li>
+      </ul>
+    </div>
+  </div>
+</main>
+<footer><div class="wrap">插图由 AI 生成</div></footer>
+</body>
+</html>

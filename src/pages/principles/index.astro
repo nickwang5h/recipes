@@ -1,8 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
 import PrincipleCard from '../../components/PrincipleCard.astro';
 import { PRINCIPLE_CATEGORIES, type PrincipleCategory } from '../../lib/categories';
+import readCat from '../../assets/cats/read.png';
 
 const principles = await getCollection('principles');
 const groups = (Object.keys(PRINCIPLE_CATEGORIES) as PrincipleCategory[])
@@ -14,9 +16,12 @@ const groups = (Object.keys(PRINCIPLE_CATEGORIES) as PrincipleCategory[])
 ---
 
 <Base title="原理" description="跨菜系的烹饪原理：传热、化学反应、乳化、淀粉与蛋白质。">
-  <header class="page-head">
-    <h1>原理</h1>
-    <p class="lede">不分菜系。一条原理讲清楚之后，会在很多道菜里反复出现。</p>
+  <header class="page-head head-with-cat">
+    <div>
+      <h1>原理</h1>
+      <p class="lede">不分菜系。一条原理讲清楚之后，会在很多道菜里反复出现。</p>
+    </div>
+    <Image class="cat-sticker" src={readCat} alt="" widths={[200, 400]} sizes="8rem" loading="eager" />
   </header>
   {groups.map(({ category, items }) => (
     <section>

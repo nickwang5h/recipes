@@ -85,6 +85,9 @@ const catalog = new Map(
     const ingBoxes = [...kit.querySelectorAll<HTMLInputElement>('input[data-ing]')];
     const qtys = [...kit.querySelectorAll<HTMLElement>('[data-qty]')];
     const stepItems = [...document.querySelectorAll<HTMLLIElement>('.recipe-content ol > li')];
+    // The serving cat waits right under the last step and comes out once every step is ticked.
+    const served = document.querySelector<HTMLElement>('[data-served]');
+    if (served) stepItems.at(-1)?.parentElement?.after(served);
 
     const load = (): State => {
       const fallback = { servings: base, ingredients: [], steps: [] };
@@ -137,10 +140,15 @@ const catalog = new Map(
       box.addEventListener('change', () => {
         li.classList.toggle('step-done', box.checked);
         state.steps = stepBoxes.flatMap((b, j) => (b.checked ? [j] : []));
+        renderServed();
         save();
       });
       return box;
     });
+
+    const renderServed = () => {
+      if (served) served.hidden = stepBoxes.length === 0 || !stepBoxes.every((b) => b.checked);
+    };
 
     const renderChecks = () => {
       for (const box of ingBoxes) box.checked = state.ingredients.includes(box.dataset.ing!);
@@ -148,6 +156,7 @@ const catalog = new Map(
         box.checked = state.steps.includes(i);
         stepItems[i].classList.toggle('step-done', box.checked);
       });
+      renderServed();
     };
 
     for (const box of ingBoxes) {

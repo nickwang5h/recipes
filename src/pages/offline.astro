@@ -1,12 +1,14 @@
 ---
 import Base from '../layouts/Base.astro';
+import CatNote from '../components/CatNote.astro';
+import smokeCat from '../assets/cats/burnt.png';
 ---
 
 <Base title="离线" description="没有网络时显示的页面，列出已经保存在这台设备上的内容。">
-  <header class="page-head">
+  <CatNote cat={smokeCat}>
     <h1>现在没有网络</h1>
     <p class="lede">这一页还没有保存在这台设备上。下面是已经保存、可以离线打开的内容。</p>
-  </header>
+  </CatNote>
 
   <p class="fridge-empty" data-saved-empty>还没有离线保存的页面。联网时打开过的页面会自动保存；也可以在“菜谱”页一次保存全部菜谱。</p>
   <div data-saved></div>

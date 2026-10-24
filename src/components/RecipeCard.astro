@@ -6,15 +6,20 @@ import { formatTotal, url } from '../lib/site';
 interface Props {
   recipe: CollectionEntry<'recipes'>;
   cuisine: CollectionEntry<'cuisines'>;
+  /** Home-page recipe box: taped-on picture and a 快手 stamp for dishes done in half an hour. */
+  boxed?: boolean;
 }
 
-const { recipe, cuisine } = Astro.props;
+const { recipe, cuisine, boxed = false } = Astro.props;
 const { title, original, summary, time, cover } = recipe.data;
+const quick = boxed && time.prep + time.cook <= 30;
 // Stand-in until the dish has an illustration: an empty plate, quiet enough not to compete with real covers.
 const PLATE = '<svg viewBox="0 0 120 72" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="60" cy="38" rx="54" ry="28"/><ellipse cx="60" cy="38" rx="36" ry="17"/></svg>';
 ---
 
-<a class={`card has-cover accent-${cuisine.data.accent}`} href={url(`recipes/${recipe.id}`)}>
+<a class={`card has-cover accent-${cuisine.data.accent}${boxed ? ' boxed' : ''}`} href={url(`recipes/${recipe.id}`)}>
+  {boxed && <span class="tape" aria-hidden="true"></span>}
+  {quick && <span class="stamp">快手</span>}
   {cover ? (
     <Image class="card-img" src={cover} alt="" widths={[320, 480, 640]} sizes="(min-width: 48rem) 300px, 50vw" loading="lazy" />
   ) : (

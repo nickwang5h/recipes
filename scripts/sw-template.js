@@ -25,6 +25,13 @@ self.addEventListener('install', (event) => {
       // Keep the offline page in the page cache too, so it is served like any other page.
       const pages = await caches.open(PAGES);
       await pages.put(OFFLINE, (await cache.match(OFFLINE)).clone());
+      // Its pictures (the cat, the logo) have to be there when the network isn't.
+      const html = await (await cache.match(OFFLINE)).text();
+      const images = await caches.open(IMAGES);
+      for (const src of html.matchAll(/<img[^>]+src="(\/_astro\/[^"]+)"/g)) {
+        const image = await fetch(src[1]);
+        if (image.ok) await images.put(src[1], image);
+      }
       await self.skipWaiting();
     })(),
   );

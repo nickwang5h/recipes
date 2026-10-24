@@ -20,6 +20,12 @@
   --accent-orange: #b95a1b;
   --check: #2f8359;
 
+  /* Recipe-box surfaces: index-card paper, fridge-card kraft, washi tape, card rules. */
+  --paper: #fbf8f1;
+  --kraft: #e3cfa8;
+  --tape: rgb(232 196 120 / 0.55);
+  --rule: #ccd5dd;
+
   --font-sans: "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-reading: "LXGW WenKai", "Kaiti SC", "KaiTi", serif;
 
@@ -47,6 +53,10 @@
     --accent-purple: #b996f0;
     --accent-orange: #ff9c5c;
     --check: #67c58e;
+    --paper: #1e1f1a;
+    --kraft: #3b3327;
+    --tape: rgb(196 158 92 / 0.35);
+    --rule: #2d3236;
   }
 }
 
@@ -68,6 +78,10 @@
   --accent-purple: #b996f0;
   --accent-orange: #ff9c5c;
   --check: #67c58e;
+  --paper: #1e1f1a;
+  --kraft: #3b3327;
+  --tape: rgb(196 158 92 / 0.35);
+  --rule: #2d3236;
 }
 
 .accent-red { --accent: var(--accent-red); }

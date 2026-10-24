@@ -1,11 +1,14 @@
 ---
 import Base from '../layouts/Base.astro';
+import CatNote from '../components/CatNote.astro';
 import { url } from '../lib/site';
+import menuCat from '../assets/cats/404-menu.png';
 ---
 
 <Base title="找不到页面">
-  <header class="page-head">
+  <CatNote cat={menuCat}>
     <h1>这页不在菜单上</h1>
     <p class="lede">链接可能写错了，或者这篇还没写。可以从 <a href={url()}>首页</a>、<a href={url('recipes')}>菜谱</a> 或 <a href={url('principles')}>原理</a> 找起。</p>
-  </header>
+    <p><a class="cat-note-btn" href={url('search')}>搜一搜</a></p>
+  </CatNote>
 </Base>

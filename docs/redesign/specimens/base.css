@@ -1,0 +1,87 @@
+/* Shared base for the three cozy-redesign specimens. Colours are the live site's tokens
+   plus the two additions proposed in refs/README.md (kraft card, highlighter). */
+
+:root {
+  --bg: #f3f0e8;
+  --surface: #e9e5dc;
+  --paper: #fbf8f1;
+  --kraft: #e3cfa8;
+  --text: #24221e;
+  --muted: #625d53;
+  --border: #d3ccbe;
+  --primary: #b83e30;
+  --rule: #c9d3dc;
+  --ink: #3b3733;
+  --cocoa: #5a3f33;
+  --font-sans: "Source Han Sans SC", "Noto Sans SC", "PingFang SC", sans-serif;
+  --font-reading: "LXGW WenKai", "Kaiti SC", "KaiTi", serif;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.7 var(--font-sans);
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+/* Header: the scarf cat's face is the logo. */
+.site-head { border-bottom: 1px solid var(--border); }
+.site-head .wrap { display: flex; align-items: center; gap: 24px; height: 60px; }
+.logo { display: flex; align-items: center; gap: 10px; font: 20px/1 var(--font-reading); }
+.logo-cat {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--paper) url(/docs/redesign/characters/siamese-scarf.png) 50% 18% / 190% no-repeat;
+  border: 2px solid #fff; box-shadow: 0 1px 2px rgb(0 0 0 / .18);
+}
+.site-head nav { margin-left: auto; display: flex; gap: 22px; font-size: 15px; }
+.site-head nav a:hover { color: var(--primary); }
+
+.search {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; max-width: 440px; height: 46px; padding: 0 16px;
+  background: var(--paper); border: 1.5px solid var(--border); border-radius: 999px;
+  color: var(--muted); font-size: 15px;
+}
+.search svg { flex: none; }
+
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin: 56px 0 18px; }
+.section-head h2 { margin: 0; font: 24px/1.3 var(--font-reading); }
+.section-head a { color: var(--primary); font-size: 15px; }
+
+/* Recipe cards share their content across variants; the variants change the frame. */
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; list-style: none; margin: 0; padding: 0; }
+.card img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.card h3 { margin: 0; font: 18px/1.4 var(--font-reading); }
+.card .meta { color: var(--muted); font-size: 13px; }
+
+/* Die-cut sticker: white rim + faint shadow, placed only at edges. */
+.sticker {
+  position: absolute; border-radius: 50%; background: var(--paper);
+  border: 5px solid #fff; box-shadow: 0 2px 6px rgb(60 40 20 / .18);
+  overflow: hidden;
+}
+.sticker img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Handwritten note: short, brick red, WenKai. */
+.note { font: 17px/1.4 var(--font-reading); color: var(--primary); }
+
+/* Round stamp for a single status per card. */
+.stamp {
+  display: inline-grid; place-items: center; width: 46px; height: 46px; border-radius: 50%;
+  border: 2px solid var(--primary); color: var(--primary);
+  font: 13px/1 var(--font-reading); transform: rotate(-10deg);
+  background: rgb(251 248 241 / .85);
+}
+
+footer { margin-top: 72px; padding: 28px 0 40px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+
+@media (max-width: 900px) {
+  .cards { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .site-head nav { display: none; }
+}

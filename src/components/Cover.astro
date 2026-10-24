@@ -5,13 +5,17 @@ import { Image } from 'astro:assets';
 interface Props {
   image?: ImageMetadata;
   alt?: string;
+  /** One status stamp on the corner of the picture, e.g. 快手. */
+  stamp?: string;
 }
 
-const { image, alt = '' } = Astro.props;
+const { image, alt = '', stamp } = Astro.props;
 ---
 
 {image && (
   <figure class="cover">
+    <span class="tape" aria-hidden="true"></span>
+    {stamp && <span class="stamp">{stamp}</span>}
     <Image src={image} alt={alt} widths={[480, 800, 1200]} sizes="(min-width: 900px) 448px, 100vw" loading="eager" />
     <figcaption>插图由 AI 生成</figcaption>
   </figure>

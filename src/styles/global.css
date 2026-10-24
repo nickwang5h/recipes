@@ -572,3 +572,186 @@ body:has(.timer-dock) main { padding-bottom: 9rem; }
 @media (min-width: 560px) { .lucky { grid-template-columns: minmax(0, 18rem) minmax(0, 1fr); align-items: center; gap: 1.5rem; } }
 .section-links { display: inline-flex; flex-wrap: wrap; gap: 0.25rem 1.1rem; }
 .chip.in-season::after { content: ""; display: inline-block; width: 0.45rem; height: 0.45rem; margin-left: 0.35rem; border-radius: 50% 0; background: var(--accent-green); vertical-align: 0.1em; }
+
+/* ---------- Recipe box: cats, index cards, tape, stamps ---------- */
+
+/* Tilted cards poke a few pixels past the gutter; clip (not hidden) keeps sticky asides working. */
+main { overflow-x: clip; }
+/* Restraint rules (docs/redesign/refs/README.md): one full cat per page, stickers only at
+   edges, nothing decorative between the first ingredient and the last step. */
+
+.brand { display: inline-flex; align-items: center; gap: 0.55rem; }
+.brand-cat {
+  width: 2.25rem; height: 2.25rem; border-radius: 50%; object-fit: cover;
+  border: 2px solid #fff; box-shadow: 0 1px 3px rgb(60 40 20 / 0.25);
+}
+
+.index-card {
+  position: relative; background: var(--paper); border-radius: 8px; border-top: 4px solid var(--primary);
+  box-shadow: 0 1px 2px rgb(60 40 20 / 0.1), 0 6px 18px rgb(60 40 20 / 0.06);
+}
+/* Rows are 2.25rem; each rule sits just under its row's text. */
+.ruled { background-image: repeating-linear-gradient(to bottom, transparent 0 calc(2.25rem - 1px), var(--rule) calc(2.25rem - 1px) 2.25rem); }
+
+.tape {
+  position: absolute; z-index: 2; top: -0.6rem; left: 50%; width: 5.5rem; height: 1.5rem; margin-left: -2.75rem;
+  background: var(--tape); transform: rotate(-3deg); pointer-events: none;
+  border-left: 2px dashed rgb(255 255 255 / 0.45); border-right: 2px dashed rgb(255 255 255 / 0.45);
+}
+
+.stamp {
+  position: absolute; z-index: 2; display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 50%;
+  border: 2px solid var(--primary); color: var(--primary); background: color-mix(in srgb, var(--paper) 85%, transparent);
+  font-family: var(--font-reading); font-size: 0.85rem; line-height: 1; transform: rotate(-10deg);
+}
+
+/* Transparent cat poses get a die-cut white rim and a faint shadow. */
+.cat-sticker, .cat-note-cat {
+  height: auto;
+  filter: drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff)
+    drop-shadow(0 3px 5px rgb(60 40 20 / 0.22));
+}
+
+.hand-note { font-family: var(--font-reading); color: var(--primary); font-size: 1.05rem; }
+
+/* Home: a narrower column with more air between the blocks. */
+body.narrow .wrap { max-width: 70rem; }
+body.narrow main { padding-top: 3.5rem; }
+body.narrow .section-title { margin-top: 4rem; }
+
+/* Home: hero */
+.home-hero { display: grid; gap: 2rem; align-items: center; margin-bottom: 1.5rem; }
+@media (min-width: 900px) { .home-hero { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 2.5rem; } }
+.home-hero-card { padding: 2rem 2.25rem 1.75rem; transform: rotate(-0.5deg); }
+.home-hero-card h1 { margin: 0; }
+.home-sub { margin: 0.4rem 0 1.25rem; color: var(--muted); }
+.home-hero .home-search { margin: 0; }
+.home-hero .search-box input { background: var(--bg); }
+.home-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin-top: 1.1rem; }
+.home-lucky {
+  display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 1.1rem; border-radius: 8px;
+  background: var(--primary); color: var(--bg); text-decoration: none; font-weight: 500;
+}
+.home-lucky:hover { background: var(--primary-strong); color: var(--bg); }
+.hero-photo { position: relative; margin: 0; padding: 0.6rem; background: #fff; border-radius: 6px; transform: rotate(1.2deg); box-shadow: 0 2px 10px rgb(60 40 20 / 0.15); }
+.hero-photo img { display: block; width: 100%; height: auto; border-radius: 3px; }
+
+/* Home: recipe box with one drawer per cuisine */
+.box-tabs { display: flex; gap: 0.35rem; border-bottom: 2px solid var(--border); overflow-x: auto; scrollbar-width: none; }
+.box-tabs::-webkit-scrollbar { display: none; }
+.box-tab {
+  flex: none; padding: 0.55rem 1rem 0.45rem; border: 1px solid var(--border); border-bottom: 0; border-radius: 10px 10px 0 0;
+  background: var(--surface); color: var(--muted); font-family: var(--font-reading); font-size: 1.05rem; cursor: pointer;
+}
+.box-tab small { margin-left: 0.35rem; font-family: var(--font-sans); font-size: 0.75rem; }
+.box-tab:hover { color: var(--text); }
+.box-tab[aria-selected="true"] { background: var(--paper); color: var(--text); border-top: 3px solid var(--primary); margin-bottom: -2px; padding-bottom: calc(0.45rem + 2px); }
+.box-cards { margin-top: 1.5rem; }
+.box-more { margin: 1rem 0 0; text-align: right; font-size: 0.95rem; }
+.card.boxed { overflow: visible; background: var(--paper); border-top: 4px solid var(--primary); border-left-width: 1px; }
+.card.boxed .card-img { border-radius: 4px; width: calc(100% - 1.2rem); margin: 0.6rem 0.6rem 0; border-bottom: 0; }
+.card.boxed .stamp { top: -0.7rem; right: -0.4rem; }
+.card.boxed .card-summary { display: none; }
+.card.boxed.is-fav::after { top: auto; bottom: 0.55rem; }
+
+/* Home: fridge and quick-reference card */
+.fridge-row { display: grid; gap: 2rem 3rem; align-items: center; margin: 5rem 0 4.5rem; }
+@media (min-width: 760px) { .fridge-row { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); } }
+.fridge-cta { display: flex; align-items: center; gap: 1.25rem; color: var(--text); text-decoration: none; }
+.fridge-cta img { flex: none; width: 11rem; height: auto; }
+.fridge-cta > span { display: flex; flex-direction: column; gap: 0.3rem; }
+.fridge-cta strong { font-family: var(--font-reading); font-weight: 400; font-size: 1.5rem; line-height: 1.3; }
+.fridge-cta > span > span:not(.fridge-cta-link) { color: var(--muted); }
+.fridge-cta-link { color: var(--primary); }
+.fridge-cta:hover .fridge-cta-link { text-decoration: underline; }
+.magnet-card { position: relative; padding: 1.75rem 1.6rem 1.25rem; background: var(--kraft); border-radius: 6px; transform: rotate(1.5deg); box-shadow: 0 6px 16px rgb(60 40 20 / 0.14); }
+.magnet-card::before {
+  content: ""; position: absolute; top: -0.6rem; left: 50%; width: 1.35rem; height: 1.35rem; margin-left: -0.675rem;
+  border-radius: 50%; background: var(--primary); box-shadow: inset -3px -3px 0 rgb(0 0 0 / 0.18);
+}
+.magnet-card h2 { margin: 0 0 0.4rem; font-size: 1.25rem; }
+.magnet-card ul { margin: 0 0 0.6rem; padding-left: 1.2rem; }
+
+/* Home: principles on a ruled card */
+.principles-card { padding: 0.5rem 1.75rem 1.25rem; margin-bottom: 2rem; background-position: 0 0.5rem; line-height: 2.25rem; }
+.principles-card .section-head { align-items: center; }
+.principles-card h2 { margin: 0; font-size: 1.35rem; line-height: 2.25rem; }
+.principles-card dl { display: grid; grid-template-columns: 7.5em minmax(0, 1fr); margin: 0; }
+.principles-card dt { color: var(--muted); font-size: 0.95rem; }
+.principles-card dd { margin: 0; }
+.principles-card dd a { display: inline-block; margin-right: 1rem; color: var(--text); text-decoration: none; white-space: nowrap; }
+.principles-card dd a:hover { color: var(--primary); }
+.principles-cat { position: absolute; right: -0.75rem; bottom: -1.75rem; width: 6.5rem; transform: rotate(-6deg); }
+@media (max-width: 559px) {
+  .home-hero-card { padding: 1.5rem 1.25rem 1.25rem; transform: none; }
+  .hero-photo { transform: rotate(0.8deg); }
+  .fridge-cta img { width: 7.5rem; }
+  .principles-card { padding: 0.5rem 1.1rem 1.5rem; }
+  .principles-card dl { grid-template-columns: 1fr; }
+  .principles-cat { width: 4.5rem; right: 0.25rem; bottom: -1.5rem; }
+}
+
+/* Empty states: the cat stands on a ground line next to one sentence and one action. */
+.cat-note { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.5rem 2rem; max-width: 46rem; margin: 1.5rem 0; }
+.cat-note-ground { flex: none; width: 10rem; padding: 0 0.5rem 0.4rem; border-bottom: 2px solid var(--border); }
+.cat-note-cat { display: block; width: 100%; }
+.cat-note-text { flex: 1 1 18rem; padding-bottom: 0.4rem; }
+.cat-note-text > :first-child { margin-top: 0; }
+.cat-note-text p { margin: 0.35rem 0; }
+.cat-note-title { font-family: var(--font-reading); font-size: 1.35rem; }
+.cat-note-btn {
+  display: inline-flex; align-items: center; min-height: 2.5rem; margin-top: 0.4rem; padding: 0 1rem; border-radius: 999px;
+  border: 1px solid var(--primary); color: var(--primary); text-decoration: none; font-size: 0.95rem;
+}
+.cat-note-btn:hover { background: var(--primary); color: var(--bg); }
+.prose .cat-note p { font-family: var(--font-sans); font-size: 1rem; }
+.prose .cat-note .cat-note-title { font-family: var(--font-reading); font-size: 1.35rem; }
+[data-served]:not([hidden]) { animation: cat-in 400ms ease-out; }
+@keyframes cat-in { from { opacity: 0; transform: translateY(0.5rem); } }
+
+.head-with-cat { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; }
+.head-with-cat .cat-sticker { flex: none; width: 8rem; transform: rotate(4deg); }
+@media (max-width: 559px) { .head-with-cat .cat-sticker { width: 5rem; } }
+
+/* Pages with a cover: the illustration is a taped-on photo. */
+.cover { position: relative; }
+.cover img { padding: 0.5rem; background: #fff; border: 0; box-shadow: 0 2px 10px rgb(60 40 20 / 0.14); }
+.hero .cover { transform: rotate(1deg); }
+.cover .stamp { top: -0.8rem; right: -0.6rem; }
+
+/* Every page shares the recipe-box look: cards are index cards (paper, a coloured top
+   line), and panels that hold a list sit on the same card stock. */
+.card { background: var(--paper); border-left: 1px solid var(--border); border-top: 3px solid var(--accent, var(--primary)); }
+.cuisine-hero { background: var(--paper); }
+:is(.recipe-aside, .menu-day, .shopping-list, .lucky) { background: var(--paper); border-top: 4px solid var(--primary); }
+.lucky { border-color: var(--border); border-top-color: var(--primary); }
+.lucky-card .card { background: var(--bg); }
+
+/* The waving cat peeks over the footer line on every page. */
+.site-footer { position: relative; }
+.footer-cat { position: absolute; bottom: 100%; right: max(var(--gutter), calc((100% - 80rem) / 2 + var(--gutter))); height: 3.4rem; overflow: hidden; pointer-events: none; }
+body.narrow .footer-cat { right: max(var(--gutter), calc((100% - 70rem) / 2 + var(--gutter))); }
+.footer-cat img { display: block; width: 5.5rem; height: auto; transform: rotate(-4deg); transform-origin: bottom center; }
+:root[data-theme="dark"] .footer-cat img { filter: brightness(0.9); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .footer-cat img { filter: brightness(0.9); } }
+
+/* Dark: paper frames turn to dark card stock; stickers keep a softer cream rim. */
+:root {
+  --rim-dark: drop-shadow(2px 0 0 #d9d2c3) drop-shadow(-2px 0 0 #d9d2c3) drop-shadow(0 2px 0 #d9d2c3) drop-shadow(0 -2px 0 #d9d2c3);
+}
+:root[data-theme="dark"] :is(.hero-photo, .cover img) { background: var(--surface-strong); }
+:root[data-theme="dark"] :is(.hero-photo img, .fridge-cta img) { filter: brightness(0.9); }
+:root[data-theme="dark"] :is(.cat-sticker, .cat-note-cat) { filter: brightness(0.9) var(--rim-dark); }
+:root[data-theme="dark"] .brand-cat { border-color: var(--surface-strong); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) :is(.hero-photo, .cover img) { background: var(--surface-strong); }
+  :root:not([data-theme="light"]) :is(.hero-photo img, .fridge-cta img) { filter: brightness(0.9); }
+  :root:not([data-theme="light"]) :is(.cat-sticker, .cat-note-cat) { filter: brightness(0.9) var(--rim-dark); }
+  :root:not([data-theme="light"]) .brand-cat { border-color: var(--surface-strong); }
+}
+
+@media (prefers-reduced-motion: reduce) { [data-served]:not([hidden]) { animation: none; } }
+@media print {
+  .tape, .stamp, .cat-note, .hero-photo, .brand-cat, .footer-cat { display: none !important; }
+  .recipe-aside { border-top: 1px solid var(--border); }
+}

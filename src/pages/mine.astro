@@ -1,5 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
+import CatNote from '../components/CatNote.astro';
+import plateCat from '../assets/cats/mine-empty.png';
 import { url } from '../lib/site';
 ---
 
@@ -11,7 +13,11 @@ import { url } from '../lib/site';
 
   <section aria-labelledby="fav-title">
     <h2 id="fav-title" class="section-title">常做的菜 <span class="fridge-count" data-fav-count></span></h2>
-    <p class="fridge-empty" data-fav-empty hidden>还没有。在菜谱页点「常做」，那道菜就会出现在这里。</p>
+    <CatNote cat={plateCat} hidden data-fav-empty>
+      <p class="cat-note-title">盘子还空着</p>
+      <p>在菜谱页点「常做」，那道菜就会出现在这里。</p>
+      <p><a class="cat-note-btn" href={url('recipes')}>去挑几道菜</a></p>
+    </CatNote>
     <ul class="card-grid" data-favs></ul>
   </section>
 
@@ -78,7 +84,7 @@ import { url } from '../lib/site';
     $('[data-family-invite]').addEventListener('click', async () => {
       const link = `${location.origin}/mine/#join=${syncStatus().family}`;
       try {
-        if (navigator.share) await navigator.share({ title: '厨房原理笔记 · 加入家庭', url: link });
+        if (navigator.share) await navigator.share({ title: '猫饭 · 加入家庭', url: link });
         else {
           await navigator.clipboard.writeText(link);
           flash($('[data-family-status]'), '已复制，发给家人打开即可');
