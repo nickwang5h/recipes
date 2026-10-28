@@ -755,3 +755,39 @@ body.narrow .footer-cat { right: max(var(--gutter), calc((100% - 70rem) / 2 + va
   .tape, .stamp, .cat-note, .hero-photo, .brand-cat, .footer-cat { display: none !important; }
   .recipe-aside { border-top: 1px solid var(--border); }
 }
+
+/* Weekday tags (能带饭, 一锅出): one icon set for the home shortcuts, card badges and the recipe header. */
+.tag-icon { width: 1em; height: 1em; flex: none; }
+.tag-pill {
+  display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.05rem 0.5rem 0.05rem 0.4rem;
+  border: 1px solid var(--border); border-radius: 999px; background: var(--paper); color: var(--muted); line-height: 1.5;
+}
+.card .tag-pill { font-size: 0.75rem; }
+.eyebrow .tag-pill { color: var(--text); text-decoration: none; font-size: 0.85rem; }
+.eyebrow .tag-pill .tag-icon { color: var(--primary); }
+.eyebrow a.tag-pill:hover { border-color: var(--primary); color: var(--primary); }
+
+.shortcuts { display: grid; gap: 0.9rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); margin: 3rem 0 0; }
+.shortcut {
+  display: flex; align-items: center; gap: 0.9rem; padding: 0.9rem 1.1rem; border: 1px solid var(--border); border-radius: 8px;
+  background: var(--paper); color: var(--text); text-decoration: none; box-shadow: 0 1px 0 var(--border);
+  transition: border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+}
+.shortcut:hover { border-color: var(--primary); color: var(--text); transform: translateY(-2px); box-shadow: 0 6px 16px -10px rgb(60 40 20 / 0.35); }
+.shortcut-icon { display: grid; place-items: center; flex: none; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--kraft); color: var(--text); font-size: 1.5rem; }
+.shortcut-text { display: flex; flex-direction: column; min-width: 0; }
+.shortcut strong { font-family: var(--font-reading); font-weight: 400; font-size: 1.15rem; line-height: 1.4; }
+.shortcut strong small { margin-left: 0.5rem; font-family: var(--font-sans); font-size: 0.8rem; color: var(--muted); }
+.shortcut-text > span { color: var(--muted); font-size: 0.85rem; line-height: 1.5; }
+.section-head + .box-tabs { margin-top: 0.75rem; }
+@media (max-width: 559px) {
+  .shortcuts { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.6rem; margin-top: 2rem; }
+  .shortcut { flex-direction: column; gap: 0.45rem; padding: 0.8rem 0.4rem 0.7rem; text-align: center; }
+  .shortcut-icon { width: 2.5rem; height: 2.5rem; }
+  .shortcut strong { font-size: 1rem; }
+  .shortcut strong small { display: block; margin: 0; }
+  .shortcut-text > span { display: none; }
+}
+.chip-tag { display: inline-flex; align-items: center; gap: 0.3rem; }
+.chip-tag .tag-icon { color: var(--primary); }
+.chip-tag[aria-current] .tag-icon { color: inherit; }

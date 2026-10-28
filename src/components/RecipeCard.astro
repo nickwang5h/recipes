@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
 import { TAGS } from '../lib/categories';
+import TagIcon from './TagIcon.astro';
 import { formatTotal, url } from '../lib/site';
 
 interface Props {
@@ -33,7 +34,7 @@ const PLATE = '<svg viewBox="0 0 120 72" fill="none" stroke="currentColor" strok
     <div class="meta">
       <span class={`cuisine-tag accent-${cuisine.data.accent}`}>{cuisine.data.title}</span>
       <span>{formatTotal(time)}</span>
-      {tags.map((tag) => <span>{TAGS[tag]}</span>)}
+      {tags.map((tag) => <span class="tag-pill"><TagIcon name={tag} />{TAGS[tag]}</span>)}
     </div>
   </div>
 </a>

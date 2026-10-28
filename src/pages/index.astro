@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import RecipeCard from '../components/RecipeCard.astro';
+import TagIcon from '../components/TagIcon.astro';
 import { PRINCIPLE_CATEGORIES, type PrincipleCategory } from '../lib/categories';
 import { formatDate, getCuisines, url } from '../lib/site';
 import heroCats from '../assets/cats/hero-duo.png';
@@ -31,6 +32,15 @@ const drawers = cuisines.map((c) => {
   return { cuisine: c, picks, count: recipes.filter((r) => r.data.cuisine.id === c.id).length };
 });
 
+// Weekday shortcuts above the recipe box.
+const dishes = recipes.filter((r) => !r.data.component);
+const tagged = (tag: 'bento' | 'one-pot') => dishes.filter((r) => r.data.tags.includes(tag)).length;
+const shortcuts = [
+  { icon: 'bento', title: '能带饭', count: tagged('bento'), note: '第二天复热不变味，装盒不出水', href: `${url('recipes')}?tag=bento` },
+  { icon: 'one-pot', title: '一锅出', count: tagged('one-pot'), note: '肉、菜、主食一口锅做完', href: `${url('recipes')}?tag=one-pot` },
+  { icon: 'season', title: '当季的菜', note: '用安大略这个月正在收的菜', href: `${url('recipes')}?season=1` },
+] as const;
+
 const byCategory = (Object.keys(PRINCIPLE_CATEGORIES) as PrincipleCategory[])
   .map((category) => ({ category, items: principles.filter((p) => p.data.category === category) }))
   .filter((g) => g.items.length > 0);
@@ -58,13 +68,22 @@ const short = (title: string) => title.split('：')[0];
     </figure>
   </section>
 
+  <nav class="shortcuts" aria-label="按用途找菜">
+    {shortcuts.map((s) => (
+      <a class="shortcut" href={s.href}>
+        <span class="shortcut-icon"><TagIcon name={s.icon} /></span>
+        <span class="shortcut-text">
+          <strong>{s.title}{'count' in s && <small>{s.count} 道</small>}</strong>
+          <span>{s.note}</span>
+        </span>
+      </a>
+    ))}
+  </nav>
+
   <section aria-labelledby="box-title">
     <div class="section-head">
       <h2 id="box-title" class="section-title">翻翻食谱盒</h2>
       <span class="section-links">
-        <a href={`${url('recipes')}?season=1`}>当季的菜</a>
-        <a href={`${url('recipes')}?tag=bento`}>能带饭</a>
-        <a href={`${url('recipes')}?tag=one-pot`}>一锅出</a>
         <a href={url('recipes')}>全部 {recipes.length} 道菜 →</a>
       </span>
     </div>

@@ -12,6 +12,7 @@ import RecipeKit from '../../components/RecipeKit.astro';
 import SourceList from '../../components/SourceList.astro';
 import NutritionPanel from '../../components/NutritionPanel.astro';
 import { COURSES, TAGS } from '../../lib/categories';
+import TagIcon from '../../components/TagIcon.astro';
 import { recipeLd } from '../../lib/jsonld';
 import { related } from '../../lib/related';
 import { SITE_TITLE, formatDate, formatTime, getCuisineMap, url } from '../../lib/site';
@@ -66,7 +67,7 @@ const ld = recipeLd({
         <div class="eyebrow">
           <CuisineTag cuisine={cuisine} />
           <span>{formatTime(time)}</span>
-          {recipe.data.tags.map((tag) => <a href={`${url('recipes')}?tag=${tag}`}>{TAGS[tag]}</a>)}
+          {recipe.data.tags.map((tag) => <a class="tag-pill" href={`${url('recipes')}?tag=${tag}`}><TagIcon name={tag} />{TAGS[tag]}</a>)}
         </div>
         <h1>{title}</h1>
         {original && <p class="original">{original}</p>}
