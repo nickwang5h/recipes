@@ -5,6 +5,7 @@ title: 泡菜饼
 original: 김치전
 cuisine: korean
 course: staple
+tags: [bento]
 summary: 酸熟泡菜、泡菜汁和少量面粉拌成糊，薄摊煎脆；油要流到饼底，中央才不会湿软。
 servings: 2
 time: { prep: 10, cook: 20 }
@@ -33,7 +34,7 @@ updated: 2026-10-02
 
 泡菜饼（김치전）把酸熟的白菜泡菜煎进薄面糊，边缘焦脆，中间能咬到柔软的泡菜。泡菜与罐里的汁已经带着咸、酸、辣味，少量糖把酸味稍微拉圆，家常做法用面粉、葱和水就能成饼。
 
-面粉中的淀粉吸水受热后[糊化](/principles/starch-gelatinization/)，把泡菜连成一张饼。随后饼底不断失水，才形成脆壳。油填满锅与饼之间的小空隙，帮助[传热](/principles/heat-transfer/)；面糊少搅拌，限制[面筋](/principles/gluten/)发展，饼才不会韧得费劲。
+面粉中的淀粉吸水受热后会糊化，把泡菜连成一张饼，见[淀粉糊化](/principles/starch-gelatinization/)。随后饼底不断失水，才形成脆壳。油填满锅与饼之间的小空隙，帮助[传热](/principles/heat-transfer/)；面糊少搅拌，限制[面筋](/principles/gluten/)发展，饼才不会韧得费劲。
 
 ## 步骤
 

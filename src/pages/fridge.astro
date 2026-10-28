@@ -87,7 +87,7 @@ const data = {
       <p class="fridge-empty" data-have-empty>还没选。搜索或在下面的类别里点选。</p>
 
       <details class="fridge-group">
-        <summary>常备调料 <span class="fridge-count" data-staple-count></span></summary>
+        <summary>葱姜蒜和常备调料 <span class="fridge-count" data-staple-count></span></summary>
         <p class="fridge-help">默认视为家里有，没有的点一下取消。清水总是算有。</p>
         <ul class="chips">
           {staples.map((i) => <li><button class="chip pick" type="button" data-id={i.id} aria-pressed="true">{i.data.zh}</button></li>)}
@@ -130,13 +130,13 @@ const data = {
         <ul class="card-grid" data-ready></ul>
       </div>
       <div data-almost-wrap hidden>
-        <h2 class="section-title">差一两样 <span class="fridge-count" data-almost-count></span></h2>
+        <h2 class="section-title"><span data-almost-title>差一两样</span> <span class="fridge-count" data-almost-count></span></h2>
         <ul class="card-grid" data-almost></ul>
         <button class="text-btn fridge-more" type="button" data-more hidden></button>
       </div>
       <CatNote cat={potCat} hidden data-none>
         <p class="cat-note-title">还凑不出一道菜</p>
-        <p>多选几样食材试试。常备调料默认算家里有，不用再选。</p>
+        <p>多选几样食材试试。葱姜蒜和常备调料默认算家里有，不用再选。</p>
       </CatNote>
     </section>
   </div>
@@ -248,7 +248,11 @@ const data = {
       const showParts = get('pref:parts') === true || course === 'sauce';
       const pool = data.recipes.filter((r) => (showParts || !r.component) && (!course || r.course === course) && withinTime(time, r.minutes));
       const staples = new Set(data.staples.filter((id) => !off.has(id)));
-      const matches = matchRecipes(pool, { chosen: new Set(have), staples, substitutes, maxMissing: 2 });
+      // When nothing is within two of what's at hand (one cut of meat, say), show the nearest anyway.
+      const match = (maxMissing: number) => matchRecipes(pool, { chosen: new Set(have), staples, substitutes, maxMissing });
+      const close = match(2);
+      const loose = close.length === 0;
+      const matches = loose ? match(5) : close;
       const ready = matches.filter((m) => m.missing.length === 0);
       if (time) ready.sort((x, y) => x.recipe.minutes - y.recipe.minutes);
       const almost = matches.filter((m) => m.missing.length > 0);
@@ -260,6 +264,7 @@ const data = {
       $('[data-ready]').replaceChildren(...ready.map(card));
       $('[data-almost-wrap]').hidden = almost.length === 0;
       $('[data-almost-count]').textContent = `· ${almost.length}`;
+      $('[data-almost-title]').textContent = loose ? '还差几样' : '差一两样';
       $('[data-almost]').replaceChildren(...almost.slice(0, shown).map(card));
       const more = $<HTMLButtonElement>('[data-more]');
       more.hidden = almost.length <= shown;

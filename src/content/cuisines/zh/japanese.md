@@ -6,7 +6,7 @@ original: Washoku
 summary: 出汁是底：昆布与柴鱼的鲜味相互放大，调味料少而准，突出食材本身的味道。
 accent: purple
 principles: [umami, protein-coagulation, heat-transfer, starch-gelatinization, fermentation]
-featured: [dashi, miso-shiru, oyakodon, tamagoyaki, chawanmushi, tonkatsu]
+featured: [dashi, miso-shiru, oyakodon, tamagoyaki, chawanmushi, tonkatsu, sanshoku-soboro-don, yaki-udon]
 order: 6
 ---
 

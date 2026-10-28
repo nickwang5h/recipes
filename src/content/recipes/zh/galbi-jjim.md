@@ -5,6 +5,7 @@ title: 炖牛排骨
 original: 갈비찜
 cuisine: korean
 course: meat
+tags: [bento]
 summary: 带骨牛短肋先煮去浮沫，再用梨、酱油和蒜姜炖软；蔬菜后下，最后收出薄而发亮的汁。
 servings: 4
 time: { prep: 50, cook: 80 }
@@ -61,5 +62,5 @@ updated: 2026-10-02
 ## 要点
 
 - **肉熟了却咬不动**：胶原还没有充分软化。保持锅底有液体，按 15 分钟一段续炖，检查最厚块的筋肉。见[胶原与明胶](/principles/collagen-gelatin/)。
-- **汁太咸、黏成厚糖浆**：水收得过多，盐也被浓缩。每次加 100 ml 余汤稀释，停在薄薄挂汁的程度。见[盐与调味](/principles/salt/)。
+- **汁太咸、黏成厚糖浆**：水收得过多，盐也被浓缩。每次加 100 ml 余汤稀释，停在薄薄挂汁的程度。见[盐](/principles/salt/)。
 - **蔬菜散进汁里**：下得早，等肉软时蔬菜已煮过头。后下大块蔬菜，翻动时从锅底轻推；肉需要续炖时先捞出软蔬菜。见[传热](/principles/heat-transfer/)。

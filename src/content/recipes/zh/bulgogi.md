@@ -5,6 +5,7 @@ title: 韩式烤牛肉
 original: Bulgogi
 cuisine: korean
 course: meat
+tags: [bento]
 summary: 梨、酱油、蒜和香油腌薄牛肉，热锅分批烤出褐色边缘；甜咸腌汁不能淹住锅底。
 servings: 4
 time: { prep: 45, cook: 10 }
@@ -58,4 +59,4 @@ updated: 2026-10-01
 
 - **肉熟了却灰白、锅里一汪水**：下肉太多或连腌汁一起倒入，热量都用来煮水。盛出部分肉，待锅底水分散去，再分批煎。见[美拉德反应](/principles/maillard-reaction/)。
 - **外面焦黑，里面还没熟**：片太厚，或糖和果泥在锅底先烧焦。擦掉焦渣、稍减火，下一批切薄；出现棕色边缘就检查熟度。见[刀工](/principles/knife-work/)。
-- **肉发柴或腌后发糊**：过久加热会使肉失水，含梨腌汁放得过久也会破坏表层质地。选嫩部位、短时间冷藏腌制，熟透便盛出。见[蛋白质变性与凝固](/principles/protein-coagulation/)。
+- **肉发柴或腌后发糊**：肉煮久了会失水，在含梨的腌汁里泡太久，表层也会发糊。选嫩部位、短时间冷藏腌制，熟透便盛出。见[蛋白质变性与凝固](/principles/protein-coagulation/)。

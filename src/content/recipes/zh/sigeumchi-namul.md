@@ -5,6 +5,7 @@ title: 凉拌菠菜
 original: 시금치나물
 cuisine: korean
 course: veg
+tags: [bento]
 summary: 菠菜短焯、冷却并挤去余水，再拌蒜、酱油和香油，叶片柔软，茎仍有轻微脆感。
 servings: 4
 time: { prep: 10, cook: 8 }

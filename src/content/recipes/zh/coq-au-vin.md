@@ -5,6 +5,7 @@ title: 红酒烩鸡
 original: Coq au vin
 cuisine: french
 course: meat
+tags: [bento]
 summary: 鸡块先煎出褐色，再用红酒轻煨；珍珠洋葱与蘑菇另做，最后用黄油面粉糊收成挂勺的酱。
 servings: 4
 time: { prep: 25, cook: 75 }
@@ -43,7 +44,7 @@ sources:
 updated: 2026-10-01
 ---
 
-*Coq au vin* 用红酒烩鸡，配培根、珍珠洋葱和蘑菇。传统的老公鸡需要长时间炖软；这里用加拿大超市的普通鸡，达到熟度便捞出，避免鸡胸失水。深色酱汁来自红酒和煎鸡留下的褐色锅底，见[美拉德反应](/principles/maillard-reaction/)。
+*Coq au vin* 用红酒烩鸡，配培根、珍珠洋葱和蘑菇。传统要用老公鸡慢炖；这里用加拿大超市的普通鸡，熟了就捞出，鸡胸才不会变干。深色酱汁来自红酒和煎鸡留下的褐色锅底，见[美拉德反应](/principles/maillard-reaction/)。
 
 鸡肉熟后单独收汁，再加黄油面粉糊，靠[淀粉糊化](/principles/starch-gelatinization/)增稠。洋葱和蘑菇另做，能控制各自的上色与软硬，也不会把蘑菇出水全带进炖汁。
 
@@ -60,5 +61,5 @@ updated: 2026-10-01
 ## 要点
 
 - **鸡皮苍白，锅底积水**：表面没擦干或一次下太多鸡块，上色前锅已变成水煮。分批煎，褐色锅底留下，焦黑部分弃掉。见[美拉德反应](/principles/maillard-reaction/)。
-- **鸡胸干柴**：熟肉继续煮，肌肉蛋白收缩失水。达到熟度便捞出，收汁时让鸡在锅外等。见[蛋白质变性与凝固](/principles/protein-coagulation/)。
+- **鸡胸干柴**：熟了的肉还泡在锅里煮，蛋白质越缩越紧，水分被挤出来。熟了就捞出，收汁时让鸡在锅外等着。见[蛋白质变性与凝固](/principles/protein-coagulation/)。
 - **酱汁结粉块**：面粉没先与黄油揉匀，碰热汁就结团。先做细滑的糊，分次搅入；已经结块可滤掉后再调稠度。见[淀粉糊化](/principles/starch-gelatinization/)。

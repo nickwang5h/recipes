@@ -4,8 +4,12 @@
 /** Always treated as available and never shown as missing. */
 export const ALWAYS_HAVE = ['water'];
 
-/** Ticked by default in the fridge page's staples section; the cook can untick any. */
+/** Ticked by default in the fridge page's staples section; the cook can untick any.
+ *  葱姜蒜 are here because nearly every Chinese recipe needs them and nobody thinks to pick them. */
 export const DEFAULT_STAPLES = [
+  'scallion',
+  'ginger',
+  'garlic',
   'vegetable-oil',
   'salt',
   'sugar',

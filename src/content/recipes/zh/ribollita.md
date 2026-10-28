@@ -5,6 +5,7 @@ title: 托斯卡纳面包蔬菜汤
 original: Ribollita
 cuisine: italian
 course: soup
+tags: [one-pot]
 summary: 黑羽衣甘蓝、白芸豆和隔夜面包煮成的厚汤，冷藏一晚再煮，让面包吸足豆汤。
 servings: 6
 time: { prep: 35, cook: 150 }

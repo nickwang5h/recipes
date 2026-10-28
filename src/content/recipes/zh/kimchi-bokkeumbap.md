@@ -5,6 +5,7 @@ title: 泡菜炒饭
 original: Kimchi-bokkeumbap
 cuisine: korean
 course: staple
+tags: [bento, one-pot]
 summary: 酸泡菜先炒，米饭再吸进泡菜汁与辣椒酱，收干水分后拌香油。
 servings: 3
 time: { prep: 10, cook: 10 }
@@ -38,7 +39,7 @@ updated: 2026-10-01
 
 *Kimchi-bokkeumbap* 把熟米饭和发酸的白菜泡菜炒在一起，是韩国家常的一碗饭。泡菜提供酸香，辣椒酱补上咸甜和浓度，出锅前的香油留下烘烤芝麻香。熟成的[白菜泡菜](/recipes/baechu-kimchi/)最合适，刚拌好的泡菜还少了这层酸味。
 
-冷藏饭的淀粉会[回生](/principles/starch-gelatinization/)，米粒变硬，翻炒时较容易拨散。新煮的饭也能用，先摊薄散去蒸汽即可。泡菜汁负责调味，锅里的水最后要蒸发掉；成品应湿润发亮，铲开后没有一摊红汤，见[传热](/principles/heat-transfer/)。
+冷藏饭的淀粉会回生，米粒变硬，翻炒时反而容易拨散，见[淀粉糊化](/principles/starch-gelatinization/)。新煮的饭也能用，先摊薄散去蒸汽即可。泡菜汁负责调味，锅里的水最后要蒸发掉；成品应湿润发亮，铲开后没有一摊红汤，见[传热](/principles/heat-transfer/)。
 
 ## 步骤
 
@@ -54,4 +55,4 @@ updated: 2026-10-01
 - **饭团粘在一起**：米饭太湿，或入锅前没有拨散。新饭先散掉蒸汽，冷饭先拆大团，炒时以翻拌代替用力压碎。见[淀粉糊化](/principles/starch-gelatinization/)。
 - **锅底一直有红汤**：食材堆得太厚，蒸发跟不上。摊薄或分批，等汁吸收并收干再出锅。见[传热](/principles/heat-transfer/)。
 - **闻不到芝麻香**：香油太早入锅，香气随长时间加热散掉。留到最后拌入，随即离火。见[香料与香气提取](/principles/aromatics/)。
-- **隔夜饭放在台面上**：回生不需要室温放一夜。熟饭及时分装浅盒冷藏，室温超过两小时的熟饭丢弃；再炒也不能保证安全。
+- **隔夜饭放在台面上**：熟饭在室温放久不安全，再炒也救不回来。熟饭及时分装浅盒冷藏，室温超过两小时的丢弃。

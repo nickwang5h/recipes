@@ -36,6 +36,8 @@ description: Use when writing, drafting, reviewing or revising a recipe, cooking
 **front matter**：
 - `course` 必填：`veg` 素菜、`meat` 荤菜、`seafood` 水产、`soup` 汤粥、`staple` 主食、`breakfast` 早餐、`dessert` 甜品、`sauce` 酱汁、`drink` 饮品。
 - `component: true`：做出来是给别的菜用的半成品，而不是端上桌的一道菜（酱汁、高汤、油酥、白米饭、酒酿等）。`course: sauce` 的菜谱一律加上；其他类型里的半成品也要加。菜谱列表和冰箱默认隐藏这些。
+- `tags`：`bento` 能带饭、`one-pot` 一锅出，标准见 `docs/round8/README.md`；都不符合就不写。带 `bento` 的菜在 `## 要点` 里写一条带饭怎么装、复热到中心 74°C。
+- `minor: true`：一两样材料拌一拌、蒸一蒸就成的小菜，或复热半成品这类不算一道菜的东西。列表里照常显示，但不进“今晚吃什么”。
 - 配料写成 `{ ref: <名录 id>, qty, unit, note }`。`ref` 必须是 `src/data/ingredients.yaml` 里的 id；菜谱里需要更具体的叫法时加 `name`（如 `ref: ginger, name: 姜丝`）；可有可无的配料加 `optional: true`。
 - 名录由审稿人统一维护，起草时不要改 `ingredients.yaml`。需要新食材时，把条目写进本批的提案文件（派活时会给出路径），字段与名录相同；菜谱里照常引用这个新 id。
 - 食材在加拿大只有亚洲超市（T&T、H Mart 等）才有（`where: asian`）或很难买（`specialty`）时，如果主流超市有合理替代，在 `note` 里写一句，例如“没有就用 Napa cabbage”。

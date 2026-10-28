@@ -5,6 +5,7 @@ title: 麻婆豆腐
 original: Mápó dòufu
 cuisine: chinese
 course: meat
+tags: [bento]
 summary: 嫩豆腐浸在红亮的芡汁里，麻、辣、烫、香都靠芡挂在豆腐上。重点是肉末煸酥和分次勾芡。
 servings: 3
 time: { prep: 15, cook: 15 }

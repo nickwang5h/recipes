@@ -5,6 +5,7 @@ title: 普罗旺斯炖菜
 original: Ratatouille
 cuisine: french
 course: veg
+tags: [bento]
 summary: 茄子、西葫芦先分批煎，番茄另收成浓汁，再合锅轻炖，让蔬菜软而有形。
 servings: 6
 time: { prep: 40, cook: 55 }

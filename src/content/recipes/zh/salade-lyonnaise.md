@@ -40,9 +40,9 @@ sources:
 updated: 2026-10-01
 ---
 
-*Salade lyonnaise* 是里昂小酒馆的经典沙拉：卷叶菊苣、煎香的培根丁、脆面包和一枚水波蛋。菊苣微苦，叶片有支撑力，能承住温热油脂；切开蛋黄后，它再与油醋汁拌成柔滑的一口。这道沙拉含培根和鸡蛋，分在蔬菜类，配料仍要照单备齐。
+*Salade lyonnaise* 是里昂小酒馆的经典沙拉：卷叶菊苣、煎香的培根丁、脆面包和一枚水波蛋。菊苣微苦，叶片有支撑力，能承住温热油脂；切开蛋黄后，它再与油醋汁拌成柔滑的一口。
 
-水波蛋靠温和加热让蛋白先[凝固](/principles/protein-coagulation/)，留下柔软蛋黄。油醋汁里，芥末帮助油滴分散，见[乳化](/principles/emulsification/)。热配料最后放，叶片才不会在盘里久泡变软。买菊苣时认卷曲的 frisée，别拿成紧实、浅色的 Belgian endive。
+水波蛋靠温和加热让蛋白先[凝固](/principles/protein-coagulation/)，留下柔软蛋黄。油醋汁里，芥末帮助油滴分散，见[乳化](/principles/emulsification/)。热配料最后放，叶片才不会在盘里久泡变软。菊苣要买卷曲的 frisée，不是紧实、浅色的 Belgian endive。
 
 ## 步骤
 

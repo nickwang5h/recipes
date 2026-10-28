@@ -1,0 +1,672 @@
+[
+ [
+  {
+   "slug": "tu-dou-shao-ji",
+   "name": "土豆烧鸡",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "qing-jiao-rou-si",
+   "name": "青椒肉丝",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "rou-mo-qie-zi",
+   "name": "肉末茄子",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "jia-chang-dou-fu",
+   "name": "家常豆腐",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "veg",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "xi-lan-hua-chao-xia-ren",
+   "name": "西兰花炒虾仁",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "seafood",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  }
+ ],
+ [
+  {
+   "slug": "lu-ji-tui",
+   "name": "卤鸡腿",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "mi-zhi-kao-ji-chi",
+   "name": "蜜汁烤鸡翅",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "yan-ju-ji-chi",
+   "name": "盐焗鸡翅",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "fan-qie-fei-niu",
+   "name": "番茄肥牛",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "meat",
+   "component": false,
+   "tags": []
+  },
+  {
+   "slug": "gan-chao-niu-he",
+   "name": "干炒牛河",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "staple",
+   "component": false,
+   "tags": [
+    "one-pot"
+   ]
+  }
+ ],
+ [
+  {
+   "slug": "shang-hai-cu-chao-mian",
+   "name": "上海粗炒面",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "staple",
+   "component": false,
+   "tags": [
+    "one-pot"
+   ]
+  },
+  {
+   "slug": "la-chang-tu-dou-men-fan",
+   "name": "腊肠土豆焖饭",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "staple",
+   "component": false,
+   "tags": [
+    "bento",
+    "one-pot"
+   ]
+  },
+  {
+   "slug": "xiang-gu-ji-rou-men-fan",
+   "name": "香菇鸡肉焖饭",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "staple",
+   "component": false,
+   "tags": [
+    "bento",
+    "one-pot"
+   ]
+  },
+  {
+   "slug": "xiang-gu-you-cai",
+   "name": "香菇油菜",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "veg",
+   "component": false,
+   "tags": []
+  },
+  {
+   "slug": "wo-sun-chao-rou-pian",
+   "name": "莴笋炒肉片",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  }
+ ],
+ [
+  {
+   "slug": "jiang-bao-ji-ding",
+   "name": "酱爆鸡丁",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "xing-zhou-chao-mi",
+   "name": "星洲炒米",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "staple",
+   "component": false,
+   "tags": [
+    "one-pot"
+   ]
+  },
+  {
+   "slug": "ku-gua-chao-dan",
+   "name": "苦瓜炒蛋",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "veg",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "xiang-jian-dai-yu",
+   "name": "香煎带鱼",
+   "original": "",
+   "cuisine": "chinese",
+   "course": "seafood",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  }
+ ],
+ [
+  {
+   "slug": "tebasaki",
+   "name": "名古屋手羽先",
+   "original": "手羽先",
+   "cuisine": "japanese",
+   "course": "meat",
+   "component": false,
+   "tags": []
+  },
+  {
+   "slug": "sanshoku-soboro-don",
+   "name": "三色肉松饭",
+   "original": "三色そぼろ丼",
+   "cuisine": "japanese",
+   "course": "staple",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "buri-teriyaki",
+   "name": "照烧鰤鱼",
+   "original": "ぶりの照り焼き",
+   "cuisine": "japanese",
+   "course": "seafood",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "kiriboshi-daikon",
+   "name": "煮萝卜干",
+   "original": "切り干し大根の煮物",
+   "cuisine": "japanese",
+   "course": "veg",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "chicken-nanban",
+   "name": "南蛮鸡",
+   "original": "チキン南蛮",
+   "cuisine": "japanese",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  }
+ ],
+ [
+  {
+   "slug": "yasai-itame",
+   "name": "猪肉炒蔬菜",
+   "original": "野菜炒め",
+   "cuisine": "japanese",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "chukadon",
+   "name": "中华丼",
+   "original": "中華丼",
+   "cuisine": "japanese",
+   "course": "staple",
+   "component": false,
+   "tags": []
+  },
+  {
+   "slug": "yaki-udon",
+   "name": "炒乌冬",
+   "original": "焼きうどん",
+   "cuisine": "japanese",
+   "course": "staple",
+   "component": false,
+   "tags": [
+    "one-pot"
+   ]
+  },
+  {
+   "slug": "niku-maki",
+   "name": "芦笋肉卷",
+   "original": "アスパラの肉巻き",
+   "cuisine": "japanese",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  }
+ ],
+ [
+  {
+   "slug": "eomuk-bokkeum",
+   "name": "炒鱼饼",
+   "original": "어묵볶음",
+   "cuisine": "korean",
+   "course": "seafood",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "myeolchi-bokkeum",
+   "name": "炒小银鱼",
+   "original": "멸치볶음",
+   "cuisine": "korean",
+   "course": "seafood",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "dubu-kimchi",
+   "name": "豆腐泡菜炒猪肉",
+   "original": "두부김치",
+   "cuisine": "korean",
+   "course": "meat",
+   "component": false,
+   "tags": []
+  },
+  {
+   "slug": "kongnamul-bap",
+   "name": "豆芽饭",
+   "original": "콩나물밥",
+   "cuisine": "korean",
+   "course": "staple",
+   "component": false,
+   "tags": [
+    "one-pot"
+   ]
+  }
+ ],
+ [
+  {
+   "slug": "andong-jjimdak",
+   "name": "安东炖鸡",
+   "original": "안동찜닭",
+   "cuisine": "korean",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "one-pot"
+   ]
+  },
+  {
+   "slug": "hobak-jeon",
+   "name": "西葫芦煎饼",
+   "original": "호박전",
+   "cuisine": "korean",
+   "course": "veg",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "sogogi-muguk",
+   "name": "牛肉萝卜汤",
+   "original": "소고기뭇국",
+   "cuisine": "korean",
+   "course": "soup",
+   "component": false,
+   "tags": []
+  }
+ ],
+ [
+  {
+   "slug": "peek-gai-tod-nam-pla",
+   "name": "泰式鱼露炸鸡翅",
+   "original": "ปีกไก่ทอดน้ำปลา",
+   "cuisine": "thai",
+   "course": "meat",
+   "component": false,
+   "tags": []
+  },
+  {
+   "slug": "moo-tod-kratiem",
+   "name": "蒜香胡椒猪肉",
+   "original": "หมูทอดกระเทียม",
+   "cuisine": "thai",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "gai-pad-king",
+   "name": "姜丝炒鸡",
+   "original": "ไก่ผัดขิง",
+   "cuisine": "thai",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  }
+ ],
+ [
+  {
+   "slug": "pad-kana-moo",
+   "name": "芥兰炒猪肉",
+   "original": "ผัดคะน้าหมู",
+   "cuisine": "thai",
+   "course": "meat",
+   "component": false,
+   "tags": []
+  },
+  {
+   "slug": "moo-palo",
+   "name": "五香卤猪肉蛋",
+   "original": "ไข่พะโล้",
+   "cuisine": "thai",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "khao-kluk-kapi",
+   "name": "虾酱拌饭",
+   "original": "ข้าวคลุกกะปิ",
+   "cuisine": "thai",
+   "course": "staple",
+   "component": false,
+   "tags": []
+  }
+ ],
+ [
+  {
+   "slug": "canh-ga-chien-nuoc-mam",
+   "name": "越南鱼露鸡翅",
+   "original": "cánh gà chiên nước mắm",
+   "cuisine": "vietnamese",
+   "course": "meat",
+   "component": false,
+   "tags": []
+  },
+  {
+   "slug": "dau-hu-nhoi-thit",
+   "name": "番茄汁酿豆腐",
+   "original": "đậu hũ nhồi thịt sốt cà chua",
+   "cuisine": "vietnamese",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "cha-trung-hap",
+   "name": "越南蒸蛋肉饼",
+   "original": "chả trứng hấp",
+   "cuisine": "vietnamese",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  }
+ ],
+ [
+  {
+   "slug": "mi-xao-bo",
+   "name": "越南牛肉炒面",
+   "original": "mì xào bò",
+   "cuisine": "vietnamese",
+   "course": "staple",
+   "component": false,
+   "tags": [
+    "one-pot"
+   ]
+  },
+  {
+   "slug": "dau-hu-xa-ot",
+   "name": "香茅辣椒豆腐",
+   "original": "đậu hũ xả ớt",
+   "cuisine": "vietnamese",
+   "course": "veg",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "dau-que-xao-bo",
+   "name": "四季豆炒牛肉",
+   "original": "đậu que xào bò",
+   "cuisine": "vietnamese",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  }
+ ],
+ [
+  {
+   "slug": "salade-de-lentilles",
+   "name": "法式扁豆沙拉",
+   "original": "salade de lentilles",
+   "cuisine": "french",
+   "course": "veg",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "saucisses-aux-lentilles",
+   "name": "香肠炖扁豆",
+   "original": "saucisses aux lentilles",
+   "cuisine": "french",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento",
+    "one-pot"
+   ]
+  },
+  {
+   "slug": "poulet-basquaise",
+   "name": "巴斯克炖鸡",
+   "original": "poulet basquaise",
+   "cuisine": "french",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  }
+ ],
+ [
+  {
+   "slug": "saumon-en-papillote",
+   "name": "纸包三文鱼",
+   "original": "saumon en papillote",
+   "cuisine": "french",
+   "course": "seafood",
+   "component": false,
+   "tags": []
+  },
+  {
+   "slug": "cake-sale",
+   "name": "法式咸蛋糕",
+   "original": "cake salé",
+   "cuisine": "french",
+   "course": "staple",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "tian-provencal",
+   "name": "普罗旺斯烤蔬菜",
+   "original": "tian provençal",
+   "cuisine": "french",
+   "course": "veg",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  }
+ ],
+ [
+  {
+   "slug": "insalata-di-riso",
+   "name": "意式米沙拉",
+   "original": "insalata di riso",
+   "cuisine": "italian",
+   "course": "staple",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "salsiccia-e-fagioli",
+   "name": "香肠炖白豆",
+   "original": "salsiccia e fagioli",
+   "cuisine": "italian",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  },
+  {
+   "slug": "spezzatino",
+   "name": "土豆豌豆炖牛肉",
+   "original": "spezzatino di manzo con patate e piselli",
+   "cuisine": "italian",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento",
+    "one-pot"
+   ]
+  },
+  {
+   "slug": "polpettone",
+   "name": "意式肉卷",
+   "original": "polpettone",
+   "cuisine": "italian",
+   "course": "meat",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  }
+ ],
+ [
+  {
+   "slug": "spaghetti-alla-nerano",
+   "name": "西葫芦意面",
+   "original": "spaghetti alla Nerano",
+   "cuisine": "italian",
+   "course": "staple",
+   "component": false,
+   "tags": []
+  },
+  {
+   "slug": "pasta-al-tonno",
+   "name": "金枪鱼番茄意面",
+   "original": "pasta al tonno",
+   "cuisine": "italian",
+   "course": "staple",
+   "component": false,
+   "tags": []
+  },
+  {
+   "slug": "fagiolini-al-pomodoro",
+   "name": "番茄炖四季豆",
+   "original": "fagiolini al pomodoro",
+   "cuisine": "italian",
+   "course": "veg",
+   "component": false,
+   "tags": [
+    "bento"
+   ]
+  }
+ ]
+]

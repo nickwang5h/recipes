@@ -5,6 +5,7 @@ title: 日式炒面
 original: 焼きそば
 cuisine: japanese
 course: staple
+tags: [bento, one-pot]
 summary: 熟小麦面配猪五花、包菜与酸甜炒面酱，先热松面条，再分次炒肉菜，最后翻拌挂汁。
 servings: 3
 time: { prep: 15, cook: 25 }

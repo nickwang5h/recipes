@@ -4,6 +4,7 @@ coverAlt: 京酱肉丝装盘后的插画
 title: 京酱肉丝
 cuisine: chinese
 course: meat
+tags: [bento]
 summary: 里脊丝先上浆炒散，再裹浓亮的甜面酱汁，配生葱丝与千张卷着吃。
 servings: 4
 time: { prep: 20, cook: 20 }

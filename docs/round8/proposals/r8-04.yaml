@@ -1,0 +1,3 @@
+- { id: ground-chicken, zh: 鸡肉末, aliases: [鸡绞肉, 绞鸡肉, 鸡肉馅, Ground chicken], en: Ground chicken, kind: poultry, where: mainstream, pantry: false, substitutes: [] }
+- { id: yellowtail, zh: 鰤鱼, aliases: [鰤, 油甘鱼, 日本鰤, Buri, Hamachi, Japanese amberjack], en: Japanese yellowtail / Hamachi fillet, kind: seafood, where: specialty, pantry: false, substitutes: [salmon] }
+- { id: dried-hijiki, zh: 干羊栖菜, aliases: [羊栖菜, 鹿尾菜, 芽羊栖菜, ひじき, Hijiki, Mehijiki], en: Dried hijiki seaweed, kind: dried, where: specialty, pantry: true, substitutes: [] }

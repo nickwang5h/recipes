@@ -4,6 +4,7 @@ coverAlt: 清炒花菜装盘后的插画
 title: 清炒花菜
 cuisine: chinese
 course: veg
+tags: [bento]
 summary: 花菜先焯到略软，再用蒜油翻炒和少量水短焖；粗茎切薄，才能与花朵一起熟。
 servings: 2
 time: { prep: 10, cook: 10 }

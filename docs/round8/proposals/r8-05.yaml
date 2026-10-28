@@ -1,0 +1,2 @@
+- { id: asparagus, zh: 芦笋, aliases: [绿芦笋, 蘆筍], en: Asparagus, kind: vegetable, where: mainstream, pantry: false, substitutes: [] }
+- { id: dashi-powder, zh: 颗粒出汁素, aliases: [出汁粉, 鲣鱼出汁素, 本だし, Hondashi], en: Dashi granules / Hondashi bonito soup stock, kind: seasoning, where: asian, pantry: true, substitutes: [] }

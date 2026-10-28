@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import OfflineSave from '../../components/OfflineSave.astro';
 import RecipeCard from '../../components/RecipeCard.astro';
-import { COURSES, TIME_LIMITS, type Course } from '../../lib/categories';
+import { COURSES, TAGS, TIME_LIMITS, type Course } from '../../lib/categories';
 import { getCuisineMap, getCuisines, url } from '../../lib/site';
 
 const cuisines = await getCuisines();
@@ -48,6 +48,10 @@ const inSeason = Object.fromEntries(
     <a class="chip" href={base} data-value="">不限时间</a>
     {Object.entries(TIME_LIMITS).map(([id, t]) => <a class="chip" href={`${base}?time=${id}`} data-value={id}>{t.label}</a>)}
   </nav>
+  <nav class="filters chips" aria-label="按用途筛选" data-filter-group="tag">
+    <a class="chip" href={base} data-value="">不限用途</a>
+    {Object.entries(TAGS).map(([id, label]) => <a class="chip" href={`${base}?tag=${id}`} data-value={id}>{label}</a>)}
+  </nav>
 
   <div class="filter-bar">
     <p class="filter-count" data-count>{recipes.length - components} 道菜</p>
@@ -66,7 +70,7 @@ const inSeason = Object.fromEntries(
     <div class="lucky-card" data-lucky-card></div>
     <div class="lucky-side">
       <h2>就做这道？</h2>
-      <p>从当前筛选出的菜里随手抽的。不想做就再抽。</p>
+      <p>从当前筛选出的菜里随手抽的，小菜和要花三小时以上的不抽。不想做就再抽。</p>
       <div class="kit-actions">
         <button class="text-btn" type="button" data-lucky-pick>换一道</button>
         <button class="text-btn" type="button" data-lucky-close>收起</button>
@@ -76,7 +80,7 @@ const inSeason = Object.fromEntries(
   <script type="application/json" id="in-season" set:html={JSON.stringify(inSeason)} />
   <ul class="card-grid" data-recipe-list>
     {recipes.map((recipe) => (
-      <li data-cuisine={recipe.data.cuisine.id} data-course={recipe.data.course} data-minutes={recipe.data.time.prep + recipe.data.time.cook} data-months={seasonOf(recipe)} data-component={recipe.data.component ? '' : undefined} hidden={recipe.data.component}>
+      <li data-cuisine={recipe.data.cuisine.id} data-course={recipe.data.course} data-minutes={recipe.data.time.prep + recipe.data.time.cook} data-months={seasonOf(recipe)} data-tags={recipe.data.tags.join(' ')} data-minor={recipe.data.minor ? '' : undefined} data-component={recipe.data.component ? '' : undefined} hidden={recipe.data.component}>
         <RecipeCard recipe={recipe} cuisine={cuisineMap.get(recipe.data.cuisine.id)!} />
       </li>
     ))}
@@ -86,7 +90,7 @@ const inSeason = Object.fromEntries(
   <script>
     import { withinTime } from '../../lib/categories';
 
-    const GROUPS = ['cuisine', 'course', 'time'] as const;
+    const GROUPS = ['cuisine', 'course', 'time', 'tag'] as const;
     const month = new Date().getMonth() + 1;
     const inSeason: Record<number, string[]> = JSON.parse(document.getElementById('in-season')!.textContent!);
 
@@ -107,7 +111,9 @@ const inSeason = Object.fromEntries(
         const match = (parts || li.dataset.component === undefined) && (!seasonal || li.dataset.months!.split(',').includes(String(month))) && GROUPS.every((g) => {
           const want = params.get(g);
           if (!want) return true;
-          return g === 'time' ? withinTime(want, minutes) : li.dataset[g] === want;
+          if (g === 'time') return withinTime(want, minutes);
+          if (g === 'tag') return li.dataset.tags!.split(' ').includes(want);
+          return li.dataset[g] === want;
         });
         li.hidden = !match;
         // With a time limit set, quickest first.
@@ -140,11 +146,20 @@ const inSeason = Object.fromEntries(
       });
     }
 
-    // 今晚吃什么: one dish at random from whatever the filters currently show.
+    // 今晚吃什么: one dish at random from whatever the filters currently show. Sides, sweets and
+    // drinks, and anything over three hours, are left out unless the filters ask for them.
     const lucky = document.querySelector<HTMLElement>('[data-lucky]')!;
     let last: HTMLElement | undefined;
+    const NOT_DINNER = ['dessert', 'drink', 'sauce'];
+    const dinner = (li: HTMLElement) => {
+      const params = new URLSearchParams(location.search);
+      return li.dataset.minor === undefined
+        && (params.has('course') || !NOT_DINNER.includes(li.dataset.course!))
+        && (params.has('time') || Number(li.dataset.minutes) <= 180);
+    };
     const pick = () => {
-      const pool = [...document.querySelectorAll<HTMLElement>('[data-recipe-list] > li:not([hidden])')].filter((li) => li !== last);
+      const shown = [...document.querySelectorAll<HTMLElement>('[data-recipe-list] > li:not([hidden])')].filter((li) => li !== last);
+      const pool = shown.some(dinner) ? shown.filter(dinner) : shown;
       if (!pool.length) return;
       last = pool[Math.floor(Math.random() * pool.length)];
       lucky.querySelector('[data-lucky-card]')!.replaceChildren(last.firstElementChild!.cloneNode(true));

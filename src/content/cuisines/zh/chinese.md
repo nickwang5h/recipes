@@ -5,7 +5,7 @@ title: 中餐
 summary: 刀工决定受热，火候决定口感，调味是一整套“味型”。炒锅、芡汁和油，是把这些串起来的工具。
 accent: red
 principles: [knife-work, oil-temperature, starch-gelatinization, maillard-reaction, umami, aromatics, fermentation]
-featured: [mapo-tofu, kung-pao-chicken, hong-shao-rou, steamed-fish, tomato-egg, egg-fried-rice]
+featured: [mapo-tofu, kung-pao-chicken, hong-shao-rou, steamed-fish, tomato-egg, egg-fried-rice, tu-dou-shao-ji, qing-jiao-rou-si]
 order: 1
 ---
 

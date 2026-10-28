@@ -5,6 +5,7 @@ title: 味噌煮青花鱼
 original: 鯖の味噌煮
 cuisine: japanese
 course: seafood
+tags: [bento]
 summary: 青花鱼先烫净表面，再用清酒、姜与味噌轻煮；落盖让少量煮汁循环浇过鱼身。
 servings: 4
 time: { prep: 40, cook: 25 }

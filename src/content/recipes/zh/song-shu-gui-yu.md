@@ -46,7 +46,7 @@ updated: 2026-10-02
 
 松鼠桂鱼的两片肉在尾部相连，去骨后切深花刀。鱼头另炸，鱼肉翻出、鱼尾翘起，浇糖醋汁，外脆内嫩。
 
-花刀增加表面、缩短传热距离，见[刀工与受热](/principles/knife-work/)。淀粉在油中先[糊化](/principles/starch-gelatinization/)，随后失水成脆衣。家里可把带皮鱼柳分开剞花刀、分批炸，省去连尾造型。
+花刀让鱼肉的表面积变大，热也更快到达中心，见[刀工与受热](/principles/knife-work/)。裹的淀粉在油里先[淀粉糊化](/principles/starch-gelatinization/)，再失水变成脆衣。家里可把带皮鱼柳分开剞花刀、分批炸，省去连尾造型。
 
 ## 步骤
 
@@ -63,5 +63,5 @@ updated: 2026-10-02
 ## 要点
 
 - **肉粒打不开**：刀口太浅或没裹到粉。按[刀工](/principles/knife-work/)切到皮而不破皮，撑开刀口压入粉。
-- **粉衣油腻，鱼肉却干**：低油温拖长了炸制。按[油温与油炸](/principles/oil-temperature/)观察下料后的温度，鱼头和鱼身分开炸。
-- **汁厚成糊**：芡太浓或放凉后才用。[淀粉糊化](/principles/starch-gelatinization/)达到薄挂勺背就离火，趁热浇鱼。
+- **粉衣油腻，鱼肉却干**：低油温拖长了炸制。见[油温与油炸](/principles/oil-temperature/)。鱼头和鱼身分开炸，下料后留意油温别掉太多。
+- **汁厚成糊**：芡太浓或放凉后才用。煮到[淀粉糊化](/principles/starch-gelatinization/)、薄薄挂住勺背就离火，趁热浇鱼。

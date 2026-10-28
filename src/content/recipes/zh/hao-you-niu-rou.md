@@ -4,6 +4,7 @@ coverAlt: 蚝油牛肉装盘后的插画
 title: 蚝油牛肉
 cuisine: chinese
 course: meat
+tags: [bento]
 summary: 逆纹牛肉片先上薄浆、分批炒，再回锅裹蚝油薄芡；芥兰垫底，牛肉滑嫩而汁不成糊。
 servings: 4
 time: { prep: 40, cook: 10 }

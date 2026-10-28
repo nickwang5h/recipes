@@ -23,6 +23,14 @@ export const COURSES = {
 
 export type Course = keyof typeof COURSES;
 
+/** Practical labels a cook filters by on a weekday. Criteria live in docs/round8/README.md. */
+export const TAGS = {
+  bento: '能带饭',
+  'one-pot': '一锅出',
+} as const;
+
+export type Tag = keyof typeof TAGS;
+
 export const INGREDIENT_KINDS = {
   vegetable: '蔬菜',
   aromatic: '葱姜蒜香草',

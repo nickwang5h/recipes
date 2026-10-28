@@ -1,0 +1,4 @@
+- { id: lambs-lettuce, zh: 田野沙拉菜, aliases: [羊肠菜, 玉米沙拉菜, Mâche, Lamb's lettuce, Corn salad], en: Mâche / lamb's lettuce, kind: vegetable, where: specialty, substitutes: [spinach] }
+- { id: sherry-vinegar, zh: 雪莉酒醋, aliases: [雪利酒醋, Vinaigre de Xérès], en: Sherry vinegar, kind: seasoning, where: mainstream, pantry: true, substitutes: [] }
+- { id: balsamic-vinegar, zh: 意大利黑醋, aliases: [巴萨米克醋, Balsamic vinegar], en: Balsamic vinegar, kind: seasoning, where: mainstream, pantry: true, substitutes: [] }
+- { id: tapenade, zh: 橄榄酱, aliases: [法式橄榄酱, Tapenade], en: Olive tapenade, kind: seasoning, where: mainstream, pantry: true, substitutes: [] }

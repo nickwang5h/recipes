@@ -63,3 +63,7 @@ slug 一旦发布就不改。✅ = 已发布。
 
 - 16 篇原理页的“在三个菜系里”改为“在各个菜系里”，泰、越、日、韩只在有招牌例子时补条目。
 - 新增 `regions` 集合（`src/content/regions/zh/`）：鲁、川、粤、苏／淮扬、闽、浙、湘、徽八篇地方菜技法页，挂在 `/cuisines/chinese/<slug>/`。
+
+## 第八轮：工作日能吃的菜
+
+清单见 `docs/round8/selection.json`（60 道，偏向能带饭、一锅出和鸡翅，七个菜系都有）。菜谱新增 `tags`（`bento` 能带饭、`one-pot` 一锅出）和 `minor`（小菜降权）两个字段，旧菜谱按 `docs/round8/tag-existing.py` 补标。标准和审稿记录见 `docs/round8/README.md`。

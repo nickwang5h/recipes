@@ -261,6 +261,24 @@
       "name": "Crustaceans, shrimp, mixed species, raw",
       "estimated": false
     },
+    "asparagus": {
+      "per100g": {
+        "kcal": 20.0,
+        "protein": 2.2,
+        "fat": 0.12,
+        "satfat": 0.04,
+        "carb": 3.88,
+        "sugar": 1.88,
+        "fiber": 2.1,
+        "sodium": 2.0
+      },
+      "grams": {},
+      "density": null,
+      "safety": "none",
+      "food": 1990,
+      "name": "Asparagus, raw",
+      "estimated": false
+    },
     "atsuage": {
       "per100g": {
         "kcal": 271.0,
@@ -524,6 +542,26 @@
       "name": "Spices, bay leaf",
       "estimated": false
     },
+    "bayonne-ham": {
+      "per100g": {
+        "kcal": 306.0,
+        "protein": 26.65,
+        "fat": 16.27,
+        "satfat": 6.242,
+        "carb": 11.71,
+        "sugar": 0.17,
+        "fiber": 0.0,
+        "sodium": 1944.0
+      },
+      "grams": {
+        "片": 14.7
+      },
+      "density": null,
+      "safety": "none",
+      "food": 501502,
+      "name": "Deli-meat, prosciutto (parma ham) dry-cured",
+      "estimated": false
+    },
     "beef": {
       "per100g": {
         "kcal": 161.0,
@@ -741,6 +779,24 @@
       "food": 2344,
       "name": "Pepper, sweet, yellow, raw",
       "estimated": false
+    },
+    "belt-fish": {
+      "per100g": {
+        "kcal": 104,
+        "protein": 17.8,
+        "fat": 3.3,
+        "satfat": 0.8,
+        "carb": 0,
+        "sugar": 0,
+        "fiber": 0,
+        "sodium": 70
+      },
+      "grams": {},
+      "density": null,
+      "safety": "fish",
+      "food": null,
+      "name": null,
+      "estimated": true
     },
     "beni-shoga": {
       "per100g": {
@@ -1547,6 +1603,24 @@
         "sugar": 1,
         "fiber": 0,
         "sodium": 900
+      },
+      "grams": {},
+      "density": null,
+      "safety": "none",
+      "food": null,
+      "name": null,
+      "estimated": true
+    },
+    "char-siu": {
+      "per100g": {
+        "kcal": 240,
+        "protein": 23,
+        "fat": 9,
+        "satfat": 3,
+        "carb": 16,
+        "sugar": 13,
+        "fiber": 0,
+        "sodium": 650
       },
       "grams": {},
       "density": null,
@@ -2853,6 +2927,24 @@
       "name": null,
       "estimated": true
     },
+    "dashi-powder": {
+      "per100g": {
+        "kcal": 230,
+        "protein": 25,
+        "fat": 0,
+        "satfat": 0,
+        "carb": 30,
+        "sugar": 5,
+        "fiber": 0,
+        "sodium": 19000
+      },
+      "grams": {},
+      "density": 0.6,
+      "safety": "none",
+      "food": null,
+      "name": null,
+      "estimated": true
+    },
     "dashi-stock": {
       "per100g": {
         "kcal": 3,
@@ -3567,6 +3659,24 @@
       "safety": "none",
       "food": 2343,
       "name": "Mushroom, enoki, raw",
+      "estimated": false
+    },
+    "espelette-pepper": {
+      "per100g": {
+        "kcal": 282.0,
+        "protein": 14.14,
+        "fat": 12.89,
+        "satfat": 2.14,
+        "carb": 53.99,
+        "sugar": 10.34,
+        "fiber": 34.9,
+        "sodium": 68.0
+      },
+      "grams": {},
+      "density": 0.42,
+      "safety": "none",
+      "food": 196,
+      "name": "Spices, paprika",
       "estimated": false
     },
     "evaporated-milk": {
@@ -4513,6 +4623,24 @@
       "name": null,
       "estimated": true
     },
+    "green-lentils": {
+      "per100g": {
+        "kcal": 352.0,
+        "protein": 24.63,
+        "fat": 1.06,
+        "satfat": 0.154,
+        "carb": 63.35,
+        "sugar": 2.03,
+        "fiber": 10.7,
+        "sodium": 6.0
+      },
+      "grams": {},
+      "density": null,
+      "safety": "none",
+      "food": 3392,
+      "name": "Lentils, raw",
+      "estimated": false
+    },
     "green-olives": {
       "per100g": {
         "kcal": 146.0,
@@ -4621,6 +4749,24 @@
       "safety": "ground-meat",
       "food": 2690,
       "name": "Beef, ground, medium, raw",
+      "estimated": false
+    },
+    "ground-chicken": {
+      "per100g": {
+        "kcal": 143.0,
+        "protein": 17.44,
+        "fat": 8.1,
+        "satfat": 2.301,
+        "carb": 0.04,
+        "sugar": 0.0,
+        "fiber": 0.0,
+        "sodium": 60.0
+      },
+      "grams": {},
+      "density": null,
+      "safety": "ground-meat",
+      "food": 918,
+      "name": "Chicken, ground, lean, raw",
       "estimated": false
     },
     "ground-cinnamon": {
@@ -5137,6 +5283,24 @@
       "food": null,
       "name": null,
       "estimated": true
+    },
+    "kiriboshi-daikon": {
+      "per100g": {
+        "kcal": 271.0,
+        "protein": 7.9,
+        "fat": 0.72,
+        "satfat": 0.218,
+        "carb": 63.37,
+        "sugar": 37.32,
+        "fiber": 23.9,
+        "sodium": 278.0
+      },
+      "grams": {},
+      "density": null,
+      "safety": "none",
+      "food": 2198,
+      "name": "Radish, oriental (daikon), dried",
+      "estimated": false
     },
     "kombu": {
       "per100g": {
@@ -7388,6 +7552,24 @@
       "name": "Deli-meat, prosciutto (parma ham) dry-cured",
       "estimated": false
     },
+    "provolone-del-monaco": {
+      "per100g": {
+        "kcal": 352.0,
+        "protein": 25.58,
+        "fat": 26.62,
+        "satfat": 17.078,
+        "carb": 2.14,
+        "sugar": 0.56,
+        "fiber": 0.0,
+        "sodium": 876.0
+      },
+      "grams": {},
+      "density": null,
+      "safety": "none",
+      "food": 42,
+      "name": "Cheese, provolone",
+      "estimated": false
+    },
     "pumpkin": {
       "per100g": {
         "kcal": 34.0,
@@ -9556,6 +9738,24 @@
       "name": "Fish, tilapia, raw",
       "estimated": false
     },
+    "tiny-dried-anchovy": {
+      "per100g": {
+        "kcal": 300,
+        "protein": 60,
+        "fat": 5,
+        "satfat": 1,
+        "carb": 0,
+        "sugar": 0,
+        "fiber": 0,
+        "sodium": 2000
+      },
+      "grams": {},
+      "density": null,
+      "safety": "fish",
+      "food": null,
+      "name": null,
+      "estimated": true
+    },
     "tiny-dried-shrimp": {
       "per100g": {
         "kcal": 250,
@@ -9629,6 +9829,26 @@
       "food": null,
       "name": null,
       "estimated": true
+    },
+    "tofu-puff": {
+      "per100g": {
+        "kcal": 271.0,
+        "protein": 17.19,
+        "fat": 20.18,
+        "satfat": 2.91,
+        "carb": 10.49,
+        "sugar": 2.72,
+        "fiber": 3.9,
+        "sodium": 16.0
+      },
+      "grams": {
+        "个": 13
+      },
+      "density": null,
+      "safety": "none",
+      "food": 501799,
+      "name": "Tofu, fried",
+      "estimated": false
     },
     "tofu-sheet": {
       "per100g": {
@@ -10685,6 +10905,24 @@
       "name": null,
       "estimated": true
     },
+    "yellowtail": {
+      "per100g": {
+        "kcal": 146.0,
+        "protein": 23.14,
+        "fat": 5.24,
+        "satfat": 1.28,
+        "carb": 0.0,
+        "sugar": 0.0,
+        "fiber": 0.0,
+        "sodium": 39.0
+      },
+      "grams": {},
+      "density": null,
+      "safety": "fish",
+      "food": 3092,
+      "name": "Fish, yellowtail, mixed species, raw",
+      "estimated": false
+    },
     "youtiao": {
       "per100g": {
         "kcal": 400,
@@ -10779,6 +11017,13 @@
       "eaten": {
         "1-0": 0.1,
         "1-1": 0.5
+      },
+      "raw": []
+    },
+    "andong-jjimdak": {
+      "eaten": {
+        "0-0": 0.7,
+        "0-2": 0.1
       },
       "raw": []
     },
@@ -11180,6 +11425,14 @@
       },
       "raw": []
     },
+    "buri-teriyaki": {
+      "eaten": {
+        "0-1": 0.8,
+        "0-2": 0.7,
+        "0-3": 0.5
+      },
+      "raw": []
+    },
     "buta-no-shogayaki": {
       "eaten": {
         "1-0": 0.8,
@@ -11223,10 +11476,25 @@
       },
       "raw": []
     },
+    "cake-sale": {
+      "eaten": {
+        "0-5": 0.8
+      },
+      "raw": []
+    },
     "canh-chua-ca": {
       "eaten": {
         "0-0": 0.6,
         "0-1": 0.8
+      },
+      "raw": []
+    },
+    "canh-ga-chien-nuoc-mam": {
+      "eaten": {
+        "0-0": 0.7,
+        "0-1": 0.2,
+        "1-0": 0.3,
+        "1-1": 0.08
       },
       "raw": []
     },
@@ -11309,6 +11577,13 @@
         "0-4": 0.95,
         "1-1": 0.1,
         "1-2": 0.08
+      },
+      "raw": []
+    },
+    "cha-trung-hap": {
+      "eaten": {
+        "1-0": 0.1,
+        "1-1": 0
       },
       "raw": []
     },
@@ -11467,6 +11742,21 @@
       },
       "raw": []
     },
+    "chicken-nanban": {
+      "eaten": {
+        "0-1": 0.7,
+        "0-2": 0.8,
+        "0-5": 0.05,
+        "1-0": 0.5,
+        "1-1": 0.5,
+        "1-2": 0.5,
+        "1-3": 0.5,
+        "3-0": 0,
+        "3-1": 0,
+        "3-2": 0
+      },
+      "raw": []
+    },
     "chicken-teriyaki": {
       "eaten": {
         "0-0": 0.95,
@@ -11504,6 +11794,16 @@
         "1-1": 0,
         "1-2": 0.1,
         "1-9": 0.08
+      },
+      "raw": []
+    },
+    "chukadon": {
+      "eaten": {
+        "0-7": 0.9,
+        "0-8": 0.95,
+        "0-9": 0.03,
+        "3-0": 0.8,
+        "3-1": 0.8
       },
       "raw": []
     },
@@ -11778,6 +12078,28 @@
       },
       "raw": []
     },
+    "dau-hu-nhoi-thit": {
+      "eaten": {
+        "0-3": 0.85,
+        "1-0": 0.6,
+        "2-0": 0,
+        "2-1": 0
+      },
+      "raw": []
+    },
+    "dau-hu-xa-ot": {
+      "eaten": {
+        "0-6": 0.2
+      },
+      "raw": []
+    },
+    "dau-que-xao-bo": {
+      "eaten": {
+        "1-0": 0.95,
+        "1-1": 0.9
+      },
+      "raw": []
+    },
     "dau-sot-ca-chua": {
       "eaten": {
         "1-0": 0.325
@@ -11927,6 +12249,12 @@
       "eaten": {},
       "raw": []
     },
+    "dubu-kimchi": {
+      "eaten": {
+        "0-5": 0
+      },
+      "raw": []
+    },
     "duo-jiao-yu-tou": {
       "eaten": {
         "0-0": 0.45,
@@ -11938,11 +12266,30 @@
       "eaten": {},
       "raw": []
     },
+    "eomuk-bokkeum": {
+      "eaten": {
+        "0-7": 0.01
+      },
+      "raw": []
+    },
     "fagioli-alluccelletto": {
       "eaten": {
         "0-2": 0.1,
         "1-1": 0,
         "1-2": 0
+      },
+      "raw": []
+    },
+    "fagiolini-al-pomodoro": {
+      "eaten": {
+        "0-0": 0.95,
+        "2-0": 0.5
+      },
+      "raw": []
+    },
+    "fan-qie-fei-niu": {
+      "eaten": {
+        "0-2": 0.9
       },
       "raw": []
     },
@@ -12116,6 +12463,13 @@
       },
       "raw": []
     },
+    "gai-pad-king": {
+      "eaten": {
+        "0-2": 0.95,
+        "0-3": 0.03
+      },
+      "raw": []
+    },
     "gai-pad-med-mamuang": {
       "eaten": {
         "0-7": 0
@@ -12193,6 +12547,12 @@
     "gan-bian-zi-ji": {
       "eaten": {
         "0-11": 0.1
+      },
+      "raw": []
+    },
+    "gan-chao-niu-he": {
+      "eaten": {
+        "1-1": 0
       },
       "raw": []
     },
@@ -12465,6 +12825,15 @@
       },
       "raw": []
     },
+    "hobak-jeon": {
+      "eaten": {
+        "0-1": 0.8,
+        "0-2": 0.8,
+        "0-3": 0.9,
+        "0-4": 0.7
+      },
+      "raw": []
+    },
     "hollandaise": {
       "eaten": {},
       "raw": [
@@ -12696,6 +13065,16 @@
       },
       "raw": []
     },
+    "insalata-di-riso": {
+      "eaten": {
+        "0-1": 0.8,
+        "0-4": 0.85,
+        "0-7": 0.5
+      },
+      "raw": [
+        "0-3"
+      ]
+    },
     "janchi-guksu": {
       "eaten": {
         "0-1": 0.1,
@@ -12773,6 +13152,14 @@
       },
       "raw": []
     },
+    "jia-chang-dou-fu": {
+      "eaten": {
+        "0-2": 0.9,
+        "0-5": 0.3,
+        "1-0": 0.85
+      },
+      "raw": []
+    },
     "jian-bing-guo-zi": {
       "eaten": {
         "1-3": 0.8
@@ -12804,6 +13191,12 @@
       "eaten": {
         "0-2": 0.9,
         "0-4": 0
+      },
+      "raw": []
+    },
+    "jiang-bao-ji-ding": {
+      "eaten": {
+        "0-0": 0.98
       },
       "raw": []
     },
@@ -13093,6 +13486,14 @@
       },
       "raw": []
     },
+    "khao-kluk-kapi": {
+      "eaten": {
+        "2-3": 0.2,
+        "2-7": 0.9,
+        "2-10": 0.4
+      },
+      "raw": []
+    },
     "khao-man-gai": {
       "eaten": {
         "0-0": 0.7,
@@ -13164,6 +13565,10 @@
       },
       "raw": []
     },
+    "kiriboshi-daikon": {
+      "eaten": {},
+      "raw": []
+    },
     "kitsune-udon": {
       "eaten": {
         "0-1": 0.6,
@@ -13186,6 +13591,12 @@
     "kluay-buat-chi": {
       "eaten": {
         "0-0": 0.95
+      },
+      "raw": []
+    },
+    "kongnamul-bap": {
+      "eaten": {
+        "0-2": 0.98
       },
       "raw": []
     },
@@ -13244,6 +13655,14 @@
       },
       "raw": []
     },
+    "ku-gua-chao-dan": {
+      "eaten": {
+        "0-0": 0.75,
+        "1-0": 0.24,
+        "1-8": 0
+      },
+      "raw": []
+    },
     "kung-pao-chicken": {
       "eaten": {
         "0-2": 0.4,
@@ -13262,6 +13681,12 @@
     "la-ba-zhou": {
       "eaten": {
         "2-3": 0.7
+      },
+      "raw": []
+    },
+    "la-chang-tu-dou-men-fan": {
+      "eaten": {
+        "1-4": 0.1
       },
       "raw": []
     },
@@ -13503,6 +13928,22 @@
       },
       "raw": []
     },
+    "lu-ji-tui": {
+      "eaten": {
+        "0-0": 0.7,
+        "0-1": 0,
+        "0-2": 0,
+        "0-3": 0,
+        "0-4": 0,
+        "0-5": 0.2,
+        "1-0": 0.15,
+        "1-1": 0.15,
+        "1-2": 0.1,
+        "1-3": 0.15,
+        "1-4": 0.1
+      },
+      "raw": []
+    },
     "luo-bo-dun-yang-pai": {
       "eaten": {
         "0-0": 0.65,
@@ -13635,6 +14076,10 @@
       },
       "raw": []
     },
+    "mi-xao-bo": {
+      "eaten": {},
+      "raw": []
+    },
     "mi-zhi-cha-shao": {
       "eaten": {
         "0-1": 0.6,
@@ -13644,6 +14089,22 @@
         "0-5": 0,
         "0-6": 0,
         "1-1": 0
+      },
+      "raw": []
+    },
+    "mi-zhi-kao-ji-chi": {
+      "eaten": {
+        "0-0": 0.7,
+        "0-1": 0.3,
+        "0-2": 0.2,
+        "0-3": 0.3,
+        "0-4": 0.1,
+        "0-5": 0.3,
+        "0-6": 0.3,
+        "0-7": 0.3,
+        "0-8": 0.3,
+        "0-9": 0.3,
+        "1-0": 0.9
       },
       "raw": []
     },
@@ -13690,9 +14151,37 @@
       "eaten": {},
       "raw": []
     },
+    "moo-palo": {
+      "eaten": {
+        "0-1": 0.8,
+        "0-2": 0.2,
+        "0-3": 0.5,
+        "0-6": 0,
+        "1-0": 0,
+        "1-1": 0,
+        "1-2": 0,
+        "1-3": 0,
+        "1-4": 0,
+        "2-0": 0.5,
+        "2-1": 0.5,
+        "2-2": 0.5,
+        "2-3": 0.5,
+        "2-4": 0.5,
+        "2-5": 0.5,
+        "2-7": 0
+      },
+      "raw": []
+    },
     "moo-ping": {
       "eaten": {
         "1-10": 0.0431
+      },
+      "raw": []
+    },
+    "moo-tod-kratiem": {
+      "eaten": {
+        "0-1": 0.9,
+        "1-0": 0.1
       },
       "raw": []
     },
@@ -13714,6 +14203,12 @@
       "eaten": {
         "0-3": 0.95,
         "0-6": 0
+      },
+      "raw": []
+    },
+    "myeolchi-bokkeum": {
+      "eaten": {
+        "0-0": 0.95
       },
       "raw": []
     },
@@ -13785,6 +14280,13 @@
         "1-2": 0.2,
         "1-3": 0.2,
         "2-0": 0
+      },
+      "raw": []
+    },
+    "niku-maki": {
+      "eaten": {
+        "0-3": 0.5,
+        "0-5": 0
       },
       "raw": []
     },
@@ -13874,6 +14376,12 @@
     },
     "oyakodon": {
       "eaten": {},
+      "raw": []
+    },
+    "pad-kana-moo": {
+      "eaten": {
+        "0-1": 0.95
+      },
       "raw": []
     },
     "pad-kee-mao": {
@@ -13986,6 +14494,12 @@
       },
       "raw": []
     },
+    "pasta-al-tonno": {
+      "eaten": {
+        "2-0": 0.3
+      },
+      "raw": []
+    },
     "pasta-alla-gricia": {
       "eaten": {
         "1-1": 0.1,
@@ -14012,6 +14526,13 @@
     "pasta-e-fagioli": {
       "eaten": {
         "1-4": 0.65
+      },
+      "raw": []
+    },
+    "peek-gai-tod-nam-pla": {
+      "eaten": {
+        "0-0": 0.65,
+        "1-0": 0.1
       },
       "raw": []
     },
@@ -14147,6 +14668,10 @@
       },
       "raw": []
     },
+    "polpettone": {
+      "eaten": {},
+      "raw": []
+    },
     "ponzu": {
       "eaten": {
         "1-0": 0.1,
@@ -14172,6 +14697,18 @@
       "eaten": {
         "0-0": 0.65,
         "0-1": 0.2
+      },
+      "raw": []
+    },
+    "poulet-basquaise": {
+      "eaten": {
+        "0-0": 0.75,
+        "1-0": 0.9,
+        "1-1": 0.9,
+        "1-2": 0.9,
+        "1-3": 0.9,
+        "1-5": 0.95,
+        "1-9": 0
       },
       "raw": []
     },
@@ -14272,6 +14809,12 @@
         "1-1": 0.8,
         "1-2": 0.3,
         "1-3": 0.6
+      },
+      "raw": []
+    },
+    "qing-jiao-rou-si": {
+      "eaten": {
+        "0-3": 0.35
       },
       "raw": []
     },
@@ -14424,6 +14967,13 @@
       },
       "raw": []
     },
+    "rou-mo-qie-zi": {
+      "eaten": {
+        "2-0": 0.01,
+        "2-1": 0.05
+      },
+      "raw": []
+    },
     "rou-xie-bao": {
       "eaten": {
         "0-0": 0.4,
@@ -14452,6 +15002,16 @@
         "0-1": 0.8,
         "1-0": 0.9,
         "1-1": 0.35
+      },
+      "raw": []
+    },
+    "salade-de-lentilles": {
+      "eaten": {
+        "0-2": 0,
+        "0-3": 0,
+        "0-4": 0,
+        "0-5": 0,
+        "0-6": 0.3
       },
       "raw": []
     },
@@ -14487,6 +15047,12 @@
         "0-2"
       ]
     },
+    "salsiccia-e-fagioli": {
+      "eaten": {
+        "0-0": 0.95
+      },
+      "raw": []
+    },
     "saltimbocca-alla-romana": {
       "eaten": {
         "0-3": 0.9
@@ -14517,6 +15083,13 @@
       },
       "raw": []
     },
+    "sanshoku-soboro-don": {
+      "eaten": {
+        "0-2": 0,
+        "0-4": 0.01
+      },
+      "raw": []
+    },
     "satay-gai": {
       "eaten": {
         "0-1": 0.2,
@@ -14531,6 +15104,22 @@
         "2-5": 0.25,
         "2-6": 0.25,
         "2-7": 0.25
+      },
+      "raw": []
+    },
+    "saucisses-aux-lentilles": {
+      "eaten": {
+        "1-4": 0,
+        "1-5": 0,
+        "1-6": 0,
+        "1-7": 0.6
+      },
+      "raw": []
+    },
+    "saumon-en-papillote": {
+      "eaten": {
+        "0-3": 0.1,
+        "0-5": 0.1
       },
       "raw": []
     },
@@ -14585,6 +15174,13 @@
         "0-3": 0.75,
         "0-5": 0.5,
         "1-1": 0.05
+      },
+      "raw": []
+    },
+    "shang-hai-cu-chao-mian": {
+      "eaten": {
+        "0-2": 0.9,
+        "2-4": 0.05
       },
       "raw": []
     },
@@ -14716,6 +15312,10 @@
       },
       "raw": []
     },
+    "sogogi-muguk": {
+      "eaten": {},
+      "raw": []
+    },
     "sole-meuniere": {
       "eaten": {
         "0-0": 0.6,
@@ -14753,6 +15353,14 @@
       "eaten": {},
       "raw": []
     },
+    "spaghetti-alla-nerano": {
+      "eaten": {
+        "0-2": 0.1,
+        "1-3": 0,
+        "2-0": 0.2
+      },
+      "raw": []
+    },
     "spaghetti-alla-puttanesca": {
       "eaten": {
         "1-0": 0,
@@ -14776,6 +15384,13 @@
         "1-4": 0.0,
         "1-5": 0.02,
         "1-6": 0.02
+      },
+      "raw": []
+    },
+    "spezzatino": {
+      "eaten": {
+        "0-1": 0.5,
+        "1-5": 0
       },
       "raw": []
     },
@@ -15087,6 +15702,19 @@
       },
       "raw": []
     },
+    "tebasaki": {
+      "eaten": {
+        "0-1": 0.6,
+        "0-2": 0.1,
+        "1-0": 0.7,
+        "1-1": 0.7,
+        "1-2": 0.7,
+        "1-3": 0.7,
+        "1-4": 0,
+        "1-5": 0
+      },
+      "raw": []
+    },
     "tempura": {
       "eaten": {
         "0-0": 0.95,
@@ -15112,6 +15740,12 @@
     "thit-kho-trung": {
       "eaten": {
         "0-0": 0.95
+      },
+      "raw": []
+    },
+    "tian-provencal": {
+      "eaten": {
+        "1-1": 0.5
       },
       "raw": []
     },
@@ -15236,6 +15870,12 @@
       },
       "raw": []
     },
+    "tu-dou-shao-ji": {
+      "eaten": {
+        "0-0": 0.75
+      },
+      "raw": []
+    },
     "tub-tim-krob": {
       "eaten": {
         "0-1": 0.1,
@@ -15303,6 +15943,10 @@
       },
       "raw": []
     },
+    "wo-sun-chao-rou-pian": {
+      "eaten": {},
+      "raw": []
+    },
     "wo-sun-ye-jian-bing": {
       "eaten": {
         "0-2": 0.2
@@ -15365,6 +16009,12 @@
       "eaten": {
         "0-0": 0.95,
         "0-4": 0.67
+      },
+      "raw": []
+    },
+    "xi-lan-hua-chao-xia-ren": {
+      "eaten": {
+        "0-5": 0
       },
       "raw": []
     },
@@ -15460,6 +16110,35 @@
     "xiang-gu-hua-ji": {
       "eaten": {
         "0-0": 0.75
+      },
+      "raw": []
+    },
+    "xiang-gu-ji-rou-men-fan": {
+      "eaten": {
+        "0-2": 0.1,
+        "1-1": 0.9
+      },
+      "raw": []
+    },
+    "xiang-gu-you-cai": {
+      "eaten": {
+        "0-0": 0.9,
+        "1-0": 0.7,
+        "1-5": 0.75,
+        "1-6": 0.7,
+        "1-7": 0.01,
+        "1-8": 0.75,
+        "1-9": 0.05
+      },
+      "raw": []
+    },
+    "xiang-jian-dai-yu": {
+      "eaten": {
+        "0-0": 0.7,
+        "0-1": 0.8,
+        "0-2": 0.3,
+        "0-3": 0,
+        "1-0": 0.7
       },
       "raw": []
     },
@@ -15605,6 +16284,14 @@
       },
       "raw": []
     },
+    "xing-zhou-chao-mi": {
+      "eaten": {
+        "1-3": 0.75,
+        "1-8": 0.5,
+        "1-9": 0.1
+      },
+      "raw": []
+    },
     "xue-hua-su": {
       "eaten": {
         "0-2": 0.75
@@ -15620,6 +16307,12 @@
         "1-4": 0,
         "2-0": 0.5,
         "2-1": 0.5
+      },
+      "raw": []
+    },
+    "yaki-udon": {
+      "eaten": {
+        "0-8": 0.01
       },
       "raw": []
     },
@@ -15664,6 +16357,14 @@
       "eaten": {
         "1-1": 0,
         "1-2": 0
+      },
+      "raw": []
+    },
+    "yan-ju-ji-chi": {
+      "eaten": {
+        "0-0": 0.7,
+        "0-1": 0.8,
+        "1-0": 0
       },
       "raw": []
     },
@@ -15725,6 +16426,10 @@
         "0-0": 0.7,
         "0-5": 0.05
       },
+      "raw": []
+    },
+    "yasai-itame": {
+      "eaten": {},
       "raw": []
     },
     "yin-er-lian-zi-zhou": {

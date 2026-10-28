@@ -5,6 +5,7 @@ title: 大阪烧
 original: Okonomiyaki
 cuisine: japanese
 course: staple
+tags: [one-pot]
 summary: 大阪混合式豚玉：卷心菜拌入少量山药面糊，表面铺猪五花，煎出焦香外层与松软内心。
 servings: 2
 time: { prep: 20, cook: 20 }

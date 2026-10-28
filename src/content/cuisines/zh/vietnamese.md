@@ -6,7 +6,7 @@ original: Ẩm thực Việt Nam
 summary: 熟的部分慢慢熬，生的部分临吃才加：清汤、糖色和鱼露蘸汁打底，一大盘鲜香草让每个人在桌上自己调。
 accent: teal
 principles: [collagen-gelatin, caramelization, aromatics, acid, umami]
-featured: [pho-bo, bun-cha, goi-cuon, ca-kho-to, banh-mi-thit, nuoc-cham]
+featured: [pho-bo, bun-cha, goi-cuon, ca-kho-to, banh-mi-thit, nuoc-cham, mi-xao-bo, dau-hu-nhoi-thit]
 order: 5
 ---
 

@@ -5,6 +5,7 @@ title: 白汁烩小牛肉
 original: Blanquette de veau
 cuisine: french
 course: meat
+tags: [bento]
 summary: 小牛肩肉轻煨至软，用原汤做白 roux 酱，最后以蛋黄和奶油添上柔滑的质地。
 servings: 6
 time: { prep: 30, cook: 120 }
@@ -47,7 +48,7 @@ updated: 2026-10-01
 
 *Blanquette de veau* 是浅色的小牛肉烩菜：肉先在清汤里轻煨，蘑菇和小洋葱配在乳白酱中。小牛肩肉的结缔组织需要时间软化，见[胶原与明胶](/principles/collagen-gelatin/)。肉不煎上色，黄油面粉也只炒到起泡，成品保留温和的肉香。
 
-白汁分两次变稠。先用原汤和白 roux 做 velouté，靠[淀粉糊化](/principles/starch-gelatinization/)形成底子；再用蛋黄与奶油收尾，添上细滑和浓润。最后阶段要把热酱慢慢兑进蛋黄，再回锅温和加热。
+白汁分两次变稠。先用原汤和白 roux 做 velouté，靠[淀粉糊化](/principles/starch-gelatinization/)打底；再用蛋黄和奶油收尾，让酱更细滑浓润。收尾时要先把热酱一点点兑进蛋黄，再倒回锅里用小火加热。
 
 ## 步骤
 
@@ -60,6 +61,6 @@ updated: 2026-10-01
 
 ## 要点
 
-- **肉熟了仍难嚼**：肩肉里的胶原还没充分软化。保持轻煨，检查最厚肉块，别靠猛火缩短过程。见[胶原与明胶](/principles/collagen-gelatin/)。
+- **肉熟了仍难嚼**：肩肉里的胶原还没充分软化。保持轻煨，扎一扎最厚的肉块，别用猛火赶时间。见[胶原与明胶](/principles/collagen-gelatin/)。
 - **白汁有粉粒或生粉味**：面粉没分散开，或加汤后未煮透。先把 roux 搅匀，汤分次加，煮到味道和质地都顺。见[淀粉糊化](/principles/starch-gelatinization/)。
-- **收尾出现蛋粒**：蛋黄骤遇热酱或回锅后煮沸，蛋白质局部凝固。先慢慢兑热酱，回锅后边测温边搅，到熟度便停。见[蛋白质变性与凝固](/principles/protein-coagulation/)。
+- **收尾出现蛋粒**：蛋黄骤遇热酱或回锅后煮沸，蛋白质局部凝固。先慢慢兑热酱，回锅后边搅边测温，到温度就停。见[蛋白质变性与凝固](/principles/protein-coagulation/)。

@@ -5,6 +5,7 @@ title: 西西里炸饭团
 original: Arancini
 cuisine: italian
 course: staple
+tags: [bento]
 summary: 藏红花米饭包住浓肉酱、豌豆和奶酪，裹蛋与细面包糠深炸；冷却成形、封口完整，才能外脆内软。
 servings: 6
 time: { prep: 120, cook: 70 }
@@ -50,9 +51,9 @@ sources:
 updated: 2026-10-01
 ---
 
-*Arancini* 是西西里的炸饭团，肉酱豌豆馅是常见的传统口味。藏红花米饭裹住馅心，外面是金黄面包糠；这一份约做 12 个大饭团，每人两个。
+*Arancini* 是西西里的炸饭团，外壳酥脆，里面是软糯的藏红花米饭，中心包着肉酱豌豆馅，这是常见的传统口味。一份约做 12 个大饭团，每人两个。
 
-成形靠米饭煮出的黏性，见[淀粉糊化](/principles/starch-gelatinization/)。放冷后更容易压实，肉酱也要收到能堆在匙上的浓度。深炸时外层失水成脆壳，热量慢慢传到中心，见[油温与油炸](/principles/oil-temperature/)。
+饭团能捏成形，靠米饭煮出的黏性，见[淀粉糊化](/principles/starch-gelatinization/)。米饭放冷后更容易压实，肉酱也要收到能堆在匙上的浓度。下锅深炸，外层失水变成脆壳，热量慢慢传到中心，见[油温与油炸](/principles/oil-temperature/)。
 
 ## 步骤
 
@@ -66,6 +67,6 @@ updated: 2026-10-01
 ## 要点
 
 - **下锅裂开、漏馅**：米饭或肉酱太湿，或封口过薄。冷透后再包，馅藏在中央，包好先检查裂缝。见[淀粉糊化](/principles/starch-gelatinization/)。
-- **外壳上色、中心仍冷**：饭团厚，内部升温慢。保持 170°C 分批炸，以中心 74°C 判断；颜色够了而中心未热透，可入烤箱继续加热。见[传热](/principles/heat-transfer/)。
+- **外壳上色、中心仍冷**：饭团厚，内部升温慢。保持 170°C 分批炸，以中心 74°C 判断；颜色够了而中心没热透，可入烤箱继续加热。见[传热](/principles/heat-transfer/)。
 - **外壳油腻、发软**：一锅放太多使油温下降，或出锅堆放焖住水汽。每批留空间，等油温恢复；捞起后摊开沥油。见[油温与油炸](/principles/oil-temperature/)。
-- **熟饭在台面放了很久**：冷却成形仍需控制存放。米饭与肉酱摊薄后尽快冷藏，室温累计不超过两小时；当天包炸。回生与冷却见[淀粉糊化](/principles/starch-gelatinization/)。
+- **熟饭在台面放了很久**：饭团要冷透才好包，可冷饭放久了不安全。米饭与肉酱摊薄后尽快冷藏，室温累计不超过两小时；当天包好当天炸。冷饭为什么更好成形，见[淀粉糊化](/principles/starch-gelatinization/)。

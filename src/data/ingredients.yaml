@@ -611,3 +611,19 @@
 - { id: salted-duck-egg-yolk, zh: 咸鸭蛋黄, aliases: [咸蛋黄, 熟咸鸭蛋黄], en: Salted duck egg yolks, kind: egg-dairy, where: asian, pantry: false, substitutes: [] }
 - { id: black-tapioca-pearls, zh: 快煮黑木薯珍珠, aliases: [黑珍珠, 奶茶珍珠, 黑糖珍珠, 粉圆, 波霸], en: Instant black tapioca pearls (5-minute), kind: grain, where: asian, pantry: true, substitutes: [] }
 - { id: pork-bones, zh: 猪骨, aliases: [猪腿骨, 猪颈骨, 筒骨, 猪大骨], en: Pork bones (neck bones / leg bones), kind: meat, where: asian, pantry: false, substitutes: [] }
+
+# 第八轮新增（2026-10-28）
+- { id: belt-fish, zh: 带鱼, aliases: [白带鱼, 带鱼段], en: Belt fish / Ribbonfish / Cutlassfish, kind: seafood, where: asian, pantry: false, substitutes: [] }
+- { id: char-siu, zh: 叉烧, aliases: [熟叉烧, 蜜汁叉烧, 广式叉烧], en: Chinese BBQ pork / Char siu (fully cooked), kind: meat, where: asian, pantry: false, substitutes: [ham] }
+- { id: ground-chicken, zh: 鸡肉末, aliases: [鸡绞肉, 绞鸡肉, 鸡肉馅, Ground chicken], en: Ground chicken, kind: poultry, where: mainstream, pantry: false, substitutes: [] }
+- { id: yellowtail, zh: 鰤鱼, aliases: [鰤, 油甘鱼, 日本鰤, Buri, Hamachi, Japanese amberjack], en: Japanese yellowtail / Hamachi fillet, kind: seafood, where: specialty, pantry: false, substitutes: [salmon] }
+- { id: asparagus, zh: 芦笋, aliases: [绿芦笋, 蘆筍], en: Asparagus, kind: vegetable, where: mainstream, pantry: false, substitutes: [] }
+- { id: dashi-powder, zh: 颗粒出汁素, aliases: [出汁粉, 鲣鱼出汁素, 本だし, Hondashi], en: Dashi granules / Hondashi bonito soup stock, kind: seasoning, where: asian, pantry: true, substitutes: [] }
+- { id: tiny-dried-anchovy, zh: 炒菜用小型干鳀鱼, aliases: [炒小银鱼用鱼干, 小鳀鱼干, 지리멸치, 볶음용 멸치], en: Tiny dried anchovies for stir-frying, kind: dried, where: asian, pantry: true, substitutes: [] }
+- { id: tofu-puff, zh: 豆泡, aliases: [油豆泡, 炸豆腐泡, 豆腐泡], en: Tofu puffs / Fried tofu puffs, kind: soy, where: asian, pantry: false, substitutes: [] }
+- { id: green-lentils, zh: 绿扁豆, aliases: [法国绿扁豆, 勒皮绿扁豆, 杜普扁豆, 青扁豆, 整粒绿扁豆, Puy lentils, Lentilles vertes du Puy], en: Green lentils / French green lentils (du Puy), kind: dried, where: mainstream, pantry: true, substitutes: [] }
+- { id: espelette-pepper, zh: 埃斯普莱特辣椒粉, aliases: [Espelette 辣椒粉, 巴斯克辣椒粉, piment d'Espelette], en: Piment d'Espelette (ground Espelette pepper), kind: seasoning, where: specialty, pantry: true, substitutes: [cayenne] }
+- { id: provolone-del-monaco, zh: Provolone del Monaco, aliases: [那不勒斯熟成 Provolone], en: Provolone del Monaco (or aged provolone piccante), kind: egg-dairy, where: specialty, substitutes: [caciocavallo] }
+- { id: morteau-sausage, zh: 莫尔托香肠, aliases: [Morteau 香肠, 法式莫尔托烟熏香肠, Saucisse de Morteau], en: Morteau smoked pork sausage (raw), kind: meat, where: specialty, substitutes: [] }
+- { id: bayonne-ham, zh: 巴约讷火腿, aliases: [Jambon de Bayonne], en: Bayonne ham, kind: meat, where: specialty, pantry: false, substitutes: [prosciutto] }
+- { id: kiriboshi-daikon, zh: 干萝卜丝, aliases: [切干萝卜, 切り干し大根, 切干大根, Kiriboshi daikon, 日式萝卜丝干], en: Kiriboshi daikon / Dried shredded daikon radish (unseasoned), kind: dried, where: asian, pantry: true, substitutes: [] }

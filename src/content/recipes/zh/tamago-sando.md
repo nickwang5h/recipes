@@ -5,6 +5,7 @@ title: 鸡蛋三明治
 original: たまごサンド
 cuisine: japanese
 course: breakfast
+tags: [bento]
 summary: 细碎熟蛋拌日式蛋黄酱，夹进柔软白吐司。蛋黄压细、蛋白留小粒，馅才浓滑又有口感。
 servings: 2
 time: { prep: 25, cook: 15 }

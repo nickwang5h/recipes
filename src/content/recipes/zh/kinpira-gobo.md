@@ -5,6 +5,7 @@ title: 金平牛蒡
 original: きんぴらごぼう
 cuisine: japanese
 course: veg
+tags: [bento]
 summary: 牛蒡与胡萝卜切细丝，先炒到能弯折，再把清酒、味醂和酱油收成薄薄的甜咸光泽。
 servings: 4
 time: { prep: 20, cook: 10 }

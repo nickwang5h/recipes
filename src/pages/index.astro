@@ -20,12 +20,13 @@ const recent = [
   .sort((a, b) => b.updated.getTime() - a.updated.getTime())
   .slice(0, 6);
 
-// One drawer of the recipe box per cuisine: four illustrated dishes from its featured list.
+// One drawer of the recipe box per cuisine: four illustrated dishes from its featured list,
+// leaving out sauces, stocks and sides — the box is for something to cook tonight.
 // The starting point moves with the build date so the home page doesn't go stale.
 const recipeById = new Map(recipes.map((r) => [r.id, r]));
 const day = Math.floor(Date.now() / 86_400_000);
 const drawers = cuisines.map((c) => {
-  const featured = c.data.featured.map((ref) => recipeById.get(ref.id)!).filter((r) => r?.data.cover);
+  const featured = c.data.featured.map((ref) => recipeById.get(ref.id)!).filter((r) => r?.data.cover && !r.data.component && !r.data.minor);
   const picks = Array.from({ length: Math.min(4, featured.length) }, (_, i) => featured[(day + i) % featured.length]);
   return { cuisine: c, picks, count: recipes.filter((r) => r.data.cuisine.id === c.id).length };
 });
@@ -62,6 +63,8 @@ const short = (title: string) => title.split('：')[0];
       <h2 id="box-title" class="section-title">翻翻食谱盒</h2>
       <span class="section-links">
         <a href={`${url('recipes')}?season=1`}>当季的菜</a>
+        <a href={`${url('recipes')}?tag=bento`}>能带饭</a>
+        <a href={`${url('recipes')}?tag=one-pot`}>一锅出</a>
         <a href={url('recipes')}>全部 {recipes.length} 道菜 →</a>
       </span>
     </div>

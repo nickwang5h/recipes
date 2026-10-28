@@ -5,10 +5,12 @@ import {
   COURSES,
   INGREDIENT_KINDS,
   PRINCIPLE_CATEGORIES,
+  TAGS,
   WHERE_TO_BUY,
   type Course,
   type IngredientKind,
   type PrincipleCategory,
+  type Tag,
   type WhereToBuy,
 } from './lib/categories';
 
@@ -92,6 +94,9 @@ const recipes = defineCollection({
     course: z.enum(keys<Course>(COURSES)),
     /** A building block (sauce, stock, plain rice…) rather than a dish; hidden from browsing unless asked for. */
     component: z.boolean().default(false),
+    /** A side or a trivially simple preparation (糖拌西红柿, 鸡蛋花): listed, but never suggested as tonight's meal. */
+    minor: z.boolean().default(false),
+    tags: z.array(z.enum(keys<Tag>(TAGS))).default([]),
     summary: z.string(),
     servings: z.number().int().positive(),
     time: z.object({ prep: z.number().int().nonnegative(), cook: z.number().int().nonnegative() }),

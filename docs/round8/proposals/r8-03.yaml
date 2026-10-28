@@ -1,0 +1,2 @@
+- { id: belt-fish, zh: 带鱼, aliases: [白带鱼, 带鱼段], en: Belt fish / Ribbonfish / Cutlassfish, kind: seafood, where: asian, pantry: false, substitutes: [] }
+- { id: char-siu, zh: 叉烧, aliases: [熟叉烧, 蜜汁叉烧, 广式叉烧], en: Chinese BBQ pork / Char siu (fully cooked), kind: meat, where: asian, pantry: false, substitutes: [ham] }

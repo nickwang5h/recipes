@@ -1,0 +1,3 @@
+- { id: green-lentils, zh: 绿扁豆, aliases: [法国绿扁豆, 勒皮绿扁豆, 杜普扁豆, 青扁豆, 整粒绿扁豆, Puy lentils, Lentilles vertes du Puy], en: Green lentils / French green lentils (du Puy), kind: dried, where: mainstream, pantry: true, substitutes: [] }
+- { id: espelette-pepper, zh: 埃斯普莱特辣椒粉, aliases: [Espelette 辣椒粉, 巴斯克辣椒粉, piment d'Espelette], en: Piment d'Espelette (ground Espelette pepper), kind: seasoning, where: specialty, pantry: true, substitutes: [paprika, cayenne] }
+- { id: paprika, zh: 甜红椒粉, aliases: [红椒粉, 匈牙利红椒粉, 甜椒粉], en: Sweet paprika, kind: seasoning, where: mainstream, pantry: true, substitutes: [] }

@@ -5,6 +5,7 @@ title: 筑前煮
 original: 筑前煮
 cuisine: japanese
 course: meat
+tags: [bento]
 summary: 鸡腿肉、根菜和蒟蒻先炒后煮，落盖帮助少量甜咸出汁循环，煮到根菜软透、表面挂汁。
 servings: 6
 time: { prep: 40, cook: 45 }

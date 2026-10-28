@@ -6,7 +6,7 @@ original: Cuisine française
 summary: 以酱汁为骨架：高汤打底，锅底褐渣化开，再用 roux、收汁或黄油乳化，把一锅液体变成挂得住的酱。
 accent: blue
 principles: [emulsification, maillard-reaction, starch-gelatinization, collagen-gelatin, protein-coagulation]
-featured: [beurre-blanc, hollandaise, bechamel, boeuf-bourguignon, french-onion-soup, french-omelette]
+featured: [beurre-blanc, hollandaise, bechamel, boeuf-bourguignon, french-onion-soup, french-omelette, poulet-basquaise, saucisses-aux-lentilles]
 order: 2
 ---
 

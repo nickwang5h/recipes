@@ -4,6 +4,7 @@ coverAlt: 干锅花菜装盘后的插画
 title: 干锅花菜
 cuisine: chinese
 course: veg
+tags: [bento]
 summary: 花菜短焯后充分沥干，五花肉先煸出油，再用蒜辣香和薄汁炒成干香的一盘。
 servings: 2
 time: { prep: 25, cook: 10 }
@@ -44,6 +45,6 @@ updated: 2026-10-01
 
 ## 要点
 
-- **花菜软塌、没有干香**：焯得过久，或花朵间的水没有排净。[焯水](/principles/blanching/)只做预处理，凉透后充分沥干，回锅不再久煮。
+- **花菜软塌、没有干香**：焯得过久，或花朵间的水没有排净。[焯水](/principles/blanching/)只是预处理，凉透后充分沥干，回锅不再久煮。
 - **肉片不香、锅底都是肉汁**：没有给表面失水和上色的时间。肉先铺开煸出油，再下花菜，给[美拉德反应](/principles/maillard-reaction/)留出条件。
-- **整盘发苦**：蒜瓣在空油中炒得太久。按照[香气提取](/principles/aromatics/)的判断，闻香就接着下肉；已经焦黑的蒜要取出。
+- **整盘发苦**：蒜瓣在空油中炒得太久。蒜一出香就下肉（见[香料与香气提取](/principles/aromatics/)）；已经焦黑的蒜要取出。

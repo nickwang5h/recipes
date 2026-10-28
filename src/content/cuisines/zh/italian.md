@@ -6,7 +6,7 @@ original: Cucina italiana
 summary: 食材先行，步骤少而精。面和酱最后在锅里合为一体，煮面水、mantecatura 和时机决定成败。
 accent: green
 principles: [emulsification, starch-gelatinization, protein-coagulation, gluten, collagen-gelatin]
-featured: [cacio-e-pepe, carbonara, aglio-olio, risotto-alla-milanese, ragu-alla-bolognese, fresh-egg-pasta]
+featured: [cacio-e-pepe, carbonara, aglio-olio, risotto-alla-milanese, ragu-alla-bolognese, fresh-egg-pasta, spezzatino, pasta-al-tonno]
 order: 3
 ---
 

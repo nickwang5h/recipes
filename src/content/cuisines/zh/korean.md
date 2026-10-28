@@ -6,7 +6,7 @@ original: Hansik
 summary: 发酵是骨架：大酱、辣椒酱、酱油和泡菜，配一碗白饭和几样小菜，咸、辣、酸大多从发酵里来。
 accent: orange
 principles: [fermentation, salt, umami, aromatics, starch-gelatinization]
-featured: [baechu-kimchi, kimchi-jjigae, bibimbap, bulgogi, japchae, tteokbokki]
+featured: [baechu-kimchi, kimchi-jjigae, bibimbap, bulgogi, japchae, tteokbokki, andong-jjimdak, kongnamul-bap]
 order: 7
 ---
 
