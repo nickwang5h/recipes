@@ -84,7 +84,7 @@ import { url } from '../lib/site';
     $('[data-family-invite]').addEventListener('click', async () => {
       const link = `${location.origin}/mine/#join=${syncStatus().family}`;
       try {
-        if (navigator.share) await navigator.share({ title: '猫饭 · 加入家庭', url: link });
+        if (navigator.share) await navigator.share({ title: 'Kiki家的饭 · 加入家庭', url: link });
         else {
           await navigator.clipboard.writeText(link);
           flash($('[data-family-status]'), '已复制，发给家人打开即可');
