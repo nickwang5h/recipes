@@ -1,0 +1,40 @@
+---
+import Dumpling from './Dumpling.astro';
+import KofiButton from './KofiButton.astro';
+---
+
+<aside class="kofi-after" aria-label="在 Ko-fi 请我吃个饺子（新窗口）" data-kofi-after>
+  <div class="kofi-art" aria-hidden="true"><Dumpling /></div>
+  <p class="kofi-line">做好了就趁热吃。这道菜要是合口味，请我吃个饺子吧。</p>
+  <div class="kofi-row">
+    <KofiButton />
+    <span class="kofi-note">Ko-fi · 一个 $5</span>
+  </div>
+</aside>
+
+<script>
+  const box = document.querySelector<HTMLElement>('[data-kofi-after]');
+  if (box) {
+    // Steps come from Markdown, so the line moves here: right after the steps, before 要点.
+    const headings = [...document.querySelectorAll<HTMLElement>('.recipe-content h2')];
+    const steps = headings.findIndex((h) => h.textContent?.trim() === '步骤');
+    if (steps >= 0) headings[steps + 1]?.before(box);
+
+    // The dumpling steams once per session, the first time most of the line is on screen.
+    const firstTime = () => {
+      try {
+        if (sessionStorage.getItem('recipes:kofi-played')) return false;
+        sessionStorage.setItem('recipes:kofi-played', '1');
+      } catch {}
+      return true;
+    };
+    if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const io = new IntersectionObserver((entries) => {
+        if (!entries.some((e) => e.intersectionRatio >= 0.6)) return;
+        io.disconnect();
+        if (firstTime()) box.classList.add('is-play');
+      }, { threshold: [0.6] });
+      io.observe(box);
+    }
+  }
+</script>

@@ -3,6 +3,7 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 export const SITE_TITLE = 'Kiki家的饭';
 export const SITE_DESCRIPTION = '中餐、法餐、意大利菜和亚洲各地家常菜的原理与菜谱笔记。';
 export const MAIN_SITE = 'https://nickwang.xyz';
+export const KOFI_URL = 'https://ko-fi.com/nickwang5h';
 
 /**
  * Build an internal link. Chinese is the unprefixed default locale; a future

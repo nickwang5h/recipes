@@ -1,0 +1,33 @@
+---
+import Dumpling from './Dumpling.astro';
+import { KOFI_URL } from '../lib/site';
+
+interface Props {
+  /** The header copy: shortens to 支持 on narrow screens. */
+  head?: boolean;
+}
+
+const { head } = Astro.props;
+---
+
+<a class:list={['kofi', { 'kofi-head': head }]} href={KOFI_URL} target="_blank" rel="noopener noreferrer" aria-label="在 Ko-fi 请我吃个饺子（新窗口）">
+  <Dumpling /><span class="kofi-long">请我吃个饺子</span><span class="kofi-short">支持</span>
+</a>
+
+<script>
+  // Still until touched: pressing makes the dumpling hop, a keyboard focus lets out one puff of steam.
+  const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+  for (const link of document.querySelectorAll<HTMLElement>('.kofi')) {
+    link.addEventListener('pointerdown', () => {
+      if (reduced()) return;
+      link.classList.remove('is-hop');
+      void link.offsetWidth;
+      link.classList.add('is-hop');
+    });
+    link.addEventListener('focus', () => {
+      if (reduced() || !link.matches(':focus-visible')) return;
+      link.classList.add('is-steam');
+      setTimeout(() => link.classList.remove('is-steam'), 1400);
+    });
+  }
+</script>
