@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/cake-sale.jpg
+coverAlt: 法式咸蛋糕装盘后的插画
 title: 法式咸蛋糕
 original: cake salé
 cuisine: french

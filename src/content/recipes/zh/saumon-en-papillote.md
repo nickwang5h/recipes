@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/saumon-en-papillote.jpg
+coverAlt: 纸包三文鱼装盘后的插画
 title: 纸包三文鱼
 original: saumon en papillote
 cuisine: french

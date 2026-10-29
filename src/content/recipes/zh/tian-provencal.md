@@ -1,4 +1,6 @@
 ---
+cover: ../../../assets/covers/recipes/tian-provencal.jpg
+coverAlt: 普罗旺斯烤蔬菜装盘后的插画
 title: 普罗旺斯烤蔬菜
 original: tian provençal
 cuisine: french
