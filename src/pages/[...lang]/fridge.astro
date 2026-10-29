@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import { getImage } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
-import ShoppingList from '../../components/ShoppingList.astro';
 import CatNote from '../../components/CatNote.astro';
 import fridgeCat from '../../assets/cats/fridge.png';
 import potCat from '../../assets/cats/search-empty.png';
@@ -145,7 +144,6 @@ const label = (i: (typeof catalog)[number]) => (lang === 'en' ? i.data.en : i.da
         {t.parts}
       </label>
 
-      <ShoppingList />
 
       <CatNote cat={fridgeCat} data-hint>
         <p class="cat-note-title">{t.hint}</p>
@@ -175,7 +173,7 @@ const label = (i: (typeof catalog)[number]) => (lang === 'en' ? i.data.en : i.da
     import { withinTime, type WhereToBuy } from '../../lib/categories';
     import { matchRecipes, searchIngredients, type Match } from '../../lib/fridge';
     import { get, keys, set, setMany, subscribe } from '../../scripts/store';
-    import { addToList, isListed, mountShoppingList } from '../../scripts/shopping-list';
+    import { addToList, isListed } from '../../scripts/shopping-list';
     import { el, recipeCard } from '../../scripts/ui';
     import { fridgeData, mountPicker } from '../../scripts/fridge-picker';
     import { phone } from '../../scripts/phone';
@@ -242,7 +240,6 @@ const label = (i: (typeof catalog)[number]) => (lang === 'en' ? i.data.en : i.da
       return li;
     };
 
-    mountShoppingList(new Map(data.ingredients.map((i) => [i.id, i])));
 
     // A leaf on what is in field season this month.
     const month = String(new Date().getMonth() + 1);

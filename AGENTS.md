@@ -50,6 +50,14 @@ Planned and published slugs live in `docs/content-plan.md`.
 - `npm run build` — type check, build, internal link check, then `scripts/build-sw.mjs` writes `dist/sw.js`
   (from `scripts/sw-template.js`) and `dist/offline-pages.json` for the PWA offline cache
 
+- `node scripts/cook-links.mjs` — after adding or reordering steps, key points or ingredient lines: regenerates
+  `src/data/cook-links.json` (each step's ingredients and each key point's step, for the phone's cooking mode).
+  Entries marked `"checked": true` were read by hand and are kept; `tests/cook-links.test.ts` fails when it's stale.
+- Fonts: `scripts/font-census.mjs` records which characters each font draws on every built page, and
+  `scripts/build-web-fonts.py` cuts `public/fonts/` from it (shared slices by how often a character is drawn,
+  plus one small file per page in `public/fonts/page/`, listed in `src/data/page-fonts.json`). The source fonts
+  live in `fonts/` (not in git; see the script). New text always renders; rerun both when pages have drifted
+  far enough that they fetch many shared slices.
 - `node scripts/check-external-links.mjs` — checks every source URL; also runs monthly in
   `.github/workflows/check-links.yml`, which opens an issue when a link is gone
 

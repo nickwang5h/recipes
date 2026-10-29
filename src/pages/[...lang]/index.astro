@@ -1,210 +1,78 @@
 ---
 import { Image } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
-import RecipeCard from '../../components/RecipeCard.astro';
-import TagIcon from '../../components/TagIcon.astro';
-import { formatDate, langPaths, url, type Both, type Lang } from '../../i18n';
-import { cuisines as getCuisines, entries } from '../../i18n/content';
-import { PRINCIPLE_CATEGORIES, type PrincipleCategory } from '../../lib/categories';
+import { langPaths, url, type Both, type Lang } from '../../i18n';
 import heroCats from '../../assets/cats/hero-duo.png';
-import fridgeCat from '../../assets/cats/fridge.png';
-import readCat from '../../assets/cats/read.png';
 
 export const getStaticPaths = langPaths;
 const { lang } = Astro.props as { lang: Lang };
-const cuisines = await getCuisines(lang);
-const principles = await entries('principles', lang);
-const recipes = await entries('recipes', lang);
+// 今天: a tool for tonight, not a feed. Tonight's dishes and what they still need, what the fridge
+// can make, and the week ahead; everything is filled in on the device (src/scripts/today.ts).
 const T = {
   zh: {
-    recipe: '菜谱', principle: '原理', h1: '今天在家做点什么？', sub: `${recipes.length} 道七国家常菜，每道都写清楚为什么这样做。`,
-    search: '搜索', placeholder: '搜菜名、食材或原理', lucky: '今晚吃什么？', luckyNote: '← 拿不定主意就点这里',
+    title: '今天', tonight: '今晚', lucky: '今晚吃什么？', table: '配一桌',
     heroAlt: '两只暹罗猫在灶台前一起做饭：一只站在小板凳上颠锅，一只在旁边尝汤',
-    shortcuts: '按用途找菜', bento: ['能带饭', '第二天复热不变味，装盒不出水'], onePot: ['一锅出', '肉、菜、主食一口锅做完'], season: ['当季的菜', '用安大略这个月正在收的菜'],
-    box: '翻翻食谱盒', all: `全部 ${recipes.length} 道菜 →`, cuisine: '菜系', more: (title: string, n: number) => `翻完${title}的 ${n} 道菜 →`,
-    fridgeRow: '冰箱和速查', fridge: '冰箱里有什么？', fridgeNote: '选几样手头的食材，找出能做的菜。', fridgeLink: '按冰箱找菜 →',
-    oil: '油温速查', oilLines: ['常压深油炸：约 160–190°C', '下料后油温会掉，等它回到目标再下一批', '冒烟说明该降温，不是下料信号'], oilLink: '油温与油炸 →',
-    why: '为什么这样做', allPrinciples: '全部原理 →', recent: '最近更新',
+    fridge: '冰箱', edit: '改', fridgeEmpty: '还没选冰箱里有什么。选几样手头的食材，这里会列出能做的菜。', pick: '选冰箱里有什么',
+    week: '这周', menu: '排菜单', recipes: '翻翻菜谱',
   },
   en: {
-    recipe: 'Recipe', principle: 'Science', h1: 'What shall we cook tonight?', sub: `${recipes.length} home-style dishes from seven countries, each with the reason it works.`,
-    search: 'Search', placeholder: 'Dish, ingredient or technique', lucky: 'What’s for dinner?', luckyNote: '← can’t decide? tap here',
+    title: 'Today', tonight: 'Tonight', lucky: 'What’s for dinner?', table: 'Set a table',
     heroAlt: 'Two Siamese cats cooking together at the stove: one stands on a little stool tossing the wok, the other tastes the soup',
-    shortcuts: 'Find recipes by use', bento: ['Lunch box', 'Reheats well the next day and stays put in the box'], onePot: ['One pot', 'Meat, vegetables and the starch in a single pot'], season: ['In season', 'What Ontario farms are harvesting this month'],
-    box: 'Flip through the recipe box', all: `All ${recipes.length} recipes →`, cuisine: 'Cuisine', more: (title: string, n: number) => `All ${n} ${title} recipes →`,
-    fridgeRow: 'Fridge and quick reference', fridge: 'What’s in your fridge?', fridgeNote: 'Pick a few things you have and see what you can cook.', fridgeLink: 'Cook from the fridge →',
-    oil: 'Oil temperatures', oilLines: ['Deep frying: about 160–190°C (320–375°F)', 'The oil cools when food goes in; let it recover before the next batch', 'Smoke means turn the heat down, not that it’s ready'], oilLink: 'Oil temperature and deep frying →',
-    why: 'Why it works', allPrinciples: 'All the science →', recent: 'Recently updated',
+    fridge: 'Fridge', edit: 'Edit', fridgeEmpty: 'Nothing picked yet. Choose a few things you have, and the dishes you can make show up here.', pick: 'Pick what’s in the fridge',
+    week: 'This week', menu: 'Plan the week', recipes: 'Browse recipes',
   },
-} satisfies Both<Record<string, unknown>>;
+} satisfies Both<Record<string, string>>;
 const t = T[lang];
-
-const recent = [
-  ...recipes.map((r) => ({ kind: t.recipe, href: url(`recipes/${r.id}`, lang), title: r.data.title, updated: r.data.updated })),
-  ...principles.map((p) => ({ kind: t.principle, href: url(`principles/${p.id}`, lang), title: p.data.title, updated: p.data.updated })),
-]
-  .sort((a, b) => b.updated.getTime() - a.updated.getTime())
-  .slice(0, 6);
-
-// One drawer of the recipe box per cuisine: four illustrated dishes from its featured list,
-// leaving out sauces, stocks and sides — the box is for something to cook tonight.
-// The starting point moves with the build date so the home page doesn't go stale.
-const recipeById = new Map(recipes.map((r) => [r.id, r]));
-const day = Math.floor(Date.now() / 86_400_000);
-const drawers = cuisines.map((c) => {
-  const featured = c.data.featured.map((ref) => recipeById.get(ref.id)!).filter((r) => r?.data.cover && !r.data.component && !r.data.minor);
-  const picks = Array.from({ length: Math.min(4, featured.length) }, (_, i) => featured[(day + i) % featured.length]);
-  return { cuisine: c, picks, count: recipes.filter((r) => r.data.cuisine.id === c.id).length };
-});
-
-// Weekday shortcuts above the recipe box.
-const dishes = recipes.filter((r) => !r.data.component);
-const tagged = (tag: 'bento' | 'one-pot') => dishes.filter((r) => r.data.tags.includes(tag)).length;
-const shortcuts = [
-  { icon: 'bento', title: t.bento[0], count: tagged('bento'), note: t.bento[1], href: `${url('recipes', lang)}?tag=bento` },
-  { icon: 'one-pot', title: t.onePot[0], count: tagged('one-pot'), note: t.onePot[1], href: `${url('recipes', lang)}?tag=one-pot` },
-  { icon: 'season', title: t.season[0], note: t.season[1], href: `${url('recipes', lang)}?season=1` },
-] as const;
-
-const byCategory = (Object.keys(PRINCIPLE_CATEGORIES) as PrincipleCategory[])
-  .map((category) => ({ category, items: principles.filter((p) => p.data.category === category) }))
-  .filter((g) => g.items.length > 0);
-// Principle titles carry a subtitle after the colon ("盐：调味、渗透与腌制"); the ruled card keeps the short name.
-const short = (title: string) => title.split(/：|: /)[0];
 ---
 
 <Base narrow>
-  <section class="home-hero">
-    <div class="index-card home-hero-card">
-      <h1>{t.h1}</h1>
-      <p class="home-sub">{t.sub}</p>
-      <form class="home-search search-box" action={url('search', lang)} method="get" role="search">
-        <label class="visually-hidden" for="home-q">{t.search}</label>
-        <input id="home-q" type="search" name="q" placeholder={t.placeholder} autocomplete="off" />
-      </form>
-      <div class="home-actions">
-        <a class="home-lucky" href={`${url('recipes', lang)}?lucky`} data-draw>{t.lucky}</a>
-        <span class="hand-note">{t.luckyNote}</span>
+  <div class="today" data-today>
+    <header class="today-head">
+      <h1>{t.title}</h1>
+      <p class="today-date" data-today-date></p>
+    </header>
+
+    <div class="today-grid">
+      <section class="index-card tonight" aria-labelledby="tonight-title">
+        <h2 id="tonight-title">{t.tonight}</h2>
+        <div class="tonight-empty" data-tonight-empty>
+          <Image class="tonight-cats" src={heroCats} alt={t.heroAlt} widths={[480, 720, 1080]} sizes="(min-width: 900px) 560px, 100vw" loading="eager" />
+          <div class="tonight-acts">
+            <a class="home-lucky" href={`${url('recipes', lang)}?lucky`} data-draw>{t.lucky}</a>
+            <button class="text-btn" type="button" data-table>{t.table}</button>
+          </div>
+        </div>
+        <ul class="tonight-dishes" data-tonight hidden></ul>
+        <div class="tonight-foot" data-tonight-foot hidden></div>
+      </section>
+
+      <section class="today-fridge" aria-labelledby="fridge-title">
+        <div class="today-sec-head">
+          <h2 id="fridge-title">{t.fridge}</h2>
+          <a href={url('fridge', lang)} data-fridge-edit data-title={t.fridge}>{t.edit}</a>
+        </div>
+        <ul class="today-have" data-fridge-have></ul>
+        <div class="today-fridge-empty" data-fridge-empty>
+          <p>{t.fridgeEmpty}</p>
+          <a class="cat-note-btn" href={url('fridge', lang)} data-fridge-edit data-title={t.fridge}>{t.pick}</a>
+        </div>
+        <ul class="card-grid today-matches" data-matches></ul>
+      </section>
+    </div>
+
+    <section class="today-week" aria-labelledby="week-title">
+      <div class="today-sec-head">
+        <h2 id="week-title">{t.week}</h2>
+        <a href={url('menu', lang)}>{t.menu} →</a>
       </div>
-    </div>
-    <figure class="hero-photo">
-      <span class="tape" aria-hidden="true"></span>
-      <Image src={heroCats} alt={t.heroAlt} widths={[480, 720, 1080]} sizes="(min-width: 900px) 520px, 100vw" loading="eager" />
-    </figure>
-  </section>
-
-  <nav class="shortcuts" aria-label={t.shortcuts}>
-    {shortcuts.map((s) => (
-      <a class="shortcut" href={s.href}>
-        <span class="shortcut-icon"><TagIcon name={s.icon} /></span>
-        <span class="shortcut-text">
-          <strong>{s.title}{'count' in s && <small>{lang === 'en' ? s.count : `${s.count} 道`}</small>}</strong>
-          <span>{s.note}</span>
-        </span>
-      </a>
-    ))}
-  </nav>
-
-  <section aria-labelledby="box-title">
-    <div class="section-head">
-      <h2 id="box-title" class="section-title">{t.box}</h2>
-      <span class="section-links">
-        <a href={url('recipes', lang)}>{t.all}</a>
-      </span>
-    </div>
-    <div class="box-tabs" role="tablist" aria-label={t.cuisine}>
-      {drawers.map(({ cuisine, count }, i) => (
-        <button class="box-tab" type="button" role="tab" id={`tab-${cuisine.id}`} aria-controls={`drawer-${cuisine.id}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>
-          {cuisine.data.title}<small>{count}</small>
-        </button>
-      ))}
-    </div>
-    {drawers.map(({ cuisine, picks, count }, i) => (
-      <div class="box-drawer" role="tabpanel" id={`drawer-${cuisine.id}`} aria-labelledby={`tab-${cuisine.id}`} hidden={i !== 0}>
-        <ul class="card-grid box-cards">
-          {picks.map((r) => <li><RecipeCard recipe={r} cuisine={cuisine} boxed /></li>)}
-        </ul>
-        <p class="box-more"><a href={url(`cuisines/${cuisine.id}`, lang)}>{t.more(cuisine.data.title, count)}</a></p>
-      </div>
-    ))}
-  </section>
-
-  <section class="fridge-row" aria-label={t.fridgeRow}>
-    <a class="fridge-cta" href={url('fridge', lang)}>
-      <Image src={fridgeCat} alt="" widths={[200, 400]} sizes="12rem" loading="lazy" />
-      <span>
-        <strong>{t.fridge}</strong>
-        <span>{t.fridgeNote}</span>
-        <span class="fridge-cta-link">{t.fridgeLink}</span>
-      </span>
-    </a>
-    <aside class="magnet-card" aria-labelledby="magnet-title">
-      <h2 id="magnet-title">{t.oil}</h2>
-      <ul>
-        {t.oilLines.map((line) => <li>{line}</li>)}
-      </ul>
-      <a href={url('principles/oil-temperature', lang)}>{t.oilLink}</a>
-    </aside>
-  </section>
-
-  <section class="index-card ruled principles-card" aria-labelledby="principles-title">
-    <div class="section-head">
-      <h2 id="principles-title">{t.why}</h2>
-      <a href={url('principles', lang)}>{t.allPrinciples}</a>
-    </div>
-    <dl>
-      {byCategory.map(({ category, items }) => (
-        <>
-          <dt>{PRINCIPLE_CATEGORIES[category][lang]}</dt>
-          <dd>{items.map((p) => <a href={url(`principles/${p.id}`, lang)}>{short(p.data.title)}</a>)}</dd>
-        </>
-      ))}
-    </dl>
-    <Image class="cat-sticker principles-cat" src={readCat} alt="" widths={[160, 320]} sizes="7rem" loading="lazy" />
-  </section>
-
-  <section aria-labelledby="recent-title">
-    <h2 id="recent-title" class="section-title">{t.recent}</h2>
-    <ul class="link-list">
-      {recent.map((item) => (
-        <li>
-          <a href={item.href}>
-            <span class="title">{item.title}</span>
-            <span class="meta">{item.kind} · {formatDate(item.updated, lang)}</span>
-          </a>
-        </li>
-      ))}
-    </ul>
-  </section>
+      {/* Seven empty days hold the space until the device fills in its own dates. */}
+      <ol class="week" data-week>
+        {Array.from({ length: 7 }, () => <li class="day"><span class="day-head"></span></li>)}
+      </ol>
+    </section>
+  </div>
 
   <script>
-    import { openDraw } from '../../scripts/draw';
-    import { phone } from '../../scripts/phone';
-
-    // Phones draw on this page instead of going to the recipe list.
-    document.querySelector('[data-draw]')?.addEventListener('click', (event) => {
-      if (!phone.matches) return;
-      event.preventDefault();
-      void openDraw();
-    });
-
-    // Recipe-box drawers: one cuisine open at a time; arrow keys move between tabs.
-    const tabs = [...document.querySelectorAll<HTMLButtonElement>('.box-tab')];
-    const open = (tab: HTMLButtonElement, focus = false) => {
-      for (const t of tabs) {
-        const on = t === tab;
-        t.setAttribute('aria-selected', String(on));
-        t.tabIndex = on ? 0 : -1;
-        document.getElementById(t.getAttribute('aria-controls')!)!.hidden = !on;
-      }
-      if (focus) tab.focus();
-    };
-    tabs.forEach((tab, i) => {
-      tab.addEventListener('click', () => open(tab));
-      tab.addEventListener('keydown', (event) => {
-        const step = event.key === 'ArrowRight' ? 1 : event.key === 'ArrowLeft' ? -1 : 0;
-        if (step) open(tabs[(i + step + tabs.length) % tabs.length], true);
-      });
-    });
+    import '../../scripts/today';
   </script>
 </Base>

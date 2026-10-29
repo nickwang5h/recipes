@@ -54,7 +54,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
 
-  if (request.mode === 'navigate' || /^(\/en)?\/(search-index|recipes-data)\.json$/.test(url.pathname)) {
+  if (request.mode === 'navigate' || /^(\/en)?\/(search-index|recipes-data|fridge-data)\.json$/.test(url.pathname)) {
     // The data files change with every deploy, so they are treated like pages.
     event.respondWith(page(request));
   } else if (url.pathname.startsWith('/fonts/')) {

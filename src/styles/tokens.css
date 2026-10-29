@@ -1,6 +1,20 @@
 /* Palette ported from nickwang.xyz (src/css/custom.css): warm ivory / matte graphite,
    red primary, and the shared accent set. Each cuisine picks one accent. */
 
+/* While the web fonts load, a line can hold glyphs from both a web font and the system font; with
+   different ascents the line grows, then shrinks back, and the page jumps. These system faces take the
+   web fonts' metrics (Source Han Sans SC: 1160/288, LXGW WenKai: 928/256 per 1000), so it doesn't. */
+@font-face {
+  font-family: "Kiki Sans Fallback";
+  src: local("PingFang SC"), local("PingFangSC-Regular"), local("Microsoft YaHei"), local("Noto Sans CJK SC"), local("Hiragino Sans GB");
+  ascent-override: 116%; descent-override: 28.8%; line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Kiki Reading Fallback";
+  src: local("Kaiti SC"), local("STKaiti"), local("KaiTi"), local("Songti SC"), local("SimSun");
+  ascent-override: 92.8%; descent-override: 25.6%; line-gap-override: 0%;
+}
+
 :root {
   color-scheme: light;
   --bg: #f3f0e8;
@@ -26,8 +40,10 @@
   --tape: rgb(232 196 120 / 0.55);
   --rule: #ccd5dd;
 
-  --font-sans: "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
-  --font-reading: "LXGW WenKai", "Kaiti SC", "KaiTi", serif;
+  /* "Kiki Page …" is each page's own small font file with its less common characters (scripts/build-web-fonts.py);
+     "Kiki … Fallback" is the system font with the web font's line metrics (below), used while the web font loads. */
+  --font-sans: "Kiki Page Sans", "Source Han Sans SC", "Kiki Sans Fallback", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-reading: "Kiki Page Reading", "LXGW WenKai", "Kiki Reading Fallback", "Kaiti SC", "KaiTi", serif;
 
   --radius: 10px;
   --gutter: 16px;

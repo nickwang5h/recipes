@@ -1,20 +1,28 @@
 ---
-// Markup for the shared shopping list; src/scripts/shopping-list.ts fills it in.
-import { langOf, type Both } from '../i18n';
+// Markup for the shopping list page (/list/); src/scripts/shopping-list.ts fills it in.
+import CatNote from './CatNote.astro';
+import plateCat from '../assets/cats/mine-empty.png';
+import { langOf, url, type Both } from '../i18n';
+const lang = langOf(Astro.url);
 const T = {
-  zh: { title: '购物清单', copy: '复制清单', stock: '买到的放进冰箱', clear: '清空' },
-  en: { title: 'Shopping list', copy: 'Copy list', stock: 'Put what I bought in the fridge', clear: 'Clear' },
+  zh: { where: '按店看', copy: '复制清单', stock: '买到的放进冰箱', clear: '清空', empty: '清单是空的', emptyText: '在菜谱页点「缺的加到清单」，或在菜单里把这周要买的加进来。', browse: '去今天的菜单' },
+  en: { where: 'By shop', copy: 'Copy list', stock: 'Put what I bought in the fridge', clear: 'Clear', empty: 'The list is empty', emptyText: 'Tap “Add what’s missing” on a recipe, or add the week’s shopping from the menu.', browse: 'Go to today' },
 } satisfies Both<Record<string, string>>;
-const t = T[langOf(Astro.url)];
+const t = T[lang];
 ---
 
-<details class="shopping-list" id="list" data-list-wrap open hidden>
-  <summary><h2 class="section-title">{t.title} <span class="fridge-count" data-list-count></span></h2></summary>
+<section class="list-paper" id="list" data-list-wrap hidden>
+  <nav class="chips list-where" aria-label={t.where} data-list-where></nav>
   <div data-list></div>
   <div class="kit-actions shopping-actions">
+    <button class="text-btn list-stock" type="button" data-list-stock>{t.stock}</button>
     <button class="text-btn" type="button" data-list-copy>{t.copy}</button>
-    <button class="text-btn" type="button" data-list-stock>{t.stock}</button>
     <button class="text-btn" type="button" data-list-clear>{t.clear}</button>
     <span class="offline-status" data-list-status aria-live="polite"></span>
   </div>
-</details>
+</section>
+<CatNote cat={plateCat} data-list-empty>
+  <p class="cat-note-title">{t.empty}</p>
+  <p>{t.emptyText}</p>
+  <p><a class="cat-note-btn" href={url('', lang)}>{t.browse}</a></p>
+</CatNote>

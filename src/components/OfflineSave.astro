@@ -6,8 +6,12 @@ const en = langOf(Astro.url) === 'en';
 
 <div class="offline-save" data-offline-save hidden>
   <button class="text-btn" type="button" data-save-all>{en ? 'Save every recipe for offline use (about 16 MB)' : '离线保存全部菜谱（约 16 MB）'}</button>
-  <span class="offline-status" data-save-status aria-live="polite"></span>
+  <span class="offline-status" data-save-status aria-live="polite">&nbsp;</span>
 </div>
+{/* Shown before the first paint where it can work, so it doesn't push the page down a moment later. */}
+<script is:inline>
+  if ('serviceWorker' in navigator && 'caches' in window) document.currentScript.previousElementSibling.hidden = false;
+</script>
 
 <script>
   import { pageLang, url } from '../i18n';

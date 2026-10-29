@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import ShoppingList from '../../components/ShoppingList.astro';
+import { langPaths, type Both, type Lang } from '../../i18n';
+
+export const getStaticPaths = langPaths;
+const { lang } = Astro.props as { lang: Lang };
+const T = {
+  zh: { title: '清单', description: '要买的东西，按店分好，买到的一勾，回家放进冰箱。' },
+  en: { title: 'List', description: 'What to buy, sorted by shop; tick it off and put it in the fridge when you get home.' },
+} satisfies Both<Record<string, string>>;
+const t = T[lang];
+---
+
+<Base title={t.title} description={t.description}>
+  <header class="page-head list-head">
+    <h1>{t.title}</h1>
+  </header>
+  <ShoppingList />
+
+  <script>
+    import type { SiteData } from './recipes-data.json';
+    import { pageLang, url } from '../../i18n';
+    import { mountShoppingList } from '../../scripts/shopping-list';
+
+    const lang = pageLang();
+    const data: SiteData = await (await fetch(`${url('', lang)}recipes-data.json`)).json();
+    mountShoppingList(new Map(Object.entries(data.ingredients)));
+  </script>
+</Base>

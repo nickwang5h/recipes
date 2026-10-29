@@ -1,6 +1,5 @@
 ---
 import Base from '../../layouts/Base.astro';
-import ShoppingList from '../../components/ShoppingList.astro';
 import { langPaths, url, type Both, type Lang } from '../../i18n';
 
 export const getStaticPaths = langPaths;
@@ -54,8 +53,11 @@ const t = T[lang];
     </div>
   </section>
 
-  <ShoppingList />
 
+  <script is:inline>
+    // The shopping list used to sit at the bottom of this page; old links to it go to its own page now.
+    if (location.hash === '#list') location.replace(`${location.pathname.startsWith('/en/') ? '/en' : ''}/list/`);
+  </script>
   <script>
     import type { RecipeData, SiteData } from './recipes-data.json';
     import { joinList, pageLang, url } from '../../i18n';
@@ -63,7 +65,7 @@ const t = T[lang];
     import { SLOTS, suggestDish, suggestTable, weekNeeds, type SlotId } from '../../lib/menu';
     import { grouped } from '../../lib/shopping';
     import { get, keys, set, subscribe } from '../../scripts/store';
-    import { addToList, listItems, mountShoppingList } from '../../scripts/shopping-list';
+    import { addToList, listItems } from '../../scripts/shopping-list';
     import { el, flash, PLATE } from '../../scripts/ui';
 
     const lang = pageLang();
@@ -71,12 +73,12 @@ const t = T[lang];
       zh: {
         table: '配一桌', add: '加菜', remove: (day: string, title: string) => `从${day}去掉${title}`, empty: '还没安排', swap: '换', all: '都加上', never: '算了',
         search: '搜菜名…', addOne: '加', none: '没找到', hint: '输入菜名搜索；常做的菜会先列在这里', done: '完成',
-        count: (n: number) => `· ${n} 样`, for: '用于：', listed: ' · 已在清单', added: '已加入，见下面的购物清单',
+        count: (n: number) => `· ${n} 样`, for: '用于：', listed: ' · 已在清单', added: '已加入清单',
       },
       en: {
         table: 'Set a table', add: 'Add a dish', remove: (day: string, title: string) => `Remove ${title} from ${day}`, empty: 'Nothing planned', swap: 'Swap', all: 'Add them all', never: 'Never mind',
         search: 'Search recipes…', addOne: 'Add', none: 'Nothing found', hint: 'Type a dish name; the dishes you cook often are listed here first', done: 'Done',
-        count: (n: number) => `· ${n}`, for: 'For: ', listed: ' · on the list', added: 'Added; see the shopping list below',
+        count: (n: number) => `· ${n}`, for: 'For: ', listed: ' · on the list', added: 'Added to the list',
       },
     }[lang];
 
@@ -256,17 +258,7 @@ const t = T[lang];
       try { localStorage.setItem('recipes:menu-max', (event.target as HTMLSelectElement).value); } catch {}
     });
 
-    mountShoppingList(catalog);
     subscribe(render);
     render();
-    // The phone's 清单 tab links to #list, which only appears once the list has been drawn.
-    const toList = () => {
-      const list = document.getElementById('list');
-      if (location.hash !== '#list' || !list || list.hidden) return;
-      (list as HTMLDetailsElement).open = true;
-      list.scrollIntoView({ block: 'start' });
-    };
-    toList();
-    addEventListener('hashchange', toList);
   </script>
 </Base>

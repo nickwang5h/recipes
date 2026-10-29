@@ -1,12 +1,17 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import Base from '../../../layouts/Base.astro';
+import CatNote from '../../../components/CatNote.astro';
+import potCat from '../../../assets/cats/search-empty.png';
+import fridgeCat from '../../../assets/cats/fridge.png';
+import readCat from '../../../assets/cats/read.png';
 import OfflineSave from '../../../components/OfflineSave.astro';
 import RecipeCard from '../../../components/RecipeCard.astro';
 import TagIcon from '../../../components/TagIcon.astro';
-import { compare, dishCount, langPaths, url, type Both, type Lang } from '../../../i18n';
+import { compare, dishCount, formatDate, langPaths, url, type Both, type Lang } from '../../../i18n';
 import { cuisineMap as getCuisineMap, cuisines as getCuisines, entries } from '../../../i18n/content';
-import { COURSES, TAGS, TIME_LIMITS, type Course, type Tag } from '../../../lib/categories';
+import { COURSES, PRINCIPLE_CATEGORIES, TAGS, TIME_LIMITS, type Course, type PrincipleCategory, type Tag } from '../../../lib/categories';
 
 export const getStaticPaths = langPaths;
 const { lang } = Astro.props as { lang: Lang };
@@ -16,16 +21,22 @@ const T = {
     lede: ['每道菜都标出它用到的原理。份量可以缩放，配料和步骤可以逐项勾掉；配料附英文名，方便在加拿大的超市对照采购。想按手头的食材找菜，去', '冰箱', '。'],
     byCuisine: '按菜系筛选', allCuisines: '全部菜系', byCourse: '按类型筛选', allCourses: '全部类型', byTime: '按用时筛选', anyTime: '不限时间', byTag: '按用途筛选', anyTag: '不限用途',
     lucky: '今晚吃什么？', season: '只看用当季食材的', parts: (n: number) => `显示酱汁、高汤等半成品（${n}）`,
-    search: '搜索', placeholder: '搜菜名、食材或原理', more: '更多', cuisines: '菜系', principles: '原理', fridge: '冰箱里有什么', fridgeTitle: '冰箱', ok: '好',
-    pick: '就做这道？', pickNote: '从当前筛选出的菜里随手抽的，小菜和要花三小时以上的不抽。不想做就再抽。', again: '换一道', close: '收起', empty: '没有符合条件的菜谱。',
+    search: '搜索', placeholder: '搜菜名、食材或原理', ways: '菜系、原理和冰箱', cuisines: '菜系', principles: '原理', fridge: '冰箱里有什么', fridgeTitle: '冰箱', ok: '好',
+    empty: '没有符合条件的菜谱。', moreFirst: (n: number) => `再翻 ${Math.min(48, n)} 道`, none: '锅里空空的', noneText: '没有找到。换个说法试试，比如只搜主料“茄子”，或者做法“红烧”。',
+    why: '为什么这样做', allPrinciples: '全部原理 →', recent: '最近更新', recipe: '菜谱', principle: '原理',
+    fridgeQ: '冰箱里有什么？', fridgeNote: '选几样手头的食材，找出能做的菜。', fridgeLink: '按冰箱找菜 →',
+    oil: '油温速查', oilLines: ['常压深油炸：约 160–190°C', '下料后油温会掉，等它回到目标再下一批', '冒烟说明该降温，不是下料信号'], oilLink: '油温与油炸 →',
   },
   en: {
     title: 'Recipes', description: 'Everyday recipes from China, France, Italy and across Asia.',
     lede: ['Each recipe links the science it relies on. Scale the servings and tick off ingredients and steps as you go; ingredients bought at an Asian grocery show their Chinese name too. To cook from what you have, try the ', 'fridge', '.'],
     byCuisine: 'Filter by cuisine', allCuisines: 'All cuisines', byCourse: 'Filter by type', allCourses: 'All types', byTime: 'Filter by time', anyTime: 'Any time', byTag: 'Filter by use', anyTag: 'Any use',
     lucky: 'What’s for dinner?', season: 'Only with what’s in season', parts: (n: number) => `Show sauces, stocks and other building blocks (${n})`,
-    search: 'Search', placeholder: 'Dish, ingredient or technique', more: 'More', cuisines: 'Cuisines', principles: 'Science', fridge: 'What’s in your fridge?', fridgeTitle: 'Fridge', ok: 'Done',
-    pick: 'How about this one?', pickNote: 'Drawn at random from the recipes shown, leaving out sides and anything over three hours. Not feeling it? Draw again.', again: 'Another one', close: 'Close', empty: 'No recipes match these filters.',
+    search: 'Search', placeholder: 'Dish, ingredient or technique', ways: 'Cuisines, science and the fridge', cuisines: 'Cuisines', principles: 'Science', fridge: 'What’s in your fridge?', fridgeTitle: 'Fridge', ok: 'Done',
+    empty: 'No recipes match these filters.', moreFirst: (n: number) => `${Math.min(48, n)} more`, none: 'The pot’s empty', noneText: 'Nothing found. Try other words, such as just the main ingredient (“eggplant”) or the method (“braise”).',
+    why: 'Why it works', allPrinciples: 'All the science →', recent: 'Recently updated', recipe: 'Recipe', principle: 'Science',
+    fridgeQ: 'What’s in your fridge?', fridgeNote: 'Pick a few things you have and see what you can cook.', fridgeLink: 'Cook from the fridge →',
+    oil: 'Oil temperatures', oilLines: ['Deep frying: about 160–190°C (320–375°F)', 'The oil cools when food goes in; let it recover before the next batch', 'Smoke means turn the heat down, not that it’s ready'], oilLink: 'Oil temperature and deep frying →',
   },
 } satisfies Both<Record<string, unknown>>;
 const t = T[lang];
@@ -39,6 +50,10 @@ const recipes = (await entries('recipes', lang)).sort(
 const usedCourses = (Object.keys(COURSES) as Course[]).filter((c) => recipes.some((r) => r.data.course === c));
 const base = url('recipes', lang);
 const components = recipes.filter((r) => r.data.component).length;
+// The first page of cards is in the HTML as shown; the rest wait hidden for 再翻 or a filter, so the
+// browser doesn't lay out (and fetch fonts for) all of them before the script runs. Same size as PAGE below.
+const FIRST_PAGE = 48;
+const shownAtFirst = new Set(recipes.filter((r) => !r.data.component).slice(0, FIRST_PAGE).map((r) => r.id));
 
 // Months in which each recipe uses something in field season, and what is in season each month.
 const catalog = new Map((await getCollection('ingredients')).map((i) => [i.id, i.data]));
@@ -48,28 +63,49 @@ const seasonOf = (recipe: (typeof recipes)[number]) => {
     for (const item of group.items) if (!item.optional) catalog.get(item.ref.id)?.season?.forEach((m) => months.add(m));
   return [...months].sort((a, b) => a - b).join(',');
 };
+// What the home page used to hold: the principles on a ruled card, the fridge, the oil card, recent changes.
+const principles = await entries('principles', lang);
+const byCategory = (Object.keys(PRINCIPLE_CATEGORIES) as PrincipleCategory[])
+  .map((category) => ({ category, items: principles.filter((p) => p.data.category === category) }))
+  .filter((g) => g.items.length > 0);
+const short = (title: string) => title.split(/：|: /)[0];
+const recent = [
+  ...recipes.map((r) => ({ kind: t.recipe, href: url(`recipes/${r.id}`, lang), title: r.data.title, updated: r.data.updated })),
+  ...principles.map((p) => ({ kind: t.principle, href: url(`principles/${p.id}`, lang), title: p.data.title, updated: p.data.updated })),
+]
+  .sort((a, b) => b.updated.getTime() - a.updated.getTime())
+  .slice(0, 6);
 const inSeason = Object.fromEntries(
   Array.from({ length: 12 }, (_, i) => [i + 1, [...catalog.values()].filter((d) => d.season?.includes(i + 1)).map((d) => (lang === 'en' ? d.en.toLowerCase() : d.zh))]),
 );
 ---
 
 <Base title={t.title} description={t.description}>
-  {/* Phones: search and the ways in that the header used to hold. */}
-  <div class="lib-top">
-    <form class="search-box" action={url('search', lang)} method="get" role="search">
-      <input type="search" name="q" placeholder={t.placeholder} aria-label={t.search} autocomplete="off" />
-    </form>
-    <nav class="lib-links" aria-label={t.more}>
-      <a href={url('cuisines', lang)}>{t.cuisines}</a>
-      <a href={url('principles', lang)}>{t.principles}</a>
-      <a href={url('fridge', lang)} data-fridge-sheet data-title={t.fridgeTitle} data-ok={t.ok}>{t.fridge}</a>
-    </nav>
-  </div>
   <header class="page-head">
     <h1>{t.title}</h1>
     <p class="lede">{t.lede[0]}<a href={url('fridge', lang)}>{t.lede[1]}</a>{t.lede[2]}</p>
     <OfflineSave />
   </header>
+  {/* Search, and the ways into cuisines, principles and the fridge: 菜谱 holds all of them. */}
+  <div class="lib-top">
+    <form class="search-box" action={url('search', lang)} method="get" role="search">
+      <input type="search" name="q" placeholder={t.placeholder} aria-label={t.search} autocomplete="off" data-q />
+    </form>
+    <nav class="lib-links" aria-label={t.ways}>
+      <a href={url('cuisines', lang)}>{t.cuisines}</a>
+      <a href={url('principles', lang)}>{t.principles}</a>
+      <a href={url('fridge', lang)} data-fridge-sheet data-title={t.fridgeTitle} data-ok={t.ok}>{t.fridge}</a>
+    </nav>
+  </div>
+  <div class="lib-search" data-search-wrap hidden>
+    <p class="filter-count" data-search-count aria-live="polite"></p>
+    <ol class="search-results" data-search-results></ol>
+    <CatNote cat={potCat} hidden data-search-none>
+      <p class="cat-note-title">{t.none}</p>
+      <p>{t.noneText}</p>
+    </CatNote>
+  </div>
+  <div class="lib-browse" data-browse>
 
   <nav class="filters chips" aria-label={t.byCuisine} data-filter-group="cuisine">
     <a class="chip" href={base} data-value="">{t.allCuisines}</a>
@@ -101,26 +137,59 @@ const inSeason = Object.fromEntries(
     </label>
   </div>
   <p class="season-note" data-season-note hidden></p>
-  <aside class="lucky" data-lucky hidden aria-live="polite">
-    <div class="lucky-card" data-lucky-card></div>
-    <div class="lucky-side">
-      <h2>{t.pick}</h2>
-      <p>{t.pickNote}</p>
-      <div class="kit-actions">
-        <button class="text-btn" type="button" data-lucky-pick>{t.again}</button>
-        <button class="text-btn" type="button" data-lucky-close>{t.close}</button>
-      </div>
-    </div>
-  </aside>
   <script type="application/json" id="in-season" set:html={JSON.stringify(inSeason)} />
   <ul class="card-grid" data-recipe-list>
     {recipes.map((recipe) => (
-      <li data-cuisine={recipe.data.cuisine.id} data-course={recipe.data.course} data-minutes={recipe.data.time.prep + recipe.data.time.cook} data-months={seasonOf(recipe)} data-tags={recipe.data.tags.join(' ')} data-minor={recipe.data.minor ? '' : undefined} data-component={recipe.data.component ? '' : undefined} hidden={recipe.data.component}>
+      <li data-cuisine={recipe.data.cuisine.id} data-course={recipe.data.course} data-minutes={recipe.data.time.prep + recipe.data.time.cook} data-months={seasonOf(recipe)} data-tags={recipe.data.tags.join(' ')} data-minor={recipe.data.minor ? '' : undefined} data-component={recipe.data.component ? '' : undefined} hidden={!shownAtFirst.has(recipe.id)}>
         <RecipeCard recipe={recipe} cuisine={cuisineMap.get(recipe.data.cuisine.id)!} />
       </li>
     ))}
   </ul>
   <p data-empty hidden style="color: var(--muted)">{t.empty}</p>
+  <p class="lib-more-wrap"><button class="text-btn lib-more" type="button" data-more>{t.moreFirst(recipes.length - components - FIRST_PAGE)}</button></p>
+
+  <div class="lib-why">
+    <section class="index-card ruled principles-card" aria-labelledby="principles-title">
+      <div class="section-head">
+        <h2 id="principles-title">{t.why}</h2>
+        <a href={url('principles', lang)}>{t.allPrinciples}</a>
+      </div>
+      <dl>
+        {byCategory.map(({ category, items }) => (
+          <>
+            <dt>{PRINCIPLE_CATEGORIES[category][lang]}</dt>
+            <dd>{items.map((p) => <a href={url(`principles/${p.id}`, lang)}>{short(p.data.title)}</a>)}</dd>
+          </>
+        ))}
+      </dl>
+      <Image class="cat-sticker principles-cat" src={readCat} alt="" widths={[160, 320]} sizes="7rem" loading="lazy" />
+    </section>
+    <div class="lib-side">
+      <a class="fridge-cta" href={url('fridge', lang)}>
+        <Image src={fridgeCat} alt="" widths={[200, 400]} sizes="12rem" loading="lazy" />
+        <span>
+          <strong>{t.fridgeQ}</strong>
+          <span>{t.fridgeNote}</span>
+          <span class="fridge-cta-link">{t.fridgeLink}</span>
+        </span>
+      </a>
+      <aside class="magnet-card" aria-labelledby="magnet-title">
+        <h2 id="magnet-title">{t.oil}</h2>
+        <ul>{t.oilLines.map((line) => <li>{line}</li>)}</ul>
+        <a href={url('principles/oil-temperature', lang)}>{t.oilLink}</a>
+      </aside>
+    </div>
+  </div>
+
+  <section aria-labelledby="recent-title">
+    <h2 id="recent-title" class="section-title">{t.recent}</h2>
+    <ul class="link-list">
+      {recent.map((item) => (
+        <li><a href={item.href}><span class="title">{item.title}</span><span class="meta">{item.kind} · {formatDate(item.updated, lang)}</span></a></li>
+      ))}
+    </ul>
+  </section>
+  </div>
 
   <script>
     import { dishCount, joinList, pageLang } from '../../../i18n';
@@ -128,8 +197,13 @@ const inSeason = Object.fromEntries(
     import { openDraw } from '../../../scripts/draw';
     import { openFridge } from '../../../scripts/fridge-picker';
     import { phone } from '../../../scripts/phone';
+    import { mountSearch } from '../../../scripts/search-ui';
 
     const lang = pageLang();
+    const MORE = { zh: (n: number) => `再翻 ${n} 道`, en: (n: number) => `${n} more` }[lang];
+    // A page of cards at a time; 再翻 shows the next.
+    const PAGE = 48;
+    let limit = PAGE;
 
     const GROUPS = ['cuisine', 'course', 'time', 'tag'] as const;
     const month = new Date().getMonth() + 1;
@@ -149,7 +223,7 @@ const inSeason = Object.fromEntries(
         ? `In season in Ontario in ${MONTHS[month - 1]}: ${joinList(inSeason[month], lang) || 'nothing much in the fields; what’s around is stored or greenhouse-grown'}`
         : `${month} 月安大略当季：${inSeason[month].join('、') || '田里没什么在收，都是窖藏和温室的'}`;
       document.querySelector<HTMLInputElement>('[data-parts]')!.checked = params.get('parts') === '1';
-      let shown = 0;
+      const matched: HTMLElement[] = [];
       for (const li of document.querySelectorAll<HTMLElement>('[data-recipe-list] > li')) {
         const minutes = Number(li.dataset.minutes);
         const match = (parts || li.dataset.component === undefined) && (!seasonal || li.dataset.months!.split(',').includes(String(month))) && GROUPS.every((g) => {
@@ -159,11 +233,17 @@ const inSeason = Object.fromEntries(
           if (g === 'tag') return li.dataset.tags!.split(' ').includes(want);
           return li.dataset[g] === want;
         });
-        li.hidden = !match;
+        if (match) matched.push(li);
         // With a time limit set, quickest first.
         li.style.order = params.get('time') ? String(minutes) : '';
-        if (match) shown++;
       }
+      if (params.get('time')) matched.sort((a, b) => Number(a.dataset.minutes) - Number(b.dataset.minutes));
+      const visible = new Set(matched.slice(0, limit));
+      for (const li of document.querySelectorAll<HTMLElement>('[data-recipe-list] > li')) li.hidden = !visible.has(li);
+      const shown = matched.length;
+      const more = document.querySelector<HTMLButtonElement>('[data-more]')!;
+      more.hidden = shown <= limit;
+      more.textContent = MORE(Math.min(PAGE, shown - limit));
       for (const nav of document.querySelectorAll<HTMLElement>('[data-filter-group]')) {
         const group = nav.dataset.filterGroup!;
         for (const a of nav.querySelectorAll<HTMLAnchorElement>('a')) {
@@ -190,29 +270,12 @@ const inSeason = Object.fromEntries(
       });
     }
 
-    // 今晚吃什么: one dish at random from whatever the filters currently show. Sides, sweets and
-    // drinks, and anything over three hours, are left out unless the filters ask for them.
-    const lucky = document.querySelector<HTMLElement>('[data-lucky]')!;
-    let last: HTMLElement | undefined;
-    const NOT_DINNER = ['dessert', 'drink', 'sauce'];
-    const dinner = (li: HTMLElement) => {
-      const params = new URLSearchParams(location.search);
-      return li.dataset.minor === undefined
-        && (params.has('course') || !NOT_DINNER.includes(li.dataset.course!))
-        && (params.has('time') || Number(li.dataset.minutes) <= 180);
-    };
-    const pick = () => {
-      const shown = [...document.querySelectorAll<HTMLElement>('[data-recipe-list] > li:not([hidden])')].filter((li) => li !== last);
-      const pool = shown.some(dinner) ? shown.filter(dinner) : shown;
-      if (!pool.length) return;
-      last = pool[Math.floor(Math.random() * pool.length)];
-      lucky.querySelector('[data-lucky-card]')!.replaceChildren(last.firstElementChild!.cloneNode(true));
-      lucky.hidden = false;
-      lucky.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-    };
-    // Phones draw on a full-screen card instead (scripts/draw.ts).
-    for (const b of document.querySelectorAll('[data-lucky-pick]')) b.addEventListener('click', () => (phone.matches ? void openDraw() : pick()));
-    document.querySelector('[data-lucky-close]')!.addEventListener('click', () => (lucky.hidden = true));
+    // 今晚吃什么: one card at a time on a sheet; 就它 puts it on today's menu (scripts/draw.ts).
+    for (const b of document.querySelectorAll('[data-lucky-pick]')) b.addEventListener('click', () => void openDraw());
+    document.querySelector('[data-more]')!.addEventListener('click', () => {
+      limit += PAGE;
+      apply();
+    });
     const fridgeLink = document.querySelector<HTMLElement>('[data-fridge-sheet]')!;
     fridgeLink.addEventListener('click', (event) => {
       if (!phone.matches) return;
@@ -225,9 +288,26 @@ const inSeason = Object.fromEntries(
       if (!link) return;
       event.preventDefault();
       history.replaceState(null, '', link.href);
+      limit = PAGE;
       apply();
     });
     apply();
-    if (new URLSearchParams(location.search).has('lucky')) pick();
+    // Old links to the home page's draw land here.
+    if (new URLSearchParams(location.search).has('lucky')) void openDraw();
+
+    // Typing in the search box swaps the cards for results, here on the page.
+    const browse = document.querySelector<HTMLElement>('[data-browse]')!;
+    const results = document.querySelector<HTMLElement>('[data-search-wrap]')!;
+    mountSearch({
+      input: document.querySelector<HTMLInputElement>('[data-q]')!,
+      list: document.querySelector<HTMLElement>('[data-search-results]')!,
+      count: document.querySelector<HTMLElement>('[data-search-count]')!,
+      none: document.querySelector<HTMLElement>('[data-search-none]')!,
+      onShow: (showing) => {
+        browse.hidden = showing;
+        results.hidden = !showing;
+      },
+    });
+    document.querySelector('.lib-top form')!.addEventListener('submit', (event) => event.preventDefault());
   </script>
 </Base>

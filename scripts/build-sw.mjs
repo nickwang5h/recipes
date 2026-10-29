@@ -34,6 +34,7 @@ const precache = [
   '/',
   '/recipes/',
   '/fridge/',
+  '/list/',
   '/recipes-data.json',
   '/fridge-data.json',
 ];

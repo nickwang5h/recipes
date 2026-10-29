@@ -9,8 +9,8 @@ import { el, flash } from './ui';
 type Stored = { for: string[]; bought: boolean };
 
 const T = {
-  zh: { count: (n: number) => `· ${n} 样`, for: '用于：', copied: '已复制', copyFailed: '复制失败，请手动选择文字', stocked: (n: number) => `${n} 样放进了冰箱`, tickFirst: '先勾选买到的', clear: '清空购物清单？' },
-  en: { count: (n: number) => `· ${n}`, for: 'For: ', copied: 'Copied', copyFailed: 'Couldn’t copy; select the text by hand', stocked: (n: number) => `${n} put in the fridge`, tickFirst: 'Tick what you bought first', clear: 'Clear the shopping list?' },
+  zh: { all: '全部', for: '用于：', copied: '已复制', copyFailed: '复制失败，请手动选择文字', stocked: (n: number) => `${n} 样放进了冰箱`, tickFirst: '先勾选买到的', clear: '清空购物清单？' },
+  en: { all: 'All', for: 'For: ', copied: 'Copied', copyFailed: 'Couldn’t copy; select the text by hand', stocked: (n: number) => `${n} put in the fridge`, tickFirst: 'Tick what you bought first', clear: 'Clear the shopping list?' },
 };
 
 export function listItems(): ListItem[] {
@@ -45,19 +45,34 @@ function stockBought(): number {
 
 /** Wires up the markup from ShoppingList.astro and keeps it current. */
 export function mountShoppingList(catalog: Map<string, CatalogInfo>) {
-  const wrap = document.querySelector<HTMLDetailsElement>('[data-list-wrap]');
+  const wrap = document.querySelector<HTMLElement>('[data-list-wrap]');
   if (!wrap) return;
   const $ = <E extends HTMLElement>(sel: string) => wrap.querySelector<E>(sel)!;
   const status = $('[data-list-status]');
+  const empty = document.querySelector<HTMLElement>('[data-list-empty]');
   const lang = pageLang();
   const t = T[lang];
+  // One shop at a time, or all of them.
+  let where = '';
 
   const render = () => {
     const list = listItems().filter((i) => catalog.has(i.id));
     wrap.hidden = list.length === 0;
-    $('[data-list-count]').textContent = t.count(list.filter((i) => !i.bought).length);
+    if (empty) empty.hidden = list.length > 0;
+    const groups = grouped(list, catalog, lang);
+    if (!groups.some((g) => g.where === where)) where = '';
+    const left = (items: ListItem[]) => items.filter((i) => !i.bought).length;
+    const chip = (value: string, label: string, n: number) => {
+      const b = el('button', { type: 'button', className: 'chip' }, label, ' ', el('small', { textContent: String(n) }));
+      b.dataset.where = value;
+      b.setAttribute('aria-pressed', String(where === value));
+      return b;
+    };
+    $('[data-list-where]').replaceChildren(
+      ...(groups.length > 1 ? [chip('', t.all, left(list)), ...groups.map((g) => chip(g.where, g.label, left(g.items)))] : []),
+    );
     $('[data-list]').replaceChildren(
-      ...grouped(list, catalog, lang).map((group) => {
+      ...groups.filter((g) => !where || g.where === where).map((group) => {
         const ul: HTMLUListElement = el('ul', { className: 'ingredients' });
         ul.append(
           ...group.items.map((item) => {
@@ -87,6 +102,12 @@ export function mountShoppingList(catalog: Map<string, CatalogInfo>) {
     );
   };
 
+  $('[data-list-where]').addEventListener('click', (event) => {
+    const b = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-where]');
+    if (!b) return;
+    where = b.dataset.where ?? '';
+    render();
+  });
   $('[data-list-copy]').addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(toText(listItems(), catalog, lang));

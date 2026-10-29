@@ -2,21 +2,20 @@
 // draws another; 就它 puts the dish on today's menu and closes the sheet, without leaving the page.
 // The pool follows the recipe list's rule: no small sides, sweets, drinks or sauces, nothing over three hours.
 import type { RecipeData, SiteData } from '../pages/[...lang]/recipes-data.json';
-import { pageLang, url } from '../i18n';
+import { pageLang } from '../i18n';
 import { TAGS } from '../lib/categories';
-import { dayKey } from '../lib/days';
-import { ALWAYS_HAVE } from '../lib/fridge';
+import { addDays, dayKey } from '../lib/days';
 import { openFridge } from './fridge-picker';
 import { openSheet, popLayer, toast, touch } from './phone';
+import { forDinner, missing as missingOf, siteData } from './site-data';
 import { get, keys, set, subscribe } from './store';
 import { el, PLATE } from './ui';
 
 const lang = pageLang();
 const T = {
-  zh: { title: '今晚', fridge: '冰箱里有', quick: '30 分钟内', again: '换一个', take: '就它', added: '已放进今天的菜单', empty: '没有符合条件的菜谱。', fridgeTitle: '冰箱', ok: '好' },
-  en: { title: 'Tonight', fridge: 'From my fridge', quick: 'Under 30 min', again: 'Another one', take: 'This one', added: 'Added to today’s menu', empty: 'No recipes match these filters.', fridgeTitle: 'Fridge', ok: 'Done' },
+  zh: { title: '今晚', fridge: '冰箱里有', quick: '30 分钟内', again: '换一个', take: '就它', added: '已放进今天的菜单', addedDay: (day: string) => `已放进${day}的菜单`, offline: '没连上网，稍后再试', empty: '没有符合条件的菜谱。', fridgeTitle: '冰箱', ok: '好' },
+  en: { title: 'Tonight', fridge: 'From my fridge', quick: 'Under 30 min', again: 'Another one', take: 'This one', added: 'Added to today’s menu', addedDay: (day: string) => `Added to ${day}’s menu`, offline: 'No connection; try again in a moment', empty: 'No recipes match these filters.', fridgeTitle: 'Fridge', ok: 'Done' },
 }[lang];
-const NOT_DINNER = ['dessert', 'drink', 'sauce'];
 const FILTERS = [
   { id: 'fridge', label: T.fridge },
   { id: 'quick', label: T.quick },
@@ -24,12 +23,10 @@ const FILTERS = [
   { id: 'bento', label: TAGS.bento[lang] },
 ] as const;
 
-let loading: Promise<SiteData> | undefined;
-const siteData = () => (loading ??= fetch(`${url('', lang)}recipes-data.json`).then((r) => r.json()));
-
 let opening = false;
 
-export async function openDraw() {
+/** One card at a time; 就它 puts the dish on a day's menu (today unless a day is given, 0 = today). */
+export async function openDraw(day = 0, dayName?: string) {
   // A second tap while the data is still coming is ignored.
   if (opening) return;
   opening = true;
@@ -37,9 +34,7 @@ export async function openDraw() {
   try {
     data = await siteData();
   } catch {
-    // Offline with nothing saved: fall back to the recipe list's own draw.
-    loading = undefined;
-    location.assign(`${url('recipes', lang)}?lucky`);
+    toast(T.offline);
     return;
   } finally {
     opening = false;
@@ -48,16 +43,11 @@ export async function openDraw() {
   let queue: RecipeData[] = [];
   let current: RecipeData | undefined;
 
-  // Missing ingredients, by the fridge page's rule (staples on hand unless ticked off; substitutes count).
-  const missing = (r: RecipeData) => {
-    const stocked = new Set(keys('have:'));
-    const has = (id: string) => stocked.has(id) || ALWAYS_HAVE.includes(id) || (data.staples.includes(id) && get('staple-off:' + id) !== true);
-    return r.req.filter((id) => !has(id) && !(data.ingredients[id]?.subs ?? []).some(has));
-  };
+  const missing = (r: RecipeData) => missingOf(r, data);
   const pool = () => {
     const stocked = new Set(keys('have:'));
     return data.recipes.filter((r: RecipeData) =>
-      !r.component && !r.minor && !NOT_DINNER.includes(r.course) && r.minutes <= 180
+      forDinner(r)
       && (!on.has('quick') || r.minutes <= 30)
       && (!on.has('one-pot') || r.tags.includes('one-pot'))
       && (!on.has('bento') || r.tags.includes('bento'))
@@ -67,7 +57,7 @@ export async function openDraw() {
     queue = pool().sort(() => Math.random() - 0.5);
   };
 
-  const sheet = openSheet({ title: T.title, full: true, className: 'sheet-draw', onClose: () => stop() });
+  const sheet = openSheet({ title: dayName ?? T.title, full: true, className: 'sheet-draw', onClose: () => stop() });
   const chips = el('div', { className: 'draw-filters' }, ...FILTERS.map((f) => {
     const b = el('button', { type: 'button', className: 'chip', textContent: f.label });
     b.dataset.filter = f.id;
@@ -124,11 +114,11 @@ export async function openDraw() {
   again.addEventListener('click', draw);
   take.addEventListener('click', () => {
     if (!current) return;
-    const day = 'menu:' + dayKey(new Date());
-    const list = get<string[]>(day) ?? [];
-    if (!list.includes(current.id)) set(day, [...list, current.id]);
+    const key = 'menu:' + dayKey(addDays(new Date(), day));
+    const list = get<string[]>(key) ?? [];
+    if (!list.includes(current.id)) set(key, [...list, current.id]);
     popLayer();
-    toast(T.added);
+    toast(day && dayName ? T.addedDay(dayName) : T.added);
   });
   let x0: number | null = null;
   stage.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });

@@ -1,0 +1,195 @@
+/* ---------- The kitchen tools: 今天, the shopping list, the 菜谱 hub, and the sheets they open ----------
+   These pages and layers are for every screen size; phone.css adjusts them below 760px. */
+
+.toast {
+  display: block; position: fixed; z-index: 70; left: 50%; max-width: calc(100vw - 32px); padding: 10px 16px; border-radius: 999px;
+  bottom: calc(var(--bar-h, 0px) + var(--dock-space, 0px) + 12px + env(safe-area-inset-bottom));
+  background: var(--text); color: var(--bg); font-size: 15px; line-height: 1.4; pointer-events: none;
+  opacity: 0; transform: translate(-50%, 10px); transition: opacity 160ms, transform 160ms;
+}
+.toast.is-on { opacity: 1; transform: translate(-50%, 0); }
+
+/* ---------- Sheets ---------- */
+
+html.has-sheet body, html.is-cooking body { overflow: hidden; }
+.sheet-scrim { display: block; position: fixed; inset: 0; z-index: 60; background: rgb(0 0 0 / 0.38); opacity: 0; transition: opacity 180ms ease; }
+.sheet-scrim.is-on { opacity: 1; }
+.sheet {
+  position: fixed; z-index: 61; left: 0; right: 0; bottom: 0; max-height: 92%; display: flex; flex-direction: column;
+  padding-bottom: env(safe-area-inset-bottom); background: var(--bg); border-radius: 18px 18px 0 0; outline: none;
+  transform: translateY(100%); transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.sheet.is-on { transform: none; }
+.sheet-full { top: 0; max-height: none; padding-top: env(safe-area-inset-top); border-radius: 0; }
+.sheet-grab { flex: none; width: 40px; height: 5px; margin: 8px auto 2px; border-radius: 3px; background: var(--border); }
+.sheet-head { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 4px 10px 4px 16px; }
+.sheet-head h2 { margin: 0; font-size: 1.375rem; }
+.sheet-x { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: none; color: var(--text); cursor: pointer; }
+.sheet-x svg, .cook-x svg, .back-btn svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.sheet-done { flex: none; min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; background: var(--primary); color: var(--bg); font: inherit; font-weight: 500; cursor: pointer; }
+.sheet-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 4px 16px 16px; }
+
+/* ---------- Draw ---------- */
+
+.sheet-draw .sheet-body { display: flex; flex-direction: column; padding-bottom: 0; }
+.draw-filters { flex: none; display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin: 2px -16px 0; padding: 2px 16px; }
+.draw-filters::-webkit-scrollbar { display: none; }
+.draw-filters .chip { flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; font-size: 15px; }
+.draw-stage { flex: 1 0 auto; display: grid; align-items: center; padding: 18px 6px 12px; touch-action: pan-y; }
+.draw-card { display: block; padding: 10px 10px 18px; color: var(--text); text-decoration: none; transform: rotate(-0.6deg); }
+.draw-card img, .draw-ph { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; background: var(--surface-strong); }
+.draw-ph { display: grid; place-items: center; color: var(--border); }
+.draw-ph svg { width: 42%; }
+.draw-card h3 { margin: 14px 6px 4px; font-size: 2rem; }
+.draw-card .meta { display: flex; flex-wrap: wrap; gap: 0.25rem 0.9rem; margin: 6px 6px 0; color: var(--muted); font-size: 0.9rem; }
+.draw-summary { margin: 6px 6px 0; color: var(--muted); font-size: 1rem; line-height: 1.65; }
+.draw-foot { flex: none; display: flex; gap: 10px; padding: 10px 16px 16px; border-top: 1px solid var(--border); }
+.draw-foot button { flex: 1; min-height: 54px; border-radius: 999px; font: inherit; font-size: 1rem; cursor: pointer; }
+.draw-again { border: 1px solid var(--border); background: var(--bg); color: var(--text); }
+.draw-take { border: 1px solid var(--primary); background: var(--primary); color: var(--bg); font-weight: 500; }
+.draw-take:disabled { opacity: 0.45; cursor: default; }
+:root[data-theme="dark"] .draw-card img { filter: brightness(0.86); }
+
+.pick-have, .pick-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+:is(.pick-have, .pick-cloud) .chip { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; font-size: 0.9375rem; }
+.pick-have .chip { background: var(--text); border-color: var(--text); color: var(--bg); }
+.pick-have + .fridge-empty { margin: 0; }
+.pick-search { display: block; margin-top: 12px; }
+.pick-search input {
+  width: 100%; min-height: 48px; padding: 0 14px; border: 1px solid var(--border); border-radius: 12px;
+  background: var(--surface); color: var(--text); font: inherit; font-size: 1.0625rem;
+}
+.pick-suggest:not(:empty) { margin-top: 10px; }
+.pick-groups h3 { margin: 18px 0 8px; font-family: var(--font-sans); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.06em; color: var(--muted); }
+.pick-more { color: var(--primary); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .draw-card img { filter: brightness(0.86); } }
+
+/* Wide screens: sheets and the draw are a card in the middle of the screen, not a drawer. */
+@media (min-width: 761px) {
+  .sheet, .sheet-full {
+    top: 50%; left: 50%; right: auto; bottom: auto; width: min(34rem, calc(100vw - 2rem)); max-height: min(48rem, calc(100vh - 3rem));
+    padding: 0.5rem 0.5rem 0.75rem; border-radius: 18px; box-shadow: 0 24px 60px -20px rgb(0 0 0 / 0.45);
+    transform: translate(-50%, -46%); opacity: 0; transition: transform 200ms ease, opacity 200ms ease;
+  }
+  .sheet-full { height: min(48rem, calc(100vh - 3rem)); }
+  .sheet.is-on { transform: translate(-50%, -50%); opacity: 1; }
+  .sheet-grab { display: none; }
+  .toast { bottom: 2rem; }
+  .draw-card h3 { font-size: 1.75rem; }
+}
+
+/* ---------- Header: the list's count beside 清单 ---------- */
+
+.nav-badge {
+  display: inline-block; min-width: 1.25rem; height: 1.25rem; margin-left: 0.3rem; padding: 0 0.35rem; border-radius: 999px;
+  background: var(--primary); color: var(--bg); font-size: 0.75rem; line-height: 1.25rem; text-align: center; font-variant-numeric: tabular-nums; vertical-align: 0.1em;
+}
+
+/* ---------- 今天 ---------- */
+
+.today-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1rem; margin-bottom: 1.5rem; }
+.today-head h1 { margin: 0; }
+.today-date { margin: 0; color: var(--muted); font-size: 1.05rem; }
+.today-grid { display: grid; gap: 2rem; align-items: start; }
+.today-grid > * { min-width: 0; }
+@media (min-width: 900px) { .today-grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 2.5rem; } }
+
+.tonight { padding: 1.25rem 1.5rem 1.4rem; }
+.tonight h2 { margin: 0; font-size: 1.9rem; }
+.tonight-cats { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 62%; margin-top: 0.75rem; border-radius: 4px; }
+:root[data-theme="dark"] .tonight-cats { filter: brightness(0.9); }
+.tonight-acts { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+.tonight-acts .home-lucky { border: 0; font: inherit; font-weight: 500; cursor: pointer; }
+.tonight-dishes { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+.dish { display: flex; align-items: center; gap: 0.75rem; padding: 0.65rem 0; border-top: 1px dashed var(--border); }
+.dish:first-child { border-top: 0; }
+.dish-link { flex: 1; min-width: 0; display: flex; align-items: center; gap: 0.85rem; color: var(--text); text-decoration: none; }
+.dish-link:hover .dish-title { color: var(--primary); }
+.dish-thumb { flex: none; width: 4rem; height: 4rem; border-radius: 6px; object-fit: cover; background: var(--surface-strong); }
+.dish-thumb.card-ph { display: grid; place-items: center; color: var(--border); }
+.dish-thumb.card-ph svg { width: 70%; }
+.dish-text { min-width: 0; display: flex; flex-direction: column; line-height: 1.35; }
+.dish-slot { color: var(--muted); font-size: 0.8125rem; }
+.dish-title { font-family: var(--font-reading); font-size: 1.2rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dish-meta { display: flex; flex-wrap: wrap; gap: 0.1rem 0.75rem; color: var(--muted); font-size: 0.875rem; }
+.dish-swap { flex: none; min-height: 2.5rem; padding: 0 0.9rem; }
+.is-need { color: var(--accent-red); }
+/* Same as 有 beside an ingredient: quiet, so the red 缺 stands out (green on paper is under 4.5:1). */
+.is-have { color: var(--muted); }
+.tonight-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1rem; margin-top: 0.75rem; padding-top: 0.85rem; border-top: 1px solid var(--border); }
+.tonight-foot .home-lucky, .tonight-foot .text-btn { border: 0; font: inherit; cursor: pointer; }
+.tonight-foot .text-btn { display: inline-flex; align-items: center; border: 1px solid var(--border); text-decoration: none; color: var(--text); }
+.tonight-need { font-size: 0.95rem; }
+
+.today-sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.today-sec-head h2 { margin: 0 0 0.75rem; font-size: 1.5rem; }
+.today-sec-head a { display: inline-flex; align-items: center; justify-content: flex-end; min-width: 2.75rem; min-height: 2.75rem; font-size: 0.95rem; }
+.today-have { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin: 0 0 1rem; padding: 0; }
+.today-have:empty { display: none; }
+.today-have li { padding: 0.1rem 0.75rem; border-radius: 999px; background: var(--surface); font-size: 0.9rem; }
+.today-fridge-empty { padding: 1rem 1.1rem; border: 1px dashed var(--border); border-radius: var(--radius); color: var(--muted); }
+.today-fridge-empty p { margin: 0 0 0.4rem; }
+.today-matches { grid-template-columns: repeat(auto-fill, minmax(min(100%, 11rem), 1fr)); }
+.today-matches > li:nth-child(n + 7) { display: none; }
+.today-matches .card-summary { display: none; }
+.card p.today-ready { color: var(--muted); font-size: 0.85rem; }
+
+.today-week { margin-top: 3rem; }
+.week { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 0.6rem; }
+.day { display: flex; flex-direction: column; min-height: 11rem; padding: 0.6rem 0.7rem 0.75rem; border: 1px solid var(--border); border-top: 3px solid var(--border); border-radius: 8px; background: var(--paper); }
+.day.is-today { border-top-color: var(--primary); }
+.day-head { display: flex; align-items: baseline; gap: 0.4rem; padding: 0; border: 0; background: none; color: var(--muted); font: inherit; font-size: 0.85rem; text-align: left; cursor: default; }
+.day-head b { color: var(--text); font-size: 1.15rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+.day-dots { display: none; }
+.day-body { flex: 1; display: flex; flex-direction: column; }
+.day-dishes { flex: 1; list-style: none; margin: 0.4rem 0 0; padding: 0; }
+.day-dishes li { display: flex; align-items: flex-start; gap: 0.25rem; padding: 0.2rem 0; font-size: 0.92rem; line-height: 1.4; }
+.day-dishes a { flex: 1; min-width: 0; color: var(--text); text-decoration: none; font-family: var(--font-reading); font-size: 1rem; }
+.day-dishes a:hover { color: var(--primary); }
+.day-remove { flex: none; width: 1.75rem; height: 1.75rem; margin: -0.15rem -0.35rem 0 0; border: 0; border-radius: 50%; background: none; color: var(--muted); font-size: 1.1rem; line-height: 1; cursor: pointer; }
+.day-remove:hover { background: var(--surface-strong); color: var(--text); }
+.day-empty { color: var(--muted); }
+.day-acts { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem; }
+.day-acts .text-btn { min-height: 2rem; padding: 0 0.6rem; font-size: 0.8rem; }
+
+/* ---------- 清单: one sheet of kraft paper, held up by a magnet ---------- */
+
+.list-head { margin-bottom: 1.25rem; }
+.list-paper { position: relative; max-width: 44rem; margin-top: 1.5rem; padding: 1.5rem 1.5rem 1.25rem; background: var(--kraft); border-radius: 6px; box-shadow: 0 6px 16px rgb(60 40 20 / 0.14); }
+.list-paper::before {
+  content: ""; position: absolute; top: -0.6rem; left: 50%; width: 1.35rem; height: 1.35rem; margin-left: -0.675rem;
+  border-radius: 50%; background: var(--primary); box-shadow: inset -3px -3px 0 rgb(0 0 0 / 0.18);
+}
+:root[data-theme="dark"] .list-paper { box-shadow: none; }
+.list-where { gap: 0.4rem; margin-bottom: 0.5rem; }
+.list-where:empty { display: none; }
+.list-where .chip small { margin-left: 0.15rem; opacity: 0.75; font-variant-numeric: tabular-nums; }
+.list-paper .shopping-group h3 { color: color-mix(in srgb, var(--text) 72%, transparent); }
+.list-paper .ingredients li + li { border-top-color: color-mix(in srgb, var(--text) 22%, transparent); }
+.list-paper .ing-name { font-size: 1.1rem; }
+.list-paper :is(.ing-en, .ing-note) { color: color-mix(in srgb, var(--text) 70%, transparent); }
+.list-paper .shopping-actions { margin-top: 1rem; }
+.list-paper .list-stock { border-color: var(--primary); background: var(--primary); color: var(--bg); font-weight: 500; }
+.list-paper .text-btn { background: color-mix(in srgb, var(--bg) 70%, transparent); }
+.list-paper .list-stock { background: var(--primary); }
+
+/* Printed, the list is just the list: the shop groups and a box to tick. */
+@media print {
+  body:has(.list-paper) :is(.list-head, .list-where, .shopping-actions, .cat-note) { display: none !important; }
+  .list-paper { max-width: none; margin: 0; padding: 0; background: none; box-shadow: none; }
+  .list-paper::before { display: none; }
+  .list-paper .ing-row input { display: inline-block !important; appearance: none; width: 0.9rem; height: 0.9rem; border: 1px solid #000; }
+}
+
+/* ---------- 菜谱: search, cuisines and principles in one place ---------- */
+
+.lib-top { margin: 0 0 1.5rem; }
+.lib-top .search-box input { max-width: 40rem; }
+.lib-links { display: flex; flex-wrap: wrap; column-gap: 1.25rem; margin-top: 0.35rem; }
+.lib-links a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 2.75rem; }
+.lib-search { margin-bottom: 2rem; }
+.lib-more-wrap { margin: 1.5rem 0 0; text-align: center; }
+.lib-why { display: grid; gap: 2rem; align-items: start; margin-top: 4rem; }
+@media (min-width: 900px) { .lib-why { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 2.5rem; } }
+.lib-side { display: grid; gap: 2.5rem; }
+.lib-why .principles-card { margin-bottom: 0; }

@@ -4,7 +4,7 @@
    sits inside the media query; the rules out here only keep the phone-only parts hidden on wider
    screens (and leave the step checkbox's tap label out of the box tree). */
 
-:is(.tabbar, .actbar, .back-btn, .lib-top, .rows, .ing-tools, .ing-have, .fridge-phone, .timer-mini, .sheet, .sheet-scrim, .toast) { display: none; }
+:is(.tabbar, .actbar, .back-btn, .rows, .ing-tools, .ing-have, .fridge-phone, .timer-mini) { display: none; }
 .step-hit { display: contents; }
 
 @media (max-width: 760px) {
@@ -58,34 +58,6 @@
   .sheet-timers .timer-row { min-height: 52px; padding: 0 0.25rem 0 0.75rem; margin-bottom: 6px; background: var(--text); color: var(--bg); border-radius: 12px; }
   .sheet-timers .timer-row.is-done { background: var(--primary); }
 
-  .toast {
-    display: block; position: fixed; z-index: 70; left: 50%; max-width: calc(100vw - 32px); padding: 10px 16px; border-radius: 999px;
-    bottom: calc(var(--bar-h, 0px) + var(--dock-space, 0px) + 12px + env(safe-area-inset-bottom));
-    background: var(--text); color: var(--bg); font-size: 15px; line-height: 1.4; pointer-events: none;
-    opacity: 0; transform: translate(-50%, 10px); transition: opacity 160ms, transform 160ms;
-  }
-  .toast.is-on { opacity: 1; transform: translate(-50%, 0); }
-
-  /* ---------- Sheets ---------- */
-
-  html.has-sheet body, html.is-cooking body { overflow: hidden; }
-  .sheet-scrim { display: block; position: fixed; inset: 0; z-index: 60; background: rgb(0 0 0 / 0.38); opacity: 0; transition: opacity 180ms ease; }
-  .sheet-scrim.is-on { opacity: 1; }
-  .sheet {
-    position: fixed; z-index: 61; left: 0; right: 0; bottom: 0; max-height: 92%; display: flex; flex-direction: column;
-    padding-bottom: env(safe-area-inset-bottom); background: var(--bg); border-radius: 18px 18px 0 0; outline: none;
-    transform: translateY(100%); transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
-  .sheet.is-on { transform: none; }
-  .sheet-full { top: 0; max-height: none; padding-top: env(safe-area-inset-top); border-radius: 0; }
-  .sheet-grab { flex: none; width: 40px; height: 5px; margin: 8px auto 2px; border-radius: 3px; background: var(--border); }
-  .sheet-head { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 4px 10px 4px 16px; }
-  .sheet-head h2 { margin: 0; font-size: 1.375rem; }
-  .sheet-x { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: none; color: var(--text); cursor: pointer; }
-  .sheet-x svg, .cook-x svg, .back-btn svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-  .sheet-done { flex: none; min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; background: var(--primary); color: var(--bg); font: inherit; font-weight: 500; cursor: pointer; }
-  .sheet-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 4px 16px 16px; }
-
   /* Cooking mode's ingredients: the page's own lines, a little larger. */
   .sheet-ings h3 { margin: 0.75rem 0 0.1rem; font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; color: var(--muted); }
   .sheet-ings .ing-text { font-size: 1.125rem; }
@@ -95,9 +67,44 @@
     .box-tab small, .shortcut strong small, .kofi-note, .mine-note-hint, .card p:is(.fridge-missing, .fridge-swap)) { font-size: 0.8125rem; }
   .card-grid:has(.has-cover) .card :is(.meta, p:is(.fridge-missing, .fridge-swap)) { font-size: 0.8125rem; }
 
-  /* ---------- Home ---------- */
+  /* ---------- 今天 ---------- */
 
-  .home-actions .hand-note { display: none; }
+  .today-head { margin-bottom: 1rem; }
+  .today-head h1 { font-size: 1.75rem; }
+  .tonight { padding: 1rem 1rem 1.1rem; }
+  .tonight-acts { display: grid; grid-template-columns: 1.25fr 1fr; }
+  .tonight-acts > * { justify-content: center; min-height: 48px; }
+  /* What the fridge can make: a row of cards to swipe through. */
+  .card-grid.today-matches {
+    display: grid; grid-auto-flow: column; grid-auto-columns: 152px; grid-template-columns: none; gap: 10px; overflow-x: auto; scrollbar-width: none;
+    margin: 0 calc(-1 * var(--gutter)); padding: 4px var(--gutter) 8px; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter);
+  }
+  .today-matches::-webkit-scrollbar { display: none; }
+  .today-matches > li { scroll-snap-align: start; }
+  .today-matches > li:nth-child(n + 7) { display: block; }
+  .today-week { margin-top: 2.25rem; }
+  /* The week is a strip of seven days; the one tapped opens underneath. */
+  .week { gap: 4px; }
+  .day { display: contents; }
+  .day-head {
+    grid-row: 1; display: grid; justify-items: center; gap: 2px; min-height: 64px; padding: 6px 0; border: 1px solid var(--border); border-radius: 10px;
+    background: var(--bg); font-size: 13px; cursor: pointer;
+  }
+  .day.is-today .day-head { border-top: 3px solid var(--primary); }
+  .day.is-open .day-head { border-color: var(--text); background: var(--paper); }
+  .day-dots { display: flex; gap: 3px; height: 6px; }
+  .day-dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--primary); }
+  .day-body { grid-row: 2; grid-column: 1 / -1; margin-top: 6px; padding: 0.4rem 1rem 0.8rem; border: 1px solid var(--border); border-top: 3px solid var(--primary); border-radius: 8px; background: var(--paper); }
+  .day:not(.is-open) .day-body { display: none; }
+  .day-dishes li { align-items: center; min-height: 44px; }
+  .day-remove { width: 44px; height: 44px; margin: 0 -10px 0 0; }
+  .day-acts .text-btn { min-height: 44px; padding: 0 1rem; font-size: 0.9rem; }
+
+  /* ---------- 清单 ---------- */
+
+  .list-paper { margin-top: 1.25rem; padding: 1.4rem 1rem 1rem; }
+  .list-where { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -1rem 0.5rem; padding: 0 1rem; }
+  .list-where .chip { flex: none; display: inline-flex; align-items: center; min-height: 44px; }
   /* Long principle names (and larger text) wrap instead of running off the card. */
   .principles-card dd a { white-space: normal; }
   /* Text on the kraft card and the substitution note read at 4.5:1 or better. */
@@ -106,10 +113,7 @@
 
   /* ---------- Recipe list, filters ---------- */
 
-  .lib-top { display: block; margin: 0 0 1.25rem; }
-  .lib-top .search-box input { max-width: none; min-height: 48px; font-size: 1.0625rem; }
-  .lib-links { display: flex; flex-wrap: wrap; column-gap: 1.25rem; margin-top: 0.25rem; }
-  .lib-links a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
+  .lib-top .search-box input { min-height: 48px; font-size: 1.0625rem; }
 
   /* Filter rows swipe sideways; the right edge fades until the row is scrolled to its end. */
   .filters {
@@ -225,44 +229,11 @@
   .cook-fav svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; }
   .cook-fav[aria-pressed="true"] svg { fill: var(--accent-red); stroke: var(--accent-red); }
 
-  /* ---------- Draw ---------- */
-
-  .sheet-draw .sheet-body { display: flex; flex-direction: column; padding-bottom: 0; }
-  .draw-filters { flex: none; display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin: 2px -16px 0; padding: 2px 16px; }
-  .draw-filters::-webkit-scrollbar { display: none; }
-  .draw-filters .chip { flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; font-size: 15px; }
-  .draw-stage { flex: 1 0 auto; display: grid; align-items: center; padding: 18px 6px 12px; touch-action: pan-y; }
-  .draw-card { display: block; padding: 10px 10px 18px; color: var(--text); text-decoration: none; transform: rotate(-0.6deg); }
-  .draw-card img, .draw-ph { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; background: var(--surface-strong); }
-  .draw-ph { display: grid; place-items: center; color: var(--border); }
-  .draw-ph svg { width: 42%; }
-  .draw-card h3 { margin: 14px 6px 4px; font-size: 2rem; }
-  .draw-card .meta { display: flex; flex-wrap: wrap; gap: 0.25rem 0.9rem; margin: 6px 6px 0; color: var(--muted); font-size: 0.9rem; }
-  .draw-summary { margin: 6px 6px 0; color: var(--muted); font-size: 1rem; line-height: 1.65; }
-  .draw-foot { flex: none; display: flex; gap: 10px; padding: 10px 16px 16px; border-top: 1px solid var(--border); }
-  .draw-foot button { flex: 1; min-height: 54px; border-radius: 999px; font: inherit; font-size: 1rem; cursor: pointer; }
-  .draw-again { border: 1px solid var(--border); background: var(--bg); color: var(--text); }
-  .draw-take { border: 1px solid var(--primary); background: var(--primary); color: var(--bg); font-weight: 500; }
-  .draw-take:disabled { opacity: 0.45; cursor: default; }
-  :root[data-theme="dark"] .draw-card img { filter: brightness(0.86); }
-
   /* ---------- Fridge ---------- */
 
   .fridge-picker { display: none; }
   .fridge-layout > * { min-width: 0; }
   .fridge-phone { display: block; }
-  .pick-have, .pick-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
-  :is(.pick-have, .pick-cloud) .chip { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; font-size: 0.9375rem; }
-  .pick-have .chip { background: var(--text); border-color: var(--text); color: var(--bg); }
-  .pick-have + .fridge-empty { margin: 0; }
-  .pick-search { display: block; margin-top: 12px; }
-  .pick-search input {
-    width: 100%; min-height: 48px; padding: 0 14px; border: 1px solid var(--border); border-radius: 12px;
-    background: var(--surface); color: var(--text); font: inherit; font-size: 1.0625rem;
-  }
-  .pick-suggest:not(:empty) { margin-top: 10px; }
-  .pick-groups h3 { margin: 18px 0 8px; font-family: var(--font-sans); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.06em; color: var(--muted); }
-  .pick-more { color: var(--primary); }
   /* Result cards are two to a row; their buttons wrap instead of pushing the row wider than the screen. */
   .fridge-card { min-width: 0; }
   .fridge-card .add-to-list { max-width: 100%; height: auto; padding-top: 0.4rem; padding-bottom: 0.4rem; line-height: 1.3; white-space: normal; text-align: left; }
@@ -285,6 +256,8 @@
   .row-kofi .kofi-dumpling { width: 24px; height: 24px; color: var(--primary); }
   .row-offline { cursor: default; padding: 6px 2px; }
   .row-offline .offline-save { margin: 0; }
+  /* The saved count fills in later; its line is there from the start. */
+  .offline-save .offline-status { flex-basis: 100%; }
   .row-offline:has(.offline-save[hidden]) { display: none; }
 }
 

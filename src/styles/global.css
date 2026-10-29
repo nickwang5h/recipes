@@ -1,4 +1,3 @@
-@import './fonts.css';
 @import './tokens.css';
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -922,6 +921,6 @@ body.narrow .footer-cat { right: max(var(--gutter), calc((100% - 70rem) / 2 + va
 @font-face { font-family: "Latin Punct Sans"; src: local("Helvetica Neue"), local("Segoe UI"), local("Roboto"), local("Arial"); unicode-range: U+2013-2014, U+2018-201F, U+2026, U+00B7; }
 @font-face { font-family: "Latin Punct Serif"; src: local("Georgia"), local("Times New Roman"), local("Noto Serif"); unicode-range: U+2013-2014, U+2018-201F, U+2026, U+00B7; }
 html[lang="en"] {
-  --font-sans: "Latin Punct Sans", "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
-  --font-reading: "Latin Punct Serif", "LXGW WenKai", "Kaiti SC", "KaiTi", serif;
+  --font-sans: "Latin Punct Sans", "Kiki Page Sans", "Source Han Sans SC", "Kiki Sans Fallback", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-reading: "Latin Punct Serif", "Kiki Page Reading", "LXGW WenKai", "Kiki Reading Fallback", "Kaiti SC", "KaiTi", serif;
 }

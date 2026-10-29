@@ -5,9 +5,11 @@ import logoCat from '../assets/cats/logo.png';
 import waveCat from '../assets/cats/wave.png';
 import KofiButton from '../components/KofiButton.astro';
 import '../styles/global.css';
+import '../styles/kitchen.css';
 import '../styles/phone.css';
 import { HTML_LANG, OG_LOCALE, langOf, switchPath, url, type Both } from '../i18n';
 import { MAIN_SITE, SITE_DESCRIPTION, SITE_TITLE } from '../lib/site';
+import pageFonts from '../data/page-fonts.json';
 
 interface Props {
   title?: string;
@@ -32,28 +34,36 @@ const path = Astro.url.pathname;
 // The page's own path within its language, for marking the current section.
 const local = switchPath(path, 'zh');
 const otherPath = twin ? switchPath(path, other) : url('', other);
+// This page's own small font files (scripts/build-web-fonts.py): its less common characters, so it
+// doesn't fetch whole shared slices for one or two of them.
+type PageFont = { family: string; weight: string; src: string; range: string };
+const fonts = pageFonts as { css: string; pages: Record<string, PageFont[]> };
+const ownFonts = (fonts.pages[path] ?? [])
+  .map((f) => `@font-face{font-family:"${f.family}";src:url('${f.src}') format('woff2');font-style:normal;font-weight:${f.weight};font-display:fallback;unicode-range:${f.range}}`)
+  .join('');
 const T = {
   zh: { skip: '跳到正文', nav: '主导航', search: '搜索', theme: '切换深浅色', tagline: '家常菜和背后的道理', switchTo: 'English', switchLabel: 'Read this page in English', short: 'Ki饭' },
   en: { skip: 'Skip to content', nav: 'Main', search: 'Search', theme: 'Switch light or dark', tagline: 'Home cooking and the reasons behind it', switchTo: '中文', switchLabel: '中文版', short: "Kiki's" },
 } satisfies Both<Record<string, string>>;
 const t = T[lang];
+// Four places, the same on every screen: today (the home page, with the fridge and the week's menu
+// behind it), the recipes (with cuisines, principles and search), the shopping list, and what's saved.
 const NAV = [
-  { path: 'cuisines', label: { zh: '菜系', en: 'Cuisines' } },
-  { path: 'principles', label: { zh: '原理', en: 'Science' } },
-  { path: 'recipes', label: { zh: '菜谱', en: 'Recipes' } },
-  { path: 'fridge', label: { zh: '冰箱', en: 'Fridge' } },
-  { path: 'menu', label: { zh: '菜单', en: 'Menu' } },
-  { path: 'mine', label: { zh: '我的', en: 'Saved' } },
+  { path: '', label: { zh: '今天', en: 'Today' }, match: /^\/(menu|fridge)?\/?$/ },
+  { path: 'recipes', label: { zh: '菜谱', en: 'Recipes' }, match: /^\/(recipes|cuisines|principles|search)\// },
+  { path: 'list', label: { zh: '清单', en: 'List' }, match: /^\/list\// },
+  { path: 'mine', label: { zh: '我的', en: 'Saved' }, match: /^\/mine\// },
 ];
-const nav = NAV.map((item) => ({ href: url(item.path, lang), label: item.label[lang], match: `/${item.path}/` }));
+const nav = NAV.map((item) => ({ href: url(item.path, lang), label: item.label[lang], on: item.match.test(local) }));
 // Phones (≤760px) get a bottom bar of four places instead of the header; a recipe has its own bar.
 const recipePage = /^\/recipes\/[^/]+\/$/.test(local);
-const TABS = [
-  { id: 'home', href: url('', lang), label: { zh: '首页', en: 'Home' }, on: local === '/', icon: '<path d="M3.5 11.5h17a8.5 8.5 0 0 1-17 0Z"/><path d="M8 20.5h8"/><path d="M9 4.5c-.8 1 .8 2 0 3.2M13 4c-.8 1 .8 2 0 3.2"/>' },
-  { id: 'recipes', href: url('recipes', lang), label: { zh: '菜谱', en: 'Recipes' }, on: /^\/(recipes|cuisines|principles|search|fridge)\//.test(local), icon: '<path d="M5 4.5h11a3 3 0 0 1 3 3v12H8a3 3 0 0 1-3-3Z"/><path d="M5 16.5a3 3 0 0 1 3-3h11"/><path d="M9 8h6"/>' },
-  { id: 'list', href: url('menu', lang), label: { zh: '清单', en: 'List' }, on: local.startsWith('/menu/'), icon: '<path d="M6 3.5h12v17H6Z"/><path d="M9 8.5l1.2 1.2L12.5 7.5M9 14h6M9 17h4"/>' },
-  { id: 'mine', href: url('mine', lang), label: { zh: '我的', en: 'Saved' }, on: local.startsWith('/mine/'), icon: '<path d="M12 20s-7.5-4.6-7.5-10.1A4.4 4.4 0 0 1 12 7.1a4.4 4.4 0 0 1 7.5 2.8C19.5 15.4 12 20 12 20Z"/>' },
-];
+const ICONS: Record<string, string> = {
+  '': '<path d="M3.5 11.5h17a8.5 8.5 0 0 1-17 0Z"/><path d="M8 20.5h8"/><path d="M9 4.5c-.8 1 .8 2 0 3.2M13 4c-.8 1 .8 2 0 3.2"/>',
+  recipes: '<path d="M5 4.5h11a3 3 0 0 1 3 3v12H8a3 3 0 0 1-3-3Z"/><path d="M5 16.5a3 3 0 0 1 3-3h11"/><path d="M9 8h6"/>',
+  list: '<path d="M6 3.5h12v17H6Z"/><path d="M9 8.5l1.2 1.2L12.5 7.5M9 14h6M9 17h4"/>',
+  mine: '<path d="M12 20s-7.5-4.6-7.5-10.1A4.4 4.4 0 0 1 12 7.1a4.4 4.4 0 0 1 7.5 2.8C19.5 15.4 12 20 12 20Z"/>',
+};
+const TABS = NAV.map((item, i) => ({ ...nav[i], id: item.path || 'today', icon: ICONS[item.path] }));
 ---
 
 <!doctype html>
@@ -79,6 +89,9 @@ const TABS = [
     <meta property="og:site_name" content={SITE_TITLE[lang]} />
     <meta property="og:locale" content={OG_LOCALE[lang]} />
     <meta name="twitter:card" content="summary_large_image" />
+    {/* The shared font faces don't hold up the first paint: text starts in the fallback font either way. */}
+    <link rel="stylesheet" href={fonts.css} media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href={fonts.css} /></noscript>
     <slot name="head" />
     <meta name="theme-color" content="#f3f0e8" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#11120f" media="(prefers-color-scheme: dark)" />
@@ -94,17 +107,16 @@ const TABS = [
     </script>
   </head>
   <body class={narrow ? 'narrow' : undefined}>
+    {/* After the site stylesheet, so these faces come first for their characters. */}
+    {ownFonts && <style is:inline set:html={ownFonts} />}
     <a class="visually-hidden" href="#main">{t.skip}</a>
     <header class="site-header" data-home={local === '/' ? '' : undefined}>
       <div class="wrap">
         <a class="brand" href={url('', lang)}><Image class="brand-cat" src={logoCat} alt="" width={72} height={72} loading="eager" />{SITE_TITLE[lang]}</a>
         <nav class="site-nav" aria-label={t.nav}>
           {nav.map((item) => (
-            <a href={item.href} aria-current={local.startsWith(item.match) ? 'page' : undefined}>{item.label}</a>
+            <a href={item.href} aria-current={item.on ? 'page' : undefined}>{item.label}{item.href.endsWith('/list/') && <span class="nav-badge" data-list-badge hidden></span>}</a>
           ))}
-          <a class="nav-icon" href={url('search', lang)} aria-label={t.search} aria-current={local.startsWith('/search/') ? 'page' : undefined}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="M16 16l4.5 4.5" stroke-linecap="round" /></svg>
-          </a>
           <a class="lang-switch" href={otherPath} hreflang={HTML_LANG[other]} lang={HTML_LANG[other]} aria-label={t.switchLabel}>{lang === 'zh' ? 'EN' : '中'}</a>
           <KofiButton head />
           <button class="theme-toggle" type="button" aria-label={t.theme} data-theme-toggle>
@@ -134,7 +146,7 @@ const TABS = [
         {TABS.map((tab) => (
           <a href={tab.href} data-tab={tab.id} aria-current={tab.on ? 'page' : undefined}>
             <svg viewBox="0 0 24 24" aria-hidden="true" set:html={tab.icon} />
-            <span>{tab.label[lang]}</span>
+            <span>{tab.label}</span>
             {tab.id === 'list' && <span class="tab-badge" data-list-badge hidden></span>}
           </a>
         ))}
@@ -156,21 +168,16 @@ const TABS = [
         });
       }
 
-      // The 清单 tab: how many things are left to buy, and straight to the list when there is one.
-      const listTab = document.querySelector<HTMLAnchorElement>('.tabbar [data-tab="list"]');
-      if (listTab) {
-        const menu = listTab.pathname;
-        const badge = listTab.querySelector<HTMLElement>('[data-list-badge]')!;
-        const renderTab = () => {
-          const items = listItems();
-          const left = items.filter((i) => !i.bought).length;
+      // The 清单 tab and link: how many things are left to buy.
+      const renderListCount = () => {
+        const left = listItems().filter((i) => !i.bought).length;
+        for (const badge of document.querySelectorAll<HTMLElement>('[data-list-badge]')) {
           badge.hidden = left === 0;
           badge.textContent = String(left);
-          listTab.href = items.length ? `${menu}#list` : menu;
-        };
-        subscribe(renderTab);
-        renderTab();
-      }
+        }
+      };
+      subscribe(renderListCount);
+      renderListCount();
 
       // Mark the family's 常做 dishes on every recipe card, server- or client-rendered.
       // Loading the store here also keeps family sync running on every page.
