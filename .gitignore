@@ -4,4 +4,4 @@ dist/
 .netlify/
 .wrangler/
 .DS_Store
-fonts/
+/fonts/
