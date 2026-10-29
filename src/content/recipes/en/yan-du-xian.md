@@ -21,9 +21,9 @@ ingredients:
 translated: 2026-10-02
 ---
 
-*Yan du xian* puts salted pork, fresh pork and bamboo shoots into one pot to stew slowly. *Yan* means salted pork, *xian* means fresh meat, and *du* means simmering over low heat. The Shanghai home version often adds tofu sheet knots too, so the bean curd skin carries the flavour of the soup. The body of the soup comes from the two kinds of pork and the shoots, and the seasoning is kept very light.
+*Yan du xian* puts salted pork, fresh pork and bamboo shoots into one pot to stew slowly. *Yan* means salted pork, *xian* means fresh meat, and *du* means simmering over low heat. In Shanghai it often has tofu sheet knots too, so the bean curd skin carries the flavour of the soup. The body of the soup comes from the two kinds of pork and the shoots, and the seasoning is kept very light.
 
-In the first stage the pork stews on its own. The collagen in the skin and connective tissue turns into gelatin, the meat softens and the soup becomes silky (see [collagen and gelatin](/principles/collagen-gelatin/)). The [salt](/principles/salt/) in the salted pork seeps into the soup gradually, so no salt is added in the first half. The shoots and tofu sheet knots go in later, which brings out the [umami](/principles/umami/) and also lets each keep its shape, rather than stewing with the meat until it falls apart.
+First the pork stews on its own. The collagen in the skin and connective tissue turns into gelatin, the meat softens and the soup becomes silky (see [collagen and gelatin](/principles/collagen-gelatin/)). The [salt](/principles/salt/) in the salted pork seeps into the soup gradually, so no salt is added in the first half. The shoots and tofu sheet knots go in later, which brings out the [umami](/principles/umami/) and also lets each keep its shape, rather than stewing with the meat until it falls apart.
 
 ## Steps
 

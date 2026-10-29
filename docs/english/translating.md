@@ -130,6 +130,38 @@ The site explains *why* a dish works and lets a cook judge by what they see. Kee
 - Write observable cues the way the Chinese does ("until the sauce coats a spoon"), not vaguer ones.
 - No filler: "it's worth noting", "simply", "delicious", "authentic", "perfect".
 
+### Habits to drop
+
+The Chinese pages were first drafted by a model and later rewritten to sound like a cook talking
+(`docs/round8/style-pass.md`). Don't bring the old habits back in English, even where the Chinese
+still has a trace of them. Read it aloud: it should sound like a friend at the stove, not a process
+document.
+
+1. **Process-document words**: stage, stopping point, move on to the next phase, initial cooking,
+   build the base flavour, target state, execute, confirm whether. Say what the cook does and sees:
+   "caramelize the sugar, braise, then reduce; each has a moment to stop: the sugar red-brown, the
+   wings cooked through, the sauce clinging to the skin."
+2. **Defensive asides** after a step: "this is normal", "this is only a first cook; it goes back in
+   later", "don't take the seconds as an order to stop", "for now". Drop them when a reader following
+   the step wouldn't be confused. When they would be, put one plain warning before the action.
+3. **Rebutting a mistake nobody made**: "do not treat smoke as the signal to add food", "this cannot
+   be explained only by…". Say only the right thing: "smoke means the oil is too hot; turn it down."
+4. **Actions turned into nouns**: "moisture loss of the muscle", "dispersion of seasoning". Write who
+   does what: "the longer the meat cooks, the more water it squeezes out."
+5. **Talk about the recipe itself**: "this version", "this recipe uses", "the home version". Only
+   when the dish really is a variant (cream added, a different meat), say so once, near the start.
+6. **Checking and warning at every step**: "check after 20 seconds; if not done, continue and check
+   again". Give the state to look for: "stir-fry about 20 seconds, until all the pork turns white."
+   A doneness temperature appears once, in the step where you judge doneness.
+7. **Spoilage warnings** ("discard anything with an off smell") don't belong in a recipe. Exceptions
+   that are real steps stay: live shellfish that won't close or won't open after cooking go in the
+   bin; storage limits for leftovers; soaking and storage limits for wood ear, white fungus and rice
+   products.
+8. **Openings**: the first sentence says what the dish is like to eat (soft, crisp, saucy, dry and
+   fragrant); the second, which principle makes it work. Not "Using A, B and C to build…".
+
+Keep every number, link, step and key point. Only the wording changes.
+
 ### Numbers
 
 - Keep every number exactly. Grams and millilitres stay metric. Spoons: `tsp`, `tbsp`.

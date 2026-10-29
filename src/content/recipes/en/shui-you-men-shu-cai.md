@@ -18,7 +18,7 @@ translated: 2026-10-01
 
 Water-braised greens use a little water in a covered pot to soften tender leafy greens quickly. Here the greens are lettuce. The leaves meet the boiling water first and heat through, and once the lid is on, steam carries the heat to the upper leaves. Tossing swaps the top and bottom, so several kinds of [heat transfer](/principles/heat-transfer/) work together, and the water does not have to cover the whole pot of greens.
 
-A little oil makes the leaves glossy, and the salt and optional oyster sauce season the braising liquid. Leaves collapse as they heat and release water, so the pot looks full when the greens go in; there is no need to add water in a hurry. Tender leaves and thick stems heat at different speeds. Spinach, you mai cai (youcai) and other tender greens can follow the same idea, but baby bok choy with thick stems needs the stems cooked soft first before the leaves go in, and the time has to be longer.
+A little oil makes the leaves glossy, and the salt and optional oyster sauce season the braising liquid. Leaves collapse as they heat and release water, so a pot that looks full when the greens go in soon sinks without extra water. Tender leaves and thick stems heat at different speeds. Spinach, you mai cai (youcai) and other tender greens can follow the same idea, but baby bok choy with thick stems needs the stems cooked soft first before the leaves go in, and the time has to be longer.
 
 ## Steps
 
@@ -34,4 +34,4 @@ A little oil makes the leaves glossy, and the salt and optional oyster sauce sea
 
 - **Raw on top, mushy at the bottom**: the greens were packed too tight, or not tossed after going in. Following the idea of [heat transfer](/principles/heat-transfer/), leave room for steam, and add thick stems and tender leaves to the pot separately.
 - **Dull colour and limp texture**: the tender leaves stayed covered for a long time after they were cooked. [Residual heat](/principles/heat-transfer/) keeps softening the leaves, so lift them out once they are soft enough, and don't leave them in the hot water.
-- **Braising liquid is salty and the greens get saltier as they cook**: oyster sauce already contains salt, and the water keeps evaporating. Following [seasoning with salt](/principles/salt/), leave room first, and taste leaves with their liquid last; don't treat 3 g as an amount that must be fully added.
+- **Braising liquid is salty and the greens get saltier as they cook**: oyster sauce already contains salt, and the water keeps evaporating. Following [seasoning with salt](/principles/salt/), leave room first, and taste leaves with their liquid last; add the reserved 3 g only if the leaves need it.

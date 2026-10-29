@@ -22,7 +22,7 @@ ingredients:
 translated: 2026-10-02
 ---
 
-*Yam khai dao* tosses crisp-edged fried eggs, cut into pieces, with onion, tomato, Chinese celery and a sour, spicy dressing. In the Thai home version the yolk is fried through, so every piece, once cut, has both white and yolk. It is usually eaten with rice, so the lime and fish sauce should taste bright. The sourness also sets off the richness of the yolk (see [acid](/principles/acid/)).
+*Yam khai dao* tosses crisp-edged fried eggs, cut into pieces, with onion, tomato, Chinese celery and a sour, spicy dressing. The yolk is fried through, so every piece, once cut, has both white and yolk. It is usually eaten with rice, so the lime and fish sauce should taste bright. The sourness also sets off the richness of the yolk (see [acid](/principles/acid/)).
 
 The crisp edges come from hot oil making the white bubble quickly and then letting the thin edge dry out and colour (see [oil temperature and deep frying](/principles/oil-temperature/)). The yolk cooks more slowly than the thin white, so baste hot oil over the top as it fries to help the centre cook through (see [protein denaturation and coagulation](/principles/protein-coagulation/)). Prepare the dressing and vegetables first and cut and toss only after the eggs are fried, and the crisp edges keep longer.
 

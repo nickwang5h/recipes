@@ -20,7 +20,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-*Flammekueche* is the Alsatian "flame cake": a very thin crust topped with cultured cream, onion and smoked bacon. The cream base is often mixed with fromage blanc, though some traditional versions use only thick cultured cream. This recipe uses only the cream: slightly tangy and rich, with a crisp edge and a centre that still folds gently.
+*Flammekueche* is the Alsatian "flame cake": a very thin crust topped with cultured cream, onion and smoked bacon. The cream base is often mixed with fromage blanc, though some traditional versions use only thick cultured cream. Here it is only the cream: slightly tangy and rich, with a crisp edge and a centre that still folds gently.
 
 The dough is flour, water and a little oil, kneaded together. After resting it rolls out thinner (see [gluten](/principles/gluten/)). The baking pan preheats with the oven too, so heat enters the dough from underneath at once (see [heat transfer](/principles/heat-transfer/)). Spread only a thin layer of cream and scatter the onion and bacon, or the topping will weigh the crust down into one wet sheet.
 

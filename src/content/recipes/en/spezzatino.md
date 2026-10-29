@@ -30,7 +30,7 @@ The Italian beef stew *spezzatino* is soft enough to press apart with a fork. Th
 
 Beef chuck comes from a hard-working muscle with plenty of fascia and connective tissue, which suits slow stewing. Collagen has to stay in hot liquid long enough to turn into gelatin in quantity: the meat loosens, and the gelatin makes the broth thick and smooth (see [collagen and gelatin](/principles/collagen-gelatin/)). If the heat is too fierce, the muscle contracts first and squeezes out moisture, and the meat is cooked but still tough, so keep the liquid at a gentle bubble.
 
-Browning the meat dark first gives the stew a layer of roasted flavour from the [Maillard reaction](/principles/maillard-reaction/), and the brown bits on the bottom of the pot dissolve into the stew with the stock. The gelatin in the stew sets to a jelly when it cools. This is normal, and it melts again when reheated.
+Browning the meat dark first gives the stew a layer of roasted flavour from the [Maillard reaction](/principles/maillard-reaction/), and the brown bits on the bottom of the pot dissolve into the stew with the stock. The gelatin in the stew sets to a jelly when it cools and melts again when reheated.
 
 ## Steps
 

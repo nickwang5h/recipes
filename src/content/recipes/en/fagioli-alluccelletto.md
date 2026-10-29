@@ -19,7 +19,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-*Fagioli all'uccelletto* is a home-style Tuscan white bean dish. Cooked cannellini beans are coated in tomato sauce, with sage and garlic as the base in olive oil; the beans keep their shape and are creamy inside. It can be a side dish, or a simple meal with bread. Dried beans have to be soaked ahead, so keep that time separate.
+*Fagioli all'uccelletto* is a home-style Tuscan white bean dish. Cooked cannellini beans are coated in tomato sauce, with sage and garlic as the base in olive oil; the beans keep their shape and are creamy inside. It can be a side dish, or a simple meal with bread. Dried beans have to be soaked ahead, so start the day before.
 
 The order of this dish comes from [acid](/principles/acid/): the acidity of tomato keeps beans from softening, so the beans are cooked soft in plain water first and the tomato goes in afterward. The sage goes into the oil first so its aroma spreads through the pot (see [Spices and Aromatics](/principles/aromatics/)). The final stewing is only for flavour and reduction.
 

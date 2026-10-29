@@ -20,7 +20,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-*Focaccia genovese* is a flatbread from Genoa, its surface covered in dimples pressed by fingertips. Salt water and olive oil run into the dimples. The raised parts bake golden, and the bottoms of the dimples stay soft and moist. This version is plain: you taste wheat, oil and salt, and the dough must be spread thin and even.
+*Focaccia genovese* is a flatbread from Genoa, its surface covered in dimples pressed by fingertips. Salt water and olive oil run into the dimples. The raised parts bake golden, and the bottoms of the dimples stay soft and moist. It is the plain kind: you taste wheat, oil and salt, and the dough must be spread thin and even.
 
 Yeast gives off gas and [gluten](/principles/gluten/) holds the gas in the dough. In the oven, the starch takes up water and [gelatinizes](/principles/starch-gelatinization/), and the bread sets its shape. Kneading builds structure, and two rises and a rest make the dough airy and easy to spread. The water in the dimples makes those spots dry out more slowly, which is what gives crisp tops and soft dimples.
 

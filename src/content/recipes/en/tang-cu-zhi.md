@@ -14,7 +14,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-Sweet and sour sauce brings the sweetness of sugar, the sourness of vinegar and the savoury saltiness of soy sauce together in one bowl, and works for any sweet-sour dish that is cooked in the sauce and reduced at the end. The soy sauce flavour is fairly strong and the colour dark. Sugar softens the [sourness](/principles/acid/) and the light soy sauce holds up the base flavour; if you change the brand of vinegar or soy sauce, taste the final sauce again.
+Sweet and sour sauce brings the sweetness of sugar, the sourness of vinegar and the savoury saltiness of soy sauce together in one bowl, and works for any sweet-sour dish that is cooked in the sauce and reduced at the end. The soy sauce flavour is fairly strong and the colour dark. Sugar softens the [sourness](/principles/acid/) and the light soy sauce gives the sauce its savoury backbone; if you change the brand of vinegar or soy sauce, taste the final sauce again.
 
 "5, 4, 3, 2, 1" is just a way of remembering the amounts: 50 ml of water, 40 ml of light soy sauce, 30 g of sugar, 20 ml of vinegar and 10 ml of Shaoxing wine, with the sugar by weight and the rest by volume. Don't measure all five with the same spoon. One batch is this one bowl of base sauce; how many batches to use depends on the water content and the salt already in the other ingredients.
 
@@ -29,5 +29,5 @@ Sweet and sour sauce brings the sweetness of sugar, the sourness of vinegar and 
 ## Key points
 
 - **Very salty after reducing**: the amount of light soy sauce is high, and evaporation concentrates the [salt](/principles/salt/). Salt the main ingredient lightly beforehand and stop once the sauce clings; if it is too salty, add a little water, and don't reduce it back to the same thickness afterwards.
-- **Vinegar is harsh or the sweet-sour is off**: vinegars differ in acidity, and sugar only makes the sourness taste softer (see [acid](/principles/acid/)). Taste with the main ingredient, and don't treat the thick sauce on its own as the flavour of the whole dish.
+- **Vinegar is harsh or the sweet-sour is off**: vinegars differ in acidity, and sugar only makes the sourness taste softer (see [acid](/principles/acid/)). Taste with the main ingredient; the thick sauce on its own is stronger than the finished dish.
 - **Sugar sticks to the bottom and the sauce is bitter**: toward the end of reducing there is little water, and parts of the pot bottom overheat (see [heat transfer](/principles/heat-transfer/)). Keep stirring, stop as soon as anything burns, and don't scrape the blackened bottom into the sauce.

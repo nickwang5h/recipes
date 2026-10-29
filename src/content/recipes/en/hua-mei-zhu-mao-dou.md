@@ -14,7 +14,7 @@ translated: 2026-10-01
 
 Edamame boiled with preserved plums carries the sourness, sweetness and saltiness of the plums into the cooking liquid, and lets the edamame in their pods absorb it. Salt and sugar enter the water and then gradually diffuse into the food (see [Salt: Seasoning, Osmosis and Curing](/principles/salt/)). Snipping both ends of the pod lets the liquid reach inside; if you only put the plums next to cooked edamame, the flavour mostly stays on the shell.
 
-This version is soft and tender: fresh edamame and plums are cooked together for about 20–30 minutes, and the pods end up darker than briefly boiled edamame. The plums' sourness affects how vegetable tissue softens (see [Acid: Balance, Softening and Stability](/principles/acid/)). If you use pre-cooked frozen edamame, heat them as the package says: cook the plums until they give up their flavour first, then add the edamame.
+The edamame come out soft and tender: fresh edamame and plums are cooked together for about 20–30 minutes, and the pods end up darker than briefly boiled edamame. The plums' sourness affects how vegetable tissue softens (see [Acid: Balance, Softening and Stability](/principles/acid/)). If you use pre-cooked frozen edamame, heat them as the package says: cook the plums until they give up their flavour first, then add the edamame.
 
 ## Steps
 
@@ -23,7 +23,7 @@ This version is soft and tender: fresh edamame and plums are cooked together for
 3. In a separate pot, bring fresh water to a boil, enough to cover the edamame. Add the fresh edamame and the plums, stir gently to spread them out, and once the water returns to a boil, lower the heat to one that keeps it rolling gently.
 4. Cook uncovered for about 20 minutes, turning gently once so the pods floating on top also touch the liquid. If the water level drops and a lot of edamame is exposed, add hot water until they are covered again; there is no need to reduce the plum liquid to a thick sugary syrup.
 5. Lift out one pod, let it cool slightly and open it: the centre of the bean should be hot through, soft when bitten, with no hard core or raw grassy taste. For softer, more tender beans, keep cooking, for a total of about 20–30 minutes.
-6. Scoop out the edamame with a little of the cooking liquid, and taste one bean to judge the seasoning. The plums already carry salt and sugar, so do not season again at first. Once slightly cooled, shell and eat the beans, and discard the plum pits and the pods.
+6. Scoop out the edamame with a little of the cooking liquid, and taste one bean to judge the seasoning. The plums already carry salt and sugar, so don't add salt before tasting. Once slightly cooled, shell and eat the beans, and discard the plum pits and the pods.
 
 ## Key points
 

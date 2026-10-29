@@ -20,7 +20,7 @@ translated: 2026-10-01
 
 In stir-fried pork with cucumber, the cucumber is crisp and the pork slices are tender, and the two only meet briefly in the pan. The cucumber is first salted with a little [salt](/principles/salt/) to draw out surface water, then drained before stir-frying, so the pan does not fill with liquid. The light soy sauce already seasons the pork, so decide on extra salt only after everything is tossed together.
 
-Slice the pork thin against the grain and slice the cucumber on the diagonal to a similar thickness. Good [knife work](/principles/knife-work/) makes the pork heat more evenly, and lets the cucumber soften slightly in a short time while staying crisp. The pork is cooked first and the cucumber added after, so the two have separate stopping points, and the cucumber does not have to stay in the pan while you wait for the pork.
+Slice the pork thin against the grain and slice the cucumber on the diagonal to a similar thickness. Good [knife work](/principles/knife-work/) makes the pork heat more evenly, and lets the cucumber soften slightly in a short time while staying crisp. The pork is cooked first and the cucumber added after, so each is cooked to its own point, and the cucumber does not have to stay in the pan while you wait for the pork.
 
 ## Steps
 

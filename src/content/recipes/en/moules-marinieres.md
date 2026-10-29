@@ -23,7 +23,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-*Moules marinières* opens fresh mussels by steaming them with dry white wine, shallots, butter and herbs. The broth is the wine plus the mussel liquor, clear and light, and it goes to the table with the shells. The parsley is used twice: the sprigs and leaves cook first to build the base, and chopped leaves finish the dish (see [Spices and Aromatics](/principles/aromatics/)).
+*Moules marinières* opens fresh mussels by steaming them with dry white wine, shallots, butter and herbs. The broth is the wine plus the mussel liquor, clear and light, and it goes to the table with the shells. The parsley is used twice: the sprigs and leaves cook first for flavour, and chopped leaves finish the dish (see [Spices and Aromatics](/principles/aromatics/)).
 
 The lid keeps the steam in the pot and carries the heat to the shells on top; a little wine boils at the bottom while the mussels keep releasing liquid (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). The pot needs room for turning the mussels, so for eight servings divide them between two pots and split the wine broth ingredients equally. As the mussel meat heats, its [protein coagulates](/principles/protein-coagulation/) and the meat gradually plumps and turns opaque.
 

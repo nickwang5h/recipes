@@ -25,7 +25,7 @@ ingredients:
 translated: 2026-10-02
 ---
 
-Bang bang chicken has soft, fine shreds of chicken, dressed with a "strange-flavour sauce" that has numbing, hot, sweet, salty and sour notes and the fragrance of sesame; it is a Sichuan cold chicken dish. The chicken is cooked first, then pounded loose with a wooden stick and torn into fine shreds. This is a home version, using chicken breast, with sesame paste giving the sauce body and chili oil floating on top, glossy.
+Bang bang chicken has soft, fine shreds of chicken, dressed with a "strange-flavour sauce" that has numbing, hot, sweet, salty and sour notes and the fragrance of sesame; it is a Sichuan cold chicken dish. The chicken is cooked first, then pounded loose with a wooden stick and torn into fine shreds. It uses chicken breast, with sesame paste giving the sauce body and chili oil floating on top, glossy.
 
 After pounding, the chicken tears easily into fine shreds, and the greater surface area helps the sauce cling; see [knife work and cooking](/principles/knife-work/). How tender the meat is, though, is settled during the poaching; see [protein denaturation and coagulation](/principles/protein-coagulation/): meat that has been cooked dry cannot get its juices back, however much you pound it. The sesame paste has to be loosened smooth first, and then the chili oil mixed in, so the water and oil are distributed evenly and the sauce is not half lumps of paste and half oil; see [emulsification](/principles/emulsification/).
 

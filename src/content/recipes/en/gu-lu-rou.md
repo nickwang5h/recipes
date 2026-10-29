@@ -26,7 +26,7 @@ translated: 2026-10-01
 
 The crunch in sweet and sour pork comes from the fried crust, and the sweet and sour comes from the sauce that coats it at the end. When the starch on the outside of the pork pieces is heated, it loses water and forms a thin, crisp shell. Frying first to cook through and then frying again separates cooking the centre from drying the surface (see [oil temperature and deep frying](/principles/oil-temperature/)). Tossing with the sauce last keeps softening to a minimum.
 
-This version uses a tomato sauce with pineapple, with plenty of sauce and on the sweet side. The starch in the sauce thickens by [gelatinization](/principles/starch-gelatinization/), and the [acid](/principles/acid/) in the white vinegar and pineapple balances the sugar and oil. The sauce and the crust each have a job: the sauce should thinly coat the meat, and the crust should stay intact.
+It uses a tomato sauce with pineapple, plenty of it and on the sweet side. The starch in the sauce thickens by [gelatinization](/principles/starch-gelatinization/), and the [acid](/principles/acid/) in the white vinegar and pineapple balances the sugar and oil. The sauce and the crust each have a job: the sauce should thinly coat the meat, and the crust should stay intact.
 
 ## Steps
 

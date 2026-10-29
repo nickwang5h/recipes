@@ -6,25 +6,25 @@ coverAlt: Tomato pasta, tomatoes, basil, Parmigiano Reggiano and olive oil
 translated: 2026-10-01
 ---
 
-"Italian cooking" is really the sum of the regional cooking of twenty regions. The north uses more butter, rice and fresh egg pasta; the south uses more olive oil, tomatoes and dried pasta. What links them is a shared attitude: **few ingredients, each of them good, and a method that does not cover up their taste.**
+"Italian cooking" is really the sum of the regional cooking of twenty regions: the north uses more butter, rice and fresh egg pasta, the south more olive oil, tomatoes and dried pasta. What links them is a shared attitude: **few ingredients, each of them good, and a method that does not cover up their taste.**
 
 ## Ingredients are half the recipe
 
-A cacio e pepe has only four things: pasta, Pecorino Romano, black pepper and water. A dish like this has nowhere to hide: the saltiness and age of the cheese, the texture of the pasta and whether the pepper was freshly ground all show in the mouth. That is why Italian recipes often specify origin and variety. It is not just fussiness; it tells you where the flavour comes from.
+A cacio e pepe has only four things: pasta, Pecorino Romano, black pepper and water. A dish like this has nowhere to hide, and you taste the saltiness and age of the cheese, the texture of the pasta and whether the pepper was freshly ground. That is why Italian recipes often name the origin and variety. It is not just fussiness; it tells you where the flavour comes from.
 
 ## Pasta and sauce become one in the pan
 
-In the Italian method, the pasta is not boiled and then topped with a spoonful of sauce. Instead, **lift the pasta into the sauce pan when it is a minute or two short of done, and toss and finish it with the sauce.** The pasta takes in the flavour of the sauce, and the starch on its surface dissolves into the sauce so it clings to the pasta.
+Italian cooks do not boil the pasta and then spoon sauce over it. They **lift the pasta into the sauce pan when it is a minute or two short of done, and toss and finish it with the sauce.** The pasta takes in the flavour of the sauce, and the starch on its surface dissolves into the sauce, so the sauce clings.
 
-**Pasta water** is the key ingredient in this step: it contains salt and the starch released from the surface of the pasta. A little pasta water both adjusts the thickness and helps the fat and water stay emulsified so the sauce does not split (see [Starch Gelatinization](/principles/starch-gelatinization/) and [Emulsification](/principles/emulsification/)). So remember to ladle out a bowl of pasta water before draining.
+The key ingredient in this step is **pasta water**: it holds salt and the starch released from the surface of the pasta. A little of it adjusts the thickness and keeps the fat and water emulsified, so the sauce does not split (see [Starch Gelatinization](/principles/starch-gelatinization/) and [Emulsification](/principles/emulsification/)). So ladle out a bowl of pasta water before you drain.
 
-## Mantecatura
+## Mantecatura: off the heat, stir until creamy
 
-*Mantecare* is to add butter or cheese off the heat and stir or shake the pan quickly until the sauce is creamy and smooth. The last step of [Risotto alla Milanese](/recipes/risotto-alla-milanese/) and most cheese pastas use it. The key is **off the heat**: if the pan is too hot when the cheese goes in, the cheese clumps.
+*Mantecare* is to add butter or cheese off the heat and stir or shake the pan quickly until the sauce is creamy and smooth. The last step of [Risotto alla Milanese](/recipes/risotto-alla-milanese/) and most cheese pastas rely on it. The point is **off the heat**: cheese added to a pan that is too hot clumps.
 
-## Rome's four pastas
+## Rome's four pastas, each built on the last
 
-Cacio e pepe, gricia, carbonara and amatriciana are often discussed together, as if each builds on the one before:
+Cacio e pepe, gricia, carbonara and amatriciana are often discussed together, because each adds something to the one before:
 
 - **cacio e pepe**: Pecorino + black pepper
 - **gricia**: add guanciale (cured pork jowl)
@@ -33,9 +33,9 @@ Cacio e pepe, gricia, carbonara and amatriciana are often discussed together, as
 
 Get [cacio e pepe](/recipes/cacio-e-pepe/) running smoothly first, and the other three are not hard.
 
-## Al dente
+## Al dente: a thin firm core in the centre
 
-Pasta should have "bite", with a slight firm core in the centre, because it will keep cooking in the sauce for a while. Take it out 1–2 minutes before the time on the package.
+Pasta should have bite, with a thin firm core in the centre, because it will keep cooking in the sauce for a while. Take it out 1–2 minutes before the time on the package.
 
 ## Further reading
 

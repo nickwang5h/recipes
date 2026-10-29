@@ -23,7 +23,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-*Gà xào sả ớt* stir-fries the fresh scent of lemongrass and the heat of chili into chicken. This is a home version with curry powder, a little coconut milk and red bell pepper. The coconut milk is reduced until it is almost invisible, so the result is spice-coated pieces of chicken with only a little thick sauce on the plate. It goes well with white rice: first you smell the lemongrass, then taste the savoury fish sauce.
+*Gà xào sả ớt* stir-fries the fresh scent of lemongrass and the heat of chili into chicken. It is made with curry powder, a little coconut milk and red bell pepper. The coconut milk is reduced until it is almost invisible, so the result is spice-coated pieces of chicken with only a little thick sauce on the plate. It goes well with white rice: first you smell the lemongrass, then taste the savoury fish sauce.
 
 The lemongrass is minced fine and stir-fried briefly, so its aroma is released into the oil (see [spices and aromatics](/principles/aromatics/)). The chicken is browned before the coconut milk goes in. First you get the roasted aroma of the [Maillard reaction](/principles/maillard-reaction/), then the coconut milk cooks the meat through, so the meat doesn't have to be fried for long in a dry pan. Don't use too much coconut milk, or the chicken will be cooked while the liquid is far from reduced.
 

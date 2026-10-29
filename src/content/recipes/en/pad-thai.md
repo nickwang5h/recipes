@@ -34,11 +34,11 @@ translated: 2026-10-01
 
 *Phat Thai* is thin flat rice noodles stir-fried with shrimp, tofu and egg. It is sour, sweet, salty and savoury, the noodles are chewy, and the preserved radish, dried shrimp and peanuts each add a different bite. The sourness comes from tamarind, the sweetness from palm sugar and the saltiness from fish sauce. The lime stays at the table and is squeezed on as you eat, so its sour aroma stays clear (see [Acid: Balance, Softening and Stability](/principles/acid/)).
 
-Dried rice noodles are soaked only until pliable, then cooked through in the pan with the sauce and heat. Soaking just lets water into the noodles. Whether a hard core remains has to be judged by biting one while stir-frying (see [Starch Gelatinization](/principles/starch-gelatinization/)). This recipe uses a large wok or a skillet about 35 cm across. The noodles, the other ingredients and the egg each take a patch of the pan and are combined only at the end, so the noodles are pulled and stretched less.
+Dried rice noodles are soaked only until pliable, then cooked through in the pan with the sauce and heat. Soaking just lets water into the noodles. Whether a hard core remains has to be judged by biting one while stir-frying (see [Starch Gelatinization](/principles/starch-gelatinization/)). Use a large wok or a skillet about 35 cm across. The noodles, the other ingredients and the egg each take a patch of the pan and are combined only at the end, so the noodles are pulled and stretched less.
 
 ## Steps
 
-1. Soak the rice noodles in room-temperature water for about 30–40 minutes, until they bend around a finger without breaking. Drain and cut them into lengths of about 15 cm. At this point the noodles are soft but still raw to the bite.
+1. Soak the rice noodles in room-temperature water for about 30–40 minutes, until they bend around a finger without breaking. Drain and cut them into lengths of about 15 cm.
 2. Knead the tamarind apart in 30 ml of hot water, strain, and measure out 2 tbsp of juice, topping up with water if short. Stir it with the palm sugar and fish sauce until the sugar dissolves. Cut all the ingredients and set them beside the stove.
 3. Add 3 tbsp of the oil to the wok, put in the noodles over medium-high heat, and toss for about 1 minute, until they are coated in oil and more pliable. Pour in the sauce and toss for about 1 minute more, so every noodle takes up the liquid.
 4. Push the noodles to one side. Add the remaining 2 tbsp oil to the empty space, and add the shallot, garlic, preserved radish, tofu and dried shrimp. Stir-fry for about 1 minute. Add the fresh shrimp and toss until they have just started to change colour and are not yet cooked in the centre.

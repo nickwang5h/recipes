@@ -20,7 +20,7 @@ translated: 2026-10-01
 
 *Crème caramel* is a custard pudding that turns out of its mould, with a layer of flowing caramel on top. The sugar in the bottom of the mould is first [caramelized](/principles/caramelization/) for its aroma, and the custard sets by [protein coagulation](/principles/protein-coagulation/). After baking, the pudding rests in the fridge, and the hard caramel layer absorbs moisture and gradually dissolves into a sauce.
 
-Whole eggs give structure and the extra yolks make the pudding smooth and fine. The water bath heats the sides of the mould gently, so the outer ring does not overcook before the centre has set (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). This version uses a single mould of about 1 L, and after baking it must be chilled until cold before unmoulding, so make it ahead.
+Whole eggs give structure and the extra yolks make the pudding smooth and fine. The water bath heats the sides of the mould gently, so the outer ring does not overcook before the centre has set (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). It makes one mould of about 1 L, and after baking it must be chilled until cold before unmoulding, so make it ahead.
 
 ## Steps
 

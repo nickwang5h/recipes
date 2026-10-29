@@ -27,7 +27,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-In fish-fragrant eggplant, the tender eggplant flesh and the sweet, sour and spicy sauce set each other off. This is the home version with a little ground pork: the eggplant strips are fried soft in hot oil, simmered briefly in the doubanjiang sauce, and finally [starch gelatinization](/principles/starch-gelatinization/) thickens the sauce into a thin glaze so each strip is coated with flavour.
+In fish-fragrant eggplant, the tender eggplant flesh and the sweet, sour and spicy sauce set each other off. This one has a little ground pork: the eggplant strips are fried soft in hot oil, simmered briefly in the doubanjiang sauce, and finally [starch gelatinization](/principles/starch-gelatinization/) thickens the sauce into a thin glaze so each strip is coated with flavour.
 
 Eggplant flesh is spongy and soaks up oil easily, so drain it as soon as it is fried. When frying, go by [oil temperature](/principles/oil-temperature/) and not by how high the flame is: too much at once drops the oil temperature sharply, and the eggplant stays hard for a long time. Stir-fry the doubanjiang, ginger and garlic in moderately hot oil, not over the high heat you use for frying the eggplant.
 

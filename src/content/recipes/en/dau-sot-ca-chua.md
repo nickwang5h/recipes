@@ -23,7 +23,7 @@ ingredients:
 translated: 2026-10-02
 ---
 
-*Đậu sốt cà chua* is Vietnamese tofu in tomato sauce. Firm tofu is fried until golden, then added to a sweet and sour sauce made from fresh tomatoes, and finished with the green part of the green onion. The meatless home version uses a little fish sauce for savouriness, or light soy sauce for a fully vegan dish, and goes with white rice and [Rau Muống Xào Tỏi](/recipes/rau-muong-xao-toi/).
+*Đậu sốt cà chua* is Vietnamese tofu in tomato sauce. Firm tofu is fried until golden, then added to a sweet and sour sauce made from fresh tomatoes, and finished with the green part of the green onion. It is meatless, with a little fish sauce for savouriness, or light soy sauce for a fully vegan dish, and goes with white rice and [Rau Muống Xào Tỏi](/recipes/rau-muong-xao-toi/).
 
 Frying first dries the surface of the tofu and builds a firmer thin skin, so it keeps its shape during the gentle simmer later (see [oil temperature and deep frying](/principles/oil-temperature/)). The ripe tomatoes and fish sauce in the sauce supply [umami](/principles/umami/). The tomatoes are cooked soft first and the tofu goes in afterwards, so the sauce clings without the tofu being cooked dry and hard.
 

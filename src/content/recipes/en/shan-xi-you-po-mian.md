@@ -22,9 +22,9 @@ ingredients:
 translated: 2026-10-01
 ---
 
-Shaanxi oil-splashed noodles is wide noodles with greens, topped with a small pile of green onion, garlic and chili, and finished with a spoonful of hot oil that makes the aroma burst out. The noodles are cooked first through [starch gelatinization](/principles/starch-gelatinization/); the hot oil then carries the flavour of the chili, green onion and garlic into the fat (see [spices and aromatics](/principles/aromatics/)). The seasoning is minimal, but the heat for boiling the noodles and for splashing the oil each needs its own judgment.
+Shaanxi oil-splashed noodles is wide noodles with greens, topped with a small pile of green onion, garlic and chili, and finished with a spoonful of hot oil that makes the aroma burst out. The noodles are cooked first through [starch gelatinization](/principles/starch-gelatinization/); the hot oil then carries the flavour of the chili, green onion and garlic into the fat (see [spices and aromatics](/principles/aromatics/)). The seasoning is minimal, but the noodles and the oil each need their own heat.
 
-This bowl uses ready-made fresh wide noodles. Drain the noodles before splashing the oil, and spread the chili flakes over the green onion and garlic; the oil touches these fine seasonings first, which releases the aroma quickly, and is then tossed through every strand.
+Use ready-made fresh wide noodles. Drain the noodles before splashing the oil, and spread the chili flakes over the green onion and garlic; the oil touches these fine seasonings first, which releases the aroma quickly, and is then tossed through every strand.
 
 ## Steps
 
@@ -37,6 +37,6 @@ This bowl uses ready-made fresh wide noodles. Drain the noodles before splashing
 
 ## Key points
 
-- **Chili turns black and tastes bitter**: the oil was too hot or the flakes too fine, and the brief sizzle turned into scorching. Judge by the surface of the oil and the test splash, following [oil temperature](/principles/oil-temperature/), and do not treat smoking as the goal; scorched, bitter seasoning should be replaced.
+- **Chili turns black and tastes bitter**: the oil was too hot or the flakes too fine, and the brief sizzle turned into scorching. Judge by the surface of the oil and the test splash, following [oil temperature](/principles/oil-temperature/), and remember that smoking means the oil is too hot. Replace scorched, bitter seasoning.
 - **Noodles are mushy or hard in the centre**: fresh noodles differ in thickness, and [starch gelatinization](/principles/starch-gelatinization/) needs different times. Taste one instead of going only by floating, and lift them out as soon as they are cooked.
 - **Seasoning clumps and the aroma is uneven**: the hot oil only touched the surface of a thick pile of flakes, and the lower layer stayed dry. Following [aroma extraction](/principles/aromatics/), spread the flakes thin, splash the oil in portions and toss promptly; too much water will also dilute the seasoning.

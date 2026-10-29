@@ -19,7 +19,7 @@ ingredients:
 translated: 2026-10-02
 ---
 
-Watercress and pork bone soup is a Cantonese home-style slow-simmered soup: the meat on the bones is soft, the greens are soft and the soup tastes of watercress. Meaty pork bones simmer first to build the base, and the watercress goes in later and cooks until the stems and leaves are tender and the soup takes on a pale green tint. Watercress turns dark when cooked long, and a soup that tastes of watercress is the goal.
+Watercress and pork bone soup is a Cantonese home-style slow-simmered soup: the meat on the bones is soft, the greens are soft and the soup tastes of watercress. Meaty pork bones simmer first to make the soup, and the watercress goes in later and cooks until the stems and leaves are tender and the soup takes on a pale green tint. Watercress darkens with long cooking; what matters is that the soup tastes of it.
 
 The tendons and connective tissue on the bones soften slowly in moist heat, and some of the [collagen turns into gelatin](/principles/collagen-gelatin/), giving the clear soup a little body. Leave meat on the bones; with only a few bare bones the soup tends to taste thin. Blanching first to remove scum, then keeping a low, barely rolling simmer, reduces how much fat and debris is churned into the soup (see [Blanching and Removing Off-Odours](/principles/blanching/) and [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)).
 

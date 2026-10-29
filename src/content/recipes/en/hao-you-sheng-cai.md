@@ -28,12 +28,12 @@ The minced garlic is fried over low heat until fragrant, then connected with oys
 ## Steps
 
 1. Remove any bad leaves, separate the lettuce into individual leaves, and wash away the grit at the base and in the folds. Tear especially large leaves into big pieces, keeping the ribs, and drain in a colander.
-2. Peel and mince the garlic. Stir the light soy sauce, oyster sauce and sugar with the 15 ml of cold water until the oyster sauce is dispersed and the sugar grains are barely visible, and leave it next to the pan for now.
+2. Peel and mince the garlic. Stir the light soy sauce, oyster sauce and sugar with the 15 ml of cold water until the oyster sauce is dispersed and the sugar grains are barely visible, and set it next to the pan.
 3. Put 1000 ml of water, the oil for blanching and the salt in the pot and bring to a boil over high heat. The water in the pot must be enough for the leaves to spread out; if there are too many leaves, blanch in batches.
 4. Once the water is boiling, add the lettuce and press it gently under the water so every leaf touches the hot water. Start lifting it out at about 10 seconds: the leaves are soft and bright in colour and the ribs still have crispness. Thicker ribs can go in a little longer, but don't let the thin leaves wait in the water.
 5. Let the lettuce drain in the colander, shake out the water in the folds of the leaves lightly, then lay it on a plate. Don't squeeze hard, or the cooked leaves are pressed into a lump; if water has pooled at the bottom of the plate, pour it off before adding the sauce.
 6. Discard the blanching water, wipe the pot dry, add the oil for frying the garlic, and add the minced garlic over low heat. Keep stirring, and when you smell it and the edges of the garlic have just turned light golden, pour in the mixed sauce.
-7. Cook the sauce until it is bubbling evenly and the sugar has dissolved, then turn off the heat at once and pour it over the lettuce, so the leaves and ribs both pick up the garlic. Serve hot; the whole plate does not go back into the pot.
+7. Cook the sauce until it is bubbling evenly and the sugar has dissolved, then turn off the heat at once and pour it over the lettuce, so the leaves and ribs both pick up the garlic. Serve hot.
 
 ## Key points
 

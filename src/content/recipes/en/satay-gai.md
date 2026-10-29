@@ -1,7 +1,7 @@
 ---
 title: Chicken Satay with Peanut Sauce
 original: 沙爹鸡串配花生酱
-summary: Turmeric, coriander seed and cumin build the base flavour on the chicken, coconut milk is brushed on the grilling skewers, and they are dipped in a red curry peanut sauce and eaten between bites of a quick cucumber pickle.
+summary: Turmeric, coriander seed and cumin season the chicken, coconut milk is brushed on the grilling skewers, and they are dipped in a red curry peanut sauce and eaten between bites of a quick cucumber pickle.
 coverAlt: Illustration of chicken satay with peanut sauce plated
 ingredients:
   - group: Skewers and marinade

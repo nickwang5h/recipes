@@ -5,34 +5,34 @@ coverAlt: An iron wok of stir-fried greens and sliced pork, steamed fish, dumpli
 translated: 2026-10-01
 ---
 
-Chinese cooking is too large for a single "Chinese cuisine" to hold the differences among Sichuan, Cantonese, Shandong, Huaiyang and other regions. This page first sets out a few lines of logic that run through all of them and are really useful when you cook; for the signature techniques of Shandong, Sichuan, Cantonese and Huaiyang cooking, see the regional cuisines below.
+Chinese cooking is too big for one label: Sichuan, Cantonese, Shandong and Huaiyang each have their own ways. This page covers only the ideas that run through all of them and that you can use at the stove; for the signature techniques of each region, see the regional cuisines below.
 
-## Knife work and heat are one thing
+## Knife work sets how the heat is used
 
-Ingredients in the same dish are cut to similar size and thickness so they cook in the same time. Choosing between shreds, slices, dice and chunks is essentially a way to control **how fast heat gets in** (see [Knife Work and Cooking](/principles/knife-work/)): the finer the cut, the better suited to quick cooking over high heat; large pieces suit red-braising, stewing and covered braising. When Chinese cooking talks about "*huohou*" (the control of heat), it means how strong a fire to use and how long to heat, once the knife work has been decided.
+Ingredients in one dish are cut to a similar size and thickness so they cook in the same time. Shreds, slices, dice or chunks decide **how fast heat gets in** (see [Knife Work and Cooking](/principles/knife-work/)): the finer the cut, the better it suits quick cooking over high heat; large pieces suit red-braising, stewing and covered braising. What Chinese cooks call *huohou*, the control of heat, is how strong a fire to use and how long to cook once the cutting is settled.
 
-## Wok hei: high heat, small amounts, fast
+## Wok hei comes from a wok that stays hot
 
-A home stove has limited power, so the key to getting *wok hei* is **not letting the wok cool down**: heat the wok until it smokes before adding oil, put in a little less each time, and keep the surface of the ingredients as dry as you can. Once the wok temperature drops, the ingredients release water, stir-frying turns into boiling, and the [Maillard reaction](/principles/maillard-reaction/) cannot get going either.
+A home stove has limited power, so to get *wok hei* you must not let the wok cool down: heat it until it smokes before adding oil, cook a little at a time, and dry the surface of the ingredients. Once the wok cools, the ingredients release water, the stir-fry turns into boiling, and the [Maillard reaction](/principles/maillard-reaction/) cannot happen.
 
-## Oil carries flavour
+## Oil carries flavour into the dish
 
-Many aroma compounds dissolve in oil and not in water, such as the heat of chilies and the numbing of Sichuan peppercorns. Sizzling aromatics in oil, stir-frying until fragrant and cooking out red oil are all ways of first extracting these flavours with hot oil (for oil temperature, see [Oil Temperature and Deep Frying](/principles/oil-temperature/)) and then letting the oil coat the main ingredient (see [Spices and Aromatics](/principles/aromatics/)). That is why Sichuan cooking so often has the step of frying chili bean paste and chilies until the oil is red and glossy; the salty, savoury base notes of chili bean paste, fermented black beans and fermented tofu come from [fermentation](/principles/fermentation/).
+The heat of chilies and the numbing of Sichuan peppercorns dissolve in oil, not in water. Sizzling aromatics in oil, stir-frying until fragrant and cooking out red oil all start by pulling these flavours into hot oil (for oil temperature, see [Oil Temperature and Deep Frying](/principles/oil-temperature/)), then letting the oil coat the main ingredient (see [Spices and Aromatics](/principles/aromatics/)). That is why Sichuan cooking so often begins by frying chili bean paste and chilies until the oil is red and glossy. The salty, savoury base of chili bean paste, fermented black beans and fermented tofu comes from [fermentation](/principles/fermentation/).
 
-## Seasoning is a "flavour profile", not a single taste
+## Seasoning means picking a "flavour profile", not one taste
 
-Sichuan cooks often say "one dish, one style; a hundred dishes, a hundred flavours", and sort seasoning into a set of **flavour profiles**: numbing-hot, fish-fragrant, strange-flavour, home-style, red oil, sweet and sour and so on. The same main ingredient with a different profile is a different dish. Once you understand the profiles, seasoning is no longer about memorizing recipes; it is about adjusting proportions.
+Sichuan cooks say "one dish, one style; a hundred dishes, a hundred flavours", and sort seasoning into a set of **flavour profiles**: numbing-hot, fish-fragrant, strange-flavour, home-style, red oil, sweet and sour and more. The same main ingredient with a different profile is a different dish. Once you know the profiles, you no longer memorize recipes; you adjust proportions.
 
-## Starch thickening and coating: two ways to use starch
+## Thickening and coating are two ways to use starch
 
-- **Thickening with a starch slurry**: pour in starch slurry before the dish comes out of the wok, so the sauce thickens, turns glossy and clings to the ingredients.
-- **Coating with a starch marinade (velveting)**: before the meat goes in the wok, mix sliced meat with egg white and starch; the heat forms a protective film and the meat is tender and smooth.
+- **Thickening with a starch slurry**: pour in starch slurry before the dish leaves the wok, and the sauce thickens, turns glossy and clings to the ingredients.
+- **Coating with a starch marinade (velveting)**: before the meat goes in the wok, mix sliced meat with egg white and starch; the heat sets a protective film around it and the meat stays tender and smooth.
 
-Both make use of [starch gelatinization](/principles/starch-gelatinization/).
+Both rely on [starch gelatinization](/principles/starch-gelatinization/).
 
-## Stock
+## Clear stock and milk-white stock need different heat
 
-Clear stock needs low heat, with the surface kept at a gentle simmer and the foam skimmed repeatedly; milk-white stock is boiled hard to break the fat up and emulsify it into a milky white (see [emulsification](/principles/emulsification/)). A good stock lets a dish taste savoury even without MSG; for the principle, see [umami](/principles/umami/).
+Clear stock needs low heat, with the surface at a gentle simmer and the foam skimmed again and again. Milk-white stock is boiled hard to break the fat up and [emulsify](/principles/emulsification/) it into a milky white. A good stock makes a dish taste savoury even without MSG; for why, see [umami](/principles/umami/).
 
 ## Further reading
 

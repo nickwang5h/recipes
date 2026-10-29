@@ -29,7 +29,7 @@ The first step is frying the curry paste so the aromas of galangal, lemongrass a
 
 ## Steps
 
-1. Cut the chicken thighs into slices of similar thickness. Cut the eggplants into wedges and soak them for now in water with the lemon juice squeezed in. Cut the chilies into strips, wash and drain the basil, and measure the coconut cream and coconut milk separately.
+1. Cut the chicken thighs into slices of similar thickness. Cut the eggplants into wedges and soak them in water with the lemon juice squeezed in. Cut the chilies into strips, wash and drain the basil, and measure the coconut cream and coconut milk separately.
 2. Put the coconut cream, the oil and the green curry paste in a pot, and stir constantly over medium heat for about 2 minutes. When the raw smell of the paste fades, the aroma deepens and bright oil beads start to show at the edge, it is ready. Don't let black burnt spots form on the bottom.
 3. Add the coconut milk and the chicken, break the slices apart, and cook until it just starts to bubble. Then turn to low, cover and simmer gently. Simmer for about 10 minutes, until the meat slices are opaque from the centre to the outside and the thickest part reaches 74°C (165°F).
 4. Drain the eggplants and add them with the chilies. Add half the fish sauce and the palm sugar. The liquid should leave most of the ingredients submerged in the soup. If it doesn't, add the reserved water in stages and return to a gentle simmer.
@@ -38,6 +38,6 @@ The first step is frying the curry paste so the aromas of galangal, lemongrass a
 
 ## Key points
 
-- **The coconut cream never gives off oil**: the stabilizers in the canned product keep it dispersed. Fry the paste in the oil from the recipe, and move on once you smell it and the paste darkens a little. Don't cook it until the bottom is dry and scorched. See [emulsification](/principles/emulsification/).
+- **The coconut cream never gives off oil**: the stabilizers in the canned product keep it dispersed. Fry the paste in the oil from the recipe, and stop once you smell it and the paste darkens a little. Don't cook it until the bottom is dry and scorched. See [emulsification](/principles/emulsification/).
 - **The chicken is dry but the eggplant is still hard**: the meat slices cook quickly, and the eggplant takes longer. Once the chicken is cooked, lift it out first and put it back to heat through after the eggplant is soft. See [protein denaturation and coagulation](/principles/protein-coagulation/).
 - **It is very hot, but the herb flavour is faint**: the curry paste wasn't fried fragrant after it went in, and the basil was cooked for a long time. Fry out the aroma first and keep the basil until the pot is off the heat. See [spices and aromatics](/principles/aromatics/).

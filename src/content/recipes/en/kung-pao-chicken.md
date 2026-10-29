@@ -40,7 +40,7 @@ The starch in the marinade gives the chicken cubes a thin velvet coating; the st
 ## Steps
 
 1. Coat the chicken cubes with a starch marinade. Mix all of the marinade into the chicken and knead until the liquid is absorbed and the surface is slightly tacky, with no liquid pooling in the bowl, then set aside. Keep the cubes as even as you can, so small cubes aren't overcooked while big ones are still raw in the same pan.
-2. Prepare the aromatics. Cut the green onion whites into short pieces, thinly slice the ginger and garlic, and snip the dried chilies into sections and shake out the seeds. Keep the peanuts aside for now; they don't go into the wok yet.
+2. Prepare the aromatics. Cut the green onion whites into short pieces, thinly slice the ginger and garlic, and snip the dried chilies into sections and shake out the seeds. Keep the peanuts aside; they go in last.
 3. Mix the sauce. Stir together the sugar, vinegar, both soy sauces, starch, toasted sesame oil and water until the sugar has mostly dissolved. The starch sinks to the bottom, so stir again just before pouring into the wok.
 4. Stir-fry until the peppercorns are fragrant. Heat the wok, add the oil, add the dried chilies and Sichuan peppercorns, and stir until the chilies darken slightly and smell fragrant. The colour changes fast, so take the wok off the heat if needed; if you smell burning, replace the spices and the oil.
 5. Cook the chicken. Add the chicken, quickly spread it out, and once the cubes are separated add the ginger, garlic and green onion whites. Keep stir-frying for about 3–5 minutes, until the meat turns white; cut open one of the largest cubes, and the centre should be cooked through, with no translucent raw meat.
@@ -50,5 +50,5 @@ The starch in the marinade gives the chicken cubes a thin velvet coating; the st
 ## Key points
 
 - **The chilies are black and the whole plate is bitter**: the [oil temperature](/principles/oil-temperature/) was too high and the spices burned first. Add the meat as soon as the peppercorn fragrance comes up, and take the wok off the heat to cool if needed.
-- **Some cubes are dry and tough and some are raw in the centre**: the sizes are uneven, so they finish cooking at different times. Following [knife work](/principles/knife-work/), cut even-width strips first, then cubes; don't try to rescue big pieces by extending the time for the whole pan.
+- **Some cubes are dry and tough and some are raw in the centre**: the sizes are uneven, so they finish cooking at different times. Following [knife work](/principles/knife-work/), cut even-width strips first, then cubes, so every piece finishes together.
 - **The glaze is thick and clumped or the sauce is cloudy**: the starch settled and wasn't stirred in, or the sauce hasn't yet gone through [starch gelatinization](/principles/starch-gelatinization/). Stir well before pouring, stop when it boils and turns glossy, then add the peanuts.

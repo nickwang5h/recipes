@@ -28,7 +28,7 @@ translated: 2026-10-01
 
 Yangshuo beer fish has charred, fragrant skin, intact flesh and a thick, rich sauce that is good over rice. The fish is a river fish, fried until fragrant first, then braised in beer, with tomato bringing sourness and juice. This version uses carp with scales on, on a base of Guilin chili sauce. The water on the fish surface is fried off first, which gives a golden skin and the roasted aroma of the [Maillard reaction](/principles/maillard-reaction/); after the beer goes in, the heat comes down to cook the flesh gently.
 
-The scales are crisp after frying and soften again after a while in the braising liquid, which is normal. The beer, tomato and sauces already have plenty of flavour, so when reducing at the end leave a little liquid that still flows, which is just right poured over rice.
+The scales are crisp after frying and soften again after a while in the braising liquid. The beer, tomato and sauces already have plenty of flavour, so when reducing at the end leave a little liquid that still flows, which is just right poured over rice.
 
 ## Steps
 

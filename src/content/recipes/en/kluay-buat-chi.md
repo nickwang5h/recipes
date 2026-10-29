@@ -15,7 +15,7 @@ ingredients:
 translated: 2026-10-02
 ---
 
-*Kluay buat chi* is a Thai home dessert of banana pieces in sweet coconut milk, eaten warm or cooled. It traditionally uses short, stubby bananas with firm flesh. This version uses Burro bananas, picked just ripe, so that a cut piece can be lifted whole, with no translucent mushy spots on the surface.
+*Kluay buat chi* is a Thai home dessert of banana pieces in sweet coconut milk, eaten warm or cooled. It traditionally uses short, stubby bananas with firm flesh. Use Burro bananas picked just ripe, so that a cut piece can be lifted whole, with no translucent mushy spots on the surface.
 
 Bananas should not be cooked for long, so the cooking is a short simmer followed by [residual heat](/principles/heat-transfer/): the surface of the banana heats first, then the pot is covered and the heat slowly reaches the centre, stopping once it is soft enough for a spoon to cut. Coconut milk is naturally an [emulsion](/principles/emulsification/) of fat dispersed in water, and keeping it at a gentle simmer reduces boiling dry and oil separating out. The finished dish should be a flowing sweet coconut milk with whole pieces of banana in it, and a touch of salt gently supporting the sweetness.
 
@@ -24,7 +24,7 @@ Bananas should not be cooked for long, so the cooking is a short simmer followed
 1. Peel the bananas, cut each in half lengthwise, then cut once across, so each banana gives four pieces. Cut them as evenly thick as you can; keep any thin, small scraps for another use, so they do not fall apart before the larger pieces when cooked together.
 2. Pour the coconut milk into a small pot where the bananas will fit roughly in one layer, first stirring the thick layer of fat in the can into the liquid below. Heat over medium heat for about 3–5 minutes, until fine bubbles appear at the edge and the surface begins to move gently. Do not let the whole pot boil hard.
 3. Add the bananas gently, then add the sugar and salt and nudge them with a spoon around the edge of the pot so the sugar and salt melt into the coconut milk. Heat for about 1 minute, until the surface returns to a gentle simmer, then turn to low and cook for about 2 minutes. The outside of the bananas should have softened slightly, the cut faces should still be neat, and the coconut milk should stay milky white.
-4. Turn off the heat, move the pot off the burner, cover and let it sit for about 2–3 minutes. Test the thickest piece by cutting it with the side of a spoon: the centre should cut through and nothing in the mouth should feel hard or astringent. If it does, lift the lid and stop. If the centre is still hard, cook on low for 1 more minute and check again.
+4. Turn off the heat, move the pot off the burner, cover and let it sit for about 2–3 minutes. Test the thickest piece by cutting it with the side of a spoon: the centre should cut through and nothing in the mouth should feel hard or astringent. If it is ready, lift the lid and stop. If the centre is still hard, cook on low for 1 more minute and check again.
 5. Use a spoon to support the bananas as you divide them between two bowls, then ladle in the sweet coconut milk. Serve warm. Scoop gently from the bottom of the pot and avoid stirring back and forth; the edges of the bananas should stay whole and the coconut milk should flow easily off the spoon.
 
 ## Key points

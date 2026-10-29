@@ -15,7 +15,7 @@ ingredients:
 translated: 2026-10-02
 ---
 
-Sake no shioyaki (salt-grilled salmon) has crisp skin, tender flesh and just enough salt. It is a common grilled fish on a Japanese home table, served with white rice, grated daikon and a wedge of citrus. This version uses fresh fish salted for a short time: the salt gradually moves into the flesh and the surface also releases liquid. Blotting off that liquid before cooking lets the skin dry out and brown (see [Salt: Seasoning, Osmosis and Curing](/principles/salt/)). Weigh the salt at about 1% of the weight of the fish. Use weight for both fine and coarse salt, so a teaspoon of a different salt does not make the fish saltier.
+Sake no shioyaki (salt-grilled salmon) has crisp skin, tender flesh and just enough salt. It is a common grilled fish on a Japanese home table, served with white rice, grated daikon and a wedge of citrus. Use fresh fish salted for a short time: the salt gradually moves into the flesh and the surface also releases liquid. Blotting off that liquid before cooking lets the skin dry out and brown (see [Salt: Seasoning, Osmosis and Curing](/principles/salt/)). Weigh the salt at about 1% of the weight of the fish. Use weight for both fine and coarse salt, so a teaspoon of a different salt does not make the fish saltier.
 
 The broil setting on a Canadian oven can do this kind of grilled fish. Heat hits the surface first and then moves toward the thickest part, so the thickness of the fillet and its distance from the element matter more than the stated power (see [Heat Transfer](/principles/heat-transfer/)). Buy skin-on fillets and cut them on a slant into thinner pieces, so the skin side can face the broiler. A thick whole fillet is likely to have charred skin and an undercooked centre.
 

@@ -15,14 +15,14 @@ translated: 2026-10-01
 
 *Crème anglaise* is a vanilla custard sauce poured beside cake, baked fruit or pudding. It flows smoothly and thinly coats the back of a spoon. The base is milk, egg yolks, sugar and vanilla, and it thickens when the yolks are heated and their [proteins coagulate](/principles/protein-coagulation/).
 
-The milk dilutes the yolks and the sugar slows the coagulation, so there is a short window between thin and thick in which to work calmly. But the bottom of the pan heats faster than the sauce as a whole, so keep scraping and stirring. As soon as the sauce reaches the stage where it coats a spoon, move it to another container to cool; otherwise the residual heat keeps cooking the delicate sauce into bits of egg (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). This amount makes about 700 ml, and it thickens slightly more on cooling.
+The milk dilutes the yolks and the sugar slows the coagulation, so there is a short window between thin and thick in which to work calmly. But the bottom of the pan heats faster than the sauce as a whole, so keep scraping and stirring. As soon as the sauce reaches the point where it coats a spoon, move it to another container to cool; otherwise the residual heat keeps cooking the delicate sauce into bits of egg (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). This amount makes about 700 ml, and it thickens slightly more on cooling.
 
 ## Steps
 
 1. Put the milk, vanilla seeds and pod in a small pot and heat until fine bubbles form at the edge and steam rises. Take it off the heat, cover and steep for about 20 minutes so the vanilla flavour passes into the milk; heat the milk until steaming again when you are ready to combine.
 2. Put the egg yolks and sugar in a bowl and whisk them together at once, until slightly paler with no dry lumps of sugar. Slowly pour in a small part of the hot milk, whisking as you pour, then gradually mix in the rest of the milk.
 3. Pour the mixture back into a clean, heavy-bottomed pot and heat over low heat. Keep scraping a silicone spatula across the bottom and into the corners of the pot, so the sauce flows slowly and no spot stays in contact with the hot pan for long.
-4. Measure the temperature of the sauce, keeping the probe off the bottom of the pot. At about 82–84°C (180–185°F) the sauce should leave an even thin film on the back of a spoon; draw a line through the film and the two sides should not flow back together at once. Take it off the heat at this stage, and do not let it boil at any point.
+4. Measure the temperature of the sauce, keeping the probe off the bottom of the pot. At about 82–84°C (180–185°F) the sauce should leave an even thin film on the back of a spoon; draw a line through the film and the two sides should not flow back together at once. Take it off the heat then; it must never boil.
 5. Immediately pour it through a fine sieve into a clean metal bowl, to remove the vanilla pod and any small clots. Set the bowl in ice water and stir as it cools; do not let the ice water get into the sauce, and do not leave the hot sauce in the original pot.
 6. Once cool, cover and refrigerate. Stir gently before using and pour it beside desserts; to use it warm, rewarm it slowly over warm water, stirring until it flows, then take it out.
 

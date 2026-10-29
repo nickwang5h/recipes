@@ -38,7 +38,7 @@ ingredients:
 translated: 2026-10-02
 ---
 
-*Bánh xèo* is a thin, crisp Vietnamese rice flour pancake; the *xèo* in its name is the sizzle of batter hitting a hot pan. This version is the coconut milk, shrimp and pork pancake common in the south. Turmeric gives the batter a pale yellow colour, and inside are pork, shrimp and bean sprouts. Break off a piece, wrap it in lettuce and herbs and dip it in the sweet-sour fish sauce.
+*Bánh xèo* is a thin, crisp Vietnamese rice flour pancake; the *xèo* in its name is the sizzle of batter hitting a hot pan. This is the southern style, made with coconut milk, shrimp and pork. Turmeric gives the batter a pale yellow colour, and inside are pork, shrimp and bean sprouts. Break off a piece, wrap it in lettuce and herbs and dip it in the sweet-sour fish sauce.
 
 The batter first goes through [Starch Gelatinization](/principles/starch-gelatinization/) with the heat so the thin pancake holds together; then the pan is left uncovered so the water evaporates and the bottom and edges crisp. A lid traps steam and can be used briefly to cook the bean sprouts, but it must come off at the end (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). The batter makes 3 pancakes about 30 cm across.
 

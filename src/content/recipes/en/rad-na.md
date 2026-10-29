@@ -1,7 +1,7 @@
 ---
 title: Rad Na
 original: 芡汁河粉
-summary: Wide rice noodles are pan-fried until toasty, then topped with a pork and gai lan gravy; Thai soybean paste sets the base flavour and tapioca starch lets the sauce coat the noodles in a thin layer.
+summary: Wide rice noodles are pan-fried until toasty, then topped with a pork and gai lan gravy; Thai soybean paste gives it a deep savoury taste and tapioca starch lets the sauce coat the noodles in a thin layer.
 coverAlt: Illustration of rad na plated
 ingredients:
   - group: Pork and marinade

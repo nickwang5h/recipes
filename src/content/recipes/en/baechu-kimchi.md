@@ -28,13 +28,13 @@ ingredients:
 translated: 2026-10-01
 ---
 
-The classic way to make *baechu-kimchi* keeps the cabbage in whole pieces, rubs paste between the leaves layer by layer, and then presses it into a container. Freshly made kimchi is fresh, spicy and crunchy, and it only turns clearly sour after it has aged. The fish sauce supplies saltiness and savoury depth, and when it is done it goes straight into the refrigerator; the sourness has to be waited for separately as it slowly develops.
+The classic way to make *baechu-kimchi* keeps the cabbage in whole pieces, rubs paste between the leaves layer by layer, and then presses it into a container. Freshly made kimchi is fresh, spicy and crunchy, and it only turns clearly sour after it has aged. The fish sauce supplies saltiness and savoury depth, and when it is done it goes straight into the refrigerator; the sourness comes slowly, over days in the refrigerator.
 
 Salt first draws water out of the cabbage and makes it pliable, which makes it easier to spread the paste and pack tightly; see [salt](/principles/salt/). Cooking sweet rice flour into a paste holds the chili and spices on the leaves, which depends on [starch gelatinization](/principles/starch-gelatinization/). Then lactic acid bacteria use the sugar to make acid, and the flavour gradually changes; see [fermented seasonings](/principles/fermentation/).
 
 ## Steps
 
-1. Cut into the cabbage from the root end, then pull it apart into two halves with your hands to keep the leaves intact. Make another cut at the root of each half, without separating it for now. Moisten with water, lift the leaves and sprinkle salt between them, using more on the thick white stems.
+1. Cut into the cabbage from the root end, then pull it apart into two halves with your hands to keep the leaves intact. Make another cut at the root of each half, without separating it. Moisten with water, lift the leaves and sprinkle salt between them, using more on the thick white stems.
 2. Salt for about 90 minutes, turning every 30 minutes. It is ready when a thick stem bends over without snapping; if it is still stiff, keep waiting. Rinse the surface salt off layer by layer with cold water, separate into quarters along the cut, and drain until it no longer drips steadily.
 3. In a small pot, stir the sweet rice flour into 300 ml of water, and cook over medium heat, stirring, until after about 10 minutes it starts to bubble and the paste coats a spoon. Add the sugar and cook until dissolved, then remove from the heat and let it cool completely.
 4. Mix the cold rice paste with the garlic, ginger, onion, fish sauce and chili flakes, then mix in the daikon, carrot, green onions and Chinese chives. The paste should be moist enough to cling to the vegetable strips.

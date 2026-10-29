@@ -49,5 +49,5 @@ The flatbread has to hold the juices, so the dough is fairly stiff. Knead it eve
 ## Key points
 
 - **Meat is cooked but the skin is still tough**: the collagen has not softened enough. Keep the heat low, and simmer 15 minutes more at a time, testing with a chopstick each time (see [Collagen and Gelatin](/principles/collagen-gelatin/)).
-- **Bread is scorched outside and sticky in the centre**: the pan is too hot, so the surface colours before the inside cooks. Lower the heat and cook covered and slowly, following [Heat Transfer](/principles/heat-transfer/). Do not judge doneness by the brown spots.
+- **Bread is scorched outside and sticky in the centre**: the pan is too hot, so the surface colours before the inside cooks. Lower the heat and cook covered and slowly, following [Heat Transfer](/principles/heat-transfer/). Judge doneness by cutting one open, not by the brown spots.
 - **Bread falls apart when you split it**: the dough was too soft, over-proofed or rolled too thin. Keep the dough fairly stiff and shape it once it has doubled (see [Gluten](/principles/gluten/)). Add only enough braising liquid to moisten the filling.

@@ -27,7 +27,7 @@ translated: 2026-10-01
 
 Tomato braised beef brisket is made by cooking the beef and the tomatoes separately and then combining them in one pot. Moist heat first softens the connective tissue in the brisket (see [Collagen and Gelatin](/principles/collagen-gelatin/)). The tomatoes are fried separately until the pieces collapse, then the beef cooking liquid is added and reduced into a sweet-sour, thick sauce. The meat is already tender, so it does not need long stir-frying at the end.
 
-[Blanching](/principles/blanching/) the brisket and stewing it in fresh water leaves less scum in the broth. This recipe uses fresh tomatoes and no tomato paste; the red colour and thickness come from tomatoes fried until soft and a suitable amount of reduction, and when the pots are combined the cooking liquid is added only up to the level of the beef.
+[Blanching](/principles/blanching/) the brisket and stewing it in fresh water leaves less scum in the broth. It uses fresh tomatoes and no tomato paste; the red colour and thickness come from tomatoes fried until soft and a suitable amount of reduction, and when the pots are combined the cooking liquid is added only up to the level of the beef.
 
 ## Steps
 
@@ -37,10 +37,10 @@ Tomato braised beef brisket is made by cooking the beef and the tomatoes separat
 4. Cut a shallow cross in each tomato and scald it in boiling water until the skin splits and the edges curl up. Lift out, let cool slightly and peel. Cut into small pieces and keep the juice that runs out.
 5. Add 20 ml of oil to the wok and stir-fry the chopped green onion and minced ginger over medium heat. When it is fragrant, add the tomatoes. Stir-fry until the tomatoes clearly collapse and red juice comes out but the bottom of the pan is still moist, taking care not to burn the green onion and ginger.
 6. Add the softened brisket and spoon in cooking liquid until it just reaches the level of the meat. Mix well, add 1 tsp of light soy sauce and bring to a boil, then reduce uncovered over medium-high heat for about 3–5 minutes, pushing gently to keep the tomatoes from sticking to the bottom.
-7. When the sauce is moderately thick and clings to the meat, taste. Add sugar according to how sour the tomatoes are, then add salt and the optional white pepper. Sprinkle on a little of the reserved chopped green onion and serve right away; you do not need to pour in all the remaining cooking liquid.
+7. When the sauce is moderately thick and clings to the meat, taste. Add sugar according to how sour the tomatoes are, then add salt and the optional white pepper. Sprinkle on a little of the reserved chopped green onion and serve right away. Any cooking liquid left over stays out of the pot.
 
 ## Key points
 
-- **Brisket is cooked but not tender**: the muscle is cooked but the tendon has not finished softening (see [Collagen and Gelatin](/principles/collagen-gelatin/)). Keep simmering in the clear broth stage; do not try to fix it with a few minutes of stir-frying at the end.
-- **Tomato sauce is like thin soup**: too much cooking liquid was added when combining (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). Add it only up to the level of the meat, reduce uncovered, and do not dilute the whole pot just to use up the liquid.
+- **Brisket is cooked but not tender**: the muscle is cooked but the tendon has not finished softening (see [Collagen and Gelatin](/principles/collagen-gelatin/)). Keep simmering the beef in the clear broth until the tendon is soft.
+- **Tomato sauce is like thin soup**: too much cooking liquid was added when combining (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). Add it only up to the level of the meat, and reduce uncovered.
 - **Lots of grey scum on the surface**: the particles after blanching were not cleaned off (see [Blanching and Removing Off-Odours](/principles/blanching/)). Clean the meat and the pot, stew in fresh water, and keep it at a gentle simmer afterwards.

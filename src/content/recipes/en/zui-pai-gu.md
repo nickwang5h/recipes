@@ -22,7 +22,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-Drunken pork ribs is a Fuzhou dish. The ribs are fried and tossed while hot in a sauce mixed beforehand, so the crust is crisp and the flavour sweet, sour and garlicky. This is a home version with fish sauce and egg yolk added, and the sauce is mostly ketchup, sugar, vinegar and minced garlic. The sourness makes the sweet and salty tastes clearer (see [acid](/principles/acid/)), and a thin coat is enough.
+Drunken pork ribs is a Fuzhou dish. The ribs are fried and tossed while hot in a sauce mixed beforehand, so the crust is crisp and the flavour sweet, sour and garlicky. Here fish sauce and egg yolk are added, and the sauce is mostly ketchup, sugar, vinegar and minced garlic. The sourness makes the sweet and salty tastes clearer (see [acid](/principles/acid/)), and a thin coat is enough.
 
 Sweet potato starch first [gelatinizes](/principles/starch-gelatinization/) from the water and heat on the surface of the meat, then keeps losing water and forms a crust. The first fry cooks the meat, and the second fry dries the outer layer (see [oil temperature and deep frying](/principles/oil-temperature/)). Leave the ribs uncovered after frying and do not soak them in the sauce, so the crust stays crisp.
 

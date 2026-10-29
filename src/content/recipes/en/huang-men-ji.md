@@ -27,7 +27,7 @@ translated: 2026-10-01
 
 Huangmen ji has chicken that is tender and well seasoned, with a sauce thick enough to spoon over rice that still runs off the side of the spoon. The chicken is coated in caramel colour first, then braised with the shiitake; the green pepper goes in last to keep its fresh fragrance and crunch. The caramel colour relies on [caramelization](/principles/caramelization/): cook it to light brown with a hint of caramel fragrance and that is enough, because if it goes dark brown, the whole pot of sauce turns bitter.
 
-The centre of bone-in chicken pieces heats more slowly than the surface, so the pot is braised covered, so the liquid and steam keep carrying heat inside (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). Once the chicken is cooked, do not reduce the sauce hard over high heat for long, because the more it reduces the drier it gets. The optional potato thickens the sauce and also soaks up the liquid, so watch the bottom of the pan in the second half of the braise.
+The centre of bone-in chicken pieces heats more slowly than the surface, so the pot is braised covered, so the liquid and steam keep carrying heat inside (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). Once the chicken is cooked, reduce the sauce only briefly; the longer it reduces, the drier the chicken gets. The optional potato thickens the sauce and also soaks up the liquid, so watch the bottom of the pan in the second half of the braise.
 
 ## Steps
 

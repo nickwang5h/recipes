@@ -37,7 +37,7 @@ The broth should taste of beef and also let you see the bottom of the bowl. A ge
 
 ## Steps
 
-1. Char the onion and ginger. Put them on a rack under the broiler and turn them as they cook, until the skin is blackened in patches, the inside is soft and there is a sweet smell. Remove the blackened skin and crack the ginger; do not let bitter charred bits into the broth.
+1. Char the onion and ginger. Put them on a rack under the broiler and turn them as they cook, until the skin is blackened in patches, the inside is soft and there is a sweet smell. Remove the blackened skin so no bitter charred bits reach the broth, and crack the ginger.
 2. Blanch the bones clean. Cover the bones with cold water, bring to a boil, boil for another 2–3 minutes, then pour off the water and rinse off the clinging foam, and wash the pot too.
 3. Make the broth. Bring the bones and the broth water to a boil, skim, and add the brisket, charred ginger and onion, star anise, cloves, cassia, salt, fish sauce and rock sugar. Turn down to a gentle simmer where the surface only bubbles now and then, and do not cover the pot.
 4. Take out the brisket. Check after about 90 minutes: when a knife tip goes in and the meat is still intact, lift it out and cover it so it doesn't dry out. Keep the broth at a gentle simmer for about 3 hours in total. Once the meat has cooled a little, slice it thinly against the grain.

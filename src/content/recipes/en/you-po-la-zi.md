@@ -29,7 +29,7 @@ translated: 2026-10-01
 
 Sizzling chili oil is red and glossy, fragrant but not bitter, with the aroma of garlic and chili both in the oil. The whole spices are first steeped in the oil over low heat, and the chili flakes only meet hot oil at the end, so their aroma can move into the oil (see [spices and aromatics](/principles/aromatics/)). Chili flakes are a powder with a large contact area that heats fast, so pour the oil in rounds and stir as you pour, to avoid scorching in spots.
 
-This version adds fresh garlic, bird's eye chili and sugar, and only 150 ml of oil goes with 100 g of chili flakes, so the result is on the thick side; when you scoop it, stir the oil and chili together. Set the oil temperature at 160–175°C (320–345°F) according to how coarse the flakes are, taking the lower end for fine powder (see [oil temperature](/principles/oil-temperature/)). One batch makes about twenty small servings of seasoning. Because it contains fresh garlic, refrigerate it once made and use it within four days.
+It has fresh garlic, bird's eye chili and sugar, and only 150 ml of oil to 100 g of chili flakes, so it is thick; when you scoop it, stir the oil and chili together. Set the oil temperature at 160–175°C (320–345°F) according to how coarse the flakes are, taking the lower end for fine powder (see [oil temperature](/principles/oil-temperature/)). One batch makes about twenty small servings of seasoning. Because it contains fresh garlic, refrigerate it once made and use it within four days.
 
 ## Steps
 

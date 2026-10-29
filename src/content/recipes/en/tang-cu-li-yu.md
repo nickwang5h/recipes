@@ -43,7 +43,7 @@ The thick back of a whole fish cooks more slowly than the thin belly, and scorin
 4. Add the frying oil to a deep pot big enough for the whole fish; the oil plus the fish should come to no more than half the height of the pot. Keep the oil at 170–180°C (340–355°F) with a thermometer. Support the fish with two long-handled heat-proof tools and lower it slowly; ladle oil over the parts that stick out of the oil to set them.
 5. Once the shell has set, gently support the fish and turn it over, and fry the second side for about 2 minutes first, then continue according to doneness. When both sides are golden and the flesh at the thickest part is completely opaque, lift out, supporting the head and the body, and drain on a rack. Leave the hot oil in the pot off the heat to cool, and start a small pot for the sauce.
 6. Mix the 50 ml of water, ketchup, sugar and white vinegar and bring to a boil. In a separate bowl, stir the starch with the 10 ml of water into a slurry and pour in a little at a time, slowly; stir for about 20 seconds and watch, and stop adding slurry once the sauce flows and coats the back of a spoon thinly.
-7. Move the fried fish to a plate and pour the hot sauce evenly over it only just before serving, garnishing with cilantro if you like, and eat right away. You don't have to force in the rest of the slurry; too thick a sauce wraps the fish in a gluey layer.
+7. Move the fried fish to a plate and pour the hot sauce evenly over it only just before serving, garnishing with cilantro if you like, and eat right away. Leave out the rest of the slurry once the sauce flows and coats a spoon; too thick a sauce wraps the fish in a gluey layer.
 
 ## Key points
 

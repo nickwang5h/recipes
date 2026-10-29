@@ -21,9 +21,9 @@ ingredients:
 translated: 2026-10-02
 ---
 
-Three-cup chicken is braised until rich and fragrant, with glossy skin and a glossy reduced sauce, and its taste comes from the combination of fat, rice wine and soy sauce. This version uses lard, bone-in chicken pieces, and green onion, ginger and garlic. Manage the amounts of fat, wine and soy sauce separately, so the dish is neither greasy nor salty once the sauce has reduced.
+Three-cup chicken is braised until rich and fragrant, with glossy skin and a glossy reduced sauce, and its taste comes from the combination of fat, rice wine and soy sauce. It uses lard, bone-in chicken pieces, and green onion, ginger and garlic. Manage the amounts of fat, wine and soy sauce separately, so the dish is neither greasy nor salty once the sauce has reduced.
 
-The ginger and garlic go into the fat first and are fried until fragrant, and the aromatic oil coats the chicken (see [Spices and Aromatics](/principles/aromatics/)). After the wine goes in, cover the pot: the liquid and steam carry the heat to the meat next to the bone. At the end, uncover and evaporate the water, so the cooked chicken and the thick sauce come together (see [Heat Transfer](/principles/heat-transfer/)). Braising until cooked and reducing the sauce are two separate things, one after the other.
+The ginger and garlic go into the fat first and are fried until fragrant, and the aromatic oil coats the chicken (see [Spices and Aromatics](/principles/aromatics/)). After the wine goes in, cover the pot: the liquid and steam carry the heat to the meat next to the bone. At the end, uncover and evaporate the water, so the cooked chicken and the thick sauce come together (see [Heat Transfer](/principles/heat-transfer/)). Braise the chicken through first, then reduce the sauce.
 
 ## Steps
 
@@ -36,6 +36,6 @@ The ginger and garlic go into the fat first and are fried until fragrant, and th
 
 ## Key points
 
-- **Ginger and garlic turn black and the sauce tastes bitter**: the heat was too high when frying the aromatics, and the [extraction of aroma](/principles/aromatics/) turned into burning. Pick out the blackened aromatics; if the fat is bitter too, change the fat and redo this stage.
+- **Ginger and garlic turn black and the sauce tastes bitter**: the heat was too high when frying the aromatics, and the [aroma](/principles/aromatics/) burnt instead of blooming. Pick out the blackened aromatics; if the fat is bitter too, change the fat and fry the aromatics again.
 - **Dark outside but undercooked next to the bone**: soy sauce colours faster than the inside heats up. Cook the chicken through covered before you reduce the sauce, and check the thickest piece instead of judging by the skin alone (see [Heat Transfer](/principles/heat-transfer/)).
 - **Sauce is salty and the meat is dry**: the reduction dragged on, concentrating the salt while the meat kept losing water. Take it off as soon as the glossy sauce just clings to the meat (see [Protein Denaturation and Coagulation](/principles/protein-coagulation/)).

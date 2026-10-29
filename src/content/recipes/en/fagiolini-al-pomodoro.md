@@ -35,5 +35,5 @@ The method has two tracks: the beans are first boiled soft in salted water (see 
 
 - **The sauce is thin and the beans sit in liquid**: the beans were not drained well enough, or the tomato sauce was not reduced. Drain the beans well after cooking, and reduce the sauce to a single layer while braising.
 - **The beans are hard and astringent**: they were undercooked. Boil until just slightly underdone first, then braise in the sauce until a fork can press through; if the beans are mature, cook them a little longer. Raw beans must not be eaten undercooked, so do not take them out early just to keep them bright green.
-- **The beans turn grey**: braised for a long time with acidic tomato, the chlorophyll changes colour; this is normal and does not affect the flavour. See [Acid: Balance, Softening and Stability](/principles/acid/).
+- **The beans turn grey**: braised for a long time with acidic tomato, the chlorophyll changes colour, which does not affect the flavour. See [Acid: Balance, Softening and Stability](/principles/acid/).
 - **Lunch box**: refrigerate promptly after packing and keep sealed for up to 2 days. Take it out of the refrigerator and leave it at room temperature for about 30 minutes before eating.

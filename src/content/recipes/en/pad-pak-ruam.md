@@ -27,7 +27,7 @@ translated: 2026-10-02
 
 *Pad pak ruam* (ผัดผักรวม) is a mixed vegetable stir-fry that Thai families often make. The vegetables are crisp, with a little glossy sauce that flavours every piece you pick up and does not collect into a bowl of soup on the plate. Garlic is fragrant first, and oyster sauce, soy sauce and a little sugar make a savoury sauce. The vegetables are not fixed: cauliflower, cabbage, gai lan, pea pods and mushrooms are all common.
 
-The difficulty is that the vegetables cook at different speeds. Carrot and cauliflower go in first, then cabbage, pea pods and shiitake, and the leaves last. Thin-cut hard stems let heat reach the centre faster (see [Knife Work and Cooking](/principles/knife-work/)). A little water helps hard vegetables cook, but adding too much at once lowers the pan temperature (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). This recipe uses a large wok. If your pan is small, cook the vegetables and sauce in two halves.
+The difficulty is that the vegetables cook at different speeds. Carrot and cauliflower go in first, then cabbage, pea pods and shiitake, and the leaves last. Thin-cut hard stems let heat reach the centre faster (see [Knife Work and Cooking](/principles/knife-work/)). A little water helps hard vegetables cook, but adding too much at once lowers the pan temperature (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). Use a large wok. If your pan is small, cook the vegetables and sauce in two halves.
 
 ## Steps
 

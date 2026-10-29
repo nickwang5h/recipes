@@ -13,11 +13,11 @@ translated: 2026-10-01
 
 Rice made in a saucepan has soft, separate grains, no hard centre and no scorched bottom. The rice and water go into the same pot. Some of the water is absorbed by the rice, and some turns to steam. With the lid on, low heat slowly carries water and heat into the grains, the [starch gelatinizes](/principles/starch-gelatinization/), and hard raw rice becomes soft cooked rice. A heavy-bottomed pot does not overheat in one spot, and a lid that fits keeps steam from escaping.
 
-This recipe uses jasmine rice, soaked for 15–20 minutes first, then cooked with a volume of water equal to the dry rice before soaking. The rice has already taken up some water while soaking, so this ratio only suits the method below. For short-grain or brown rice, or without soaking, work out the water again for that rice.
+Use jasmine rice, soaked for 15–20 minutes first, then cooked with a volume of water equal to the dry rice before soaking. The rice has already taken up some water while soaking, so the ratio fits only the method below. For short-grain or brown rice, or without soaking, work out the water again for that rice.
 
 ## Steps
 
-1. Measure the dry rice and note the volume, then rinse it gently in plain water. Pour the water off once it is no longer very cloudy. Do not rub hard, or the grains will break. Do not confuse the volume of dry rice with the volume of cooked rice.
+1. Measure the dry rice and note the volume, then rinse it gently in plain water. Pour the water off once it is no longer very cloudy. Do not rub hard, or the grains will break. Measure the rice dry, before cooking.
 2. Add plain water to the rice, enough to cover the grains, and let it sit for 15–20 minutes. Pour off the soaking water and drain the rice in a sieve until no water runs off in a stream. Measure the cooking water fresh. Do not top up from whatever soaking water is left.
 3. Put the rice and the measured cooking water in a heavy-bottomed saucepan and shake the pan gently to level the rice. Leave room in the pot for the rice to swell, and match the pot to the size of the burner, so that only a ring at the edge does not heat while the centre stays cold.
 4. Heat over medium-high heat until the water is clearly boiling, then push once along the bottom of the pot to free any stuck rice. Put the lid on right away and turn to low heat. Keep the pot at a gentle boil, so the lid is not forced up.

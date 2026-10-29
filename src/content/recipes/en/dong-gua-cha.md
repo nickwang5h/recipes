@@ -16,7 +16,7 @@ translated: 2026-10-01
 
 Winter melon tea is lightly sweet with a faint winter melon fragrance, and is good hot or cold. The method is to cook winter melon and rock sugar into a concentrate, then dilute it with water; it makes about five cups. The sugar is mixed with the cut winter melon, and the liquid slowly seeps out, so when it goes into the pot this sugar water is just what the melon cooks in; slow cooking over low heat softens the pieces and leaves the fragrance in the liquid. The more concentrated it gets, the more easily it sticks in patches to the bottom of the pot (see [heat transfer](/principles/heat-transfer/)).
 
-Once the rock sugar dissolves, it only adds sweetness. While there is still a lot of liquid in the pot, the goal is to cook the melon soft and reduce the liquid; the sugar does not turn deep brown, which is the colour that only [caramelization](/principles/caramelization/) gives. When diluting, start with a little water and taste as you go.
+Once the rock sugar dissolves, it only adds sweetness; deep brown colour comes from [caramelization](/principles/caramelization/), not from this sugar. While there is still a lot of liquid in the pot, cook the melon soft and reduce the liquid. When diluting, start with a little water and taste as you go.
 
 ## Steps
 
@@ -31,5 +31,5 @@ Once the rock sugar dissolves, it only adds sweetness. While there is still a lo
 
 - **Sticks to the bottom as soon as it's on the heat**: not enough liquid has come out, and the sugar has all sunk to the bottom (see [heat transfer](/principles/heat-transfer/)). Refrigerate until enough liquid has come out, then put all the liquid into the pot together.
 - **Burnt, bitter taste and a blackened bottom**: one spot reduced dry, the temperature rose and the sugar burned past caramel (see [caramelization](/principles/caramelization/)). Keep turning the bottom of the pot, lower the heat when the liquid thickens, and don't scrape the burnt parts into the drink.
-- **Too sweet to drink**: the concentrate wasn't diluted, or was cooked too thick. Add water first and then taste; how much water to add is up to taste, not counted by cups.
+- **Too sweet to drink**: the concentrate wasn't diluted, or was cooked too thick. Add water first and then taste; add water to taste.
 - **Cools very slowly**: a big pot of concentrate loses heat slowly. Divide it into shallow containers and refrigerate as soon as possible, and don't leave the whole pot at room temperature waiting for it to cool completely.

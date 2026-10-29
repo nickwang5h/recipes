@@ -39,11 +39,11 @@ The beef is sliced thin, so heat has a short way to the centre; see [heat transf
 
 1. Soak the kombu in 480 ml of water for 30 minutes, until the pieces are soft and unfolded. Lift out the kombu and keep the water for diluting the warishita.
 2. Put the sake and mirin in a small pot, bring to a boil over medium heat for about 2 minutes, then simmer lightly for 1 minute, until the alcohol smell fades. Add the sugar and soy sauce, stir and cook for about 1 minute, until the sugar granules have all disappeared, then take it off the heat.
-3. If using the burdock, soak the thin slices in 250 ml of water for 5 minutes, until the water turns slightly brown, then drain. Rinse the konjac noodles and cut them shorter. Cook them in another 750 ml of boiling water for 2 minutes, until the off-smell fades, then lift out and drain.
+3. If using the burdock, soak the thin slices in 250 ml of water for 5 minutes, until the water turns slightly brown, then drain. Rinse the konjac noodles and cut them shorter. Cook them in another 750 ml of boiling water for 2 minutes, until the konjac smell fades, then lift out and drain.
 4. Preheat a shallow pot over medium heat for about 2 minutes and add the oil and 60 ml of warishita. Lay in a small batch of beef and cook for about 1 minute, turning once, until both sides have changed colour and there is no raw meat in the centre. Lift it out right away and eat it hot.
 5. Arrange half of the cabbage stems, leek, onion, burdock, shiitake, tofu and shirataki in the pot. Add 120 ml of warishita and 60 ml of kombu water, so the liquid comes to about a third of the way up the ingredients. Cover and cook over low heat for 5–7 minutes, until the cabbage stems bend and the centre of the tofu is hot.
 6. Add half of the enoki, shungiku and cabbage leaves and cook lightly for 2–3 minutes, until the leaves wilt and the mushroom bunches are cooked through. Lay in the next small batch of beef and cook for about 1 minute, and lift the slices out once they are fully cooked. Eat the vegetables as they finish.
-7. Cook the rest of the pot ingredients in the same order: about 5–7 minutes per round for the vegetables, 2–3 minutes for leafy greens and about 1 minute for the beef. Doneness is still judged by the cues described above. Each time, add 30 ml of warishita or kombu water, taste before the next addition, and keep a shallow level of liquid.
+7. Cook the rest of the pot ingredients in the same order: about 5–7 minutes per round for the vegetables, 2–3 minutes for leafy greens and about 1 minute for the beef. Judge doneness by the same cues. Each time, add 30 ml of warishita or kombu water, taste before the next addition, and keep a shallow level of liquid.
 
 ## Key points
 
