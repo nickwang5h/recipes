@@ -898,3 +898,30 @@ body.narrow .footer-cat { right: max(var(--gutter), calc((100% - 70rem) / 2 + va
 @media print {
   .kofi, .kofi-after { display: none !important; }
 }
+
+/* ---------- Language ---------- */
+/* The other language, as a small outlined tag beside the Ko-fi button. */
+.site-nav a.lang-switch {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; height: 1.75rem; padding: 0 0.45rem;
+  margin-left: 0.25rem; border: 1px solid var(--border); font: 600 0.75rem/1 var(--font-sans); letter-spacing: 0.04em; color: var(--muted);
+}
+.site-nav a.lang-switch:hover { color: var(--text); border-color: var(--muted); }
+.footer-links { display: flex; gap: 1rem; }
+@media (max-width: 640px) {
+  .site-nav a.lang-switch { position: absolute; top: 0.85rem; right: calc(var(--gutter) + 5.75rem); margin: 0; }
+  html[lang="en"] .site-nav a.lang-switch { right: calc(var(--gutter) + 6.5rem); }
+}
+@media print {
+  .lang-switch { display: none !important; }
+}
+/* A dish's name in its own script stays upright under an English title. */
+.original:is([lang|="zh"], [lang="ja"], [lang="ko"], [lang="th"]) { font-style: normal; }
+
+/* English pages: the CJK fonts draw curly quotes, dashes and the ellipsis full-width ("What’ s"), so
+   those few characters come from a Latin system font first. Chinese pages keep the full-width forms. */
+@font-face { font-family: "Latin Punct Sans"; src: local("Helvetica Neue"), local("Segoe UI"), local("Roboto"), local("Arial"); unicode-range: U+2013-2014, U+2018-201F, U+2026, U+00B7; }
+@font-face { font-family: "Latin Punct Serif"; src: local("Georgia"), local("Times New Roman"), local("Noto Serif"); unicode-range: U+2013-2014, U+2018-201F, U+2026, U+00B7; }
+html[lang="en"] {
+  --font-sans: "Latin Punct Sans", "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-reading: "Latin Punct Serif", "LXGW WenKai", "Kaiti SC", "KaiTi", serif;
+}

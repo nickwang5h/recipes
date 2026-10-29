@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
-import { url } from '../lib/site';
+import { dishCount, langOf, scriptLang, url } from '../i18n';
 
 interface Props {
   cuisine: CollectionEntry<'cuisines'>;
@@ -10,14 +10,15 @@ interface Props {
 
 const { cuisine, count } = Astro.props;
 const { title, original, summary, accent, cover } = cuisine.data;
+const lang = langOf(Astro.url);
 ---
 
-<a class={`cuisine-hero accent-${accent}`} href={url(`cuisines/${cuisine.id}`)}>
+<a class={`cuisine-hero accent-${accent}`} href={url(`cuisines/${cuisine.id}`, lang)}>
   {cover && <Image class="card-img" src={cover} alt="" widths={[320, 480, 640]} sizes="(min-width: 48rem) 300px, 100vw" loading="lazy" />}
   <div class="cuisine-hero-body">
     <h3>{title}</h3>
-    {original && <span class="original">{original}</span>}
+    {original && <span class="original" lang={scriptLang(original)}>{original}</span>}
     <p>{summary}</p>
-    {count !== undefined && <p class="cuisine-count">{count} 道菜</p>}
+    {count !== undefined && <p class="cuisine-count">{dishCount(count, lang)}</p>}
   </div>
 </a>

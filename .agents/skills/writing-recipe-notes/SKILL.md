@@ -126,3 +126,7 @@ Wikibooks Cookbook 是 CC BY-SA，**不要改写或翻译它的文字**；只能
 - [ ] **长度达标**：原理 800–1300 字，菜谱 600–1000 字。超出的部分先删限定语和重复内容。
 - [ ] **文风**：没有元叙述、免责段落、层层叠加的否定。
 - [ ] `npm run build` 通过（会做类型检查、构建和内部链接检查）。
+
+## 英文版
+
+每个中文页面在 `src/content/<集合>/en/` 下有对应的英文文件，只放文字。新写或改动中文页面时，同一次改动里把英文文件也写好或改好，并把中文的 `updated` 日期抄进英文的 `translated`。英文写法见 `docs/english/translating.md`，菜名表在 `docs/english/titles.tsv`。`npx vitest run tests/english.test.ts` 会检查两边是否对得上。

@@ -1,0 +1,89 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import RecipeCard from '../../../components/RecipeCard.astro';
+import Diagram from '../../../components/Diagram.astro';
+import SourceList from '../../../components/SourceList.astro';
+import { compare, dishCount, formatDate, url, type Both, type Lang } from '../../../i18n';
+import { cuisines as getCuisines, entries, entry, entryPaths, resolve } from '../../../i18n/content';
+import { PRINCIPLE_CATEGORIES } from '../../../lib/categories';
+import { recipesUsing } from '../../../lib/site';
+
+export const getStaticPaths = () => entryPaths('principles', 'slug');
+
+const { lang, entry: principle } = Astro.props as { lang: Lang; entry: CollectionEntry<'principles'> };
+const { title, aliases, category, summary, sources, updated } = principle.data;
+const related = await resolve(principle.data.related, lang);
+const cuisines = await getCuisines(lang);
+const users = recipesUsing(principle.id, await entries('recipes', lang));
+const cuisineOrder = new Map(cuisines.map((c, i) => [c.id, i]));
+users.sort(
+  (a, b) =>
+    cuisineOrder.get(a.data.cuisine.id)! - cuisineOrder.get(b.data.cuisine.id)! ||
+    compare(lang)(a.data.title, b.data.title),
+);
+const twin = lang === 'en' || !!(await entry('principles', principle.id, 'en'));
+const T = {
+  zh: { science: '原理', related: '相关原理', users: '用到它的菜', more: (n: number) => `还有 ${n} 道菜也用到它`, updated: '更新于' },
+  en: { science: 'The science', related: 'Related science', users: 'Recipes that use it', more: (n: number) => `${dishCount(n, 'en')} more use it`, updated: 'Updated' },
+} satisfies Both<Record<string, unknown>>;
+const t = T[lang];
+const cuisineById = new Map(cuisines.map((c) => [c.id, c]));
+// Cards for dishes that hinge on this principle; a compact list for the rest.
+const primary = users.filter((r) => r.data.principles[0].id === principle.id);
+const secondary = users.filter((r) => r.data.principles[0].id !== principle.id);
+const { Content } = await render(principle);
+---
+
+<Base title={title} description={summary} type="article" twin={twin}>
+  <article>
+    <header class="page-head">
+      <div class="eyebrow">
+        <a href={url('principles', lang)}>{t.science}</a>
+        <span>{PRINCIPLE_CATEGORIES[category][lang]}</span>
+      </div>
+      <h1>{title}</h1>
+      {aliases.length > 0 && <p class="original">{aliases.join(' · ')}</p>}
+      <p class="lede">{summary}</p>
+    </header>
+
+    <Diagram slug={principle.id} />
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {related.length > 0 && (
+      <section>
+        <h2 class="section-title">{t.related}</h2>
+        <ul class="chips">
+          {related.map((p) => <li><a class="chip" href={url(`principles/${p.id}`, lang)}>{p.data.title}</a></li>)}
+        </ul>
+      </section>
+    )}
+
+    {users.length > 0 && (
+      <section>
+        <h2 class="section-title">{t.users}</h2>
+        {primary.length > 0 && (
+          <ul class="card-grid">
+            {primary.map((recipe) => <li><RecipeCard recipe={recipe} cuisine={cuisineById.get(recipe.data.cuisine.id)!} /></li>)}
+          </ul>
+        )}
+        {secondary.length > 0 && (
+          <details class="more-recipes" open={primary.length === 0}>
+            <summary>{primary.length > 0 ? t.more(secondary.length) : dishCount(secondary.length, lang)}</summary>
+            <ul class="chips">
+              {secondary.map((r) => <li><a class="chip" href={url(`recipes/${r.id}`, lang)}>{r.data.title}</a></li>)}
+            </ul>
+          </details>
+        )}
+      </section>
+    )}
+
+    <div class="prose">
+      <SourceList sources={sources} />
+      <p style="color: var(--muted); font-size: 0.9rem">{t.updated} {formatDate(updated, lang)}</p>
+    </div>
+  </article>
+</Base>

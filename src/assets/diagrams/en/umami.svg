@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" role="img" aria-labelledby="t d">
+  <title id="t">Two kinds of umami compound used together boost each other</title>
+  <desc id="d">Three bars compare, qualitatively, the umami of glutamate alone, inosinate alone and the two together. Together they taste stronger than the two effects simply added up; bar length does not stand for a specific multiple.</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .label { font: 15px "Helvetica Neue", Arial, "Source Han Sans SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+    .glutamate { fill: var(--accent-green, #2f8359); }
+    .inosinate { fill: var(--accent-blue, #2f6fca); }
+    .combined { fill: var(--primary, #b83e30); }
+    .guide { stroke: var(--border, #d3ccbe); stroke-width: 1.5; }
+    .arrow { stroke: var(--text, #24221e); stroke-width: 2; fill: none; }
+  </style>
+  <rect class="bg" width="600" height="380" rx="12"/>
+  <text class="label" x="32" y="40">Umami synergy</text>
+  <text class="label muted" x="232" y="40">Longer bar = stronger umami</text>
+
+  <line class="guide" x1="232" y1="66" x2="232" y2="294"/>
+  <text class="label" x="32" y="91">Glutamate alone</text>
+  <text class="label muted" x="32" y="117">Kombu, tomato,<tspan x="32" dy="1.2em">aged cheese</tspan></text>
+  <rect class="glutamate" x="232" y="72" width="90" height="30" rx="5"/>
+
+  <text class="label" x="32" y="179">Inosinate alone</text>
+  <text class="label muted" x="32" y="205">Bonito, meat, fish</text>
+  <rect class="inosinate" x="232" y="160" width="68" height="30" rx="5"/>
+
+  <!-- The two sources meet in the same bite. No quantitative scale. -->
+  <path class="arrow" d="M194 98 H207 V267 H222 M194 185 H207 M214 259 L222 267 L214 275"/>
+  <text class="label" x="32" y="270">Combined</text>
+  <text class="label muted" x="32" y="296">e.g. kombu + bonito dashi</text>
+  <rect class="combined" x="232" y="248" width="324" height="38" rx="5"/>
+
+  <text class="label" x="32" y="336">Together they taste stronger than the two added up</text>
+  <text class="label muted" x="32" y="360">Shows the synergy only; not concentrations, multiples or fixed ratios</text>
+</svg>

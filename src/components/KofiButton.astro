@@ -1,5 +1,6 @@
 ---
 import Dumpling from './Dumpling.astro';
+import { langOf, type Both } from '../i18n';
 import { KOFI_URL } from '../lib/site';
 
 interface Props {
@@ -8,10 +9,15 @@ interface Props {
 }
 
 const { head } = Astro.props;
+const T = {
+  zh: { label: '在 Ko-fi 请我吃个饺子（新窗口）', long: '请我吃个饺子', short: '支持' },
+  en: { label: 'Buy me a dumpling on Ko-fi (opens in a new tab)', long: 'Buy me a dumpling', short: 'Support' },
+} satisfies Both<Record<string, string>>;
+const t = T[langOf(Astro.url)];
 ---
 
-<a class:list={['kofi', { 'kofi-head': head }]} href={KOFI_URL} target="_blank" rel="noopener noreferrer" aria-label="在 Ko-fi 请我吃个饺子（新窗口）">
-  <Dumpling /><span class="kofi-long">请我吃个饺子</span><span class="kofi-short">支持</span>
+<a class:list={['kofi', { 'kofi-head': head }]} href={KOFI_URL} target="_blank" rel="noopener noreferrer" aria-label={t.label}>
+  <Dumpling /><span class="kofi-long">{t.long}</span><span class="kofi-short">{t.short}</span>
 </a>
 
 <script>

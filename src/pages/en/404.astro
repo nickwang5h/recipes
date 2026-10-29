@@ -1,0 +1,16 @@
+---
+// Built to /en/404/index.html; scripts/build-sw.mjs copies it to /en/404.html, which
+// Cloudflare Pages serves for missing paths under /en/.
+import Base from '../../layouts/Base.astro';
+import CatNote from '../../components/CatNote.astro';
+import { url } from '../../i18n';
+import menuCat from '../../assets/cats/404-menu.png';
+---
+
+<Base title="Page not found" twin={false}>
+  <CatNote cat={menuCat}>
+    <h1>That’s not on the menu</h1>
+    <p class="lede">The link may be wrong, or this page isn’t written yet. Try the <a href={url('', 'en')}>home page</a>, <a href={url('recipes', 'en')}>recipes</a> or <a href={url('principles', 'en')}>the science</a>.</p>
+    <p><a class="cat-note-btn" href={url('search', 'en')}>Search</a></p>
+  </CatNote>
+</Base>

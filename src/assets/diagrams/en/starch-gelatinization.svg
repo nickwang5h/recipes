@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="t d">
+  <title id="t">Starch goes from absorbing water and gelatinizing to retrograding as it cools</title>
+  <desc id="d">Left to right: raw starch granules swell as they heat in water, then burst and release amylose, which thickens the liquid. On cooling, the starch chains realign, firm up and release water.</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .water { fill: #9cc3d9; fill-opacity: .45; }
+    .grain { fill: var(--border, #d3ccbe); }
+    .gel { fill: var(--accent-green, #2f8359); fill-opacity: .12; }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .chain { stroke: var(--accent-green, #2f8359); stroke-width: 3; fill: none; stroke-linecap: round; }
+    .inward { stroke: var(--accent-blue, #2f6fca); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .label { font: 15px "Helvetica Neue", Arial, "Source Han Sans SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+  </style>
+  <rect class="bg" width="600" height="400" rx="12"/>
+  <text class="label" x="83" y="48" text-anchor="middle">Raw granules</text>
+  <text class="label" x="228" y="48" text-anchor="middle">Heating</text>
+  <text class="label" x="373" y="48" text-anchor="middle">Bursts, leaks</text>
+  <text class="label" x="518" y="48" text-anchor="middle">Cooling</text>
+  <text class="label muted" x="83" y="73" text-anchor="middle">Tightly packed</text>
+  <text class="label muted" x="228" y="73" text-anchor="middle">Granules swell</text>
+  <text class="label muted" x="373" y="73" text-anchor="middle">Amylose leaks out</text>
+  <text class="label muted" x="518" y="73" text-anchor="middle">Chains realign</text>
+
+  <rect class="water" x="31" y="139" width="104" height="132"/>
+  <path class="line" d="M31 112 V271 H135 V112"/>
+  <circle class="grain" cx="83" cy="244" r="23"/>
+  <circle class="line" cx="83" cy="244" r="23"/>
+  <path class="line" d="M71 236 Q83 226 95 236 M71 244 Q83 234 95 244 M71 252 Q83 242 95 252"/>
+
+  <rect class="water" x="176" y="139" width="104" height="132"/>
+  <path class="line" d="M176 112 V271 H280 V112"/>
+  <circle class="grain" cx="228" cy="208" r="36"/>
+  <circle class="line" cx="228" cy="208" r="36"/>
+  <path class="chain" d="M209 196 Q215 184 223 197 T244 197 M209 220 Q215 208 223 221 T244 221"/>
+  <path class="inward" d="M228 151 V167 M222 161 L228 167 L234 161 M228 260 V249 M222 255 L228 249 L234 255"/>
+
+  <rect class="water" x="321" y="139" width="104" height="132"/>
+  <rect class="gel" x="321" y="139" width="104" height="132"/>
+  <path class="line" d="M321 112 V271 H425 V112"/>
+  <path class="grain" d="M358 182 C333 184 334 230 359 235 L365 219 L355 211 L365 197 Z M381 179 L372 197 L383 208 L374 222 L387 233 C412 224 408 189 381 179 Z"/>
+  <path class="line" d="M358 182 C333 184 334 230 359 235 L365 219 L355 211 L365 197 M381 179 L372 197 L383 208 L374 222 L387 233 C412 224 408 189 381 179"/>
+  <path class="chain" d="M337 157 Q350 145 365 159 T409 156 M346 207 Q365 189 383 208 T413 211 M335 252 Q348 236 365 251 T411 249"/>
+
+  <rect class="water" x="466" y="139" width="104" height="132"/>
+  <rect class="gel" x="474" y="167" width="88" height="85" rx="8"/>
+  <path class="line" d="M466 112 V271 H570 V112"/>
+  <path class="chain" d="M482 180 H554 M482 190 H554 M482 200 H554 M482 220 H554 M482 230 H554 M482 240 H554"/>
+  <path class="inward" d="M485 259 H551"/>
+
+  <path class="line" d="M143 204 H163 M156 197 L163 204 L156 211 M288 204 H308 M301 197 L308 204 L301 211 M433 204 H453 M446 197 L453 204 L446 211"/>
+  <text class="label" x="83" y="308" text-anchor="middle">Sinks in<tspan x="83" dy="1.2em">cold water</tspan></text>
+  <text class="label" x="228" y="308" text-anchor="middle">Absorbs water,<tspan x="228" dy="1.2em">structure collapses</tspan></text>
+  <text class="label" x="373" y="308" text-anchor="middle">Liquid<tspan x="373" dy="1.2em">thickens</tspan></text>
+  <text class="label" x="518" y="308" text-anchor="middle">Firms up,<tspan x="518" dy="1.2em">weeps water</tspan></text>
+  <path class="chain" d="M180 363 H210"/>
+  <text class="label muted" x="223" y="368">Green lines: starch chains</text>
+</svg>

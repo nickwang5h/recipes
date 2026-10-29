@@ -1,7 +1,9 @@
 ---
 import { getEntries, type CollectionEntry } from 'astro:content';
+import { HTML_LANG, langOf, type Both } from '../i18n';
+import type { LineWords } from '../i18n/content';
 import { WHERE_TO_BUY } from '../lib/categories';
-import { formatQty } from '../lib/scale';
+import { countedName, formatQty, unitLabel } from '../lib/scale';
 
 interface Props {
   recipe: CollectionEntry<'recipes'>;
@@ -9,28 +11,34 @@ interface Props {
 
 const { recipe } = Astro.props;
 const { servings, ingredients } = recipe.data;
+const lang = langOf(Astro.url);
+const T = {
+  zh: { title: '配料', serves: `${servings} 人份`, servings: '份量', fewer: '减少一人份', more: '增加一人份', people: '人', wake: '屏幕常亮', reset: '重置勾选与份量', note: `配料已按新份量换算；步骤里提到的用量仍按 ${servings} 人份。`, optional: '可选' },
+  en: { title: 'Ingredients', serves: `Serves ${servings}`, servings: 'Serves', fewer: 'One serving fewer', more: 'One serving more', people: '', wake: 'Keep screen on', reset: 'Reset ticks and servings', note: `Ingredients are scaled to the new number of servings; amounts in the steps are still for ${servings}.`, optional: 'optional' },
+} satisfies Both<Record<string, string>>;
+const t = T[lang];
 const catalog = new Map(
   (await getEntries(ingredients.flatMap((group) => group.items.map((item) => item.ref)))).map((entry) => [entry.id, entry]),
 );
 ---
 
 <aside class="recipe-aside" data-recipe-kit data-slug={recipe.id} data-base={servings} aria-labelledby="ingredients-title">
-  <h2 id="ingredients-title">配料</h2>
-  <p class="servings-static">{servings} 人份</p>
+  <h2 id="ingredients-title">{t.title}</h2>
+  <p class="servings-static">{t.serves}</p>
   <div class="kit-controls" hidden>
-    <div class="servings" role="group" aria-label="份量">
-      <span class="servings-label">份量</span>
-      <button class="icon-btn" type="button" data-step="-1" aria-label="减少一人份">−</button>
+    <div class="servings" role="group" aria-label={t.servings}>
+      <span class="servings-label">{t.servings}</span>
+      <button class="icon-btn" type="button" data-step="-1" aria-label={t.fewer}>−</button>
       <output class="servings-value" aria-live="polite">{servings}</output>
-      <button class="icon-btn" type="button" data-step="1" aria-label="增加一人份">+</button>
-      <span class="servings-label">人</span>
+      <button class="icon-btn" type="button" data-step="1" aria-label={t.more}>+</button>
+      {t.people && <span class="servings-label">{t.people}</span>}
     </div>
     <div class="kit-actions">
-      <button class="text-btn" type="button" data-wake hidden aria-pressed="false">屏幕常亮</button>
-      <button class="text-btn" type="button" data-reset>重置勾选与份量</button>
+      <button class="text-btn" type="button" data-wake hidden aria-pressed="false">{t.wake}</button>
+      <button class="text-btn" type="button" data-reset>{t.reset}</button>
     </div>
   </div>
-  <p class="scale-note" hidden>配料已按新份量换算；步骤里提到的用量仍按 {servings} 人份。</p>
+  <p class="scale-note" hidden>{t.note}</p>
 
   {ingredients.map((group, g) => (
     <>
@@ -38,20 +46,26 @@ const catalog = new Map(
       <ul class="ingredients">
         {group.items.map((item, i) => {
           const info = catalog.get(item.ref.id)!.data;
+          const { plural, word } = item as typeof item & LineWords;
+          const name = item.name ?? info[lang];
+          const unit = item.qty !== undefined ? unitLabel(item.unit, item.qty, lang, word) : '';
+          // The other language's name helps at the shop: English in Canadian supermarkets, and on
+          // the English site, the Chinese for what is bought at an Asian grocery.
+          const aside = lang === 'zh' ? info.en : info.where === 'asian' ? info.zh : undefined;
           return (
           <li>
             <label class="ing-row">
               <input type="checkbox" data-ing={`${g}-${i}`} />
               <span class="ing-text">
                 {item.qty !== undefined && (
-                  <span class="ing-qty" data-qty={item.qty} data-unit={item.unit ?? ''}>
-                    <span class="n">{formatQty(item.qty, item.unit)}</span>{item.unit && <> {item.unit}</>}
+                  <span class="ing-qty" data-qty={item.qty} data-unit={item.unit ?? ''} data-word={word}>
+                    <span class="n">{formatQty(item.qty, item.unit)}</span>{unit && <> <span class="u">{unit}</span></>}
                   </span>
                 )}
-                <span class="ing-name">{item.name ?? info.zh}</span>
-                {item.optional && <span class="ing-tag">可选</span>}
-                {info.where !== 'mainstream' && <span class={`ing-tag where-${info.where}`}>{WHERE_TO_BUY[info.where]}</span>}
-                <span class="ing-en" lang="en">{info.en}</span>
+                <span class="ing-name" data-name={plural && name} data-plural={plural}>{countedName(name, plural, item.qty, item.unit)}</span>
+                {item.optional && <span class="ing-tag">{t.optional}</span>}
+                {info.where !== 'mainstream' && <span class={`ing-tag where-${info.where}`}>{WHERE_TO_BUY[info.where][lang]}</span>}
+                {aside && <span class="ing-en" lang={HTML_LANG[lang === 'zh' ? 'en' : 'zh']}>{aside}</span>}
                 {item.note && <span class="ing-note">{item.note}</span>}
               </span>
             </label>
@@ -64,12 +78,14 @@ const catalog = new Map(
 </aside>
 
 <script>
-  import { formatQty, scaleQty } from '../lib/scale';
+  import { pageLang } from '../i18n';
+  import { countedName, formatQty, scaleQty, unitLabel } from '../lib/scale';
 
   type State = { servings: number; ingredients: string[]; steps: number[] };
 
   const MIN = 1;
   const MAX = 24;
+  const lang = pageLang();
 
   for (const kit of document.querySelectorAll<HTMLElement>('[data-recipe-kit]')) {
     const slug = kit.dataset.slug!;
@@ -117,9 +133,14 @@ const catalog = new Map(
       plus.disabled = state.servings >= MAX;
       note.hidden = state.servings === base;
       for (const el of qtys) {
-        const qty = Number(el.dataset.qty);
         const unit = el.dataset.unit || undefined;
-        el.querySelector('.n')!.textContent = formatQty(scaleQty(qty, base, state.servings), unit);
+        const qty = scaleQty(Number(el.dataset.qty), base, state.servings);
+        el.querySelector('.n')!.textContent = formatQty(qty, unit);
+        // English plurals follow the count: "1 clove garlic", "2 cloves garlic"; "1 egg", "2 eggs".
+        const u = el.querySelector('.u');
+        if (u) u.textContent = unitLabel(unit, qty, lang, el.dataset.word);
+        const name = el.parentElement!.querySelector<HTMLElement>('.ing-name[data-plural]');
+        if (name) name.textContent = countedName(name.dataset.name!, name.dataset.plural, qty, unit);
       }
     };
 
@@ -128,7 +149,7 @@ const catalog = new Map(
       const box = document.createElement('input');
       box.type = 'checkbox';
       box.className = 'step-check';
-      box.setAttribute('aria-label', `第 ${i + 1} 步已完成`);
+      box.setAttribute('aria-label', lang === 'en' ? `Step ${i + 1} done` : `第 ${i + 1} 步已完成`);
       li.classList.add('checkable');
       li.prepend(box);
       li.addEventListener('click', (event) => {

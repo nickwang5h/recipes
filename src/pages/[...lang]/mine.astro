@@ -1,0 +1,184 @@
+---
+import Base from '../../layouts/Base.astro';
+import CatNote from '../../components/CatNote.astro';
+import plateCat from '../../assets/cats/mine-empty.png';
+import { langPaths, url, type Both, type Lang } from '../../i18n';
+
+export const getStaticPaths = langPaths;
+const { lang } = Astro.props as { lang: Lang };
+const T = {
+  zh: {
+    title: '我的', description: '家里常做的菜、自己的笔记，以及和家人共享的设置。',
+    lede: ['在菜谱页点「常做」或写笔记，都会收到这里。加入家庭后，常做的菜、笔记、', '菜单', '、冰箱和购物清单在家里每台手机上都一样。'],
+    favs: '常做的菜', emptyTitle: '盘子还空着', emptyText: '在菜谱页点「常做」，那道菜就会出现在这里。', browse: '去挑几道菜', notes: '写过笔记的其他菜',
+    family: '家庭共享', familyOff: '家里每人的手机各自打开这个网站时，数据只存在自己手机上。建一个家庭，再把邀请链接发给家人，大家就共用一份。',
+    create: '建一个家庭', haveCode: '已经有家庭码？', join: '加入', code: '家庭码', invite: '复制邀请链接', sync: '立即同步', leave: '这台设备退出家庭',
+    note: '拿到家庭码或邀请链接的人都能查看和修改这份数据，只发给家人。这里存的只是菜名、笔记和清单，不需要账号。',
+  },
+  en: {
+    title: 'Saved', description: 'The dishes your family cooks often, your own notes, and sharing with family.',
+    lede: ['Tap “Cook often” or write a note on any recipe and it lands here. Once you join a family, the dishes, notes, ', 'menu', ', fridge and shopping list are the same on every phone in the house.'],
+    favs: 'Cooked often', emptyTitle: 'The plate’s still empty', emptyText: 'Tap “Cook often” on a recipe and it shows up here.', browse: 'Pick a few recipes', notes: 'Other recipes with notes',
+    family: 'Family sharing', familyOff: 'Each phone that opens this site keeps its own data. Create a family and send the invite link to the others, and you all share one copy.',
+    create: 'Create a family', haveCode: 'Have a family code?', join: 'Join', code: 'Family code', invite: 'Copy invite link', sync: 'Sync now', leave: 'Leave the family on this device',
+    note: 'Anyone with the family code or invite link can see and change this data, so send it only to family. It holds dish names, notes and lists, and needs no account.',
+  },
+} satisfies Both<Record<string, unknown>>;
+const t = T[lang];
+---
+
+<Base title={t.title} description={t.description}>
+  <header class="page-head">
+    <h1>{t.title}</h1>
+    <p class="lede">{t.lede[0]}<a href={url('menu', lang)}>{t.lede[1]}</a>{t.lede[2]}</p>
+  </header>
+
+  <section aria-labelledby="fav-title">
+    <h2 id="fav-title" class="section-title">{t.favs} <span class="fridge-count" data-fav-count></span></h2>
+    <CatNote cat={plateCat} hidden data-fav-empty>
+      <p class="cat-note-title">{t.emptyTitle}</p>
+      <p>{t.emptyText}</p>
+      <p><a class="cat-note-btn" href={url('recipes', lang)}>{t.browse}</a></p>
+    </CatNote>
+    <ul class="card-grid" data-favs></ul>
+  </section>
+
+  <section aria-labelledby="notes-title" data-notes-wrap hidden>
+    <h2 id="notes-title" class="section-title">{t.notes}</h2>
+    <ul class="card-grid" data-notes></ul>
+  </section>
+
+  <section aria-labelledby="family-title" class="family">
+    <h2 id="family-title" class="section-title">{t.family}</h2>
+    <div data-family-off>
+      <p>{t.familyOff}</p>
+      <div class="kit-actions">
+        <button class="text-btn" type="button" data-family-create>{t.create}</button>
+      </div>
+      <form class="family-join" data-family-join>
+        <label for="family-code">{t.haveCode}</label>
+        <input id="family-code" name="code" autocomplete="off" spellcheck="false" placeholder="xxxx-xxxx-xxxx-xxxx-xxxx" />
+        <button class="text-btn" type="submit">{t.join}</button>
+        <span class="offline-status" data-join-status aria-live="polite"></span>
+      </form>
+    </div>
+    <div data-family-on hidden>
+      <p>{t.code} <code class="family-code" data-family-code></code></p>
+      <p class="family-sync"><span data-sync-state></span></p>
+      <div class="kit-actions">
+        <button class="text-btn" type="button" data-family-invite>{t.invite}</button>
+        <button class="text-btn" type="button" data-family-sync>{t.sync}</button>
+        <button class="text-btn" type="button" data-family-leave>{t.leave}</button>
+        <span class="offline-status" data-family-status aria-live="polite"></span>
+      </div>
+    </div>
+    <p class="family-note">{t.note}</p>
+  </section>
+
+  <script>
+    import type { SiteData } from './recipes-data.json';
+    import { HTML_LANG, compare, pageLang, url } from '../../i18n';
+    import { formatFamilyCode, normalizeFamilyCode } from '../../lib/sync';
+    import { createFamily, get, joinFamily, keys, leaveFamily, subscribe, syncNow, syncStatus } from '../../scripts/store';
+    import { el, flash, recipeCard } from '../../scripts/ui';
+
+    const $ = <E extends HTMLElement>(sel: string) => document.querySelector<E>(sel)!;
+    const lang = pageLang();
+    const T = {
+      zh: {
+        states: { local: '只在这台设备上', syncing: '同步中…', synced: '已同步', offline: '离线，联网后自动同步', error: '同步失败，稍后会再试' },
+        badCode: '家庭码不对，应该是 20 位字母和数字', share: 'Kiki家的饭 · 加入家庭', copied: '已复制，发给家人打开即可',
+        leave: '这台设备退出家庭？已经同步下来的内容会留在这台设备上，之后不再和家人同步。',
+        switchTo: '换到这个家庭？这台设备的内容会并进新的家庭。', joinThis: '加入这个家庭？这台设备上已有的常做、笔记和清单会并进去。', note: '笔记：',
+      },
+      en: {
+        states: { local: 'Only on this device', syncing: 'Syncing…', synced: 'Synced', offline: 'Offline; will sync when you’re back online', error: 'Sync failed; will try again shortly' },
+        badCode: 'That code doesn’t look right; it should be 20 letters and digits', share: 'Kiki’s Kitchen · join the family', copied: 'Copied; send it to your family to open',
+        leave: 'Leave the family on this device? What has synced stays here, but it won’t sync with your family any more.',
+        switchTo: 'Switch to this family? This device’s data will be merged into it.', joinThis: 'Join this family? The favourites, notes and lists already on this device will be merged in.', note: 'Note: ',
+      },
+    }[lang];
+
+    // ---------- Family ----------
+
+    const STATES = T.states;
+    const renderFamily = () => {
+      const s = syncStatus();
+      $('[data-family-off]').hidden = !!s.family;
+      $('[data-family-on]').hidden = !s.family;
+      if (!s.family) return;
+      $('[data-family-code]').textContent = formatFamilyCode(s.family);
+      const at = s.lastSynced ? ` · ${new Date(s.lastSynced).toLocaleTimeString(HTML_LANG[lang], { hour: '2-digit', minute: '2-digit' })}` : '';
+      $('[data-sync-state]').textContent = STATES[s.state] + (s.state === 'synced' ? at : '');
+    };
+
+    $('[data-family-create]').addEventListener('click', () => void createFamily());
+    $('[data-family-join]').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const code = normalizeFamilyCode($<HTMLInputElement>('#family-code').value);
+      if (!code) return flash($('[data-join-status]'), T.badCode);
+      void joinFamily(code);
+    });
+    $('[data-family-invite]').addEventListener('click', async () => {
+      const link = `${location.origin}${url('mine', lang)}#join=${syncStatus().family}`;
+      try {
+        if (navigator.share) await navigator.share({ title: T.share, url: link });
+        else {
+          await navigator.clipboard.writeText(link);
+          flash($('[data-family-status]'), T.copied);
+        }
+      } catch {}
+    });
+    $('[data-family-sync]').addEventListener('click', () => void syncNow());
+    $('[data-family-leave]').addEventListener('click', () => {
+      if (confirm(T.leave)) leaveFamily();
+    });
+
+    // An invite link opens this page with #join=<code>.
+    const acceptInvite = () => {
+      const invited = normalizeFamilyCode(new URLSearchParams(location.hash.slice(1)).get('join') ?? '');
+      if (!invited) return;
+      history.replaceState(null, '', location.pathname);
+      const current = syncStatus().family;
+      if (current === invited) return;
+      const question = current ? T.switchTo : T.joinThis;
+      if (confirm(question)) void joinFamily(invited);
+    };
+    window.addEventListener('hashchange', acceptInvite);
+    acceptInvite();
+
+    // ---------- Favorites and notes ----------
+
+    let data: SiteData | null = null;
+    const renderMine = () => {
+      if (!data) return;
+      const byId = new Map(data.recipes.map((r) => [r.id, r]));
+      const card = (id: string) => {
+        const r = byId.get(id)!;
+        const note = get<string>('note:' + id);
+        const extra = note ? [el('p', { className: 'mine-card-note', textContent: `${T.note}${note}` })] : [];
+        return el('li', {}, recipeCard(r, data!.cuisines[r.cuisine], extra));
+      };
+      const byTitle = (a: string, b: string) => compare(lang)(byId.get(a)!.title, byId.get(b)!.title);
+      const favs = keys('fav:').filter((id) => byId.has(id)).sort(byTitle);
+      const noted = keys('note:').filter((id) => byId.has(id) && !favs.includes(id)).sort(byTitle);
+      $('[data-fav-count]').textContent = favs.length ? `· ${favs.length}` : '';
+      $('[data-fav-empty]').hidden = favs.length > 0;
+      $('[data-favs]').replaceChildren(...favs.map(card));
+      $('[data-notes-wrap]').hidden = noted.length === 0;
+      $('[data-notes]').replaceChildren(...noted.map(card));
+    };
+
+    subscribe(() => {
+      renderFamily();
+      renderMine();
+    });
+    renderFamily();
+    fetch(`${url('', lang)}recipes-data.json`)
+      .then((res) => res.json())
+      .then((json: SiteData) => {
+        data = json;
+        renderMine();
+      });
+  </script>
+</Base>

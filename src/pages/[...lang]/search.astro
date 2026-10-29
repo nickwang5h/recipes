@@ -1,0 +1,144 @@
+---
+import Base from '../../layouts/Base.astro';
+import CatNote from '../../components/CatNote.astro';
+import { langPaths, url, type Both, type Lang } from '../../i18n';
+import potCat from '../../assets/cats/search-empty.png';
+
+export const getStaticPaths = langPaths;
+const { lang } = Astro.props as { lang: Lang };
+const T = {
+  zh: {
+    title: '搜索', description: '按菜名、食材或原理搜索全站的菜谱和笔记。', lede: '按菜名、食材、做法或原理搜索，比如“茄子”“红烧”“乳化”。',
+    placeholder: '搜索菜谱和原理…', byType: '按类型筛选', all: '全部', recipe: '菜谱', principle: '原理', cuisine: '菜系',
+    none: '锅里空空的', noneText: '没有找到。换个说法试试，比如只搜主料“茄子”，或者做法“红烧”。', browse: '翻翻全部菜谱',
+  },
+  en: {
+    title: 'Search', description: 'Search every recipe and science page by dish, ingredient or technique.', lede: 'Search by dish, ingredient, method or principle, for example “eggplant”, “braise” or “emulsion”.',
+    placeholder: 'Search recipes and science…', byType: 'Filter by type', all: 'All', recipe: 'Recipes', principle: 'Science', cuisine: 'Cuisines',
+    none: 'The pot’s empty', noneText: 'Nothing found. Try other words, such as just the main ingredient (“eggplant”) or the method (“braise”).', browse: 'Browse all recipes',
+  },
+} satisfies Both<Record<string, string>>;
+const t = T[lang];
+---
+
+<Base title={t.title} description={t.description}>
+  <header class="page-head">
+    <h1>{t.title}</h1>
+    <p class="lede">{t.lede}</p>
+  </header>
+
+  <label class="search-box">
+    <span class="visually-hidden">{t.title}</span>
+    <input type="search" placeholder={t.placeholder} autocomplete="off" autofocus data-q />
+  </label>
+  <nav class="filters chips search-filters" aria-label={t.byType} data-types>
+    <button class="chip" type="button" data-type="" aria-pressed="true">{t.all}</button>
+    <button class="chip" type="button" data-type="recipe" aria-pressed="false">{t.recipe}</button>
+    <button class="chip" type="button" data-type="principle" aria-pressed="false">{t.principle}</button>
+    <button class="chip" type="button" data-type="cuisine" aria-pressed="false">{t.cuisine}</button>
+  </nav>
+
+  <p class="filter-count" data-count aria-live="polite"></p>
+  <ol class="search-results" data-results></ol>
+  <CatNote cat={potCat} hidden data-none>
+    <p class="cat-note-title">{t.none}</p>
+    <p>{t.noneText}</p>
+    <p><a class="cat-note-btn" href={url('recipes', lang)}>{t.browse}</a></p>
+  </CatNote>
+
+  <script>
+    import { pageLang, url } from '../../i18n';
+    import { search, terms, type SearchHit } from '../../lib/search';
+    import type { SearchDoc } from './search-index.json';
+
+    const lang = pageLang();
+    const T = {
+      zh: { kinds: { recipe: '菜谱', principle: '原理', cuisine: '菜系' }, failed: '搜索索引加载失败，请检查网络。', count: (n: number, page: number) => `${n} 条结果${n > page ? `，显示前 ${page} 条` : ''}` },
+      en: { kinds: { recipe: 'Recipe', principle: 'Science', cuisine: 'Cuisine' }, failed: 'Couldn’t load the search index; check your connection.', count: (n: number, page: number) => `${n} ${n === 1 ? 'result' : 'results'}${n > page ? `, showing the first ${page}` : ''}` },
+    }[lang];
+
+    const input = document.querySelector<HTMLInputElement>('[data-q]')!;
+    const list = document.querySelector<HTMLOListElement>('[data-results]')!;
+    const count = document.querySelector<HTMLElement>('[data-count]')!;
+    const none = document.querySelector<HTMLElement>('[data-none]')!;
+    const PAGE = 30;
+    let type = '';
+    let docs: SearchDoc[] | null = null;
+
+    const load = async () => {
+      if (!docs) {
+        try {
+          docs = await (await fetch(`${url('', lang)}search-index.json`)).json();
+        } catch {
+          count.textContent = T.failed;
+        }
+      }
+      return docs;
+    };
+
+    const el = <K extends keyof HTMLElementTagNameMap>(tag: K, props: Partial<HTMLElementTagNameMap[K]> = {}) =>
+      Object.assign(document.createElement(tag), props);
+
+    /** Text with every query term wrapped in <mark>, built from DOM nodes so nothing is parsed as HTML. */
+    const highlighted = (text: string, qs: string[]) => {
+      const p = el('p', { className: 'search-excerpt' });
+      const pattern = new RegExp(`(${qs.map((q) => q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'gi');
+      for (const part of text.split(pattern)) {
+        if (!part) continue;
+        p.append(qs.includes(part.toLowerCase()) ? el('mark', { textContent: part }) : document.createTextNode(part));
+      }
+      return p;
+    };
+
+    const row = (hit: SearchHit, qs: string[]) => {
+      const { doc } = hit;
+      const a = el('a', { className: 'search-hit', href: doc.u });
+      if (doc.img) a.append(el('img', { src: doc.img, alt: '', loading: 'lazy', width: 96, height: 64 }));
+      const text = el('div');
+      text.append(el('span', { className: 'search-title', textContent: doc.t }));
+      text.append(el('span', { className: 'search-kind', textContent: [T.kinds[doc.k], doc.c].filter(Boolean).join(' · ') }));
+      text.append(highlighted(hit.excerpt, qs));
+      a.append(text);
+      const li = el('li');
+      li.append(a);
+      return li;
+    };
+
+    const run = async () => {
+      const q = input.value.trim();
+      const here = new URL(location.href);
+      q ? here.searchParams.set('q', q) : here.searchParams.delete('q');
+      history.replaceState(null, '', here);
+      if (!q) {
+        list.replaceChildren();
+        count.textContent = '';
+        none.hidden = true;
+        return;
+      }
+      const all = await load();
+      if (!all) return;
+      const hits = search(all, q, type, lang);
+      count.textContent = hits.length ? T.count(hits.length, PAGE) : '';
+      none.hidden = hits.length > 0;
+      const qs = terms(q);
+      list.replaceChildren(...hits.slice(0, PAGE).map((hit) => row(hit, qs)));
+    };
+
+    let timer = 0;
+    input.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = window.setTimeout(run, 120);
+    });
+    document.querySelector('[data-types]')!.addEventListener('click', (event) => {
+      const button = (event.target as HTMLElement).closest<HTMLButtonElement>('button[data-type]');
+      if (!button) return;
+      type = button.dataset.type ?? '';
+      for (const b of document.querySelectorAll<HTMLButtonElement>('[data-types] button')) b.setAttribute('aria-pressed', String(b === button));
+      run();
+    });
+
+    input.value = new URLSearchParams(location.search).get('q') ?? '';
+    if (input.value) run();
+    else load();
+  </script>
+</Base>

@@ -1,6 +1,9 @@
 ---
 import { getEntries, type CollectionEntry } from 'astro:content';
 import data from '../data/nutrition.json';
+import lighterEn from '../data/nutrition-en.json';
+import { joinList, langOf, type Both } from '../i18n';
+import { unitLabel } from '../lib/scale';
 import { LIGHTER_LABELS, dailyValue, lighterItems, perServing, safetyNotes, worthShowing, type Foods, type Key, type Lighter, type Marks } from '../lib/nutrition';
 
 interface Props {
@@ -9,6 +12,38 @@ interface Props {
 
 const { recipe } = Astro.props;
 const { servings, ingredients } = recipe.data;
+const lang = langOf(Astro.url);
+const T = {
+  zh: {
+    title: '每份营养', kcal: '千卡', safety: '食品安全',
+    rows: ['蛋白质', '脂肪', '其中饱和脂肪', '碳水化合物', '其中糖', '膳食纤维', '钠'],
+    basis: `按加拿大营养成分数据库估算，${servings} 人份平分；百分比是占每日营养标签参考值的比例。`,
+    eaten: (names: string, share: number) => `${names}按吃进约 ${share}% 计。`,
+    leftOut: (names: string) => `没有计入：${names}（没有定量或缺少数据）。`,
+    remove: (name: string) => `不放${name}`,
+    add: (name: string) => `加 ${name}`,
+    after: (nutrient: string, from: string, to: string, kcal: number) => `改完每份${nutrient}约 ${from} → ${to}，热量约 ${kcal} 千卡。`,
+    probe: (temps: string) => `用食物温度计测最厚处中心：${temps}。`,
+    vulnerable: '孕妇、幼儿、老人和免疫力低的人宜吃全熟。',
+    rice: '米饭和剩菜两小时内放凉冷藏，三天内吃完；复热到中心 74℃。',
+    twin: (group: string) => `（${group}）`,
+  },
+  en: {
+    title: 'Nutrition per serving', kcal: 'kcal', safety: 'Food safety',
+    rows: ['Protein', 'Fat', 'of which saturated', 'Carbohydrate', 'of which sugars', 'Fibre', 'Sodium'],
+    basis: `Estimated from the Canadian Nutrient File, divided into ${servings} servings; percentages are of the daily values on Canadian nutrition labels.`,
+    eaten: (names: string, share: number) => `${names}: counted as about ${share}% eaten. `,
+    leftOut: (names: string) => `Not counted: ${names} (no amount given, or no data).`,
+    remove: (name: string) => `Leave out the ${name}`,
+    add: (name: string) => `Add ${name}`,
+    after: (nutrient: string, from: string, to: string, kcal: number) => `Per serving, ${nutrient} goes from about ${from} to ${to}, at about ${kcal} kcal.`,
+    probe: (temps: string) => `Check the centre of the thickest part with a food thermometer: ${temps}.`,
+    vulnerable: 'Pregnant women, young children, older adults and people with weakened immunity should eat it fully cooked.',
+    rice: 'Cool rice and leftovers and refrigerate them within 2 hours; eat within 3 days, and reheat to 74°C (165°F) at the centre.',
+    twin: (group: string) => ` (${group})`,
+  },
+} satisfies Both<Record<string, unknown>>;
+const t = T[lang];
 const foods = data.ingredients as unknown as Foods;
 const marks = (data.recipes as unknown as Record<string, Marks>)[recipe.id];
 const items = ingredients.flatMap((group, g) => group.items.map((item, i) => ({
@@ -17,30 +52,36 @@ const items = ingredients.flatMap((group, g) => group.items.map((item, i) => ({
 const catalog = new Map((await getEntries(ingredients.flatMap((group) => group.items.map((item) => item.ref)))).map((entry) => [entry.id, entry]));
 const nameOf = (key: string) => {
   const item = items.find((entry) => entry.key === key)!;
-  return item.name ?? catalog.get(item.ref)!.data.zh;
+  return item.name ?? catalog.get(item.ref)!.data[lang];
 };
 const counted = marks ? perServing(items, servings, foods, marks) : null;
 const result = counted && worthShowing(counted, items, (ref) => catalog.get(ref)!.data.kind) ? counted : null;
-const safety = marks ? safetyNotes(items, foods, marks) : null;
-const lighter = result ? ((data as unknown as { lighter?: Record<string, Lighter> }).lighter ?? {})[recipe.id] : undefined;
+const safety = marks ? safetyNotes(items, foods, marks, lang) : null;
+// The lighter version's advice is prose, so English shows it only once it is translated (src/data/nutrition-en.json).
+const lighterWords = (lighterEn as Record<string, { how: string; notes: string[] }>)[recipe.id];
+const lighterZh = result ? ((data as unknown as { lighter?: Record<string, Lighter> }).lighter ?? {})[recipe.id] : undefined;
+const lighter = lighterZh && lang === 'en'
+  ? lighterWords && { ...lighterZh, how: lighterWords.how, add: lighterZh.add.map((extra, n) => ({ ...extra, note: lighterWords.notes[n] ?? '' })) }
+  : lighterZh;
 const lighterAfter = lighter ? perServing(lighterItems(items, lighter), servings, foods, marks) : null;
 const lighterCatalog = lighter ? new Map((await getEntries(lighter.add.map((extra) => ({ collection: 'ingredients' as const, id: extra.ref })))).map((entry) => [entry.id, entry])) : new Map();
 const itemText = (key: string) => {
   const item = items.find((entry) => entry.key === key)!;
   const twin = items.some((other) => other.key !== key && nameOf(other.key) === nameOf(key));   // the same ingredient used twice
   const group = ingredients[Number(key.split('-')[0])]?.group;
-  return `${nameOf(key)}${twin && group ? `（${group}）` : ''} ${item.qty ?? ''} ${item.unit ?? ''}`.trim();
+  return `${nameOf(key)}${twin && group ? t.twin(group) : ''} ${item.qty ?? ''} ${unitOf(item.unit, item.qty)}`.trim();
 };
+const unitOf = (unit: string | undefined, qty: number | undefined) => (lang === 'zh' ? unit ?? '' : unitLabel(unit, qty ?? 1, lang));
 
 const amount = (value: number, unit: string) => `${value >= 10 || unit === 'mg' ? Math.round(value) : Math.round(value * 10) / 10} ${unit}`;
 const rows: { label: string; key: Key; unit: string; sub?: boolean }[] = [
-  { label: '蛋白质', key: 'protein', unit: 'g' },
-  { label: '脂肪', key: 'fat', unit: 'g' },
-  { label: '其中饱和脂肪', key: 'satfat', unit: 'g', sub: true },
-  { label: '碳水化合物', key: 'carb', unit: 'g' },
-  { label: '其中糖', key: 'sugar', unit: 'g', sub: true },
-  { label: '膳食纤维', key: 'fiber', unit: 'g' },
-  { label: '钠', key: 'sodium', unit: 'mg' },
+  { label: t.rows[0], key: 'protein', unit: 'g' },
+  { label: t.rows[1], key: 'fat', unit: 'g' },
+  { label: t.rows[2], key: 'satfat', unit: 'g', sub: true },
+  { label: t.rows[3], key: 'carb', unit: 'g' },
+  { label: t.rows[4], key: 'sugar', unit: 'g', sub: true },
+  { label: t.rows[5], key: 'fiber', unit: 'g' },
+  { label: t.rows[6], key: 'sodium', unit: 'mg' },
 ];
 // Items not all eaten, grouped by share; water and other items with nothing to count are left out of the note.
 const shares = new Map<number, string[]>();
@@ -55,8 +96,8 @@ for (const [key, fraction] of Object.entries(marks?.eaten ?? {})) {
 
 {result && (
   <section class="nutrition" aria-labelledby="nutrition-title">
-    <h2 class="section-title" id="nutrition-title">每份营养</h2>
-    <p class="nutrition-energy"><strong>{Math.round(result.per.kcal)}</strong> 千卡</p>
+    <h2 class="section-title" id="nutrition-title">{t.title}</h2>
+    <p class="nutrition-energy"><strong>{Math.round(result.per.kcal)}</strong> {t.kcal}</p>
     <table class="nutrition-table">
       <tbody>
         {rows.map((row) => {
@@ -73,21 +114,21 @@ for (const [key, fraction] of Object.entries(marks?.eaten ?? {})) {
       </tbody>
     </table>
     <p class="nutrition-note">
-      按加拿大营养成分数据库估算，{servings} 人份平分；百分比是占每日营养标签参考值的比例。
-      {[...shares].map(([share, names]) => <>{names.join('、')}按吃进约 {share}% 计。</>)}
-      {result.leftOut.length > 0 && <>没有计入：{result.leftOut.map(nameOf).join('、')}（没有定量或缺少数据）。</>}
+      {t.basis}
+      {[...shares].map(([share, names]) => <>{t.eaten(joinList(names, lang), share)}</>)}
+      {result.leftOut.length > 0 && <>{t.leftOut(joinList(result.leftOut.map(nameOf), lang))}</>}
     </p>
     {lighter && lighterAfter && (() => {
-      const { label, nutrient, unit } = LIGHTER_LABELS[lighter.target];
+      const { label, nutrient, unit } = LIGHTER_LABELS[lang][lighter.target];
       return (
         <div class="lighter">
           <h3>{label}</h3>
           <ul>
-            {lighter.changes.map((change) => <li>{'remove' in change ? <>不放{nameOf(change.key)}</> : <>{itemText(change.key)} → {change.qty} {items.find((item) => item.key === change.key)!.unit}</>}</li>)}
-            {lighter.add.map((extra) => <li>加 {lighterCatalog.get(extra.ref)?.data.zh ?? extra.ref} {extra.qty} {extra.unit}{extra.note && `（${extra.note}）`}</li>)}
+            {lighter.changes.map((change) => <li>{'remove' in change ? <>{t.remove(nameOf(change.key))}</> : <>{itemText(change.key)} → {change.qty} {unitOf(items.find((item) => item.key === change.key)!.unit, change.qty)}</>}</li>)}
+            {lighter.add.map((extra) => <li>{t.add(lighterCatalog.get(extra.ref)?.data[lang].toLowerCase() ?? extra.ref)} {extra.qty} {unitOf(extra.unit, extra.qty)}{extra.note && t.twin(extra.note)}</li>)}
           </ul>
           <p>{lighter.how}</p>
-          <p class="nutrition-note">改完每份{nutrient}约 {amount(result.per[lighter.target], unit)} → {amount(lighterAfter.per[lighter.target], unit)}，热量约 {Math.round(lighterAfter.per.kcal)} 千卡。</p>
+          <p class="nutrition-note">{t.after(nutrient, amount(result.per[lighter.target], unit), amount(lighterAfter.per[lighter.target], unit), Math.round(lighterAfter.per.kcal))}</p>
         </div>
       );
     })()}
@@ -96,11 +137,11 @@ for (const [key, fraction] of Object.entries(marks?.eaten ?? {})) {
 
 {safety && (safety.temperatures.length > 0 || safety.raw.length > 0 || safety.rice) && (
   <section class="food-safety" aria-labelledby="safety-title">
-    <h2 class="section-title" id="safety-title">食品安全</h2>
+    <h2 class="section-title" id="safety-title">{t.safety}</h2>
     <ul>
-      {safety.temperatures.length > 0 && <li>用食物温度计测最厚处中心：{safety.temperatures.join('；')}。</li>}
-      {safety.raw.map((note) => <li>{note}。孕妇、幼儿、老人和免疫力低的人宜吃全熟。</li>)}
-      {safety.rice && <li>米饭和剩菜两小时内放凉冷藏，三天内吃完；复热到中心 74℃。</li>}
+      {safety.temperatures.length > 0 && <li>{t.probe(safety.temperatures.join(lang === 'zh' ? '；' : '; '))}</li>}
+      {safety.raw.map((note) => <li>{note}{lang === 'zh' ? '。' : '. '}{t.vulnerable}</li>)}
+      {safety.rice && <li>{t.rice}</li>}
     </ul>
   </section>
 )}

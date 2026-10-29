@@ -1,0 +1,210 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import OfflineSave from '../../../components/OfflineSave.astro';
+import RecipeCard from '../../../components/RecipeCard.astro';
+import TagIcon from '../../../components/TagIcon.astro';
+import { compare, dishCount, langPaths, url, type Both, type Lang } from '../../../i18n';
+import { cuisineMap as getCuisineMap, cuisines as getCuisines, entries } from '../../../i18n/content';
+import { COURSES, TAGS, TIME_LIMITS, type Course, type Tag } from '../../../lib/categories';
+
+export const getStaticPaths = langPaths;
+const { lang } = Astro.props as { lang: Lang };
+const T = {
+  zh: {
+    title: '菜谱', description: '中餐、法餐、意大利菜的经典菜谱。',
+    lede: ['每道菜都标出它用到的原理。份量可以缩放，配料和步骤可以逐项勾掉；配料附英文名，方便在加拿大的超市对照采购。想按手头的食材找菜，去', '冰箱', '。'],
+    byCuisine: '按菜系筛选', allCuisines: '全部菜系', byCourse: '按类型筛选', allCourses: '全部类型', byTime: '按用时筛选', anyTime: '不限时间', byTag: '按用途筛选', anyTag: '不限用途',
+    lucky: '今晚吃什么？', season: '只看用当季食材的', parts: (n: number) => `显示酱汁、高汤等半成品（${n}）`,
+    pick: '就做这道？', pickNote: '从当前筛选出的菜里随手抽的，小菜和要花三小时以上的不抽。不想做就再抽。', again: '换一道', close: '收起', empty: '没有符合条件的菜谱。',
+  },
+  en: {
+    title: 'Recipes', description: 'Everyday recipes from China, France, Italy and across Asia.',
+    lede: ['Each recipe links the science it relies on. Scale the servings and tick off ingredients and steps as you go; ingredients bought at an Asian grocery show their Chinese name too. To cook from what you have, try the ', 'fridge', '.'],
+    byCuisine: 'Filter by cuisine', allCuisines: 'All cuisines', byCourse: 'Filter by type', allCourses: 'All types', byTime: 'Filter by time', anyTime: 'Any time', byTag: 'Filter by use', anyTag: 'Any use',
+    lucky: 'What’s for dinner?', season: 'Only with what’s in season', parts: (n: number) => `Show sauces, stocks and other building blocks (${n})`,
+    pick: 'How about this one?', pickNote: 'Drawn at random from the recipes shown, leaving out sides and anything over three hours. Not feeling it? Draw again.', again: 'Another one', close: 'Close', empty: 'No recipes match these filters.',
+  },
+} satisfies Both<Record<string, unknown>>;
+const t = T[lang];
+
+const cuisines = await getCuisines(lang);
+const cuisineMap = await getCuisineMap(lang);
+const order = new Map(cuisines.map((c, i) => [c.id, i]));
+const recipes = (await entries('recipes', lang)).sort(
+  (a, b) => order.get(a.data.cuisine.id)! - order.get(b.data.cuisine.id)! || compare(lang)(a.data.title, b.data.title),
+);
+const usedCourses = (Object.keys(COURSES) as Course[]).filter((c) => recipes.some((r) => r.data.course === c));
+const base = url('recipes', lang);
+const components = recipes.filter((r) => r.data.component).length;
+
+// Months in which each recipe uses something in field season, and what is in season each month.
+const catalog = new Map((await getCollection('ingredients')).map((i) => [i.id, i.data]));
+const seasonOf = (recipe: (typeof recipes)[number]) => {
+  const months = new Set<number>();
+  for (const group of recipe.data.ingredients)
+    for (const item of group.items) if (!item.optional) catalog.get(item.ref.id)?.season?.forEach((m) => months.add(m));
+  return [...months].sort((a, b) => a - b).join(',');
+};
+const inSeason = Object.fromEntries(
+  Array.from({ length: 12 }, (_, i) => [i + 1, [...catalog.values()].filter((d) => d.season?.includes(i + 1)).map((d) => (lang === 'en' ? d.en.toLowerCase() : d.zh))]),
+);
+---
+
+<Base title={t.title} description={t.description}>
+  <header class="page-head">
+    <h1>{t.title}</h1>
+    <p class="lede">{t.lede[0]}<a href={url('fridge', lang)}>{t.lede[1]}</a>{t.lede[2]}</p>
+    <OfflineSave />
+  </header>
+
+  <nav class="filters chips" aria-label={t.byCuisine} data-filter-group="cuisine">
+    <a class="chip" href={base} data-value="">{t.allCuisines}</a>
+    {cuisines.map((c) => <a class="chip" href={`${base}?cuisine=${c.id}`} data-value={c.id}>{c.data.title}</a>)}
+  </nav>
+  <nav class="filters chips" aria-label={t.byCourse} data-filter-group="course">
+    <a class="chip" href={base} data-value="">{t.allCourses}</a>
+    {usedCourses.map((c) => <a class="chip" href={`${base}?course=${c}`} data-value={c}>{COURSES[c][lang]}</a>)}
+  </nav>
+  <nav class="filters chips" aria-label={t.byTime} data-filter-group="time">
+    <a class="chip" href={base} data-value="">{t.anyTime}</a>
+    {Object.entries(TIME_LIMITS).map(([id, limit]) => <a class="chip" href={`${base}?time=${id}`} data-value={id}>{limit.label[lang]}</a>)}
+  </nav>
+  <nav class="filters chips" aria-label={t.byTag} data-filter-group="tag">
+    <a class="chip" href={base} data-value="">{t.anyTag}</a>
+    {(Object.keys(TAGS) as Tag[]).map((id) => <a class="chip chip-tag" href={`${base}?tag=${id}`} data-value={id}><TagIcon name={id} />{TAGS[id][lang]}</a>)}
+  </nav>
+
+  <div class="filter-bar">
+    <p class="filter-count" data-count>{dishCount(recipes.length - components, lang)}</p>
+    <button class="text-btn lucky-btn" type="button" data-lucky-pick>{t.lucky}</button>
+    <label class="parts-toggle">
+      <input type="checkbox" data-season />
+      <span data-season-label>{t.season}</span>
+    </label>
+    <label class="parts-toggle">
+      <input type="checkbox" data-parts />
+      {t.parts(components)}
+    </label>
+  </div>
+  <p class="season-note" data-season-note hidden></p>
+  <aside class="lucky" data-lucky hidden aria-live="polite">
+    <div class="lucky-card" data-lucky-card></div>
+    <div class="lucky-side">
+      <h2>{t.pick}</h2>
+      <p>{t.pickNote}</p>
+      <div class="kit-actions">
+        <button class="text-btn" type="button" data-lucky-pick>{t.again}</button>
+        <button class="text-btn" type="button" data-lucky-close>{t.close}</button>
+      </div>
+    </div>
+  </aside>
+  <script type="application/json" id="in-season" set:html={JSON.stringify(inSeason)} />
+  <ul class="card-grid" data-recipe-list>
+    {recipes.map((recipe) => (
+      <li data-cuisine={recipe.data.cuisine.id} data-course={recipe.data.course} data-minutes={recipe.data.time.prep + recipe.data.time.cook} data-months={seasonOf(recipe)} data-tags={recipe.data.tags.join(' ')} data-minor={recipe.data.minor ? '' : undefined} data-component={recipe.data.component ? '' : undefined} hidden={recipe.data.component}>
+        <RecipeCard recipe={recipe} cuisine={cuisineMap.get(recipe.data.cuisine.id)!} />
+      </li>
+    ))}
+  </ul>
+  <p data-empty hidden style="color: var(--muted)">{t.empty}</p>
+
+  <script>
+    import { dishCount, joinList, pageLang } from '../../../i18n';
+    import { withinTime } from '../../../lib/categories';
+
+    const lang = pageLang();
+
+    const GROUPS = ['cuisine', 'course', 'time', 'tag'] as const;
+    const month = new Date().getMonth() + 1;
+    const inSeason: Record<number, string[]> = JSON.parse(document.getElementById('in-season')!.textContent!);
+
+    const apply = () => {
+      const params = new URLSearchParams(location.search);
+      // Sauces, stocks and plain rice are building blocks, not something to browse for dinner;
+      // they show when asked for, or when the 酱汁 type is picked.
+      const parts = params.get('parts') === '1' || params.get('course') === 'sauce';
+      const seasonal = params.get('season') === '1';
+      document.querySelector<HTMLInputElement>('[data-season]')!.checked = seasonal;
+      const note = document.querySelector<HTMLElement>('[data-season-note]')!;
+      note.hidden = !seasonal;
+      const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      note.textContent = lang === 'en'
+        ? `In season in Ontario in ${MONTHS[month - 1]}: ${joinList(inSeason[month], lang) || 'nothing much in the fields; what’s around is stored or greenhouse-grown'}`
+        : `${month} 月安大略当季：${inSeason[month].join('、') || '田里没什么在收，都是窖藏和温室的'}`;
+      document.querySelector<HTMLInputElement>('[data-parts]')!.checked = params.get('parts') === '1';
+      let shown = 0;
+      for (const li of document.querySelectorAll<HTMLElement>('[data-recipe-list] > li')) {
+        const minutes = Number(li.dataset.minutes);
+        const match = (parts || li.dataset.component === undefined) && (!seasonal || li.dataset.months!.split(',').includes(String(month))) && GROUPS.every((g) => {
+          const want = params.get(g);
+          if (!want) return true;
+          if (g === 'time') return withinTime(want, minutes);
+          if (g === 'tag') return li.dataset.tags!.split(' ').includes(want);
+          return li.dataset[g] === want;
+        });
+        li.hidden = !match;
+        // With a time limit set, quickest first.
+        li.style.order = params.get('time') ? String(minutes) : '';
+        if (match) shown++;
+      }
+      for (const nav of document.querySelectorAll<HTMLElement>('[data-filter-group]')) {
+        const group = nav.dataset.filterGroup!;
+        for (const a of nav.querySelectorAll<HTMLAnchorElement>('a')) {
+          // Each link keeps the other groups' current filters.
+          const next = new URLSearchParams(params);
+          if (a.dataset.value) next.set(group, a.dataset.value);
+          else next.delete(group);
+          a.href = `${location.pathname}${next.size ? `?${next}` : ''}`;
+          if ((params.get(group) ?? '') === a.dataset.value) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        }
+      }
+      document.querySelector<HTMLElement>('[data-count]')!.textContent = dishCount(shown, lang);
+      document.querySelector<HTMLElement>('[data-empty]')!.hidden = shown > 0;
+    };
+
+    for (const name of ['parts', 'season']) {
+      document.querySelector<HTMLInputElement>(`[data-${name}]`)!.addEventListener('change', (event) => {
+        const params = new URLSearchParams(location.search);
+        if ((event.target as HTMLInputElement).checked) params.set(name, '1');
+        else params.delete(name);
+        history.replaceState(null, '', `${location.pathname}${params.size ? `?${params}` : ''}`);
+        apply();
+      });
+    }
+
+    // 今晚吃什么: one dish at random from whatever the filters currently show. Sides, sweets and
+    // drinks, and anything over three hours, are left out unless the filters ask for them.
+    const lucky = document.querySelector<HTMLElement>('[data-lucky]')!;
+    let last: HTMLElement | undefined;
+    const NOT_DINNER = ['dessert', 'drink', 'sauce'];
+    const dinner = (li: HTMLElement) => {
+      const params = new URLSearchParams(location.search);
+      return li.dataset.minor === undefined
+        && (params.has('course') || !NOT_DINNER.includes(li.dataset.course!))
+        && (params.has('time') || Number(li.dataset.minutes) <= 180);
+    };
+    const pick = () => {
+      const shown = [...document.querySelectorAll<HTMLElement>('[data-recipe-list] > li:not([hidden])')].filter((li) => li !== last);
+      const pool = shown.some(dinner) ? shown.filter(dinner) : shown;
+      if (!pool.length) return;
+      last = pool[Math.floor(Math.random() * pool.length)];
+      lucky.querySelector('[data-lucky-card]')!.replaceChildren(last.firstElementChild!.cloneNode(true));
+      lucky.hidden = false;
+      lucky.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    };
+    for (const b of document.querySelectorAll('[data-lucky-pick]')) b.addEventListener('click', pick);
+    document.querySelector('[data-lucky-close]')!.addEventListener('click', () => (lucky.hidden = true));
+
+    document.addEventListener('click', (event) => {
+      const link = (event.target as HTMLElement).closest<HTMLAnchorElement>('[data-filter-group] a');
+      if (!link) return;
+      event.preventDefault();
+      history.replaceState(null, '', link.href);
+      apply();
+    });
+    apply();
+    if (new URLSearchParams(location.search).has('lucky')) pick();
+  </script>
+</Base>

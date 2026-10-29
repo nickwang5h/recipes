@@ -1,0 +1,65 @@
+---
+import Base from '../../layouts/Base.astro';
+import CatNote from '../../components/CatNote.astro';
+import smokeCat from '../../assets/cats/burnt.png';
+import { langPaths, type Both, type Lang } from '../../i18n';
+
+export const getStaticPaths = langPaths;
+const { lang } = Astro.props as { lang: Lang };
+const T = {
+  zh: { title: '离线', description: '没有网络时显示的页面，列出已经保存在这台设备上的内容。', h1: '现在没有网络', lede: '这一页还没有保存在这台设备上。下面是已经保存、可以离线打开的内容。', empty: '还没有离线保存的页面。联网时打开过的页面会自动保存；也可以在“菜谱”页一次保存全部菜谱。' },
+  en: { title: 'Offline', description: 'Shown when there is no connection: the pages already saved on this device.', h1: 'You’re offline', lede: 'This page isn’t saved on this device yet. These pages are, and open without a connection.', empty: 'No pages saved for offline use yet. Pages you open while online are saved as you go, or save every recipe at once from the Recipes page.' },
+} satisfies Both<Record<string, string>>;
+const t = T[lang];
+---
+
+<Base title={t.title} description={t.description}>
+  <CatNote cat={smokeCat}>
+    <h1>{t.h1}</h1>
+    <p class="lede">{t.lede}</p>
+  </CatNote>
+
+  <p class="fridge-empty" data-saved-empty>{t.empty}</p>
+  <div data-saved></div>
+
+  <script>
+    import { compare, pageLang, url } from '../../i18n';
+
+    const lang = pageLang();
+    // Only this language's pages; the English tree sits under /en/.
+    const GROUPS: [string, string][] = lang === 'en'
+      ? [[url('recipes', 'en'), 'Recipes'], [url('principles', 'en'), 'Science'], [url('cuisines', 'en'), 'Cuisines']]
+      : [[url('recipes'), '菜谱'], [url('principles'), '原理'], [url('cuisines'), '菜系']];
+
+    const render = async () => {
+      if (!('caches' in window)) return;
+      const cache = await caches.open('pages');
+      const entries: { path: string; title: string }[] = [];
+      for (const request of await cache.keys()) {
+        const path = new URL(request.url).pathname;
+        if (path.endsWith('/offline/')) continue;
+        const html = await (await cache.match(request))!.text();
+        const title = html.match(/<title>([^<]*?)(?: · [^<]*)?<\/title>/)?.[1] ?? path;
+        entries.push({ path, title });
+      }
+      const root = document.querySelector<HTMLElement>('[data-saved]')!;
+      for (const [prefix, label] of GROUPS) {
+        const items = entries
+          .filter((e) => e.path.startsWith(prefix) && e.path !== prefix)
+          .sort((a, b) => compare(lang)(a.title, b.title));
+        if (!items.length) continue;
+        const h2 = Object.assign(document.createElement('h2'), { className: 'section-title', textContent: `${label} · ${items.length}` });
+        const ul = Object.assign(document.createElement('ul'), { className: 'chips' });
+        for (const item of items) {
+          const a = Object.assign(document.createElement('a'), { className: 'chip', href: item.path, textContent: item.title });
+          const li = document.createElement('li');
+          li.append(a);
+          ul.append(li);
+        }
+        root.append(h2, ul);
+      }
+      document.querySelector<HTMLElement>('[data-saved-empty]')!.hidden = entries.length > 0;
+    };
+    render();
+  </script>
+</Base>

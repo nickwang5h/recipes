@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { formatQty, roundQty, scaleQty } from '../src/lib/scale';
+import { countedName, formatQty, roundQty, scaleQty, unitLabel } from '../src/lib/scale';
 
 describe('scaleQty', () => {
   it('scales linearly from base servings', () => {
@@ -44,5 +44,24 @@ describe('formatQty', () => {
     expect(formatQty(1.5, '汤匙')).toBe('1.5');
     expect(formatQty(2, '汤匙')).toBe('2');
     expect(formatQty(1200, 'g')).toBe('1200');
+  });
+});
+
+describe('English unit words', () => {
+  it('maps Chinese units and pluralizes with the rounded amount', () => {
+    expect(unitLabel('汤匙', 2, 'en')).toBe('tbsp');
+    expect(unitLabel('瓣', 1, 'en')).toBe('clove');
+    expect(unitLabel('瓣', 3, 'en')).toBe('cloves');
+    expect(unitLabel('瓣', 1.2, 'en')).toBe('clove');
+    expect(unitLabel('个', 4, 'en')).toBe('');
+    expect(unitLabel('片', 2, 'en', 'leaf')).toBe('leaves');
+    expect(unitLabel('片', 2, 'en', '')).toBe('');
+    expect(unitLabel('汤匙', 2, 'zh')).toBe('汤匙');
+  });
+
+  it('picks the plural name for more than one', () => {
+    expect(countedName('egg', 'eggs', 1, '个')).toBe('egg');
+    expect(countedName('egg', 'eggs', 3, '个')).toBe('eggs');
+    expect(countedName('rice', undefined, 3, 'g')).toBe('rice');
   });
 });

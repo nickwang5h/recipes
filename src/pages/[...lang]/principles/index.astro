@@ -1,0 +1,42 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../../../layouts/Base.astro';
+import PrincipleCard from '../../../components/PrincipleCard.astro';
+import { compare, langPaths, type Both, type Lang } from '../../../i18n';
+import { entries } from '../../../i18n/content';
+import { PRINCIPLE_CATEGORIES, type PrincipleCategory } from '../../../lib/categories';
+import readCat from '../../../assets/cats/read.png';
+
+export const getStaticPaths = langPaths;
+const { lang } = Astro.props as { lang: Lang };
+const T = {
+  zh: { title: '原理', description: '跨菜系的烹饪原理：传热、化学反应、乳化、淀粉与蛋白质。', lede: '不分菜系。一条原理讲清楚之后，会在很多道菜里反复出现。' },
+  en: { title: 'The science', description: 'Cooking principles that cross cuisines: heat, chemical reactions, emulsions, starch and protein.', lede: 'These cross every cuisine. Once one is clear, you will see it again in dish after dish.' },
+} satisfies Both<Record<string, string>>;
+const t = T[lang];
+const principles = await entries('principles', lang);
+const groups = (Object.keys(PRINCIPLE_CATEGORIES) as PrincipleCategory[])
+  .map((category) => ({
+    category,
+    items: principles.filter((p) => p.data.category === category).sort((a, b) => compare(lang)(a.data.title, b.data.title)),
+  }))
+  .filter((g) => g.items.length > 0);
+---
+
+<Base title={t.title} description={t.description}>
+  <header class="page-head head-with-cat">
+    <div>
+      <h1>{t.title}</h1>
+      <p class="lede">{t.lede}</p>
+    </div>
+    <Image class="cat-sticker" src={readCat} alt="" widths={[200, 400]} sizes="8rem" loading="eager" />
+  </header>
+  {groups.map(({ category, items }) => (
+    <section>
+      <h2 class="section-title">{PRINCIPLE_CATEGORIES[category][lang]}</h2>
+      <ul class="card-grid">
+        {items.map((principle) => <li><PrincipleCard principle={principle} /></li>)}
+      </ul>
+    </section>
+  ))}
+</Base>

@@ -1,16 +1,19 @@
 ---
+import { langOf } from '../i18n';
+
 interface Props {
   sources: { title: string; author?: string; url?: string }[];
 }
 
 const { sources } = Astro.props;
+const en = langOf(Astro.url) === 'en';
 ---
 
-<h2 class="section-title">参考来源</h2>
+<h2 class="section-title">{en ? 'Sources' : '参考来源'}</h2>
 <ol class="sources">
   {sources.map((s) => (
     <li>
-      {s.author && <>{s.author}，</>}
+      {s.author && <>{s.author}{en ? ', ' : '，'}</>}
       {s.url ? <a href={s.url} rel="noopener">{s.title}</a> : <cite>{s.title}</cite>}
     </li>
   ))}

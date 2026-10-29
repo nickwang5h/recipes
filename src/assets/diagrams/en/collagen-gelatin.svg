@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="t d">
+  <title id="t">Moist heat turns collagen into gelatin, which sets when cooled</title>
+  <desc id="d">The triple helix of collagen unwinds under long moist heat and becomes gelatin chains dispersed in the hot broth. On cooling, parts of the chains link up again into a net that traps the water in the broth.</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .water { fill: #9cc3d9; fill-opacity: .45; }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .chain { stroke: var(--primary, #b83e30); stroke-width: 3; fill: none; stroke-linecap: round; }
+    .blue { stroke: var(--accent-blue, #2f6fca); }
+    .green { stroke: var(--accent-green, #2f8359); }
+    .border { stroke: var(--border, #d3ccbe); stroke-width: 2; fill: none; }
+    .label { font: 15px "Helvetica Neue", Arial, "Source Han Sans SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+  </style>
+  <rect class="bg" width="600" height="420" rx="12"/>
+  <text class="label" x="32" y="42">Moist heat unwinds collagen; cooling builds a gelatin network</text>
+
+  <text class="label" x="80" y="84" text-anchor="middle">Collagen</text>
+  <g transform="translate(80 115)">
+    <path class="chain" d="M-24 0 C24 18 24 26 -24 44 S-24 70 24 88 S24 114 -24 132"/>
+    <path class="chain blue" d="M24 0 C-24 18 -24 26 24 44 S24 70 -24 88 S-24 114 24 132"/>
+    <path class="chain green" d="M0 0 C-31 18 31 26 0 44 S31 70 0 88 S-31 114 0 132"/>
+  </g>
+  <text class="label muted" x="80" y="277" text-anchor="middle">Triple helix</text>
+
+  <path class="line" d="M127 178 H151 M144 171 L151 178 L144 185"/>
+  <text class="label muted" x="149" y="111" text-anchor="middle">Prolonged</text>
+  <text class="label muted" x="149" y="131" text-anchor="middle">moist heat</text>
+
+  <text class="label" x="218" y="84" text-anchor="middle">Helix unwinds</text>
+  <g transform="translate(218 115)">
+    <path class="chain" d="M-22 0 C-12 23 -31 40 -16 61 S-35 103 -27 132"/>
+    <path class="chain blue" d="M0 0 C-12 25 15 40 0 66 S13 105 0 132"/>
+    <path class="chain green" d="M22 0 C12 24 33 39 20 65 S38 107 28 132"/>
+  </g>
+  <text class="label muted" x="218" y="277" text-anchor="middle">Some bonds break</text>
+
+  <path class="line" d="M270 178 H294 M287 171 L294 178 L287 185"/>
+
+  <text class="label" x="365" y="84" text-anchor="middle">Gelatin in hot broth</text>
+  <rect class="water" x="312" y="127" width="106" height="121" rx="8"/>
+  <path class="line" d="M312 115 V248 H418 V115"/>
+  <path class="chain" d="M326 150 C340 127 349 169 371 145 M347 207 C369 190 373 224 402 208"/>
+  <path class="chain blue" d="M329 185 C345 171 351 194 365 182 M383 165 Q399 153 404 181"/>
+  <path class="chain green" d="M325 222 Q341 209 347 231 M378 130 Q394 145 405 136"/>
+  <text class="label muted" x="365" y="277" text-anchor="middle">Broth turns rich, silky</text>
+
+  <path class="line" d="M429 178 H452 M445 171 L452 178 L445 185"/>
+  <text class="label muted" x="442" y="111" text-anchor="middle">Cool</text>
+
+  <text class="label" x="518" y="84" text-anchor="middle">Broth sets</text>
+  <rect class="water" x="468" y="127" width="100" height="121" rx="8"/>
+  <rect class="line" x="468" y="127" width="100" height="121" rx="8"/>
+  <path class="chain" d="M478 144 Q498 163 518 146 T558 144 M478 188 Q499 170 518 188 T558 187 M478 230 Q498 212 518 230 T558 229"/>
+  <path class="chain blue" d="M482 138 Q472 162 485 188 T481 239 M517 137 Q529 163 518 188 T520 239"/>
+  <path class="chain green" d="M551 138 Q563 163 552 188 T554 239"/>
+  <text class="label muted" x="518" y="277" text-anchor="middle">Net traps water</text>
+
+  <path class="border" d="M32 307 H568"/>
+  <text class="label muted" x="32" y="338">About 60°C (140°F): collagen fibres begin to shrink.</text>
+  <text class="label muted" x="32" y="364">Above 70°C (160°F) for long enough: much of it becomes gelatin.</text>
+  <text class="label muted" x="32" y="394">Whether it sets when cold also depends on gelatin concentration.</text>
+</svg>

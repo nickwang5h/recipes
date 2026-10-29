@@ -14,10 +14,11 @@ import {
   type WhereToBuy,
 } from './lib/categories';
 
-const keys = <T extends string>(o: Record<T, string>) => Object.keys(o) as [T, ...T[]];
+const keys = <T extends string>(o: Record<T, unknown>) => Object.keys(o) as [T, ...T[]];
 
-// Only Chinese is published for now. Each collection reads its `zh/` folder so
-// entry ids stay equal to the public slug; another locale becomes a sibling folder.
+// Chinese is the source. Each collection reads its `zh/` folder so entry ids stay equal to the
+// public slug; translations sit in a sibling `en/` folder and carry only the text (see the *En
+// collections at the end), so quantities, references and covers live in one place.
 const LOCALE = 'zh';
 
 const source = z.object({
@@ -125,4 +126,53 @@ const regions = defineCollection({
   }),
 });
 
-export const collections = { cuisines, principles, recipes, ingredients, regions };
+// ---------- English ----------
+// A translation holds what a reader sees as words; everything else comes from the Chinese entry
+// with the same id (src/i18n/content.ts merges them). `translated` is the Chinese entry's
+// `updated` date the translation was made from, so a later edit to the Chinese shows up as stale.
+// How to write these files: docs/english/translating.md.
+
+/** English unit words for a recipe line; `''` prints the bare number ("2 eggs"). */
+export const EN_UNITS = ['', 'g', 'ml', 'tsp', 'tbsp', 'cup', 'clove', 'slice', 'piece', 'sheet', 'leaf', 'stalk', 'sprig', 'handful', 'knob', 'can'] as const;
+
+const enText = {
+  title: z.string(),
+  summary: z.string(),
+  translated: z.coerce.date(),
+};
+
+const recipesEn = defineCollection({
+  loader: glob({ base: './src/content/recipes/en', pattern: '*.md' }),
+  schema: z.object({
+    ...enText,
+    original: z.string().optional(),
+    coverAlt: z.string().optional(),
+    // Mirrors the Chinese ingredient groups one for one, in the same order.
+    ingredients: z.array(z.object({
+      group: z.string().optional(),
+      items: z.array(z.object({
+        // A string, or [singular, plural] for things counted without a unit word ("1 egg", "2 eggs").
+        name: z.union([z.string(), z.tuple([z.string(), z.string()])]),
+        unit: z.enum(EN_UNITS).optional(),
+        note: z.string().optional(),
+      })),
+    })),
+  }),
+});
+
+const principlesEn = defineCollection({
+  loader: glob({ base: './src/content/principles/en', pattern: '*.md' }),
+  schema: z.object({ ...enText, aliases: z.array(z.string()).default([]) }),
+});
+
+const cuisinesEn = defineCollection({
+  loader: glob({ base: './src/content/cuisines/en', pattern: '*.md' }),
+  schema: z.object({ ...enText, original: z.string().optional(), coverAlt: z.string().optional() }),
+});
+
+const regionsEn = defineCollection({
+  loader: glob({ base: './src/content/regions/en', pattern: '*.md' }),
+  schema: z.object({ ...enText, original: z.string().optional(), coverAlt: z.string().optional() }),
+});
+
+export const collections = { cuisines, principles, recipes, ingredients, regions, recipesEn, principlesEn, cuisinesEn, regionsEn };

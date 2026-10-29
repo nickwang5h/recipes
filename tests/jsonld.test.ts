@@ -37,6 +37,7 @@ describe('recipeLd', () => {
     keywords: ['乳化'],
     updated: new Date('2026-10-01'),
     site: { name: '厨房原理笔记', url: 'https://example.com/' },
+    lang: 'zh',
   });
 
   it('formats ISO durations and the yield', () => {

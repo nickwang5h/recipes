@@ -1,14 +1,20 @@
 ---
 // Markup for the shared shopping list; src/scripts/shopping-list.ts fills it in.
+import { langOf, type Both } from '../i18n';
+const T = {
+  zh: { title: '购物清单', copy: '复制清单', stock: '买到的放进冰箱', clear: '清空' },
+  en: { title: 'Shopping list', copy: 'Copy list', stock: 'Put what I bought in the fridge', clear: 'Clear' },
+} satisfies Both<Record<string, string>>;
+const t = T[langOf(Astro.url)];
 ---
 
 <details class="shopping-list" data-list-wrap open hidden>
-  <summary><h2 class="section-title">购物清单 <span class="fridge-count" data-list-count></span></h2></summary>
+  <summary><h2 class="section-title">{t.title} <span class="fridge-count" data-list-count></span></h2></summary>
   <div data-list></div>
   <div class="kit-actions shopping-actions">
-    <button class="text-btn" type="button" data-list-copy>复制清单</button>
-    <button class="text-btn" type="button" data-list-stock>买到的放进冰箱</button>
-    <button class="text-btn" type="button" data-list-clear>清空</button>
+    <button class="text-btn" type="button" data-list-copy>{t.copy}</button>
+    <button class="text-btn" type="button" data-list-stock>{t.stock}</button>
+    <button class="text-btn" type="button" data-list-clear>{t.clear}</button>
     <span class="offline-status" data-list-status aria-live="polite"></span>
   </div>
 </details>

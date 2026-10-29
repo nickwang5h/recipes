@@ -1,0 +1,365 @@
+---
+import { getCollection } from 'astro:content';
+import { getImage } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import ShoppingList from '../../components/ShoppingList.astro';
+import CatNote from '../../components/CatNote.astro';
+import fridgeCat from '../../assets/cats/fridge.png';
+import potCat from '../../assets/cats/search-empty.png';
+import { compare, formatTotal, langPaths, url, type Both, type Lang } from '../../i18n';
+import { cuisines as getCuisines, entries } from '../../i18n/content';
+import { COURSES, INGREDIENT_KINDS, TIME_LIMITS, type Course, type IngredientKind } from '../../lib/categories';
+import { ALWAYS_HAVE, DEFAULT_STAPLES } from '../../lib/fridge';
+
+export const getStaticPaths = langPaths;
+const { lang } = Astro.props as { lang: Lang };
+const T = {
+  zh: {
+    title: '冰箱', description: '选出手头有的食材，看看能做哪些菜，还差什么。', lede: '选出手头有的食材，看看能做哪些菜。差一两样的也列出来，顺便知道该买什么。',
+    pick: '选择食材', search: '搜索食材', placeholder: '搜索：鸡蛋、番茄、pork…', have: '我有', clear: '清空', empty: '还没选。搜索或在下面的类别里点选。',
+    staples: '葱姜蒜和常备调料', staplesHelp: '默认视为家里有，没有的点一下取消。清水总是算有。',
+    results: '可以做的菜', byCourse: '按类型筛选', all: '全部', byTime: '按用时筛选', anyTime: '不限时间', parts: '也列出酱汁、高汤等半成品',
+    hint: '先看看冰箱里有什么', hintText: '在旁边搜索或点选手头的食材，能做的菜会排在这里。',
+    ready: '现在就能做', almost: '差一两样', none: '还凑不出一道菜', noneText: '多选几样食材试试。葱姜蒜和常备调料默认算家里有，不用再选。',
+  },
+  en: {
+    title: 'Fridge', description: 'Pick what you have on hand and see what you can cook, and what you still need.', lede: 'Pick what you have on hand and see what you can cook. Recipes missing one or two things are listed too, so you know what to buy.',
+    pick: 'Choose ingredients', search: 'Search ingredients', placeholder: 'Search: eggs, tofu…', have: 'I have', clear: 'Clear', empty: 'Nothing yet. Search, or tap ingredients in the groups below.',
+    staples: 'Aromatics and pantry staples', staplesHelp: 'Counted as on hand unless you tap to untick them. Water always counts.',
+    results: 'What you can cook', byCourse: 'Filter by type', all: 'All', byTime: 'Filter by time', anyTime: 'Any time', parts: 'Also list sauces, stocks and other building blocks',
+    hint: 'First, what’s in the fridge?', hintText: 'Search or tap what you have, and the recipes you can make will line up here.',
+    ready: 'Ready to cook', almost: 'One or two short', none: 'Not enough for a dish yet', noneText: 'Try picking a few more. Aromatics and pantry staples already count as on hand.',
+  },
+} satisfies Both<Record<string, string>>;
+const t = T[lang];
+
+const cuisines = await getCuisines(lang);
+const order = new Map(cuisines.map((c, i) => [c.id, i]));
+const recipes = (await entries('recipes', lang)).sort(
+  (a, b) => order.get(a.data.cuisine.id)! - order.get(b.data.cuisine.id)! || compare(lang)(a.data.title, b.data.title),
+);
+const catalog = await getCollection('ingredients');
+
+// How many recipes use each ingredient; the pickers list common ones first.
+const uses = new Map<string, number>();
+const rec = await Promise.all(recipes.map(async (r) => {
+  const all = new Set(r.data.ingredients.flatMap((g) => g.items.map((i) => i.ref.id)));
+  for (const id of all) uses.set(id, (uses.get(id) ?? 0) + 1);
+  const req = [...new Set(r.data.ingredients.flatMap((g) => g.items.filter((i) => !i.optional).map((i) => i.ref.id)))];
+  return {
+    id: r.id,
+    href: url(`recipes/${r.id}`, lang),
+    title: r.data.title,
+    summary: r.data.summary,
+    cuisine: r.data.cuisine.id,
+    course: r.data.course,
+    time: formatTotal(r.data.time, lang),
+    minutes: r.data.time.prep + r.data.time.cook,
+    component: r.data.component,
+    img: r.data.cover ? (await getImage({ src: r.data.cover, width: 480, format: 'webp' })).src : undefined,
+    req,
+  };
+}));
+
+const hidden = new Set([...ALWAYS_HAVE, ...DEFAULT_STAPLES]);
+const used = catalog.filter((i) => uses.has(i.id) || catalog.some((o) => uses.has(o.id) && o.data.substitutes.some((s) => s.id === i.id)));
+const byUse = (a: (typeof catalog)[number], b: (typeof catalog)[number]) => (uses.get(b.id) ?? 0) - (uses.get(a.id) ?? 0);
+const kinds = (Object.keys(INGREDIENT_KINDS) as IngredientKind[])
+  .map((kind) => ({ kind, items: used.filter((i) => i.data.kind === kind && !hidden.has(i.id)).sort(byUse) }))
+  .filter((g) => g.items.length > 0);
+const staples = DEFAULT_STAPLES.map((id) => catalog.find((i) => i.id === id)!);
+const usedCourses = (Object.keys(COURSES) as Course[]).filter((c) => recipes.some((r) => r.data.course === c));
+
+const data = {
+  ingredients: used
+    .filter((i) => !ALWAYS_HAVE.includes(i.id))
+    .sort(byUse)
+    .map((i) => ({
+      id: i.id,
+      zh: i.data.zh,
+      en: i.data.en,
+      where: i.data.where,
+      names: [i.data.zh, ...i.data.aliases, i.data.en],
+      label: lang === 'en' ? i.data.en : i.data.zh,
+      subs: i.data.substitutes.map((s) => s.id),
+    })),
+  recipes: rec,
+  cuisines: Object.fromEntries(cuisines.map((c) => [c.id, { title: c.data.title, accent: c.data.accent }])),
+  staples: DEFAULT_STAPLES,
+};
+const label = (i: (typeof catalog)[number]) => (lang === 'en' ? i.data.en : i.data.zh);
+---
+
+<Base title={t.title} description={t.description}>
+  <header class="page-head">
+    <h1>{t.title}</h1>
+    <p class="lede">{t.lede}</p>
+  </header>
+
+  <div class="fridge-layout">
+    <aside class="recipe-aside fridge-picker" aria-label={t.pick}>
+      <label class="fridge-search">
+        <span class="visually-hidden">{t.search}</span>
+        <input type="search" placeholder={t.placeholder} autocomplete="off" data-search />
+      </label>
+      <ul class="chips fridge-suggest" data-suggest aria-live="polite"></ul>
+
+      <div class="fridge-have-head">
+        <h2>{t.have}</h2>
+        <button class="text-btn" type="button" data-clear hidden>{t.clear}</button>
+      </div>
+      <ul class="chips" data-have></ul>
+      <p class="fridge-empty" data-have-empty>{t.empty}</p>
+
+      <details class="fridge-group">
+        <summary>{t.staples} <span class="fridge-count" data-staple-count></span></summary>
+        <p class="fridge-help">{t.staplesHelp}</p>
+        <ul class="chips">
+          {staples.map((i) => <li><button class="chip pick" type="button" data-id={i.id} aria-pressed="true">{label(i)}</button></li>)}
+        </ul>
+      </details>
+
+      {kinds.map(({ kind, items }) => (
+        <details class="fridge-group">
+          <summary>{INGREDIENT_KINDS[kind][lang]} <span class="fridge-count" data-kind-count={kind}></span></summary>
+          <ul class="chips" data-kind={kind}>
+            {items.map((i) => <li><button class="chip pick" type="button" data-id={i.id} data-months={i.data.season?.join(',')} aria-pressed="false">{label(i)}</button></li>)}
+          </ul>
+        </details>
+      ))}
+    </aside>
+
+    <section class="fridge-results" aria-label={t.results}>
+      <nav class="filters chips" aria-label={t.byCourse} data-course-filter>
+        <button class="chip" type="button" data-course="" aria-pressed="true">{t.all}</button>
+        {usedCourses.map((c) => <button class="chip" type="button" data-course={c} aria-pressed="false">{COURSES[c][lang]}</button>)}
+      </nav>
+      <nav class="filters chips" aria-label={t.byTime} data-time-filter>
+        <button class="chip" type="button" data-time="" aria-pressed="true">{t.anyTime}</button>
+        {Object.entries(TIME_LIMITS).map(([id, limit]) => <button class="chip" type="button" data-time={id} aria-pressed="false">{limit.label[lang]}</button>)}
+      </nav>
+      <label class="parts-toggle">
+        <input type="checkbox" data-parts />
+        {t.parts}
+      </label>
+
+      <ShoppingList />
+
+      <CatNote cat={fridgeCat} data-hint>
+        <p class="cat-note-title">{t.hint}</p>
+        <p>{t.hintText}</p>
+      </CatNote>
+
+      <div data-ready-wrap hidden>
+        <h2 class="section-title">{t.ready} <span class="fridge-count" data-ready-count></span></h2>
+        <ul class="card-grid" data-ready></ul>
+      </div>
+      <div data-almost-wrap hidden>
+        <h2 class="section-title"><span data-almost-title>{t.almost}</span> <span class="fridge-count" data-almost-count></span></h2>
+        <ul class="card-grid" data-almost></ul>
+        <button class="text-btn fridge-more" type="button" data-more hidden></button>
+      </div>
+      <CatNote cat={potCat} hidden data-none>
+        <p class="cat-note-title">{t.none}</p>
+        <p>{t.noneText}</p>
+      </CatNote>
+    </section>
+  </div>
+
+  <script type="application/json" id="fridge-data" set:html={JSON.stringify(data)} />
+
+  <script>
+    import { compare, joinList, pageLang } from '../../i18n';
+    import { withinTime, type WhereToBuy } from '../../lib/categories';
+    import { matchRecipes, searchIngredients, type Match } from '../../lib/fridge';
+    import { get, keys, set, setMany, subscribe } from '../../scripts/store';
+    import { addToList, isListed, mountShoppingList } from '../../scripts/shopping-list';
+    import { el, recipeCard } from '../../scripts/ui';
+
+    const lang = pageLang();
+    const T = {
+      zh: { missing: '还缺：', swap: (sub: string, need: string) => `用${sub}代替${need}`, listed: '已在购物清单里', add: '缺的加入购物清单', inSeason: '当季', almost: '差一两样', loose: '还差几样', more: (n: number) => `再显示 ${n} 道`, sep: '；' },
+      en: { missing: 'Still need: ', swap: (sub: string, need: string) => `${sub} instead of ${need}`, listed: 'On the shopping list', add: 'Add what’s missing to the list', inSeason: 'In season', almost: 'One or two short', loose: 'A few short', more: (n: number) => `Show ${n} more`, sep: '; ' },
+    }[lang];
+
+    interface Ingredient { id: string; zh: string; en: string; label: string; where: WhereToBuy; names: string[]; subs: string[] }
+    interface Recipe { id: string; href: string; title: string; summary: string; cuisine: string; course: string; time: string; minutes: number; component: boolean; img?: string; req: string[] }
+    interface Data {
+      ingredients: Ingredient[];
+      recipes: Recipe[];
+      cuisines: Record<string, { title: string; accent: string }>;
+      staples: string[];
+    }
+
+    const PAGE = 24;
+    const data: Data = JSON.parse(document.getElementById('fridge-data')!.textContent!);
+    const byId = new Map(data.ingredients.map((i) => [i.id, i]));
+    const substitutes = Object.fromEntries(data.ingredients.filter((i) => i.subs.length).map((i) => [i.id, i.subs]));
+    const isStaple = (id: string) => data.staples.includes(id);
+    const nameOf = (id: string) => byId.get(id)?.label ?? id;
+    const $ = <T extends HTMLElement>(sel: string) => document.querySelector<T>(sel)!;
+
+    // What's in the fridge lives in the shared store (`have:<id>`), as do the staples the cook
+    // says they're out of (`staple-off:<id>`), so the whole family sees the same fridge.
+    const chosen = () => new Set(keys('have:').filter((id) => byId.has(id) && !isStaple(id)));
+    const staplesOff = () => new Set(keys('staple-off:').filter(isStaple));
+    let course = '';
+    let time = '';
+    let shown = PAGE;
+
+    const isOn = (id: string) => (isStaple(id) ? !staplesOff().has(id) : chosen().has(id));
+    const setOn = (id: string, on: boolean) => {
+      shown = PAGE;
+      if (isStaple(id)) set(`staple-off:${id}`, on ? null : true);
+      else set(`have:${id}`, on ? true : null);
+    };
+
+    const pickButton = (id: string, label = nameOf(id)) => {
+      const b = el('button', { type: 'button', className: 'chip pick', textContent: label });
+      b.dataset.id = id;
+      b.setAttribute('aria-pressed', String(isOn(id)));
+      return el('li', {}, b);
+    };
+
+    const card = (m: Match<Recipe>) => {
+      const r = m.recipe;
+      const extra: HTMLElement[] = [];
+      if (m.missing.length) extra.push(el('p', { className: 'fridge-missing', textContent: `${T.missing}${joinList(m.missing.map(nameOf), lang)}` }));
+      if (m.swaps.length)
+        extra.push(el('p', { className: 'fridge-swap', textContent: m.swaps.map(([need, sub]) => T.swap(nameOf(sub), nameOf(need))).join(T.sep) }));
+      const li = el('li', { className: 'fridge-card' }, recipeCard(r, data.cuisines[r.cuisine], extra));
+      if (m.missing.length) {
+        const listed = isListed(r.title, m.missing);
+        const add = el('button', { type: 'button', className: 'text-btn add-to-list', textContent: listed ? T.listed : T.add });
+        add.disabled = listed;
+        add.addEventListener('click', () => addToList(r.title, m.missing));
+        li.append(add);
+      }
+      return li;
+    };
+
+    mountShoppingList(new Map(data.ingredients.map((i) => [i.id, i])));
+
+    // A leaf on what is in field season this month.
+    const month = String(new Date().getMonth() + 1);
+    for (const b of document.querySelectorAll<HTMLElement>('button.pick[data-months]')) {
+      if (!b.dataset.months!.split(',').includes(month)) continue;
+      b.classList.add('in-season');
+      b.title = T.inSeason;
+    }
+
+    const search = $<HTMLInputElement>('[data-search]');
+    const renderSuggest = () => {
+      const hits = searchIngredients(data.ingredients, search.value);
+      $('[data-suggest]').replaceChildren(...hits.map((i) => pickButton(i.id)));
+    };
+
+    function render() {
+      const mine = chosen();
+      // Pickers rendered on the server and in the suggestion list.
+      for (const b of document.querySelectorAll<HTMLButtonElement>('button.pick')) b.setAttribute('aria-pressed', String(isOn(b.dataset.id!)));
+      for (const list of document.querySelectorAll<HTMLElement>('[data-kind]')) {
+        const n = [...list.querySelectorAll<HTMLButtonElement>('button.pick')].filter((b) => mine.has(b.dataset.id!)).length;
+        $(`[data-kind-count="${list.dataset.kind}"]`).textContent = n ? `· ${n}` : '';
+      }
+      const off = staplesOff();
+      $('[data-staple-count]').textContent = `· ${data.staples.length - off.size}/${data.staples.length}`;
+
+      const have = [...mine].sort((a, b) => compare(lang)(nameOf(a), nameOf(b)));
+      $('[data-have]').replaceChildren(...have.map((id) => pickButton(id, `${nameOf(id)} ×`)));
+      $('[data-have-empty]').hidden = have.length > 0;
+      $('[data-clear]').hidden = have.length === 0;
+
+      for (const b of document.querySelectorAll<HTMLButtonElement>('[data-course-filter] button'))
+        b.setAttribute('aria-pressed', String(b.dataset.course === course));
+
+      for (const b of document.querySelectorAll<HTMLButtonElement>('[data-time-filter] button'))
+        b.setAttribute('aria-pressed', String(b.dataset.time === time));
+
+      $<HTMLInputElement>('[data-parts]').checked = get('pref:parts') === true;
+      const showParts = get('pref:parts') === true || course === 'sauce';
+      const pool = data.recipes.filter((r) => (showParts || !r.component) && (!course || r.course === course) && withinTime(time, r.minutes));
+      const staples = new Set(data.staples.filter((id) => !off.has(id)));
+      // When nothing is within two of what's at hand (one cut of meat, say), show the nearest anyway.
+      const match = (maxMissing: number) => matchRecipes(pool, { chosen: new Set(have), staples, substitutes, maxMissing });
+      const close = match(2);
+      const loose = close.length === 0;
+      const matches = loose ? match(5) : close;
+      const ready = matches.filter((m) => m.missing.length === 0);
+      if (time) ready.sort((x, y) => x.recipe.minutes - y.recipe.minutes);
+      const almost = matches.filter((m) => m.missing.length > 0);
+
+      $('[data-hint]').hidden = have.length > 0;
+      $('[data-none]').hidden = have.length === 0 || matches.length > 0;
+      $('[data-ready-wrap]').hidden = ready.length === 0;
+      $('[data-ready-count]').textContent = `· ${ready.length}`;
+      $('[data-ready]').replaceChildren(...ready.map(card));
+      $('[data-almost-wrap]').hidden = almost.length === 0;
+      $('[data-almost-count]').textContent = `· ${almost.length}`;
+      $('[data-almost-title]').textContent = loose ? T.loose : T.almost;
+      $('[data-almost]').replaceChildren(...almost.slice(0, shown).map(card));
+      const more = $<HTMLButtonElement>('[data-more]');
+      more.hidden = almost.length <= shown;
+      more.textContent = T.more(Math.min(PAGE, almost.length - shown));
+    }
+
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      const pick = target.closest<HTMLButtonElement>('button.pick');
+      if (pick) {
+        const id = pick.dataset.id!;
+        // A suggestion always adds; elsewhere the chip toggles.
+        const fromSuggest = !!pick.closest('[data-suggest]');
+        setOn(id, fromSuggest ? true : !isOn(id));
+        if (fromSuggest) {
+          search.value = '';
+          renderSuggest();
+          search.focus();
+        }
+        return;
+      }
+      const courseBtn = target.closest<HTMLButtonElement>('[data-course-filter] button');
+      if (courseBtn) {
+        course = courseBtn.dataset.course ?? '';
+        shown = PAGE;
+        render();
+        return;
+      }
+      const timeBtn = target.closest<HTMLButtonElement>('[data-time-filter] button');
+      if (timeBtn) {
+        time = timeBtn.dataset.time ?? '';
+        shown = PAGE;
+        render();
+        return;
+      }
+      if (target.closest('[data-more]')) {
+        shown += PAGE;
+        render();
+        return;
+      }
+      if (target.closest('[data-clear]')) {
+        shown = PAGE;
+        setMany(Object.fromEntries([...chosen()].map((id) => [`have:${id}`, null])));
+      }
+    });
+
+    const partsBox = $<HTMLInputElement>('[data-parts]');
+    partsBox.addEventListener('change', () => {
+      shown = PAGE;
+      set('pref:parts', partsBox.checked || null);
+    });
+    search.addEventListener('input', renderSuggest);
+    search.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter') return;
+      event.preventDefault();
+      const [first] = searchIngredients(data.ingredients, search.value, 1);
+      if (!first) return;
+      setOn(first.id, true);
+      search.value = '';
+      renderSuggest();
+    });
+
+    subscribe(render);
+    render();
+  </script>
+</Base>

@@ -4,12 +4,15 @@
 //
 // An inline <style> applies to the whole document, so every selector and id is prefixed
 // with a per-diagram scope before rendering.
+// English pages use the translated copy in diagrams/en/; without one they show no diagram.
+import { langOf } from '../i18n';
+
 interface Props {
   slug: string;
 }
 
-const svgs = import.meta.glob<string>('../assets/diagrams/*.svg', { query: '?raw', import: 'default', eager: true });
-const raw = svgs[`../assets/diagrams/${Astro.props.slug}.svg`];
+const svgs = import.meta.glob<string>('../assets/diagrams/**/*.svg', { query: '?raw', import: 'default', eager: true });
+const raw = svgs[`../assets/diagrams/${langOf(Astro.url) === 'en' ? 'en/' : ''}${Astro.props.slug}.svg`];
 const scope = `dg-${Astro.props.slug}`;
 
 function scoped(svg: string): string {

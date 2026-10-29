@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { url } from '../lib/site';
+import { langOf, url } from '../i18n';
 
 interface Props {
   cuisine: CollectionEntry<'cuisines'>;
@@ -11,4 +11,4 @@ const { cuisine, link = true } = Astro.props;
 const cls = `cuisine-tag accent-${cuisine.data.accent}`;
 ---
 
-{link ? <a class={cls} href={url(`cuisines/${cuisine.id}`)}>{cuisine.data.title}</a> : <span class={cls}>{cuisine.data.title}</span>}
+{link ? <a class={cls} href={url(`cuisines/${cuisine.id}`, langOf(Astro.url))}>{cuisine.data.title}</a> : <span class={cls}>{cuisine.data.title}</span>}

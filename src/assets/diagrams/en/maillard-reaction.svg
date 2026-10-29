@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="t d">
+  <title id="t">The surface has to dry before browning speeds up</title>
+  <desc id="d">Three pieces of meat show a wet, a dry and a browned surface in turn. The temperature axis marks a wet surface staying near the boiling point of water, browning speeding up once it has dried, and further overheating turning it burnt and bitter.</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .meat { fill: var(--border, #d3ccbe); }
+    .brown { fill: #8a4f17; }
+    .char { fill: var(--text, #24221e); }
+    .water { fill: #9cc3d9; fill-opacity: .45; }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .steam { stroke: var(--accent-blue, #2f6fca); stroke-width: 2; fill: none; }
+    .warm { stroke: var(--accent-yellow, #a66b00); stroke-width: 4; fill: none; }
+    .label { font: 15px "Helvetica Neue", Arial, "Source Han Sans SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+    .warning { fill: var(--primary, #b83e30); }
+  </style>
+  <rect class="bg" width="600" height="400" rx="12"/>
+
+  <!-- The same surface passes from wet to dry to browned. -->
+  <text class="label" x="104" y="43" text-anchor="middle">Wet surface</text>
+  <text class="label" x="300" y="43" text-anchor="middle">Surface dries</text>
+  <text class="label" x="496" y="43" text-anchor="middle">Surface browns</text>
+  <path class="steam" d="M80 85 C69 74 88 70 79 59 M106 85 C95 74 114 70 105 59 M132 85 C121 74 140 70 131 59"/>
+  <rect class="meat" x="52" y="96" width="104" height="64" rx="18"/>
+  <path class="water" d="M52 116 Q52 96 72 96 H136 Q156 96 156 116 V121 H52 Z"/>
+  <rect class="line" x="52" y="96" width="104" height="64" rx="18"/>
+  <rect class="meat" x="248" y="96" width="104" height="64" rx="18"/>
+  <rect class="line" x="248" y="96" width="104" height="64" rx="18"/>
+  <path class="line" d="M266 114 H334"/>
+  <rect class="meat" x="444" y="96" width="104" height="64" rx="18"/>
+  <path class="brown" d="M444 118 Q444 96 466 96 H526 Q548 96 548 118 V126 H444 Z"/>
+  <rect class="line" x="444" y="96" width="104" height="64" rx="18"/>
+  <path class="line" d="M174 128 H225 M217 120 L225 128 L217 136 M370 128 H421 M413 120 L421 128 L413 136"/>
+  <text class="label muted" x="104" y="192" text-anchor="middle">Heat goes to evaporation</text>
+  <text class="label muted" x="300" y="192" text-anchor="middle">Dry surface keeps heating</text>
+  <text class="label muted" x="496" y="192" text-anchor="middle">More colour and aroma</text>
+
+  <!-- A qualitative temperature axis, with only the page's thresholds. -->
+  <text class="label" x="300" y="240" text-anchor="middle">Surface temperature rises</text>
+  <path class="line" d="M40 270 H560 M550 262 L560 270 L550 278"/>
+  <path class="warm" d="M276 270 H514"/>
+  <path class="line" d="M104 263 V280 M300 263 V280"/>
+  <text class="label" x="104" y="310" text-anchor="middle">About 100°C (210°F)</text>
+  <text class="label" x="300" y="310" text-anchor="middle">Above about 120–140°C</text>
+  <text class="label" x="496" y="310" text-anchor="middle">Browning speeds up</text>
+  <text class="label muted" x="104" y="333" text-anchor="middle">Wet surface stays below</text>
+  <circle class="char" cx="184" cy="368" r="7"/>
+  <text class="label warning" x="201" y="373">Keep overheating → burnt, bitter</text>
+</svg>

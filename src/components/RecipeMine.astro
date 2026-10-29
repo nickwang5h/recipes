@@ -1,30 +1,38 @@
 ---
 // Per-recipe family bits on the recipe page: 常做 (favorite), add to the week's menu, and a
 // free-text note. Stored in the shared store as fav:<id>, menu:<day>, note:<id>.
+import { langOf, type Both } from '../i18n';
+
 interface Props {
   id: string;
 }
 const { id } = Astro.props;
+const T = {
+  zh: { fav: '常做', menu: '加到菜单', which: '加到哪天的菜单', pick: '选一天…', note: '我的笔记', placeholder: '比如：盐减半；孩子爱吃，下次做双份', hint: '自动保存。加入家庭后，家里人都能看到。' },
+  en: { fav: 'Cook often', menu: 'Add to menu', which: 'Which day’s menu', pick: 'Pick a day…', note: 'My notes', placeholder: 'e.g. half the salt; the kids loved it, make double next time', hint: 'Saved as you type. Once you join a family, everyone in it sees them.' },
+} satisfies Both<Record<string, string>>;
+const t = T[langOf(Astro.url)];
 ---
 
 <div class="mine-bar" data-mine={id}>
   <button class="text-btn fav-btn" type="button" aria-pressed="false" data-fav>
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.1A4.4 4.4 0 0 1 12 7.6a4.4 4.4 0 0 1 7.5 2.8c0 5.5-7.5 10.1-7.5 10.1z" /></svg>
-    <span data-fav-label>常做</span>
+    <span data-fav-label>{t.fav}</span>
   </button>
   <label class="menu-pick text-btn">
-    <span>加到菜单</span>
-    <select data-menu-day aria-label="加到哪天的菜单"><option value="">选一天…</option></select>
+    <span>{t.menu}</span>
+    <select data-menu-day aria-label={t.which}><option value="">{t.pick}</option></select>
   </label>
   <span class="offline-status" data-mine-status aria-live="polite"></span>
 </div>
 <details class="mine-note" data-note-wrap>
-  <summary>我的笔记</summary>
-  <textarea data-note rows="3" placeholder="比如：盐减半；孩子爱吃，下次做双份"></textarea>
-  <p class="mine-note-hint">自动保存。加入家庭后，家里人都能看到。</p>
+  <summary>{t.note}</summary>
+  <textarea data-note rows="3" placeholder={t.placeholder}></textarea>
+  <p class="mine-note-hint">{t.hint}</p>
 </details>
 
 <script>
+  import { pageLang } from '../i18n';
   import { dayKey, dayLabel, upcoming } from '../lib/days';
   import { get, set, subscribe } from '../scripts/store';
   import { flash } from '../scripts/ui';
@@ -37,13 +45,18 @@ const { id } = Astro.props;
   const noteWrap = document.querySelector<HTMLDetailsElement>('[data-note-wrap]')!;
   const note = noteWrap.querySelector<HTMLTextAreaElement>('[data-note]')!;
 
+  const lang = pageLang();
+  const T = {
+    zh: { fav: '常做', on: '常做 ✓', already: (day: string) => `${day}已经有这道了`, added: (day: string) => `加到了${day}` },
+    en: { fav: 'Cook often', on: 'Cook often ✓', already: (day: string) => `Already on ${day}`, added: (day: string) => `Added to ${day}` },
+  }[lang];
   const today = new Date();
-  for (const day of upcoming(today)) select.append(new Option(dayLabel(day, today), dayKey(day)));
+  for (const day of upcoming(today)) select.append(new Option(dayLabel(day, today, lang), dayKey(day)));
 
   const render = () => {
     const on = get('fav:' + id) === true;
     fav.setAttribute('aria-pressed', String(on));
-    fav.querySelector('[data-fav-label]')!.textContent = on ? '常做 ✓' : '常做';
+    fav.querySelector('[data-fav-label]')!.textContent = on ? T.on : T.fav;
     // Don't overwrite what's being typed.
     if (document.activeElement !== note) note.value = get<string>('note:' + id) ?? '';
     if (note.value) noteWrap.open = true;
@@ -56,10 +69,10 @@ const { id } = Astro.props;
     if (!day) return;
     const list = get<string[]>('menu:' + day) ?? [];
     const label = select.selectedOptions[0].textContent!.split(' ')[0];
-    if (list.includes(id)) flash(status, `${label}已经有这道了`);
+    if (list.includes(id)) flash(status, T.already(label));
     else {
       set('menu:' + day, [...list, id]);
-      flash(status, `加到了${label}`);
+      flash(status, T.added(label));
     }
     select.value = '';
   });

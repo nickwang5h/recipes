@@ -29,26 +29,28 @@ export function addMissing(list: ListItem[], recipe: string, missing: string[]):
   return next;
 }
 
-export function grouped(list: ListItem[], catalog: Map<string, CatalogInfo>) {
+export function grouped(list: ListItem[], catalog: Map<string, CatalogInfo>, lang: 'zh' | 'en' = 'zh') {
   return (Object.keys(WHERE_TO_BUY) as WhereToBuy[])
     .map((where) => ({
       where,
-      label: WHERE_TO_BUY[where],
+      label: WHERE_TO_BUY[where][lang],
       items: list
         .filter((item) => (catalog.get(item.id)?.where ?? 'mainstream') === where)
-        .sort((a, b) => (catalog.get(a.id)?.zh ?? a.id).localeCompare(catalog.get(b.id)?.zh ?? b.id, 'zh')),
+        .sort((a, b) => (catalog.get(a.id)?.[lang] ?? a.id).localeCompare(catalog.get(b.id)?.[lang] ?? b.id, lang)),
     }))
     .filter((g) => g.items.length > 0);
 }
 
 /** Plain text for pasting into a notes app or message. */
-export function toText(list: ListItem[], catalog: Map<string, CatalogInfo>): string {
-  const lines = ['购物清单'];
-  for (const group of grouped(list.filter((i) => !i.bought), catalog)) {
-    lines.push('', `【${group.label}】`);
+export function toText(list: ListItem[], catalog: Map<string, CatalogInfo>, lang: 'zh' | 'en' = 'zh'): string {
+  const lines = [lang === 'en' ? 'Shopping list' : '购物清单'];
+  for (const group of grouped(list.filter((i) => !i.bought), catalog, lang)) {
+    lines.push('', lang === 'en' ? `[${group.label}]` : `【${group.label}】`);
     for (const item of group.items) {
       const info = catalog.get(item.id);
-      lines.push(`- ${info?.zh ?? item.id}（${info?.en ?? ''}）— ${item.for.join('、')}`);
+      // Each language adds the other's name where it helps at the shop.
+      if (lang === 'en') lines.push(`- ${info?.en ?? item.id}${info?.where === 'asian' ? ` (${info.zh})` : ''} — ${item.for.join(', ')}`);
+      else lines.push(`- ${info?.zh ?? item.id}（${info?.en ?? ''}）— ${item.for.join('、')}`);
     }
   }
   return lines.join('\n');

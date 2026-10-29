@@ -1,0 +1,28 @@
+---
+import Base from '../../../layouts/Base.astro';
+import CuisineCard from '../../../components/CuisineCard.astro';
+import { langPaths, type Both, type Lang } from '../../../i18n';
+import { cuisines as getCuisines, entries } from '../../../i18n/content';
+
+export const getStaticPaths = langPaths;
+const { lang } = Astro.props as { lang: Lang };
+const T = {
+  zh: { title: '菜系', description: '按菜系浏览：每个菜系一篇总览，讲它靠哪几条原理成立。', lede: '每个菜系一篇总览，讲它靠哪几条原理成立，再列出代表菜。' },
+  en: { title: 'Cuisines', description: 'Browse by cuisine: an overview of each, and the science it rests on.', lede: 'An overview of each cuisine: the few principles it rests on, and the dishes that show them.' },
+} satisfies Both<Record<string, string>>;
+const t = T[lang];
+const cuisines = await getCuisines(lang);
+const recipes = await entries('recipes', lang);
+const count = (id: string) => recipes.filter((r) => r.data.cuisine.id === id).length;
+---
+
+<Base title={t.title} description={t.description}>
+  <header class="page-head">
+    <h1>{t.title}</h1>
+    <p class="lede">{t.lede}</p>
+  </header>
+
+  <div class="cuisine-hero-grid">
+    {cuisines.map((c) => <CuisineCard cuisine={c} count={count(c.id)} />)}
+  </div>
+</Base>

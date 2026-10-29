@@ -1,14 +1,14 @@
 import { describe, expect, it } from 'vitest';
 import { excerpt, search } from '../src/lib/search';
-import type { SearchDoc } from '../src/pages/search-index.json';
+import type { SearchDoc } from '../src/pages/[...lang]/search-index.json';
 
-const doc = (d: Partial<SearchDoc> & Pick<SearchDoc, 't'>): SearchDoc => ({ u: `/x/${d.t}/`, k: '菜谱', s: '', b: '', ...d });
+const doc = (d: Partial<SearchDoc> & Pick<SearchDoc, 't'>): SearchDoc => ({ u: `/x/${d.t}/`, k: 'recipe', s: '', b: '', ...d });
 
 const docs = [
   doc({ t: '红烧茄子', s: '茄子先炸后烧。', i: '茄子 Eggplant 酱油' }),
   doc({ t: '鱼香肉丝', s: '泡椒和糖醋组成鱼香。', i: '猪肉 泡辣椒', b: '没有鱼，也不放鱼露。' }),
   doc({ t: '泰式炒河粉', c: '泰国菜', s: '罗望子、棕榈糖和鱼露。', i: '鱼露 Fish sauce 米粉' }),
-  doc({ t: '乳化', k: '原理', s: '油和水靠乳化剂留在一起。' }),
+  doc({ t: '乳化', k: 'principle', s: '油和水靠乳化剂留在一起。' }),
 ];
 
 describe('search', () => {
@@ -31,8 +31,8 @@ describe('search', () => {
   });
 
   it('filters by type', () => {
-    expect(search(docs, '乳化', '原理')).toHaveLength(1);
-    expect(search(docs, '乳化', '菜谱')).toHaveLength(0);
+    expect(search(docs, '乳化', 'principle')).toHaveLength(1);
+    expect(search(docs, '乳化', 'recipe')).toHaveLength(0);
   });
 
   it('excerpts the body around a match when the summary lacks it', () => {

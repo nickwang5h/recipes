@@ -1,14 +1,21 @@
 ---
 import Dumpling from './Dumpling.astro';
 import KofiButton from './KofiButton.astro';
+import { langOf, type Both } from '../i18n';
+
+const T = {
+  zh: { label: '在 Ko-fi 请我吃个饺子（新窗口）', line: '做好了就趁热吃。这道菜要是合口味，请我吃个饺子吧。', note: 'Ko-fi · 一个 $5' },
+  en: { label: 'Buy me a dumpling on Ko-fi (opens in a new tab)', line: 'Eat it while it’s hot. If this one hit the spot, buy me a dumpling.', note: 'Ko-fi · $5 a dumpling' },
+} satisfies Both<Record<string, string>>;
+const t = T[langOf(Astro.url)];
 ---
 
-<aside class="kofi-after" aria-label="在 Ko-fi 请我吃个饺子（新窗口）" data-kofi-after>
+<aside class="kofi-after" aria-label={t.label} data-kofi-after>
   <div class="kofi-art" aria-hidden="true"><Dumpling /></div>
-  <p class="kofi-line">做好了就趁热吃。这道菜要是合口味，请我吃个饺子吧。</p>
+  <p class="kofi-line">{t.line}</p>
   <div class="kofi-row">
     <KofiButton />
-    <span class="kofi-note">Ko-fi · 一个 $5</span>
+    <span class="kofi-note">{t.note}</span>
   </div>
 </aside>
 
@@ -17,7 +24,7 @@ import KofiButton from './KofiButton.astro';
   if (box) {
     // Steps come from Markdown, so the line moves here: right after the steps, before 要点.
     const headings = [...document.querySelectorAll<HTMLElement>('.recipe-content h2')];
-    const steps = headings.findIndex((h) => h.textContent?.trim() === '步骤');
+    const steps = headings.findIndex((h) => ['步骤', 'Steps'].includes(h.textContent?.trim() ?? ''));
     if (steps >= 0) headings[steps + 1]?.before(box);
 
     // The dumpling steams once per session, the first time most of the line is on screen.

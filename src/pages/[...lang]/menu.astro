@@ -1,0 +1,263 @@
+---
+import Base from '../../layouts/Base.astro';
+import ShoppingList from '../../components/ShoppingList.astro';
+import { langPaths, url, type Both, type Lang } from '../../i18n';
+
+export const getStaticPaths = langPaths;
+const { lang } = Astro.props as { lang: Lang };
+const T = {
+  zh: {
+    title: '菜单', description: '安排接下来一周做什么菜，一键配出一荤一素一汤，再合并成购物清单。',
+    lede: ['安排接下来一周做什么。每天可以手动加菜，也可以让它配一桌：一荤一素一汤，常做的菜更容易被挑中。最后把缺的食材合并进购物清单，', '冰箱', '里有的会自动扣掉。'],
+    max: '配菜时每道不超过', any: '不限时间', m30: '30 分钟', m45: '45 分钟', h1: '1 小时', loading: '加载中…',
+    needs: '这周要买', needsHelp: '按菜单里的菜算，冰箱里有的和常备调料已经扣掉。', addAll: '全部加入购物清单',
+  },
+  en: {
+    title: 'Menu', description: 'Plan the week’s cooking, let it suggest a main, a vegetable and a soup, then turn it into one shopping list.',
+    lede: ['Plan what to cook over the next week. Add dishes yourself, or let it set a table: a main, a vegetable dish and a soup, with the dishes you cook often picked more readily. Then merge what’s missing into the shopping list; anything in your ', 'fridge', ' is taken off.'],
+    max: 'When suggesting, each dish takes at most', any: 'any time', m30: '30 min', m45: '45 min', h1: '1 hr', loading: 'Loading…',
+    needs: 'To buy this week', needsHelp: 'Worked out from the menu, minus what’s in the fridge and the pantry staples.', addAll: 'Add all to the shopping list',
+  },
+} satisfies Both<Record<string, unknown>>;
+const t = T[lang];
+---
+
+<Base title={t.title} description={t.description}>
+  <header class="page-head">
+    <h1>{t.title}</h1>
+    <p class="lede">{t.lede[0]}<a href={url('fridge', lang)}>{t.lede[1]}</a>{t.lede[2]}</p>
+  </header>
+
+  <div class="menu-controls">
+    <label>
+      {t.max}
+      <select data-max>
+        <option value="">{t.any}</option>
+        <option value="30">{t.m30}</option>
+        <option value="45">{t.m45}</option>
+        <option value="60" selected>{t.h1}</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="menu-week" data-week>
+    <p class="fridge-empty">{t.loading}</p>
+  </div>
+
+  <section aria-labelledby="needs-title" data-needs-wrap hidden>
+    <h2 id="needs-title" class="section-title">{t.needs} <span class="fridge-count" data-needs-count></span></h2>
+    <p class="fridge-help">{t.needsHelp}</p>
+    <div data-needs></div>
+    <div class="kit-actions">
+      <button class="text-btn" type="button" data-needs-add>{t.addAll}</button>
+      <span class="offline-status" data-needs-status aria-live="polite"></span>
+    </div>
+  </section>
+
+  <ShoppingList />
+
+  <script>
+    import type { RecipeData, SiteData } from './recipes-data.json';
+    import { joinList, pageLang, url } from '../../i18n';
+    import { dayKey, dayLabel, upcoming } from '../../lib/days';
+    import { SLOTS, suggestDish, suggestTable, weekNeeds, type SlotId } from '../../lib/menu';
+    import { grouped } from '../../lib/shopping';
+    import { get, keys, set, subscribe } from '../../scripts/store';
+    import { addToList, listItems, mountShoppingList } from '../../scripts/shopping-list';
+    import { el, flash, PLATE } from '../../scripts/ui';
+
+    const lang = pageLang();
+    const T = {
+      zh: {
+        table: '配一桌', add: '加菜', remove: (day: string, title: string) => `从${day}去掉${title}`, empty: '还没安排', swap: '换', all: '都加上', never: '算了',
+        search: '搜菜名…', addOne: '加', none: '没找到', hint: '输入菜名搜索；常做的菜会先列在这里', done: '完成',
+        count: (n: number) => `· ${n} 样`, for: '用于：', listed: ' · 已在清单', added: '已加入，见下面的购物清单',
+      },
+      en: {
+        table: 'Set a table', add: 'Add a dish', remove: (day: string, title: string) => `Remove ${title} from ${day}`, empty: 'Nothing planned', swap: 'Swap', all: 'Add them all', never: 'Never mind',
+        search: 'Search recipes…', addOne: 'Add', none: 'Nothing found', hint: 'Type a dish name; the dishes you cook often are listed here first', done: 'Done',
+        count: (n: number) => `· ${n}`, for: 'For: ', listed: ' · on the list', added: 'Added; see the shopping list below',
+      },
+    }[lang];
+
+    const $ = <E extends HTMLElement>(sel: string) => document.querySelector<E>(sel)!;
+    const data: SiteData = await (await fetch(`${url('', lang)}recipes-data.json`)).json();
+    const byId = new Map(data.recipes.map((r) => [r.id, r]));
+    const dishes = data.recipes.filter((r) => !r.component);
+    const catalog = new Map(Object.entries(data.ingredients));
+    const today = new Date();
+    const days = upcoming(today);
+
+    const menuOf = (day: string) => (get<string[]>('menu:' + day) ?? []).filter((id) => byId.has(id));
+    const setMenu = (day: string, ids: string[]) => set('menu:' + day, ids.length ? ids : null);
+    const plannedThisWeek = () => new Set(days.flatMap((d) => menuOf(dayKey(d))));
+    const favorites = () => new Set(keys('fav:'));
+    const maxMinutes = () => Number($<HTMLSelectElement>('[data-max]').value) || undefined;
+
+    // Open panels survive re-renders triggered by sync.
+    const suggestions = new Map<string, Partial<Record<SlotId, RecipeData>>>();
+    const adding = new Map<string, string>(); // day → search text
+
+    const thumb = (r: RecipeData) => {
+      if (r.img) return Object.assign(document.createElement('img'), { className: 'menu-thumb', src: r.img, alt: '', loading: 'lazy', width: 96, height: 64 });
+      const ph = el('span', { className: 'menu-thumb card-ph', innerHTML: PLATE });
+      ph.setAttribute('aria-hidden', 'true');
+      return ph;
+    };
+
+    const dishRow = (r: RecipeData, actions: HTMLElement[]) =>
+      el('li', { className: 'menu-dish' },
+        el('a', { href: r.href, className: 'menu-dish-link' }, thumb(r),
+          el('span', { className: 'menu-dish-text' }, el('span', { className: 'menu-dish-title', textContent: r.title }), el('span', { className: 'menu-dish-time', textContent: r.time }))),
+        ...actions);
+
+    const button = (text: string, onClick: () => void, className = 'text-btn') => {
+      const b = el('button', { type: 'button', className, textContent: text });
+      b.addEventListener('click', onClick);
+      return b;
+    };
+
+    function suggestFor(day: string) {
+      const planned = plannedThisWeek();
+      const table = suggestTable(dishes, { favorites: favorites(), planned, maxMinutes: maxMinutes(), month: today.getMonth() + 1 });
+      suggestions.set(day, table as Partial<Record<SlotId, RecipeData>>);
+      render();
+    }
+
+    function renderDay(date: Date) {
+      const day = dayKey(date);
+      const ids = menuOf(day);
+      const section = el('section', { className: 'menu-day' });
+      const head = el('div', { className: 'menu-day-head' },
+        el('h2', { textContent: dayLabel(date, today, lang) }),
+        button(T.table, () => suggestFor(day)),
+        button(T.add, () => {
+          adding.has(day) ? adding.delete(day) : adding.set(day, '');
+          render();
+          section.querySelector<HTMLInputElement>('input')?.focus();
+        }),
+      );
+      section.append(head);
+
+      const list = el('ul', { className: 'menu-dishes' });
+      for (const id of ids) {
+        const r = byId.get(id)!;
+        list.append(dishRow(r, [button('×', () => setMenu(day, menuOf(day).filter((x) => x !== id)), 'menu-remove')]));
+        list.lastElementChild!.querySelector('.menu-remove')!.setAttribute('aria-label', T.remove(dayLabel(date, today, lang), r.title));
+      }
+      if (ids.length) section.append(list);
+      else if (!suggestions.has(day) && !adding.has(day)) section.append(el('p', { className: 'menu-empty', textContent: T.empty }));
+
+      const table = suggestions.get(day);
+      if (table) {
+        const ul = el('ul', { className: 'menu-dishes menu-suggest' });
+        for (const slot of SLOTS) {
+          const r = table[slot.id];
+          if (!r) continue;
+          const swap = button(T.swap, () => {
+            const next = suggestDish(dishes, slot.id, { favorites: favorites(), planned: plannedThisWeek(), maxMinutes: maxMinutes(), month: today.getMonth() + 1, cuisine: table.main?.cuisine }, new Set([r.id]));
+            if (next) table[slot.id] = next as RecipeData;
+            render();
+          }, 'text-btn menu-swap');
+          const li = dishRow(r, [swap]);
+          li.prepend(el('span', { className: 'menu-slot', textContent: slot.label[lang] }));
+          ul.append(li);
+        }
+        section.append(
+          el('div', { className: 'menu-panel' }, ul,
+            el('div', { className: 'kit-actions' },
+              button(T.all, () => {
+                suggestions.delete(day);
+                const add = Object.values(table).map((r) => r!.id).filter((id) => !menuOf(day).includes(id));
+                setMenu(day, [...menuOf(day), ...add]);
+              }),
+              button(T.never, () => {
+                suggestions.delete(day);
+                render();
+              }),
+            )),
+        );
+      }
+
+      if (adding.has(day)) {
+        const q = adding.get(day)!;
+        const input = document.createElement('input');
+        Object.assign(input, { type: 'search', value: q, placeholder: T.search, className: 'menu-search' });
+        const results: HTMLUListElement = el('ul', { className: 'menu-dishes' });
+        const fill = () => {
+          const text = input.value.trim().toLowerCase();
+          adding.set(day, input.value);
+          const favs = favorites();
+          const hits = (text
+            ? dishes.filter((r) => r.title.toLowerCase().includes(text))
+            : dishes.filter((r) => favs.has(r.id))
+          ).filter((r) => !menuOf(day).includes(r.id)).slice(0, 8);
+          results.replaceChildren(...hits.map((r) => dishRow(r, [button(T.addOne, () => setMenu(day, [...menuOf(day), r.id]), 'text-btn menu-swap')])));
+          if (!hits.length) results.append(el('li', { className: 'menu-empty', textContent: text ? T.none : T.hint }));
+        };
+        input.addEventListener('input', fill);
+        fill();
+        const done: HTMLDivElement = el('div', { className: 'kit-actions' });
+        done.append(button(T.done, () => {
+          adding.delete(day);
+          render();
+        }));
+        const panel: HTMLDivElement = el('div', { className: 'menu-panel' });
+        panel.append(input, results, done);
+        section.append(panel);
+      }
+      return section;
+    }
+
+    function renderNeeds() {
+      const planned = days.flatMap((d) => menuOf(dayKey(d))).map((id) => byId.get(id)!);
+      const staples = new Set(data.staples.filter((id) => get('staple-off:' + id) !== true));
+      const needs = weekNeeds(planned, new Set(keys('have:')), staples);
+      const listed = new Set(listItems().map((i) => i.id));
+      const items = [...needs].map(([id, titles]) => ({ id, for: titles, bought: false }));
+      $('[data-needs-wrap]').hidden = items.length === 0;
+      $('[data-needs-count]').textContent = T.count(items.length);
+      $('[data-needs]').replaceChildren(
+        ...grouped(items, catalog, lang).map((group) => {
+          const ul = el('ul', { className: 'needs-list' });
+          for (const item of group.items) {
+            const info = catalog.get(item.id)!;
+            // Each language adds the other's name where it helps at the shop.
+            const aside = lang === 'zh' ? info.en : info.where === 'asian' ? info.zh : '';
+            ul.append(el('li', { className: listed.has(item.id) ? 'is-listed' : '' },
+              el('span', { className: 'ing-name', textContent: info[lang] }),
+              el('span', { className: 'ing-en', textContent: aside && ` ${aside}` }),
+              el('span', { className: 'ing-note', textContent: `${T.for}${joinList(item.for, lang)}${listed.has(item.id) ? T.listed : ''}` })));
+          }
+          return el('div', { className: 'shopping-group' }, el('h3', { textContent: group.label }), ul);
+        }),
+      );
+      return needs;
+    }
+
+    $('[data-needs-add]').addEventListener('click', () => {
+      const needs = renderNeeds();
+      const byDish = new Map<string, string[]>();
+      for (const [id, titles] of needs) for (const t of titles) byDish.set(t, [...(byDish.get(t) ?? []), id]);
+      for (const [title, ids] of byDish) addToList(title, ids);
+      flash($('[data-needs-status]'), T.added);
+    });
+
+    function render() {
+      $('[data-week]').replaceChildren(...days.map(renderDay));
+      renderNeeds();
+    }
+
+    try {
+      const saved = localStorage.getItem('recipes:menu-max');
+      if (saved !== null) $<HTMLSelectElement>('[data-max]').value = saved;
+    } catch {}
+    $('[data-max]').addEventListener('change', (event) => {
+      try { localStorage.setItem('recipes:menu-max', (event.target as HTMLSelectElement).value); } catch {}
+    });
+
+    mountShoppingList(catalog);
+    subscribe(render);
+    render();
+  </script>
+</Base>

@@ -1,0 +1,118 @@
+---
+import { getImage } from 'astro:assets';
+import { getEntries, render, type CollectionEntry } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Cover from '../../../components/Cover.astro';
+import CatNote from '../../../components/CatNote.astro';
+import serveCat from '../../../assets/cats/serve.png';
+import RecipeMine from '../../../components/RecipeMine.astro';
+import RecipeCard from '../../../components/RecipeCard.astro';
+import CuisineTag from '../../../components/CuisineTag.astro';
+import RecipeKit from '../../../components/RecipeKit.astro';
+import SourceList from '../../../components/SourceList.astro';
+import NutritionPanel from '../../../components/NutritionPanel.astro';
+import KofiAfter from '../../../components/KofiAfter.astro';
+import TagIcon from '../../../components/TagIcon.astro';
+import { formatDate, formatTime, scriptLang, url, type Both, type Lang } from '../../../i18n';
+import { cuisineMap as getCuisineMap, entries, entry, entryPaths, resolve } from '../../../i18n/content';
+import { COURSES, TAGS } from '../../../lib/categories';
+import { recipeLd } from '../../../lib/jsonld';
+import { related } from '../../../lib/related';
+import { SITE_TITLE } from '../../../lib/site';
+
+export const getStaticPaths = () => entryPaths('recipes', 'slug');
+
+const { lang, entry: recipe } = Astro.props as { lang: Lang; entry: CollectionEntry<'recipes'> };
+const { title, original, summary, time, sources, updated } = recipe.data;
+const cuisine = (await entry('cuisines', recipe.data.cuisine.id, lang))!;
+const principles = await resolve(recipe.data.principles, lang);
+const { Content } = await render(recipe);
+const twin = lang === 'en' || !!(await entry('recipes', recipe.id, 'en'));
+const T = {
+  zh: { principles: '用到的原理', quick: '快手', served: '开饭啦', servedText: '步骤都做完了，趁热吃。', updated: '更新于', related: '相关的菜' },
+  en: { principles: 'Science behind it', quick: 'Quick', served: 'Dinner’s ready', servedText: 'Every step is done. Eat it while it’s hot.', updated: 'Updated', related: 'Related recipes' },
+} satisfies Both<Record<string, string>>;
+const t = T[lang];
+
+const all = await entries('recipes', lang);
+const shape = (r: (typeof all)[number]) => ({
+  id: r.id,
+  cuisine: r.data.cuisine.id,
+  course: r.data.course,
+  principles: r.data.principles.map((p) => p.id),
+  ingredients: r.data.ingredients.flatMap((g) => g.items.filter((i) => !i.optional).map((i) => i.ref.id)),
+  entry: r,
+});
+const cuisineMap = await getCuisineMap(lang);
+const relatedRecipes = related(shape(recipe), all.map(shape)).map((r) => r.entry);
+
+const items = recipe.data.ingredients.flatMap((g) => g.items);
+const catalog = await getEntries(items.map((i) => i.ref));
+const ld = recipeLd({
+  url: new URL(url(`recipes/${recipe.id}`, lang), Astro.site).href,
+  title,
+  summary,
+  cuisine: cuisine.data.title,
+  course: COURSES[recipe.data.course][lang],
+  servings: recipe.data.servings,
+  time,
+  ingredients: items.map((item, n) => ({ qty: item.qty, unit: item.unit, name: item.name ?? catalog[n].data[lang], note: item.note })),
+  body: recipe.body ?? '',
+  keywords: principles.map((p) => p.data.title),
+  image: recipe.data.cover && new URL((await getImage({ src: recipe.data.cover, width: 1200, format: 'jpg' })).src, Astro.site).href,
+  updated,
+  site: { name: SITE_TITLE[lang], url: new URL(url('', lang), Astro.site).href },
+  lang,
+});
+---
+
+<Base title={title} description={summary} image={recipe.data.cover} type="article" twin={twin}>
+  <script type="application/ld+json" slot="head" is:inline set:html={JSON.stringify(ld)} />
+  <article>
+    <div class="hero">
+      <header class="page-head">
+        <div class="eyebrow">
+          <CuisineTag cuisine={cuisine} />
+          <span>{formatTime(time, lang)}</span>
+          {recipe.data.tags.map((tag) => <a class="tag-pill" href={`${url('recipes', lang)}?tag=${tag}`}><TagIcon name={tag} />{TAGS[tag][lang]}</a>)}
+        </div>
+        <h1>{title}</h1>
+        {original && <p class="original" lang={scriptLang(original)}>{original}</p>}
+        <p class="lede">{summary}</p>
+        {principles.length > 0 && (
+          <nav aria-label={t.principles} style="margin-top: 1.25rem">
+            <ul class="chips">
+              {principles.map((p) => <li><a class="chip" href={url(`principles/${p.id}`, lang)}>{p.data.title}</a></li>)}
+            </ul>
+          </nav>
+        )}
+        <RecipeMine id={recipe.id} />
+      </header>
+      <Cover image={recipe.data.cover} alt={recipe.data.coverAlt} stamp={time.prep + time.cook <= 30 ? t.quick : undefined} />
+    </div>
+
+    <div class="recipe-layout">
+      <RecipeKit recipe={recipe} />
+      <div class="prose recipe-body">
+        <div class="recipe-content"><Content /></div>
+        <CatNote cat={serveCat} hidden data-served>
+          <p class="cat-note-title">{t.served}</p>
+          <p>{t.servedText}</p>
+        </CatNote>
+        <KofiAfter />
+        <NutritionPanel recipe={recipe} />
+        <SourceList sources={sources} />
+        <p class="meta" style="color: var(--muted); font-size: 0.9rem">{t.updated} {formatDate(updated, lang)}</p>
+      </div>
+    </div>
+
+    {relatedRecipes.length > 0 && (
+      <section class="related-recipes">
+        <h2 class="section-title">{t.related}</h2>
+        <ul class="card-grid">
+          {relatedRecipes.map((r) => <li><RecipeCard recipe={r} cuisine={cuisineMap.get(r.data.cuisine.id)!} /></li>)}
+        </ul>
+      </section>
+    )}
+  </article>
+</Base>

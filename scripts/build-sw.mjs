@@ -2,7 +2,7 @@
 // The version hashes every built file name, so any change to CSS, JS or images gets a
 // fresh static cache; page HTML is refreshed by the network-first strategy instead.
 import { createHash } from 'node:crypto';
-import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import { copyFileSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 
 const dist = new URL('../dist/', import.meta.url).pathname;
@@ -14,12 +14,16 @@ function walk(dir) {
   });
 }
 
+// Cloudflare Pages serves the nearest 404.html; Astro writes the English one as a page.
+copyFileSync(join(dist, 'en/404/index.html'), join(dist, 'en/404.html'));
+
 const files = walk(dist).map((path) => '/' + relative(dist, path).split(sep).join('/'));
 
-const pages = files
-  .filter((f) => f.endsWith('/index.html') && !f.startsWith('/404'))
-  .map((f) => f.slice(0, -'index.html'.length))
-  .concat('/search-index.json', '/recipes-data.json');
+// "Save every recipe offline" saves one language: each tree gets its own list.
+const isPage = (f) => f.endsWith('/index.html') && !/^\/(en\/)?404\//.test(f);
+const toPath = (f) => f.slice(0, -'index.html'.length);
+const zhPages = files.filter((f) => isPage(f) && !f.startsWith('/en/')).map(toPath).concat('/search-index.json', '/recipes-data.json');
+const enPages = files.filter((f) => isPage(f) && f.startsWith('/en/')).map(toPath).concat('/en/search-index.json', '/en/recipes-data.json');
 
 const precache = [
   ...files.filter((f) => f.startsWith('/_astro/') && /\.(css|js)$/.test(f)),
@@ -47,5 +51,6 @@ const sw = template
   .replace('__PAGE_LIST__', '/offline-pages.json');
 
 writeFileSync(join(dist, 'sw.js'), sw);
-writeFileSync(join(dist, 'offline-pages.json'), JSON.stringify(pages));
-console.log(`sw.js ${version}: ${precache.length} precached, ${pages.length} pages listed`);
+writeFileSync(join(dist, 'offline-pages.json'), JSON.stringify(zhPages));
+writeFileSync(join(dist, 'en/offline-pages.json'), JSON.stringify(enPages));
+console.log(`sw.js ${version}: ${precache.length} precached, ${zhPages.length} + ${enPages.length} pages listed`);

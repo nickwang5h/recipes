@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" role="img" aria-labelledby="t d">
+  <title id="t">Judge oil temperature by how it behaves after the food goes in</title>
+  <desc id="d">A vertical thermometer is marked with the states for oil that is too cool, the usual frying range, oil that is too hot, and steady smoking. Only the usual working range has numbers; the positions of low and high oil temperature and of the smoke point are qualitative.</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .oil { fill: #e2b33c; }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .guide { stroke: var(--border, #d3ccbe); stroke-width: 1.5; fill: none; stroke-dasharray: 4 5; }
+    .cold { stroke: var(--accent-blue, #2f6fca); stroke-width: 4; fill: none; }
+    .work { stroke: var(--accent-green, #2f8359); stroke-width: 4; fill: none; }
+    .hot { stroke: var(--accent-red, #c3473a); stroke-width: 4; fill: none; }
+    .label { font: 15px "Helvetica Neue", Arial, "Source Han Sans SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+    .warning { fill: var(--primary, #b83e30); }
+  </style>
+  <rect class="bg" width="600" height="460" rx="12"/>
+  <text class="label" x="300" y="36" text-anchor="middle">Adding food cools the oil; let it recover before the next batch</text>
+
+  <!-- Qualitative positions: not a calibrated scale or fixed smoke point. -->
+  <path class="oil" d="M86 362 V225 H98 V362 A24 24 0 1 1 86 362 Z"/>
+  <path class="line" d="M80 360 V79 A12 12 0 0 1 104 79 V360 A28 28 0 1 1 80 360 Z"/>
+  <path class="line" d="M42 367 V79 M35 88 L42 79 L49 88"/>
+  <text class="label muted" x="28" y="398">Hotter</text>
+  <path class="guide" d="M111 94 H177 M111 174 H177 M111 249 H177 M111 330 H177"/>
+  <path class="hot" d="M121 80 V109 M121 155 V193"/>
+  <path class="work" d="M121 225 V272"/>
+  <path class="cold" d="M121 312 V351"/>
+
+  <text class="label warning" x="198" y="85">Smoke point: smoking steadily</text>
+  <text class="label muted" x="198" y="109">Varies by oil type, refining and use</text>
+  <text class="label muted" x="198" y="130">Smoking means cool it down, not add food</text>
+
+  <text class="label" x="198" y="169">Oil too hot</text>
+  <text class="label muted" x="198" y="193">Outside darkens fast, inside may be raw</text>
+  <text class="label muted" x="198" y="214">Also check the pieces aren't too thick</text>
+
+  <text class="label" x="198" y="253">Usual working range: 160–190°C (320–375°F)</text>
+  <text class="label muted" x="198" y="277">Pick the exact target for the food and recipe</text>
+
+  <text class="label" x="198" y="328">Oil too cool after adding food</text>
+  <text class="label muted" x="198" y="352">Slow browning, soft crust, long fry</text>
+  <text class="label muted" x="198" y="373">Fry smaller batches so the oil recovers</text>
+
+  <text class="label muted" x="198" y="416">Chopstick bubbles show steam, not a set temperature</text>
+  <text class="label muted" x="198" y="440">Heights are qualitative; smoke point has no single value</text>
+</svg>

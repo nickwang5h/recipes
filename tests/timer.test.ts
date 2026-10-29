@@ -33,3 +33,20 @@ describe('clock', () => {
     expect(formatClock(-3)).toBe('0:00');
   });
 });
+
+describe('findDurations in English', () => {
+  it('reads minutes, hours, ranges and compound times', () => {
+    const found = findDurations('Braise for about 12–15 minutes, then simmer 1.5 hours and rest 1 hour 20 minutes.');
+    expect(found.map((d) => [d.text, d.seconds, d.maxSeconds])).toEqual([
+      ['12–15 minutes', 720, 900],
+      ['1.5 hours', 5400, undefined],
+      ['1 hour 20 minutes', 4800, undefined],
+    ]);
+  });
+
+  it('takes hyphenated forms and skips rhythms and short spans', () => {
+    expect(findDurations('Give it a 10-minute rest.').map((d) => d.seconds)).toEqual([600]);
+    expect(findDurations('Stir every 30 seconds for 5 minutes.').map((d) => d.text)).toEqual(['5 minutes']);
+    expect(findDurations('Sear for 20 seconds.')).toEqual([]);
+  });
+});

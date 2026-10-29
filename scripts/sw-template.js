@@ -54,7 +54,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
 
-  if (request.mode === 'navigate' || url.pathname === '/search-index.json' || url.pathname === '/recipes-data.json') {
+  if (request.mode === 'navigate' || /^(\/en)?\/(search-index|recipes-data)\.json$/.test(url.pathname)) {
     // The data files change with every deploy, so they are treated like pages.
     event.respondWith(page(request));
   } else if (url.pathname.startsWith('/fonts/')) {
@@ -73,10 +73,13 @@ async function page(request) {
     if (response.ok) cache.put(pageKey(request.url), response.clone());
     return response;
   } catch {
+    // English pages fall back to the English offline page once it has been seen.
+    const english = new URL(request.url).pathname.startsWith('/en/');
     return (
       (await cache.match(pageKey(request.url))) ||
+      (english && (await cache.match(new URL('/en/offline/', self.location.origin).href))) ||
       (await cache.match(OFFLINE)) ||
-      new Response('离线中', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } })
+      new Response(english ? 'Offline' : '离线中', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } })
     );
   }
 }
@@ -121,11 +124,13 @@ function withTimeout(promise, ms) {
 self.addEventListener('message', (event) => {
   if (event.data?.type !== 'save-all') return;
   const client = event.source;
-  event.waitUntil(saveAll(client));
+  // The page names its language's list; anything else falls back to the Chinese one.
+  const list = event.data.list === '/en/offline-pages.json' ? event.data.list : PAGE_LIST;
+  event.waitUntil(saveAll(client, list));
 });
 
-async function saveAll(client) {
-  const urls = await (await fetch(PAGE_LIST, { cache: 'no-store' })).json();
+async function saveAll(client, list) {
+  const urls = await (await fetch(list, { cache: 'no-store' })).json();
   const pages = await caches.open(PAGES);
   const images = await caches.open(IMAGES);
   let done = 0;

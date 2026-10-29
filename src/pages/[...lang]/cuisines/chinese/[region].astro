@@ -1,0 +1,79 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import Base from '../../../../layouts/Base.astro';
+import Cover from '../../../../components/Cover.astro';
+import PrincipleCard from '../../../../components/PrincipleCard.astro';
+import RecipeCard from '../../../../components/RecipeCard.astro';
+import SourceList from '../../../../components/SourceList.astro';
+import { formatDate, scriptLang, url, type Both, type Lang } from '../../../../i18n';
+import { entries, entry, entryPaths, resolve } from '../../../../i18n/content';
+
+export const getStaticPaths = () => entryPaths('regions', 'region');
+
+const { lang, entry: region } = Astro.props as { lang: Lang; entry: CollectionEntry<'regions'> };
+const { title, original, summary, sources, updated } = region.data;
+const chinese = (await entry('cuisines', 'chinese', lang))!;
+const principles = await resolve(region.data.principles, lang);
+const featured = await resolve(region.data.featured, lang);
+const others = (await entries('regions', lang))
+  .filter((r) => r.id !== region.id)
+  .sort((a, b) => a.data.order - b.data.order);
+const { Content } = await render(region);
+const T = {
+  zh: { cuisines: '菜系', regional: '地方菜', featured: '站里能做的菜', principles: '相关原理', others: '其他地方菜', updated: '更新于' },
+  en: { cuisines: 'Cuisines', regional: 'Regional', featured: 'Recipes on this site', principles: 'Related science', others: 'Other regional cuisines', updated: 'Updated' },
+} satisfies Both<Record<string, string>>;
+const t = T[lang];
+---
+
+<Base title={title} description={summary} image={region.data.cover} type="article">
+  <article class="accent-red">
+    <div class="hero">
+      <header class="page-head">
+        <div class="eyebrow">
+          <a href={url('cuisines', lang)}>{t.cuisines}</a>
+          <a class="cuisine-tag accent-red" href={url('cuisines/chinese', lang)}>{chinese.data.title}</a>
+          <span>{t.regional}</span>
+        </div>
+        <h1>{title}</h1>
+        {original && <p class="original" lang={scriptLang(original)}>{original}</p>}
+        <p class="lede">{summary}</p>
+      </header>
+      <Cover image={region.data.cover} alt={region.data.coverAlt} />
+    </div>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {featured.length > 0 && (
+      <section>
+        <h2 class="section-title">{t.featured}</h2>
+        <ul class="card-grid">
+          {featured.map((recipe) => <li><RecipeCard recipe={recipe} cuisine={chinese} /></li>)}
+        </ul>
+      </section>
+    )}
+
+    {principles.length > 0 && (
+      <section>
+        <h2 class="section-title">{t.principles}</h2>
+        <ul class="card-grid">
+          {principles.map((principle) => <li><PrincipleCard principle={principle} /></li>)}
+        </ul>
+      </section>
+    )}
+
+    <section>
+      <h2 class="section-title">{t.others}</h2>
+      <ul class="chips">
+        {others.map((r) => <li><a class="chip" href={url(`cuisines/chinese/${r.id}`, lang)}>{r.data.title}</a></li>)}
+      </ul>
+    </section>
+
+    <div class="prose">
+      <SourceList sources={sources} />
+      <p style="color: var(--muted); font-size: 0.9rem">{t.updated} {formatDate(updated, lang)}</p>
+    </div>
+  </article>
+</Base>

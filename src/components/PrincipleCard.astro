@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { PRINCIPLE_CATEGORIES } from '../lib/categories';
-import { url } from '../lib/site';
+import { langOf, url } from '../i18n';
 
 interface Props {
   principle: CollectionEntry<'principles'>;
@@ -9,11 +9,12 @@ interface Props {
 
 const { principle } = Astro.props;
 const { title, aliases, summary, category } = principle.data;
+const lang = langOf(Astro.url);
 ---
 
-<a class="card" href={url(`principles/${principle.id}`)}>
+<a class="card" href={url(`principles/${principle.id}`, lang)}>
   <h3>{title}</h3>
   {aliases[0] && <span class="original">{aliases[0]}</span>}
   <p>{summary}</p>
-  <div class="meta"><span>{PRINCIPLE_CATEGORIES[category]}</span></div>
+  <div class="meta"><span>{PRINCIPLE_CATEGORIES[category][lang]}</span></div>
 </a>

@@ -14,9 +14,9 @@ export interface MenuRecipe {
 
 /** A home-style table: one meat or fish dish, one vegetable dish, one soup. */
 export const SLOTS = [
-  { id: 'main', label: '荤菜', courses: ['meat', 'seafood'] },
-  { id: 'veg', label: '素菜', courses: ['veg'] },
-  { id: 'soup', label: '汤', courses: ['soup'] },
+  { id: 'main', label: { zh: '荤菜', en: 'Main' }, courses: ['meat', 'seafood'] },
+  { id: 'veg', label: { zh: '素菜', en: 'Vegetable' }, courses: ['veg'] },
+  { id: 'soup', label: { zh: '汤', en: 'Soup' }, courses: ['soup'] },
 ] as const;
 
 export type SlotId = (typeof SLOTS)[number]['id'];

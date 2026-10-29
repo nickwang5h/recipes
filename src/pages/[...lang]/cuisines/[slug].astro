@@ -1,0 +1,78 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Cover from '../../../components/Cover.astro';
+import PrincipleCard from '../../../components/PrincipleCard.astro';
+import RecipeCard from '../../../components/RecipeCard.astro';
+import { scriptLang, url, type Both, type Lang } from '../../../i18n';
+import { entries, entryPaths, resolve } from '../../../i18n/content';
+
+export const getStaticPaths = () => entryPaths('cuisines', 'slug');
+
+const { lang, entry: cuisine } = Astro.props as { lang: Lang; entry: CollectionEntry<'cuisines'> };
+const { title, original, summary, accent } = cuisine.data;
+const principles = await resolve(cuisine.data.principles, lang);
+const featured = await resolve(cuisine.data.featured, lang);
+const { Content } = await render(cuisine);
+// Only the chinese page has regional sub-pages.
+const regions = cuisine.id === 'chinese' ? (await entries('regions', lang)).sort((a, b) => a.data.order - b.data.order) : [];
+const T = {
+  zh: { kind: '菜系', regions: '地方菜', featured: '代表菜', all: `全部${title}菜谱 →`, principles: '核心原理' },
+  en: { kind: 'Cuisine', regions: 'Regional cuisines', featured: 'Signature dishes', all: `All ${title} recipes →`, principles: 'Core principles' },
+} satisfies Both<Record<string, string>>;
+const t = T[lang];
+---
+
+<Base title={title} description={summary} image={cuisine.data.cover}>
+  <article class={`accent-${accent}`}>
+    <div class="hero">
+      <header class="page-head">
+        <div class="eyebrow"><span class={`cuisine-tag accent-${accent}`}>{t.kind}</span></div>
+        <h1>{title}</h1>
+        {original && <p class="original" lang={scriptLang(original)}>{original}</p>}
+        <p class="lede">{summary}</p>
+      </header>
+      <Cover image={cuisine.data.cover} alt={cuisine.data.coverAlt} />
+    </div>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {regions.length > 0 && (
+      <section>
+        <h2 class="section-title">{t.regions}</h2>
+        <ul class="card-grid">
+          {regions.map((r) => (
+            <li>
+              <a class={`card accent-${accent}`} href={url(`cuisines/chinese/${r.id}`, lang)}>
+                <h3>{r.data.title}</h3>
+                {r.data.original && <span class="original" lang={scriptLang(r.data.original)}>{r.data.original}</span>}
+                <p>{r.data.summary}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {featured.length > 0 && (
+      <section>
+        <h2 class="section-title">{t.featured}</h2>
+        <ul class="card-grid">
+          {featured.map((recipe) => <li><RecipeCard recipe={recipe} cuisine={cuisine} /></li>)}
+        </ul>
+        <p><a href={`${url('recipes', lang)}?cuisine=${cuisine.id}`}>{t.all}</a></p>
+      </section>
+    )}
+
+    {principles.length > 0 && (
+      <section>
+        <h2 class="section-title">{t.principles}</h2>
+        <ul class="card-grid">
+          {principles.map((principle) => <li><PrincipleCard principle={principle} /></li>)}
+        </ul>
+      </section>
+    )}
+  </article>
+</Base>

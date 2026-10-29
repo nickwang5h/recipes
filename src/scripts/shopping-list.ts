@@ -1,11 +1,17 @@
 // The shopping list, shared by the fridge and the weekly menu and synced with the family.
 // Each item is stored as `list:<ingredient id>` → { for: recipe titles, bought }.
+import { joinList, pageLang } from '../i18n';
 import { DEFAULT_STAPLES } from '../lib/fridge';
 import { grouped, toText, type CatalogInfo, type ListItem } from '../lib/shopping';
 import { get, keys, set, setMany, subscribe } from './store';
 import { el, flash } from './ui';
 
 type Stored = { for: string[]; bought: boolean };
+
+const T = {
+  zh: { count: (n: number) => `· ${n} 样`, for: '用于：', copied: '已复制', copyFailed: '复制失败，请手动选择文字', stocked: (n: number) => `${n} 样放进了冰箱`, tickFirst: '先勾选买到的', clear: '清空购物清单？' },
+  en: { count: (n: number) => `· ${n}`, for: 'For: ', copied: 'Copied', copyFailed: 'Couldn’t copy; select the text by hand', stocked: (n: number) => `${n} put in the fridge`, tickFirst: 'Tick what you bought first', clear: 'Clear the shopping list?' },
+};
 
 export function listItems(): ListItem[] {
   return keys('list:').map((id) => ({ id, ...get<Stored>(`list:${id}`)! }));
@@ -41,15 +47,17 @@ function stockBought(): number {
 export function mountShoppingList(catalog: Map<string, CatalogInfo>) {
   const wrap = document.querySelector<HTMLDetailsElement>('[data-list-wrap]');
   if (!wrap) return;
-  const $ = <T extends HTMLElement>(sel: string) => wrap.querySelector<T>(sel)!;
+  const $ = <E extends HTMLElement>(sel: string) => wrap.querySelector<E>(sel)!;
   const status = $('[data-list-status]');
+  const lang = pageLang();
+  const t = T[lang];
 
   const render = () => {
     const list = listItems().filter((i) => catalog.has(i.id));
     wrap.hidden = list.length === 0;
-    $('[data-list-count]').textContent = `· ${list.filter((i) => !i.bought).length} 样`;
+    $('[data-list-count]').textContent = t.count(list.filter((i) => !i.bought).length);
     $('[data-list]').replaceChildren(
-      ...grouped(list, catalog).map((group) => {
+      ...grouped(list, catalog, lang).map((group) => {
         const ul: HTMLUListElement = el('ul', { className: 'ingredients' });
         ul.append(
           ...group.items.map((item) => {
@@ -59,11 +67,11 @@ export function mountShoppingList(catalog: Map<string, CatalogInfo>) {
             box.checked = item.bought;
             box.addEventListener('change', () => set(`list:${item.id}`, { for: item.for, bought: box.checked }));
             const text: HTMLSpanElement = el('span', { className: 'ing-text' });
-            text.append(
-              el('span', { className: 'ing-name', textContent: info.zh }),
-              el('span', { className: 'ing-en', textContent: info.en }),
-              el('span', { className: 'ing-note', textContent: `用于：${item.for.join('、')}` }),
-            );
+            // Each language adds the other's name where it helps at the shop.
+            const aside = lang === 'zh' ? info.en : info.where === 'asian' ? info.zh : '';
+            text.append(el('span', { className: 'ing-name', textContent: info[lang] }));
+            if (aside) text.append(el('span', { className: 'ing-en', textContent: aside }));
+            text.append(el('span', { className: 'ing-note', textContent: `${t.for}${joinList(item.for, lang)}` }));
             const label = document.createElement('label');
             label.className = 'ing-row';
             label.append(box, text);
@@ -81,18 +89,18 @@ export function mountShoppingList(catalog: Map<string, CatalogInfo>) {
 
   $('[data-list-copy]').addEventListener('click', async () => {
     try {
-      await navigator.clipboard.writeText(toText(listItems(), catalog));
-      flash(status, '已复制');
+      await navigator.clipboard.writeText(toText(listItems(), catalog, lang));
+      flash(status, t.copied);
     } catch {
-      flash(status, '复制失败，请手动选择文字');
+      flash(status, t.copyFailed);
     }
   });
   $('[data-list-stock]').addEventListener('click', () => {
     const n = stockBought();
-    flash(status, n ? `${n} 样放进了冰箱` : '先勾选买到的');
+    flash(status, n ? t.stocked(n) : t.tickFirst);
   });
   $('[data-list-clear]').addEventListener('click', () => {
-    if (!confirm('清空购物清单？')) return;
+    if (!confirm(t.clear)) return;
     setMany(Object.fromEntries(keys('list:').map((id) => [`list:${id}`, null])));
   });
 

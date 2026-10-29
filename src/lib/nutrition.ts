@@ -65,27 +65,49 @@ export function worthShowing(result: { unknown: string[] }, items: Item[], kindO
 }
 
 // Health Canada, "Safe internal cooking temperatures".
-const TEMPERATURES: Record<string, string> = {
-  poultry: '禽肉块和禽绞肉 74℃，整只禽类 82℃',
-  'ground-meat': '牛、猪、羊绞肉 71℃，含禽肉的绞肉 74℃',
-  pork: '猪肉块 71℃',
-  'beef-lamb': '牛羊整切肉三分熟 63℃、五分熟 71℃、全熟 77℃',
-  fish: '鱼 70℃',
-  shellfish: '虾蟹贝类 74℃；蛤蜊、青口、生蚝煮到壳张开，不开的丢掉',
-  egg: '含蛋的菜 74℃',
+const TEMPERATURES: Record<'zh' | 'en', Record<string, string>> = {
+  zh: {
+    poultry: '禽肉块和禽绞肉 74℃，整只禽类 82℃',
+    'ground-meat': '牛、猪、羊绞肉 71℃，含禽肉的绞肉 74℃',
+    pork: '猪肉块 71℃',
+    'beef-lamb': '牛羊整切肉三分熟 63℃、五分熟 71℃、全熟 77℃',
+    fish: '鱼 70℃',
+    shellfish: '虾蟹贝类 74℃；蛤蜊、青口、生蚝煮到壳张开，不开的丢掉',
+    egg: '含蛋的菜 74℃',
+  },
+  en: {
+    poultry: 'poultry pieces and ground poultry 74°C (165°F), whole birds 82°C (180°F)',
+    'ground-meat': 'ground beef, pork and lamb 71°C (160°F), ground meat with poultry 74°C (165°F)',
+    pork: 'pork cuts 71°C (160°F)',
+    'beef-lamb': 'whole cuts of beef and lamb: medium-rare 63°C (145°F), medium 71°C (160°F), well done 77°C (170°F)',
+    fish: 'fish 70°C (158°F)',
+    shellfish: 'shrimp, crab and shellfish 74°C (165°F); cook clams, mussels and oysters until the shells open and discard any that stay shut',
+    egg: 'egg dishes 74°C (165°F)',
+  },
 };
-const RAW: Record<string, string> = {
-  fish: '生吃的鱼选标明可生食（sashimi-grade）的产品，冷冻处理过的可以杀死寄生虫',
-  shellfish: '生吃的贝类和虾风险最高，只买标明可生食的',
-  egg: '生蛋或溏心蛋可以换成巴氏杀菌蛋（pasteurized eggs）',
-  'beef-lamb': '半熟只适用于整块牛羊肉，表面要煎透；绞肉一定做熟',
-  poultry: '禽肉不宜生吃或半熟吃',
-  pork: '猪肉不宜生吃或半熟吃',
-  'ground-meat': '绞肉不宜生吃或半熟吃',
+const RAW: Record<'zh' | 'en', Record<string, string>> = {
+  zh: {
+    fish: '生吃的鱼选标明可生食（sashimi-grade）的产品，冷冻处理过的可以杀死寄生虫',
+    shellfish: '生吃的贝类和虾风险最高，只买标明可生食的',
+    egg: '生蛋或溏心蛋可以换成巴氏杀菌蛋（pasteurized eggs）',
+    'beef-lamb': '半熟只适用于整块牛羊肉，表面要煎透；绞肉一定做熟',
+    poultry: '禽肉不宜生吃或半熟吃',
+    pork: '猪肉不宜生吃或半熟吃',
+    'ground-meat': '绞肉不宜生吃或半熟吃',
+  },
+  en: {
+    fish: 'For fish eaten raw, buy products labelled sashimi-grade; freezing kills parasites',
+    shellfish: 'Raw shellfish and shrimp carry the highest risk; buy only those labelled safe to eat raw',
+    egg: 'Pasteurized eggs can stand in for raw or soft-cooked eggs',
+    'beef-lamb': 'Rare and medium-rare are for whole cuts of beef and lamb only, seared well on the outside; always cook ground meat through',
+    poultry: 'Poultry should not be eaten raw or undercooked',
+    pork: 'Pork should not be eaten raw or undercooked',
+    'ground-meat': 'Ground meat should not be eaten raw or undercooked',
+  },
 };
 
 /** Internal temperatures for what is cooked, cautions for what is served raw, and a note on leftover rice. */
-export function safetyNotes(items: Item[], foods: Foods, marks: Marks | undefined) {
+export function safetyNotes(items: Item[], foods: Foods, marks: Marks | undefined, lang: 'zh' | 'en' = 'zh') {
   const raw = new Set(marks?.raw ?? []);
   const cooked = new Set<string>();
   const uncooked = new Set<string>();
@@ -95,8 +117,8 @@ export function safetyNotes(items: Item[], foods: Foods, marks: Marks | undefine
     (raw.has(item.key) ? uncooked : cooked).add(kind);
   }
   return {
-    temperatures: [...cooked].filter((kind) => TEMPERATURES[kind]).map((kind) => TEMPERATURES[kind]),
-    raw: [...uncooked].filter((kind) => RAW[kind]).map((kind) => RAW[kind]),
+    temperatures: [...cooked].filter((kind) => TEMPERATURES[lang][kind]).map((kind) => TEMPERATURES[lang][kind]),
+    raw: [...uncooked].filter((kind) => RAW[lang][kind]).map((kind) => RAW[lang][kind]),
     rice: cooked.has('rice'),
   };
 }
@@ -108,10 +130,17 @@ export interface Lighter {
   how: string;
 }
 
-export const LIGHTER_LABELS: Record<Lighter['target'], { label: string; nutrient: string; unit: string }> = {
-  sodium: { label: '少盐版', nutrient: '钠', unit: 'mg' },
-  fat: { label: '少油版', nutrient: '脂肪', unit: 'g' },
-  satfat: { label: '少饱和脂肪版', nutrient: '饱和脂肪', unit: 'g' },
+export const LIGHTER_LABELS: Record<'zh' | 'en', Record<Lighter['target'], { label: string; nutrient: string; unit: string }>> = {
+  zh: {
+    sodium: { label: '少盐版', nutrient: '钠', unit: 'mg' },
+    fat: { label: '少油版', nutrient: '脂肪', unit: 'g' },
+    satfat: { label: '少饱和脂肪版', nutrient: '饱和脂肪', unit: 'g' },
+  },
+  en: {
+    sodium: { label: 'Lower-sodium version', nutrient: 'sodium', unit: 'mg' },
+    fat: { label: 'Lower-fat version', nutrient: 'fat', unit: 'g' },
+    satfat: { label: 'Lower saturated fat version', nutrient: 'saturated fat', unit: 'g' },
+  },
 };
 
 /** The recipe's items with the lighter version's cuts, removals and additions applied. */

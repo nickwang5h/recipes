@@ -1,7 +1,14 @@
 // Step timers. Times written in a recipe's steps become buttons; running timers sit in a dock
 // at the bottom of every page, so something can braise while another recipe is open.
 // Timers are kept as end times in localStorage and survive reloads and navigation.
+import { pageLang } from '../i18n';
 import { findDurations, formatClock } from '../lib/timer';
+
+const T = {
+  zh: { dock: '计时器', up: '到点', ok: '知道了', cancel: '取消', step: (n: number) => `第 ${n} 步`, done: (label: string) => `${label}到了`, start: (clock: string) => `计时 ${clock}`, low: (clock: string) => `计时 ${clock}（范围的下限，到点先看一眼）` },
+  en: { dock: 'Timers', up: 'Time’s up', ok: 'Got it', cancel: 'Cancel', step: (n: number) => `step ${n}`, done: (label: string) => `${label} is up`, start: (clock: string) => `Start a ${clock} timer`, low: (clock: string) => `Start a ${clock} timer (the low end of the range; check then)` },
+};
+const say = T[pageLang()];
 
 interface Timer {
   id: string;
@@ -67,8 +74,8 @@ async function ring(timer: Timer) {
   beep();
   navigator.vibrate?.([300, 150, 300, 150, 300]);
   if (typeof Notification === 'undefined' || Notification.permission !== 'granted') return;
-  const title = `${timer.label}到了`;
-  const options = { body: `${timer.title} · 第 ${timer.step} 步`, tag: timer.id, icon: '/icons/icon-192.png' };
+  const title = say.done(timer.label);
+  const options = { body: `${timer.title} · ${say.step(timer.step)}`, tag: timer.id, icon: '/icons/icon-192.png' };
   try {
     const registration = await navigator.serviceWorker?.getRegistration();
     if (registration) await registration.showNotification(title, options);
@@ -106,24 +113,24 @@ function render() {
     dock = document.createElement('div');
     dock.className = 'timer-dock';
     dock.setAttribute('role', 'region');
-    dock.setAttribute('aria-label', '计时器');
+    dock.setAttribute('aria-label', say.dock);
     document.body.append(dock);
   }
   dock.replaceChildren(
-    ...timers.map((t) => {
-      const left = (t.end - now) / 1000;
+    ...timers.map((timer) => {
+      const left = (timer.end - now) / 1000;
       const row = document.createElement('div');
       row.className = `timer-row${left <= 0 ? ' is-done' : ''}`;
       const clock = document.createElement('span');
       clock.className = 'timer-clock';
-      clock.textContent = left <= 0 ? '到点' : formatClock(left);
+      clock.textContent = left <= 0 ? say.up : formatClock(left);
       const link = document.createElement('a');
-      link.href = t.href;
-      link.textContent = `${t.title} · 第 ${t.step} 步`;
+      link.href = timer.href;
+      link.textContent = `${timer.title} · ${say.step(timer.step)}`;
       const close = document.createElement('button');
       close.type = 'button';
-      close.textContent = left <= 0 ? '知道了' : '取消';
-      close.addEventListener('click', () => stop(t.id));
+      close.textContent = left <= 0 ? say.ok : say.cancel;
+      close.addEventListener('click', () => stop(timer.id));
       row.append(clock, link, close);
       return row;
     }),
@@ -187,7 +194,7 @@ function enhanceSteps() {
         button.tabIndex = 0;
         button.className = 'timer-btn';
         button.dataset.timer = timerId(step, n++);
-        button.title = d.maxSeconds ? `计时 ${formatClock(d.seconds)}（范围的下限，到点先看一眼）` : `计时 ${formatClock(d.seconds)}`;
+        button.title = d.maxSeconds ? say.low(formatClock(d.seconds)) : say.start(formatClock(d.seconds));
         button.addEventListener('keydown', (event) => {
           if (event.key !== 'Enter' && event.key !== ' ') return;
           event.preventDefault();

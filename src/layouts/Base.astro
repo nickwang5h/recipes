@@ -5,7 +5,8 @@ import logoCat from '../assets/cats/logo.png';
 import waveCat from '../assets/cats/wave.png';
 import KofiButton from '../components/KofiButton.astro';
 import '../styles/global.css';
-import { MAIN_SITE, SITE_DESCRIPTION, SITE_TITLE, url } from '../lib/site';
+import { HTML_LANG, OG_LOCALE, langOf, switchPath, url, type Both } from '../i18n';
+import { MAIN_SITE, SITE_DESCRIPTION, SITE_TITLE } from '../lib/site';
 
 interface Props {
   title?: string;
@@ -16,43 +17,58 @@ interface Props {
   type?: string;
   /** A narrower column for pages that are mostly pictures, like the home page. */
   narrow?: boolean;
+  /** Whether this page exists in the other language; an untranslated recipe has no English twin. */
+  twin?: boolean;
 }
 
-const { title, description = SITE_DESCRIPTION, image, type = 'website', narrow = false } = Astro.props;
+const lang = langOf(Astro.url);
+const other = lang === 'zh' ? 'en' : 'zh';
+const { title, description = SITE_DESCRIPTION[lang], image, type = 'website', narrow = false, twin = true } = Astro.props;
 const ogImage = new URL(image ? (await getImage({ src: image, width: 1200, format: 'jpg' })).src : '/og-default.png', Astro.site);
-const fullTitle = title ? `${title} · ${SITE_TITLE}` : SITE_TITLE;
+const fullTitle = title ? `${title} · ${SITE_TITLE[lang]}` : SITE_TITLE[lang];
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const path = Astro.url.pathname;
-const nav = [
-  { href: url('cuisines'), label: '菜系', match: '/cuisines/' },
-  { href: url('principles'), label: '原理', match: '/principles/' },
-  { href: url('recipes'), label: '菜谱', match: '/recipes/' },
-  { href: url('fridge'), label: '冰箱', match: '/fridge/' },
-  { href: url('menu'), label: '菜单', match: '/menu/' },
-  { href: url('mine'), label: '我的', match: '/mine/' },
+// The page's own path within its language, for marking the current section.
+const local = switchPath(path, 'zh');
+const otherPath = twin ? switchPath(path, other) : url('', other);
+const T = {
+  zh: { skip: '跳到正文', nav: '主导航', search: '搜索', theme: '切换深浅色', tagline: '家常菜和背后的道理', switchTo: 'English', switchLabel: 'Read this page in English', short: 'Ki饭' },
+  en: { skip: 'Skip to content', nav: 'Main', search: 'Search', theme: 'Switch light or dark', tagline: 'Home cooking and the reasons behind it', switchTo: '中文', switchLabel: '中文版', short: "Kiki's" },
+} satisfies Both<Record<string, string>>;
+const t = T[lang];
+const NAV = [
+  { path: 'cuisines', label: { zh: '菜系', en: 'Cuisines' } },
+  { path: 'principles', label: { zh: '原理', en: 'Science' } },
+  { path: 'recipes', label: { zh: '菜谱', en: 'Recipes' } },
+  { path: 'fridge', label: { zh: '冰箱', en: 'Fridge' } },
+  { path: 'menu', label: { zh: '菜单', en: 'Menu' } },
+  { path: 'mine', label: { zh: '我的', en: 'Saved' } },
 ];
+const nav = NAV.map((item) => ({ href: url(item.path, lang), label: item.label[lang], match: `/${item.path}/` }));
 ---
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang={HTML_LANG[lang]}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang={HTML_LANG[lang]} href={canonical} />
+    {twin && <link rel="alternate" hreflang={HTML_LANG[other]} href={new URL(otherPath, Astro.site)} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="manifest" href={lang === 'zh' ? '/manifest.webmanifest' : '/en/manifest.webmanifest'} />
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Ki饭" />
+    <meta name="apple-mobile-web-app-title" content={t.short} />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={type} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:site_name" content={SITE_TITLE} />
-    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content={SITE_TITLE[lang]} />
+    <meta property="og:locale" content={OG_LOCALE[lang]} />
     <meta name="twitter:card" content="summary_large_image" />
     <slot name="head" />
     <meta name="theme-color" content="#f3f0e8" media="(prefers-color-scheme: light)" />
@@ -69,19 +85,20 @@ const nav = [
     </script>
   </head>
   <body class={narrow ? 'narrow' : undefined}>
-    <a class="visually-hidden" href="#main">跳到正文</a>
+    <a class="visually-hidden" href="#main">{t.skip}</a>
     <header class="site-header">
       <div class="wrap">
-        <a class="brand" href={url()}><Image class="brand-cat" src={logoCat} alt="" width={72} height={72} loading="eager" />{SITE_TITLE}</a>
-        <nav class="site-nav" aria-label="主导航">
+        <a class="brand" href={url('', lang)}><Image class="brand-cat" src={logoCat} alt="" width={72} height={72} loading="eager" />{SITE_TITLE[lang]}</a>
+        <nav class="site-nav" aria-label={t.nav}>
           {nav.map((item) => (
-            <a href={item.href} aria-current={path.startsWith(item.match) ? 'page' : undefined}>{item.label}</a>
+            <a href={item.href} aria-current={local.startsWith(item.match) ? 'page' : undefined}>{item.label}</a>
           ))}
-          <a class="nav-icon" href={url('search')} aria-label="搜索" aria-current={path.startsWith('/search/') ? 'page' : undefined}>
+          <a class="nav-icon" href={url('search', lang)} aria-label={t.search} aria-current={local.startsWith('/search/') ? 'page' : undefined}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="M16 16l4.5 4.5" stroke-linecap="round" /></svg>
           </a>
+          <a class="lang-switch" href={otherPath} hreflang={HTML_LANG[other]} lang={HTML_LANG[other]} aria-label={t.switchLabel}>{lang === 'zh' ? 'EN' : '中'}</a>
           <KofiButton head />
-          <button class="theme-toggle" type="button" aria-label="切换深浅色" data-theme-toggle>
+          <button class="theme-toggle" type="button" aria-label={t.theme} data-theme-toggle>
             <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" /></svg>
             <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg>
           </button>
@@ -96,8 +113,11 @@ const nav = [
     <footer class="site-footer">
       <span class="footer-cat" aria-hidden="true"><Image src={waveCat} alt="" width={176} loading="lazy" /></span>
       <div class="wrap">
-        <span>{SITE_TITLE} · 家常菜和背后的道理</span>
-        <a href={MAIN_SITE}>nickwang.xyz</a>
+        <span>{SITE_TITLE[lang]} · {t.tagline}</span>
+        <span class="footer-links">
+          <a href={otherPath} hreflang={HTML_LANG[other]} lang={HTML_LANG[other]}>{t.switchTo}</a>
+          <a href={MAIN_SITE}>nickwang.xyz</a>
+        </span>
       </div>
     </footer>
     <script>
@@ -115,7 +135,7 @@ const nav = [
       // Loading the store here also keeps family sync running on every page.
       const markFavorites = () => {
         for (const card of document.querySelectorAll<HTMLAnchorElement>('a.card[href*="/recipes/"]')) {
-          const id = card.pathname.split('/').filter(Boolean)[1];
+          const id = card.pathname.replace(/^\/en\//, '/').split('/').filter(Boolean)[1];
           card.classList.toggle('is-fav', get('fav:' + id) === true);
         }
       };

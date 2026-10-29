@@ -1,7 +1,7 @@
 // Substring search over the index built by src/pages/search-index.json.ts.
 // Every whitespace-separated term must appear somewhere in the document; fields
 // that say more about what the page is (title, ingredients) weigh more than body text.
-import type { SearchDoc } from '../pages/search-index.json';
+import type { SearchDoc } from '../pages/[...lang]/search-index.json';
 
 const WEIGHTS: [keyof SearchDoc, number][] = [
   ['t', 10],
@@ -23,7 +23,7 @@ export function terms(query: string): string[] {
   return query.toLowerCase().split(/\s+/).filter(Boolean);
 }
 
-export function search(docs: SearchDoc[], query: string, type = ''): SearchHit[] {
+export function search(docs: SearchDoc[], query: string, type = '', lang: 'zh' | 'en' = 'zh'): SearchHit[] {
   const qs = terms(query);
   if (!qs.length) return [];
   const hits: SearchHit[] = [];
@@ -55,7 +55,7 @@ export function search(docs: SearchDoc[], query: string, type = ''): SearchHit[]
     }
     hits.push({ doc, score, excerpt: excerpt(doc, qs[0]) });
   }
-  return hits.sort((a, b) => b.score - a.score || a.doc.t.localeCompare(b.doc.t, 'zh'));
+  return hits.sort((a, b) => b.score - a.score || a.doc.t.localeCompare(b.doc.t, lang));
 }
 
 /** The summary when it mentions the term, otherwise a short window of body text around it. */

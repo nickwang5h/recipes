@@ -1,13 +1,23 @@
 ---
 // "Save every page for offline use". Hidden until a service worker controls the page.
+import { langOf } from '../i18n';
+const en = langOf(Astro.url) === 'en';
 ---
 
 <div class="offline-save" data-offline-save hidden>
-  <button class="text-btn" type="button" data-save-all>离线保存全部菜谱（约 16 MB）</button>
+  <button class="text-btn" type="button" data-save-all>{en ? 'Save every recipe for offline use (about 16 MB)' : '离线保存全部菜谱（约 16 MB）'}</button>
   <span class="offline-status" data-save-status aria-live="polite"></span>
 </div>
 
 <script>
+  import { pageLang, url } from '../i18n';
+
+  const lang = pageLang();
+  const T = {
+    zh: { all: (n: number) => `已全部离线保存（${n} 页）`, some: (n: number, total: number) => `已离线保存 ${n} / ${total} 页`, saving: (n: number, total: number) => `正在保存 ${n} / ${total} 页…`, failed: (n: number) => `完成，${n} 页失败，可稍后再试`, preparing: '准备中…' },
+    en: { all: (n: number) => `All saved for offline use (${n} pages)`, some: (n: number, total: number) => `${n} of ${total} pages saved for offline use`, saving: (n: number, total: number) => `Saving ${n} of ${total} pages…`, failed: (n: number) => `Done; ${n} pages failed, try again later`, preparing: 'Getting ready…' },
+  }[lang];
+  const pageList = `${url('', lang)}offline-pages.json`;
   const box = document.querySelector<HTMLElement>('[data-offline-save]');
   const button = document.querySelector<HTMLButtonElement>('[data-save-all]');
   const status = document.querySelector<HTMLElement>('[data-save-status]');
@@ -16,11 +26,11 @@
     try {
       const [keys, list] = await Promise.all([
         caches.open('pages').then((c) => c.keys()),
-        fetch('/offline-pages.json').then((r) => r.json() as Promise<string[]>),
+        fetch(pageList).then((r) => r.json() as Promise<string[]>),
       ]);
       const saved = new Set(keys.map((k) => new URL(k.url).pathname));
       const n = list.filter((p) => saved.has(p)).length;
-      status!.textContent = n === list.length ? `已全部离线保存（${n} 页）` : `已离线保存 ${n} / ${list.length} 页`;
+      status!.textContent = n === list.length ? T.all(n) : T.some(n, list.length);
     } catch {}
   };
 
@@ -32,14 +42,14 @@
     navigator.serviceWorker.addEventListener('message', (event) => {
       if (event.data?.type !== 'save-all-progress') return;
       const { done, total, failed } = event.data;
-      status!.textContent = done < total ? `正在保存 ${done} / ${total} 页…` : failed ? `完成，${failed} 页失败，可稍后再试` : `已全部离线保存（${total} 页）`;
+      status!.textContent = done < total ? T.saving(done, total) : failed ? T.failed(failed) : T.all(total);
       if (done >= total) button!.disabled = false;
     });
     button?.addEventListener('click', async () => {
       const registration = await navigator.serviceWorker.ready;
       button.disabled = true;
-      status!.textContent = '准备中…';
-      registration.active?.postMessage({ type: 'save-all' });
+      status!.textContent = T.preparing;
+      registration.active?.postMessage({ type: 'save-all', list: pageList });
     });
   }
 </script>

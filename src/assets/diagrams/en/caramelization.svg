@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" role="img" aria-labelledby="t d">
+  <title id="t">The darker the caramel, the more bitter it tastes</title>
+  <desc id="d">A colour strip runs from clear syrup through light amber and deep amber to burnt black, with the matching flavour and when-to-stop notes below. Sucrose starts to colour clearly above about 160°C (320°F); the other colour stages have no fixed temperature.</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    /* Real sugar colours: fixed so the strip reads the same in light and dark mode. */
+    .clear { fill: #fbf8f0; }
+    .amber { fill: #d9a650; }
+    .deep { fill: #8a4f17; }
+    .char { fill: #2a1a10; }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .label { font: 15px "Helvetica Neue", Arial, "Source Han Sans SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+    .warning { fill: var(--primary, #b83e30); }
+  </style>
+  <rect class="bg" width="600" height="380" rx="12"/>
+  <text class="label" x="300" y="42" text-anchor="middle">Sucrose starts to colour clearly above about 160°C (320°F)</text>
+  <path class="line" d="M38 79 H562 M552 71 L562 79 L552 87"/>
+
+  <!-- Four discrete swatches; no invented temperatures for individual colors. -->
+  <rect class="clear" x="36" y="113" width="132" height="72"/>
+  <rect class="amber" x="168" y="113" width="132" height="72"/>
+  <rect class="deep" x="300" y="113" width="132" height="72"/>
+  <rect class="char" x="432" y="113" width="132" height="72"/>
+  <rect class="line" x="36" y="113" width="528" height="72"/>
+  <path class="line" d="M168 113 V185 M300 113 V185 M432 113 V185"/>
+  <text class="label" x="102" y="218" text-anchor="middle">Clear syrup</text>
+  <text class="label" x="234" y="218" text-anchor="middle">Light amber</text>
+  <text class="label" x="366" y="218" text-anchor="middle">Deep amber</text>
+  <text class="label" x="498" y="218" text-anchor="middle">Burnt black</text>
+  <text class="label muted" x="102" y="249" text-anchor="middle">Mostly sweet</text>
+  <text class="label muted" x="234" y="249" text-anchor="middle">Caramel aroma</text>
+  <text class="label muted" x="366" y="249" text-anchor="middle">Bitter notes grow</text>
+  <text class="label muted" x="498" y="249" text-anchor="middle">Acrid and bitter</text>
+  <text class="label muted" x="102" y="280" text-anchor="middle">Keep reducing</text>
+  <text class="label muted" x="234" y="280" text-anchor="middle">Lower the heat,<tspan x="234" dy="1.2em">get ready to pull</tspan></text>
+  <text class="label muted" x="366" y="280" text-anchor="middle">Stop heating now</text>
+  <text class="label muted warning" x="498" y="280" text-anchor="middle">Start over</text>
+  <text class="label" x="300" y="338" text-anchor="middle">Take the pan off the heat as the colour nears your target;<tspan x="300" dy="1.2em">its residual heat keeps darkening the sugar.</tspan></text>
+</svg>

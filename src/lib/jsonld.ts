@@ -15,13 +15,14 @@ export interface RecipeLdInput {
   image?: string;
   updated: Date;
   site: { name: string; url: string };
+  lang: 'zh' | 'en';
 }
 
 const minutes = (n: number) => `PT${n}M`;
 
-/** The numbered list under "## 步骤", with markdown links and emphasis reduced to text. */
+/** The numbered list under "## 步骤" ("## Steps"), with markdown links and emphasis reduced to text. */
 export function steps(body: string): string[] {
-  const section = body.split(/^## 步骤\s*$/m)[1]?.split(/^## /m)[0] ?? '';
+  const section = body.split(/^## (?:步骤|Steps)\s*$/m)[1]?.split(/^## /m)[0] ?? '';
   return section
     .split('\n')
     .map((line) => line.match(/^\d+\.\s+(.*)$/)?.[1])
@@ -39,13 +40,14 @@ export function recipeLd(r: RecipeLdInput) {
     ...(r.image ? { image: [r.image] } : {}),
     recipeCuisine: r.cuisine,
     recipeCategory: r.course,
-    recipeYield: `${r.servings} 人份`,
+    inLanguage: r.lang === 'zh' ? 'zh-CN' : 'en',
+    recipeYield: r.lang === 'zh' ? `${r.servings} 人份` : `${r.servings} servings`,
     prepTime: minutes(r.time.prep),
     cookTime: minutes(r.time.cook),
     totalTime: minutes(r.time.prep + r.time.cook),
     keywords: r.keywords.join(', '),
     recipeIngredient: r.ingredients.map((i) =>
-      [i.qty != null ? `${formatQty(i.qty, i.unit)}${i.unit ? ` ${i.unit}` : ''}` : '', i.name, i.note ? `（${i.note}）` : '']
+      [i.qty != null ? `${formatQty(i.qty, i.unit)}${i.unit ? ` ${i.unit}` : ''}` : '', i.name, i.note ? (r.lang === 'zh' ? `（${i.note}）` : `(${i.note})`) : '']
         .filter(Boolean)
         .join(' ')
         .replace(' （', '（'),

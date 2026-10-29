@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="t d">
+  <title id="t">Flour absorbs water to form gluten, and the network traps gas bubbles</title>
+  <desc id="d">Glutenin gives elasticity and gliadin gives extensibility. Once hydrated, the proteins link up with kneading into a gluten network that traps the bubbles made by fermentation.</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .elastic { stroke: var(--accent-green, #2f8359); stroke-width: 3; fill: none; stroke-linecap: round; }
+    .stretch { stroke: var(--accent-yellow, #a66b00); stroke-width: 3; fill: none; stroke-linecap: round; }
+    .bubble { fill: var(--surface, #e9e5dc); stroke: var(--accent-blue, #2f6fca); stroke-width: 2; }
+    .water { fill: #9cc3d9; fill-opacity: .45; }
+    .border { stroke: var(--border, #d3ccbe); stroke-width: 2; fill: none; }
+    .label { font: 15px "Helvetica Neue", Arial, "Source Han Sans SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+  </style>
+  <rect class="bg" width="600" height="400" rx="12"/>
+  <text class="label" x="32" y="42">Hydrate → knead to build a network → hold fermentation gas</text>
+
+  <text class="label" x="112" y="86" text-anchor="middle">Flour and water</text>
+  <circle class="water" cx="48" cy="114" r="9"/>
+  <circle class="water" cx="164" cy="190" r="9"/>
+  <path class="elastic" d="M49 140 Q57 119 65 140 T81 140 T97 140 T113 140 T129 140 T145 140 T161 140"/>
+  <text class="label muted" x="112" y="173" text-anchor="middle">Glutenin: elastic</text>
+  <path class="stretch" d="M49 216 C77 196 98 234 125 216 S151 208 169 217"/>
+  <text class="label muted" x="112" y="250" text-anchor="middle">Gliadin: extensible</text>
+
+  <path class="line" d="M200 186 H228 M220 178 L228 186 L220 194"/>
+  <text class="label muted" x="214" y="126" text-anchor="middle">Knead</text>
+
+  <text class="label" x="313" y="86" text-anchor="middle">Continuous network</text>
+  <g transform="translate(313 186)">
+    <path class="elastic" d="M-59 -54 Q-29 -43 0 -54 T59 -52 M-59 0 Q-29 -12 0 0 T59 2 M-59 54 Q-29 42 0 54 T59 52"/>
+    <path class="stretch" d="M-54 -54 Q-42 -27 -54 0 T-53 54 M0 -54 Q13 -27 0 0 T1 54 M54 -52 Q42 -27 54 2 T53 52"/>
+  </g>
+  <text class="label muted" x="313" y="278" text-anchor="middle">Stretches and springs back</text>
+
+  <path class="line" d="M389 186 H417 M409 178 L417 186 L409 194"/>
+  <text class="label muted" x="403" y="126" text-anchor="middle">Ferment</text>
+
+  <text class="label" x="500" y="86" text-anchor="middle">Traps the bubbles</text>
+  <g transform="translate(500 186)">
+    <circle class="bubble" cx="-27" cy="-27" r="21"/>
+    <circle class="bubble" cx="28" cy="-23" r="23"/>
+    <circle class="bubble" cx="0" cy="31" r="24"/>
+    <path class="elastic" d="M-55 -35 C-53 -71 -3 -69 -2 -34 C-1 -4 -44 7 -56 -15 M1 -36 C8 -70 57 -68 58 -28 C59 7 18 17 5 -7 M-29 24 C-26 -10 24 -11 31 24 C42 65 -16 78 -29 43"/>
+    <path class="stretch" d="M-58 -5 Q-36 15 -30 33 M-2 -57 Q0 -42 3 -32 M57 3 Q34 15 31 36 M-46 46 Q-36 66 -19 65 M20 64 Q44 59 54 38"/>
+  </g>
+  <text class="label muted" x="500" y="278" text-anchor="middle">Keeps dough airy</text>
+
+  <path class="border" d="M32 312 H568"/>
+  <text class="label muted" x="32" y="343">Green: glutenin · Yellow: gliadin · Blue circles: bubbles</text>
+  <text class="label muted" x="32" y="373">Kneading helps build the network; water and time also form gluten slowly.</text>
+</svg>
