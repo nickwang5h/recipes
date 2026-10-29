@@ -40,4 +40,5 @@ Planned and published slugs live in `docs/content-plan.md`.
 - `node scripts/check-external-links.mjs` — checks every source URL; also runs monthly in
   `.github/workflows/check-links.yml`, which opens an issue when a link is gone
 
-Pushing `main` deploys to Netlify.
+`npm run deploy` builds and uploads to Cloudflare Pages (project `recipes`); `/api/sync` is a Pages Function
+in `functions/` backed by the D1 database `recipes` (`migrations/`). Pushing `main` no longer deploys.

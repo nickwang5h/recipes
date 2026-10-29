@@ -1,5 +1,8 @@
+import { readFileSync } from 'node:fs';
+import { DatabaseSync } from 'node:sqlite';
 import { describe, expect, it } from 'vitest';
 import { formatFamilyCode, invalid, merge, newFamilyCode, normalizeFamilyCode, prune, type Doc } from '../src/lib/sync';
+import { d1Store, type D1 } from '../src/lib/sync-d1';
 import { handleSync, type BlobStore } from '../src/lib/sync-server';
 
 describe('merge', () => {
@@ -46,7 +49,7 @@ describe('family codes', () => {
   });
 });
 
-/** In-memory stand-in for Netlify Blobs with etags. */
+/** In-memory stand-in for the D1 family store with etags. */
 function fakeStore() {
   const blobs = new Map<string, { data: unknown; etag: string }>();
   let n = 0;
@@ -120,5 +123,37 @@ describe('sync endpoint', () => {
     expect((await handleSync(post({ family: 'short', entries: {} }), store)).status).toBe(400);
     expect((await handleSync(post({ family, entries: { k: 'x' } }), store)).status).toBe(400);
     expect((await handleSync(new Request('https://x/api/sync'), store)).status).toBe(405);
+  });
+});
+
+/** The D1 binding over node:sqlite, running the same SQL the deployed store runs. */
+function sqliteD1() {
+  const db = new DatabaseSync(':memory:');
+  db.exec(readFileSync(new URL('../migrations/0001_families.sql', import.meta.url), 'utf8'));
+  const d1: D1 = {
+    prepare: (sql) => ({
+      bind: (...values) => ({
+        first: async <T>() => (db.prepare(sql).get(...(values as string[])) as T | undefined) ?? null,
+        run: async () => ({ meta: { changes: Number(db.prepare(sql).run(...(values as string[])).changes) } }),
+      }),
+    }),
+  };
+  return { db, d1 };
+}
+
+describe('D1 store', () => {
+  it('merges, and refuses a write whose etag has gone stale', async () => {
+    const { db, d1 } = sqliteD1();
+    const store = d1Store(d1);
+    await handleSync(post({ family, entries: { a: { v: 1, t: 1 } } }), store);
+    const res = await handleSync(post({ family, entries: { b: { v: 2, t: 2 } } }), store);
+    expect(res.headers.get('x-sync-atomic')).toBe('1');
+    expect(Object.keys((await res.json()).entries)).toEqual(['a', 'b']);
+
+    const { key } = db.prepare('SELECT key FROM families').get() as { key: string };
+    const current = await store.getWithMetadata(key, { type: 'json' });
+    expect(await store.setJSON(key, {}, { onlyIfNew: true })).toEqual({ modified: false });
+    expect(await store.setJSON(key, {}, { onlyIfMatch: current!.etag })).toEqual({ modified: true });
+    expect(await store.setJSON(key, {}, { onlyIfMatch: current!.etag })).toEqual({ modified: false });
   });
 });

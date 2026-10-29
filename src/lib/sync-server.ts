@@ -1,4 +1,4 @@
-// The /api/sync endpoint, kept free of Netlify imports so it can be tested with a fake store.
+// The /api/sync endpoint, kept free of platform imports so it can be tested with a fake store.
 // A client posts the entries it changed; the server merges them into the family's doc and
 // returns the whole merged doc. Concurrent posts are serialized with an etag check and retry.
 import { FAMILY_PATTERN, invalid, merge, prune, type Doc } from './sync';
