@@ -8,8 +8,8 @@ interface Props {
 }
 const { id } = Astro.props;
 const T = {
-  zh: { fav: '常做', menu: '加到菜单', which: '加到哪天的菜单', pick: '选一天…', note: '我的笔记', placeholder: '比如：盐减半；孩子爱吃，下次做双份', hint: '自动保存。加入家庭后，家里人都能看到。' },
-  en: { fav: 'Cook often', menu: 'Add to menu', which: 'Which day’s menu', pick: 'Pick a day…', note: 'My notes', placeholder: 'e.g. half the salt; the kids loved it, make double next time', hint: 'Saved as you type. Once you join a family, everyone in it sees them.' },
+  zh: { fav: '常做', menu: '加到菜单', which: '加到哪天的菜单', pick: '选一天…', note: '我的笔记', placeholder: '比如：盐减半；孩子爱吃，下次做双份', hint: '自动保存。加入家庭后，家里人都能看到。', start: '开始做', actions: '这道菜' },
+  en: { fav: 'Cook often', menu: 'Add to menu', which: 'Which day’s menu', pick: 'Pick a day…', note: 'My notes', placeholder: 'e.g. half the salt; the kids loved it, make double next time', hint: 'Saved as you type. Once you join a family, everyone in it sees them.', start: 'Start cooking', actions: 'This recipe' },
 } satisfies Both<Record<string, string>>;
 const t = T[langOf(Astro.url)];
 ---
@@ -25,6 +25,17 @@ const t = T[langOf(Astro.url)];
   </label>
   <span class="offline-status" data-mine-status aria-live="polite"></span>
 </div>
+{/* Phones: the same three actions in a bar fixed to the bottom of the screen. */}
+<div class="actbar" role="group" aria-label={t.actions}>
+  <button class="act-fav" type="button" aria-pressed="false" aria-label={t.fav} data-fav>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.1A4.4 4.4 0 0 1 12 7.1a4.4 4.4 0 0 1 7.5 2.8C19.5 15.4 12 20 12 20Z" /></svg>
+  </button>
+  <label class="act-menu">
+    <span>{t.menu}</span>
+    <select data-menu-day aria-label={t.which}><option value="">{t.pick}</option></select>
+  </label>
+  <button class="act-cook" type="button" data-cook-open>{t.start}</button>
+</div>
 <details class="mine-note" data-note-wrap>
   <summary>{t.note}</summary>
   <textarea data-note rows="3" placeholder={t.placeholder}></textarea>
@@ -34,16 +45,18 @@ const t = T[langOf(Astro.url)];
 <script>
   import { pageLang } from '../i18n';
   import { dayKey, dayLabel, upcoming } from '../lib/days';
+  import { phone, toast } from '../scripts/phone';
   import { get, set, subscribe } from '../scripts/store';
   import { flash } from '../scripts/ui';
 
   const bar = document.querySelector<HTMLElement>('[data-mine]')!;
   const id = bar.dataset.mine!;
-  const fav = bar.querySelector<HTMLButtonElement>('[data-fav]')!;
-  const select = bar.querySelector<HTMLSelectElement>('[data-menu-day]')!;
+  // The header's buttons, the phone's bottom bar, and the note box at the end of cooking mode.
+  const favs = [...document.querySelectorAll<HTMLButtonElement>('[data-fav]')];
+  const selects = [...document.querySelectorAll<HTMLSelectElement>('[data-menu-day]')];
   const status = bar.querySelector<HTMLElement>('[data-mine-status]')!;
   const noteWrap = document.querySelector<HTMLDetailsElement>('[data-note-wrap]')!;
-  const note = noteWrap.querySelector<HTMLTextAreaElement>('[data-note]')!;
+  const notes = [...document.querySelectorAll<HTMLTextAreaElement>('textarea[data-note]')];
 
   const lang = pageLang();
   const T = {
@@ -51,41 +64,50 @@ const t = T[langOf(Astro.url)];
     en: { fav: 'Cook often', on: 'Cook often ✓', already: (day: string) => `Already on ${day}`, added: (day: string) => `Added to ${day}` },
   }[lang];
   const today = new Date();
-  for (const day of upcoming(today)) select.append(new Option(dayLabel(day, today, lang), dayKey(day)));
+  for (const select of selects) for (const day of upcoming(today)) select.append(new Option(dayLabel(day, today, lang), dayKey(day)));
+  // On phones the header's status line is hidden, so the message shows above the bottom bar.
+  const say = (text: string) => (phone.matches ? toast(text) : flash(status, text));
 
   const render = () => {
     const on = get('fav:' + id) === true;
-    fav.setAttribute('aria-pressed', String(on));
-    fav.querySelector('[data-fav-label]')!.textContent = on ? T.on : T.fav;
+    for (const fav of favs) {
+      fav.setAttribute('aria-pressed', String(on));
+      const label = fav.querySelector('[data-fav-label]');
+      if (label) label.textContent = on ? T.on : T.fav;
+    }
     // Don't overwrite what's being typed.
-    if (document.activeElement !== note) note.value = get<string>('note:' + id) ?? '';
-    if (note.value) noteWrap.open = true;
+    for (const note of notes) if (document.activeElement !== note) note.value = get<string>('note:' + id) ?? '';
+    if (get<string>('note:' + id)) noteWrap.open = true;
   };
 
-  fav.addEventListener('click', () => set('fav:' + id, get('fav:' + id) === true ? null : true));
+  for (const fav of favs) fav.addEventListener('click', () => set('fav:' + id, get('fav:' + id) === true ? null : true));
 
-  select.addEventListener('change', () => {
-    const day = select.value;
-    if (!day) return;
-    const list = get<string[]>('menu:' + day) ?? [];
-    const label = select.selectedOptions[0].textContent!.split(' ')[0];
-    if (list.includes(id)) flash(status, T.already(label));
-    else {
-      set('menu:' + day, [...list, id]);
-      flash(status, T.added(label));
-    }
-    select.value = '';
-  });
+  for (const select of selects) {
+    select.addEventListener('change', () => {
+      const day = select.value;
+      if (!day) return;
+      const list = get<string[]>('menu:' + day) ?? [];
+      const label = select.selectedOptions[0].textContent!.split(' ')[0];
+      if (list.includes(id)) say(T.already(label));
+      else {
+        set('menu:' + day, [...list, id]);
+        say(T.added(label));
+      }
+      select.value = '';
+    });
+  }
 
-  let typing: ReturnType<typeof setTimeout> | undefined;
-  note.addEventListener('input', () => {
-    clearTimeout(typing);
-    typing = setTimeout(() => set('note:' + id, note.value.trim() || null), 600);
-  });
-  note.addEventListener('blur', () => {
-    clearTimeout(typing);
-    set('note:' + id, note.value.trim() || null);
-  });
+  for (const note of notes) {
+    let typing: ReturnType<typeof setTimeout> | undefined;
+    note.addEventListener('input', () => {
+      clearTimeout(typing);
+      typing = setTimeout(() => set('note:' + id, note.value.trim() || null), 600);
+    });
+    note.addEventListener('blur', () => {
+      clearTimeout(typing);
+      set('note:' + id, note.value.trim() || null);
+    });
+  }
 
   subscribe(render);
   render();

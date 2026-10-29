@@ -83,7 +83,7 @@ const short = (title: string) => title.split(/：|: /)[0];
         <input id="home-q" type="search" name="q" placeholder={t.placeholder} autocomplete="off" />
       </form>
       <div class="home-actions">
-        <a class="home-lucky" href={`${url('recipes', lang)}?lucky`}>{t.lucky}</a>
+        <a class="home-lucky" href={`${url('recipes', lang)}?lucky`} data-draw>{t.lucky}</a>
         <span class="hand-note">{t.luckyNote}</span>
       </div>
     </div>
@@ -178,6 +178,16 @@ const short = (title: string) => title.split(/：|: /)[0];
   </section>
 
   <script>
+    import { openDraw } from '../../scripts/draw';
+    import { phone } from '../../scripts/phone';
+
+    // Phones draw on this page instead of going to the recipe list.
+    document.querySelector('[data-draw]')?.addEventListener('click', (event) => {
+      if (!phone.matches) return;
+      event.preventDefault();
+      void openDraw();
+    });
+
     // Recipe-box drawers: one cuisine open at a time; arrow keys move between tabs.
     const tabs = [...document.querySelectorAll<HTMLButtonElement>('.box-tab')];
     const open = (tab: HTMLButtonElement, focus = false) => {

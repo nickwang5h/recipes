@@ -97,6 +97,8 @@ const label = (i: (typeof catalog)[number]) => (lang === 'en' ? i.data.en : i.da
   </header>
 
   <div class="fridge-layout">
+    {/* Phones: what's in the fridge first, then common ingredients to tap (scripts/fridge-picker.ts). */}
+    <div class="fridge-phone" data-fridge-phone></div>
     <aside class="recipe-aside fridge-picker" aria-label={t.pick}>
       <label class="fridge-search">
         <span class="visually-hidden">{t.search}</span>
@@ -175,6 +177,8 @@ const label = (i: (typeof catalog)[number]) => (lang === 'en' ? i.data.en : i.da
     import { get, keys, set, setMany, subscribe } from '../../scripts/store';
     import { addToList, isListed, mountShoppingList } from '../../scripts/shopping-list';
     import { el, recipeCard } from '../../scripts/ui';
+    import { fridgeData, mountPicker } from '../../scripts/fridge-picker';
+    import { phone } from '../../scripts/phone';
 
     const lang = pageLang();
     const T = {
@@ -361,5 +365,14 @@ const label = (i: (typeof catalog)[number]) => (lang === 'en' ? i.data.en : i.da
 
     subscribe(render);
     render();
+
+    // Phones get the tap-to-add picker in place of the sidebar.
+    const phoneHost = $('[data-fridge-phone]');
+    const mountPhone = () => {
+      if (!phone.matches || phoneHost.childElementCount) return;
+      void fridgeData().then((d) => mountPicker(phoneHost, d));
+    };
+    phone.addEventListener('change', mountPhone);
+    mountPhone();
   </script>
 </Base>

@@ -24,12 +24,16 @@ export interface RecipeData {
   req: string[];
   /** Months in which a required ingredient is in field season. */
   season: number[];
+  /** 能带饭, 一锅出: for the phone's draw. */
+  tags: string[];
+  /** A small side, left out of the draw. */
+  minor: boolean;
 }
 
 export interface SiteData {
   recipes: RecipeData[];
   cuisines: Record<string, { title: string; accent: string }>;
-  ingredients: Record<string, { zh: string; en: string; where: 'mainstream' | 'asian' | 'specialty' }>;
+  ingredients: Record<string, { zh: string; en: string; where: 'mainstream' | 'asian' | 'specialty'; subs?: string[] }>;
   staples: string[];
 }
 
@@ -57,12 +61,14 @@ export const GET: APIRoute = async ({ props }) => {
           img: r.data.cover ? (await getImage({ src: r.data.cover, width: 480, format: 'webp' })).src : undefined,
           req,
           season: [...new Set(req.flatMap((id) => catalog.find((i) => i.id === id)?.data.season ?? []))],
+          tags: r.data.tags,
+          minor: !!r.data.minor,
         };
       }),
     ),
     cuisines: Object.fromEntries(cuisines.map((c) => [c.id, { title: c.data.title, accent: c.data.accent }])),
     ingredients: Object.fromEntries(
-      catalog.filter((i) => used.has(i.id)).map((i) => [i.id, { zh: i.data.zh, en: i.data.en, where: i.data.where }]),
+      catalog.filter((i) => used.has(i.id)).map((i) => [i.id, { zh: i.data.zh, en: i.data.en, where: i.data.where, ...(i.data.substitutes.length && { subs: i.data.substitutes.map((s) => s.id) }) }]),
     ),
     staples: DEFAULT_STAPLES,
   };

@@ -1,5 +1,10 @@
 ---
 import { getEntries, type CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import burntCat from '../assets/cats/burnt.png';
+import serveCat from '../assets/cats/serve.png';
+import KofiButton from './KofiButton.astro';
+import cookLinks from '../data/cook-links.json';
 import { HTML_LANG, langOf, type Both } from '../i18n';
 import type { LineWords } from '../i18n/content';
 import { WHERE_TO_BUY } from '../lib/categories';
@@ -13,16 +18,22 @@ const { recipe } = Astro.props;
 const { servings, ingredients } = recipe.data;
 const lang = langOf(Astro.url);
 const T = {
-  zh: { cook: '开始做菜', step: '第 {n} / {total} 步', prev: '上一步', next: '下一步', done: '做完了', leave: '退出做菜模式', fold: '收起', title: '配料', serves: `${servings} 人份`, servings: '份量', fewer: '减少一人份', more: '增加一人份', people: '人', wake: '屏幕常亮', reset: '重置勾选与份量', note: `配料已按新份量换算；步骤里提到的用量仍按 ${servings} 人份。`, optional: '可选' },
-  en: { cook: 'Start cooking', step: 'Step {n} of {total}', prev: 'Back', next: 'Next', done: 'Done', leave: 'Leave cooking mode', fold: 'Close', title: 'Ingredients', serves: `Serves ${servings}`, servings: 'Serves', fewer: 'One serving fewer', more: 'One serving more', people: '', wake: 'Keep screen on', reset: 'Reset ticks and servings', note: `Ingredients are scaled to the new number of servings; amounts in the steps are still for ${servings}.`, optional: 'optional' },
+  zh: { step: '第 {n} / {total} 步', prev: '上一步', next: '下一步', done: '做完了', leave: '退出做菜模式', resume: '接着做 · 第 {n} 步', sheet: '配料 · {n} 人', served: '开饭啦', fav: '常做', noteBox: '我的笔记', have: '有', need: '缺', add: '缺的加到清单（{n}）', listed: '已在清单', fridge: '先选冰箱里有什么', added: '加了 {n} 样到清单', fridgeTitle: '冰箱', ok: '好', title: '配料', serves: `${servings} 人份`, servings: '份量', fewer: '减少一人份', more: '增加一人份', people: '人', wake: '屏幕常亮', reset: '重置勾选与份量', note: `配料已按新份量换算；步骤里提到的用量仍按 ${servings} 人份。`, optional: '可选' },
+  en: { step: 'Step {n} of {total}', prev: 'Back', next: 'Next', done: 'Done', leave: 'Leave cooking mode', resume: 'Continue · step {n}', sheet: 'Ingredients · serves {n}', served: 'Dinner’s ready', fav: 'Cook often', noteBox: 'My notes', have: 'have', need: 'need', add: 'Add what’s missing ({n})', listed: 'On the list', fridge: 'What’s in your fridge?', added: 'Added {n} to the list', fridgeTitle: 'Fridge', ok: 'Done', title: 'Ingredients', serves: `Serves ${servings}`, servings: 'Serves', fewer: 'One serving fewer', more: 'One serving more', people: '', wake: 'Keep screen on', reset: 'Reset ticks and servings', note: `Ingredients are scaled to the new number of servings; amounts in the steps are still for ${servings}.`, optional: 'optional' },
 } satisfies Both<Record<string, string>>;
 const t = T[lang];
 const catalog = new Map(
   (await getEntries(ingredients.flatMap((group) => group.items.map((item) => item.ref)))).map((entry) => [entry.id, entry]),
 );
+// Which ingredient lines each step uses and where each key point belongs (scripts/cook-links.mjs).
+const links = (cookLinks as Record<string, { steps: string[][]; tips: number[] }>)[recipe.id] ?? { steps: [], tips: [] };
+// Words the scripts need, kept in one place.
+const words = { step: t.step, next: t.next, done: t.done, resume: t.resume, sheet: t.sheet, have: t.have, need: t.need, add: t.add, listed: t.listed, fridge: t.fridge, added: t.added, fridgeTitle: t.fridgeTitle, ok: t.ok };
 ---
 
 <aside class="recipe-aside" data-recipe-kit data-slug={recipe.id} data-base={servings} aria-labelledby="ingredients-title">
+  {/* Phones: what's missing goes to the shopping list in one tap. */}
+  <div class="ing-tools"><button class="text-btn" type="button" data-add-missing></button></div>
   <h2 id="ingredients-title">{t.title}</h2>
   <p class="servings-static">{t.serves}</p>
   <div class="kit-controls" hidden>
@@ -53,7 +64,7 @@ const catalog = new Map(
           // the English site, the Chinese for what is bought at an Asian grocery.
           const aside = lang === 'zh' ? info.en : info.where === 'asian' ? info.zh : undefined;
           return (
-          <li>
+          <li data-ref={item.ref.id} data-optional={item.optional ? '' : undefined} data-subs={info.substitutes.map((sub) => sub.id).join(' ') || undefined}>
             <label class="ing-row">
               <input type="checkbox" data-ing={`${g}-${i}`} />
               <span class="ing-text">
@@ -68,6 +79,7 @@ const catalog = new Map(
                 {aside && <span class="ing-en" lang={HTML_LANG[lang === 'zh' ? 'en' : 'zh']}>{aside}</span>}
                 {item.note && <span class="ing-note">{item.note}</span>}
               </span>
+              <span class="ing-have" data-have></span>
             </label>
           </li>
           );
@@ -77,36 +89,53 @@ const catalog = new Map(
   ))}
 </aside>
 
-{/* Cooking mode: phones only (≤760px). One step a screen, sharing the page's ticks and timers. */}
-<button class="text-btn cook-start" type="button" data-cook-open>{t.cook}</button>
-<div class="cook" data-cook hidden role="dialog" aria-modal="true" aria-labelledby="cook-title" data-step={t.step} data-next={t.next} data-done={t.done}>
-  <div class="cook-bar">
-    <p class="cook-title" id="cook-title"><span class="cook-name" data-cook-name></span><span class="cook-count" data-cook-count></span></p>
-    <button class="cook-icon cook-ings" type="button" data-cook-ings aria-expanded="false">{t.title}</button>
-    <button class="cook-icon" type="button" data-cook-close aria-label={t.leave}>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+{/* Cooking mode, phones only (≤760px): one step a screen, with that step's amounts and key points.
+    It shares the page's ticks, servings and timers. */}
+<div class="cook" data-cook hidden role="dialog" aria-modal="true" aria-labelledby="cook-title" data-words={JSON.stringify(words)} data-links={JSON.stringify(links)}>
+  <div class="cook-top">
+    <button class="cook-x" type="button" data-cook-close aria-label={t.leave}>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
     </button>
+    <p class="cook-where" id="cook-title"><span data-cook-name></span><b data-cook-count></b></p>
+    <button class="cook-ings" type="button" data-cook-ings>{t.title}</button>
   </div>
-  <div class="cook-body" data-cook-body aria-live="polite"></div>
+  <div class="cook-prog" data-cook-prog aria-hidden="true"></div>
+  <div class="cook-body" data-cook-body></div>
+  <div class="cook-done" data-cook-done hidden>
+    <Image src={serveCat} alt="" width={340} loading="lazy" />
+    <h2 tabindex="-1">{t.served}</h2>
+    <textarea data-note rows="3" placeholder={t.noteBox} aria-label={t.noteBox}></textarea>
+    <button class="act-fav cook-fav" type="button" aria-pressed="false" data-fav>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.1A4.4 4.4 0 0 1 12 7.1a4.4 4.4 0 0 1 7.5 2.8C19.5 15.4 12 20 12 20Z" /></svg>
+      <span>{t.fav}</span>
+    </button>
+    <KofiButton />
+  </div>
   <div class="cook-nav">
     <button class="cook-prev" type="button" data-cook-prev>{t.prev}</button>
     <button class="cook-next" type="button" data-cook-next>{t.next}</button>
   </div>
-  <div class="cook-sheet" data-cook-sheet hidden>
-    <div class="cook-sheet-head"><span>{t.title}</span><button class="text-btn" type="button" data-cook-fold>{t.fold}</button></div>
-    <div class="cook-sheet-list" data-cook-list></div>
-  </div>
+  <template data-cook-cat><Image src={burntCat} alt="" width={108} loading="lazy" /></template>
 </div>
 
 <script>
   import { pageLang } from '../i18n';
+  import { ALWAYS_HAVE, DEFAULT_STAPLES } from '../lib/fridge';
   import { countedName, formatQty, scaleQty, unitLabel } from '../lib/scale';
+  import { openFridge } from '../scripts/fridge-picker';
+  import { openSheet, phone, popLayer, pushLayer, toast, touch } from '../scripts/phone';
+  import { addToList, isListed } from '../scripts/shopping-list';
+  import { get, keys, subscribe } from '../scripts/store';
 
   type State = { servings: number; ingredients: string[]; steps: number[] };
 
   const MIN = 1;
   const MAX = 24;
   const lang = pageLang();
+  type Words = Record<'step' | 'next' | 'done' | 'resume' | 'sheet' | 'have' | 'need' | 'add' | 'listed' | 'fridge' | 'added' | 'fridgeTitle' | 'ok', string>;
+  const root = document.querySelector<HTMLElement>('[data-cook]');
+  const words: Words = root ? JSON.parse(root.dataset.words!) : {};
+  const fill = (text: string, n: number | string, total?: number) => text.replace('{n}', String(n)).replace('{total}', String(total));
 
   for (const kit of document.querySelectorAll<HTMLElement>('[data-recipe-kit]')) {
     const slug = kit.dataset.slug!;
@@ -196,6 +225,8 @@ const catalog = new Map(
     };
 
     const renderChecks = () => {
+      // Cooking mode's 开始做 / 接着做 label listens for this; setting .checked fires no change event.
+      queueMicrotask(() => kit.dispatchEvent(new Event('ticks')));
       for (const box of ingBoxes) box.checked = state.ingredients.includes(box.dataset.ing!);
       stepBoxes.forEach((box, i) => {
         box.checked = state.steps.includes(i);
@@ -261,127 +292,268 @@ const catalog = new Map(
     controls.hidden = false;
     renderServings();
     renderChecks();
-    if (stepBoxes.length) cookMode(kit, stepItems, stepBoxes);
+    haveMarks(kit);
+    if (stepBoxes.length) cookMode(kit, stepItems, stepBoxes, () => state.servings);
+    else for (const b of document.querySelectorAll<HTMLElement>('[data-cook-open]')) b.hidden = true;
+  }
+
+
+  // Phones: each ingredient says whether the fridge has it, and what's missing goes to the shopping
+  // list in one tap. Same rules as the fridge page: staples count unless ticked off, and a catalog
+  // substitute covers a gap. With nothing in the fridge yet there is nothing to compare against.
+  function haveMarks(kit: HTMLElement) {
+    const title = document.querySelector('h1')?.textContent ?? '';
+    const button = kit.querySelector<HTMLButtonElement>('[data-add-missing]')!;
+    const rows = [...kit.querySelectorAll<HTMLElement>('li[data-ref]')];
+    let missing: string[] = [];
+    const render = () => {
+      const stocked = new Set(keys('have:'));
+      const has = (id: string) => stocked.has(id) || ALWAYS_HAVE.includes(id) || (DEFAULT_STAPLES.includes(id) && get('staple-off:' + id) !== true);
+      const empty = stocked.size === 0;
+      missing = [];
+      for (const row of rows) {
+        const id = row.dataset.ref!;
+        const ok = has(id) || (row.dataset.subs ?? '').split(' ').some((sub) => sub && has(sub));
+        const mark = row.querySelector<HTMLElement>('[data-have]')!;
+        // Optional lines are never "missing".
+        const show = !empty && (ok || row.dataset.optional === undefined);
+        mark.textContent = show ? (ok ? words.have : words.need) : '';
+        mark.classList.toggle('is-need', show && !ok);
+        if (!empty && !ok && row.dataset.optional === undefined && !missing.includes(id)) missing.push(id);
+      }
+      const listed = missing.length > 0 && isListed(title, missing);
+      button.hidden = !empty && missing.length === 0;
+      button.disabled = listed;
+      button.textContent = empty ? words.fridge : listed ? words.listed : fill(words.add, missing.length);
+      button.dataset.mode = empty ? 'fridge' : 'add';
+    };
+    button.addEventListener('click', () => {
+      if (button.dataset.mode === 'fridge') return openFridge(words.fridgeTitle, words.ok);
+      const before = missing.filter((id) => !isListed(title, [id])).length;
+      addToList(title, missing);
+      toast(fill(words.added, before));
+    });
+    subscribe(render);
+    render();
   }
 
   // Cooking mode: the step in large type, one at a time. "Next" ticks the page's own checkbox, so the page,
   // cooking mode and the saved state never disagree; timers are the page's own timer buttons, clicked through.
-  function cookMode(kit: HTMLElement, items: HTMLLIElement[], boxes: HTMLInputElement[]) {
-    const root = document.querySelector<HTMLElement>('[data-cook]');
-    const start = document.querySelector<HTMLElement>('[data-cook-open]');
-    if (!root || !start) return;
+  function cookMode(kit: HTMLElement, items: HTMLLIElement[], boxes: HTMLInputElement[], servings: () => number) {
+    if (!root) return;
     const $ = <E extends HTMLElement>(sel: string) => root.querySelector<E>(sel)!;
     const body = $('[data-cook-body]');
+    const done = $('[data-cook-done]');
+    const nav = $('.cook-nav');
     const next = $<HTMLButtonElement>('[data-cook-next]');
     const prev = $<HTMLButtonElement>('[data-cook-prev]');
-    const sheet = $('[data-cook-sheet]');
-    const list = $('[data-cook-list]');
-    const ings = $<HTMLButtonElement>('[data-cook-ings]');
+    const prog = $('[data-cook-prog]');
+    const starts = [...document.querySelectorAll<HTMLElement>('[data-cook-open]')];
+    const links: { steps: string[][]; tips: number[] } = JSON.parse(root.dataset.links!);
     const parts = [...kit.querySelectorAll<HTMLElement>(':scope > h3, :scope > ul.ingredients')];
+    const tips = [...(items[0].closest('.recipe-content')?.querySelectorAll<HTMLLIElement>(':scope > h2 + ul > li') ?? [])];
+    const cat = $<HTMLTemplateElement>('[data-cook-cat]');
     $('[data-cook-name]').textContent = document.querySelector('h1')?.textContent ?? '';
-
-    // Entrances: beside 常做 / 加到菜单 in the header, and a small one beside the steps heading.
-    document.querySelector('.mine-bar')?.append(start);
-    const heading = items[0].closest('ol')?.previousElementSibling;
-    if (heading?.tagName === 'H2') {
-      const small = start.cloneNode(true) as HTMLElement;
-      small.classList.add('cook-start-small');
-      heading.append(small);
-    }
+    for (const b of starts) b.dataset.start ??= b.textContent ?? '';
 
     let at = 0;
     let lock: WakeLockSentinel | null = null;
-    const last = () => at === items.length - 1;
+    const total = items.length;
+
+    // 开始做 becomes 接着做 · 第 4 步 halfway through.
+    const renderStart = () => {
+      const first = boxes.findIndex((b) => !b.checked);
+      const halfway = first > 0;
+      for (const b of starts) b.textContent = halfway ? fill(words.resume, first + 1) : b.dataset.start!;
+    };
+
+    // The amounts this step uses, as the page shows them for the current servings.
+    const uses = (i: number) => (links.steps[i] ?? []).flatMap((ref) => {
+      const row = kit.querySelector(`input[data-ing="${ref}"]`)?.closest('.ing-row');
+      if (!row) return [];
+      const chip = document.createElement('span');
+      const qty = row.querySelector('.ing-qty')?.textContent?.trim();
+      if (qty) chip.append(Object.assign(document.createElement('b'), { textContent: qty }), ' ');
+      chip.append(row.querySelector('.ing-name')?.textContent ?? '');
+      return [chip];
+    });
+
+    const tipCard = (li: HTMLLIElement) => {
+      const copy = li.cloneNode(true) as HTMLElement;
+      const head = copy.querySelector('strong');
+      head?.remove();
+      // "**颜色黑、入口苦**：糖色炒过了头…" — the colon goes with the heading.
+      const first = copy.firstChild;
+      if (first?.nodeType === Node.TEXT_NODE) first.textContent = first.textContent!.replace(/^\s*[：:]\s*/, '');
+      const card = document.createElement('div');
+      card.className = 'cook-tip';
+      const text = document.createElement('div');
+      text.append(Object.assign(document.createElement('b'), { textContent: head?.textContent ?? '' }));
+      const p = document.createElement('p');
+      p.append(...copy.childNodes);
+      text.append(p);
+      card.append(cat.content.cloneNode(true), text);
+      return card;
+    };
 
     const show = () => {
-      $('[data-cook-count]').textContent = root.dataset.step!.replace('{n}', String(at + 1)).replace('{total}', String(items.length));
+      done.hidden = true;
+      nav.hidden = false;
+      body.hidden = false;
+      $('[data-cook-count]').textContent = `${at + 1} / ${total}`;
+      $('[data-cook-count]').setAttribute('aria-label', fill(words.step, at + 1, total));
+      prog.replaceChildren(...items.map((_, i) => {
+        const bar = document.createElement('span');
+        bar.className = i === at ? 'is-now' : boxes[i].checked ? 'is-done' : '';
+        return bar;
+      }));
+
+      const num = Object.assign(document.createElement('p'), { className: 'cook-num', textContent: String(at + 1) });
+      const use = document.createElement('div');
+      use.className = 'cook-use';
+      use.append(...uses(at));
+
+      // The step's words, with its times taken out of the sentence and set below as big buttons.
       const copy = items[at].cloneNode(true) as HTMLElement;
       copy.querySelector('.step-hit')?.remove();
-      // The copied timers stay timer buttons (timers.ts keeps their pressed state) and start the page's own.
-      for (const t of copy.querySelectorAll<HTMLElement>('.timer-btn')) {
-        t.addEventListener('click', () => document.querySelector<HTMLElement>(`.recipe-content .timer-btn[data-timer="${t.dataset.timer}"]`)?.click());
-        t.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); t.click(); } });
+      for (const t of copy.querySelectorAll('.timer-btn')) t.replaceWith(t.textContent ?? '');
+      const text = document.createElement('p');
+      text.className = 'cook-text';
+      text.append(...copy.childNodes);
+      text.normalize();
+
+      const timers = document.createElement('div');
+      timers.className = 'cook-timers';
+      for (const page of items[at].querySelectorAll<HTMLElement>('.timer-btn')) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        // Same class and id as the page's button, so timers.ts keeps it pressed while it runs.
+        b.className = 'timer-btn cook-timer';
+        b.dataset.timer = page.dataset.timer;
+        b.setAttribute('aria-pressed', page.getAttribute('aria-pressed') ?? 'false');
+        b.textContent = page.textContent;
+        b.addEventListener('click', () => page.click());
+        timers.append(b);
       }
-      const p = document.createElement('p');
-      p.className = 'cook-text';
-      p.append(...copy.childNodes);
-      body.replaceChildren(p);
+
+      // Key points that belong to this step; any that belong nowhere wait on the last step.
+      const here = tips.filter((_, k) => links.tips[k] === at || (at === total - 1 && !(links.tips[k] >= 0 && links.tips[k] < total)));
+      body.replaceChildren(num, ...(use.childNodes.length ? [use] : []), text, ...(timers.childNodes.length ? [timers] : []), ...here.map(tipCard));
       body.scrollTop = 0;
       prev.disabled = at === 0;
-      next.textContent = last() ? root.dataset.done! : root.dataset.next!;
+      next.textContent = at === total - 1 ? words.done : words.next;
+    };
+
+    const finish = () => {
+      body.hidden = true;
+      nav.hidden = true;
+      done.hidden = false;
+      prog.replaceChildren(...items.map(() => Object.assign(document.createElement('span'), { className: 'is-done' })));
+      $('[data-cook-count]').textContent = '';
+      // Focus the heading, not the note box: no keyboard popping up over the cat.
+      done.querySelector<HTMLElement>('h2')?.focus({ preventScroll: true });
     };
 
     const hold = async () => {
-      try { if (!lock && document.visibilityState === 'visible') lock = (await navigator.wakeLock?.request('screen')) ?? null; } catch {}
-      lock?.addEventListener('release', () => (lock = null));
+      try {
+        if (!lock && document.visibilityState === 'visible') {
+          const sentinel = (await navigator.wakeLock?.request('screen')) ?? null;
+          // Cooking mode may have closed while the request was out.
+          if (root.hidden) return void sentinel?.release();
+          lock = sentinel;
+          lock?.addEventListener('release', () => (lock = null));
+        }
+      } catch {}
     };
 
-    const fold = () => {
-      if (sheet.hidden) return;
-      kit.append(...parts);
-      sheet.hidden = true;
-      ings.setAttribute('aria-expanded', 'false');
+    const close = () => {
+      root.hidden = true;
+      document.documentElement.classList.remove('is-cooking');
+      void lock?.release();
+      lock = null;
+      // Back on the page where cooking stopped.
+      const target = done.hidden ? items[at] : document.querySelector<HTMLElement>('[data-served]:not([hidden])') ?? items[at];
+      target.scrollIntoView({ block: 'center' });
+      starts[0]?.focus({ preventScroll: true });
     };
 
     const open = () => {
+      if (!root.hidden) return;
       const first = boxes.findIndex((b) => !b.checked);
       at = first < 0 ? 0 : first;
       show();
       root.hidden = false;
-      document.body.classList.add('cooking');
-      history.pushState({ cooking: true }, '');
+      document.documentElement.classList.add('is-cooking');
+      pushLayer(root, close);
       void hold();
-      next.focus();
-    };
-
-    // Leaving goes through history, so the phone's back button and × do the same thing.
-    const close = () => {
-      if (root.hidden) return;
-      fold();
-      root.hidden = true;
-      document.body.classList.remove('cooking');
-      void lock?.release();
-      lock = null;
-      items[at].scrollIntoView({ block: 'center' });
-      start.focus({ preventScroll: true });
+      next.focus({ preventScroll: true });
     };
 
     const forward = () => {
+      if (!done.hidden) return;
       const box = boxes[at];
       if (!box.checked) {
         box.checked = true;
         box.dispatchEvent(new Event('change'));
       }
-      if (last()) history.back();
+      if (at === total - 1) finish();
       else { at++; show(); }
     };
-    const back = () => { if (at > 0) { at--; show(); } };
+    const back = () => {
+      if (!done.hidden) { show(); next.focus({ preventScroll: true }); return; }
+      if (at > 0) { at--; show(); }
+    };
 
-    for (const b of document.querySelectorAll('[data-cook-open]')) b.addEventListener('click', open);
+    for (const b of starts) b.addEventListener('click', open);
     next.addEventListener('click', forward);
     prev.addEventListener('click', back);
-    $('[data-cook-close]').addEventListener('click', () => history.back());
-    window.addEventListener('popstate', close);
-    ings.addEventListener('click', () => {
-      if (!sheet.hidden) return fold();
-      list.append(...parts);
-      sheet.hidden = false;
-      ings.setAttribute('aria-expanded', 'true');
+    $('[data-cook-close]').addEventListener('click', popLayer);
+    for (const box of boxes) box.addEventListener('change', renderStart);
+    kit.addEventListener('ticks', renderStart);
+    $('[data-cook-ings]').addEventListener('click', () => {
+      // The page's own lines, already scaled and tickable, lent to the sheet and put back after.
+      const sheet = openSheet({ title: fill(words.sheet, servings()), className: 'sheet-ings', onClose: () => kit.append(...parts) });
+      sheet.body.append(...parts);
     });
-    $('[data-cook-fold]').addEventListener('click', fold);
     root.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') { e.preventDefault(); sheet.hidden ? history.back() : fold(); }
-      else if (e.key === 'ArrowRight' && sheet.hidden) forward();
-      else if (e.key === 'ArrowLeft' && sheet.hidden) back();
+      if (document.querySelector('.sheet')) return;
+      if (e.key === 'Escape') { e.preventDefault(); popLayer(); }
+      else if (e.key === 'ArrowRight' && !(e.target as HTMLElement).matches('textarea')) forward();
+      else if (e.key === 'ArrowLeft' && !(e.target as HTMLElement).matches('textarea')) back();
     });
     let sx = 0, sy = 0;
     body.addEventListener('touchstart', (e) => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
     body.addEventListener('touchend', (e) => {
+      if (!touch.matches) return;
       const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
       if (Math.abs(dx) > 60 && Math.abs(dx) > 1.5 * Math.abs(dy)) (dx < 0 ? forward : back)();
     });
     document.addEventListener('visibilitychange', () => { if (!root.hidden) void hold(); });
-    // Turning a tablet past 760px leaves the phone layout; leave cooking mode with it.
-    matchMedia('(max-width: 760px)').addEventListener('change', (m) => { if (!m.matches && !root.hidden) history.back(); });
+    renderStart();
+  }
+
+  // Phones read top to bottom: the two opening paragraphs on why the dish works move below the key
+  // points, and the note box after them, so the steps come sooner. Wider screens keep the page as written.
+  const content = document.querySelector<HTMLElement>('.recipe-content');
+  const intro = document.querySelector<HTMLElement>('[data-recipe-intro]');
+  const noteBox = document.querySelector<HTMLElement>('[data-note-wrap]');
+  if (content && intro) {
+    const firstHeading = content.querySelector(':scope > h2');
+    const opening = firstHeading ? [...content.children].slice(0, [...content.children].indexOf(firstHeading)) : [];
+    const noteHome = noteBox?.parentElement;
+    const noteNext = noteBox?.nextSibling ?? null;
+    const arrange = () => {
+      if (phone.matches) {
+        intro.append(...opening);
+        intro.hidden = opening.length === 0;
+        if (noteBox) intro.after(noteBox);
+      } else {
+        firstHeading?.before(...opening);
+        intro.hidden = true;
+        if (noteBox && noteHome) noteHome.insertBefore(noteBox, noteNext);
+      }
+    };
+    if (phone.matches) arrange();
+    phone.addEventListener('change', arrange);
   }
 </script>

@@ -29,8 +29,8 @@ const principles = await resolve(recipe.data.principles, lang);
 const { Content } = await render(recipe);
 const twin = lang === 'en' || !!(await entry('recipes', recipe.id, 'en'));
 const T = {
-  zh: { principles: '用到的原理', quick: '快手', served: '开饭啦', servedText: '步骤都做完了，趁热吃。', updated: '更新于', related: '相关的菜' },
-  en: { principles: 'Science behind it', quick: 'Quick', served: 'Dinner’s ready', servedText: 'Every step is done. Eat it while it’s hot.', updated: 'Updated', related: 'Related recipes' },
+  zh: { principles: '用到的原理', quick: '快手', served: '开饭啦', servedText: '步骤都做完了，趁热吃。', updated: '更新于', related: '相关的菜', back: '返回', why: '为什么这样做' },
+  en: { principles: 'Science behind it', quick: 'Quick', served: 'Dinner’s ready', servedText: 'Every step is done. Eat it while it’s hot.', updated: 'Updated', related: 'Related recipes', back: 'Back', why: 'Why it works' },
 } satisfies Both<Record<string, string>>;
 const t = T[lang];
 
@@ -69,6 +69,10 @@ const ld = recipeLd({
 <Base title={title} description={summary} image={recipe.data.cover} type="article" twin={twin}>
   <script type="application/ld+json" slot="head" is:inline set:html={JSON.stringify(ld)} />
   <article>
+    {/* Phones: back to wherever the recipe was opened from. */}
+    <a class="back-btn" href={url('recipes', lang)} aria-label={t.back} data-back>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+    </a>
     <div class="hero">
       <header class="page-head">
         <div class="eyebrow">
@@ -95,6 +99,8 @@ const ld = recipeLd({
       <RecipeKit recipe={recipe} />
       <div class="prose recipe-body">
         <div class="recipe-content"><Content /></div>
+        {/* Phones move the opening paragraphs here, after the key points (RecipeKit.astro). */}
+        <section class="recipe-intro" data-recipe-intro hidden><h2>{t.why}</h2></section>
         <CatNote cat={serveCat} hidden data-served>
           <p class="cat-note-title">{t.served}</p>
           <p>{t.servedText}</p>
@@ -115,4 +121,16 @@ const ld = recipeLd({
       </section>
     )}
   </article>
+  <script>
+    // Inside the site, ‹ goes back to the page the recipe was opened from; from outside, to the recipe list.
+    const back = document.querySelector<HTMLAnchorElement>('[data-back]');
+    back?.addEventListener('click', (event) => {
+      let fromHere = false;
+      try { fromHere = new URL(document.referrer).origin === location.origin; } catch {}
+      if (fromHere && history.length > 1) {
+        event.preventDefault();
+        history.back();
+      }
+    });
+  </script>
 </Base>

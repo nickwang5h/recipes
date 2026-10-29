@@ -16,6 +16,7 @@ const T = {
     lede: ['每道菜都标出它用到的原理。份量可以缩放，配料和步骤可以逐项勾掉；配料附英文名，方便在加拿大的超市对照采购。想按手头的食材找菜，去', '冰箱', '。'],
     byCuisine: '按菜系筛选', allCuisines: '全部菜系', byCourse: '按类型筛选', allCourses: '全部类型', byTime: '按用时筛选', anyTime: '不限时间', byTag: '按用途筛选', anyTag: '不限用途',
     lucky: '今晚吃什么？', season: '只看用当季食材的', parts: (n: number) => `显示酱汁、高汤等半成品（${n}）`,
+    search: '搜索', placeholder: '搜菜名、食材或原理', more: '更多', cuisines: '菜系', principles: '原理', fridge: '冰箱里有什么', fridgeTitle: '冰箱', ok: '好',
     pick: '就做这道？', pickNote: '从当前筛选出的菜里随手抽的，小菜和要花三小时以上的不抽。不想做就再抽。', again: '换一道', close: '收起', empty: '没有符合条件的菜谱。',
   },
   en: {
@@ -23,6 +24,7 @@ const T = {
     lede: ['Each recipe links the science it relies on. Scale the servings and tick off ingredients and steps as you go; ingredients bought at an Asian grocery show their Chinese name too. To cook from what you have, try the ', 'fridge', '.'],
     byCuisine: 'Filter by cuisine', allCuisines: 'All cuisines', byCourse: 'Filter by type', allCourses: 'All types', byTime: 'Filter by time', anyTime: 'Any time', byTag: 'Filter by use', anyTag: 'Any use',
     lucky: 'What’s for dinner?', season: 'Only with what’s in season', parts: (n: number) => `Show sauces, stocks and other building blocks (${n})`,
+    search: 'Search', placeholder: 'Dish, ingredient or technique', more: 'More', cuisines: 'Cuisines', principles: 'Science', fridge: 'What’s in your fridge?', fridgeTitle: 'Fridge', ok: 'Done',
     pick: 'How about this one?', pickNote: 'Drawn at random from the recipes shown, leaving out sides and anything over three hours. Not feeling it? Draw again.', again: 'Another one', close: 'Close', empty: 'No recipes match these filters.',
   },
 } satisfies Both<Record<string, unknown>>;
@@ -52,6 +54,17 @@ const inSeason = Object.fromEntries(
 ---
 
 <Base title={t.title} description={t.description}>
+  {/* Phones: search and the ways in that the header used to hold. */}
+  <div class="lib-top">
+    <form class="search-box" action={url('search', lang)} method="get" role="search">
+      <input type="search" name="q" placeholder={t.placeholder} aria-label={t.search} autocomplete="off" />
+    </form>
+    <nav class="lib-links" aria-label={t.more}>
+      <a href={url('cuisines', lang)}>{t.cuisines}</a>
+      <a href={url('principles', lang)}>{t.principles}</a>
+      <a href={url('fridge', lang)} data-fridge-sheet data-title={t.fridgeTitle} data-ok={t.ok}>{t.fridge}</a>
+    </nav>
+  </div>
   <header class="page-head">
     <h1>{t.title}</h1>
     <p class="lede">{t.lede[0]}<a href={url('fridge', lang)}>{t.lede[1]}</a>{t.lede[2]}</p>
@@ -112,6 +125,9 @@ const inSeason = Object.fromEntries(
   <script>
     import { dishCount, joinList, pageLang } from '../../../i18n';
     import { withinTime } from '../../../lib/categories';
+    import { openDraw } from '../../../scripts/draw';
+    import { openFridge } from '../../../scripts/fridge-picker';
+    import { phone } from '../../../scripts/phone';
 
     const lang = pageLang();
 
@@ -194,8 +210,15 @@ const inSeason = Object.fromEntries(
       lucky.hidden = false;
       lucky.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     };
-    for (const b of document.querySelectorAll('[data-lucky-pick]')) b.addEventListener('click', pick);
+    // Phones draw on a full-screen card instead (scripts/draw.ts).
+    for (const b of document.querySelectorAll('[data-lucky-pick]')) b.addEventListener('click', () => (phone.matches ? void openDraw() : pick()));
     document.querySelector('[data-lucky-close]')!.addEventListener('click', () => (lucky.hidden = true));
+    const fridgeLink = document.querySelector<HTMLElement>('[data-fridge-sheet]')!;
+    fridgeLink.addEventListener('click', (event) => {
+      if (!phone.matches) return;
+      event.preventDefault();
+      void openFridge(fridgeLink.dataset.title!, fridgeLink.dataset.ok!);
+    });
 
     document.addEventListener('click', (event) => {
       const link = (event.target as HTMLElement).closest<HTMLAnchorElement>('[data-filter-group] a');

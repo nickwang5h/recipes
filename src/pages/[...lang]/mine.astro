@@ -2,7 +2,10 @@
 import Base from '../../layouts/Base.astro';
 import CatNote from '../../components/CatNote.astro';
 import plateCat from '../../assets/cats/mine-empty.png';
-import { langPaths, url, type Both, type Lang } from '../../i18n';
+import Dumpling from '../../components/Dumpling.astro';
+import OfflineSave from '../../components/OfflineSave.astro';
+import { HTML_LANG, langPaths, switchPath, url, type Both, type Lang } from '../../i18n';
+import { KOFI_URL } from '../../lib/site';
 
 export const getStaticPaths = langPaths;
 const { lang } = Astro.props as { lang: Lang };
@@ -14,6 +17,7 @@ const T = {
     family: '家庭共享', familyOff: '家里每人的手机各自打开这个网站时，数据只存在自己手机上。建一个家庭，再把邀请链接发给家人，大家就共用一份。',
     create: '建一个家庭', haveCode: '已经有家庭码？', join: '加入', code: '家庭码', invite: '复制邀请链接', sync: '立即同步', leave: '这台设备退出家庭',
     note: '拿到家庭码或邀请链接的人都能查看和修改这份数据，只发给家人。这里存的只是菜名、笔记和清单，不需要账号。',
+    settings: '设置', familyRow: '家庭', offline: '离线保存', theme: '深浅色', light: '浅', dark: '深', switchTo: 'English', support: '支持', kofi: '在 Ko-fi 请我吃个饺子（新窗口）',
   },
   en: {
     title: 'Saved', description: 'The dishes your family cooks often, your own notes, and sharing with family.',
@@ -22,9 +26,11 @@ const T = {
     family: 'Family sharing', familyOff: 'Each phone that opens this site keeps its own data. Create a family and send the invite link to the others, and you all share one copy.',
     create: 'Create a family', haveCode: 'Have a family code?', join: 'Join', code: 'Family code', invite: 'Copy invite link', sync: 'Sync now', leave: 'Leave the family on this device',
     note: 'Anyone with the family code or invite link can see and change this data, so send it only to family. It holds dish names, notes and lists, and needs no account.',
+    settings: 'Settings', familyRow: 'Family', offline: 'Offline', theme: 'Light or dark', light: 'Light', dark: 'Dark', switchTo: '中文', support: 'Support', kofi: 'Buy me a dumpling on Ko-fi (opens in a new tab)',
   },
 } satisfies Both<Record<string, unknown>>;
 const t = T[lang];
+const other = lang === 'zh' ? 'en' : 'zh';
 ---
 
 <Base title={t.title} description={t.description}>
@@ -74,6 +80,15 @@ const t = T[lang];
     </div>
     <p class="family-note">{t.note}</p>
   </section>
+
+  {/* Phones: what the header holds on wider screens, as rows at the bottom of 我的. */}
+  <nav class="rows" aria-label={t.settings}>
+    <a class="row" href="#family-title"><span>{t.familyRow}</span></a>
+    <div class="row row-offline"><span>{t.offline}</span><OfflineSave /></div>
+    <button class="row" type="button" data-theme-toggle><span>{t.theme}</span><span class="row-value" data-theme-name data-light={t.light} data-dark={t.dark}></span></button>
+    <a class="row" href={switchPath(Astro.url.pathname, other)} hreflang={HTML_LANG[other]} lang={HTML_LANG[other]}><span>{t.switchTo}</span></a>
+    <a class="row" href={KOFI_URL} target="_blank" rel="noopener noreferrer" aria-label={t.kofi}><span class="row-kofi"><Dumpling />{t.support}</span></a>
+  </nav>
 
   <script>
     import type { SiteData } from './recipes-data.json';
@@ -168,6 +183,12 @@ const t = T[lang];
       $('[data-notes-wrap]').hidden = noted.length === 0;
       $('[data-notes]').replaceChildren(...noted.map(card));
     };
+
+    // The 深浅色 row says which one is on.
+    const themeName = $('[data-theme-name]');
+    const renderTheme = () => (themeName.textContent = (document.documentElement.dataset.theme === 'dark' ? themeName.dataset.dark : themeName.dataset.light) ?? '');
+    document.addEventListener('themechange', renderTheme);
+    renderTheme();
 
     subscribe(() => {
       renderFamily();

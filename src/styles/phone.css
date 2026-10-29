@@ -1,0 +1,294 @@
+/* ---------- Phones (≤760px) ----------
+   The phone layout: a bottom bar of four places instead of the header, a recipe's own action bar,
+   cooking mode, the draw, the fridge picker, and sheets. Everything that shows or changes the layout
+   sits inside the media query; the rules out here only keep the phone-only parts hidden on wider
+   screens (and leave the step checkbox's tap label out of the box tree). */
+
+:is(.tabbar, .actbar, .back-btn, .lib-top, .rows, .ing-tools, .ing-have, .fridge-phone, .timer-mini, .sheet, .sheet-scrim, .toast) { display: none; }
+.step-hit { display: contents; }
+
+@media (max-width: 760px) {
+  /* ---------- Shell ---------- */
+
+  /* Room under the page for the bottom bar, a running timer and the home indicator. */
+  body { padding-bottom: calc(var(--bar-h, 0px) + var(--dock-space, 0px) + env(safe-area-inset-bottom)); }
+  body:has(> .tabbar) { --bar-h: 51px; }
+  body:has(.actbar) { --bar-h: 53px; }
+  body:has(.timer-dock) { --dock-space: calc(var(--dock-h, 40px) + 6px); }
+  body:has(.timer-dock) main { padding-bottom: 4rem; }
+
+  /* The header stays only on the home page, as the name and the cat. */
+  .site-header { display: none; }
+  .site-header[data-home] { display: block; border-bottom: 0; }
+  .site-header[data-home] .wrap { min-height: 0; padding-top: 0.5rem; padding-bottom: 0; }
+  .site-header[data-home] .site-nav { display: none; }
+  .site-header[data-home] .brand { min-height: 44px; white-space: nowrap; }
+  body.narrow main { padding-top: 1.5rem; }
+
+  .tabbar {
+    position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 0 8px env(safe-area-inset-bottom); border-top: 1px solid var(--border);
+    background: color-mix(in srgb, var(--bg) 94%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  }
+  .tabbar a {
+    position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
+    height: 50px; color: var(--muted); font-size: 13px; line-height: 1.2; text-decoration: none; white-space: nowrap; -webkit-tap-highlight-color: transparent;
+  }
+  .tabbar svg { width: 25px; height: 25px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .tabbar a[aria-current="page"] { color: var(--primary); }
+  .tab-badge {
+    position: absolute; top: 2px; left: calc(50% + 6px); min-width: 20px; height: 20px; padding: 0 5px; border-radius: 10px;
+    background: var(--primary); color: var(--bg); font-size: 13px; line-height: 20px; text-align: center; font-variant-numeric: tabular-nums;
+  }
+
+  /* While typing, the keyboard takes the bottom of the screen; the bars step aside instead of riding on it. */
+  body:has(:is(input:not([type="checkbox"], [type="radio"]), textarea):focus) :is(.tabbar, .actbar, .timer-dock) { display: none; }
+  body:has(:is(input:not([type="checkbox"], [type="radio"]), textarea):focus) { --bar-h: 0px; --dock-space: 0px; }
+
+  /* A running timer: one line just above the bottom bar. */
+  .timer-dock {
+    left: 8px; right: 8px; width: auto; transform: none; z-index: 41; padding: 0; gap: 0; border-radius: 12px;
+    bottom: calc(var(--bar-h, 0px) + 6px + env(safe-area-inset-bottom));
+  }
+  .timer-dock > .timer-row:not(.timer-mini) { display: none; }
+  .timer-mini { display: flex; height: 40px; gap: 0.5rem; padding: 0 4px 0 12px; }
+  .timer-mini .timer-clock { min-width: 0; font-size: 1.2rem; line-height: 1; }
+  .timer-row button { position: relative; min-width: 44px; min-height: 32px; padding: 0 0.7rem; }
+  .timer-row button::after { content: ""; position: absolute; left: 0; right: 0; top: calc(50% - 22px); height: 44px; }
+  .sheet-timers .timer-row { min-height: 52px; padding: 0 0.25rem 0 0.75rem; margin-bottom: 6px; background: var(--text); color: var(--bg); border-radius: 12px; }
+  .sheet-timers .timer-row.is-done { background: var(--primary); }
+
+  .toast {
+    display: block; position: fixed; z-index: 70; left: 50%; max-width: calc(100vw - 32px); padding: 10px 16px; border-radius: 999px;
+    bottom: calc(var(--bar-h, 0px) + var(--dock-space, 0px) + 12px + env(safe-area-inset-bottom));
+    background: var(--text); color: var(--bg); font-size: 15px; line-height: 1.4; pointer-events: none;
+    opacity: 0; transform: translate(-50%, 10px); transition: opacity 160ms, transform 160ms;
+  }
+  .toast.is-on { opacity: 1; transform: translate(-50%, 0); }
+
+  /* ---------- Sheets ---------- */
+
+  html.has-sheet body, html.is-cooking body { overflow: hidden; }
+  .sheet-scrim { display: block; position: fixed; inset: 0; z-index: 60; background: rgb(0 0 0 / 0.38); opacity: 0; transition: opacity 180ms ease; }
+  .sheet-scrim.is-on { opacity: 1; }
+  .sheet {
+    position: fixed; z-index: 61; left: 0; right: 0; bottom: 0; max-height: 92%; display: flex; flex-direction: column;
+    padding-bottom: env(safe-area-inset-bottom); background: var(--bg); border-radius: 18px 18px 0 0; outline: none;
+    transform: translateY(100%); transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .sheet.is-on { transform: none; }
+  .sheet-full { top: 0; max-height: none; padding-top: env(safe-area-inset-top); border-radius: 0; }
+  .sheet-grab { flex: none; width: 40px; height: 5px; margin: 8px auto 2px; border-radius: 3px; background: var(--border); }
+  .sheet-head { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 4px 10px 4px 16px; }
+  .sheet-head h2 { margin: 0; font-size: 1.375rem; }
+  .sheet-x { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: none; color: var(--text); cursor: pointer; }
+  .sheet-x svg, .cook-x svg, .back-btn svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .sheet-done { flex: none; min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; background: var(--primary); color: var(--bg); font: inherit; font-weight: 500; cursor: pointer; }
+  .sheet-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 4px 16px 16px; }
+
+  /* Cooking mode's ingredients: the page's own lines, a little larger. */
+  .sheet-ings h3 { margin: 0.75rem 0 0.1rem; font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; color: var(--muted); }
+  .sheet-ings .ing-text { font-size: 1.125rem; }
+
+  /* Small print is 13px at the least: card times, shop tags, the English names under ingredients. */
+  :is(.card .meta, .card .tag-pill, .ing-tag, .ing-en, .menu-dish-time, .menu-slot, .needs-list .ing-en, .needs-list .ing-note,
+    .box-tab small, .shortcut strong small, .kofi-note, .mine-note-hint, .card p:is(.fridge-missing, .fridge-swap)) { font-size: 0.8125rem; }
+  .card-grid:has(.has-cover) .card :is(.meta, p:is(.fridge-missing, .fridge-swap)) { font-size: 0.8125rem; }
+
+  /* ---------- Home ---------- */
+
+  .home-actions .hand-note { display: none; }
+  /* Long principle names (and larger text) wrap instead of running off the card. */
+  .principles-card dd a { white-space: normal; }
+  /* Text on the kraft card and the substitution note read at 4.5:1 or better. */
+  .magnet-card a { color: var(--primary-strong); }
+  .card p.fridge-swap { color: var(--muted); }
+
+  /* ---------- Recipe list, filters ---------- */
+
+  .lib-top { display: block; margin: 0 0 1.25rem; }
+  .lib-top .search-box input { max-width: none; min-height: 48px; font-size: 1.0625rem; }
+  .lib-links { display: flex; flex-wrap: wrap; column-gap: 1.25rem; margin-top: 0.25rem; }
+  .lib-links a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
+
+  /* Filter rows swipe sideways; the right edge fades until the row is scrolled to its end. */
+  .filters {
+    flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; gap: 0.4rem;
+    margin: -0.5rem calc(-1 * var(--gutter)) 0; padding: 9px var(--gutter);
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+  }
+  .filters.at-end { -webkit-mask-image: none; mask-image: none; }
+  .filters::-webkit-scrollbar { display: none; }
+  .filters > * { flex: none; position: relative; }
+  /* Rows sit edge to edge, so each chip's 44px band stays inside its own row. */
+  .filters + .filters { margin-top: 0; }
+  .filters > *::before { content: ""; position: absolute; left: 0; right: 0; top: calc(50% - 22px); height: 44px; }
+
+  /* ---------- Recipe page ---------- */
+
+  .back-btn { display: grid; place-items: center; width: 44px; height: 44px; margin: -1rem 0 0.25rem -10px; border-radius: 50%; color: var(--text); }
+  /* Picture first, then the name, what it is, and the principles; the add-to bar is at the bottom. */
+  .hero { display: flex; flex-direction: column; margin-bottom: 1.5rem; }
+  .hero .cover { order: -1; margin: 0 0 1rem; }
+  .hero .cover img { aspect-ratio: 2 / 1; object-fit: cover; }
+  .hero .page-head { display: flex; flex-direction: column; margin: 0; }
+  .hero .page-head h1 { order: -2; margin: 0 0 0.35rem; }
+  .hero .page-head .original { order: -1; margin: 0 0 0.35rem; }
+  .hero .page-head .eyebrow { margin: 0; }
+  .hero .page-head .lede { margin: 0.6rem 0 0; }
+  .hero .page-head .mine-bar { display: none; }
+  .recipe-intro h2 { margin-top: 2.5rem; }
+  .mine-note { margin-top: 1.5rem; }
+
+  .actbar {
+    position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: 52px minmax(0, 1fr) minmax(0, 1.35fr); gap: 8px;
+    padding: 4px 12px calc(4px + env(safe-area-inset-bottom)); border-top: 1px solid var(--border);
+    background: color-mix(in srgb, var(--bg) 95%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  }
+  .actbar > *, .cook-fav {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; min-width: 0; min-height: 44px; padding: 0 0.6rem;
+    border: 1px solid var(--border); border-radius: 999px; background: var(--bg); color: var(--text);
+    font: inherit; font-size: 1rem; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer;
+  }
+  .act-fav svg { width: 22px; height: 22px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; }
+  .act-fav[aria-pressed="true"] svg { fill: var(--accent-red); stroke: var(--accent-red); }
+  .act-menu { position: relative; }
+  .act-menu span { overflow: hidden; text-overflow: ellipsis; }
+  .act-menu select { position: absolute; inset: 0; width: 100%; opacity: 0; font: inherit; font-size: 1rem; cursor: pointer; }
+  .actbar .act-cook { display: block; padding: 0 0.6rem; border-color: var(--primary); background: var(--primary); color: var(--bg); font-weight: 600; text-align: center; line-height: 42px; }
+
+  /* Ingredients: 有 / 缺 beside each line, and what's missing to the shopping list. */
+  .ing-tools { display: block; float: right; margin: -0.35rem 0 0.25rem 0.5rem; }
+  .ing-tools .text-btn { min-height: 44px; }
+  .recipe-aside .kit-controls { clear: both; }
+  .ing-tools .text-btn:disabled { opacity: 0.6; cursor: default; }
+  .ing-have { display: block; flex: none; margin-left: auto; padding-top: 0.05rem; color: var(--muted); font-size: 0.875rem; }
+  .ing-have.is-need { color: var(--accent-red); }
+  .ing-have:empty { display: none; }
+
+  /* Step checkboxes and timer words keep their look and get a 44px tap area. */
+  .recipe-content ol .step-hit { display: block; position: absolute; left: calc(2rem - 11px); top: calc(1.05rem - 11px); width: 44px; height: 44px; cursor: pointer; }
+  .recipe-content ol .step-hit .step-check { left: 11px; top: 11px; }
+  .recipe-content .timer-btn { position: relative; white-space: nowrap; }
+  .recipe-content .timer-btn::after { content: ""; position: absolute; left: 0; right: 0; top: calc(50% - 22px); height: 44px; }
+
+  /* ---------- Cooking mode ---------- */
+
+  .cook { position: fixed; inset: 0; z-index: 50; display: flex; flex-direction: column; padding-top: env(safe-area-inset-top); background: var(--bg); color: var(--text); }
+  .cook-top { flex: none; display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; align-items: center; padding: 6px 12px 0 6px; }
+  .cook-x { display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: none; color: var(--text); cursor: pointer; }
+  /* A long name gives way; the step count always shows. */
+  .cook-where { display: flex; justify-content: center; min-width: 0; margin: 0; color: var(--muted); font-size: 15px; white-space: nowrap; }
+  .cook-where span { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  .cook-where b { flex: none; margin-left: 0.4em; color: var(--text); font-weight: 500; font-variant-numeric: tabular-nums; }
+  .cook-where b::before { content: "· "; color: var(--muted); font-weight: 400; }
+  .cook-where b:empty { display: none; }
+  .cook-ings { min-height: 44px; padding: 0 14px; border: 1px solid var(--border); border-radius: 999px; background: none; color: var(--text); font: inherit; font-size: 15px; cursor: pointer; }
+  .cook-prog { flex: none; display: flex; gap: 4px; padding: 10px 16px 0; }
+  .cook-prog span { flex: 1; height: 4px; border-radius: 2px; background: var(--border); }
+  .cook-prog .is-done { background: var(--check); }
+  .cook-prog .is-now { background: var(--primary); }
+  .cook-body { flex: 1; min-height: 0; overflow-y: auto; padding: 18px 20px calc(12px + var(--dock-space, 0px)); touch-action: pan-y; }
+  .cook-num { margin: 0; font-family: var(--font-reading); font-size: 56px; line-height: 1; color: var(--primary); }
+  .cook-use { display: flex; flex-wrap: wrap; gap: 6px 8px; margin: 14px 0 4px; }
+  .cook-use span { padding: 4px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--paper); font-size: 16px; line-height: 1.5; }
+  .cook-use b { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .cook-text { margin: 12px 0 0; font-family: var(--font-reading); font-size: 25px; line-height: 1.7; }
+  .cook-timers { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+  .cook-timers .timer-btn {
+    display: inline-flex; align-items: center; gap: 0.35em; min-height: 56px; padding: 0 22px;
+    border: 1.5px solid var(--primary); border-radius: 999px; background: none; color: var(--primary);
+    font: inherit; font-size: 19px; line-height: 1.2; text-decoration: none; cursor: pointer;
+  }
+  .cook-timers .timer-btn[aria-pressed="true"] { padding: 0 22px; background: var(--primary); color: var(--bg); }
+  .cook-tip { display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 12px; align-items: start; margin-top: 22px; padding: 12px 14px; border-radius: 6px; background: var(--kraft); transform: rotate(-0.4deg); }
+  .cook-tip img { width: 54px; height: auto; }
+  .cook-tip b { display: block; color: var(--primary-strong); font-size: 16px; font-weight: 600; }
+  :root[data-theme="dark"] .cook-tip b { color: var(--primary); }
+  .cook-tip p { margin: 2px 0 0; font-size: 16px; line-height: 1.65; }
+  .cook-nav { flex: none; display: grid; grid-template-columns: 1fr 1.6fr; gap: 10px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); }
+  .cook-nav button { min-height: 60px; border-radius: 16px; font: inherit; font-size: 19px; cursor: pointer; }
+  .cook-prev { border: 1px solid var(--border); background: var(--bg); color: var(--text); }
+  .cook-prev:disabled { opacity: 0.45; cursor: default; }
+  .cook-next { border: 1px solid var(--primary); background: var(--primary); color: var(--bg); font-weight: 500; }
+  /* In cooking mode a running timer sits right above 上一步 / 下一步. */
+  html.is-cooking .timer-dock { z-index: 51; bottom: calc(81px + env(safe-area-inset-bottom)); }
+  .cook-done { flex: 1; min-height: 0; overflow-y: auto; display: grid; align-content: center; justify-items: center; gap: 14px; padding: 20px 24px 40px; text-align: center; }
+  .cook-done img { width: 170px; height: auto; }
+  .cook-done h2 { margin: 0; font-size: 34px; }
+  .cook-done textarea {
+    width: 100%; min-height: 84px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px;
+    background: var(--surface); color: var(--text); font: inherit; font-size: 1rem; resize: none;
+  }
+  .cook-fav { padding: 0 1.25rem; }
+  .cook-fav svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+  .cook-fav[aria-pressed="true"] svg { fill: var(--accent-red); stroke: var(--accent-red); }
+
+  /* ---------- Draw ---------- */
+
+  .sheet-draw .sheet-body { display: flex; flex-direction: column; padding-bottom: 0; }
+  .draw-filters { flex: none; display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin: 2px -16px 0; padding: 2px 16px; }
+  .draw-filters::-webkit-scrollbar { display: none; }
+  .draw-filters .chip { flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; font-size: 15px; }
+  .draw-stage { flex: 1 0 auto; display: grid; align-items: center; padding: 18px 6px 12px; touch-action: pan-y; }
+  .draw-card { display: block; padding: 10px 10px 18px; color: var(--text); text-decoration: none; transform: rotate(-0.6deg); }
+  .draw-card img, .draw-ph { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; background: var(--surface-strong); }
+  .draw-ph { display: grid; place-items: center; color: var(--border); }
+  .draw-ph svg { width: 42%; }
+  .draw-card h3 { margin: 14px 6px 4px; font-size: 2rem; }
+  .draw-card .meta { display: flex; flex-wrap: wrap; gap: 0.25rem 0.9rem; margin: 6px 6px 0; color: var(--muted); font-size: 0.9rem; }
+  .draw-summary { margin: 6px 6px 0; color: var(--muted); font-size: 1rem; line-height: 1.65; }
+  .draw-foot { flex: none; display: flex; gap: 10px; padding: 10px 16px 16px; border-top: 1px solid var(--border); }
+  .draw-foot button { flex: 1; min-height: 54px; border-radius: 999px; font: inherit; font-size: 1rem; cursor: pointer; }
+  .draw-again { border: 1px solid var(--border); background: var(--bg); color: var(--text); }
+  .draw-take { border: 1px solid var(--primary); background: var(--primary); color: var(--bg); font-weight: 500; }
+  .draw-take:disabled { opacity: 0.45; cursor: default; }
+  :root[data-theme="dark"] .draw-card img { filter: brightness(0.86); }
+
+  /* ---------- Fridge ---------- */
+
+  .fridge-picker { display: none; }
+  .fridge-layout > * { min-width: 0; }
+  .fridge-phone { display: block; }
+  .pick-have, .pick-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+  :is(.pick-have, .pick-cloud) .chip { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; font-size: 0.9375rem; }
+  .pick-have .chip { background: var(--text); border-color: var(--text); color: var(--bg); }
+  .pick-have + .fridge-empty { margin: 0; }
+  .pick-search { display: block; margin-top: 12px; }
+  .pick-search input {
+    width: 100%; min-height: 48px; padding: 0 14px; border: 1px solid var(--border); border-radius: 12px;
+    background: var(--surface); color: var(--text); font: inherit; font-size: 1.0625rem;
+  }
+  .pick-suggest:not(:empty) { margin-top: 10px; }
+  .pick-groups h3 { margin: 18px 0 8px; font-family: var(--font-sans); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.06em; color: var(--muted); }
+  .pick-more { color: var(--primary); }
+  /* Result cards are two to a row; their buttons wrap instead of pushing the row wider than the screen. */
+  .fridge-card { min-width: 0; }
+  .fridge-card .add-to-list { max-width: 100%; height: auto; padding-top: 0.4rem; padding-bottom: 0.4rem; line-height: 1.3; white-space: normal; text-align: left; }
+
+  /* ---------- Shopping list: whole rows tick, and the stock button comes first under the list ---------- */
+
+  .shopping-list .ing-row { min-height: 48px; }
+  .shopping-actions [data-list-stock] { order: -1; flex: 1 1 100%; border-color: var(--primary); background: var(--primary); color: var(--bg); font-weight: 500; }
+
+  /* ---------- 我的: what the header holds on wider screens ---------- */
+
+  .rows { display: block; margin-top: 2.5rem; border-top: 1px solid var(--border); }
+  .row {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 10px; width: 100%; min-height: 56px; padding: 0 2px;
+    border: 0; border-bottom: 1px solid var(--border); background: none; color: var(--text); font: inherit; font-size: 1.0625rem; text-align: left; text-decoration: none; cursor: pointer;
+  }
+  .row:hover { color: var(--text); }
+  .row-value { color: var(--muted); font-size: 0.9375rem; }
+  .row-kofi { display: inline-flex; align-items: center; gap: 0.5rem; }
+  .row-kofi .kofi-dumpling { width: 24px; height: 24px; color: var(--primary); }
+  .row-offline { cursor: default; padding: 6px 2px; }
+  .row-offline .offline-save { margin: 0; }
+  .row-offline:has(.offline-save[hidden]) { display: none; }
+}
+
+@media (max-width: 760px) and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .cook-tip b { color: var(--primary); }
+  :root:not([data-theme="light"]) .draw-card img { filter: brightness(0.86); }
+}

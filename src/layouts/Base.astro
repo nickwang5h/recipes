@@ -5,6 +5,7 @@ import logoCat from '../assets/cats/logo.png';
 import waveCat from '../assets/cats/wave.png';
 import KofiButton from '../components/KofiButton.astro';
 import '../styles/global.css';
+import '../styles/phone.css';
 import { HTML_LANG, OG_LOCALE, langOf, switchPath, url, type Both } from '../i18n';
 import { MAIN_SITE, SITE_DESCRIPTION, SITE_TITLE } from '../lib/site';
 
@@ -45,6 +46,14 @@ const NAV = [
   { path: 'mine', label: { zh: '我的', en: 'Saved' } },
 ];
 const nav = NAV.map((item) => ({ href: url(item.path, lang), label: item.label[lang], match: `/${item.path}/` }));
+// Phones (≤760px) get a bottom bar of four places instead of the header; a recipe has its own bar.
+const recipePage = /^\/recipes\/[^/]+\/$/.test(local);
+const TABS = [
+  { id: 'home', href: url('', lang), label: { zh: '首页', en: 'Home' }, on: local === '/', icon: '<path d="M3.5 11.5h17a8.5 8.5 0 0 1-17 0Z"/><path d="M8 20.5h8"/><path d="M9 4.5c-.8 1 .8 2 0 3.2M13 4c-.8 1 .8 2 0 3.2"/>' },
+  { id: 'recipes', href: url('recipes', lang), label: { zh: '菜谱', en: 'Recipes' }, on: /^\/(recipes|cuisines|principles|search|fridge)\//.test(local), icon: '<path d="M5 4.5h11a3 3 0 0 1 3 3v12H8a3 3 0 0 1-3-3Z"/><path d="M5 16.5a3 3 0 0 1 3-3h11"/><path d="M9 8h6"/>' },
+  { id: 'list', href: url('menu', lang), label: { zh: '清单', en: 'List' }, on: local.startsWith('/menu/'), icon: '<path d="M6 3.5h12v17H6Z"/><path d="M9 8.5l1.2 1.2L12.5 7.5M9 14h6M9 17h4"/>' },
+  { id: 'mine', href: url('mine', lang), label: { zh: '我的', en: 'Saved' }, on: local.startsWith('/mine/'), icon: '<path d="M12 20s-7.5-4.6-7.5-10.1A4.4 4.4 0 0 1 12 7.1a4.4 4.4 0 0 1 7.5 2.8C19.5 15.4 12 20 12 20Z"/>' },
+];
 ---
 
 <!doctype html>
@@ -86,7 +95,7 @@ const nav = NAV.map((item) => ({ href: url(item.path, lang), label: item.label[l
   </head>
   <body class={narrow ? 'narrow' : undefined}>
     <a class="visually-hidden" href="#main">{t.skip}</a>
-    <header class="site-header">
+    <header class="site-header" data-home={local === '/' ? '' : undefined}>
       <div class="wrap">
         <a class="brand" href={url('', lang)}><Image class="brand-cat" src={logoCat} alt="" width={72} height={72} loading="eager" />{SITE_TITLE[lang]}</a>
         <nav class="site-nav" aria-label={t.nav}>
@@ -120,16 +129,48 @@ const nav = NAV.map((item) => ({ href: url(item.path, lang), label: item.label[l
         </span>
       </div>
     </footer>
+    {!recipePage && (
+      <nav class="tabbar" aria-label={t.nav}>
+        {TABS.map((tab) => (
+          <a href={tab.href} data-tab={tab.id} aria-current={tab.on ? 'page' : undefined}>
+            <svg viewBox="0 0 24 24" aria-hidden="true" set:html={tab.icon} />
+            <span>{tab.label[lang]}</span>
+            {tab.id === 'list' && <span class="tab-badge" data-list-badge hidden></span>}
+          </a>
+        ))}
+      </nav>
+    )}
     <script>
       import { get, subscribe } from '../scripts/store';
+      import { listItems } from '../scripts/shopping-list';
       import '../scripts/timers';
 
-      document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
-        const root = document.documentElement;
-        const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-        root.dataset.theme = next;
-        try { localStorage.setItem('recipes:theme', next); } catch {}
-      });
+      // The header button, and on phones the row in 我的.
+      for (const button of document.querySelectorAll('[data-theme-toggle]')) {
+        button.addEventListener('click', () => {
+          const root = document.documentElement;
+          const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+          root.dataset.theme = next;
+          try { localStorage.setItem('recipes:theme', next); } catch {}
+          document.dispatchEvent(new Event('themechange'));
+        });
+      }
+
+      // The 清单 tab: how many things are left to buy, and straight to the list when there is one.
+      const listTab = document.querySelector<HTMLAnchorElement>('.tabbar [data-tab="list"]');
+      if (listTab) {
+        const menu = listTab.pathname;
+        const badge = listTab.querySelector<HTMLElement>('[data-list-badge]')!;
+        const renderTab = () => {
+          const items = listItems();
+          const left = items.filter((i) => !i.bought).length;
+          badge.hidden = left === 0;
+          badge.textContent = String(left);
+          listTab.href = items.length ? `${menu}#list` : menu;
+        };
+        subscribe(renderTab);
+        renderTab();
+      }
 
       // Mark the family's 常做 dishes on every recipe card, server- or client-rendered.
       // Loading the store here also keeps family sync running on every page.

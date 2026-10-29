@@ -259,5 +259,14 @@ const t = T[lang];
     mountShoppingList(catalog);
     subscribe(render);
     render();
+    // The phone's 清单 tab links to #list, which only appears once the list has been drawn.
+    const toList = () => {
+      const list = document.getElementById('list');
+      if (location.hash !== '#list' || !list || list.hidden) return;
+      (list as HTMLDetailsElement).open = true;
+      list.scrollIntoView({ block: 'start' });
+    };
+    toList();
+    addEventListener('hashchange', toList);
   </script>
 </Base>

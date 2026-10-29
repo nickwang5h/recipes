@@ -8,7 +8,7 @@ const T = {
 const t = T[langOf(Astro.url)];
 ---
 
-<details class="shopping-list" data-list-wrap open hidden>
+<details class="shopping-list" id="list" data-list-wrap open hidden>
   <summary><h2 class="section-title">{t.title} <span class="fridge-count" data-list-count></span></h2></summary>
   <div data-list></div>
   <div class="kit-actions shopping-actions">

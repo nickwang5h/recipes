@@ -3,10 +3,11 @@
 // Timers are kept as end times in localStorage and survive reloads and navigation.
 import { pageLang } from '../i18n';
 import { findDurations, formatClock } from '../lib/timer';
+import { openSheet, popLayer, type Sheet } from './phone';
 
 const T = {
-  zh: { dock: '计时器', up: '到点', ok: '知道了', cancel: '取消', step: (n: number) => `第 ${n} 步`, done: (label: string) => `${label}到了`, start: (clock: string) => `计时 ${clock}`, low: (clock: string) => `计时 ${clock}（范围的下限，到点先看一眼）` },
-  en: { dock: 'Timers', up: 'Time’s up', ok: 'Got it', cancel: 'Cancel', step: (n: number) => `step ${n}`, done: (label: string) => `${label} is up`, start: (clock: string) => `Start a ${clock} timer`, low: (clock: string) => `Start a ${clock} timer (the low end of the range; check then)` },
+  zh: { dock: '计时器', all: (n: number) => `还有 ${n} 个计时`, up: '到点', ok: '知道了', cancel: '取消', step: (n: number) => `第 ${n} 步`, done: (label: string) => `${label}到了`, start: (clock: string) => `计时 ${clock}`, low: (clock: string) => `计时 ${clock}（范围的下限，到点先看一眼）` },
+  en: { dock: 'Timers', all: (n: number) => `${n} more timers`, up: 'Time’s up', ok: 'Got it', cancel: 'Cancel', step: (n: number) => `step ${n}`, done: (label: string) => `${label} is up`, start: (clock: string) => `Start a ${clock} timer`, low: (clock: string) => `Start a ${clock} timer (the low end of the range; check then)` },
 };
 const say = T[pageLang()];
 
@@ -101,17 +102,60 @@ async function holdScreen(on: boolean) {
 
 // ---------- Dock ----------
 
+function row(timer: Timer, now: number) {
+  const left = (timer.end - now) / 1000;
+  const el = document.createElement('div');
+  el.className = `timer-row${left <= 0 ? ' is-done' : ''}`;
+  const clock = document.createElement('span');
+  clock.className = 'timer-clock';
+  clock.textContent = left <= 0 ? say.up : formatClock(left);
+  const link = document.createElement('a');
+  link.href = timer.href;
+  link.textContent = `${timer.title} · ${say.step(timer.step)}`;
+  const close = document.createElement('button');
+  close.type = 'button';
+  close.textContent = left <= 0 ? say.ok : say.cancel;
+  close.addEventListener('click', () => stop(timer.id));
+  el.append(clock, link, close);
+  return el;
+}
+
+// Phones show one line: the timer that ends first, and +N opening a sheet with all of them.
+let sheet: Sheet | null = null;
+/** Which timers (and done states) the dock was last built for. */
+let drawn = '';
+function mini(now: number) {
+  const first = [...timers].sort((a, b) => a.end - b.end)[0];
+  const line = row(first, now);
+  line.classList.add('timer-mini');
+  if (timers.length > 1) {
+    const more = document.createElement('button');
+    more.type = 'button';
+    more.className = 'timer-more';
+    more.textContent = `+${timers.length - 1}`;
+    more.setAttribute('aria-label', say.all(timers.length - 1));
+    more.addEventListener('click', () => {
+      sheet = openSheet({ title: say.dock, className: 'sheet-timers', onClose: () => { sheet = null; drawn = ''; } });
+      render();
+    });
+    line.lastElementChild!.before(more);
+  }
+  return line;
+}
+
 function render() {
   const now = Date.now();
   if (!timers.length) {
     if (dock) sizer?.unobserve(dock);
     dock?.remove();
     dock = null;
+    drawn = '';
     document.documentElement.style.removeProperty('--dock-h');
     clearInterval(ticking);
     ticking = undefined;
     void holdScreen(false);
     markButtons();
+    if (sheet) popLayer();
     return;
   }
   if (!dock) {
@@ -122,25 +166,19 @@ function render() {
     document.body.append(dock);
     sizer?.observe(dock);
   }
-  dock.replaceChildren(
-    ...timers.map((timer) => {
-      const left = (timer.end - now) / 1000;
-      const row = document.createElement('div');
-      row.className = `timer-row${left <= 0 ? ' is-done' : ''}`;
-      const clock = document.createElement('span');
-      clock.className = 'timer-clock';
-      clock.textContent = left <= 0 ? say.up : formatClock(left);
-      const link = document.createElement('a');
-      link.href = timer.href;
-      link.textContent = `${timer.title} · ${say.step(timer.step)}`;
-      const close = document.createElement('button');
-      close.type = 'button';
-      close.textContent = left <= 0 ? say.ok : say.cancel;
-      close.addEventListener('click', () => stop(timer.id));
-      row.append(clock, link, close);
-      return row;
-    }),
-  );
+  // Between changes only the clocks move; rebuilding every tick would swallow taps and drop focus.
+  const shape = `${sheet ? 'sheet ' : ''}${timers.map((t) => `${t.id}:${t.end <= now}`).join('|')}`;
+  if (shape !== drawn) {
+    drawn = shape;
+    dock.replaceChildren(...timers.map((timer) => row(timer, now)), mini(now));
+    sheet?.body.replaceChildren(...timers.map((timer) => row(timer, now)));
+  } else {
+    const clock = (t: Timer) => formatClock((t.end - now) / 1000);
+    const set = (els: NodeListOf<Element> | undefined, list: Timer[]) => els?.forEach((el, i) => { if (list[i] && list[i].end > now) el.textContent = clock(list[i]); });
+    set(dock.querySelectorAll(':scope > .timer-row:not(.timer-mini) .timer-clock'), timers);
+    set(dock.querySelectorAll('.timer-mini .timer-clock'), [...timers].sort((a, b) => a.end - b.end));
+    set(sheet?.body.querySelectorAll('.timer-clock'), timers);
+  }
   ticking ??= setInterval(tick, 500);
   void holdScreen(timers.some((t) => t.end > now));
   markButtons();

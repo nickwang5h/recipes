@@ -35,6 +35,7 @@ const precache = [
   '/recipes/',
   '/fridge/',
   '/recipes-data.json',
+  '/fridge-data.json',
 ];
 
 const hash = createHash('sha256');
