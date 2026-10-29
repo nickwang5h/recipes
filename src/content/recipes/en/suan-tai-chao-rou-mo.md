@@ -23,7 +23,7 @@ Garlic scape stems are tougher than leafy vegetables. They are fried until fragr
 
 1. Wash the garlic scapes, cut off the dry, tough ends and the flower buds, and cut them into pieces about 5 cm long. Keep pieces of clearly different thickness apart, and add the thicker ones to the wok first so the thin pieces do not go soft first.
 2. Cut the thin slices of pork belly into fine mince, so fat and lean are mixed together. Smash and mince the garlic. Hold them in separate dishes, and clean the board and knife used on raw meat before handling the vegetables.
-3. Add 10 ml of oil to the wok and heat over medium until the oil flows smoothly. Add the garlic and stir-fry for about 10 seconds. When you smell the garlic and it is still pale, go to the next step.
+3. Add 10 ml of oil to the wok and heat over medium until the oil flows smoothly. Add the garlic and stir-fry for about 10 seconds. When you smell the garlic and it is still pale, add the pork.
 4. Add the pork mince and break it up with the spatula, then add 5 ml of light soy sauce. Stir-fry over medium heat for about 30 seconds, until all the mince has changed colour and the fat starts to turn translucent. Do not leave the garlic at the dry, hot edge of the wok.
 5. Add the garlic scapes and the remaining 10 ml of light soy sauce, and stir-fry for about 30 seconds, until every piece is coated in the base oil and soy sauce.
 6. Add 20 ml of water and braise-fry over medium heat for about 5 minutes, stirring now and then. Watch for the scape skin to gradually soften and the colour to even out, and taste one piece for doneness. If it is still hard, cook longer, and if the bottom of the wok dries out first, add a little water.

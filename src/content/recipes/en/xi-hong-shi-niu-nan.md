@@ -27,7 +27,7 @@ translated: 2026-10-01
 
 Tomato braised beef brisket is made by cooking the beef and the tomatoes separately and then combining them in one pot. Moist heat first softens the connective tissue in the brisket (see [Collagen and Gelatin](/principles/collagen-gelatin/)). The tomatoes are fried separately until the pieces collapse, then the beef cooking liquid is added and reduced into a sweet-sour, thick sauce. The meat is already tender, so it does not need long stir-frying at the end.
 
-[Blanching](/principles/blanching/) the brisket and stewing it in fresh water leaves less scum in the broth. It uses fresh tomatoes and no tomato paste; the red colour and thickness come from tomatoes fried until soft and a suitable amount of reduction, and when the pots are combined the cooking liquid is added only up to the level of the beef.
+[Blanching](/principles/blanching/) the brisket and stewing it in fresh water leaves less scum in the broth. Use fresh tomatoes and no tomato paste; the red colour and thickness come from tomatoes fried until soft and a suitable amount of reduction, and when the pots are combined the cooking liquid is added only up to the level of the beef.
 
 ## Steps
 

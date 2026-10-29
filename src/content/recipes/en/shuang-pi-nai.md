@@ -17,7 +17,7 @@ translated: 2026-10-02
 
 Double-skin milk pudding is a milk dessert from Shunde, traditionally made with water buffalo milk, egg white and sugar. First let hot milk form a skin in the bowl, then pour out the milk underneath, mix it with egg white, pour it back and steam it until set; as it cools, a skin forms on the surface again. The skin stays on the finished dessert, and the milk custard under it is pure white, tender and soft, and holds its shape on a spoon.
 
-The skin comes from water evaporating at the surface of the hot milk, so protein and fat gather there. The custard sets as the egg white connects when heated, forming a network that can hold up the milk (see [protein denaturation and coagulation](/principles/protein-coagulation/)). Both stages need heat control: the milk must be fully hot before the skin forms, but cooled down before the egg white is mixed in. Steam with steady, gentle steam so the inside and outside of the bowl set gradually together (see [heat transfer](/principles/heat-transfer/)).
+The skin comes from water evaporating at the surface of the hot milk, so protein and fat gather there. The custard sets as the egg white connects when heated, forming a network that can hold up the milk (see [protein denaturation and coagulation](/principles/protein-coagulation/)). The skin and the custard want opposite temperatures: the milk must be fully hot before the skin forms, but cooled down before the egg white is mixed in. Steam with steady, gentle steam so the inside and outside of the bowl set gradually together (see [heat transfer](/principles/heat-transfer/)).
 
 ## Steps
 

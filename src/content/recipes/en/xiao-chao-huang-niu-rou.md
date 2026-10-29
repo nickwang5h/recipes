@@ -20,11 +20,11 @@ translated: 2026-10-01
 
 Hunan-style stir-fried beef shows off the savoury flavour of beef set off by fresh chilies, pickled chilies and celery. Stir-fried quickly, the meat comes out tender and the celery crisp, and the cilantro goes in only after the heat is off. The seasoning is light, so how you cut the beef and how much goes into the pan at once matter all the more. Tenderloin sliced thin against the grain has shorter fibres to bite through and heats to the centre faster; see [knife work and heat](/principles/knife-work/).
 
-The aim of a short stir-fry is that the celery is just cooked when the thin slices of meat are done. If the meat is piled up in the pan, the outside cooks first while the inside heats slowly, and more stirring only squeezes out water; see [protein denaturation and coagulation](/principles/protein-coagulation/). Western celery is thicker, so cut it lengthwise into thin strips first so that it cooks at about the same time as the beef.
+In a short stir-fry, the celery should be just cooked at the moment the thin slices of meat are done. If the meat is piled up in the pan, the outside cooks first while the inside heats slowly, and more stirring only squeezes out water; see [protein denaturation and coagulation](/principles/protein-coagulation/). Western celery is thicker, so cut it lengthwise into thin strips first so that it cooks at about the same time as the beef.
 
 ## Steps
 
-1. Trim the sinew and silverskin from the beef tenderloin and cut against the grain into thin slices no wider than 3 cm and about 3 mm thick. Add all 6 ml of the light soy sauce and toss, so every slice has a little base seasoning. Keep the cut slices loose.
+1. Trim the sinew and silverskin from the beef tenderloin and cut against the grain into thin slices no wider than 3 cm and about 3 mm thick. Add all 6 ml of the light soy sauce and toss, so every slice picks up a little saltiness. Keep the cut slices loose.
 2. Wash the celery and drain. Cut thick stalks lengthwise first, then into sections no longer than 5 cm. Cut the chilies into thin strips, drain the pickled chilies of brine and chop them, and cut the cilantro into sections no longer than 3 cm.
 3. Keep the vegetables, meat and a serving plate close at hand. If the bottom of the pan is too small to spread most of the slices out, divide all the ingredients and oil into two batches, stir-fry each in the order below, and combine them on the plate once cooked.
 4. Heat the pan, add the oil and heat over high heat for about 30 seconds. When the oil flows into a thin layer and ripples on the surface but does not yet smoke, add the fresh chilies and pickled chilies and stir-fry briefly until the chili aroma is clear.

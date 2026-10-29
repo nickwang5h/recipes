@@ -21,9 +21,9 @@ The heat control in this dish starts before the celery goes into the wok. Splitt
 1. Pick off old leaves and tough stalks, keeping a few tender leaves. Wash the celery. Split the thicker stalks lengthwise so the pieces are similar in thickness, then cut into pieces no longer than 5 cm.
 2. Drain the celery in a colander and shake off the water droplets between stalks and leaves. There should be no water dripping steadily before it goes in the wok. Shake apart any leaves that are wet and clumped.
 3. Mince the garlic. Put the celery, garlic and salt by the stove and have a plate ready, so you do not have to leave the wok to look for ingredients during the quick stir-fry.
-4. Heat the wok and add the lard. When it has fully melted and spreads smoothly over the bottom, turn to low heat. Sprinkle in the salt and then add the garlic right away. Stir for about 10 seconds. When you smell the garlic and it is still pale, go to the next step.
-5. Turn to high heat, add the celery, spread it out quickly and toss from the bottom up. After about 30 seconds, check: the stalks are bright in colour, the tender leaves have just shrunk, a stalk you pick up is still upright, and it is hot, crisp and not noticeably raw-tasting.
-6. Plate it as soon as it reaches that state. If you use thicker regular celery, cook until the centre is hot all the way through instead of going by 30 seconds. Chinese celery does not need to be cooked until limp.
+4. Heat the wok and add the lard. When it has fully melted and spreads smoothly over the bottom, turn to low heat. Sprinkle in the salt and then add the garlic right away. Stir for about 10 seconds. When you smell the garlic and it is still pale, add the celery.
+5. Turn to high heat, add the celery, spread it out quickly and toss from the bottom up. Stir-fry about 30 seconds, until the stalks are bright in colour, the tender leaves have just shrunk and a stalk you pick up is still upright; taste one, and it should be hot, crisp and not raw-tasting.
+6. Plate it right away. If you use thicker regular celery, cook until the centre is hot all the way through instead of going by 30 seconds. Chinese celery does not need to be cooked until limp.
 
 ## Key points
 

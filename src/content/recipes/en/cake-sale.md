@@ -39,6 +39,6 @@ The eggs and milk in the batter both carry water, and flour grows gluten as soon
 ## Key points
 
 - **Cake is hard**: the batter was mixed too long after the flour went in, and gluten developed ([gluten](/principles/gluten/)). Mix only until even.
-- **Centre is not cooked**: pans and ovens differ, and so does the speed at which heat reaches the centre ([heat transfer](/principles/heat-transfer/)). If the knife tip comes out wet, keep baking and check again.
+- **Centre is not cooked**: pans and ovens differ, and so does the speed at which heat reaches the centre ([heat transfer](/principles/heat-transfer/)). If the knife tip still comes out wet, bake a little longer.
 - **Too salty**: the ham and cheese are already salty. Add only a little salt at first.
 - **For lunch boxes**: store it refrigerated, and the next day leave it at room temperature for about 15 minutes before eating. Keep it cold in an insulated bag when you carry it.

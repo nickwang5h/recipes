@@ -27,7 +27,7 @@ Here the sauce is a meat sauce with equal parts soybean paste and sweet bean sau
 ## Steps
 
 1. Rinse the cucumber and cut it into fine shreds on a clean plate. Mince the optional garlic and chop the green onion. Use a separate board for the raw meat, and keep the toppings for the end.
-2. Mix the two sauces together. Use wet soybean paste, which can be mixed in directly; dry yellow bean paste has to be thinned with water separately, and cannot be swapped in at the same weight.
+2. Mix the two sauces together. Wet soybean paste can be mixed in directly; dry yellow bean paste has to be thinned with water separately, and cannot be swapped in at the same weight.
 3. Heat the oil, add the chopped green onion and ground pork, and break the meat into small bits as you stir-fry. Cook for about 3–5 minutes, until there are no big clumps of meat, the steam has clearly lessened and the pork is cooked through, then turn to low heat. Do not let the green onion scorch black alone in the hot oil.
 4. Pour the mixed sauces into the pan and keep pushing and stir-frying, scraping up the sauce that sticks to the bottom. Stir-fry for about 2 minutes, until the sauce smells strongly and is thick yet still flows. When you lift the spatula, the sauce should cling to the meat bits; then lift it out. If the sauce is already very dry, take it off the heat.
 5. Cook the noodles in plenty of boiling water (fresh noodles about 3 minutes), nudging them apart gently once they are in. Before lifting them out at the time on the package, break one of the thicker strands: if there is no dry white core in the centre and it is chewy when bitten, lift them out.

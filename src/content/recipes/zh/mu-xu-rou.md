@@ -45,7 +45,7 @@ updated: 2026-10-02
 
 木须肉是一道北方家常炒菜。猪肉片、金黄蛋块、黑木耳和黄瓜各有口感，调味汁只薄薄附在表面。先把鸡蛋盛出，等肉和配菜成熟再回锅，便能让蛋块保持松软，黄瓜也保留脆口。
 
-肉片上的少量淀粉受热糊化，帮助调味附着，见[淀粉糊化](/principles/starch-gelatinization/)。鸡蛋和肉的嫩度则靠控制[蛋白质变性与凝固](/principles/protein-coagulation/)：熟透后及时进入下一步，避免在锅里反复加热。黄瓜切成厚薄一致的小片，才能在短炒时一起热透，见[刀工与受热](/principles/knife-work/)。
+肉片上的少量淀粉受热糊化，帮助调味附着，见[淀粉糊化](/principles/starch-gelatinization/)。鸡蛋和肉的嫩度则靠控制[蛋白质变性与凝固](/principles/protein-coagulation/)：熟了就及时出锅，别在锅里反复加热。黄瓜切成厚薄一致的小片，才能在短炒时一起热透，见[刀工与受热](/principles/knife-work/)。
 
 ## 步骤
 

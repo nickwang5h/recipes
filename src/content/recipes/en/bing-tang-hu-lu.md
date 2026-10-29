@@ -15,7 +15,7 @@ ingredients:
 translated: 2026-10-02
 ---
 
-Tanghulu has a thin, clear layer of hard candy on the outside; the sugar shell cracks first when you bite, followed by the sourness of the hawthorn. The moment the syrup is ready you have to dip, with no time to prepare slowly, so thread and dry the skewers and set out the tray for the dripped sugar before you turn on the heat. This makes the classic hawthorn skewers.
+Tanghulu has a thin, clear layer of hard candy on the outside; the sugar shell cracks first when you bite, followed by the sourness of the hawthorn. The moment the syrup is ready you have to dip, with no time to prepare slowly, so thread and dry the skewers and set out the tray for the dripped sugar before you turn on the heat.
 
 The sugar shell hardens as water evaporates, the syrup concentrates and then cools. It is different from the caramel colour discussed under [Caramelization](/principles/caramelization/): here you stop the heat before it clearly browns, to keep the shell clear. Concentrated syrup also recrystallizes easily into white grains, so stir as little as possible once it has come to a boil, and do not carry sugar grains from the sides of the pot back into the syrup.
 

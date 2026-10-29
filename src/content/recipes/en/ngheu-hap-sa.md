@@ -19,7 +19,7 @@ ingredients:
 translated: 2026-10-02
 ---
 
-*Nghêu hấp sả* uses the clean fragrance of lemongrass to carry the salty savouriness of clams. The home method puts the clams straight into a covered pot with a little water and cooks them with steam and the juices the clams release. Thai sweet basil is often added at the end, and the pot comes off the heat as soon as the leaves have just softened, which keeps their fragrance.
+*Nghêu hấp sả* uses the clean fragrance of lemongrass to carry the salty savouriness of clams. The clams go straight into a covered pot with a little water and cooks them with steam and the juices the clams release. Thai sweet basil is often added at the end, and the pot comes off the heat as soon as the leaves have just softened, which keeps their fragrance.
 
 The lemongrass is cut open and stir-fried briefly first, so its aroma reaches the oil and steaming liquid in the pot more easily (see [spices and aromatics](/principles/aromatics/)). The lid keeps the steam in, so heat reaches the shells on top (see [heat transfer](/principles/heat-transfer/)). The water only needs to be enough to start the steam. The clams release more liquid as they open, so the finished dish should have a layer of rich, savoury broth.
 
@@ -35,4 +35,4 @@ The lemongrass is cut open and stir-fried briefly first, so its aroma reaches th
 
 - **The meat has shrunk and is rubbery**: it kept boiling hard after it was cooked, so the proteins contracted and lost water (see [protein denaturation and coagulation](/principles/protein-coagulation/)). Choose clams of similar size and plate them right after steaming; do not leave them in the hot pot to reduce.
 - **The top layer won't open while the bottom layer has dried out**: the pot is too narrow or the steam too weak, so heating is uneven (see [heat transfer](/principles/heat-transfer/)). Use a wide pot that holds the clams comfortably, cover it tightly and toss once during steaming.
-- **The lemongrass tastes burnt and bitter**: the thin slices were fried too long in the oil (see [spices and aromatics](/principles/aromatics/)). Add the clams and water as soon as you smell the fragrance, and go to the next step before the garlic turns dark brown.
+- **The lemongrass tastes burnt and bitter**: the thin slices were fried too long in the oil (see [spices and aromatics](/principles/aromatics/)). Add the clams and water as soon as you smell the fragrance, and don't wait for the garlic to turn dark brown.

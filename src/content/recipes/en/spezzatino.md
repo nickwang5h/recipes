@@ -37,7 +37,7 @@ Browning the meat dark first gives the stew a layer of roasted flavour from the 
 1. Cut the beef into large chunks, sprinkle with salt and black pepper, coat with flour and shake off the extra. Heat the butter and olive oil in a pot, brown the meat on all sides over high heat until deep brown, leaving space between the pieces, then take it out.
 2. Add the tomato paste to the same pot and stir-fry for about 2 minutes, then add the chopped carrots, celery, potatoes and onion and stir-fry until the tomato paste turns darker and the edges of the vegetables have taken colour.
 3. Return the beef to the pot, add the peas and passata, and cook over high heat for about 10 minutes. Meanwhile heat the beef stock.
-4. Pour in the hot stock to cover the meat and vegetables, and add the bay leaves. Cover and simmer over low heat for about 1 hour, with only small bubbles slowly rising, until the beef is tender and a fork slides easily into the thickest piece; different cuts need different times.
+4. Pour in the hot stock to cover the meat and vegetables, and add the bay leaves. Cover and simmer over low heat for about 1 hour, with only small bubbles slowly rising, until the beef is tender and a fork slides easily into the thickest piece.
 5. Taste, add salt and black pepper if needed, and serve hot.
 
 ## Key points

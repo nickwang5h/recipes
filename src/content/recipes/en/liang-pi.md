@@ -33,7 +33,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-Liangpi is refreshing with a garlic note. The gluten soaks up the dressing, the cucumber and sprouts are crisp, and the sesame paste is rich. It uses ready-made liangpi and a fairly thick sesame paste. The paste is stirred with water a little at a time, so the water, the fat and the fine sesame particles blend into a smooth sauce (see [emulsification](/principles/emulsification/)).
+Liangpi is refreshing with a garlic note. The gluten soaks up the dressing, the cucumber and sprouts are crisp, and the sesame paste is rich. Use ready-made liangpi and a fairly thick sesame paste. The paste is stirred with water a little at a time, so the water, the fat and the fine sesame particles blend into a smooth sauce (see [emulsification](/principles/emulsification/)).
 
 Crushed garlic releases its sharpness more easily (see [spices and aromatics](/principles/aromatics/)). Both the dressing and the sesame paste already contain soy sauce and oyster sauce, so decide on salt after everything is mixed (see [salt](/principles/salt/)). Prepare the ready-made liangpi and gluten as their packages say. The water for the garlic water, the paste and the mixing must be drinkable.
 
@@ -41,7 +41,7 @@ Crushed garlic releases its sharpness more easily (see [spices and aromatics](/p
 
 1. Read the serving instructions on the liangpi and cooked gluten packages. Cut the liangpi into wide strips and the gluten into small pieces. Anything that needs heating is prepared as directed, then cooled.
 2. Bring the water for the sprouts to a boil, add the washed bean sprouts and cook over high heat for about 60 seconds, until they are hot through and the stems are slightly soft. Lift out, cool with cooled boiled water and drain.
-3. Wash the cucumber, cut it into fine shreds and put it on a clean plate. If the cucumber and sprouts carry a lot of water, mixing them in will dilute the dressing.
+3. Wash the cucumber, cut it into fine shreds and put it on a clean plate. If the cucumber and sprouts are wet, drain them first so they don't dilute the dressing.
 4. Mash the garlic to a fine paste and stir in the water for the garlic water. Separately mix the water for the dressing, light soy sauce, dark soy sauce, toasted sesame oil, oyster sauce, vinegar and chicken bouillon powder until no grains are left.
 5. Stir the matching light soy sauce, dark soy sauce and oyster sauce into the sesame paste first, then add 10 ml of water at a time, stirring until even before the next. It will tighten at first, then keep stirring until it runs slowly off the edge of the spoon.
 6. Toss the liangpi with the dressing first, then add the sprouts and gluten, drizzle on the sesame paste and lay the cucumber shreds on top. Fold gently so the sauce clings to the liangpi and the gluten takes up the dressing too.

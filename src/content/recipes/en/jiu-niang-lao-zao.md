@@ -32,5 +32,5 @@ Cooking the rice and mixing in the yeast take only a short while, but fermentati
 
 - **Rice is hard and has no sweetness**: the rice was not cooked through, or hot rice killed the yeast when it was mixed in (see [Starch Gelatinization](/principles/starch-gelatinization/) and [Fermented Seasonings](/principles/fermentation/)). Check for a hard core first, then measure the temperature with a thermometer.
 - **Wine flavour too strong and the grains hollow and loose**: too much yeast, or it fermented too long in the warmth. Weigh the yeast by the package ratio, refrigerate once it is ready, and don't add water and keep fermenting at room temperature.
-- **Fuzz, black or red spots, or a spoiled smell**: most likely contamination by unwanted microbes. Throw out the whole batch; scraping off the surface or heating it again won't save it.
+- **Fuzz or black or red spots**: unwanted microbes got in. Throw out the whole batch; scraping off the surface or heating it again won't save it.
 - **Liquid keeps appearing after refrigeration**: the cold slows fermentation (see [Fermented Seasonings](/principles/fermentation/)) but doesn't stop it completely. Refrigerate in small portions, finish them soon, and freeze any extra promptly.

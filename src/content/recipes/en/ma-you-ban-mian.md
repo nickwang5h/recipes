@@ -15,7 +15,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-The fragrance of sesame oil tossed noodles comes from roasted sesame oil. When the noodles have just been cooked and are still warm, the oil mixes in easily and the aroma is easy to smell. The sesame oil is added last, in the bowl, so it is heated once less and loses less aroma (see [Spices and Aromatics](/principles/aromatics/)). Instant noodles are used here, dark soy sauce gives the colour, and pepper only supports the flavour.
+The fragrance of sesame oil tossed noodles comes from roasted sesame oil. When the noodles have just been cooked and are still warm, the oil mixes in easily and the aroma is easy to smell. The sesame oil is added last, in the bowl, so it is heated once less and loses less aroma (see [Spices and Aromatics](/principles/aromatics/)). Use instant noodles; dark soy sauce gives the colour, and pepper only supports the flavour.
 
 Cook the noodles until the cake has loosened and the centre is soft but still springy. Noodles whose [starch gelatinization](/principles/starch-gelatinization/) is already complete turn softer and stickier if they stay in hot water. So have the seasoning ready, lift the noodles out and toss them while hot. A film of moisture on the strands lets the soy sauce spread evenly. Instant noodles are often salted already and the dressing adds soy sauce (see [salt](/principles/salt/)), so cook them in plain water.
 

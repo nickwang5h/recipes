@@ -21,7 +21,7 @@ translated: 2026-10-01
 
 *Thịt kho trứng* is a braise of pork and eggs from southern Vietnam. Coconut water adds a light sweetness, fish sauce adds salty savouriness, and caramel colour stains the pork and eggs brown. The pork leg keeps its skin and fat, so lean meat, soft skin and egg white each have their own texture, and the braising liquid is left generous so you can spoon some over rice.
 
-Pork that is cooked through is not yet tender. The skin and connective tissue need sustained moist heat, so that collagen slowly turns to gelatin (see [collagen and gelatin](/principles/collagen-gelatin/)). The caramel colour is made separately before braising, finishing its [caramelization](/principles/caramelization/) to give a sweet, slightly bitter base note; while the pork cooks, low heat slowly draws the colour and the salty-sweet flavour into the liquid.
+Pork that is cooked through is not yet tender. The skin and connective tissue need sustained moist heat, so that collagen slowly turns to gelatin (see [collagen and gelatin](/principles/collagen-gelatin/)). The caramel colour is made separately before braising, finishing its [caramelization](/principles/caramelization/) to give a sweet, slightly bitter flavour; while the pork cooks, low heat slowly draws the colour and the salty-sweet flavour into the liquid.
 
 ## Steps
 
@@ -35,6 +35,6 @@ Pork that is cooked through is not yet tender. The skin and connective tissue ne
 
 ## Key points
 
-- **Lean meat is dry and the skin is still tough**: the cut was too lean, or there was not enough time in moist heat (see [collagen and gelatin](/principles/collagen-gelatin/)). Keep the skin and fat, cook slowly at small bubbles, add hot water if it runs short, then check that the skin is soft.
+- **Lean meat is dry and the skin is still tough**: the cut was too lean, or there was not enough time in moist heat (see [collagen and gelatin](/principles/collagen-gelatin/)). Keep the skin and fat, cook slowly at small bubbles, add hot water if it runs short, then see whether the skin is soft.
 - **Braising liquid is bitter and burnt, and the colour is black**: the caramel colour was taken too far, or the liquid was reduced too dry at the end (see [caramelization](/principles/caramelization/)). Redo a burnt, black caramel; lower the heat in time as the liquid reduces, and leave enough to spoon over rice.
 - **Pork falls apart and the egg white is hard**: constant hard boiling and repeated turning overheat the outer layer (see [protein denaturation and coagulation](/principles/protein-coagulation/)). Keep it at a gentle simmer, turn lightly and stop the heat once it is tender.

@@ -32,7 +32,7 @@ translated: 2026-10-02
 
 Moo shu pork (*mu xu rou*) is a northern Chinese home stir-fry. The sliced pork, golden egg curds, black wood ear and cucumber each have their own texture, and the sauce only lightly coats the surface. The eggs are taken out first and returned after the pork and vegetables are done, which keeps the curds soft and the cucumber crisp.
 
-A little starch on the pork gelatinizes in the heat and helps the seasoning cling (see [Starch Gelatinization](/principles/starch-gelatinization/)). The tenderness of the egg and meat depends on controlling [Protein Denaturation and Coagulation](/principles/protein-coagulation/): once they are cooked through, move on to the next step without heating them again and again in the pan. Cucumber cut into slices of even thickness heats through together in the short stir-fry (see [Knife Work and Cooking](/principles/knife-work/)).
+A little starch on the pork gelatinizes in the heat and helps the seasoning cling (see [Starch Gelatinization](/principles/starch-gelatinization/)). The tenderness of the egg and meat depends on controlling [Protein Denaturation and Coagulation](/principles/protein-coagulation/): take them out of the pan as soon as they are cooked, rather than heating them again and again. Cucumber cut into slices of even thickness heats through together in the short stir-fry (see [Knife Work and Cooking](/principles/knife-work/)).
 
 ## Steps
 

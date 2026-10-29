@@ -36,7 +36,7 @@ Choose pork belly with layers of fat and lean, so that the rendered fat moistens
 3. Add the rice flour and toss for about 2 minutes; pour in half of the water for mixing the flour first, then add more in stages. The flour should cling evenly to the meat, with the grains moist, no pool of thin batter at the bottom of the bowl and no patches of dry flour.
 4. Peel the potatoes, cut them into slices about 8 mm thick and lay them on the bottom of a heatproof bowl. Arrange the pork slices loosely on top with the flour side facing out, without pressing them down; choose a bowl that leaves room for expansion.
 5. When the water in the steamer has boiled, put in the bowl of pork, cover and steam for 60 minutes over a heat that keeps the steam coming steadily. Check the water at the bottom along the way, and when the level has clearly dropped, add hot water along the side of the pot so the water does not pour directly into the bowl of pork.
-6. Check the thickest piece of pork in the centre of the bowl: a chopstick should pass through the skin and meat easily, the flour grains should be soft with no hard core, and the potatoes should break apart when pinched. If there is still some resistance, steam for another 10–15 minutes and check again; take it out when soft and tender.
+6. Check the thickest piece of pork in the centre of the bowl: a chopstick should pass through the skin and meat easily, the flour grains should be soft with no hard core, and the potatoes should break apart when pinched. If there is still some resistance, steam for another 10–15 minutes; take it out when soft and tender.
 
 ## Key points
 

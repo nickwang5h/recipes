@@ -43,5 +43,5 @@ The sauce's silkiness comes from the [gelatin](/principles/collagen-gelatin/) in
 ## Key points
 
 - **Doesn't set when cold, and is watery when hot**: the stock has too little gelatin, or the sauce was not reduced enough. First check how the stock behaves after chilling; make it from meaty bones with joints and connective tissue (see [collagen and gelatin](/principles/collagen-gelatin/)).
-- **Sauce is sticky and pasty**: it was reduced too early in the skimming stage, so the proportion of flour became too high. Add hot water to keep it pourable and finish the skimming and straining before the final reduction (see [starch gelatinization](/principles/starch-gelatinization/)).
+- **Sauce is sticky and pasty**: it was reduced thick before the skimming and straining were done, so the proportion of flour became too high. Add hot water to keep it pourable, finish skimming and straining, and only then do the final reduction (see [starch gelatinization](/principles/starch-gelatinization/)).
 - **Bitter, with black specks**: the roux or the bottom of the pot burned, and the bitterness intensifies as the sauce reduces. Cook the brown roux slowly, use a heavy-bottomed pot over low heat for the final reduction, and don't scrape the burnt bits back in (see [the Maillard reaction](/principles/maillard-reaction/)).

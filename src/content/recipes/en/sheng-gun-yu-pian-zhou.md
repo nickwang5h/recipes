@@ -32,7 +32,7 @@ translated: 2026-10-02
 
 Fish slice congee starts with a pot of fully cooked plain congee, then raw fish slices are rolled in and it is served as soon as they are just cooked. The rice grains break apart and the congee liquid becomes one with them; the fish slices stay whole, and the aroma of the ginger and green onion is kept for last. Evenly thick fish matters more for doneness than which white fish you use.
 
-The silkiness of the congee comes from the rice absorbing water, [starch gelatinization](/principles/starch-gelatinization/) and the grains falling apart once soft. The fish slices only need a short time on the heat: once the proteins have set, more cooking makes the flesh tighten (see [protein denaturation and coagulation](/principles/protein-coagulation/)). Keeping the two stages apart is how you get both a silky congee and tender fish. The thin coating gives a slippery surface, but the tenderness of the fish still depends on turning off the heat in time.
+The silkiness of the congee comes from the rice absorbing water, [starch gelatinization](/principles/starch-gelatinization/) and the grains falling apart once soft. The fish slices only need a short time on the heat: once the proteins have set, more cooking makes the flesh tighten (see [protein denaturation and coagulation](/principles/protein-coagulation/)). So the congee is cooked through first and the fish goes in last; that is how you get both a silky congee and tender fish. The thin coating makes the surface slippery, but whether the fish stays tender still depends on turning off the heat in time.
 
 ## Steps
 

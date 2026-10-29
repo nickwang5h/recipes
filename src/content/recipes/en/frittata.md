@@ -16,7 +16,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-*Frittata* is an Italian flat egg cake that you cut into wedges. It is soft and tender and tastes strongly of egg, and it often has cheese or cooked vegetables mixed in; this version is eggs with Parmigiano. It is cooked in two steps: first the bottom is set on the stove, then the oven broiler finishes the top. The key is to cook the whole cake slowly over low heat.
+*Frittata* is an Italian flat egg cake that you cut into wedges. It is soft and tender and tastes strongly of egg, and it often has cheese or cooked vegetables mixed in; this one has Parmigiano. It is cooked in two steps: first the bottom is set on the stove, then the oven broiler finishes the top, and the whole cake cooks slowly over low heat.
 
 When egg is heated, its proteins unfold and join into a net that holds water (see [protein denaturation and coagulation](/principles/protein-coagulation/)). The pan passes heat to the bottom layer first, so the upper layer cooks more slowly. The last bit of raw egg is left to the broiler, so the bottom doesn't have to stay on the heat the whole time (see [heat transfer](/principles/heat-transfer/)). If it is overcooked, the net tightens and squeezes the water out, and the frittata turns dry and hard.
 

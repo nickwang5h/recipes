@@ -26,18 +26,18 @@ ingredients:
 translated: 2026-10-28
 ---
 
-Stir-fried celtuce with pork is about the crisp, fresh fragrance of celtuce and the tenderness of the pork slices, with ginger, garlic and light soy sauce as the base flavour. The white fibrous layer on the outside of celtuce must be peeled off, exposing the pale green tender stem, so you do not bite into tough strands. The 200 g is the weight after peeling, so allow for waste when you buy.
+Stir-fried celtuce with pork is about the crisp, fresh fragrance of celtuce and the tenderness of the pork slices, with ginger, garlic and light soy sauce for flavour. The white fibrous layer on the outside of celtuce must be peeled off, exposing the pale green tender stem, so you do not bite into tough strands. The 200 g is the weight after peeling, so allow for waste when you buy.
 
 Slice the pork thin against the grain and keep the celtuce slices a similar thickness, so that [knife work and heat](/principles/knife-work/) let the same batch of ingredients cook at nearly the same time. The meat is first worked with a little water and then coated in starch, which forms a smooth light coating when heated (see [starch gelatinization](/principles/starch-gelatinization/)). Cooking the celtuce and pork separately and combining them briefly at the end lets you control the doneness of each.
 
 ## Steps
 
 1. Remove the membrane from the pork tenderloin and slice it against the grain about 2 mm thick. Work in the light soy sauce, Shaoxing wine, white pepper and 1 tbsp of water by hand until the water is absorbed by the meat, then mix in the cornstarch and 1 tsp of oil. Refrigerate to marinate for 20 minutes, until the surface of the slices is lightly tacky and there is no free liquid at the bottom of the bowl.
-2. Cut off the tough base of the celtuce and peel off the tough skin with a knife or peeler, then check the white fibrous layer; keep peeling until the fine, tender pale green flesh shows. Weigh out 200 g, slice on the diagonal about 3 mm thick, rinse off any bits, drain for 2 minutes and blot the surface dry.
+2. Cut off the tough base of the celtuce and peel off the tough skin with a knife or peeler, then look at the white fibrous layer; keep peeling until the fine, tender pale green flesh shows. Weigh out 200 g, slice on the diagonal about 3 mm thick, rinse off any bits, drain for 2 minutes and blot the surface dry.
 3. Slice the ginger and garlic and loosen the marinated pork slices one by one. Set the celtuce, meat and seasonings next to the stove, so you can cook continuously once the heat is on.
 4. Add 1 tbsp of oil to the wok and heat over medium-high heat for about 1 minute, until the oil flows and has not yet smoked. Spread in the pork slices and stir-fry for about 2–3 minutes, until the slices separate, turn from translucent to opaque, and the centre of the thickest slice reaches 71°C (160°F). Move to a clean plate.
 5. Add the remaining 1 tbsp of oil to the same wok, turn to medium heat, add the ginger and garlic and stir-fry for about 0.25 minutes, until fragrant and the garlic slices have not browned. Add the celtuce and stir-fry over medium-high heat for 1–1.5 minutes, until the edges look translucent, the centres are still firm, and there is no obvious pooled water at the bottom of the wok.
-6. Return the cooked pork, add the salt and toasted sesame oil, and toss over medium-high heat for about 0.5 minutes, until the pork is hot again and the celtuce is coated in a light sauce. Taste a slice to confirm there is no raw firmness and it is still crisp, then take it out immediately; do not leave it in the hot wok waiting for the rice.
+6. Return the cooked pork, add the salt and toasted sesame oil, and toss over medium-high heat for about 0.5 minutes, until the pork is hot again and the celtuce is coated in a light sauce. Taste a slice: there should be no raw firmness and it should still be crisp. Take it out immediately; do not leave it in the hot wok waiting for the rice.
 
 ## Key points
 

@@ -47,5 +47,5 @@ The caramel colour comes from [caramelization](/principles/caramelization/), whi
 ## Key points
 
 - **The ribs are cooked but still tough**: [collagen](/principles/collagen-gelatin/) needs more time to soften. Stew the ribs until nearly soft before adding the potatoes, so you are not waiting for the meat to soften while the potatoes break down.
-- **The caramel is bitter and the ribs have black spots**: the sugar was heated too far (see [caramelization](/principles/caramelization/)). Have the meat and hot water ready and move on to the next step as soon as the sugar is reddish brown; throw out burnt caramel and start again.
+- **The caramel is bitter and the ribs have black spots**: the sugar was heated too far (see [caramelization](/principles/caramelization/)). Have the meat and hot water ready and add the ribs as soon as the sugar is reddish brown; throw out burnt caramel and start again.
 - **The potatoes fall apart into a paste and the sauce sticks to the bottom**: the pot was stirred hard again and again after the potatoes softened, and a lot of the [gelatinized starch](/principles/starch-gelatinization/) on the surface came off. Add the potatoes late, nudge gently while reducing, and stop once the sauce clings.

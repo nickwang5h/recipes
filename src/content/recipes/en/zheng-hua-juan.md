@@ -11,7 +11,7 @@ translated: 2026-10-01
 
 When frozen, cooked flower rolls are steamed hot again, the soft texture and the green onion oil fragrance between the layers come back. Steam condenses on cold dough and delivers heat to the surface, and from there heat is [conducted](/principles/heat-transfer/) from the outside in. The surface heats quickly, while the thickest roll centre takes longer, so judge whether the reheating is done by the centre.
 
-When starchy food cools, the [starch retrogrades](/principles/starch-gelatinization/) and the structure firms; reheating softens it again. While steaming, keep the moisture in, and after taking them out, let the condensation on the surface escape, so the rolls stay soft and the bottoms do not soak and turn sticky. Here we use five frozen cooked flower rolls; sizes vary, and so does how many people they feed.
+When starchy food cools, the [starch retrogrades](/principles/starch-gelatinization/) and the structure firms; reheating softens it again. While steaming, keep the moisture in, and after taking them out, let the condensation on the surface escape, so the rolls stay soft and the bottoms do not soak and turn sticky. The five rolls are not all the same size, so go by the thickest one.
 
 ## Steps
 

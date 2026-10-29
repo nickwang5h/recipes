@@ -13,7 +13,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-The white sugar coating on sugar-frosted taro comes from **sucrose crystallization**. The sugar is first dissolved in water and, after some of the water evaporates, becomes concentrated; off the heat it cools while being stirred continuously, and the sugar comes out as tiny crystals that cling to the surface of the taro sticks. Once the sugar changes colour it has become caramel, and this dish keeps the sugar at the colourless stage (see [Caramelization](/principles/caramelization/)).
+The white sugar coating on sugar-frosted taro comes from **sucrose crystallization**. The sugar is first dissolved in water and, after some of the water evaporates, becomes concentrated; off the heat it cools while being stirred continuously, and the sugar comes out as tiny crystals that cling to the surface of the taro sticks. Once the sugar changes colour it has become caramel, and this dish stops the sugar before it changes colour (see [Caramelization](/principles/caramelization/)).
 
 The taro is fried through first, so the inside [gelatinizes](/principles/starch-gelatinization/) and the outer layer loses some water. Only dry taro sticks can hold the sugar coating; a wet, soft surface thins the syrup again. 30 g of sugar for 200 g of taro makes a fairly thin layer of white sand, so toss gently and do not break the floury taro sticks.
 
@@ -29,5 +29,5 @@ The taro is fried through first, so the inside [gelatinizes](/principles/starch-
 ## Key points
 
 - **The sugar coating is clear and sticky**: the syrup still has too much water, or it was not tossed enough and has not finished crystallizing (see [Caramelization](/principles/caramelization/)). Make sure the syrup has reached fine, dense bubbles before the taro goes in; keep tossing gently off the heat and do not plate in a hurry.
-- **The coating turns yellow and tastes bitter**: the sugar was cooked past the colourless stage and has started to turn into caramel (see [Caramelization](/principles/caramelization/)). Lower the heat as it nears thick, drain the taro sticks of oil ahead of time, add them in time and move the pot off the heat.
+- **The coating turns yellow and tastes bitter**: the sugar was cooked too far and has started to turn into caramel (see [Caramelization](/principles/caramelization/)). Lower the heat as it nears thick, drain the taro sticks of oil ahead of time, add them in time and move the pot off the heat.
 - **The taro sticks are dark outside and hard inside**: the oil was too hot or the pieces were uneven, so the surface lost water and took on colour faster than the inside cooked (see [Oil Temperature and Deep Frying](/principles/oil-temperature/)). Lower the heat, fry in batches by thickness and check the centre instead of going by colour alone.

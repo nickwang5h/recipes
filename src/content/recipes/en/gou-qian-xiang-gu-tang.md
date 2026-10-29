@@ -28,7 +28,7 @@ Potato starch only disperses in cold water and settles to the bottom if left. In
 2. Mix 10 g of potato starch with 50 ml of cold water and stir until no dry starch is visible. Set the slurry beside the stove with a small spoon, and stir it again before it goes into the pot.
 3. Add 10 ml of oil to the pot and heat over low until it spreads, then add the shiitake slices. Cook each side for about 10 seconds, until the surface is coated in oil and starts to give off fragrance; when water seeps out, stop trying for deep brown edges.
 4. Slowly pour 300 ml of boiling water down the side of the pot, turn to medium and cook for 3–5 minutes. When the surface is at a gentle roll, the shiitake have softened and you can smell the mushrooms, add part of the bouillon powder and stir in.
-5. Stir the slurry again. Keeping the soup at a gentle simmer, drizzle it in thinly while pushing gently with a ladle. Add it in several portions, and wait until the last portion has turned even and glossy before deciding whether to keep pouring.
+5. Stir the slurry again. Keeping the soup at a gentle simmer, drizzle it in thinly while pushing gently with a ladle. Add it in several portions, and wait until the last portion has turned even and glossy before you decide whether to pour more.
 6. Stop adding slurry when the soup thinly coats the back of a spoon and the liquid around the shiitake slices flows a little more slowly. Taste, then add more bouillon or a little salt. Sprinkle with green onion, take off the heat as soon as the soup bubbles lightly again, and ladle out right away.
 
 ## Key points

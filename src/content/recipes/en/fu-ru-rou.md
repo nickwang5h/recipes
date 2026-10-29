@@ -23,7 +23,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-Braised pork with fermented tofu gets its salty-sweet savoury flavour from red fermented tofu, its brine and sugar, and the pork belly is cooked slowly until soft. The savoury saltiness and aged aroma of the fermented tofu have already formed before it goes in the pot, and only when it is mashed does it blend evenly into the braising liquid (see [fermented seasonings](/principles/fermentation/)). Red fermented tofu is used here, so its colour and wine aroma also go into the sauce.
+Braised pork with fermented tofu gets its salty-sweet savoury flavour from red fermented tofu, its brine and sugar, and the pork belly is cooked slowly until soft. The savoury saltiness and aged aroma of the fermented tofu have already formed before it goes in the pot, and only when it is mashed does it blend evenly into the braising liquid (see [fermented seasonings](/principles/fermentation/)). The red fermented tofu's colour and wine aroma also go into the sauce.
 
 The skin and connective tissue of pork belly must be loosened slowly by moist heat (see [collagen and gelatin](/principles/collagen-gelatin/)). After blanching, dry the pork and brown it lightly for a meaty aroma before adding the sauce and water. The final glossy red comes both from the fermented tofu and dark soy sauce, and from reducing, which raises the sauce's concentration.
 
@@ -33,7 +33,7 @@ The skin and connective tissue of pork belly must be loosened slowly by moist he
 2. Put the pork in cold water with the Shaoxing wine and half of the ginger slices, and bring slowly to a boil. When the surface changes colour and the foam rises together, lift the pork out, rinse off the grey scum, drain, and pat the surface dry. Pour out the blanching water.
 3. Put the oil in a clean pot and stir-fry the green onion white part and the remaining ginger over low heat until fragrant. Add the pork and spread it out to fry. Let the steam clear first, then turn the pieces. Fry until several sides turn a light golden colour. You don't need a hard crust on every side.
 4. Turn to low heat, pour in the fermented tofu sauce and mix so every piece of pork is coated. It doesn't matter if the rock sugar hasn't fully dissolved. Pour in 500 ml of hot water at once, bring to a boil, cover and turn to low heat, keeping the surface at a gentle bubble.
-5. Stew for 40 minutes first, turning the pork and checking the water level halfway through. Poke the skin of the thickest piece with a chopstick. It should go in easily, and the meat should tend to loosen when you nudge it, before you move on to reducing. If it is still tough, add hot water and keep stewing until soft.
+5. Stew for 40 minutes first, turning the pork and checking the water level halfway through. Poke the skin of the thickest piece with a chopstick. It should go in easily, and the meat should tend to loosen when you nudge it, before you start reducing. If it is still tough, add hot water and keep stewing until soft.
 6. Uncover and pick out the green onion and ginger. Turn to medium-high heat to reduce the sauce, gently pushing the pork and shaking the pot to keep it from sticking to the bottom. Turn off the heat when the bubbles change from small to thick, large bubbles, and the sauce thinly coats the pork while the bottom of the pot is still moist. Sprinkle on the optional chopped green onion.
 
 ## Key points

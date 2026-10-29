@@ -43,6 +43,6 @@ The liquid that steams out carries blood and a fishy smell, so pour it off. The 
 ## Key points
 
 - **The flesh is dry, but still red next to the bone**: the heat was too low and the steam too weak, so the steaming took longer and the outside overcooked first. Always wait for a full boil and plenty of steam before putting in the fish. See [heat transfer](/principles/heat-transfer/).
-- **Coarse flesh and a lot of water on the plate**: it was steamed too long, and the protein tightened and squeezed out water. Better to steam 1 minute less and check. See [protein denaturation and coagulation](/principles/protein-coagulation/).
-- **A fishy smell**: the steamed liquid was not fully poured off, or the fish was not fresh. A fresh fish has clear eyes and bright red gills, and the body springs back when pressed.
+- **Coarse flesh and a lot of water on the plate**: it was steamed too long, and the protein tightened and squeezed out water. Better to steam 1 minute less and add time if needed. See [protein denaturation and coagulation](/principles/protein-coagulation/).
+- **A fishy smell**: the steamed liquid was not fully poured off, and the blood and fishy smell are in it. Pour all of it off before adding the hot oil and soy sauce.
 - **A different size of fish**: time depends on the thickness at the thickest point, not the weight. Thin fish fillets need only 3–5 minutes, and a large fish needs more than 10 minutes, always judged by the flesh next to the bone turning white.

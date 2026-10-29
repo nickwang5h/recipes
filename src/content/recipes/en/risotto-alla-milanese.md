@@ -27,7 +27,7 @@ The thick sauce comes from the rice itself. The grains absorb water in the hot s
 
 ## Steps
 
-1. Cook the chopped onion in the butter for the onion and the beef marrow. Keep the heat medium-low and cook for about 5 minutes, until the onion is soft, translucent and slightly golden and the marrow has melted into the fat; move to the next step before dark brown appears on the bottom.
+1. Cook the chopped onion in the butter for the onion and the beef marrow. Keep the heat medium-low and cook for about 5 minutes, until the onion is soft, translucent and slightly golden and the marrow has melted into the fat; don't let dark brown appear on the bottom.
 2. Add the unrinsed rice and stir for 3–4 minutes. Coat the grains evenly in fat and cook until the surface is glossy and the edges look slightly translucent, keeping the grains whole and not browning them.
 3. Pour in the white wine. Stir gently and cook until no liquid wine is left in the pot and the sharp smell of alcohol has clearly faded.
 4. Add hot stock a ladle at a time (about 11–13 minutes). First let the liquid just cover the rice, keep a lively gentle boil, and push the bottom lightly with a wooden spoon; add more when the stock has reduced and the grains begin to show, so the bottom stays moist.

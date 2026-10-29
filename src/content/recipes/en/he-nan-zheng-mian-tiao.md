@@ -27,7 +27,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-For Henan steamed noodles, the noodles are steamed first, then tossed with a meat and vegetable sauce and steamed again, so the noodles absorb the seasoning and there is no bowl of loose liquid left after cooking. Thin round dried noodles stand in here for fresh thin noodles, a home variation; dried noodles need more water, and after the first steam they may still be firm, so tossing with the sauce and steaming again finish the [starch gelatinization](/principles/starch-gelatinization/).
+For Henan steamed noodles, the noodles are steamed first, then tossed with a meat and vegetable sauce and steamed again, so the noodles absorb the seasoning and there is no bowl of loose liquid left after cooking. Thin round dried noodles stand in here for fresh thin noodles; dried noodles need more water, and after the first steam they may still be firm, so tossing with the sauce and steaming again finish the [starch gelatinization](/principles/starch-gelatinization/).
 
 Both steams need the noodles spread loosely so steam can find a path through (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). Cook the sauce first, then toss it in in stages according to how much the noodles absorb. It is easier to control when the surface is evenly moist and no large pool collects at the bottom of the bowl than when you pour in all the sauce at once. Soy sauce, oyster sauce and the optional bouillon powder already carry salt, so add extra salt only after tasting.
 

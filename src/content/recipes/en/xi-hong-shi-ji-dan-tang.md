@@ -26,14 +26,14 @@ For a soup base that tastes of tomato, fry the tomatoes until they release their
 
 1. Wash the tomato and cut it into small pieces of similar size, keeping the juice from cutting. Mince the green onion, ginger and garlic. The more even the pieces, the more evenly they soften.
 2. Beat the eggs, stirring until the whites and yolks are one colour. Streaks of egg white form coarse white strings in the soup, so beat them in thoroughly first.
-3. Put the vegetable oil in the pot and heat over medium-low heat until the oil flows easily. Add the green onion, ginger and garlic and stir-fry for about 30 seconds. Move on when you smell the aroma and the garlic is still pale.
+3. Put the vegetable oil in the pot and heat over medium-low heat until the oil flows easily. Add the green onion, ginger and garlic and stir-fry for about 30 seconds. When you smell the aroma and the garlic is still pale, add the tomatoes.
 4. Add the tomatoes and stir-fry for about 1 minute, then keep going until the edges collapse and clear red juice collects at the bottom of the pot. Lightly press the soft pieces with the spatula to release their juice.
 5. Add the water, scrape up the juices at the bottom, bring to a boil, then turn to low heat. The base should smell tangy and of tomato, and the tomato pieces should still be recognizable.
-6. Gently swirl the soup with a spoon and pour the egg in a thin stream. When all the egg ribbons have turned opaque, gently push them apart. Keep it at a gentle simmer for about 30 seconds and make sure there is no raw egg.
+6. Gently swirl the soup with a spoon and pour the egg in a thin stream. When all the egg ribbons have turned opaque, gently push them apart. Keep it at a gentle simmer for about 30 seconds, until there is no raw egg.
 7. Add the MSG, taste and add salt, drip in the toasted sesame oil and serve right away. Adding salt last lets you judge the seasoning by the actual amount of soup.
 
 ## Key points
 
 - **Egg ribbons are as fine as sand**: the egg was stirred apart quickly before it could [coagulate](/principles/protein-coagulation/). Pour it in more slowly and push gently only after thin sheets have formed.
 - **Green onion and garlic are bitter and the soup tastes burnt**: the oil was too hot, and the fine pieces burned before they could [release their aroma](/principles/aromatics/). The oil does not need to smoke; throw out aromatics that taste bitter and start again.
-- **Soup gets saltier the longer it cooks**: evaporation concentrates the [salt](/principles/salt/), and MSG adds to the salty savoury taste. Finish cooking before tasting; if it is too salty add unsalted hot water, as sugar will not remove the saltiness.
+- **Soup gets saltier the longer it cooks**: evaporation concentrates the [salt](/principles/salt/), and MSG adds to the salty savoury taste. Finish cooking before tasting; if it is too salty add unsalted hot water.

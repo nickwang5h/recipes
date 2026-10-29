@@ -16,7 +16,7 @@ translated: 2026-10-01
 
 Winter melon tea is lightly sweet with a faint winter melon fragrance, and is good hot or cold. The method is to cook winter melon and rock sugar into a concentrate, then dilute it with water; it makes about five cups. The sugar is mixed with the cut winter melon, and the liquid slowly seeps out, so when it goes into the pot this sugar water is just what the melon cooks in; slow cooking over low heat softens the pieces and leaves the fragrance in the liquid. The more concentrated it gets, the more easily it sticks in patches to the bottom of the pot (see [heat transfer](/principles/heat-transfer/)).
 
-Once the rock sugar dissolves, it only adds sweetness; deep brown colour comes from [caramelization](/principles/caramelization/), not from this sugar. While there is still a lot of liquid in the pot, cook the melon soft and reduce the liquid. When diluting, start with a little water and taste as you go.
+Once the rock sugar dissolves, it only adds sweetness; While there is still plenty of liquid in the pot, just cook the melon soft and reduce the liquid; the sugar won't turn deep brown, because that colour comes from [caramelization](/principles/caramelization/). When diluting, start with a little water and taste as you go.
 
 ## Steps
 

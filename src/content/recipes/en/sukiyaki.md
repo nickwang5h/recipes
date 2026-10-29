@@ -31,9 +31,9 @@ ingredients:
 translated: 2026-10-02
 ---
 
-*Sukiyaki* cooks thin beef, tofu and vegetables in a shallow pot at the table as you eat. This version uses a Kanto-style premixed *warishita*: soy sauce, sake, mirin and sugar are cooked together first and then added to the pot in stages. The liquid only reaches the lower part of the ingredients, so the water from the vegetables gradually joins the sweet-salty base.
+*Sukiyaki* cooks thin beef, tofu and vegetables in a shallow pot at the table as you eat. This version uses a Kanto-style premixed *warishita*: soy sauce, sake, mirin and sugar are cooked together first and then added to the pot in stages. The liquid only reaches the lower part of the ingredients, so the water from the vegetables gradually joins the sweet-salty liquid.
 
-The beef is sliced thin, so heat has a short way to the centre; see [heat transfer](/principles/heat-transfer/). The cabbage stems and leek go in first, and leafy greens and beef later, so each reaches the right doneness. Lift the beef out as soon as it is cooked, because leaving it in the pot makes the [proteins contract and lose water](/principles/protein-coagulation/). In Japan it is often dipped in beaten raw egg. In Canada, only a pasteurized egg product clearly labelled as safe to eat raw should be used for dipping, or you can eat the pot ingredients as they are.
+The beef is sliced thin, so heat has a short way to the centre; see [heat transfer](/principles/heat-transfer/). The cabbage stems and leek go in first, and leafy greens and beef later, so each is cooked just right. Lift the beef out as soon as it is cooked, because leaving it in the pot makes the [proteins contract and lose water](/principles/protein-coagulation/). In Japan it is often dipped in beaten raw egg. In Canada, only a pasteurized egg product clearly labelled as safe to eat raw should be used for dipping, or you can eat the pot ingredients as they are.
 
 ## Steps
 

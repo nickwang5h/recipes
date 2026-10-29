@@ -41,4 +41,4 @@ The fat of the pork belly makes the leaves glossy, and a little Chinkiang vinega
 
 - **Cabbage turns soft like boiled cabbage**: the water was not drained off, or the wok was too full. [Heat transfer](/principles/heat-transfer/) is used up by heavy evaporation. Stir-fry in batches, and take the cabbage out as soon as the leaves are soft and the ribs crisp.
 - **Cabbage releases water after salting**: [salt](/principles/salt/) draws water out of the vegetable. Add the salt for the stir-fry in small amounts, and don't leave the pre-fried cabbage sitting in the hot pan.
-- **Vinegar taste is faint and the pork fat feels heavy**: the vinegar went in too early and was stirred for too long. Following [acid in seasoning](/principles/acid/), keep the Chinkiang vinegar for the final stage of combining, and plate promptly once it is mixed in.
+- **Vinegar taste is faint and the pork fat feels heavy**: the vinegar went in too early and was stirred for too long. Following [acid in seasoning](/principles/acid/), add the Chinkiang vinegar at the very end, when you toss everything together, and plate promptly once it is mixed in.

@@ -33,7 +33,7 @@ translated: 2026-10-02
 
 *Yaki gyoza* are Japanese home-style pan-fried dumplings: thin wrappers filled with pork and cabbage, fried golden on the bottom and steamed through on top. The cabbage is tossed with salt and squeezed, which cuts the free water that would seep out after wrapping. The pork is mixed until sticky so it can hold the chopped vegetables together (see [salt](/principles/salt/)).
 
-The water in the pan sets two stages. When you add water and cover, steam helps the wrapper and filling cook through (see [heat transfer](/principles/heat-transfer/)). After you uncover and cook the water off, the bottom can lose moisture again and fry into a crisp crust. If you plate before the water is gone, even a well-fried bottom gets steamed soft.
+The water in the pan does two jobs in turn. When you add water and cover, steam helps the wrapper and filling cook through (see [heat transfer](/principles/heat-transfer/)). After you uncover and cook the water off, the bottom can lose moisture again and fry into a crisp crust. If you plate before the water is gone, even a well-fried bottom gets steamed soft.
 
 ## Steps
 
@@ -48,5 +48,5 @@ The water in the pan sets two stages. When you add water and cover, steam helps 
 ## Key points
 
 - **Filling weeps, wrapper bottoms wet and sticky**: the cabbage wasn't squeezed, or the wrapped dumplings sat too long. Salt the cabbage until soft and then squeeze it, and fry the dumplings in batches right after wrapping. See [salt](/principles/salt/).
-- **Burnt bottom but the filling is raw**: only the bottom was fried, and there wasn't enough steaming time or water under the lid. Do the frying and steaming as separate stages, and check the temperature in the centre of the filling before you dry off the pan. See [heat transfer](/principles/heat-transfer/).
+- **Burnt bottom but the filling is raw**: only the bottom was fried, and there wasn't enough steaming time or water under the lid. Fry and steam as two separate steps, and take the temperature in the centre of the filling before you dry off the pan. See [heat transfer](/principles/heat-transfer/).
 - **Cooked through but no crisp bottom**: there is still standing water in the pan, or too many dumplings were packed in at once. Uncover and cook off all the water, then let the bottoms touch the hot oil, and plate promptly once they've coloured. See [the Maillard reaction](/principles/maillard-reaction/).

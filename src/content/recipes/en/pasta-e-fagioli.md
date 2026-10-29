@@ -38,7 +38,7 @@ The soup's thickness comes from two sources. Crushed cooked beans carry fine sol
 3. Add the tomatoes and their juice, reduce to low heat and cook about 20 minutes, until the tomato is soft and the juice slightly thick. Do not let the bottom of the pot burn dry; add a small spoonful of bean cooking water if needed.
 4. Add the drained cooked beans, stir gently and cook about 5 minutes, then pour in the beef stock, cover and bring to a gentle simmer. Scoop out about a small bowl of beans, mash to a purée, return it to the pot and season with salt and black pepper.
 5. Add the short pasta to the soup, stirring up from the bottom often and gently. First add the reserved hot water, adjusting the soup so there is enough liquid to cook the pasta, and cook until the pasta is tender but still has bite and the soup flows slowly. If it is still too thick, keep adding hot water a little at a time.
-6. Stir in the butter and cheese, turn off the heat, rest about 10 minutes and ladle into bowls. The meat can be taken off the ribs and returned to the soup, but not the bones. Check the thickness again before eating.
+6. Stir in the butter and cheese, turn off the heat, rest about 10 minutes and ladle into bowls. The meat can be taken off the ribs and returned to the soup, but not the bones.
 
 ## Key points
 

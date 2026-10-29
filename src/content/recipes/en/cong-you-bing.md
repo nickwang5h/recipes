@@ -39,4 +39,4 @@ The dough is made with hot water, so some of the starch [gelatinizes](/principle
 
 - **Won't roll out and keeps springing back**: the [gluten](/principles/gluten/) is still tight. Cover and rest another 10 minutes, until the dough spreads with a light push, then continue rolling; pulling it hard tears the skin.
 - **No layers, like one thick flatbread**: the oil roux was missed in places, the roll was too tight, or it was pressed hard repeatedly at the end, so the layers stuck together. Roll thin gently along the [gluten](/principles/gluten/), and spread the oil roux to the edges.
-- **Burnt outside, wet and sticky inside**: the surface heats too fast before heat reaches the centre (see [heat transfer](/principles/heat-transfer/)). Turn to medium-low, cover and cook 1 minute more on each side, then check the centre.
+- **Burnt outside, wet and sticky inside**: the surface heats too fast before heat reaches the centre (see [heat transfer](/principles/heat-transfer/)). Turn to medium-low, cover and cook 1 minute more on each side, until the centre is no longer wet and sticky.

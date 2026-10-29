@@ -21,7 +21,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-In Yangzhou fried rice, the egg, shrimp and meat are all cut small and spread evenly, so every mouthful has a different texture. It uses luncheon meat, carrot and optional corn, so it is easy to make at home. Cold rice turns firm and dry on the surface after cooling, so it breaks apart easily in the wok (see the retrogradation in [starch gelatinization](/principles/starch-gelatinization/)).
+In Yangzhou fried rice, the egg, shrimp and meat are all cut small and spread evenly, so every mouthful has a different texture. The fillings are luncheon meat, carrot and optional corn, easy to get together at home. Cold rice turns firm and dry on the surface after cooling, so it breaks apart easily in the wok (see the retrogradation in [starch gelatinization](/principles/starch-gelatinization/)).
 
 To keep the rice grains separate, drain the fillings first and cook them in batches. If a lot of wet shrimp, wet vegetables and rice go into the wok at once, the heat goes into evaporating water first (see [heat transfer](/principles/heat-transfer/)). So cook the fillings through and take them out, then stir-fry the rice together at the end, and even a home stove can make dry rice.
 
