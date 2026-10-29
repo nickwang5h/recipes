@@ -68,19 +68,28 @@ self.addEventListener('fetch', (event) => {
 
 async function page(request) {
   const cache = await caches.open(PAGES);
-  try {
-    const response = await withTimeout(fetch(request), NETWORK_TIMEOUT);
+  const network = fetch(request).then((response) => {
     if (response.ok) cache.put(pageKey(request.url), response.clone());
     return response;
+  });
+  network.catch(() => {}); // a late failure after a cached answer is fine
+  try {
+    return await withTimeout(network, NETWORK_TIMEOUT);
   } catch {
-    // English pages fall back to the English offline page once it has been seen.
-    const english = new URL(request.url).pathname.startsWith('/en/');
-    return (
-      (await cache.match(pageKey(request.url))) ||
-      (english && (await cache.match(new URL('/en/offline/', self.location.origin).href))) ||
-      (await cache.match(OFFLINE)) ||
-      new Response(english ? 'Offline' : '离线中', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } })
-    );
+    // Slow is not offline: serve the saved copy if there is one, otherwise keep waiting for the network.
+    const saved = await cache.match(pageKey(request.url));
+    if (saved) return saved;
+    try {
+      return await network;
+    } catch {
+      // English pages fall back to the English offline page once it has been seen.
+      const english = new URL(request.url).pathname.startsWith('/en/');
+      return (
+        (english && (await cache.match(new URL('/en/offline/', self.location.origin).href))) ||
+        (await cache.match(OFFLINE)) ||
+        new Response(english ? 'Offline' : '离线中', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } })
+      );
+    }
   }
 }
 

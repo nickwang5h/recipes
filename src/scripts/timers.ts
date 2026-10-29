@@ -43,6 +43,9 @@ let dock: HTMLElement | null = null;
 let ticking: ReturnType<typeof setInterval> | undefined;
 let audio: AudioContext | undefined;
 let wake: WakeLockSentinel | null = null;
+// The dock's height as --dock-h, so phone layouts can keep their last lines clear of it.
+const sizer = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(([entry]) =>
+  document.documentElement.style.setProperty('--dock-h', `${Math.ceil(entry.borderBoxSize?.[0]?.blockSize ?? entry.contentRect.height)}px`));
 
 // ---------- Alarm ----------
 
@@ -101,8 +104,10 @@ async function holdScreen(on: boolean) {
 function render() {
   const now = Date.now();
   if (!timers.length) {
+    if (dock) sizer?.unobserve(dock);
     dock?.remove();
     dock = null;
+    document.documentElement.style.removeProperty('--dock-h');
     clearInterval(ticking);
     ticking = undefined;
     void holdScreen(false);
@@ -115,6 +120,7 @@ function render() {
     dock.setAttribute('role', 'region');
     dock.setAttribute('aria-label', say.dock);
     document.body.append(dock);
+    sizer?.observe(dock);
   }
   dock.replaceChildren(
     ...timers.map((timer) => {

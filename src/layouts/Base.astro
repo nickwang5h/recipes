@@ -143,6 +143,14 @@ const nav = NAV.map((item) => ({ href: url(item.path, lang), label: item.label[l
       new MutationObserver(markFavorites).observe(document.querySelector('main')!, { childList: true, subtree: true });
       markFavorites();
 
+      // Swipeable filter rows fade at the right edge until they are scrolled to the end (styled on phones only).
+      for (const row of document.querySelectorAll<HTMLElement>('.filters')) {
+        const update = () => row.classList.toggle('at-end', row.scrollLeft + row.clientWidth >= row.scrollWidth - 2);
+        row.addEventListener('scroll', update, { passive: true });
+        addEventListener('resize', update);
+        update();
+      }
+
       if (import.meta.env.PROD && 'serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(() => {});
       }
