@@ -27,7 +27,7 @@ interface Props {
 const lang = langOf(Astro.url);
 const other = lang === 'zh' ? 'en' : 'zh';
 const { title, description = SITE_DESCRIPTION[lang], image, type = 'website', narrow = false, twin = true } = Astro.props;
-const ogImage = new URL(image ? (await getImage({ src: image, width: 1200, format: 'jpg' })).src : '/og-default.png', Astro.site);
+const ogImage = new URL(image ? (await getImage({ src: image, width: 1200, format: 'jpg' })).src : lang === 'en' ? '/og-default-en.png' : '/og-default.png', Astro.site);
 const fullTitle = title ? `${title} · ${SITE_TITLE[lang]}` : SITE_TITLE[lang];
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const path = Astro.url.pathname;
@@ -77,6 +77,7 @@ const TABS = NAV.map((item, i) => ({ ...nav[i], id: item.path || 'today', icon: 
     <link rel="alternate" hreflang={HTML_LANG[lang]} href={canonical} />
     {twin && <link rel="alternate" hreflang={HTML_LANG[other]} href={new URL(otherPath, Astro.site)} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/icons/icon-192.png" sizes="192x192" type="image/png" />
     <link rel="manifest" href={lang === 'zh' ? '/manifest.webmanifest' : '/en/manifest.webmanifest'} />
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content={t.short} />

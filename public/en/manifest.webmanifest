@@ -16,7 +16,7 @@
   ],
   "shortcuts": [
     { "name": "Recipes", "url": "/en/recipes/", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] },
-    { "name": "Fridge", "url": "/en/fridge/", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] },
-    { "name": "The science", "url": "/en/principles/", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] }
+    { "name": "List", "url": "/en/list/", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Fridge", "url": "/en/fridge/", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] }
   ]
 }
