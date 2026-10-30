@@ -121,6 +121,16 @@ html.has-sheet body, html.is-cooking body { overflow: hidden; }
 .tonight-foot .text-btn { display: inline-flex; align-items: center; border: 1px solid var(--border); text-decoration: none; color: var(--text); }
 .tonight-need { font-size: 0.95rem; }
 
+/* The fridge is its own kind of block: kraft paper held up by a magnet, as on the fridge door. */
+.today-fridge { position: relative; padding: 1.4rem 1.4rem 1.2rem; background: var(--kraft); border-radius: 6px; box-shadow: 0 6px 16px rgb(60 40 20 / 0.12); }
+.today-fridge::before {
+  content: ""; position: absolute; top: -0.6rem; left: 50%; width: 1.35rem; height: 1.35rem; margin-left: -0.675rem;
+  border-radius: 50%; background: var(--primary); box-shadow: inset -3px -3px 0 rgb(0 0 0 / 0.18);
+}
+:root[data-theme="dark"] .today-fridge { box-shadow: none; }
+.today-fridge .today-have li { background: color-mix(in srgb, var(--bg) 70%, transparent); }
+.today-fridge-empty { border-color: color-mix(in srgb, var(--text) 25%, transparent); color: color-mix(in srgb, var(--text) 78%, transparent); }
+.today-fridge .today-sec-head a { color: var(--primary-strong); }
 .today-sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
 .today-sec-head h2 { margin: 0 0 0.75rem; font-size: 1.5rem; }
 .today-sec-head a { display: inline-flex; align-items: center; justify-content: flex-end; min-width: 2.75rem; min-height: 2.75rem; font-size: 0.95rem; }
@@ -134,7 +144,7 @@ html.has-sheet body, html.is-cooking body { overflow: hidden; }
 .today-matches .card-summary { display: none; }
 .card p.today-ready { color: var(--muted); font-size: 0.85rem; }
 
-.today-week { margin-top: 3rem; }
+.today-week { margin-top: 3.5rem; padding-top: 2rem; border-top: 2px solid var(--border); }
 .week { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 0.6rem; }
 .day { display: flex; flex-direction: column; min-height: 11rem; padding: 0.6rem 0.7rem 0.75rem; border: 1px solid var(--border); border-top: 3px solid var(--border); border-radius: 8px; background: var(--paper); }
 .day.is-today { border-top-color: var(--primary); }
@@ -193,3 +203,56 @@ html.has-sheet body, html.is-cooking body { overflow: hidden; }
 @media (min-width: 900px) { .lib-why { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 2.5rem; } }
 .lib-side { display: grid; gap: 2.5rem; }
 .lib-why .principles-card { margin-bottom: 0; }
+
+/* ---------- Back to the top: a small round button at the bottom right, only while scrolling up ---------- */
+
+.float-actions { position: fixed; z-index: 39; right: max(1rem, calc((100vw - 80rem) / 2)); bottom: 1.5rem; display: flex; gap: 0.5rem; }
+.to-top {
+  display: grid; place-items: center; width: 44px; height: 44px; padding: 0;
+  border: 1px solid var(--border); border-radius: 50%; background: var(--paper); color: var(--text);
+  box-shadow: 0 4px 14px -6px rgb(60 40 20 / 0.35); cursor: pointer;
+}
+.to-top:hover { border-color: var(--primary); color: var(--primary); }
+.to-top svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+@media print { .float-actions { display: none !important; } }
+
+/* ---------- 目录 on the principle pages: a column beside the text on wide screens, a drawer on phones ---------- */
+
+.toc-open {
+  display: none; align-items: center; gap: 0.45rem; margin-top: 1rem;
+}
+.toc-open svg, .toc-float svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.toc-float {
+  display: inline-flex; align-items: center; gap: 0.4rem; height: 44px; padding: 0 1rem; border: 1px solid var(--border); border-radius: 999px;
+  background: var(--paper); color: var(--text); font: inherit; font-size: 0.95rem; box-shadow: 0 4px 14px -6px rgb(60 40 20 / 0.35); cursor: pointer;
+}
+.toc-list { list-style: none; margin: 0; padding: 0; counter-reset: toc; }
+.toc-list a {
+  display: block; padding: 0.35rem 0 0.35rem 0.85rem; border-left: 2px solid var(--border);
+  color: var(--muted); text-decoration: none; font-size: 0.92rem; line-height: 1.45;
+}
+.toc-list a:hover { color: var(--text); }
+.toc-list a[aria-current="true"] { border-left-color: var(--primary); color: var(--text); font-weight: 500; }
+.toc-title { margin: 0 0 0.5rem; font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; color: var(--muted); }
+@media (min-width: 900px) {
+  .principle-body { display: grid; grid-template-columns: minmax(0, var(--measure)) 13rem; gap: 3.5rem; align-items: start; }
+  .principle-main { min-width: 0; }
+  .toc { position: sticky; top: 1.5rem; max-height: calc(100vh - 3rem); overflow-y: auto; }
+}
+@media (max-width: 899px) {
+  .toc { display: none; }
+  .toc-open { display: inline-flex; }
+}
+
+/* The side drawer (目录 on phones). */
+.sheet-side {
+  top: 0; bottom: 0; left: auto; right: 0; width: min(84vw, 22rem); max-height: none; border-radius: 18px 0 0 18px;
+  padding-top: env(safe-area-inset-top); transform: translateX(100%);
+}
+.sheet-side.is-on { transform: none; }
+.sheet-side .sheet-grab { display: none; }
+.sheet-side .toc-list a { min-height: 44px; display: flex; align-items: center; font-size: 1rem; }
+@media (min-width: 761px) {
+  .sheet-side { top: 0; bottom: 0; left: auto; right: 0; width: 22rem; height: auto; max-height: none; padding: 0.5rem 0.5rem 0.75rem; opacity: 1; transform: translateX(100%); }
+  .sheet-side.is-on { transform: none; }
+}

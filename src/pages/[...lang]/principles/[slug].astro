@@ -24,15 +24,22 @@ users.sort(
 );
 const twin = lang === 'en' || !!(await entry('principles', principle.id, 'en'));
 const T = {
-  zh: { science: '原理', related: '相关原理', users: '用到它的菜', more: (n: number) => `还有 ${n} 道菜也用到它`, updated: '更新于' },
-  en: { science: 'The science', related: 'Related science', users: 'Recipes that use it', more: (n: number) => `${dishCount(n, 'en')} more use it`, updated: 'Updated' },
+  zh: { science: '原理', related: '相关原理', users: '用到它的菜', more: (n: number) => `还有 ${n} 道菜也用到它`, updated: '更新于', toc: '目录', sources: '参考来源' },
+  en: { science: 'The science', related: 'Related science', users: 'Recipes that use it', more: (n: number) => `${dishCount(n, 'en')} more use it`, updated: 'Updated', toc: 'Contents', sources: 'Sources' },
 } satisfies Both<Record<string, unknown>>;
 const t = T[lang];
 const cuisineById = new Map(cuisines.map((c) => [c.id, c]));
 // Cards for dishes that hinge on this principle; a compact list for the rest.
 const primary = users.filter((r) => r.data.principles[0].id === principle.id);
 const secondary = users.filter((r) => r.data.principles[0].id !== principle.id);
-const { Content } = await render(principle);
+const { Content, headings } = await render(principle);
+// 目录: the article's own sections, then the related principles and the dishes that use it.
+const toc = [
+  ...headings.filter((h) => h.depth === 2).map((h) => ({ id: h.slug, text: h.text })),
+  ...(related.length ? [{ id: 'related', text: t.related }] : []),
+  ...(users.length ? [{ id: 'used-in', text: t.users }] : []),
+];
+const tocIcon = '<path d="M4 6h16M4 12h16M4 18h10" />';
 ---
 
 <Base title={title} description={summary} type="article" twin={twin}>
@@ -45,8 +52,11 @@ const { Content } = await render(principle);
       <h1>{title}</h1>
       {aliases.length > 0 && <p class="original">{aliases.join(' · ')}</p>}
       <p class="lede">{summary}</p>
+      {toc.length > 2 && <button class="text-btn toc-open" type="button" data-toc-open><svg viewBox="0 0 24 24" aria-hidden="true" set:html={tocIcon} />{t.toc}</button>}
     </header>
 
+    <div class="principle-body">
+    <div class="principle-main">
     <Diagram slug={principle.id} />
 
     <div class="prose">
@@ -55,7 +65,7 @@ const { Content } = await render(principle);
 
     {related.length > 0 && (
       <section>
-        <h2 class="section-title">{t.related}</h2>
+        <h2 class="section-title" id="related">{t.related}</h2>
         <ul class="chips">
           {related.map((p) => <li><a class="chip" href={url(`principles/${p.id}`, lang)}>{p.data.title}</a></li>)}
         </ul>
@@ -64,7 +74,7 @@ const { Content } = await render(principle);
 
     {users.length > 0 && (
       <section>
-        <h2 class="section-title">{t.users}</h2>
+        <h2 class="section-title" id="used-in">{t.users}</h2>
         {primary.length > 0 && (
           <ul class="card-grid">
             {primary.map((recipe) => <li><RecipeCard recipe={recipe} cuisine={cuisineById.get(recipe.data.cuisine.id)!} /></li>)}
@@ -85,5 +95,62 @@ const { Content } = await render(principle);
       <SourceList sources={sources} />
       <p style="color: var(--muted); font-size: 0.9rem">{t.updated} {formatDate(updated, lang)}</p>
     </div>
+    </div>
+    {toc.length > 2 && (
+      <nav class="toc" aria-label={t.toc} data-toc data-title={t.toc}>
+        <p class="toc-title">{t.toc}</p>
+        <ol class="toc-list">
+          {toc.map((h) => <li><a href={`#${h.id}`}>{h.text}</a></li>)}
+        </ol>
+      </nav>
+    )}
+    </div>
   </article>
+
+  <script>
+    import { openSheet, popLayer } from '../../../scripts/phone';
+
+    // 目录: the section being read is marked; on narrow screens the list opens as a drawer from the side.
+    const toc = document.querySelector<HTMLElement>('[data-toc]');
+    if (toc) {
+      const links = [...toc.querySelectorAll<HTMLAnchorElement>('a')];
+      const targets = links.map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1)))).filter((el): el is HTMLElement => !!el);
+      let current = '';
+      const mark = () => {
+        // The last section whose heading has passed a quarter of the way down the screen.
+        const line = innerHeight / 4;
+        const passed = targets.filter((el) => el.getBoundingClientRect().top <= line);
+        current = (passed.at(-1) ?? targets[0])?.id ?? '';
+        for (const a of document.querySelectorAll<HTMLAnchorElement>('.toc-list a')) {
+          if (decodeURIComponent(a.hash.slice(1)) === current) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        }
+      };
+      addEventListener('scroll', mark, { passive: true });
+      mark();
+
+      const open = () => {
+        let go: HTMLElement | undefined;
+        const sheet = openSheet({ title: toc.dataset.title!, side: true, className: 'sheet-toc', onClose: () => setTimeout(() => go?.scrollIntoView({ block: 'start' }), 0) });
+        const list = toc.querySelector('ol')!.cloneNode(true) as HTMLElement;
+        sheet.body.append(list);
+        mark();
+        list.addEventListener('click', (event) => {
+          const a = (event.target as HTMLElement).closest<HTMLAnchorElement>('a');
+          if (!a) return;
+          event.preventDefault();
+          go = document.getElementById(decodeURIComponent(a.hash.slice(1))) ?? undefined;
+          popLayer();
+        });
+      };
+      document.querySelector('[data-toc-open]')?.addEventListener('click', open);
+      // Mid-page, the same 目录 sits beside the back-to-top button when you scroll back up.
+      if (matchMedia('(max-width: 899px)').matches) {
+        const button = document.querySelector<HTMLButtonElement>('[data-toc-open]')!.cloneNode(true) as HTMLButtonElement;
+        button.className = 'toc-float';
+        button.addEventListener('click', open);
+        document.querySelector('[data-float]')?.prepend(button);
+      }
+    }
+  </script>
 </Base>

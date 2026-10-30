@@ -75,14 +75,17 @@
   .tonight-acts { display: grid; grid-template-columns: 1.25fr 1fr; }
   .tonight-acts > * { justify-content: center; min-height: 48px; }
   /* What the fridge can make: a row of cards to swipe through. */
+  .today-fridge { padding: 1.25rem 1rem 1rem; }
   .card-grid.today-matches {
     display: grid; grid-auto-flow: column; grid-auto-columns: 152px; grid-template-columns: none; gap: 10px; overflow-x: auto; scrollbar-width: none;
-    margin: 0 calc(-1 * var(--gutter)); padding: 4px var(--gutter) 8px; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter);
+    margin: 0 -1rem; padding: 4px 1rem 8px; scroll-snap-type: x mandatory; scroll-padding-inline: 1rem;
   }
   .today-matches::-webkit-scrollbar { display: none; }
   .today-matches > li { scroll-snap-align: start; }
   .today-matches > li:nth-child(n + 7) { display: block; }
-  .today-week { margin-top: 2.25rem; }
+  .today-week { margin-top: 2.5rem; padding-top: 1.5rem; }
+  /* Above the bottom bar and a running timer. */
+  .float-actions { right: 12px; bottom: calc(var(--bar-h, 0px) + var(--dock-space, 0px) + 12px + env(safe-area-inset-bottom)); }
   /* The week is a strip of seven days; the one tapped opens underneath. */
   .week { gap: 4px; }
   .day { display: contents; }

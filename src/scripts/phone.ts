@@ -83,6 +83,8 @@ interface SheetOptions {
   title: string;
   /** Full screen, for the draw. */
   full?: boolean;
+  /** From the right-hand side, for a table of contents; a swipe back to the right closes it. */
+  side?: boolean;
   /** A text button in place of the ×, e.g. 好 on the fridge. */
   done?: string;
   /** Runs once the sheet is gone, however it was closed. */
@@ -91,12 +93,12 @@ interface SheetOptions {
 }
 
 /** A sheet from the bottom of the screen; the scrim, the × and the back button close it. */
-export function openSheet({ title, full, done, onClose, className }: SheetOptions): Sheet {
+export function openSheet({ title, full, side, done, onClose, className }: SheetOptions): Sheet {
   const opener = document.activeElement as HTMLElement | null;
   const scrim = document.createElement('div');
   scrim.className = 'sheet-scrim';
   const root = document.createElement('div');
-  root.className = `sheet${full ? ' sheet-full' : ''}${className ? ` ${className}` : ''}`;
+  root.className = `sheet${full ? ' sheet-full' : ''}${side ? ' sheet-side' : ''}${className ? ` ${className}` : ''}`;
   root.setAttribute('role', 'dialog');
   root.setAttribute('aria-modal', 'true');
   root.setAttribute('aria-label', title);
@@ -129,6 +131,14 @@ export function openSheet({ title, full, done, onClose, className }: SheetOption
   });
   close.addEventListener('click', popLayer);
   scrim.addEventListener('click', popLayer);
+  if (side) {
+    let x0: number | null = null;
+    root.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', (e) => {
+      if (x0 !== null && e.changedTouches[0].clientX - x0 > 60) popLayer();
+      x0 = null;
+    });
+  }
   root.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       e.stopPropagation();

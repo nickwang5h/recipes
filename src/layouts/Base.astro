@@ -42,8 +42,8 @@ const ownFonts = (fonts.pages[path] ?? [])
   .map((f) => `@font-face{font-family:"${f.family}";src:url('${f.src}') format('woff2');font-style:normal;font-weight:${f.weight};font-display:fallback;unicode-range:${f.range}}`)
   .join('');
 const T = {
-  zh: { skip: '跳到正文', nav: '主导航', search: '搜索', theme: '切换深浅色', tagline: '家常菜和背后的道理', switchTo: 'English', switchLabel: 'Read this page in English', short: 'Ki饭' },
-  en: { skip: 'Skip to content', nav: 'Main', search: 'Search', theme: 'Switch light or dark', tagline: 'Home cooking and the reasons behind it', switchTo: '中文', switchLabel: '中文版', short: "Kiki's" },
+  zh: { skip: '跳到正文', nav: '主导航', search: '搜索', theme: '切换深浅色', tagline: '家常菜和背后的道理', switchTo: 'English', switchLabel: 'Read this page in English', short: 'Ki饭', top: '回到顶部' },
+  en: { skip: 'Skip to content', nav: 'Main', search: 'Search', theme: 'Switch light or dark', tagline: 'Home cooking and the reasons behind it', switchTo: '中文', switchLabel: '中文版', short: "Kiki's", top: 'Back to top' },
 } satisfies Both<Record<string, string>>;
 const t = T[lang];
 // Four places, the same on every screen: today (the home page, with the fridge and the week's menu
@@ -126,7 +126,7 @@ const TABS = NAV.map((item, i) => ({ ...nav[i], id: item.path || 'today', icon: 
         </nav>
       </div>
     </header>
-    <main id="main">
+    <main id="main" tabindex="-1">
       <div class="wrap">
         <slot />
       </div>
@@ -141,6 +141,12 @@ const TABS = NAV.map((item, i) => ({ ...nav[i], id: item.path || 'today', icon: 
         </span>
       </div>
     </footer>
+    {/* Back to the top of a long page: shows when you scroll back up, a couple of screens down. */}
+    <div class="float-actions" hidden data-float>
+      <button class="to-top" type="button" aria-label={t.top} data-to-top>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V6M6 11l6-6 6 6" /></svg>
+      </button>
+    </div>
     {!recipePage && (
       <nav class="tabbar" aria-label={t.nav}>
         {TABS.map((tab) => (
@@ -178,6 +184,33 @@ const TABS = NAV.map((item, i) => ({ ...nav[i], id: item.path || 'today', icon: 
       };
       subscribe(renderListCount);
       renderListCount();
+
+      // Going home: the name, or the place you are in (the current tab or nav link) tapped again,
+      // takes you to the top of this page instead of reloading it.
+      const toTop = () => scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      for (const link of document.querySelectorAll<HTMLAnchorElement>('a.brand, .tabbar a, .site-nav a')) {
+        link.addEventListener('click', (event) => {
+          if (link.pathname !== location.pathname || event.metaKey || event.ctrlKey || event.shiftKey) return;
+          event.preventDefault();
+          toTop();
+        });
+      }
+      // The back-to-top button: only while scrolling back up, two screens or more down the page.
+      // (A page can add its own button beside it, as the principle pages do with 目录.)
+      const float = document.querySelector<HTMLElement>('[data-float]')!;
+      let lastY = scrollY;
+      addEventListener('scroll', () => {
+        const y = scrollY;
+        if (y < innerHeight * 2) float.hidden = true;
+        else if (y < lastY - 4) float.hidden = false;
+        else if (y > lastY + 4) float.hidden = true;
+        lastY = y;
+      }, { passive: true });
+      document.querySelector('[data-to-top]')!.addEventListener('click', () => {
+        toTop();
+        float.hidden = true;
+        document.querySelector<HTMLElement>('main')?.focus({ preventScroll: true });
+      });
 
       // Mark the family's 常做 dishes on every recipe card, server- or client-rendered.
       // Loading the store here also keeps family sync running on every page.

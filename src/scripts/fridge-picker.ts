@@ -47,14 +47,20 @@ export function mountPicker(host: HTMLElement, data: FridgeData): () => void {
       return b;
     }));
     empty.hidden = mine.length > 0;
+    // A chip stays where it was tapped and shows whether it's in the fridge; tapping again takes it out.
+    const toggle = (id: string) => {
+      const b = chip(id);
+      b.dataset.toggle = '';
+      b.setAttribute('aria-pressed', String(mine.includes(id)));
+      return b;
+    };
     const hits = searchIngredients(Object.entries(data.ingredients).map(([id, [, names]]) => ({ id, names })), input.value, 8);
-    suggest.replaceChildren(...hits.map((h) => chip(h.id)));
+    suggest.replaceChildren(...hits.map((h) => toggle(h.id)));
     const kinds = data.kinds.map((k, n) => {
-      const left = k.ids.filter((id) => !mine.includes(id));
-      if (!left.length) return null;
-      const shown = opened.has(n) ? left : left.slice(0, FIRST);
-      const cloud = el('div', { className: 'pick-cloud' }, ...shown.map((id) => chip(id)));
-      if (shown.length < left.length) {
+      const all = k.ids;
+      const shown = opened.has(n) ? all : all.slice(0, FIRST);
+      const cloud = el('div', { className: 'pick-cloud' }, ...shown.map(toggle));
+      if (shown.length < all.length) {
         const more = el('button', { type: 'button', className: 'chip pick-more', textContent: words.more });
         more.dataset.kind = String(n);
         cloud.append(more);
@@ -68,7 +74,7 @@ export function mountPicker(host: HTMLElement, data: FridgeData): () => void {
       b.setAttribute('aria-pressed', String(get('staple-off:' + id) !== true));
       return b;
     }));
-    groups.replaceChildren(...kinds.filter((k): k is HTMLElement => !!k), el('section', {}, el('h3', { textContent: words.staples }), staples));
+    groups.replaceChildren(...kinds, el('section', {}, el('h3', { textContent: words.staples }), staples));
   };
 
   host.addEventListener('click', (event) => {
@@ -82,13 +88,7 @@ export function mountPicker(host: HTMLElement, data: FridgeData): () => void {
     if (!id) return;
     if (b.dataset.staple !== undefined) set('staple-off:' + id, get('staple-off:' + id) === true ? null : true);
     else if (b.dataset.out !== undefined) set('have:' + id, null);
-    else {
-      set('have:' + id, true);
-      if (input.value) {
-        input.value = '';
-        input.focus();
-      }
-    }
+    else set('have:' + id, b.getAttribute('aria-pressed') === 'true' ? null : true);
   });
   input.addEventListener('input', render);
   input.addEventListener('keydown', (event) => {
