@@ -10,7 +10,7 @@ const T = {
 const t = T[langOf(Astro.url)];
 ---
 
-<aside class="kofi-after" aria-label={t.label} data-kofi-after>
+<aside class="kofi-after" aria-label={t.label} data-kofi-after hidden>
   <div class="kofi-art" aria-hidden="true"><Dumpling /></div>
   <p class="kofi-line">{t.line}</p>
   <div class="kofi-row">
@@ -20,28 +20,26 @@ const t = T[langOf(Astro.url)];
 </aside>
 
 <script>
+  // At the very end of the page, and only once a session: the first time a recipe is cooked through
+  // (every step ticked, here or in cooking mode). The line at the end of cooking mode follows the same rule.
   const box = document.querySelector<HTMLElement>('[data-kofi-after]');
-  if (box) {
-    // Steps come from Markdown, so the line moves here: right after the steps, before 要点.
-    const headings = [...document.querySelectorAll<HTMLElement>('.recipe-content h2')];
-    const steps = headings.findIndex((h) => ['步骤', 'Steps'].includes(h.textContent?.trim() ?? ''));
-    if (steps >= 0) headings[steps + 1]?.before(box);
-
-    // The dumpling steams once per session, the first time most of the line is on screen.
-    const firstTime = () => {
-      try {
-        if (sessionStorage.getItem('recipes:kofi-played')) return false;
-        sessionStorage.setItem('recipes:kofi-played', '1');
-      } catch {}
-      return true;
-    };
+  const KEY = 'recipes:kofi-shown';
+  const shown = () => {
+    try { return sessionStorage.getItem(KEY) === '1'; } catch { return false; }
+  };
+  document.addEventListener('recipe:cooked', () => {
+    if (!box || shown()) return;
+    try { sessionStorage.setItem(KEY, '1'); } catch {}
+    box.hidden = false;
+    for (const line of document.querySelectorAll<HTMLElement>('[data-kofi-cook]')) line.hidden = false;
+    // The dumpling steams once, the first time most of the line is on screen.
     if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
       const io = new IntersectionObserver((entries) => {
         if (!entries.some((e) => e.intersectionRatio >= 0.6)) return;
         io.disconnect();
-        if (firstTime()) box.classList.add('is-play');
+        box.classList.add('is-play');
       }, { threshold: [0.6] });
       io.observe(box);
     }
-  }
+  });
 </script>

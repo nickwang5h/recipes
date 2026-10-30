@@ -115,7 +115,6 @@ const ld = recipeLd({
           <p class="cat-note-title">{t.served}</p>
           <p>{t.servedText}</p>
         </CatNote>
-        <KofiAfter />
         <NutritionPanel recipe={recipe} />
         <SourceList sources={sources} />
         <p class="meta" style="color: var(--muted); font-size: 0.9rem">{t.updated} {formatDate(updated, lang)}</p>
@@ -130,6 +129,7 @@ const ld = recipeLd({
         </ul>
       </section>
     )}
+    <KofiAfter />
   </article>
   <script>
     // Inside the site, ‹ goes back to the page the recipe was opened from; from outside, to the recipe list.

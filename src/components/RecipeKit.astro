@@ -109,7 +109,7 @@ const words = { step: t.step, next: t.next, done: t.done, resume: t.resume, shee
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.1A4.4 4.4 0 0 1 12 7.1a4.4 4.4 0 0 1 7.5 2.8C19.5 15.4 12 20 12 20Z" /></svg>
       <span>{t.fav}</span>
     </button>
-    <KofiButton />
+    <p class="cook-kofi" data-kofi-cook hidden><KofiButton /></p>
   </div>
   <div class="cook-nav">
     <button class="cook-prev" type="button" data-cook-prev>{t.prev}</button>
@@ -213,9 +213,12 @@ const words = { step: t.step, next: t.next, done: t.done, resume: t.resume, shee
       });
       box.addEventListener('change', () => {
         li.classList.toggle('step-done', box.checked);
+        const before = state.steps.length;
         state.steps = stepBoxes.flatMap((b, j) => (b.checked ? [j] : []));
         renderServed();
         save();
+        // Just cooked through: KofiAfter.astro decides whether the dumpling shows.
+        if (before < stepBoxes.length && state.steps.length === stepBoxes.length) document.dispatchEvent(new Event('recipe:cooked'));
       });
       return box;
     });
