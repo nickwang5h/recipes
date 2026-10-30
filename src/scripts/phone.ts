@@ -36,7 +36,13 @@ function isolate() {
   }
 }
 
+// While a layer is open the page doesn't scroll, and closing it must not put the page back where it was
+// when the layer opened (cooking mode returns you to the step you reached; 目录 to the section you picked).
+const restore = () => { history.scrollRestoration = 'auto'; };
+addEventListener('pagehide', restore);
+
 export function pushLayer(el: HTMLElement, close: () => void) {
+  history.scrollRestoration = 'manual';
   stack.push({ el, close });
   history.pushState({ layer: stack.length }, '');
   isolate();
@@ -57,6 +63,7 @@ addEventListener('popstate', () => {
   if (want > stack.length) return history.go(stack.length - want);
   while (stack.length > want) stack.pop()!.close();
   isolate();
+  if (!stack.length) setTimeout(restore, 0);
 });
 // A reload inside a layer leaves its entry behind with nothing open.
 if ((history.state as { layer?: number } | null)?.layer) history.replaceState(null, '');

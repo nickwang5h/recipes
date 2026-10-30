@@ -475,6 +475,7 @@ const words = { step: t.step, next: t.next, done: t.done, resume: t.resume, shee
       const target = done.hidden ? items[at] : document.querySelector<HTMLElement>('[data-served]:not([hidden])') ?? items[at];
       target.scrollIntoView({ block: 'center' });
       starts[0]?.focus({ preventScroll: true });
+      document.dispatchEvent(new Event('cook:closed'));
     };
 
     const open = () => {

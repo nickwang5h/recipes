@@ -5,6 +5,8 @@ import Base from '../../../layouts/Base.astro';
 import Cover from '../../../components/Cover.astro';
 import CatNote from '../../../components/CatNote.astro';
 import serveCat from '../../../assets/cats/serve.png';
+import logoCat from '../../../assets/cats/logo.png';
+import { Image } from 'astro:assets';
 import RecipeMine from '../../../components/RecipeMine.astro';
 import RecipeCard from '../../../components/RecipeCard.astro';
 import CuisineTag from '../../../components/CuisineTag.astro';
@@ -29,8 +31,8 @@ const principles = await resolve(recipe.data.principles, lang);
 const { Content } = await render(recipe);
 const twin = lang === 'en' || !!(await entry('recipes', recipe.id, 'en'));
 const T = {
-  zh: { principles: '用到的原理', quick: '快手', served: '开饭啦', servedText: '步骤都做完了，趁热吃。', updated: '更新于', related: '相关的菜', back: '返回', why: '为什么这样做' },
-  en: { principles: 'Science behind it', quick: 'Quick', served: 'Dinner’s ready', servedText: 'Every step is done. Eat it while it’s hot.', updated: 'Updated', related: 'Related recipes', back: 'Back', why: 'Why it works' },
+  zh: { principles: '用到的原理', quick: '快手', served: '开饭啦', servedText: '步骤都做完了，趁热吃。', updated: '更新于', related: '相关的菜', back: '返回', why: '为什么这样做', up: '菜谱', bar: '回到菜谱或首页' },
+  en: { principles: 'Science behind it', quick: 'Quick', served: 'Dinner’s ready', servedText: 'Every step is done. Eat it while it’s hot.', updated: 'Updated', related: 'Related recipes', back: 'Back', why: 'Why it works', up: 'Recipes', bar: 'Back to recipes or home' },
 } satisfies Both<Record<string, string>>;
 const t = T[lang];
 
@@ -69,6 +71,14 @@ const ld = recipeLd({
 <Base title={title} description={summary} image={recipe.data.cover} type="article" twin={twin}>
   <script type="application/ld+json" slot="head" is:inline set:html={JSON.stringify(ld)} />
   <article>
+    {/* Phones, mid-page: scrolling back up (or leaving cooking mode) brings a narrow bar with the two
+        ways out, back to the recipes and home. It hides again as you read on. */}
+    <nav class="recipe-topbar" aria-label={t.bar} hidden data-topbar>
+      <a class="topbar-back" href={url('recipes', lang)} data-back>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>{t.up}
+      </a>
+      <a class="topbar-home" href={url('', lang)}><Image src={logoCat} alt="" width={56} height={56} loading="lazy" />{SITE_TITLE[lang]}</a>
+    </nav>
     {/* Phones: back to wherever the recipe was opened from. */}
     <a class="back-btn" href={url('recipes', lang)} aria-label={t.back} data-back>
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
@@ -123,14 +133,32 @@ const ld = recipeLd({
   </article>
   <script>
     // Inside the site, ‹ goes back to the page the recipe was opened from; from outside, to the recipe list.
-    const back = document.querySelector<HTMLAnchorElement>('[data-back]');
-    back?.addEventListener('click', (event) => {
+    for (const back of document.querySelectorAll<HTMLAnchorElement>('[data-back]')) back.addEventListener('click', (event) => {
       let fromHere = false;
       try { fromHere = new URL(document.referrer).origin === location.origin; } catch {}
       if (fromHere && history.length > 1) {
         event.preventDefault();
         history.back();
       }
+    });
+
+    const bar = document.querySelector<HTMLElement>('[data-topbar]')!;
+    let lastY = scrollY;
+    // The jump back to the step after cooking mode isn't reading on; the bar stays for a moment.
+    let holdUntil = 0;
+    addEventListener('scroll', () => {
+      const y = scrollY;
+      if (performance.now() < holdUntil) bar.hidden = y < 120;
+      else if (y < 120) bar.hidden = true;
+      else if (y < lastY - 4) bar.hidden = false;
+      else if (y > lastY + 4) bar.hidden = true;
+      lastY = y;
+    }, { passive: true });
+    // Out of cooking mode, mid-page: the way out is there at once.
+    document.addEventListener('cook:closed', () => {
+      holdUntil = performance.now() + 1000;
+      lastY = scrollY;
+      bar.hidden = scrollY < 120;
     });
   </script>
 </Base>
