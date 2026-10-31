@@ -93,9 +93,9 @@ const inSeason = Object.fromEntries(
       <input type="search" name="q" placeholder={t.placeholder} aria-label={t.search} autocomplete="off" data-q />
     </form>
     <nav class="lib-links" aria-label={t.ways}>
-      <a href={url('cuisines', lang)}>{t.cuisines}</a>
-      <a href={url('principles', lang)}>{t.principles}</a>
-      <a href={url('fridge', lang)} data-fridge-sheet data-title={t.fridgeTitle} data-ok={t.ok}>{t.fridge}</a>
+      <a href={url('cuisines', lang)}><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M3.5 12h17M12 3.5c2.6 2.8 2.6 14.2 0 17M12 3.5c-2.6 2.8-2.6 14.2 0 17" /></svg>{t.cuisines}</a>
+      <a href={url('principles', lang)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 3.5h5M10.5 3.5v5.2L5.2 18.2a1.6 1.6 0 0 0 1.4 2.3h10.8a1.6 1.6 0 0 0 1.4-2.3L13.5 8.7V3.5" /><path d="M7.6 14.5h8.8" /></svg>{t.principles}</a>
+      <a href={url('fridge', lang)} data-fridge-sheet data-title={t.fridgeTitle} data-ok={t.ok}><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2" /><path d="M6 10h12M9 6v2M9 13v3" /></svg>{t.fridge}</a>
     </nav>
   </div>
   <div class="lib-search" data-search-wrap hidden>

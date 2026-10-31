@@ -199,8 +199,14 @@ html.has-sheet body, html.is-cooking body { overflow: hidden; }
 
 .lib-top { margin: 0 0 1.5rem; }
 .lib-top .search-box input { max-width: 40rem; }
-.lib-links { display: flex; flex-wrap: wrap; column-gap: 1.25rem; margin-top: 0.35rem; }
-.lib-links a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 2.75rem; }
+.lib-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+/* The ways into cuisines, principles and the fridge: buttons with an icon, not a line of links. */
+.lib-links a {
+  display: inline-flex; align-items: center; gap: 0.45rem; min-height: 2.75rem; padding: 0 1rem 0 0.8rem;
+  border: 1px solid var(--border); border-radius: 999px; background: var(--paper); color: var(--text); text-decoration: none;
+}
+.lib-links a:hover { border-color: var(--primary); color: var(--text); background: var(--surface); }
+.lib-links svg { width: 20px; height: 20px; flex: none; fill: none; stroke: var(--primary); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .lib-search { margin-bottom: 2rem; }
 .lib-more-wrap { margin: 1.5rem 0 0; text-align: center; }
 .lib-why { display: grid; gap: 2rem; align-items: start; margin-top: 4rem; }
