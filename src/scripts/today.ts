@@ -19,7 +19,7 @@ const T = {
     date: (d: Date) => `${d.getMonth() + 1}月${d.getDate()}日 ${['周日', '周一', '周二', '周三', '周四', '周五', '周六'][d.getDay()]}`,
     swap: '换', remove: (t: string) => `从菜单去掉${t}`, need: (n: number) => `缺 ${n} 样`, ready: '都有', needList: (names: string) => `缺 ${names}`,
     listed: (n: number) => `缺 ${n} 样 · 已在清单`, toList: '加到清单', list: '清单', allSet: '都齐了', cook: '开做', added: (n: number) => `加了 ${n} 样到清单`,
-    more: (n: number) => `冰箱能做的 ${n} 道 →`,
+    more: (n: number) => `冰箱能做的 ${n} 道`,
     table: '配一桌', add: '加菜', nothing: '还没安排', fridge: '冰箱', ok: '好', offline: '没连上网，稍后再试',
   },
   en: {
@@ -27,7 +27,7 @@ const T = {
     date: (d: Date) => d.toLocaleDateString('en-CA', { weekday: 'long', month: 'long', day: 'numeric' }),
     swap: 'Swap', remove: (t: string) => `Take ${t} off the menu`, need: (n: number) => `${n} to buy`, ready: 'All in', needList: (names: string) => `Need ${names}`,
     listed: (n: number) => `${n} to buy · on the list`, toList: 'Add to list', list: 'List', allSet: 'All set', cook: 'Start', added: (n: number) => `Added ${n} to the list`,
-    more: (n: number) => `All ${n} dishes from the fridge →`,
+    more: (n: number) => `All ${n} dishes from the fridge`,
     table: 'Set a table', add: 'Add a dish', nothing: 'Nothing planned', fridge: 'Fridge', ok: 'Done', offline: 'No connection; try again in a moment',
   },
 }[lang];
