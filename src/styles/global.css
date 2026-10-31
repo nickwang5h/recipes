@@ -15,6 +15,9 @@ body {
   overflow-wrap: break-word;
 }
 
+/* No paragraph ends on a line with one character left on it. */
+p, li, dd, figcaption, blockquote { text-wrap: pretty; }
+
 h1, h2, h3 {
   font-family: var(--font-reading);
   font-weight: 400;
