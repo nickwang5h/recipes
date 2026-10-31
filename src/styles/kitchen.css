@@ -132,19 +132,23 @@ html.has-sheet body, html.is-cooking body { overflow: hidden; }
 :root[data-theme="dark"] .today-fridge { box-shadow: none; }
 .today-fridge .today-have li { background: color-mix(in srgb, var(--bg) 70%, transparent); }
 .today-fridge .today-fridge-empty { border-color: color-mix(in srgb, var(--text) 25%, transparent); color: color-mix(in srgb, var(--text) 78%, transparent); }
-.today-fridge .today-sec-head a { color: var(--primary-strong); }
 .today-fridge .cat-note-btn { border-color: var(--primary-strong); color: var(--primary-strong); }
 .today-fridge .cat-note-btn:hover { background: var(--primary-strong); color: var(--bg); }
-.today-sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
-.today-sec-head h2 { margin: 0 0 0.75rem; font-size: 1.5rem; }
-.today-sec-head a { display: inline-flex; align-items: center; justify-content: flex-end; min-width: 2.75rem; min-height: 2.75rem; font-size: 0.95rem; }
+.today-sec-head { margin: 0 0 0.75rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.today-sec-head h2 { margin: 0; font-size: 1.5rem; }
+.today-sec-head a {
+  display: inline-flex; align-items: center; justify-content: center; flex: none; min-height: 2.75rem; padding: 0 1rem;
+  border: 1px solid var(--border); border-radius: 999px; background: var(--paper); color: var(--text); text-decoration: none; font-size: 0.95rem;
+}
+.today-sec-head a:hover { border-color: var(--primary); color: var(--text); background: var(--surface); }
 .today-have { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin: 0 0 1rem; padding: 0; }
 .today-have:empty { display: none; }
 .today-have li { padding: 0.1rem 0.75rem; border-radius: 999px; background: var(--surface); font-size: 0.9rem; }
 .today-fridge-empty { padding: 1rem 1.1rem; border: 1px dashed var(--border); border-radius: var(--radius); color: var(--muted); }
 .today-fridge-empty p { margin: 0 0 0.4rem; }
 .today-matches { grid-template-columns: repeat(auto-fill, minmax(min(100%, 11rem), 1fr)); }
-.today-matches > li:nth-child(n + 7) { display: none; }
+.today-matches > li:nth-child(n + 5) { display: none; }
+.today-more { display: inline-flex; align-items: center; min-height: 2.75rem; margin-top: 0.5rem; color: var(--primary-strong); }
 .today-matches .card-summary { display: none; }
 .card p.today-ready { color: var(--muted); font-size: 0.85rem; }
 

@@ -19,6 +19,7 @@ const T = {
     date: (d: Date) => `${d.getMonth() + 1}月${d.getDate()}日 ${['周日', '周一', '周二', '周三', '周四', '周五', '周六'][d.getDay()]}`,
     swap: '换', remove: (t: string) => `从菜单去掉${t}`, need: (n: number) => `缺 ${n} 样`, ready: '都有', needList: (names: string) => `缺 ${names}`,
     listed: (n: number) => `缺 ${n} 样 · 已在清单`, toList: '加到清单', list: '清单', allSet: '都齐了', cook: '开做', added: (n: number) => `加了 ${n} 样到清单`,
+    more: (n: number) => `冰箱能做的 ${n} 道 →`,
     table: '配一桌', add: '加菜', nothing: '还没安排', fridge: '冰箱', ok: '好', offline: '没连上网，稍后再试',
   },
   en: {
@@ -26,6 +27,7 @@ const T = {
     date: (d: Date) => d.toLocaleDateString('en-CA', { weekday: 'long', month: 'long', day: 'numeric' }),
     swap: 'Swap', remove: (t: string) => `Take ${t} off the menu`, need: (n: number) => `${n} to buy`, ready: 'All in', needList: (names: string) => `Need ${names}`,
     listed: (n: number) => `${n} to buy · on the list`, toList: 'Add to list', list: 'List', allSet: 'All set', cook: 'Start', added: (n: number) => `Added ${n} to the list`,
+    more: (n: number) => `All ${n} dishes from the fridge →`,
     table: 'Set a table', add: 'Add a dish', nothing: 'Nothing planned', fridge: 'Fridge', ok: 'Done', offline: 'No connection; try again in a moment',
   },
 }[lang];
@@ -104,11 +106,15 @@ function render(data: SiteData) {
   $('[data-fridge-have]').replaceChildren(...stocked.map((id) => el('li', { textContent: name(id) })));
   $('[data-fridge-empty]').hidden = stocked.length > 0;
   const have = new Set(stocked);
-  const matches = stocked.length ? dishes
+  const close = stocked.length ? dishes
     .map((r) => ({ r, miss: missing(r, data), used: r.req.filter((id) => have.has(id)).length }))
     .filter((m) => m.used > 0 && m.miss.length <= 2)
-    .sort((a, b) => a.miss.length - b.miss.length || b.used - a.used || a.r.minutes - b.r.minutes)
-    .slice(0, 12) : [];
+    .sort((a, b) => a.miss.length - b.miss.length || b.used - a.used || a.r.minutes - b.r.minutes) : [];
+  const matches = close.slice(0, 12);
+  // Wide screens show four cards (phones a row of twelve to swipe); the rest are on the fridge page.
+  const more = $<HTMLAnchorElement>('[data-matches-more]');
+  more.hidden = close.length <= 4;
+  more.textContent = T.more(close.length);
   $('[data-matches]').replaceChildren(...matches.map(({ r, miss }) => el('li', {}, recipeCard(r, data.cuisines[r.cuisine],
     [el('p', { className: miss.length ? 'fridge-missing' : 'today-ready', textContent: miss.length ? T.needList(joinList(miss.map(name), lang)) : T.ready })]))));
 

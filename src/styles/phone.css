@@ -82,7 +82,7 @@
   }
   .today-matches::-webkit-scrollbar { display: none; }
   .today-matches > li { scroll-snap-align: start; }
-  .today-matches > li:nth-child(n + 7) { display: block; }
+  .today-matches > li:nth-child(n + 5) { display: block; }
   .today-week { margin-top: 2.5rem; padding-top: 1.5rem; }
   /* Above the bottom bar and a running timer. */
   .float-actions { right: 12px; bottom: calc(var(--bar-h, 0px) + var(--dock-space, 0px) + 12px + env(safe-area-inset-bottom)); }

@@ -12,13 +12,13 @@ const T = {
   zh: {
     title: '今天', tonight: '今晚', lucky: '今晚吃什么？', table: '配一桌',
     heroAlt: '两只暹罗猫在灶台前一起做饭：一只站在小板凳上颠锅，一只在旁边尝汤',
-    fridge: '冰箱', edit: '改', fridgeEmpty: '还没选冰箱里有什么。选几样手头的食材，这里会列出能做的菜。', pick: '选冰箱里有什么',
+    fridge: '冰箱', edit: '改冰箱里的', fridgeEmpty: '还没选冰箱里有什么。选几样手头的食材，这里会列出能做的菜。', pick: '选冰箱里有什么',
     week: '这周', menu: '排菜单', recipes: '翻翻菜谱',
   },
   en: {
     title: 'Today', tonight: 'Tonight', lucky: 'What’s for dinner?', table: 'Set a table',
     heroAlt: 'Two Siamese cats cooking together at the stove: one stands on a little stool tossing the wok, the other tastes the soup',
-    fridge: 'Fridge', edit: 'Edit', fridgeEmpty: 'Nothing picked yet. Choose a few things you have, and the dishes you can make show up here.', pick: 'Pick what’s in the fridge',
+    fridge: 'Fridge', edit: 'Edit the fridge', fridgeEmpty: 'Nothing picked yet. Choose a few things you have, and the dishes you can make show up here.', pick: 'Pick what’s in the fridge',
     week: 'This week', menu: 'Plan the week', recipes: 'Browse recipes',
   },
 } satisfies Both<Record<string, string>>;
@@ -57,13 +57,14 @@ const t = T[lang];
           <a class="cat-note-btn" href={url('fridge', lang)} data-fridge-edit data-title={t.fridge}>{t.pick}</a>
         </div>
         <ul class="card-grid today-matches" data-matches></ul>
+        <a class="today-more" href={url('fridge', lang)} data-matches-more hidden></a>
       </section>
     </div>
 
     <section class="today-week" aria-labelledby="week-title">
       <div class="today-sec-head">
         <h2 id="week-title">{t.week}</h2>
-        <a href={url('menu', lang)}>{t.menu} →</a>
+        <a href={url('menu', lang)}>{t.menu}</a>
       </div>
       {/* Seven empty days hold the space until the device fills in its own dates. */}
       <ol class="week" data-week>
