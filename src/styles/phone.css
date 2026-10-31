@@ -4,7 +4,7 @@
    sits inside the media query; the rules out here only keep the phone-only parts hidden on wider
    screens (and leave the step checkbox's tap label out of the box tree). */
 
-:is(.tabbar, .actbar, .back-btn, .recipe-topbar, .rows, .ing-tools, .ing-have, .fridge-phone, .timer-mini) { display: none; }
+:is(.tabbar, .actbar, .back-btn, .recipe-topbar, .rows, .ing-tools, .ing-have, .fridge-phone, .timer-mini, .filter-open) { display: none; }
 .step-hit { display: contents; }
 
 @media (max-width: 760px) {
@@ -136,6 +136,26 @@
   /* 我的笔记 and 还有 N 道菜: full-width rows, tall enough to hit. */
   :is(.mine-note, .more-recipes) summary { padding-block: 0.6rem; }
   .menu-day-head .text-btn { min-height: 44px; }
+
+  /* 菜谱: the four filter rows and the two check boxes wait in a sheet behind 筛选, so the first
+     recipe shows on the first screen. The button says how many filters are on. */
+  .lib-browse > .filters, .filter-bar .parts-toggle { display: none; }
+  .filter-bar { gap: 0.5rem; }
+  .filter-bar :is(.filter-open, .lucky-btn) { display: inline-flex; align-items: center; min-height: 44px; font-size: 0.9375rem; }
+  .filter-open.is-on { border-color: var(--primary); color: var(--primary); }
+  .filter-sheet-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 0 0 0.5rem; }
+  .filter-sheet-head .filter-count { margin: 0; }
+  .filter-sheet-head .text-btn:disabled { opacity: 0.45; cursor: default; }
+  .sheet-filters .filters {
+    flex-wrap: wrap; overflow: visible; gap: 8px; margin: 0 0 1rem; padding: 0; -webkit-mask-image: none; mask-image: none;
+  }
+  .sheet-filters .filters::before {
+    content: attr(data-label); flex-basis: 100%; margin: 0.25rem 0 -2px;
+    font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; color: var(--muted);
+  }
+  .sheet-filters .filters > *::before { content: none; }
+  .sheet-filters .chip { display: inline-flex; align-items: center; gap: 0.3rem; min-height: 44px; padding: 0 14px; font-size: 0.9375rem; }
+  .sheet-filters .parts-toggle { display: flex; min-height: 44px; font-size: 0.9375rem; }
 
   /* ---------- Recipe page ---------- */
 

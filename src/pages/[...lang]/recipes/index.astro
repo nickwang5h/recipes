@@ -20,6 +20,7 @@ const T = {
     title: '菜谱', description: '中餐、法餐、意大利菜的经典菜谱。',
     lede: ['每道菜都标出它用到的原理。份量可以缩放，配料和步骤可以逐项勾掉；配料附英文名，方便在加拿大的超市对照采购。想按手头的食材找菜，去', '冰箱', '。'],
     byCuisine: '按菜系筛选', allCuisines: '全部菜系', byCourse: '按类型筛选', allCourses: '全部类型', byTime: '按用时筛选', anyTime: '不限时间', byTag: '按用途筛选', anyTag: '不限用途',
+    filter: '筛选', clear: '清除', labels: { cuisine: '菜系', course: '类型', time: '用时', tag: '用途' },
     lucky: '今晚吃什么？', season: '只看用当季食材的', parts: (n: number) => `显示酱汁、高汤等半成品（${n}）`,
     search: '搜索', placeholder: '搜菜名、食材或原理', ways: '菜系、原理和冰箱', cuisines: '菜系', principles: '原理', fridge: '冰箱里有什么', fridgeTitle: '冰箱', ok: '好',
     empty: '没有符合条件的菜谱。', moreFirst: (n: number) => `再翻 ${Math.min(48, n)} 道`, none: '锅里空空的', noneText: '没有找到。换个说法试试，比如只搜主料“茄子”，或者做法“红烧”。',
@@ -31,6 +32,7 @@ const T = {
     title: 'Recipes', description: 'Everyday recipes from China, France, Italy and across Asia.',
     lede: ['Each recipe links the science it relies on. Scale the servings and tick off ingredients and steps as you go; ingredients bought at an Asian grocery show their Chinese name too. To cook from what you have, try the ', 'fridge', '.'],
     byCuisine: 'Filter by cuisine', allCuisines: 'All cuisines', byCourse: 'Filter by type', allCourses: 'All types', byTime: 'Filter by time', anyTime: 'Any time', byTag: 'Filter by use', anyTag: 'Any use',
+    filter: 'Filter', clear: 'Clear', labels: { cuisine: 'Cuisine', course: 'Type', time: 'Time', tag: 'Use' },
     lucky: 'What’s for dinner?', season: 'Only with what’s in season', parts: (n: number) => `Show sauces, stocks and other building blocks (${n})`,
     search: 'Search', placeholder: 'Dish, ingredient or technique', ways: 'Cuisines, science and the fridge', cuisines: 'Cuisines', principles: 'Science', fridge: 'What’s in your fridge?', fridgeTitle: 'Fridge', ok: 'Done',
     empty: 'No recipes match these filters.', moreFirst: (n: number) => `${Math.min(48, n)} more`, none: 'The pot’s empty', noneText: 'Nothing found. Try other words, such as just the main ingredient (“eggplant”) or the method (“braise”).',
@@ -106,25 +108,27 @@ const inSeason = Object.fromEntries(
   </div>
   <div class="lib-browse" data-browse>
 
-  <nav class="filters chips" aria-label={t.byCuisine} data-filter-group="cuisine">
+  <nav class="filters chips" aria-label={t.byCuisine} data-filter-group="cuisine" data-label={t.labels.cuisine}>
     <a class="chip" href={base} data-value="">{t.allCuisines}</a>
     {cuisines.map((c) => <a class="chip" href={`${base}?cuisine=${c.id}`} data-value={c.id}>{c.data.title}</a>)}
   </nav>
-  <nav class="filters chips" aria-label={t.byCourse} data-filter-group="course">
+  <nav class="filters chips" aria-label={t.byCourse} data-filter-group="course" data-label={t.labels.course}>
     <a class="chip" href={base} data-value="">{t.allCourses}</a>
     {usedCourses.map((c) => <a class="chip" href={`${base}?course=${c}`} data-value={c}>{COURSES[c][lang]}</a>)}
   </nav>
-  <nav class="filters chips" aria-label={t.byTime} data-filter-group="time">
+  <nav class="filters chips" aria-label={t.byTime} data-filter-group="time" data-label={t.labels.time}>
     <a class="chip" href={base} data-value="">{t.anyTime}</a>
     {Object.entries(TIME_LIMITS).map(([id, limit]) => <a class="chip" href={`${base}?time=${id}`} data-value={id}>{limit.label[lang]}</a>)}
   </nav>
-  <nav class="filters chips" aria-label={t.byTag} data-filter-group="tag">
+  <nav class="filters chips" aria-label={t.byTag} data-filter-group="tag" data-label={t.labels.tag}>
     <a class="chip" href={base} data-value="">{t.anyTag}</a>
     {(Object.keys(TAGS) as Tag[]).map((id) => <a class="chip chip-tag" href={`${base}?tag=${id}`} data-value={id}><TagIcon name={id} />{TAGS[id][lang]}</a>)}
   </nav>
 
   <div class="filter-bar">
     <p class="filter-count" data-count>{dishCount(recipes.length - components, lang)}</p>
+    {/* Phones: the filter rows and the two check boxes wait behind this button, in a sheet. */}
+    <button class="text-btn filter-open" type="button" data-filter-open data-title={t.filter} data-ok={t.ok} data-clear={t.clear}>{t.filter}</button>
     <button class="text-btn lucky-btn" type="button" data-lucky-pick>{t.lucky}</button>
     <label class="parts-toggle">
       <input type="checkbox" data-season />
@@ -197,7 +201,7 @@ const inSeason = Object.fromEntries(
     import { withinTime } from '../../../lib/categories';
     import { openDraw } from '../../../scripts/draw';
     import { openFridge } from '../../../scripts/fridge-picker';
-    import { phone } from '../../../scripts/phone';
+    import { openSheet, phone } from '../../../scripts/phone';
     import { mountSearch } from '../../../scripts/search-ui';
 
     const lang = pageLang();
@@ -207,6 +211,10 @@ const inSeason = Object.fromEntries(
     let limit = PAGE;
 
     const GROUPS = ['cuisine', 'course', 'time', 'tag'] as const;
+    const FILTERS = [...GROUPS, 'season', 'parts'];
+    const filterOpen = document.querySelector<HTMLButtonElement>('[data-filter-open]')!;
+    // The address with the filters as last applied (see the sheet below).
+    let filtered = '';
     const month = new Date().getMonth() + 1;
     const inSeason: Record<number, string[]> = JSON.parse(document.getElementById('in-season')!.textContent!);
 
@@ -257,8 +265,14 @@ const inSeason = Object.fromEntries(
           else a.removeAttribute('aria-current');
         }
       }
-      document.querySelector<HTMLElement>('[data-count]')!.textContent = dishCount(shown, lang);
+      for (const count of document.querySelectorAll<HTMLElement>('[data-count]')) count.textContent = dishCount(shown, lang);
       document.querySelector<HTMLElement>('[data-empty]')!.hidden = shown > 0;
+      // 筛选 · 2: how many filters are on, on the button and in the sheet's 清除.
+      const on = FILTERS.filter((name) => params.has(name)).length;
+      filterOpen.textContent = on ? `${filterOpen.dataset.title} · ${on}` : filterOpen.dataset.title!;
+      filterOpen.classList.toggle('is-on', on > 0);
+      for (const clear of document.querySelectorAll<HTMLButtonElement>('[data-filter-clear]')) clear.disabled = on === 0;
+      filtered = `${location.pathname}${location.search}`;
     };
 
     for (const name of ['parts', 'season']) {
@@ -266,7 +280,7 @@ const inSeason = Object.fromEntries(
         const params = new URLSearchParams(location.search);
         if ((event.target as HTMLInputElement).checked) params.set(name, '1');
         else params.delete(name);
-        history.replaceState(null, '', `${location.pathname}${params.size ? `?${params}` : ''}`);
+        history.replaceState(history.state, '', `${location.pathname}${params.size ? `?${params}` : ''}`);
         apply();
       });
     }
@@ -288,10 +302,53 @@ const inSeason = Object.fromEntries(
       const link = (event.target as HTMLElement).closest<HTMLAnchorElement>('[data-filter-group] a');
       if (!link) return;
       event.preventDefault();
-      history.replaceState(null, '', link.href);
+      history.replaceState(history.state, '', link.href);
       limit = PAGE;
       apply();
     });
+    // Phones: 筛选 opens a sheet holding the four filter rows and the two check boxes, moved in from
+    // the page and put back when it closes. The sheet is a history entry (the back button closes it),
+    // so the filters picked inside it are written onto the page's own entry once it is gone.
+    filterOpen.addEventListener('click', () => {
+      const moved = [...document.querySelectorAll<HTMLElement>('[data-filter-group], .filter-bar .parts-toggle')];
+      const marks = moved.map((el) => {
+        const mark = document.createComment('');
+        el.before(mark);
+        return mark;
+      });
+      const sheet = openSheet({
+        title: filterOpen.dataset.title!,
+        done: filterOpen.dataset.ok,
+        className: 'sheet-filters',
+        onClose: () => {
+          moved.forEach((el, i) => marks[i].replaceWith(el));
+          history.replaceState(history.state, '', filtered);
+          apply();
+        },
+      });
+      const head = document.createElement('div');
+      head.className = 'filter-sheet-head';
+      const count = document.createElement('p');
+      count.className = 'filter-count';
+      count.dataset.count = '';
+      count.setAttribute('aria-live', 'polite');
+      const clear = document.createElement('button');
+      clear.type = 'button';
+      clear.className = 'text-btn';
+      clear.dataset.filterClear = '';
+      clear.textContent = filterOpen.dataset.clear!;
+      clear.addEventListener('click', () => {
+        const params = new URLSearchParams(location.search);
+        for (const name of FILTERS) params.delete(name);
+        history.replaceState(history.state, '', `${location.pathname}${params.size ? `?${params}` : ''}`);
+        limit = PAGE;
+        apply();
+      });
+      head.append(count, clear);
+      sheet.body.append(head, ...moved);
+      apply();
+    });
+
     apply();
     // Old links to the home page's draw land here.
     if (new URLSearchParams(location.search).has('lucky')) void openDraw();
