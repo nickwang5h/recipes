@@ -130,6 +130,12 @@
   /* Rows sit edge to edge, so each chip's 44px band stays inside its own row. */
   .filters + .filters { margin-top: 0; }
   .filters > *::before { content: ""; position: absolute; left: 0; right: 0; top: calc(50% - 22px); height: 44px; }
+  /* The same 44px band for the principle and recipe chips and the check-box toggles under the filters. */
+  :is(.chips .chip, .parts-toggle) { position: relative; }
+  :is(.chips .chip, .parts-toggle)::before { content: ""; position: absolute; left: 0; right: 0; top: calc(50% - 22px); height: 44px; }
+  /* 我的笔记 and 还有 N 道菜: full-width rows, tall enough to hit. */
+  :is(.mine-note, .more-recipes) summary { padding-block: 0.6rem; }
+  .menu-day-head .text-btn { min-height: 44px; }
 
   /* ---------- Recipe page ---------- */
 
