@@ -176,6 +176,7 @@ const TABS = NAV.map((item, i) => ({ ...nav[i], id: item.path || 'today', icon: 
     <script>
       import { get, subscribe } from '../scripts/store';
       import { listItems } from '../scripts/shopping-list';
+      import { pageLang } from '../i18n';
       import '../scripts/timers';
 
       // The header button, and on phones the row in 我的.
@@ -250,6 +251,28 @@ const TABS = NAV.map((item, i) => ({ ...nav[i], id: item.path || 'today', icon: 
 
       if (import.meta.env.PROD && 'serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(() => {});
+        // Opening a page always gets the newest copy (sw.js serves pages network first). A page left open
+        // across a deploy, though (a tab, or the home-screen app resumed from the background), keeps the
+        // old one: coming back to it checks for a new version, and once the new service worker takes over,
+        // a bar offers to reload. It never reloads by itself; halfway through a recipe that would lose
+        // cooking mode.
+        const WORDS = { zh: { ready: '有新版本', reload: '刷新' }, en: { ready: 'A new version is ready', reload: 'Reload' } }[pageLang()];
+        const hadController = !!navigator.serviceWorker.controller;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (!hadController || document.querySelector('.update-bar')) return;
+          const bar = document.createElement('div');
+          bar.className = 'update-bar';
+          bar.setAttribute('role', 'status');
+          const reload = document.createElement('button');
+          reload.type = 'button';
+          reload.textContent = WORDS.reload;
+          reload.addEventListener('click', () => location.reload());
+          bar.append(Object.assign(document.createElement('span'), { textContent: WORDS.ready }), reload);
+          document.body.append(bar);
+        });
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'visible') navigator.serviceWorker.getRegistration().then((r) => r?.update()).catch(() => {});
+        });
       }
     </script>
   </body>

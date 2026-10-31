@@ -8,6 +8,14 @@
   opacity: 0; transform: translate(-50%, 10px); transition: opacity 160ms, transform 160ms;
 }
 .toast.is-on { opacity: 1; transform: translate(-50%, 0); }
+/* A deploy while the page was open: one line and 刷新, where the toasts appear (Base.astro). */
+.update-bar {
+  position: fixed; z-index: 70; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 12px;
+  max-width: calc(100vw - 32px); padding: 4px 4px 4px 18px; border-radius: 999px; white-space: nowrap;
+  bottom: calc(var(--bar-h, 0px) + var(--dock-space, 0px) + 12px + env(safe-area-inset-bottom));
+  background: var(--text); color: var(--bg); font-size: 15px; box-shadow: 0 6px 18px -8px rgb(0 0 0 / 0.45);
+}
+.update-bar button { min-height: 44px; padding: 0 18px; border: 0; border-radius: 999px; background: var(--primary); color: var(--bg); font: inherit; font-weight: 500; cursor: pointer; }
 
 /* ---------- Sheets ---------- */
 
@@ -76,7 +84,7 @@ html.has-sheet body, html.is-cooking body { overflow: hidden; }
   .sheet-full { height: min(48rem, calc(100vh - 3rem)); }
   .sheet.is-on { transform: translate(-50%, -50%); opacity: 1; }
   .sheet-grab { display: none; }
-  .toast { bottom: 2rem; }
+  .toast, .update-bar { bottom: 2rem; }
   .draw-card h3 { font-size: 1.75rem; }
 }
 
