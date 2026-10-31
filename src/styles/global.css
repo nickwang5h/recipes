@@ -31,6 +31,7 @@ h3 { font-size: 1.25rem; margin: 1.75rem 0 0.5rem; }
 a { color: var(--primary); text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
 a:hover { color: var(--primary-strong); text-decoration-thickness: 2px; }
 :focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+::selection { background: color-mix(in srgb, var(--primary) 28%, transparent); }
 
 img { max-width: 100%; height: auto; }
 table { border-collapse: collapse; width: 100%; font-size: 0.95rem; display: block; overflow-x: auto; }

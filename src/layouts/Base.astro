@@ -102,6 +102,9 @@ const TABS = NAV.map((item, i) => ({ ...nav[i], id: item.path || 'today', icon: 
         try { theme = localStorage.getItem('recipes:theme'); } catch {}
         if (theme !== 'light' && theme !== 'dark') {
           theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        } else {
+          // A theme picked by hand: the browser bar follows it, not the system setting.
+          for (const meta of document.querySelectorAll('meta[name="theme-color"]')) meta.content = theme === 'dark' ? '#11120f' : '#f3f0e8';
         }
         document.documentElement.dataset.theme = theme;
       })();
@@ -171,6 +174,7 @@ const TABS = NAV.map((item, i) => ({ ...nav[i], id: item.path || 'today', icon: 
           const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
           root.dataset.theme = next;
           try { localStorage.setItem('recipes:theme', next); } catch {}
+          for (const meta of document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]')) meta.content = next === 'dark' ? '#11120f' : '#f3f0e8';
           document.dispatchEvent(new Event('themechange'));
         });
       }
