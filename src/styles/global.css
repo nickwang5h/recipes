@@ -670,6 +670,8 @@ body.narrow .section-title { margin-top: 4rem; }
 }
 .magnet-card h2 { margin: 0 0 0.4rem; font-size: 1.25rem; }
 .magnet-card ul { margin: 0 0 0.6rem; padding-left: 1.2rem; }
+/* Red on kraft needs the darker red to read at 4.5:1. */
+.magnet-card a { color: var(--primary-strong); }
 
 /* Home: principles on a ruled card */
 .principles-card { padding: 0.5rem 1.75rem 1.25rem; margin-bottom: 2rem; background-position: 0 0.5rem; line-height: 2.25rem; }

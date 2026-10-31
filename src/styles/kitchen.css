@@ -129,8 +129,10 @@ html.has-sheet body, html.is-cooking body { overflow: hidden; }
 }
 :root[data-theme="dark"] .today-fridge { box-shadow: none; }
 .today-fridge .today-have li { background: color-mix(in srgb, var(--bg) 70%, transparent); }
-.today-fridge-empty { border-color: color-mix(in srgb, var(--text) 25%, transparent); color: color-mix(in srgb, var(--text) 78%, transparent); }
+.today-fridge .today-fridge-empty { border-color: color-mix(in srgb, var(--text) 25%, transparent); color: color-mix(in srgb, var(--text) 78%, transparent); }
 .today-fridge .today-sec-head a { color: var(--primary-strong); }
+.today-fridge .cat-note-btn { border-color: var(--primary-strong); color: var(--primary-strong); }
+.today-fridge .cat-note-btn:hover { background: var(--primary-strong); color: var(--bg); }
 .today-sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
 .today-sec-head h2 { margin: 0 0 0.75rem; font-size: 1.5rem; }
 .today-sec-head a { display: inline-flex; align-items: center; justify-content: flex-end; min-width: 2.75rem; min-height: 2.75rem; font-size: 0.95rem; }

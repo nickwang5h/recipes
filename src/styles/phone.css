@@ -110,8 +110,7 @@
   .list-where .chip { flex: none; display: inline-flex; align-items: center; min-height: 44px; }
   /* Long principle names (and larger text) wrap instead of running off the card. */
   .principles-card dd a { white-space: normal; }
-  /* Text on the kraft card and the substitution note read at 4.5:1 or better. */
-  .magnet-card a { color: var(--primary-strong); }
+  /* The substitution note reads at 4.5:1 or better. */
   .card p.fridge-swap { color: var(--muted); }
 
   /* ---------- Recipe list, filters ---------- */
