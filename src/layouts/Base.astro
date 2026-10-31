@@ -55,6 +55,17 @@ const NAV = [
   { path: 'mine', label: { zh: '我的', en: 'Saved' }, match: /^\/mine\// },
 ];
 const nav = NAV.map((item) => ({ href: url(item.path, lang), label: item.label[lang], on: item.match.test(local) }));
+// Wide screens have room for two more in the header: 菜系 and 冰箱 get their own place there, instead of
+// only a link inside 菜谱 and the block on 今天. Phones keep the four tabs.
+const HEAD = [
+  { ...NAV[0], match: /^\/(menu)?\/?$/ },
+  { ...NAV[1], match: /^\/(recipes|principles|search)\// },
+  { path: 'cuisines', label: { zh: '菜系', en: 'Cuisines' }, match: /^\/cuisines\// },
+  { path: 'fridge', label: { zh: '冰箱', en: 'Fridge' }, match: /^\/fridge\// },
+  NAV[2],
+  NAV[3],
+];
+const head = HEAD.map((item) => ({ href: url(item.path, lang), label: item.label[lang], on: item.match.test(local) }));
 // Phones (≤760px) get a bottom bar of four places instead of the header; a recipe has its own bar.
 const recipePage = /^\/recipes\/[^/]+\/$/.test(local);
 const ICONS: Record<string, string> = {
@@ -118,7 +129,7 @@ const TABS = NAV.map((item, i) => ({ ...nav[i], id: item.path || 'today', icon: 
       <div class="wrap">
         <a class="brand" href={url('', lang)}><Image class="brand-cat" src={logoCat} alt="" width={72} height={72} loading="eager" />{SITE_TITLE[lang]}</a>
         <nav class="site-nav" aria-label={t.nav}>
-          {nav.map((item) => (
+          {head.map((item) => (
             <a href={item.href} aria-current={item.on ? 'page' : undefined}>{item.label}{item.href.endsWith('/list/') && <span class="nav-badge" data-list-badge hidden></span>}</a>
           ))}
           <a class="lang-switch" href={otherPath} hreflang={HTML_LANG[other]} lang={HTML_LANG[other]} aria-label={t.switchLabel}>{lang === 'zh' ? 'EN' : '中'}</a>
