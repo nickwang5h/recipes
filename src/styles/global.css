@@ -133,7 +133,7 @@ a.chip:hover { border-color: var(--primary); color: var(--text); background: var
 .card .original { font-size: 0.85rem; line-height: 1.4; }
 .card p { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
 .card-summary { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
-.card .meta { display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; font-size: 0.8rem; color: var(--muted); margin-top: auto; padding-top: 0.6rem; }
+.card .meta { display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; font-size: 0.8125rem; color: var(--muted); margin-top: auto; padding-top: 0.6rem; }
 .card-body { display: flex; flex-direction: column; flex: 1; }
 .card.has-cover { padding: 0; border-left-width: 1px; }
 .card.has-cover .card-body { padding: 0.75rem 0.9rem 0.85rem; }
@@ -147,7 +147,7 @@ a.chip:hover { border-color: var(--primary); color: var(--text); background: var
   .card-grid:has(.has-cover) .card-body { padding: 0.55rem 0.65rem 0.65rem; }
   .card-grid:has(.has-cover) .card h3 { font-size: 1rem; }
   .card-grid:has(.has-cover) :is(.card-summary, .original) { display: none; }
-  .card-grid:has(.has-cover) .card .meta { padding-top: 0.35rem; font-size: 0.75rem; }
+  .card-grid:has(.has-cover) .card .meta { padding-top: 0.35rem; font-size: 0.8125rem; }
   .card-grid:has(.has-cover) .card p:is(.fridge-missing, .fridge-swap) { font-size: 0.8rem; }
 }
 
@@ -237,10 +237,10 @@ a.chip:hover { border-color: var(--primary); color: var(--text); background: var
 .ing-text { display: flex; flex-wrap: wrap; column-gap: 0.5rem; line-height: 1.55; }
 .ing-qty { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
 .ing-note { color: var(--muted); font-size: 0.9rem; flex-basis: 100%; }
-.ing-en { color: var(--muted); font-size: 0.8rem; flex-basis: 100%; line-height: 1.4; }
+.ing-en { color: var(--muted); font-size: 0.8125rem; flex-basis: 100%; line-height: 1.4; }
 .ing-tag {
   align-self: center; padding: 0 0.45rem; border: 1px solid var(--border); border-radius: 999px;
-  font-size: 0.75rem; line-height: 1.6; color: var(--muted); white-space: nowrap;
+  font-size: 0.8125rem; line-height: 1.6; color: var(--muted); white-space: nowrap;
 }
 .ing-tag.where-asian { border-color: var(--accent-red); color: var(--accent-red); }
 .ing-tag.where-specialty { border-color: var(--accent-yellow); color: var(--accent-yellow); }
@@ -462,7 +462,7 @@ button.chip[aria-pressed="true"] { background: var(--text); border-color: var(--
   color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); resize: vertical;
 }
 .mine-note textarea:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
-.mine-note-hint { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.8rem; }
+.mine-note-hint { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.8125rem; }
 @media print {
   .mine-bar, .mine-note:not([open]), .mine-note-hint { display: none !important; }
   .mine-note textarea { border: 0; padding: 0; resize: none; }
@@ -516,7 +516,7 @@ button.chip[aria-pressed="true"] { background: var(--text); border-color: var(--
 .menu-search { width: 100%; padding: 0.5rem 0.75rem; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); }
 .needs-list { list-style: none; padding: 0; margin: 0; columns: 2 16rem; column-gap: 2rem; }
 .needs-list li { break-inside: avoid; padding: 0.3rem 0; border-bottom: 1px dashed var(--border); }
-.needs-list .ing-en, .needs-list .ing-note { color: var(--muted); font-size: 0.8rem; }
+.needs-list .ing-en, .needs-list .ing-note { color: var(--muted); font-size: 0.8125rem; }
 .needs-list .ing-note { display: block; }
 .needs-list li.is-listed { opacity: 0.55; }
 [data-needs-wrap] { margin-bottom: 1.5rem; }
@@ -766,7 +766,7 @@ body.narrow .footer-cat { right: max(var(--gutter), calc((100% - 70rem) / 2 + va
   display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.05rem 0.5rem 0.05rem 0.4rem;
   border: 1px solid var(--border); border-radius: 999px; background: var(--paper); color: var(--muted); line-height: 1.5;
 }
-.card .tag-pill { font-size: 0.75rem; }
+.card .tag-pill { font-size: 0.8125rem; }
 .eyebrow .tag-pill { color: var(--text); text-decoration: none; font-size: 0.85rem; }
 .eyebrow .tag-pill .tag-icon { color: var(--primary); }
 .eyebrow a.tag-pill:hover { border-color: var(--primary); color: var(--primary); }
@@ -907,7 +907,7 @@ body.narrow .footer-cat { right: max(var(--gutter), calc((100% - 70rem) / 2 + va
 /* The other language, as a small outlined tag beside the Ko-fi button. */
 .site-nav a.lang-switch {
   display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; height: 1.75rem; padding: 0 0.45rem;
-  margin-left: 0.25rem; border: 1px solid var(--border); font: 600 0.75rem/1 var(--font-sans); letter-spacing: 0.04em; color: var(--muted);
+  margin-left: 0.25rem; border: 1px solid var(--border); font: 600 0.8125rem/1 var(--font-sans); letter-spacing: 0.04em; color: var(--muted);
 }
 .site-nav a.lang-switch:hover { color: var(--text); border-color: var(--muted); }
 .footer-links { display: flex; gap: 1rem; }

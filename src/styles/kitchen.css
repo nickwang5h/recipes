@@ -162,7 +162,7 @@ html.has-sheet body, html.is-cooking body { overflow: hidden; }
 .day-remove:hover { background: var(--surface-strong); color: var(--text); }
 .day-empty { color: var(--muted); }
 .day-acts { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem; }
-.day-acts .text-btn { min-height: 2rem; padding: 0 0.6rem; font-size: 0.8rem; }
+.day-acts .text-btn { min-height: 2rem; padding: 0 0.6rem; font-size: 0.8125rem; }
 
 /* ---------- 清单: one sheet of kraft paper, held up by a magnet ---------- */
 
