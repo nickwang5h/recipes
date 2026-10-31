@@ -26,6 +26,8 @@ html.has-sheet body, html.is-cooking body { overflow: hidden; }
 .sheet-head h2 { margin: 0; font-size: 1.375rem; }
 .sheet-x { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: none; color: var(--text); cursor: pointer; }
 .sheet-x svg, .cook-x svg, .back-btn svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+/* The × keeps 10px to the edge (its icon sits inside a 44px button); a filled 好 lines up with the body's 16px. */
+.sheet-head:has(.sheet-done) { padding-right: 16px; }
 .sheet-done { flex: none; min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; background: var(--primary); color: var(--bg); font: inherit; font-weight: 500; cursor: pointer; }
 .sheet-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 4px 16px 16px; }
 
