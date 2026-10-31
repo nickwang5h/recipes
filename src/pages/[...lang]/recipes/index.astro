@@ -84,7 +84,6 @@ const inSeason = Object.fromEntries(
   <header class="page-head">
     <h1>{t.title}</h1>
     <p class="lede">{t.lede[0]}<a href={url('fridge', lang)}>{t.lede[1]}</a>{t.lede[2]}</p>
-    <OfflineSave />
   </header>
   {/* Search, and the ways into cuisines, principles and the fridge: 菜谱 holds all of them. */}
   <div class="lib-top">
@@ -147,6 +146,8 @@ const inSeason = Object.fromEntries(
   </ul>
   <p data-empty hidden style="color: var(--muted)">{t.empty}</p>
   <p class="lib-more-wrap"><button class="text-btn lib-more" type="button" data-more>{t.moreFirst(recipes.length - components - FIRST_PAGE)}</button></p>
+  {/* Once, for the kitchen without signal: below the list, out of the way of finding a dish. */}
+  <OfflineSave />
 
   <div class="lib-why">
     <section class="index-card ruled principles-card" aria-labelledby="principles-title">
