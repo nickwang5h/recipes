@@ -1,5 +1,5 @@
 ---
-import { getEntries, type CollectionEntry } from 'astro:content';
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
 import burntCat from '../assets/cats/burnt.png';
 import serveCat from '../assets/cats/serve.png';
@@ -9,6 +9,7 @@ import { HTML_LANG, langOf, type Both } from '../i18n';
 import type { LineWords } from '../i18n/content';
 import { WHERE_TO_BUY } from '../lib/categories';
 import { countedName, formatQty, unitLabel } from '../lib/scale';
+import { stepPics } from '../lib/step-images';
 
 interface Props {
   recipe: CollectionEntry<'recipes'>;
@@ -27,6 +28,9 @@ const catalog = new Map(
 );
 // Which ingredient lines each step uses and where each key point belongs (scripts/cook-links.mjs).
 const links = (cookLinks as Record<string, { steps: string[][]; tips: number[] }>)[recipe.id] ?? { steps: [], tips: [] };
+// A picture per step where one has been drawn for the step as it now reads (the Chinese text decides).
+const zhBody = lang === 'zh' ? recipe.body : (await getEntry('recipes', recipe.id))?.body;
+const pics = stepPics(recipe.id, zhBody ?? '', lang);
 // Words the scripts need, kept in one place.
 const words = { step: t.step, next: t.next, done: t.done, resume: t.resume, sheet: t.sheet, have: t.have, need: t.need, add: t.add, listed: t.listed, fridge: t.fridge, added: t.added, fridgeTitle: t.fridgeTitle, ok: t.ok };
 ---
@@ -88,6 +92,15 @@ const words = { step: t.step, next: t.next, done: t.done, resume: t.resume, shee
     </>
   ))}
 </aside>
+
+{/* Moved into their steps by the script below; a template, so nothing loads before then. */}
+{pics.some(Boolean) && (
+  <template data-step-pics>
+    {pics.map((pic, i) => pic && (
+      <figure class="step-pic" data-i={i}><img src={pic.src} alt={pic.alt} width="960" height="640" loading="lazy" decoding="async" /></figure>
+    ))}
+  </template>
+)}
 
 {/* Cooking mode, phones only (≤760px): one step a screen, with that step's amounts and key points.
     It shares the page's ticks, servings and timers. */}
@@ -154,6 +167,17 @@ const words = { step: t.step, next: t.next, done: t.done, resume: t.resume, shee
     // The serving cat waits right under the last step and comes out once every step is ticked.
     const served = document.querySelector<HTMLElement>('[data-served]');
     if (served) stepItems.at(-1)?.parentElement?.after(served);
+    const pics = document.querySelector<HTMLTemplateElement>('template[data-step-pics]');
+    // The step's words go in one box beside the picture, so wide screens can set them side by side.
+    for (const fig of pics?.content.querySelectorAll<HTMLElement>('figure[data-i]') ?? []) {
+      const li = stepItems[Number(fig.dataset.i)];
+      if (!li) continue;
+      const words = document.createElement('div');
+      words.className = 'step-words';
+      words.append(...li.childNodes);
+      li.classList.add('has-pic');
+      li.append(words, fig);
+    }
 
     const load = (): State => {
       const fallback = { servings: base, ingredients: [], steps: [] };
@@ -419,6 +443,9 @@ const words = { step: t.step, next: t.next, done: t.done, resume: t.resume, shee
       // The step's words, with its times taken out of the sentence and set below as big buttons.
       const copy = items[at].cloneNode(true) as HTMLElement;
       copy.querySelector('.step-hit')?.remove();
+      const pic = copy.querySelector('.step-pic');
+      pic?.remove();
+      copy.querySelector('.step-words')?.replaceWith(...copy.querySelector('.step-words')!.childNodes);
       for (const t of copy.querySelectorAll('.timer-btn')) t.replaceWith(t.textContent ?? '');
       const text = document.createElement('p');
       text.className = 'cook-text';
@@ -441,7 +468,7 @@ const words = { step: t.step, next: t.next, done: t.done, resume: t.resume, shee
 
       // Key points that belong to this step; any that belong nowhere wait on the last step.
       const here = tips.filter((_, k) => links.tips[k] === at || (at === total - 1 && !(links.tips[k] >= 0 && links.tips[k] < total)));
-      body.replaceChildren(num, ...(use.childNodes.length ? [use] : []), text, ...(timers.childNodes.length ? [timers] : []), ...here.map(tipCard));
+      body.replaceChildren(num, ...(use.childNodes.length ? [use] : []), text, ...(timers.childNodes.length ? [timers] : []), ...(pic ? [pic] : []), ...here.map(tipCard));
       body.scrollTop = 0;
       prev.disabled = at === 0;
       next.textContent = at === total - 1 ? words.done : words.next;

@@ -1,0 +1,22 @@
+# 先画这些（docs/content-plan.md 里最早写的核心菜），其余按字母顺序自动排在后面
+mapo-tofu
+beurre-blanc
+cacio-e-pepe
+tomato-egg
+kung-pao-chicken
+hong-shao-rou
+steamed-fish
+egg-fried-rice
+french-onion-soup
+boeuf-bourguignon
+french-omelette
+hollandaise
+bechamel
+carbonara
+risotto-alla-milanese
+ragu-alla-bolognese
+aglio-olio
+fresh-egg-pasta
+blanching
+fermentation
+aromatics

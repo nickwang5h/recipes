@@ -237,6 +237,7 @@
   .cook-use span { padding: 4px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--paper); font-size: 16px; line-height: 1.5; }
   .cook-use b { font-weight: 600; font-variant-numeric: tabular-nums; }
   .cook-text { margin: 12px 0 0; font-family: var(--font-reading); font-size: 25px; line-height: 1.7; }
+  .cook-body .step-pic { margin: 18px 0 0; max-width: none; }
   .cook-timers { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
   .cook-timers .timer-btn {
     display: inline-flex; align-items: center; gap: 0.35em; min-height: 56px; padding: 0 22px;

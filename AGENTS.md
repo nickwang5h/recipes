@@ -53,6 +53,9 @@ Planned and published slugs live in `docs/content-plan.md`.
 - `node scripts/cook-links.mjs` — after adding or reordering steps, key points or ingredient lines: regenerates
   `src/data/cook-links.json` (each step's ingredients and each key point's step, for the phone's cooking mode).
   Entries marked `"checked": true` were read by hand and are kept; `tests/cook-links.test.ts` fails when it's stale.
+- `node scripts/step-images.mjs run --wait` — draws step pictures with Codex into `public/steps/`, resumable (see
+  `docs/step-images/README.md`). A picture is tied to its Chinese step text: rewording or reordering a step hides it
+  until `run` redraws that step.
 - Fonts: `scripts/font-census.mjs` records which characters each font draws on every built page, and
   `scripts/build-web-fonts.py` cuts `public/fonts/` from it (shared slices by how often a character is drawn,
   plus one small file per page in `public/fonts/page/`, listed in `src/data/page-fonts.json`). The source fonts

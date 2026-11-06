@@ -254,6 +254,13 @@ a.chip:hover { border-color: var(--primary); color: var(--text); background: var
 .recipe-content ol .step-check { position: absolute; left: 2rem; top: 1.05rem; margin: 0; }
 .recipe-content ol > li.step-done { color: var(--muted); }
 .recipe-content ol > li.step-done :is(p, li) { color: var(--muted); }
+.step-pic { margin: 0.6rem 0 0.2rem; max-width: 22rem; }
+@media (min-width: 761px) {
+  .recipe-content ol > li.has-pic { display: grid; grid-template-columns: minmax(0, 1fr) 12.5rem; gap: 1.1rem; align-items: start; }
+  .recipe-content ol > li.has-pic .step-pic { margin: 0.35rem 0 0.2rem; }
+}
+.step-pic img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; border-radius: var(--radius); background: var(--surface-strong); }
+.recipe-content ol > li.step-done .step-pic img { opacity: 0.55; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; }
@@ -364,7 +371,7 @@ button.chip[aria-pressed="true"] { background: var(--text); border-color: var(--
   }
   @page { margin: 14mm 16mm; }
   body { font-size: 11pt; background: #fff; }
-  .site-header, .site-footer, .cover, .kit-controls, .servings-static, .scale-note, .related-recipes,
+  .site-header, .site-footer, .cover, .step-pic, .kit-controls, .servings-static, .scale-note, .related-recipes,
   .offline-save, .page-head nav, .sources, .section-title:has(+ .sources), .recipe-body > .meta, .visually-hidden { display: none !important; }
   main { padding: 0; }
   .wrap { max-width: none; padding: 0; }
@@ -410,9 +417,9 @@ button.chip[aria-pressed="true"] { background: var(--text); border-color: var(--
 }
 
 /* Illustrations sit on near-white paper; dim them a little so they don't glare in dark mode. */
-:root[data-theme="dark"] :is(img.card-img, .cover img) { filter: brightness(0.86); }
+:root[data-theme="dark"] :is(img.card-img, .cover img, .step-pic img) { filter: brightness(0.86); }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) :is(img.card-img, .cover img) { filter: brightness(0.86); }
+  :root:not([data-theme="light"]) :is(img.card-img, .cover img, .step-pic img) { filter: brightness(0.86); }
 }
 
 @media (max-width: 559px) {
