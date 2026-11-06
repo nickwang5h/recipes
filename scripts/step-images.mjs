@@ -15,6 +15,7 @@
 //                        under 8 hours left and a window is used up, or when it has under 45 minutes left
 //   node scripts/step-images.mjs install <slug>...   install drawn PNGs again (after a manual redraw)
 //   node scripts/step-images.mjs stale               steps whose text changed since they were drawn
+//   node scripts/step-images.mjs commit              commit the pictures installed so far
 //   node scripts/step-images.mjs quota               Codex's windows and reset credits, as run sees them
 //   node scripts/step-images.mjs sheet <slug>...     one review sheet per recipe in .step-images/sheets/
 //
@@ -396,6 +397,7 @@ else if (cmd === 'draw') for (const s of slugs) log(`${s}: ${await draw(s, optio
 else if (cmd === 'install') for (const s of slugs) console.log(s, (await install(load(s))).length);
 else if (cmd === 'run') await run();
 else if (cmd === 'quota') console.log(codexQuota());
+else if (cmd === 'commit') commit();
 else if (cmd === 'sheet') for (const s of slugs) console.log(await sheet(s));
 else if (cmd === 'stale') {
   const m = manifest();
