@@ -7,8 +7,10 @@
 //   node scripts/step-images.mjs run [options]       work down the queue until told to stop
 //       --limit N        stop after N recipes
 //       --max-5h P       pause when Codex's five-hour window is P% used (default 85)
-//       --max-week P     stop when the weekly window is P% used (default 90)
-//       --wait           sleep until the five-hour window resets instead of exiting
+//       --max-week P     pause when the weekly window is P% used (default 90)
+//       --max-week-plain P  the weekly cap while no reset credit is about to expire (default 90): a higher
+//                        --max-week only applies while an expiring credit can refill the window
+//       --wait           sleep until the window resets instead of exiting
 //       --model M        Codex model (default gpt-6.1-terra)
 //       --commit-every N commit public/steps and the manifest after every N recipes this run draws
 //       --use-expiring-credits  redeem a Codex reset credit that would otherwise expire unused: when it has
@@ -315,6 +317,7 @@ async function run() {
   const limit = Number(option('--limit', Infinity));
   const max5h = Number(option('--max-5h', 85));
   const maxWeek = Number(option('--max-week', 90));
+  const maxWeekPlain = Number(option('--max-week-plain', 90));
   const model = option('--model', 'gpt-6.1-terra');
   const wait = process.argv.includes('--wait');
   const useCredits = process.argv.includes('--use-expiring-credits');
@@ -330,20 +333,24 @@ async function run() {
     for (;;) {
       const q = codexQuota();
       if (!q) { log('could not read Codex quota, stopping'); stop = true; break; }
-      const capped = q.week >= maxWeek || q.fiveHour >= max5h;
-      // A credit about to expire is worth more spent than kept.
+      // A credit about to expire is worth more spent than kept. While one is due, the weekly window may run
+      // up to --max-week, since the credit will refill it; otherwise stop at --max-week-plain.
       const soon = useCredits ? q.credits.find((c) => c.expiresAt * 1000 - Date.now() < 24 * 3600_000) : undefined;
       const left = soon ? soon.expiresAt * 1000 - Date.now() : Infinity;
+      const weekCap = soon ? maxWeek : Math.min(maxWeek, maxWeekPlain);
+      const capped = q.week >= weekCap || q.fiveHour >= max5h;
       if (soon && ((capped && left < 8 * 3600_000) || left < 45 * 60_000)) {
         log(`redeeming reset credit ${soon.id.slice(-6)} (${Math.round(left / 60000)} min before it expires; 5h ${q.fiveHour}%, week ${q.week}%): ${redeem(soon)}`);
         continue;
       }
-      if (q.week >= maxWeek) { log(`weekly window ${q.week}% used, stopping (resets ${new Date(q.weekResetsAt * 1000).toISOString().slice(0, 16)})`); stop = true; break; }
-      if (q.fiveHour < max5h) break;
-      if (!wait) { log(`five-hour window ${q.fiveHour}% used, stopping`); stop = true; break; }
-      // Wake in time to spend an expiring credit, if one is due before the window resets.
-      const ms = Math.max(60_000, Math.min(q.resetsAt * 1000 - Date.now() + 60_000, left - 40 * 60_000));
-      log(`five-hour window ${q.fiveHour}% used, sleeping ${Math.round(ms / 60000)} min`);
+      if (!capped) break;
+      const weekly = q.week >= weekCap;
+      const which = weekly ? `weekly window ${q.week}%` : `five-hour window ${q.fiveHour}%`;
+      if (!wait) { log(`${which} used, stopping`); stop = true; break; }
+      // Sleep until the window resets, waking in time to spend an expiring credit if one is due first.
+      const resets = (weekly ? q.weekResetsAt : q.resetsAt) * 1000;
+      const ms = Math.max(60_000, Math.min(resets - Date.now() + 60_000, left - 40 * 60_000, 6 * 3600_000));
+      log(`${which} used, sleeping ${Math.round(ms / 60000)} min`);
       await new Promise((r) => setTimeout(r, ms));
     }
     if (stop) break;
