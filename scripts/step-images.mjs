@@ -351,7 +351,10 @@ async function run() {
       const resets = (weekly ? q.weekResetsAt : q.resetsAt) * 1000;
       const ms = Math.max(60_000, Math.min(resets - Date.now() + 60_000, left - 40 * 60_000, 6 * 3600_000));
       log(`${which} used, sleeping ${Math.round(ms / 60000)} min`);
-      await new Promise((r) => setTimeout(r, ms));
+      // Wait by the wall clock a minute at a time: a timer stops while the Mac sleeps (lid closed), so one
+      // long setTimeout would wake up late by however long the machine slept.
+      const until = Date.now() + ms;
+      while (Date.now() < until && !existsSync(`${root}.step-images/STOP`)) await new Promise((r) => setTimeout(r, Math.min(60_000, until - Date.now())));
     }
     if (stop) break;
     const result = await draw(slug, model);
