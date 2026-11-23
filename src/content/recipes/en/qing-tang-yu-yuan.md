@@ -11,7 +11,7 @@ ingredients:
       - { name: water, note: "cold, for the green onion and ginger water" }
       - { name: salt }
       - { name: [egg white, egg whites] }
-      - { name: baijiu }
+      - { name: baijiu, note: "Chinese grain spirit, not white wine" }
   - group: Cooking the fish balls
     items:
       - { name: water, note: "a large pot of cold water, plus a bowl of cold water to adjust the temperature" }

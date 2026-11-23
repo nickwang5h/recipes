@@ -4,7 +4,7 @@ cuisine: chinese
 course: soup
 summary: 草鱼刮下鱼茸、过筛去刺，加盐朝一个方向搅到发黏，再加蛋清和白酒，挤进冷水里小火慢煮、不让水滚。鱼圆洁白，松软得像豆腐。
 servings: 8
-time: { prep: 120, cook: 20 }
+time: { prep: 120, cook: 35 }
 principles: [meat-paste, salt, protein-coagulation]
 ingredients:
   - group: 鱼浆
@@ -15,7 +15,7 @@ ingredients:
       - { ref: water, qty: 300, unit: ml, note: 冷水，做葱姜水 }
       - { ref: salt, qty: 15, unit: g }
       - { ref: egg, name: 蛋清, qty: 1, unit: 个 }
-      - { ref: baijiu, qty: 20, unit: ml }
+      - { ref: baijiu, qty: 20, unit: ml, note: 中国白酒，不是白葡萄酒 }
   - group: 煮鱼圆
     items:
       - { ref: water, note: 一大锅冷水，另备一碗冷水调温度 }
@@ -24,6 +24,9 @@ sources:
   - title: "食譜：天香樓的杭州魚丸湯"
     author: 陳靜宜，米其林指南台灣
     url: https://guide.michelin.com/tw/zh_TW/article/dining-in/recipe-hangzhou-fishball-soup
+  - title: "Recipe: Hangzhou Fish Ball Soup"
+    author: Chen Ching Yi，Vincent Leung 译，MICHELIN Guide
+    url: https://guide.michelin.com/tw/en/article/dining-in/recipe-hangzhou-fishball-soup
 updated: 2026-11-23
 ---
 
