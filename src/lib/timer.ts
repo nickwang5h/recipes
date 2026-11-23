@@ -26,8 +26,9 @@ export function findDurations(text: string): Duration[] {
   for (const pattern of PATTERNS) {
     for (const m of text.matchAll(pattern)) {
       const [whole, low, high, unit, extraMinutes] = m;
-      // "每 30 秒翻动一次", "every 30 seconds" is a rhythm, not something to count down once.
-      if (/(每|every)\s*$/i.test(text.slice(0, m.index))) continue;
+      // "每 30 秒翻动一次", "每隔约 10 分钟淋一次", "every 30 seconds" is a rhythm, not something to
+      // count down once. (每批, 每面 are: a batch or a side takes that long.)
+      if (/(每\s*(?:隔\s*)?(?:大?约\s*)?|every\s*)$/i.test(text.slice(0, m.index))) continue;
       const per = UNIT[unit.toLowerCase()];
       const extra = extraMinutes ? Number(extraMinutes) * 60 : 0;
       const seconds = Math.round(Number(low) * per) + extra;
