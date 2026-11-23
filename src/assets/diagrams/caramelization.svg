@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" role="img" aria-labelledby="t d" data-narrow="340 412">
   <title id="t">糖色越深，苦味越明显</title>
   <desc id="d">色带从无色糖液经过浅琥珀、深琥珀到焦黑，下面标出相应的风味与停火判断。蔗糖约在 160°C 以上开始明显变色，其他颜色阶段不设固定温度。</desc>
   <style>
@@ -14,27 +14,43 @@
     .warning { fill: var(--primary, #b83e30); }
   </style>
   <rect class="bg" width="600" height="380" rx="12"/>
-  <text class="label" x="300" y="42" text-anchor="middle">蔗糖约在 160°C 以上开始明显变色</text>
-  <path class="line" d="M38 79 H562 M552 71 L562 79 L552 87"/>
+  <g class="lead">
+    <text class="label" x="300" y="42" text-anchor="middle">蔗糖约在 160°C 以上开始明显变色</text>
+  </g>
 
-  <!-- Four discrete swatches; no invented temperatures for individual colors. -->
-  <rect class="clear" x="36" y="113" width="132" height="72"/>
-  <rect class="amber" x="168" y="113" width="132" height="72"/>
-  <rect class="deep" x="300" y="113" width="132" height="72"/>
-  <rect class="char" x="432" y="113" width="132" height="72"/>
-  <rect class="line" x="36" y="113" width="528" height="72"/>
-  <path class="line" d="M168 113 V185 M300 113 V185 M432 113 V185"/>
-  <text class="label" x="102" y="218" text-anchor="middle">无色糖液</text>
-  <text class="label" x="234" y="218" text-anchor="middle">浅琥珀</text>
-  <text class="label" x="366" y="218" text-anchor="middle">深琥珀</text>
-  <text class="label" x="498" y="218" text-anchor="middle">焦黑</text>
-  <text class="label muted" x="102" y="249" text-anchor="middle">以甜味为主</text>
-  <text class="label muted" x="234" y="249" text-anchor="middle">焦糖香渐明显</text>
-  <text class="label muted" x="366" y="249" text-anchor="middle">苦香更明显</text>
-  <text class="label muted" x="498" y="249" text-anchor="middle">刺鼻、焦苦</text>
-  <text class="label muted" x="102" y="280" text-anchor="middle">继续观察浓缩</text>
-  <text class="label muted" x="234" y="280" text-anchor="middle">减火，准备离火</text>
-  <text class="label muted" x="366" y="280" text-anchor="middle">及时终止受热</text>
-  <text class="label muted warning" x="498" y="280" text-anchor="middle">重新做一锅</text>
-  <text class="label" x="300" y="338" text-anchor="middle">接近目标颜色就移离热源，锅的余热还会继续加深颜色</text>
+  <!-- Four discrete swatches; no invented temperatures for individual colors.
+       Wide: a strip left to right, words under each swatch. Phone: the strip runs down, words beside it. -->
+  <g class="wide-only">
+    <path class="line" d="M38 79 H562 M552 71 L562 79 L552 87"/>
+    <rect class="clear" x="36" y="113" width="132" height="72"/>
+    <rect class="amber" x="168" y="113" width="132" height="72"/>
+    <rect class="deep" x="300" y="113" width="132" height="72"/>
+    <rect class="char" x="432" y="113" width="132" height="72"/>
+    <rect class="line" x="36" y="113" width="528" height="72"/>
+    <path class="line" d="M168 113 V185 M300 113 V185 M432 113 V185"/>
+  </g>
+  <g class="narrow-only">
+    <path class="line" d="M12 14 V396 M5 387 L12 396 L19 387"/>
+    <rect class="clear" x="28" y="14" width="64" height="96"/>
+    <rect class="amber" x="28" y="110" width="64" height="96"/>
+    <rect class="deep" x="28" y="206" width="64" height="96"/>
+    <rect class="char" x="28" y="302" width="64" height="96"/>
+    <rect class="line" x="28" y="14" width="64" height="384"/>
+    <path class="line" d="M28 110 H92 M28 206 H92 M28 302 H92"/>
+  </g>
+  <text class="label narrow-start" x="102" y="218" text-anchor="middle" data-narrow="6 -180">无色糖液</text>
+  <text class="label narrow-start" x="234" y="218" text-anchor="middle" data-narrow="-126 -84">浅琥珀</text>
+  <text class="label narrow-start" x="366" y="218" text-anchor="middle" data-narrow="-258 12">深琥珀</text>
+  <text class="label narrow-start" x="498" y="218" text-anchor="middle" data-narrow="-390 108">焦黑</text>
+  <text class="label muted narrow-start" x="102" y="249" text-anchor="middle" data-narrow="6 -188">以甜味为主</text>
+  <text class="label muted narrow-start" x="234" y="249" text-anchor="middle" data-narrow="-126 -92">焦糖香渐明显</text>
+  <text class="label muted narrow-start" x="366" y="249" text-anchor="middle" data-narrow="-258 4">苦香更明显</text>
+  <text class="label muted narrow-start" x="498" y="249" text-anchor="middle" data-narrow="-390 100">刺鼻、焦苦</text>
+  <text class="label muted narrow-start" x="102" y="280" text-anchor="middle" data-narrow="6 -196">继续观察浓缩</text>
+  <text class="label muted narrow-start" x="234" y="280" text-anchor="middle" data-narrow="-126 -100">减火，准备离火</text>
+  <text class="label muted narrow-start" x="366" y="280" text-anchor="middle" data-narrow="-258 -4">及时终止受热</text>
+  <text class="label muted warning narrow-start" x="498" y="280" text-anchor="middle" data-narrow="-390 92">重新做一锅</text>
+  <g class="notes">
+    <text class="label" x="300" y="338" text-anchor="middle">接近目标颜色就移离热源，锅的余热还会继续加深颜色</text>
+  </g>
 </svg>

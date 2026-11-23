@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="t d" data-narrow="340 706">
   <title id="t">乳化示意</title>
   <desc id="d">左：油浮在水面上分成两层。右：油被打成小滴，表面由乳化剂分子包住，分散在水中。</desc>
   <style>
@@ -30,7 +30,7 @@
   <rect class="bg" width="600" height="420" rx="12"/>
 
   <!-- Left: separated layers -->
-  <g transform="translate(60 60)">
+  <g transform="translate(60 60)" data-narrow="-10 -44">
     <path class="water" d="M0 90 H180 V270 H0 Z"/>
     <path class="oil" d="M0 40 H180 V90 H0 Z"/>
     <path class="line" d="M0 0 V270 H180 V0"/>
@@ -39,11 +39,14 @@
     <text class="label" x="90" y="305" text-anchor="middle">不搅：分层</text>
   </g>
 
-  <!-- Arrow -->
-  <path class="line" d="M285 200 H325 M315 190 L325 200 L315 210"/>
+  <!-- Arrow: sideways on wide screens, down on phones -->
+  <path class="line wide-only" d="M285 200 H325 M315 190 L325 200 L315 210"/>
+  <g class="narrow-only">
+    <path class="line" d="M170 334 V366 M161 356 L170 366 L179 356"/>
+  </g>
 
   <!-- Right: emulsion, magnified -->
-  <g transform="translate(350 60)">
+  <g transform="translate(350 60)" data-narrow="-285 310">
     <circle class="water" cx="105" cy="135" r="125"/>
     <circle class="line" cx="105" cy="135" r="125"/>
     <use href="#drop" x="60" y="80"/>
@@ -54,8 +57,10 @@
     <text class="label" x="105" y="305" text-anchor="middle">打散：小油滴被乳化剂包住</text>
   </g>
 
-  <g transform="translate(60 402)">
-    <circle class="head" cx="6" cy="-5" r="5"/>
-    <text class="label muted" x="18" y="0">乳化剂的亲水端朝外，亲油端插进油滴（如蛋黄里的卵磷脂）</text>
+  <g class="notes">
+    <g transform="translate(60 402)">
+      <g class="key" data-key="0 -11 12 12"><circle class="head" cx="6" cy="-5" r="5"/></g>
+      <text class="label muted" x="18" y="0">乳化剂的亲水端朝外，亲油端插进油滴（如蛋黄里的卵磷脂）</text>
+    </g>
   </g>
 </svg>
