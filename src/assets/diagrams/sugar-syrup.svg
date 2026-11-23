@@ -7,7 +7,7 @@
     .tick { stroke: var(--text, #24221e); stroke-width: 2; }
     .label { font: 15px "Source Han Sans SC", "PingFang SC", sans-serif; fill: var(--text, #24221e); }
     .muted { fill: var(--muted, #625d53); font-size: 13px; }
-    .strong { fill: var(--primary, #b83e30); }
+    .strong { fill: var(--primary-strong, #9e3529); }
     .border { stroke: var(--border, #d3ccbe); stroke-width: 2; fill: none; }
   </style>
   <rect class="bg" width="600" height="440" rx="12"/>
