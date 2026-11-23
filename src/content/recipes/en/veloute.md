@@ -21,7 +21,7 @@ translated: 2026-11-22
 
 *Velouté* means "velvety" in French: the sauce is milky white with a hint of ivory, smooth in the mouth, and it leaves a thin film on the back of a spoon. It is one of the five mother sauces Escoffier listed, and a close relative of [béchamel](/recipes/bechamel/): béchamel uses milk, velouté uses white stock.
 
-Two things thicken it. When the flour in the roux meets hot liquid, its starch takes up water and swells (see [starch gelatinization](/principles/starch-gelatinization/)); the gelatin drawn out of the bones into the stock adds a further silky body (see [collagen and gelatin](/principles/collagen-gelatin/)). Both Escoffier and a modern culinary textbook land at about 50 g butter and 50 g flour per litre of stock; this uses 600 ml of stock and makes about 400 ml of sauce.
+Two things thicken it. When the flour in the roux meets hot liquid, its starch takes up water and swells (see [starch gelatinization](/principles/starch-gelatinization/)); the gelatin drawn out of the bones into the stock adds a further silky body (see [collagen and gelatin](/principles/collagen-gelatin/)). This makes about 400 ml.
 
 It is rarely served on its own; it is the base for other sauces. Finish it with cream and it becomes *sauce suprême*; add egg yolks and cream and it becomes *sauce allemande*; the sauce in [blanquette de veau](/recipes/blanquette-de-veau/), made from the cooking liquid and a white roux, is also a velouté.
 

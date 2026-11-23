@@ -34,7 +34,7 @@ updated: 2026-11-22
 
 *Velouté* 在法语里是“像天鹅绒”的意思：酱色乳白带一点象牙黄，入口顺滑，能在勺背挂上一层薄膜。它是 Escoffier 列出的五个母酱之一，和[贝夏美酱](/recipes/bechamel/)是近亲：贝夏美用牛奶，天鹅绒酱用白色高汤。
 
-酱变稠靠两样东西。roux 里的面粉遇到热汤，淀粉吸水膨胀，见[淀粉糊化](/principles/starch-gelatinization/)；高汤里熬出来的明胶再给酱添一层黏滑，见[胶原与明胶](/principles/collagen-gelatin/)。Escoffier 和现代教材的比例都在每升高汤约 50 g 黄油、50 g 面粉上下，这里按 600 ml 高汤算，煮好约 400 ml。
+酱变稠靠两样东西。roux 里的面粉遇到热汤，淀粉吸水膨胀，见[淀粉糊化](/principles/starch-gelatinization/)；高汤里熬出来的明胶再给酱添一层黏滑，见[胶原与明胶](/principles/collagen-gelatin/)。这些用量煮好约 400 ml。
 
 它很少单独上桌，多是做别的酱的底子。加奶油收浓就是 *sauce suprême*，加蛋黄和奶油就是 *sauce allemande*；[白汁烩小牛肉](/recipes/blanquette-de-veau/)用原汤和白 roux 做的也是它。
 
