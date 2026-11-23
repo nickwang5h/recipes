@@ -7,7 +7,7 @@ course: dessert
 summary: 蒸熟的糯米奶皮包住芋泥与打发奶油，皮要熟透、馅要冷凉，收口才稳。
 servings: 10
 time: { prep: 100, cook: 70 }
-principles: [starch-gelatinization, heat-transfer]
+principles: [starch-gelatinization, heat-transfer, foams]
 ingredients:
   - group: 芋泥
     items:

@@ -82,3 +82,18 @@ slug 一旦发布就不改。✅ = 已发布。
 | seolleongtang | 雪浓汤 | 菜谱 | korean | 乳化页韩国条目提到，没有菜谱 |
 | sushi-meshi | 寿司醋饭 | 菜谱 | japanese | 酸页日本条目提到，没有菜谱 |
 | pan-di-spagna | 意式海绵蛋糕 | 菜谱 | italian | 示范 foams：全蛋打发 |
+
+## 草稿：overnight/new-pages-2（2026-11-23，待审）
+
+基于 overnight/new-pages。补站里点名提到却没有页面的菜和原理，并给两类没有原理页的做法（熬糖、鱼糜与肉馅）各写一篇原理。没有封面、步骤图和营养数据。
+
+| slug | 标题 | 类型 | 菜系 / category | 缺口 |
+|---|---|---|---|---|
+| sugar-syrup | 熬糖：浓度、温度与结晶 | 原理 | reactions | 拔丝、冰糖葫芦、反沙芋头只挂了焦糖化，熬糖阶段和返砂没有原理 |
+| meat-paste | 鱼糜与肉馅：盐、搅打与成胶 | 原理 | starch-protein | 鱼圆、丸子、狮子头的“上劲”和“打水”只在盐页提了一句 |
+| qing-tang-yu-yuan | 清汤鱼圆 | 菜谱 | chinese | 浙菜页第二节讲它，没有菜谱 |
+| oeufs-a-la-neige | 雪蛋 | 菜谱 | french | 泡沫页法餐条目提到，没有菜谱 |
+| jokbal | 韩式酱猪蹄 | 菜谱 | korean | 胶原页韩国条目提到，没有菜谱 |
+| croccante | 杏仁脆糖 | 菜谱 | italian | 焦糖化页意大利条目提到；示范 sugar-syrup |
+| crema-pasticcera | 意式卡仕达酱 | 菜谱 | italian | 意式海绵蛋糕页提到的夹馅；淀粉让蛋奶酱经得起火 |
+| chirashi-zushi | 散寿司 | 菜谱 | japanese | 酸页和寿司醋饭页提到，没有菜谱 |

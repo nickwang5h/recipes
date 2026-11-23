@@ -8,7 +8,7 @@ course: dessert
 summary: 蛋黄、糖与 Marsala 酒边加热边搅打，形成温热、轻盈的酒香泡沫。
 servings: 4
 time: { prep: 5, cook: 10 }
-principles: [protein-coagulation, heat-transfer]
+principles: [protein-coagulation, heat-transfer, foams]
 ingredients:
   - group: 酒香蛋黄泡沫
     items:

@@ -7,7 +7,7 @@ course: dessert
 summary: 红糖、鸡蛋和淡奶蒸成松软的糕，打入的空气与泡打粉共同膨松，蒸汽把内部定形。
 servings: 8
 time: { prep: 70, cook: 30 }
-principles: [protein-coagulation, gluten, heat-transfer]
+principles: [protein-coagulation, gluten, heat-transfer, foams]
 ingredients:
   - group: 蛋糊
     items:

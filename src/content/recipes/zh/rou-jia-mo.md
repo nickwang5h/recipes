@@ -7,7 +7,7 @@ course: staple
 summary: 带皮五花肉在香料卤汁里煨软，切碎后拌少量肉汁，夹进干烙的白吉馍，馍有嚼劲、肉软而润。
 servings: 4
 time: { prep: 90, cook: 130 }
-principles: [collagen-gelatin, gluten, heat-transfer]
+principles: [collagen-gelatin, gluten, heat-transfer, leavening]
 ingredients:
   - group: 腊汁肉
     items:

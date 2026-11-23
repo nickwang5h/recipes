@@ -8,7 +8,7 @@ tags: [bento]
 summary: 发面包住葱姜猪肉生馅，二次醒发后蒸熟。面皮蓬松，肉馅多汁，关键是揉匀排气和分次打水。
 servings: 4
 time: { prep: 120, cook: 35 }
-principles: [gluten, salt, protein-coagulation]
+principles: [gluten, salt, protein-coagulation, leavening]
 ingredients:
   - group: 发面
     items:

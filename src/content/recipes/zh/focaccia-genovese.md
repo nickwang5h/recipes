@@ -9,7 +9,7 @@ tags: [bento]
 summary: 薄面团发起后压出深凹窝，浇上盐水与橄榄油，烤成表面酥香、窝底湿润的热那亚面包。
 servings: 4
 time: { prep: 160, cook: 25 }
-principles: [gluten, starch-gelatinization, maillard-reaction]
+principles: [gluten, starch-gelatinization, maillard-reaction, leavening]
 ingredients:
   - group: 面团
     items:

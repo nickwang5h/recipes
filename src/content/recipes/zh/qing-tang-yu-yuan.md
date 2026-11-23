@@ -1,0 +1,56 @@
+---
+title: 清汤鱼圆
+cuisine: chinese
+course: soup
+summary: 草鱼刮下鱼茸、过筛去刺，加盐朝一个方向搅到发黏，再加蛋清和白酒，挤进冷水里小火慢煮、不让水滚。鱼圆洁白，松软得像豆腐。
+servings: 8
+time: { prep: 120, cook: 35 }
+principles: [meat-paste, salt, protein-coagulation]
+ingredients:
+  - group: 鱼浆
+    items:
+      - { ref: grass-carp, qty: 1, unit: 条, note: 约 2.5–3 kg，请鱼档宰杀、去鳞去内脏 }
+      - { ref: scallion, qty: 60, unit: g }
+      - { ref: ginger, qty: 35, unit: g, note: 老姜 }
+      - { ref: water, qty: 300, unit: ml, note: 冷水，做葱姜水 }
+      - { ref: salt, qty: 15, unit: g }
+      - { ref: egg, name: 蛋清, qty: 1, unit: 个 }
+      - { ref: baijiu, qty: 20, unit: ml, note: 中国白酒，不是白葡萄酒 }
+  - group: 煮鱼圆
+    items:
+      - { ref: water, note: 一大锅冷水，另备一碗冷水调温度 }
+      - { ref: salt, note: 少许，最后调汤 }
+sources:
+  - title: "食譜：天香樓的杭州魚丸湯"
+    author: 陳靜宜，米其林指南台灣
+    url: https://guide.michelin.com/tw/zh_TW/article/dining-in/recipe-hangzhou-fishball-soup
+  - title: "Recipe: Hangzhou Fish Ball Soup"
+    author: Chen Ching Yi，Vincent Leung 译，MICHELIN Guide
+    url: https://guide.michelin.com/tw/en/article/dining-in/recipe-hangzhou-fishball-soup
+updated: 2026-11-23
+---
+
+清汤鱼圆是杭州菜：鱼圆洁白细嫩，入口松软得像豆腐，带着一股空气感。杭州鱼圆用草鱼，鱼浆里不放淀粉，全靠鱼肉自己成形。
+
+这靠的是[鱼糜成胶](/principles/meat-paste/)。[盐](/principles/salt/)把鱼肉里的蛋白质溶出来，朝一个方向长时间搅，鱼浆变黏，兜住葱姜水和搅进去的空气。最后在不滚的水里慢慢加热，蛋白质凝固定形，见[蛋白质变性与凝固](/principles/protein-coagulation/)。讲究的会配整鸭加金华火腿熬三小时的鸭汤；省掉鸭汤，就用煮鱼圆的水加盐成汤。
+
+## 步骤
+
+1. 草鱼去头，剖成两半，去掉大骨，再片掉深色的红肉。
+2. 用汤匙从鱼尾往鱼头方向反复刮下鱼肉，这样不容易带下鱼刺。
+3. 葱和姜分别拍扁，放进 300 ml 冷水，用手捏碎、搓揉，做成葱姜水。
+4. 刮下的鱼肉加葱姜水，用果汁机打成细泥。
+5. 鱼浆倒在极细的滤网上，手掌朝同一方向边抹边压，把鱼浆压过筛，筛上剩下的细刺和筋膜丢掉。
+6. 过筛的鱼浆放进大碗，加 15 g 盐，用手朝同一方向搅约 30 分钟，到鱼浆略微凝住、明显变稠。用手搅，不用电动打蛋器，马达会让鱼浆变热，鱼圆的软硬就变了。
+7. 加入蛋清，朝同一方向继续搅 10 分钟。
+8. 加入白酒，再搅 10 分钟，到鱼浆发黏，搅的时候把空气带进去。
+9. 准备一大锅冷水。取一团鱼浆放在微弯的掌心与手指交界处，手轻轻一翻，让它自己滑进水里。鱼圆应浮在水面，露出约三分之一。
+10. 鱼圆全部下锅后，连水开小火加热。水只冒细小的泡，约 95°C，不要滚；用筷子轻轻翻动鱼圆，水太热就加冷水降温。
+11. 保持这个温度煮 3 分钟，关火。捞起最大的一个切开，中心全白、不透明。
+12. 鱼圆留在热水里，加少许盐调味，连汤盛进碗里。
+
+## 要点
+
+- **鱼圆一下水就散，煮成一锅糊**：盐后搅得不够，蛋白质还没溶出来连成浆，见[鱼糜与肉馅](/principles/meat-paste/)。搅足时间，鱼浆明显变稠、发黏再挤。
+- **鱼圆沉底，煮出来扁塌**：鱼浆搅得不够久，带进的空气少，撑不起来。先挤一个试，能浮起、露出三分之一，再挤其余的。
+- **鱼圆发硬、碰碎**：水滚了，鱼圆受热太猛，又在锅里互相碰撞，见[蛋白质变性与凝固](/principles/protein-coagulation/)。水温保持在冒小泡，一滚就加冷水。

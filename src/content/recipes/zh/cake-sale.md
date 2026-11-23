@@ -9,7 +9,7 @@ tags: [bento]
 summary: 火腿和格鲁耶尔奶酪拌进蛋糊，在磅蛋糕模里烤成松软的咸味蛋糕，凉了切片也好吃。
 servings: 6
 time: { prep: 20, cook: 40 }
-principles: [gluten, protein-coagulation]
+principles: [gluten, protein-coagulation, leavening]
 ingredients:
   - group: 蛋糊
     items:

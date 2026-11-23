@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" role="img" aria-labelledby="t d">
+  <title id="t">The longer a syrup cooks, the less water it holds, the hotter it gets and the harder it sets</title>
+  <desc id="d">A vertical thermometer marked from bottom to top: thread 110–113°C (230–235°F), soft ball 113–116°C (235–240°F), firm ball 118–121°C (245–250°F), hard ball 121–129°C (250–265°F), soft crack 132–143°C (270–290°F), hard crack 149–154°C (300–310°F); above that, no water left at 160°C (320°F), browning at 170°C (340°F), burnt and bitter above 177°C (350°F). Beside each stage, what a drop does in cold water and the sugar concentration. The column shifts from clear to amber to dark brown.</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .tube { fill: none; stroke: var(--text, #24221e); stroke-width: 2; }
+    .tick { stroke: var(--text, #24221e); stroke-width: 2; }
+    .label { font: 15px "Helvetica Neue", Arial, "Source Han Sans SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+    .strong { fill: var(--primary, #b83e30); }
+    .border { stroke: var(--border, #d3ccbe); stroke-width: 2; fill: none; }
+  </style>
+  <rect class="bg" width="600" height="440" rx="12"/>
+  <text class="label" x="32" y="40">Hotter means less water and a harder set</text>
+
+  <!-- syrup colour column: clear at bottom, amber and brown at top -->
+  <rect x="60" y="66" width="34" height="330" rx="6" fill="#f6eed6"/>
+  <rect x="60" y="66" width="34" height="62" fill="#c98a2b"/>
+  <rect x="60" y="66" width="34" height="26" fill="#7a3d14"/>
+  <rect x="60" y="128" width="34" height="34" fill="#e8c27a"/>
+  <rect class="tube" x="60" y="66" width="34" height="330" rx="6"/>
+
+  <g class="tick">
+    <path d="M94 372 h14 M94 336 h14 M94 311 h14 M94 286 h14 M94 230 h14 M94 176 h14 M94 146 h14 M94 116 h14 M94 84 h14"/>
+  </g>
+
+  <text class="label" x="118" y="377">110–113°C (230–235°F)</text>
+  <text class="label muted" x="320" y="377">Thread, ~80%: no ball</text>
+
+  <text class="label" x="118" y="341">113–116°C (235–240°F)</text>
+  <text class="label muted" x="320" y="341">Soft ball, ~85%: flattens</text>
+
+  <text class="label" x="118" y="316">118–121°C (245–250°F)</text>
+  <text class="label muted" x="320" y="316">Firm ball, ~87%: squeezes flat</text>
+
+  <text class="label" x="118" y="291">121–129°C (250–265°F)</text>
+  <text class="label muted" x="320" y="291">Hard ball, ~92%: squashes</text>
+
+  <text class="label" x="118" y="235">132–143°C (270–290°F)</text>
+  <text class="label muted" x="320" y="235">Soft crack, ~95%: bends, breaks</text>
+
+  <text class="label" x="118" y="181">149–154°C (300–310°F)</text>
+  <text class="label muted" x="320" y="181">Hard crack, ~99%: snaps</text>
+
+  <text class="label" x="118" y="151">~160°C (320°F)</text>
+  <text class="label muted" x="320" y="151">No water left, light amber</text>
+
+  <text class="label" x="118" y="121">~170°C (340°F)</text>
+  <text class="label muted" x="320" y="121">Starts to brown</text>
+
+  <text class="label strong" x="118" y="89">Above ~177°C (350°F): burnt, bitter</text>
+
+  <path class="border" d="M32 410 H568"/>
+  <text class="label muted" x="32" y="430">Sea-level figures. Test the thermometer in boiling water: 100°C (212°F).</text>
+</svg>
