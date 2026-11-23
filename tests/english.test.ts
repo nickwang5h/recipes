@@ -59,6 +59,8 @@ for (const collection of ['recipes', 'principles', 'cuisines', 'regions']) {
         if (zh.data.updated) expect(String(en.data.translated), 'Chinese page changed since this translation').toBe(String(zh.data.updated));
         expect(links(en.body)).toEqual(links(zh.body));
         if (collection !== 'recipes') return;
+        // Other cuisines show their own name under the English title, copied from the Chinese file.
+        if (zh.data.cuisine !== 'chinese') expect(en.data.original, 'original: copy the Chinese file\'s original').toBe(zh.data.original);
 
         expect(en.data.ingredients.map((g: { items: unknown[] }) => g.items.length)).toEqual(
           zh.data.ingredients.map((g: { items: unknown[] }) => g.items.length),
