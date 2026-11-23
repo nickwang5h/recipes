@@ -6,7 +6,7 @@ original: Zhècài · Zhejiang cuisine
 summary: 滑炒让虾仁嫩而清香，鱼茸成胶做出轻软鱼圆，慢煨把带皮肉化成软糯而仍完整的方块。
 order: 6
 principles: [protein-coagulation, starch-gelatinization, collagen-gelatin, aromatics]
-featured: []
+featured: [dong-po-rou, longjing-xia-ren]
 sources:
   - title: "Land of Fish and Rice（2016）"
     author: Fuchsia Dunlop
