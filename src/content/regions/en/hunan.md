@@ -3,7 +3,7 @@ title: Hunan
 original: Xiāngcài · Hunan cuisine
 summary: Fresh-chili quick stir-fries, steaming under a layer of chopped pickled chilies, and steaming with cured meats each bring out fresh heat, sour saltiness and smoky aroma separately, and cutting and heat keep the texture.
 coverAlt: Fish head with chopped chilies, stir-fried pork with green peppers and cured pork
-translated: 2026-10-01
+translated: 2026-11-23
 ---
 
 The Xiang River valley, the Dongting Lake area and the mountains of western Hunan send the Hunan kitchen fish, vegetables and smoked and cured goods. The heat in Hunan cooking has layers: fresh chilies are clean and fragrant, pickled chilies sour and salty, dried chilies dry-fragrant. Quick stir-fries and steamed dishes each handle one of these, and each protects the tenderness, crispness or softness of the main ingredient.
@@ -18,7 +18,7 @@ Cut chilies release their heat more easily, and hot oil catches some of the arom
 
 ## Steaming under chopped chilies: let the sauce form on the fish
 
-Fish head with chopped chilies is made by spreading chopped pickled chilies over the fish head and steaming it on the plate. Salted, fermented chilies already carry saltiness and ripe chili aroma, and some are sour too, so taste them before deciding how much more salt to add. See [fermentation](/principles/fermentation/). Bottled chopped chilies differ in sourness and saltiness; taste the final dish together with the cooked fish.
+[Steamed Fish Head with Chopped Chilies](/recipes/duo-jiao-yu-tou/) is made by spreading chopped pickled chilies over the fish head and steaming it on the plate. Salted, fermented chilies already carry saltiness and ripe chili aroma, and some are sour too, so taste them before deciding how much more salt to add. See [fermentation](/principles/fermentation/). Bottled chopped chilies differ in sourness and saltiness; taste the final dish together with the cooked fish.
 
 Steam condenses on the fish head and the plate and delivers heat, while the inside warms slowly by conduction; see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/). Splitting the fish head and laying it flat narrows the gap between thick and thin parts. The fish juices, the chili juices and the water condensed from the steam gather in the plate and become a sauce against the fish; dip the meat in the plate juices as you eat, and the flavour is complete.
 
@@ -26,7 +26,7 @@ The hard parts of this dish are whether the steamer can hold the plate and how t
 
 ## Steaming with cured meats: steam the dry aroma moist again
 
-Steamed mixed cured meats puts smoked and cured ingredients such as cured pork, cured chicken and cured fish on one plate and steams them. Curing, drying and smoking have already changed their flavour and moisture; steaming them together heats them again, softens them and releases fat and juices. The different cured meats meet in the same plate sauce, so each mouthful carries both meat fragrance and smoke.
+[Steamed Hunan Cured Meats](/recipes/la-wei-he-zheng/) puts smoked and cured ingredients such as cured pork, cured chicken and cured fish on one plate and steams them. Curing, drying and smoking have already changed their flavour and moisture; steaming them together heats them again, softens them and releases fat and juices. The different cured meats meet in the same plate sauce, so each mouthful carries both meat fragrance and smoke.
 
 Steam supplies the heat, the plate juices and the water in the ingredients soften the dry, hard parts, and thickness decides when the centre is heated through; see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/). Pieces cut to a similar thickness and spread out a little steam more evenly than cured meats piled into a thick lump. The finished dish should be hot through and easy to bite apart, with each meat keeping its own texture.
 
