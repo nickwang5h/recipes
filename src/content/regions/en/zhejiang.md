@@ -3,7 +3,7 @@ title: Zhejiang
 original: Zhècài · Zhejiang cuisine
 summary: Smooth stir-frying keeps shrimp tender and delicately tea-scented, fish paste that sets into a gel makes light, soft fish balls, and slow simmering turns skin-on pork into soft, glutinous squares that still hold together.
 coverAlt: Longjing tea shrimp, Dongpo pork and clear-soup fish balls
-translated: 2026-10-01
+translated: 2026-11-23
 ---
 
 Zhejiang has freshwater produce from rivers and lakes and fish from the coast, and tea, bamboo shoots and rice wine go into kitchens in different places. Zhejiang cooking can be clean and fresh, or soft and glutinous. Below, Hangzhou's Longjing tea shrimp, clear-soup fish balls and Dongpo pork show how one kitchen makes shrimp tender, fish light and pork fall-apart soft.
@@ -18,7 +18,7 @@ Tea liquid brings aroma and also water and astringency. Cook the shrimp first an
 
 ## Fish paste that sets into a gel: the lightness of clear-soup fish balls
 
-Clear-soup fish balls are made by scraping fish meat into a fine paste, beating it with salt and water, squeezing it into rounds and cooking them in water. Hangzhou has ways of using little or no starch, where the balls rely on the structure of the fish itself to hold water, and the texture aimed for is light and soft. Scraping the paste also removes sinew, membrane and fine bones; the finer the scraping, the fewer rough bits in the result.
+[Hangzhou fish balls in clear soup](/recipes/qing-tang-yu-yuan/) are made by scraping fish meat into a fine paste, beating it with salt and water, squeezing it into rounds and cooking them in water. Hangzhou has ways of using little or no starch, where the balls rely on the structure of the fish itself to hold water, and the texture aimed for is light and soft. Scraping the paste also removes sinew, membrane and fine bones; the finer the scraping, the fewer rough bits in the result.
 
 Salt dissolves some of the muscle protein, and beating turns the paste into one sticky mass; when heated, the protein links into a network that holds water. For the mechanism, see [Salt: Seasoning, Osmosis and Curing](/principles/salt/) and [Protein Denaturation and Coagulation](/principles/protein-coagulation/). Mix the water in a little at a time, so the paste takes up each addition. If you add too much, the limited protein can't hold it, and more beating won't rescue it.
 

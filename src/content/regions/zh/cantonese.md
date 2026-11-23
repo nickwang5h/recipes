@@ -6,7 +6,7 @@ original: Yuècài · Cantonese cuisine
 summary: 浸与蒸把鲜嫩停在合适熟度，猛火小炒迅速散水生香，姜葱、豉油和薄浆各自完成收尾。
 order: 3
 principles: [heat-transfer, protein-coagulation, maillard-reaction, starch-gelatinization]
-featured: [steamed-fish, bai-zhuo-cai-xin, chi-zhi-pai-gu]
+featured: [bai-qie-ji, steamed-fish, bai-zhuo-cai-xin, chi-zhi-pai-gu]
 sources:
   - title: The Breath of a Wok（2004）
     author: Grace Young、Alan Richardson
@@ -15,13 +15,13 @@ sources:
   - title: White Cut Chicken with Ginger Scallion Sauce（白切雞配薑蔥醬）
     author: Daddy Lau，Made With Lau
     url: https://www.madewithlau.com/recipes/white-cut-chicken
-updated: 2026-10-01
+updated: 2026-11-23
 ---
 广东有江有海，市场上又天天是鲜货，所以粤菜从鲜度和口感出发。本页讲广府常见的三种做法：浸、清蒸和猛火小炒，看同一套厨房怎样既保住柔嫩，又炒出短促的煸香。
 
 ## 浸与白切：水温要温和，中心也要熟透
 
-**白切鸡**是把鸡放在水里煮浸到熟，凉后斩件，另配姜葱蘸料。靠温和的水温控制肉怎么受热，鸡肉的本味和蘸料的味道各管各的。
+**[白切鸡](/recipes/bai-qie-ji/)**是把鸡放在水里煮浸到熟，凉后斩件，另配姜葱蘸料。靠温和的水温控制肉怎么受热，鸡肉的本味和蘸料的味道各管各的。
 
 整只鸡外层先热，可胸、腿和贴骨的地方厚薄不同。浸煮时让热水灌进腹腔、包住每个部位，受热就均匀些，见[传热](/principles/heat-transfer/)。水面保持轻轻翻动，外层受热的程度比较好控制；一直猛滚，厚的地方熟的时候，薄的地方早已煮过头了。
 

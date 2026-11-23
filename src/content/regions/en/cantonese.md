@@ -3,13 +3,13 @@ title: Cantonese
 original: Yuècài · Cantonese cuisine
 summary: Poaching and steaming stop delicate food at the right doneness, high-heat quick stir-frying drives off water and builds aroma, and ginger and green onion, seasoned soy sauce and a thin coating each do their own finishing.
 coverAlt: White cut chicken with ginger and green onion sauce, steamed fish and a bamboo steamer
-translated: 2026-10-01
+translated: 2026-11-23
 ---
 Guangdong has rivers and sea, and its markets are full of fresh goods every day, so Cantonese cooking starts from freshness and texture. This page covers three methods common in Guangfu cooking, poaching, steaming and high-heat quick stir-frying, and looks at how one kitchen keeps food tender and also builds a brief fried fragrance.
 
 ## Poaching and white cut: gentle water, and a cooked centre
 
-**White cut chicken** is a chicken simmered and steeped in water until done, cooled, chopped into pieces and served with a ginger and green onion dip. A gentle water temperature controls how the meat takes heat, and the taste of the chicken and the taste of the dip each do their own work.
+**[Cantonese poached chicken](/recipes/bai-qie-ji/)** (white cut chicken) is a chicken simmered and steeped in water until done, cooled, chopped into pieces and served with a ginger and green onion dip. A gentle water temperature controls how the meat takes heat, and the taste of the chicken and the taste of the dip each do their own work.
 
 The outside of a whole chicken heats first, but the breast, thighs and the meat next to the bone are different thicknesses. When poaching, let hot water fill the cavity and surround every part, and the heat evens out; see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/). Keep the surface of the water gently moving and it is easier to control how much heat the outside takes. At a hard boil, by the time the thick parts are done the thin parts are long overcooked.
 

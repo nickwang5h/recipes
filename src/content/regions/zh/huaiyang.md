@@ -6,7 +6,7 @@ original: Sūcài / Huáiyáng cài · Jiangsu / Huaiyang cuisine
 summary: 细致刀工改变豆腐和肉的质地，鲜汤煮入干丝，温和慢炖让狮子头松软而仍能成形。
 order: 4
 principles: [knife-work, umami, protein-coagulation, collagen-gelatin]
-featured: [yang-zhou-chao-fan]
+featured: [yang-zhou-chao-fan, wen-si-dou-fu, da-zhu-gan-si, qing-dun-shi-zi-tou]
 sources:
   - title: Land of Fish and Rice（2016）
     author: Fuchsia Dunlop

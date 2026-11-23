@@ -6,7 +6,7 @@ original: Zhècài · Zhejiang cuisine
 summary: 滑炒让虾仁嫩而清香，鱼茸成胶做出轻软鱼圆，慢煨把带皮肉化成软糯而仍完整的方块。
 order: 6
 principles: [protein-coagulation, starch-gelatinization, collagen-gelatin, aromatics]
-featured: [dong-po-rou, longjing-xia-ren]
+featured: [dong-po-rou, longjing-xia-ren, qing-tang-yu-yuan]
 sources:
   - title: "Land of Fish and Rice（2016）"
     author: Fuchsia Dunlop
@@ -15,7 +15,7 @@ sources:
   - title: 杭州人必吃的清汤鱼圆 用英语怎么说？
     author: 吴艳君，都市快报
     url: https://hznews.hangzhou.com.cn/kejiao/content/2023-04/18/content_8515251_0.htm
-updated: 2026-10-01
+updated: 2026-11-23
 ---
 
 浙江有河湖水产，也有沿海鱼鲜，茶、笋和米酒则进了各地不同的厨房。浙菜有清鲜，也有软糯。下面以杭州的龙井虾仁、清汤鱼圆和东坡肉为例，看同一套厨房怎样把虾做嫩、鱼做轻、肉做酥。
@@ -30,7 +30,7 @@ updated: 2026-10-01
 
 ## 鱼茸成胶：清汤鱼圆的轻软
 
-清汤鱼圆是把鱼肉刮成细茸，加盐和水搅拌，再挤成圆形下水煮熟。杭州有少放或不放淀粉的做法，鱼圆靠鱼肉自己的结构兜住水，要的是轻软的口感。刮茸时还要把筋膜和细刺去掉，刮得越细，成品里粗糙的颗粒越少。
+[清汤鱼圆](/recipes/qing-tang-yu-yuan/)是把鱼肉刮成细茸，加盐和水搅拌，再挤成圆形下水煮熟。杭州有少放或不放淀粉的做法，鱼圆靠鱼肉自己的结构兜住水，要的是轻软的口感。刮茸时还要把筋膜和细刺去掉，刮得越细，成品里粗糙的颗粒越少。
 
 盐让一部分肌肉蛋白溶出来，搅拌把鱼茸搅成有黏性的一整团。一加热，蛋白质连成能留住水的网，原理见[盐](/principles/salt/)和[蛋白质凝固](/principles/protein-coagulation/)。水要一次一点地拌进去，让每次加的水都被鱼茸吃住。水加多了，有限的蛋白质兜不住，再搅也救不回来。
 
