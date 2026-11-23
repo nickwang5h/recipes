@@ -546,7 +546,9 @@ button.chip[aria-pressed="true"] { background: var(--text); border-color: var(--
 
 .timer-dock {
   position: fixed; z-index: 20; left: 50%; bottom: calc(0.75rem + env(safe-area-inset-bottom)); transform: translateX(-50%);
-  width: min(30rem, calc(100vw - 1.5rem)); display: grid; gap: 0.35rem; padding: 0.5rem;
+  /* The one column is as wide as the bar and no wider: without minmax(0, …) a long recipe name, which does not wrap,
+     sets the row's width, and the row's cancel button is pushed out past the bar (off the screen on a phone). */
+  width: min(30rem, calc(100vw - 1.5rem)); display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.35rem; padding: 0.5rem;
   background: var(--text); color: var(--bg); border-radius: 14px; box-shadow: 0 8px 28px -8px rgb(0 0 0 / 0.5);
 }
 .timer-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.3rem 0.4rem 0.3rem 0.6rem; border-radius: 9px; }
