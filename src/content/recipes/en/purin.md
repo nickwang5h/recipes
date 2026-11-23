@@ -17,7 +17,7 @@ ingredients:
   - group: Water bath
     items:
       - { name: "water", note: "heated, then poured into the outer baking pan until it reaches halfway up the moulds" }
-translated: 2026-10-02
+translated: 2026-11-22
 ---
 
 Japanese caramel pudding (*purin*) sets soft but firm, and the brown caramel runs down to the plate when it is turned out. It is made with whole eggs, whole milk and sugar, and eaten chilled. The pudding takes its shape from [protein coagulation](/principles/protein-coagulation/); the bitter-sweet aroma of the caramel comes from the [caramelization](/principles/caramelization/) of the sugar as it cooks.
