@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 446" role="img" aria-labelledby="t d" data-narrow="340 516">
   <title id="t">先放进气、兜住，受热时气泡撑大、水变成蒸汽，再定形</title>
-  <desc id="d">左边是受热前的三种气源，每种一行小图：出芽的酵母冒出小气泡，一小堆小苏打遇到一滴酸冒泡，蛋抽后面拖着一串气泡，三行的箭头汇到中间。中间是面筋网络兜住的小气泡。右边是受热后变大的气泡，泡里冒着水蒸气，泡壁已经变硬。下方列出酵母发酵最旺和死亡的温度、泡打粉的两段放气、刚烤好的面包中心约 93°C，以及受热时水变成的水蒸气。</desc>
+  <desc id="d">左边是受热前的三种气源，每种一行小图：出芽的酵母冒出小气泡，一小堆小苏打遇到一滴酸冒泡，蛋抽后面拖着一串气泡，三行的箭头汇到中间。中间是面筋网络兜住的小气泡。右边是受热后变大的气泡，泡里冒着水蒸气，泡壁已经变硬。下方列出酵母产气最快和死亡的温度、泡打粉的两段放气、刚烤好的面包中心约 93°C，以及受热时水变成的水蒸气。</desc>
   <style>
     .bg { fill: var(--surface, #e9e5dc); }
     .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
@@ -94,7 +94,7 @@
 
   <path class="border wide-only" d="M32 296 H568"/>
   <g class="notes">
-    <text class="label muted" x="32" y="326">约 27–35°C：酵母发酵最旺。</text>
+    <text class="label muted" x="32" y="326">约 27–35°C：酵母产气最快。</text>
     <text class="label muted" x="32" y="352">约 55–60°C：酵母死亡，不再产气。</text>
     <text class="label muted" x="32" y="378">泡打粉：一部分遇水就放气，一部分要又湿又热。</text>
     <text class="label muted" x="32" y="404">约 93°C：刚烤好的面包中心。</text>
