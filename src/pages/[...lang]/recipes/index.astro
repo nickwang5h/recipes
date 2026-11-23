@@ -141,6 +141,8 @@ const inSeason = Object.fromEntries(
   </div>
   <p class="season-note" data-season-note hidden></p>
   <script type="application/json" id="in-season" set:html={JSON.stringify(inSeason)} />
+  {/* The cards' titles are h3: this names the list for a screen reader, so the outline does not jump from h1 to h3. */}
+  <h2 class="visually-hidden">{lang === 'en' ? 'All recipes' : '全部菜谱'}</h2>
   <ul class="card-grid" data-recipe-list>
     {recipes.map((recipe) => (
       <li data-cuisine={recipe.data.cuisine.id} data-course={recipe.data.course} data-minutes={recipe.data.time.prep + recipe.data.time.cook} data-months={seasonOf(recipe)} data-tags={recipe.data.tags.join(' ')} data-minor={recipe.data.minor ? '' : undefined} data-component={recipe.data.component ? '' : undefined} hidden={!shownAtFirst.has(recipe.id)}>
