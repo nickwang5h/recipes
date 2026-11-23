@@ -7,7 +7,7 @@ ingredients:
   - group: Pork and toasted rice powder
     items:
       - { name: ground pork, note: "coarsely ground, or chop pork shoulder fine with a knife" }
-      - { name: glutinous rice, note: "raw rice, dry-toasted and ground to a coarse powder; about 1 heaping tablespoon" }
+      - { name: glutinous rice, note: "raw rice, dry-toasted and ground to a coarse powder; about 1 heaping tbsp" }
       - { name: water, note: "keeps the pork moist as it cooks" }
   - group: Seasoning and herbs
     items:

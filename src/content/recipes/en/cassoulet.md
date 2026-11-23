@@ -32,7 +32,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-*Cassoulet* is a pot of white beans and meat from Languedoc in France: beans and meats are each cooked through, then layered in a clay pot and baked slowly. The meats vary by region; here I use the classic combination of lamb, pork belly and garlic sausage. The liquid comes from the bean cooking water, and long-stewed pork rind gives off [gelatin](/principles/collagen-gelatin/), which binds the liquid between the beans and meats.
+*Cassoulet* is a pot of white beans and meat from Languedoc in France: beans and meats are each cooked through, then layered in a clay pot and baked slowly. The meats vary by region; here it is the classic combination of lamb, pork belly and garlic sausage. The liquid comes from the bean cooking water, and long-stewed pork rind gives off [gelatin](/principles/collagen-gelatin/), which binds the liquid between the beans and meats.
 
 The beans must be cooked until soft in the centre before they go in the oven. The starch in the beans [gelatinizes](/principles/starch-gelatinization/), so they eat soft and creamy, and the surface slowly loses water and colours in the oven, with the roasted aroma of the [Maillard reaction](/principles/maillard-reaction/). A finished cassoulet can be spooned out with whole beans and tender meat, moist inside with a thin crisp top. The beans must be soaked overnight, and cooking and baking also need half a day.
 

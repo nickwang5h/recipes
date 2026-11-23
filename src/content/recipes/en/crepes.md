@@ -32,7 +32,7 @@ When you stir, the flour absorbs water and forms [gluten](/principles/gluten/). 
 4. Preheat a small skillet over medium heat and brush it thinly with butter. Pour in about 40 ml of batter, then right away lift the pan, tilt it and swirl once to cover the bottom. If the edge has already set while thick batter still pools in the centre, pour in a little less next time.
 5. When no runny batter is left on the surface and the edge starts to loosen, flip with a thin spatula. The first side usually takes about 1 minute and the second only a dozen or so seconds. Take it out once light brown spots appear.
 6. Stack the finished crêpes and keep them covered. Cook the rest of the batter the same way, stirring gently before each one. When the pan dries out, brush on a little more butter, but don't let the butter collect in a pool.
-7. While still warm, fold each crêpe into quarters and serve with a little sugar, to taste. If the first one is clearly heavy, add water to the remaining batter a tablespoon at a time, stir well and try another.
+7. While still warm, fold each crêpe into quarters and serve with a little sugar, to taste. If the first one is clearly heavy, add water to the remaining batter 1 tbsp at a time, stir well and try another.
 
 ## Key points
 

@@ -28,7 +28,7 @@ Butter is already a water-in-oil emulsion, and the milk proteins in it are a nat
 
 1. Put the shallots, white wine and vinegar in a small pot and reduce over medium heat for about 3–5 minutes, until only about 2 tbsp remain and the texture is like syrup. The bottom of the pot must **still be moist**; do not reduce it dry.
 2. (Optional) Add the whipping cream and boil it for a few seconds.
-3. Turn the heat to its lowest, or simply move the pot off the heat. Add 2–3 pieces of cold butter and whisk constantly, letting the butter melt into a creamy white sauce; add the next batch when the last is almost melted. The sauce should stay **warm** throughout, and the edge of the pot should never bubble.
+3. Turn the heat to its lowest, or move the pot off the heat. Add 2–3 pieces of cold butter and whisk constantly, letting the butter melt into a creamy white sauce; add the next batch when the last is almost melted. The sauce should stay **warm** throughout, and the edge of the pot should never bubble.
 4. When all the butter is in, the sauce should be thick and glossy, like thin cream. Season with salt and white pepper. For a smoother texture, strain out the shallots.
 5. Use it right away. If it has to wait, pour it into a preheated thermos or keep it in a bath of warm water, but not over the heat.
 
@@ -38,5 +38,5 @@ It suits steamed or poached white fish, scallops and white asparagus.
 
 - **Oily and separated**: the temperature was too high, roughly above 60°C (140°F), and the emulsion broke. Take it off the heat at once, add 1 tbsp of cold water or cold cream and whisk hard. If it still won't come back, put 1 tbsp of warm reduction in another pot and whisk the broken sauce into it a little at a time.
 - **Thick, stiff and dull on the surface**: the temperature was too low and the fat in the butter has set again. Warm it gently over a bath of warm water, whisking as it heats.
-- **Reduction cooked dry**: with no water phase, the butter has nowhere to disperse and turns oily from the start. Add a tablespoon or two of water before beginning.
+- **Reduction cooked dry**: with no water phase, the butter has nowhere to disperse and turns oily from the start. Add 1–2 tbsp of water before beginning.
 - **Cream or no cream**: the traditional method uses none. A little cream adds extra milk proteins that make the sauce more forgiving of temperature, which suits a first attempt.
