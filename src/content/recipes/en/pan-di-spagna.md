@@ -32,7 +32,7 @@ There is no baking powder in it; all the volume comes from whipped eggs. Whole e
 4. Sift the dry ingredients over the batter in two or three additions, folding each in with a spatula from the bottom up while turning the bowl, and stop as soon as no dry flour shows. Be gentle; the batter will lose a little volume but should still be thick and airy.
 5. Pour the batter into the pan at once and turn the pan to level the top; do not tap it on the counter.
 6. Bake on the lowest rack for about 50 minutes, without opening the oven door. It is done when the top is golden, springs back when pressed lightly, and a skewer pushed into the centre comes out dry.
-7. Turn the pan upside down onto a rack lined with parchment for a few minutes, then unmould and let the cake cool completely on the rack. Wrapped in plastic wrap, it keeps 2 days at room temperature, or 1 month frozen.
+7. Turn the pan upside down onto a rack lined with parchment and leave it until barely warm, then unmould and let the cake cool completely on the rack. Wrapped in plastic wrap, it keeps 2 days at room temperature, or 1 month frozen.
 
 ## Key points
 
