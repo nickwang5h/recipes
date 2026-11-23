@@ -6,7 +6,7 @@ cuisine: chinese
 course: staple
 summary: 牛腱与豆瓣、酱油、番茄慢炖成红烧汤，肉软而仍能切片，酸菜与青菜在装碗时加入。
 servings: 6
-time: { prep: 30, cook: 180 }
+time: { prep: 30, cook: 240 }
 principles: [collagen-gelatin, aromatics, starch-gelatinization]
 ingredients:
   - group: 牛肉与汤
@@ -40,7 +40,7 @@ ingredients:
       - { ref: sugar, qty: 2, unit: 汤匙 }
   - group: 面与配菜
     items:
-      - { ref: fresh-wheat-noodle, qty: 540, unit: g, note: 在 T&T 冷藏区买鲜小麦面，或用 600 g 干小麦面 }
+      - { ref: fresh-wheat-noodle, qty: 540, unit: g, note: 在 T&T 冷藏区买鲜小麦面，或用 400 g 干小麦面 }
       - { ref: bok-choy, qty: 300, unit: g, note: 对半切 }
       - { ref: scallion, qty: 2, unit: 根, note: 切葱花 }
       - { ref: water, note: 煮面水适量 }
@@ -51,7 +51,7 @@ sources:
   - title: Taiwanese Beef Noodle Soup：In an Instant Pot or On the Stove
     author: Kaitlin Leung，The Woks of Life
     url: https://thewoksoflife.com/taiwanese-beef-noodle-soup-instant-pot/
-updated: 2026-10-02
+updated: 2026-11-22
 ---
 
 台式红烧牛肉面用豆瓣酱和酱油打底做红烧汤，牛腱慢炖到筋软肉酥，配小麦面、青菜和炒酸菜。番茄与萝卜一起煨入汤中，最后滤掉汤料，碗里的牛肉和面条更容易夹取。
