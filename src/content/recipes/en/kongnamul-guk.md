@@ -15,7 +15,7 @@ ingredients:
       - { name: [green onion, green onions], note: chopped }
       - { name: salt, note: "fine salt; add 0.75 tsp first, then the rest to taste" }
       - { name: black pepper }
-translated: 2026-10-02
+translated: 2026-11-22
 ---
 
 Kongnamul guk is an everyday clear soup on the Korean table. The large heads of soybean sprouts taste of beans and the stems keep a little crunch, and the soup is usually eaten with rice and kimchi. The broth is light and made with anchovies; the garlic is cooked into the broth first and the green onion is saved for the end.
@@ -28,7 +28,7 @@ The [umami](/principles/umami/) in this soup comes from what the dried anchovies
 2. Remove the heads from the dried anchovies, split open the bellies and pull out the black innards. Put them in a pot with the sliced garlic and 1920 ml of water. Heat uncovered over medium-high heat for about 6–8 minutes, until the broth begins to boil.
 3. Turn the heat to medium and simmer uncovered for 10 minutes, until the anchovies are softened and the broth smells faintly of fish. Strain out all the anchovies and garlic with a fine sieve; the broth should be clear, with no bits of innards floating in it.
 4. If a lot has evaporated, top the broth back up to about 1920 ml with the reserved hot water. Add the soybean sprouts and 0.75 tsp of the salt, and put on the lid. Heat over medium-high heat for about 1–2 minutes, until it bubbles steadily at the edge of the pot again, then lower the heat to just keep it boiling.
-5. After cooking covered for 30 minutes, taste a bean head for doneness: it should bite through, with no hard, raw-bean harshness, and the stem should still be lightly crisp. If the head is still firm, cook 1–2 minutes more, until the centre is cooked through.
+5. After cooking covered for 4–5 minutes, taste a bean head for doneness: it should bite through, with no hard, raw-bean harshness, and the stem should still be lightly crisp. If the head is still firm, cook 1–2 minutes more, until the centre is cooked through.
 6. Add the green onion and the optional black pepper and cook for 1 minute, until the green onion is slightly soft and fragrant, then turn off the heat. Taste the broth, then decide whether to add the remaining 1.25 tsp of salt, and ladle into four small soup bowls.
 
 ## Key points
