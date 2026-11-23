@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="t d" data-narrow="340 620">
   <title id="t">Smaller dice: more surface, shorter heat path</title>
   <desc id="d">The same weight of food, as one large piece and as small dice, side by side. The outline marks the exposed surface, and the long and short arrows show how far heat travels from surface to centre; the centre of the dice heats faster.</desc>
   <style>
@@ -17,35 +17,48 @@
     </g>
   </defs>
   <rect class="bg" width="600" height="420" rx="12"/>
-  <text class="label" x="300" y="38" text-anchor="middle">Same weight of food, cut differently</text>
-  <line class="guide" x1="300" y1="70" x2="300" y2="338"/>
-  <text class="label" x="152" y="80" text-anchor="middle">Large piece</text>
-  <text class="label" x="450" y="80" text-anchor="middle">Small dice</text>
+  <g class="lead">
+    <text class="label" x="300" y="38" text-anchor="middle">Same weight of food, cut differently</text>
+  </g>
+  <line class="guide wide-only" x1="300" y1="70" x2="300" y2="338"/>
 
-  <use href="#cube" transform="translate(78 152) scale(2)"/>
-  <circle class="center" cx="118" cy="192" r="3"/>
-  <path class="heat" d="M80 192 H111 M104 186 L111 192 L104 198"/>
-  <text class="label muted" x="152" y="261" text-anchor="middle">Surface to centre: long path</text>
+  <g class="panel" data-narrow="18 -50">
+    <text class="label" x="152" y="80" text-anchor="middle">Large piece</text>
+    <use href="#cube" transform="translate(78 152) scale(2)"/>
+    <circle class="center" cx="118" cy="192" r="3"/>
+    <path class="heat" d="M80 192 H111 M104 186 L111 192 L104 198"/>
+    <text class="label muted" x="152" y="261" text-anchor="middle">Surface to centre: long path</text>
+    <text class="label" x="152" y="305" text-anchor="middle">Less exposed surface</text>
+    <text class="label" x="152" y="330" text-anchor="middle">Centre heats slowly</text>
+  </g>
 
   <!-- Eight half-edge cubes preserve the original cube's volume. -->
-  <use href="#cube" x="338" y="124"/>
-  <use href="#cube" x="402" y="124"/>
-  <use href="#cube" x="466" y="124"/>
-  <use href="#cube" x="530" y="124"/>
-  <use href="#cube" x="338" y="196"/>
-  <use href="#cube" x="402" y="196"/>
-  <use href="#cube" x="466" y="196"/>
-  <use href="#cube" x="530" y="196"/>
-  <circle class="center" cx="358" cy="216" r="3"/>
-  <path class="heat" d="M340 216 H352 M347 211 L352 216 L347 221"/>
-  <text class="label muted" x="450" y="261" text-anchor="middle">Surface to centre: short path</text>
+  <g class="panel" data-narrow="-280 272">
+    <text class="label" x="450" y="80" text-anchor="middle">Small dice</text>
+    <use href="#cube" x="338" y="124"/>
+    <use href="#cube" x="402" y="124"/>
+    <use href="#cube" x="466" y="124"/>
+    <use href="#cube" x="530" y="124"/>
+    <use href="#cube" x="338" y="196"/>
+    <use href="#cube" x="402" y="196"/>
+    <use href="#cube" x="466" y="196"/>
+    <use href="#cube" x="530" y="196"/>
+    <circle class="center" cx="358" cy="216" r="3"/>
+    <path class="heat" d="M340 216 H352 M347 211 L352 216 L347 221"/>
+    <text class="label muted" x="450" y="261" text-anchor="middle">Surface to centre: short path</text>
+    <text class="label" x="450" y="305" text-anchor="middle">More exposed surface</text>
+    <text class="label" x="450" y="330" text-anchor="middle">Centre cooks faster</text>
+  </g>
 
-  <path class="arrow" d="M285 185 H315 M307 178 L315 185 L307 192"/>
-  <text class="label" x="152" y="305" text-anchor="middle">Less exposed surface</text>
-  <text class="label" x="152" y="330" text-anchor="middle">Centre heats slowly</text>
-  <text class="label" x="450" y="305" text-anchor="middle">More exposed surface</text>
-  <text class="label" x="450" y="330" text-anchor="middle">Centre cooks faster</text>
-  <path class="heat" d="M34 375 H72 M64 369 L72 375 L64 381"/>
-  <text class="label muted" x="88" y="380">Red arrow: heat to centre</text>
-  <text class="label muted" x="330" y="380">Assumes equal heating conditions</text>
+  <path class="arrow wide-only" d="M285 185 H315 M307 178 L315 185 L307 192"/>
+  <g class="narrow-only">
+    <path class="arrow" d="M170 296 V326 M163 318 L170 326 L177 318"/>
+  </g>
+  <g class="notes">
+    <g>
+      <g class="key" data-key="30 366 46 18"><path class="heat" d="M34 375 H72 M64 369 L72 375 L64 381"/></g>
+      <text class="label muted" x="88" y="380">Red arrow: heat to centre</text>
+    </g>
+    <text class="label muted" x="330" y="380">Assumes equal heating conditions</text>
+  </g>
 </svg>

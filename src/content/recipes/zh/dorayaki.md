@@ -8,7 +8,7 @@ course: dessert
 summary: 两片蜂蜜小圆饼夹红豆馅，饼面均匀棕褐，里面柔软。锅温稳定、油擦得薄，才煎得出完整的一面。
 servings: 6
 time: { prep: 30, cook: 25 }
-principles: [maillard-reaction, gluten, heat-transfer]
+principles: [maillard-reaction, gluten, heat-transfer, foams]
 ingredients:
   - group: 饼皮
     items:

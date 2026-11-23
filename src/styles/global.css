@@ -331,6 +331,29 @@ button.chip[aria-pressed="true"] { background: var(--text); border-color: var(--
 .cover img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
 .diagram figcaption, .cover figcaption { margin-top: 0.5rem; color: var(--muted); font-size: 0.85rem; }
 
+/* A diagram is drawn 600 wide; in a column under 560px its 13px words would draw below 12px, so the
+   phone layout drawn in the same file takes over (src/lib/diagram.ts): parts stacked, drawn about 1:1,
+   heading and notes as HTML that wraps and follows the reader's font size. Print keeps the wide one. */
+.diagram { container-type: inline-size; }
+.diagram-narrow { display: none; }
+@media screen {
+  @container (width < 560px) {
+    .diagram[data-narrow] > .diagram-wide { display: none; }
+    .diagram-narrow { display: block; background: var(--surface); border-radius: 12px; }
+  }
+}
+.diagram .diagram-narrow-svg { max-width: 26rem; }
+.diagram-narrow-svg .narrow-start { text-anchor: start; }
+.diagram-narrow-svg .narrow-middle { text-anchor: middle; }
+.diagram-narrow-svg .narrow-end { text-anchor: end; }
+.diagram-lead, .diagram-notes { margin: 0; font-size: 0.9375rem; line-height: 1.6; color: var(--text); }
+.diagram-lead { padding: 0.9rem 1.25rem 0; }
+.diagram-notes { list-style: none; padding: 0.35rem 1.25rem 1rem; font-size: 0.875rem; }
+.diagram-notes li + li { margin-top: 0.3rem; }
+.diagram .dg-muted { color: var(--muted); }
+.diagram .dg-warning { color: var(--primary); }
+.diagram .diagram-key { display: inline-block; height: 1em; vertical-align: -0.12em; margin-right: 0.15em; }
+
 .offline-save { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; margin-top: 1rem; }
 .offline-status { color: var(--muted); font-size: 0.9rem; }
 

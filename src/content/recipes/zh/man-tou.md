@@ -8,7 +8,7 @@ tags: [bento]
 summary: 面粉、水和酵母揉成光滑面团，两次醒发之间揉出大气泡，蒸出的馒头细密松软，有麦香和嚼劲。
 servings: 4
 time: { prep: 130, cook: 25 }
-principles: [gluten, starch-gelatinization, heat-transfer]
+principles: [gluten, starch-gelatinization, heat-transfer, leavening]
 ingredients:
   - group: 面团
     items:

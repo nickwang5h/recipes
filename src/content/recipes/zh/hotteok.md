@@ -8,7 +8,7 @@ course: dessert
 summary: 柔软发面包住肉桂红糖核桃馅，下锅压成圆饼；两面煎黄后小火加盖，让里面的糖化成流动的糖浆。
 servings: 4
 time: { prep: 100, cook: 15 }
-principles: [gluten, starch-gelatinization, heat-transfer]
+principles: [gluten, starch-gelatinization, heat-transfer, leavening]
 ingredients:
   - group: 面团
     items:

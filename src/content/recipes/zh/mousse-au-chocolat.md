@@ -8,7 +8,7 @@ course: dessert
 summary: 蛋白泡沫托起巧克力，蛋黄和黄油让口感丰厚；翻拌时保住气泡，冷藏后才会成形。
 servings: 6
 time: { prep: 25, cook: 10 }
-principles: [protein-coagulation, emulsification]
+principles: [protein-coagulation, emulsification, foams]
 ingredients:
   - group: 巧克力底
     items:

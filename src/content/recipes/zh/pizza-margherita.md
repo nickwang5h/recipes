@@ -8,7 +8,7 @@ course: staple
 summary: 番茄、鲜 mozzarella 和罗勒铺在薄饼上，热透的烤石让饼底定形，边缘仍有松软的气孔。
 servings: 4
 time: { prep: 210, cook: 40 }
-principles: [gluten, heat-transfer]
+principles: [gluten, heat-transfer, leavening]
 ingredients:
   - group: 面团（两张约 30 cm 的披萨）
     items:

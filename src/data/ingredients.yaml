@@ -629,3 +629,4 @@
 - { id: bayonne-ham, zh: 巴约讷火腿, aliases: [Jambon de Bayonne], en: Bayonne ham, kind: meat, where: specialty, pantry: false, substitutes: [prosciutto] }
 - { id: kiriboshi-daikon, zh: 干萝卜丝, aliases: [切干萝卜, 切り干し大根, 切干大根, Kiriboshi daikon, 日式萝卜丝干], en: Kiriboshi daikon / Dried shredded daikon radish (unseasoned), kind: dried, where: asian, pantry: true, substitutes: [] }
 - { id: green-tea, zh: 绿茶, aliases: [龙井, 龙井茶, 西湖龙井, Longjing, Dragon Well tea], en: Chinese green tea (loose leaf; Longjing / Dragon Well), kind: dried, where: asian, pantry: true, substitutes: [] }
+- { id: kanpyo, zh: 干瓢, aliases: [葫芦干, かんぴょう, Kanpyo], en: Kanpyo (dried gourd strips), kind: dried, where: asian, pantry: true, substitutes: [] }

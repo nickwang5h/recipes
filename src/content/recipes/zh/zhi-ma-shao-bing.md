@@ -7,7 +7,7 @@ course: staple
 summary: 油酥卷进面团隔出层次，表面沾芝麻，平底锅慢慢烙到外酥内熟。
 servings: 7
 time: { prep: 25, cook: 15 }
-principles: [gluten, heat-transfer, maillard-reaction]
+principles: [gluten, heat-transfer, maillard-reaction, leavening]
 ingredients:
   - group: 面团（做七张饼）
     items:
