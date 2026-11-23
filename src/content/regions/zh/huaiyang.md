@@ -13,7 +13,7 @@ sources:
   - title: "On Food and Cooking: The Science and Lore of the Kitchen（修订版，2004）"
     author: Harold McGee
   - title: 中国烹饪百科全书（1992）
-updated: 2026-10-01
+updated: 2026-11-23
 ---
 江苏水网密布，鱼虾、蟹、蔬菜和豆制品都是现成的原料，适合细致加工和清鲜调味。本页讲淮安、扬州一带的淮扬技法；苏菜还有别的地方风味，全省的菜并不是同一种口味。
 
@@ -47,4 +47,4 @@ updated: 2026-10-01
 
 ## 在家能试的
 
-站里的[扬州炒饭](/recipes/yang-zhou-chao-fan/)是用午餐肉的家常变体，可以练切均匀的小丁、配料分开炒熟、最后合炒。文思豆腐、大煮干丝和狮子头站里还没有菜谱，要练就另找完整的配方。这三样进阶的菜主要靠刀工和耐心，家用灶具已经够用。
+站里的[扬州炒饭](/recipes/yang-zhou-chao-fan/)是用午餐肉的家常变体，可以练切均匀的小丁、配料分开炒熟、最后合炒。[文思豆腐](/recipes/wen-si-dou-fu/)、[大煮干丝](/recipes/da-zhu-gan-si/)和[清炖狮子头](/recipes/qing-dun-shi-zi-tou/)站里也有菜谱，可以照着练。这三样进阶的菜主要靠刀工和耐心，家用灶具已经够用。

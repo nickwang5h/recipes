@@ -3,7 +3,7 @@ title: Jiangsu (Huaiyang)
 original: Sūcài / Huáiyáng cài · Jiangsu / Huaiyang cuisine
 summary: Delicate knife work changes the texture of tofu and meat, fresh stock cooks into the shredded dried tofu, and gentle slow stewing makes lion's head meatballs soft yet able to hold their shape.
 coverAlt: Wensi tofu, clear-stewed lion's head meatballs, a cleaver and a cutting board
-translated: 2026-10-01
+translated: 2026-11-23
 ---
 Jiangsu's network of waterways supplies fish, shrimp, crab, vegetables and soy products, all of them ready ingredients for fine preparation and light, fresh seasoning. This page covers the Huaiyang techniques of the Huai'an and Yangzhou area; Jiangsu cooking also has other local flavours, and the dishes of the whole province are not one taste.
 
@@ -37,4 +37,4 @@ Keep the soup at a slight simmer and a large meatball gets buffeted less, so it 
 
 ## Trying it at home
 
-The site's [Yangzhou Fried Rice](/recipes/yang-zhou-chao-fan/) is a home variation with luncheon meat; you can practise cutting even small dice, cooking the ingredients separately and combining them at the end. Wensi tofu, dasi gansi and lion's head don't yet have recipes on the site, so look for a complete recipe elsewhere to practise them. These three advanced dishes depend mainly on knife work and patience, and a home stove is enough.
+The site's [Yangzhou Fried Rice](/recipes/yang-zhou-chao-fan/) is a home variation with luncheon meat; you can practise cutting even small dice, cooking the ingredients separately and combining them at the end. [Wensi tofu soup](/recipes/wen-si-dou-fu/), [braised shredded tofu in chicken broth](/recipes/da-zhu-gan-si/) and [clear-stewed lion's head meatballs](/recipes/qing-dun-shi-zi-tou/) also have recipes on the site to practise with. These three advanced dishes depend mainly on knife work and patience, and a home stove is enough.
