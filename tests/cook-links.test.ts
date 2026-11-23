@@ -18,7 +18,7 @@ const CHECKED_AGAINST: Record<string, string> = {
   'bo-luc-lac': 'ec0dd1a0',
   'bun-thit-nuong': '4ca7ec17',
   'ca-kho-to': 'e2e99521',
-  'caponata': 'd03ee2e2',
+  'caponata': '62b47261',
   'chao-hua-dan': '2ac99ae2',
   'chikuzenni': '563e3fd8',
   'cotes-de-porc-charcutieres': '69842e59',
