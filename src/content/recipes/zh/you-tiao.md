@@ -7,7 +7,7 @@ course: breakfast
 summary: 两条软面叠压后入热油，膨松剂与水汽撑出孔洞，充分醒面让面团有余地膨胀。
 servings: 5
 time: { prep: 810, cook: 15 }
-principles: [gluten, oil-temperature, maillard-reaction]
+principles: [gluten, oil-temperature, maillard-reaction, leavening]
 ingredients:
   - group: 面团
     items:

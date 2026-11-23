@@ -8,7 +8,7 @@ course: dessert
 summary: 核桃大小的甜面团，炸到外层金黄、内部松软。柠檬皮和茴香酒提供香气，油温决定能否里外一起熟。
 servings: 6
 time: { prep: 40, cook: 20 }
-principles: [oil-temperature, gluten]
+principles: [oil-temperature, gluten, leavening]
 ingredients:
   - group: 面团
     items:

@@ -8,7 +8,7 @@ course: breakfast
 summary: 浓白酱、蛋黄和格鲁耶尔奶酪托住打发蛋白，烤成顶部金黄、中心轻软的热舒芙蕾。
 servings: 4
 time: { prep: 25, cook: 35 }
-principles: [protein-coagulation, starch-gelatinization, heat-transfer]
+principles: [protein-coagulation, starch-gelatinization, heat-transfer, foams]
 ingredients:
   - group: 白酱底
     items:
