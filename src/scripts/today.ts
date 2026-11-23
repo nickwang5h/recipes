@@ -121,8 +121,12 @@ function render(data: SiteData) {
   // ---- The week: seven days; on phones one opens below the strip, on wide screens all show.
   $('[data-week]').replaceChildren(...days.map((d, i) => {
     const list = menuOf(i).map((id) => byId.get(id)).filter((r): r is RecipeData => !!r);
+    const name = el('span', { className: 'day-name', textContent: dayName(i) });
+    // "Tomorrow" is wider than a phone's day cell: the strip draws the weekday there (phone.css), and the word stays
+    // for wide screens and screen readers.
+    if (name.textContent !== T.weekday[d.getDay()] && (name.textContent ?? '').length > 5) name.dataset.short = T.weekday[d.getDay()];
     const head = el('button', { type: 'button', className: 'day-head' },
-      el('span', { className: 'day-name', textContent: dayName(i) }),
+      name,
       el('b', { textContent: String(d.getDate()) }),
       el('span', { className: 'day-dots' }, ...list.slice(0, 3).map(() => el('i'))));
     head.setAttribute('aria-expanded', String(openDay === i));

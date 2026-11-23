@@ -88,6 +88,8 @@
   .float-actions { right: 12px; bottom: calc(var(--bar-h, 0px) + var(--dock-space, 0px) + 12px + env(safe-area-inset-bottom)); }
   /* The week is a strip of seven days; the one tapped opens underneath. */
   .week { gap: 4px; }
+  .day-name[data-short] { font-size: 0; }
+  .day-name[data-short]::before { content: attr(data-short); font-size: 13px; }
   .day { display: contents; }
   .day-head {
     grid-row: 1; display: grid; justify-items: center; gap: 2px; min-height: 64px; padding: 6px 0; border: 1px solid var(--border); border-radius: 10px;
