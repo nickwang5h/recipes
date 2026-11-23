@@ -1,8 +1,8 @@
 ---
-title: Braised Lamb Chops with Noodles
+title: Braised Lamb Ribs with Noodles
 original: 羊排焖面
 summary: The lamb ribs are stewed until the sinew and meat turn tender, then thin, wide noodle sheets go in to absorb the broth; the meat needs enough stewing, and the noodles need enough liquid to braise through.
-coverAlt: Illustration of braised lamb chops with noodles plated
+coverAlt: Illustration of braised lamb ribs with noodles plated
 ingredients:
   - group: Lamb ribs and vegetables
     items:
@@ -27,7 +27,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-In braised lamb chops with noodles, the lamb is tender enough to come away from the bone, and the noodle sheets are soaked with lamb broth. The meat has to turn soft first, then the noodles are cooked: the sinew, skin and connective tissue of the ribs soften slowly in moist heat, and part of the collagen turns into gelatin, which is what lets the meat leave the bone (see [collagen and gelatin](/principles/collagen-gelatin/)).
+In braised lamb ribs with noodles, the lamb is tender enough to come away from the bone, and the noodle sheets are soaked with lamb broth. The meat has to turn soft first, then the noodles are cooked: the sinew, skin and connective tissue of the ribs soften slowly in moist heat, and part of the collagen turns into gelatin, which is what lets the meat leave the bone (see [collagen and gelatin](/principles/collagen-gelatin/)).
 
 The dough for the wide noodles is made soft. Resting it twice and oiling it makes it easy to roll into thin sheets (see [gluten](/principles/gluten/)). The sheets are finished by braising in the lamb broth: as they absorb water, the [starch gelatinizes](/principles/starch-gelatinization/) and the broth slowly thickens. Keep the broth before the noodles go in, and do not reduce the lamb dry beforehand.
 
