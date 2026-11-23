@@ -17,7 +17,7 @@ ingredients:
       - { name: sugar }
       - { name: toasted sesame oil }
       - { name: chili oil }
-translated: 2026-10-01
+translated: 2026-11-22
 ---
 
 Cold enoki salad is a refreshing cold dish: the mushrooms are cooked first, then tossed in a garlic-vinegar dressing. Cut off the tight base and pull the mushrooms into small bundles so the hot water reaches every stem (see [blanching and removing off-odours](/principles/blanching/)). Enoki can carry Listeria, so cook it all the way through.
@@ -28,7 +28,7 @@ Light soy sauce gives salty savouriness and vinegar makes the flavour clearer (s
 
 1. Cut off the dark, tightly joined base of the enoki and tear the stems into thin, small bundles. Rinse under running water, loosening the base of each bundle as you go, so no clump is as thick as a finger.
 2. Rinse and drain the green onion and chop it. Peel the garlic, smash it and mince it. Wash your hands after handling the raw mushrooms, and keep the bowl, strainer and chopsticks for the cooked mushrooms clean.
-3. Bring 1000 ml of drinking water to a boil over high heat, add the enoki and spread it out right away. Keep all the mushrooms under the water and, once it returns to a boil, cook for about 1–2 minutes. If the package gives a longer time, follow the package.
+3. Bring 1000 ml of drinking water to a boil over high heat, add the enoki and spread it out right away. Keep all the mushrooms under the water and, once it returns to a boil, cook for at least 2 minutes. If the package gives a longer time, follow the package.
 4. Stir and check for any bundles still clamped together. The centre of each bundle must be cooked through too. Turn off the heat once all the stems are soft and the centres are hot.
 5. Lift into a clean strainer, shake off the water, then spread out to cool and loosen into the mixing bowl. Do not rinse with raw tap water to cool, and do not squeeze hard to dry, so the fine stems stay whole.
 6. Put the light soy sauce, vinegar, garlic and the optional sugar in a small bowl and stir until the sugar crystals dissolve, then add the optional toasted sesame oil. Mix the dressing and pour it evenly over the enoki.
