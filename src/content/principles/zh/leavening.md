@@ -14,15 +14,12 @@ sources:
   - title: "The Difference Between Baking Soda and Baking Powder"
     author: Matt Shipman，NC State News
     url: https://news.ncsu.edu/2014/05/baking-soda-powder/
-  - title: "Char Siu Bao (Steamed BBQ Pork Buns)"
-    author: Maggie Zhu，Omnivore's Cookbook
-    url: https://omnivorescookbook.com/steamed-char-siu-bao/
 updated: 2026-11-22
 ---
 
 ## 是什么
 
-一团面放进蒸笼会胀大，是因为里面藏着无数小气泡，受热后一起撑大。**膨松**就是先往面团或面糊里放进气，再让热把它撑开、定住。气有三个来处：**酵母**发酵放出的二氧化碳，**小苏打**和酸反应放出的二氧化碳，还有打发时搅进去的空气（见[泡沫](/principles/foams/)）。
+一团面进了蒸笼会胀大，是因为里面无数小气泡受热撑大。**膨松**就是先往面团或面糊里放进气，再让热把它撑开、定住。气有三个来处：**酵母**发酵放出的二氧化碳，**小苏打**和酸反应放出的二氧化碳，还有打发时搅进去的空气（见[泡沫](/principles/foams/)）。
 
 光有气还不够，得有东西兜住它。面包和包子里兜气的是[面筋](/principles/gluten/)网络，蛋糕里主要靠鸡蛋的蛋白质。气产得多、兜不住，面团就塌；兜得住、气太少，成品就实。
 
@@ -40,7 +37,7 @@ updated: 2026-11-22
 | 约 55–60°C | 酵母死亡，不再产气 |
 | 约 100°C | 刚蒸好或烤好的面包、馒头中心 |
 
-活性干酵母要先用温水化开；即发干酵母可以直接拌进面粉。酵母水几分钟都不冒泡，就是失效了，后面怎么等都发不起来。
+活性干酵母要先用温水化开；即发干酵母可以直接拌进面粉。
 
 ## 小苏打和泡打粉：快，一碰就放气
 
@@ -60,7 +57,7 @@ updated: 2026-11-22
 
 ## 在各个菜系里
 
-- **中餐**：[馒头](/recipes/man-tou/)和[鲜肉包子](/recipes/xian-rou-bao-zi/)靠酵母发面。传统茶楼的叉烧包用老面发酵，老面发得偏酸，要加碱水中和；家里做[叉烧包](/recipes/cha-shao-bao/)用干酵母先发，再靠泡打粉在蒸笼里补一股气，把顶撑开。[油条](/recipes/you-tiao/)则同时用泡打粉和小苏打。
+- **中餐**：[馒头](/recipes/man-tou/)和[鲜肉包子](/recipes/xian-rou-bao-zi/)靠酵母发面；[叉烧包](/recipes/cha-shao-bao/)先用酵母发，再靠泡打粉在蒸笼里补一股气，把顶撑开。[油条](/recipes/you-tiao/)则同时用泡打粉和小苏打。
 - **法餐**：家常的[法式咸蛋糕](/recipes/cake-sale/)用泡打粉，面糊拌好就能进烤箱，不用等发酵。
 - **意大利菜**：[玛格丽特披萨](/recipes/pizza-margherita/)和[热那亚佛卡夏](/recipes/focaccia-genovese/)是酵母面团，面筋兜住气，烤出带大小气孔的饼底；狂欢节炸的[小炸球](/recipes/castagnole/)用的是泡打粉。
 - **日本料理**：[铜锣烧](/recipes/dorayaki/)的饼皮既有打发鸡蛋带进的空气，也有泡打粉在锅里放的气。

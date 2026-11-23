@@ -7,7 +7,7 @@ translated: 2026-11-22
 
 ## What it is
 
-A piece of dough swells in the steamer because it holds countless small bubbles that all expand when heated. **Leavening** means getting gas into a dough or batter first, then letting heat expand it and set it. The gas comes from three places: carbon dioxide released by **yeast** as it ferments, carbon dioxide released when **baking soda** reacts with acid, and air beaten in by whipping (see [foams](/principles/foams/)).
+A piece of dough swells in the steamer because its countless small bubbles expand with heat. **Leavening** means getting gas into a dough or batter first, then letting heat expand it and set it. The gas comes from three places: carbon dioxide released by **yeast** as it ferments, carbon dioxide released when **baking soda** reacts with acid, and air beaten in by whipping (see [foams](/principles/foams/)).
 
 Gas alone is not enough; something has to hold it. In bread and steamed buns, the [gluten](/principles/gluten/) network holds it; in cakes, it is mainly egg protein. Lots of gas that cannot be held makes the dough collapse; plenty of structure with too little gas makes it dense.
 
@@ -25,7 +25,7 @@ Yeast is alive and fussy about temperature:
 | About 55–60°C (130–140°F) | The yeast dies and stops making gas |
 | About 100°C (212°F) | The centre of a just-baked loaf or just-steamed bun |
 
-Active dry yeast must be dissolved in warm water first; instant yeast can be mixed straight into the flour. If the yeast water does not foam within a few minutes, the yeast is dead, and no amount of waiting will raise the dough.
+Active dry yeast must be dissolved in warm water first; instant yeast can be mixed straight into the flour.
 
 ## Baking soda and baking powder: fast, gas on contact
 
@@ -45,7 +45,7 @@ As soon as the dough heats, the gas in the bubbles expands and the dough grows t
 
 ## Across cuisines
 
-- **Chinese**: [mantou](/recipes/man-tou/) and [fresh pork buns](/recipes/xian-rou-bao-zi/) are raised with yeast. Traditional dim sum char siu bao use a sourdough-style starter, which turns sour, so lye water is added to balance it; at home, [char siu bao](/recipes/cha-shao-bao/) rise first with dry yeast and then get a second push from baking powder in the steamer that splits the tops. [Youtiao](/recipes/you-tiao/) use both baking powder and baking soda.
+- **Chinese**: [mantou](/recipes/man-tou/) and [fresh pork buns](/recipes/xian-rou-bao-zi/) are raised with yeast; [char siu bao](/recipes/cha-shao-bao/) rise first with yeast and then get a second push from baking powder in the steamer that splits the tops. [Youtiao](/recipes/you-tiao/) use both baking powder and baking soda.
 - **French**: the everyday [cake salé](/recipes/cake-sale/) uses baking powder, so the batter goes straight into the oven with no wait for fermentation.
 - **Italian**: [pizza Margherita](/recipes/pizza-margherita/) and [focaccia genovese](/recipes/focaccia-genovese/) are yeast doughs whose gluten holds the gas, baking into a base with holes of all sizes; the little Carnival fritters, [castagnole](/recipes/castagnole/), use baking powder.
 - **Japanese**: the pancakes of [dorayaki](/recipes/dorayaki/) get their lift both from air in the whipped eggs and from baking powder releasing gas in the pan.
