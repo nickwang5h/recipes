@@ -19,7 +19,7 @@ ingredients:
       - { name: white vinegar, note: "use white vinegar labelled 9% acidity; with 5% white vinegar use about 99 g and reduce the sauce a little longer" }
       - { name: light soy sauce }
       - { name: salt, note: for the sauce }
-      - { name: green onion white part, note: "cut into fine shreds; the white part of a green onion can stand in" }
+      - { name: white part of a large green onion, note: "cut into fine shreds; the white part of a green onion can stand in" }
       - { name: ginger, note: cut into fine shreds }
       - { name: garlic, note: sliced }
       - { name: carrots, note: cut into fine shreds }
