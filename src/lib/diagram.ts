@@ -117,7 +117,16 @@ function scoped(svg: string, figureId: string, idPrefix: string, cls: string): s
   const ids = [...svg.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]);
   let out = svg.replace(/<style>([\s\S]*?)<\/style>/g, (_, css: string) =>
     `<style>${css.replace(/\/\*[\s\S]*?\*\//g, '').replace(/(^|})(\s*)([^{}@]+?)\s*{/g, (_m, close, ws, sels: string) =>
-      `${close}${ws}${sels.split(',').map((s) => `#${figureId} ${s.trim()}`).join(', ')} {`)}</style>`);
+      // Each selector twice. `#figure .leaf` scopes the rule to this figure; `.figure-leaf` is the same rule without an
+      // ancestor, because Chrome matches a shape drawn through <use> inside the use's own tree, where the figure is not
+      // an ancestor, and painted those shapes black (the leaves, the oil drops, the sugar).
+      `${close}${ws}${sels.split(',').flatMap((s) => {
+        const sel = s.trim();
+        const own = /\.[A-Za-z_]/.test(sel) ? [sel.replace(/\.([A-Za-z_][\w-]*)/g, `.${figureId}-$1`)] : [];
+        return [`#${figureId} ${sel}`, ...own];
+      }).join(', ')} {`)}</style>`);
+  out = out.replace(/\sclass="([^"]*)"/g, (_m, names: string) =>
+    ` class="${names} ${names.split(/\s+/).filter(Boolean).map((n) => `${figureId}-${n}`).join(' ')}"`);
   for (const id of ids) {
     out = out
       .replaceAll(`id="${id}"`, `id="${idPrefix}-${id}"`)
