@@ -57,4 +57,20 @@ describe('recipeLd', () => {
   it('omits image when there is none', () => {
     expect('image' in ld).toBe(false);
   });
+
+  it('writes English ingredients in English units, as the page prints them', () => {
+    const en = recipeLd({
+      url: 'https://example.com/en/recipes/x/', title: 'X', summary: 's', cuisine: 'Korean', course: 'Main', servings: 2,
+      time: { prep: 5, cook: 5 },
+      ingredients: [
+        { qty: 2, unit: '汤匙', name: 'gochujang' },
+        { qty: 3, unit: '瓣', name: 'garlic' },
+        { qty: 2, unit: '片', name: 'bay', word: 'leaf' },
+        { qty: 2, unit: '个', name: 'egg', plural: 'eggs' },
+        { qty: 250, unit: 'g', name: 'butter', note: 'cold' },
+      ],
+      body, keywords: [], updated: new Date('2026-10-01'), site: { name: 'Kitchen', url: 'https://example.com/en/' }, lang: 'en',
+    });
+    expect(en.recipeIngredient).toEqual(['2 tbsp gochujang', '3 cloves garlic', '2 leaves bay', '2 eggs', '250 g butter (cold)']);
+  });
 });
