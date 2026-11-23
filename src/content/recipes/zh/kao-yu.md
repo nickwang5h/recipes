@@ -50,7 +50,7 @@ sources:
   - { title: "HowToCook：烤鱼的做法", author: HowToCook 社区, url: "https://github.com/Anduin2017/HowToCook/blob/master/dishes/aquatic/混合烤鱼/烤鱼.md" }
   - { title: "Chinese Spicy Roast Fish（重庆烤鱼）", author: Maggie Zhu, url: "https://omnivorescookbook.com/chinese-spicy-roast-fish/" }
   - { title: "Safe Food Handling", author: FDA, url: "https://www.fda.gov/food/buy-store-serve-safe-food/safe-food-handling" }
-updated: 2026-10-01
+updated: 2026-11-22
 ---
 
 烤鱼先在烤箱里烤出香，再连鱼带配菜放进麻辣汤里短煮：鱼底吸饱汤汁变软，朝上的鱼皮还留着一点焦香。表皮先失水，才容易发生[美拉德反应](/principles/maillard-reaction/)，烤出这层香。
@@ -63,7 +63,7 @@ updated: 2026-10-01
 2. 将豆芽焯熟、千张焯软后切丝，沥干备用。芹菜切段、洋葱切丝，葱蒜和干香料备好，辣椒与花椒表面的水擦干。
 3. 预热烤箱至 220°C。烤盘刷油，鱼皮朝上摊平，剩余刷盘油薄刷鱼皮，烤约 25–35 分钟，中途观察。皮上出现浅金色斑点后撒孜然，最厚处的肉应完全不透明、能分成片；上色过快就松盖锡纸。
 4. 在能容纳整鱼的浅锅中加热 20 ml 油，中小火炒葱蒜、八角、月桂叶和桂皮。闻到香气后下火锅底料及豆瓣，炒到融散、油泛红，加糖、生抽和 600 ml 水煮开。
-5. 下芹菜、豆芽与千张，芹菜稍软后铺上洋葱，再将熟鱼皮朝上放入。汤汁应接触底部配菜，锅里留出余量供翻滚；先尝汤底，再决定要不要另加 10 g 盐。
+5. 下芹菜、豆芽与千张，芹菜稍软后铺上洋葱，再将熟鱼皮朝上放入。汤汁应接触底部配菜，锅里留出余量供翻滚；先尝汤底，底料和豆瓣已带咸味，偏淡再少量补盐。
 6. 将辣椒与青花椒放在鱼身上。另锅热 20 ml 油，油能流动且没有冒烟时离火，先少量试浇，香料滋响、有香气便分次浇完。保持浅锅轻沸 5–6 分钟，芹菜与洋葱熟软后撒可选的花生、芝麻和葱香菜上桌。
 
 ## 要点
