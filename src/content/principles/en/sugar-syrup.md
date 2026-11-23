@@ -13,7 +13,7 @@ Once almost all the water is gone, more heat starts to colour the sugar; that is
 
 ## Temperature is concentration
 
-Candy recipes say "cook to soft ball" or "cook to hard crack". The names come from an old test: drop a little syrup into cold water and see what it does as it cools.
+Candy recipes say "cook to soft ball" or "cook to hard crack". The names come from an old test: drop a little syrup into cold water and see what it does as it cools. The syrup is very hot: let it cool in the water for a few seconds before you touch it.
 
 | Stage | Temperature | Sugar concentration | Dropped into cold water | Used for |
 |---|---|---|---|---|
@@ -47,4 +47,4 @@ When Escoffier cooks sugar he does two more things: he skims off the scum, and h
 
 - **Chinese**: the same syrup can go two ways. For [tanghulu](/recipes/bing-tang-hu-lu/), a drop of syrup is tested in cold water until the sugar snaps cleanly: hard crack. For [candied potatoes](/recipes/ba-si-tu-dou/), the syrup is cooked to pale gold and pulled into threads while hot, and the crystals on the side of the pan are left alone. [Sugar-frosted taro](/recipes/fan-sha-yu-tou/) does the opposite: the syrup is tossed off the heat without stopping, so it crystallizes on purpose into a white frost.
 - **French**: Escoffier divides cooked sugar into small thread, large thread, small ball, large ball, small crack and large crack. For Italian meringue (*meringue à l'italienne*) he cooks the sugar to large ball, about 120°C (250°F), and pours it into the whipped egg whites.
-- **Italian**: [almond brittle](/recipes/croccante/) cooks sugar and honey to about 170°C (340°F), until the colour turns amber, then stirs in toasted almonds and spreads it thin to cool and set crisp. The lemon juice keeps the sugar from turning grainy; the honey stands in for glucose and makes the brittle less sensitive to damp.
+- **Italian**: [almond brittle](/recipes/croccante/) cooks sugar and honey to about 170°C (340°F), until the colour turns amber, then stirs in toasted almonds and spreads it thin to cool and set crisp. The lemon juice keeps the sugar from turning grainy, and the honey stands in for glucose and also helps stop crystals.

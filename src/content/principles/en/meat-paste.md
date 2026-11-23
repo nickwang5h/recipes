@@ -28,11 +28,11 @@ A paste that has been mixed until sticky can take in a good deal of water; this 
 | Add water in lots | the network holds only so much water | no loose water in the bottom of the bowl |
 | Add egg white | egg white is the protein most often added to help fish paste gel | the paste sets more firmly |
 
-## Temperature: cold first, then gentle heat
+## Temperature: cold first, then cook gently
 
 Salted fish paste held for a while between 5 and 40°C (40 and 105°F) first sets into a very soft, stretchy gel called *suwari*. An enzyme that occurs naturally in fish muscle links the proteins together below 40°C (105°F), and after this step the gel heats into something firmer. Proteins from different fish unfold at different temperatures, so the best time and temperature vary too.
 
-Keep the ingredients cold while you make the paste. Industrial fish paste is washed in water at 5–10°C (40–50°F); Escoffier set his fine forcemeat in a bowl on ice before working in the cream little by little.
+Keep the ingredients cold while you make the paste. Escoffier set his fine forcemeat in a bowl on ice before working in the cream little by little.
 
 The final heating should be gentle: keep the water below a boil so the soft balls are not knocked apart or broken. Overcook them and the protein network tightens, squeezes out water, and the balls turn hard and dry (see [protein coagulation](/principles/protein-coagulation/)).
 

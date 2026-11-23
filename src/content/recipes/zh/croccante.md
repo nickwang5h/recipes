@@ -20,12 +20,15 @@ sources:
   - title: "La scienza in cucina e l'arte di mangiar bene（1891），617. Croccante"
     author: Pellegrino Artusi
     url: https://www.gutenberg.org/ebooks/59047
+  - title: "Crystallization Is Key in Confectionery Processes"
+    author: J. Peter Clark，IFT Food Technology
+    url: https://www.ift.org/food-technology-magazine/crystallization-is-key-in-confectionery-processes
 updated: 2026-11-23
 ---
 
 *Croccante* 是意大利的杏仁脆糖，圣诞节前后中部和南部各地都做：烤香的杏仁裹在一层琥珀色的糖里，摊成薄片放凉，一咬就脆。
 
-它靠的是[熬糖](/principles/sugar-syrup/)。糖和蜂蜜熬到约 170°C，水几乎全跑掉了，凉下来就成了一片又硬又脆、不含晶体的糖。这个温度也让糖开始变色，带出焦香，见[焦糖化](/principles/caramelization/)；再熬几度就会发苦，所以要盯着温度计，也盯着颜色。几滴柠檬汁防止糖返砂，蜂蜜顶替葡萄糖浆，让脆糖不那么怕潮。
+它靠的是[熬糖](/principles/sugar-syrup/)。糖和蜂蜜熬到约 170°C，水几乎全跑掉了，凉下来就成了一片又硬又脆、不含晶体的糖。这个温度也让糖开始变色，带出焦香，见[焦糖化](/principles/caramelization/)；再熬几度就会发苦，所以要盯着温度计，也盯着颜色。几滴柠檬汁防止糖返砂，蜂蜜顶替葡萄糖浆，也帮着挡结晶。柠檬汁会把一部分蔗糖拆成葡萄糖和果糖，这样的糖在硬糖里比蔗糖更黏，所以脆糖一凉透就要包好。
 
 ## 步骤
 
@@ -35,7 +38,7 @@ updated: 2026-11-23
 4. 开中火让糖化开，锅里插好厨房温度计。
 5. 糖浆到 140°C，倒入还热着的杏仁，拌匀。
 6. 继续加热、翻拌，到 170°C 就离火。温度还没到、颜色已经转成浅琥珀，也马上离火。
-7. 倒在铺了烘焙纸的烤盘上，用木勺摊开、压平。也可以拿一个柠檬当擀子，把它压得更薄。
+7. 倒在铺了烘焙纸的烤盘上，用木勺摊开、压平。也可以拿一个柠檬当擀子，把它压得更薄。糖有 170°C 左右，手别碰糖面，凉透前也别尝。
 8. 放在室温里凉透。
 9. 翻扣在砧板上，揭掉烘焙纸，切成长条。
 10. 吃不完的用油纸包好，放进铁盒或带盖的罐子，搁在阴凉干燥的地方。
