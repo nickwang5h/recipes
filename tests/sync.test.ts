@@ -124,6 +124,13 @@ describe('sync endpoint', () => {
     expect((await handleSync(post({ family, entries: { k: 'x' } }), store)).status).toBe(400);
     expect((await handleSync(new Request('https://x/api/sync'), store)).status).toBe(405);
   });
+
+  it('answers 400, not 500, to a body that is JSON but not an object', async () => {
+    const store = fakeStore();
+    for (const body of ['null', '5', '"x"', '[]', 'true']) {
+      expect((await handleSync(new Request('https://x/api/sync', { method: 'POST', body }), store)).status, body).toBe(400);
+    }
+  });
 });
 
 /** The D1 binding over node:sqlite, running the same SQL the deployed store runs. */
