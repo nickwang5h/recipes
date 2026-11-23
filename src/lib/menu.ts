@@ -25,7 +25,8 @@ export const SLOTS = [
 export type SlotId = (typeof SLOTS)[number]['id'];
 
 /** Dishes for dinner: no small sides, sweets, drinks or sauces, nothing over three hours. Shared by
- *  今天, the draw and the menu's 配一桌. */
+ *  今天 and the draw. The menu's 配一桌 (suggestDish) leaves out only components and minor dishes;
+ *  its slots already keep to mains, vegetables and soups. */
 export const NOT_DINNER = ['dessert', 'drink', 'sauce'];
 export const forDinner = (r: { component: boolean; minor?: boolean; course: string; minutes: number }) =>
   !r.component && !r.minor && !NOT_DINNER.includes(r.course) && r.minutes <= 180;
