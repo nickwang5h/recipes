@@ -1,5 +1,5 @@
 // schema.org Recipe data for search engines, built from a recipe's front matter and body.
-import { formatQty } from './scale';
+import { countedName, formatQty, unitLabel } from './scale';
 
 export interface RecipeLdInput {
   url: string;
@@ -9,7 +9,8 @@ export interface RecipeLdInput {
   course: string;
   servings: number;
   time: { prep: number; cook: number };
-  ingredients: { qty?: number; unit?: string; name: string; note?: string }[];
+  /** `word` and `plural` are a translation's own unit word and counted name, as on the page. */
+  ingredients: { qty?: number; unit?: string; name: string; note?: string; word?: string; plural?: string }[];
   body: string;
   keywords: string[];
   image?: string;
@@ -46,12 +47,15 @@ export function recipeLd(r: RecipeLdInput) {
     cookTime: minutes(r.time.cook),
     totalTime: minutes(r.time.prep + r.time.cook),
     keywords: r.keywords.join(', '),
-    recipeIngredient: r.ingredients.map((i) =>
-      [i.qty != null ? `${formatQty(i.qty, i.unit)}${i.unit ? ` ${i.unit}` : ''}` : '', i.name, i.note ? (r.lang === 'zh' ? `（${i.note}）` : `(${i.note})`) : '']
+    // The same words as the ingredient list on the page: on the English site 汤匙 reads "tbsp" and counted things
+    // take their plural, instead of the Chinese unit the data is kept in.
+    recipeIngredient: r.ingredients.map((i) => {
+      const unit = i.qty != null ? unitLabel(i.unit, i.qty, r.lang, i.word) : '';
+      return [i.qty != null ? `${formatQty(i.qty, i.unit)}${unit ? ` ${unit}` : ''}` : '', countedName(i.name, i.plural, i.qty, i.unit), i.note ? (r.lang === 'zh' ? `（${i.note}）` : `(${i.note})`) : '']
         .filter(Boolean)
         .join(' ')
-        .replace(' （', '（'),
-    ),
+        .replace(' （', '（');
+    }),
     recipeInstructions: steps(r.body).map((text, n) => ({ '@type': 'HowToStep', position: n + 1, text })),
     dateModified: r.updated.toISOString().slice(0, 10),
     author: { '@type': 'Organization', name: r.site.name, url: r.site.url },

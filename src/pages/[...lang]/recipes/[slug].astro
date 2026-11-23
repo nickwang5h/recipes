@@ -58,7 +58,10 @@ const ld = recipeLd({
   course: COURSES[recipe.data.course][lang],
   servings: recipe.data.servings,
   time,
-  ingredients: items.map((item, n) => ({ qty: item.qty, unit: item.unit, name: item.name ?? catalog[n].data[lang], note: item.note })),
+  ingredients: items.map((item, n) => {
+    const { word, plural } = item as typeof item & { word?: string; plural?: string };
+    return { qty: item.qty, unit: item.unit, name: item.name ?? catalog[n].data[lang], note: item.note, word, plural };
+  }),
   body: recipe.body ?? '',
   keywords: principles.map((p) => p.data.title),
   image: recipe.data.cover && new URL((await getImage({ src: recipe.data.cover, width: 1200, format: 'jpg' })).src, Astro.site).href,
