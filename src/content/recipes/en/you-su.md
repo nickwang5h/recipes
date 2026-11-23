@@ -11,7 +11,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-*Youso* is a paste of flour and oil. It is spread on the dough sheet, rolled up and rolled out again, so the layers do not stick into one block. The oil coats part of the flour, so neighbouring layers of dough cannot join into a continuous [gluten network](/principles/gluten/). After griddling, the dough peels apart layer by layer along these weak points.
+*Yousu* is a paste of flour and oil. It is spread on the dough sheet, rolled up and rolled out again, so the layers do not stick into one block. The oil coats part of the flour, so neighbouring layers of dough cannot join into a continuous [gluten network](/principles/gluten/). After griddling, the dough peels apart layer by layer along these weak points.
 
 This is the thin roux used for home griddled flatbread; four flatbreads share 40 ml of oil, about 30 g of flour and 2 g of salt. Hot oil loosens the flour, but the pot and bowl also keep passing on heat (see [heat transfer](/principles/heat-transfer/)), so do not heat the oil until it smokes before pouring. You want a paste that is even, can flow, and also stays on the dough sheet; let it cool before spreading it on the dough.
 
