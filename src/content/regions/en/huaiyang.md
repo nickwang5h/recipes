@@ -29,7 +29,7 @@ For home practice, begin with evenly cut white dried tofu threads and a pot of c
 
 ## Lion's head: fine cut, coarse chop, then gentle stewing to softness
 
-Clear-stewed lion's head makes large meatballs of fatty and lean pork. **Fine cutting and coarse chopping** (*xi qie cu zhan*) means cutting the pork into small bits, then chopping it lightly a few times so it holds together while keeping some grain. Which meat you pick, how you cut it and how you mix it together decide whether the meatball is soft or won't hold its shape; beat it all into a fine, dense paste and you get a different, firmer texture.
+Clear-stewed lion's head makes large meatballs of fatty and lean pork. **Fine cutting and coarse chopping** (*xi qie cu zhan*) means cutting the pork into small bits, then chopping it lightly a few times, keeping some grain. The bits hold together only once they are mixed with salt until sticky; see [Fish and Meat Pastes: Salt, Mixing and Gelling](/principles/meat-paste/). Which meat you pick, how you cut it and how you mix it together decide whether the meatball is soft or won't hold its shape; beat it all into a fine, dense paste and you get a different, firmer texture.
 
 When heated, the meat's [protein coagulates](/principles/protein-coagulation/) first and the meatball slowly sets; with continued moist-heat stewing, some of the [collagen in the meat turns into gelatin](/principles/collagen-gelatin/), and it eats soft and smooth. The fat changes the overall texture as well, so not all the softness is thanks to gelatin.
 
