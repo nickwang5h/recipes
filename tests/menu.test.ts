@@ -32,6 +32,17 @@ describe('suggesting a table', () => {
     for (let i = 0; i < 20; i++) expect(suggestDish(recipes, 'veg', { ...none, random: () => i / 20 })?.component).toBe(false);
   });
 
+  it('never suggests minor dishes', () => {
+    const veg = [{ ...r('tang-ban-xi-hong-shi', 'veg'), minor: true }, r('tomato-egg', 'veg')];
+    for (let i = 0; i < 20; i++) expect(suggestDish(veg, 'veg', { ...none, random: () => i / 20 })?.id).toBe('tomato-egg');
+  });
+
+  it('still suggests long dishes when no time limit is chosen', () => {
+    const veg = [r('slow-veg', 'veg', 'chinese', 240)];
+    expect(suggestDish(veg, 'veg', { ...none, random: () => 0 })?.id).toBe('slow-veg');
+    expect(suggestDish(veg, 'veg', { ...none, maxMinutes: 60, random: () => 0 })).toBeUndefined();
+  });
+
   it('prefers the main dish cuisine for the other slots', () => {
     // With random just below 1, an unweighted pick would land on the last veg (french).
     const veg = suggestDish(recipes, 'veg', { ...none, cuisine: 'chinese', random: () => 0.6 });
@@ -44,6 +55,12 @@ describe('what the week needs', () => {
     const dishes = [r('a', 'veg', 'chinese', 10, ['egg', 'tomato', 'salt', 'water']), r('b', 'veg', 'chinese', 10, ['tomato', 'scallion'])];
     const needs = weekNeeds(dishes, new Set(['egg']), new Set(['salt']));
     expect([...needs]).toEqual([['tomato', ['a', 'b']], ['scallion', ['b']]]);
+  });
+
+  it('counts a catalog substitute on hand as having it, as the fridge does', () => {
+    const dishes = [r('a', 'veg', 'chinese', 10, ['shallot', 'tomato'])];
+    const needs = weekNeeds(dishes, new Set(['onion']), new Set(), { shallot: ['onion'], tomato: ['cherry-tomato'] });
+    expect([...needs.keys()]).toEqual(['tomato']);
   });
 });
 

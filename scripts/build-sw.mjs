@@ -4,6 +4,7 @@
 import { createHash } from 'node:crypto';
 import { copyFileSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
+import { offlineImages } from './sw-images.mjs';
 
 const dist = new URL('../dist/', import.meta.url).pathname;
 
@@ -47,12 +48,21 @@ for (const f of files.sort()) {
 const version = hash.digest('hex').slice(0, 12);
 
 const template = readFileSync(new URL('./sw-template.js', import.meta.url), 'utf8');
+const helpers = readFileSync(new URL('./sw-images.mjs', import.meta.url), 'utf8').replace(/^export /gm, '');
 const sw = template
   .replace('__VERSION__', version)
   .replace('__PRECACHE__', JSON.stringify(precache, null, 2))
-  .replace('__PAGE_LIST__', '/offline-pages.json');
+  .replace('__PAGE_LIST__', '/offline-pages.json') + '\n' + helpers;
+
+// The pictures "save everything" keeps with each page (see scripts/sw-images.mjs).
+const pictures = (list) => offlineImages(list.filter((p) => p.endsWith('/')).map((p) => [p, readFileSync(join(dist, p, 'index.html'), 'utf8')]));
+const zhPictures = pictures(zhPages);
+const enPictures = pictures(enPages);
+const count = (map) => Object.values(map).flat().length;
 
 writeFileSync(join(dist, 'sw.js'), sw);
 writeFileSync(join(dist, 'offline-pages.json'), JSON.stringify(zhPages));
 writeFileSync(join(dist, 'en/offline-pages.json'), JSON.stringify(enPages));
-console.log(`sw.js ${version}: ${precache.length} precached, ${zhPages.length} + ${enPages.length} pages listed`);
+writeFileSync(join(dist, 'offline-images.json'), JSON.stringify(zhPictures));
+writeFileSync(join(dist, 'en/offline-images.json'), JSON.stringify(enPictures));
+console.log(`sw.js ${version}: ${precache.length} precached, ${zhPages.length} + ${enPages.length} pages listed, ${count(zhPictures)} + ${count(enPictures)} pictures`);

@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { parseRecipe } from '../scripts/cook-links.mjs';
+import { parseArgs } from '../scripts/step-images-args.mjs';
 import { stepHash, stepTexts } from '../src/lib/step-images';
 import manifest from '../src/data/step-images.json';
 
@@ -27,5 +28,14 @@ describe('step pictures', () => {
   it('hashes like the drawing script', () => {
     // sha1('') starts da39a3ee: the script and the page must agree on the hash.
     expect(stepHash('')).toBe('da39a3ee');
+  });
+});
+
+describe('step-images command line', () => {
+  it('does not take an option value for a slug', () => {
+    expect(parseArgs(['draw', '--model', 'gpt-x', 'mapo-tofu', 'dan-dan-mian'])).toEqual({ cmd: 'draw', slugs: ['mapo-tofu', 'dan-dan-mian'] });
+    expect(parseArgs(['draw', 'mapo-tofu', '--model', 'gpt-x'])).toEqual({ cmd: 'draw', slugs: ['mapo-tofu'] });
+    expect(parseArgs(['run', '--wait', '--limit', '3', '--use-expiring-credits'])).toEqual({ cmd: 'run', slugs: [] });
+    expect(parseArgs(['sheet', 'a', '--commit-every', '5', 'b'])).toEqual({ cmd: 'sheet', slugs: ['a', 'b'] });
   });
 });

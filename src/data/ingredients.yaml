@@ -3,7 +3,8 @@
 # where: mainstream = Loblaws/Superstore、Metro、Sobeys、Walmart、Costco 等主流超市能买到
 #        asian      = 通常要去 T&T、大统华等华人/亚洲超市
 #        specialty  = 专门店或网购
-# pantry: 常备、耐放的调味料和干货；做"冰箱匹配"时默认家里有。
+# pantry: 常备、耐放的调味料和干货（标记，目前没有代码读它）。冰箱匹配默认“家里有”的是
+#         src/lib/fridge.ts 里的 DEFAULT_STAPLES（葱姜蒜、油盐糖、生抽老抽等十几样），不是 pantry。
 # en: 加拿大超市货架或标签上常见的英文名，方便对照采购。
 # season: 安大略省田间应季的月份（1–12），依据 Foodland Ontario Availability Guide
 #         https://www.ontario.ca/foodland/page/availability-guide ；全年有货（窖藏、温室）的不标。

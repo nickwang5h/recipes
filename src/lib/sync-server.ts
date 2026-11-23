@@ -27,6 +27,7 @@ export async function handleSync(request: Request, store: BlobStore, now = Date.
   } catch {
     return json({ error: 'bad json' }, 400);
   }
+  if (!body || typeof body !== 'object' || Array.isArray(body)) return json({ error: 'not an object' }, 400);
   if (typeof body.family !== 'string' || !FAMILY_PATTERN.test(body.family)) return json({ error: 'bad family code' }, 400);
   const incoming = body.entries ?? {};
   const reason = invalid(incoming);

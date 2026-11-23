@@ -19,6 +19,14 @@ describe('finding times in a step', () => {
     expect(seconds('每 30 秒翻动一次，炒 10 秒出香')).toEqual([]);
   });
 
+  it('takes 每隔（约）N 分钟 as a rhythm too, like every N minutes', () => {
+    expect(seconds('每隔约 8–10 分钟淋一次汤汁，共烤 40 分钟')).toEqual([2400]);
+    expect(seconds('每隔 15 分钟翻一次')).toEqual([]);
+    expect(seconds('每隔大约 30 分钟看一眼')).toEqual([]);
+    // Per batch or per side is still a time to count down.
+    expect(seconds('每批约 8–10 分钟，每面煎约 2 分钟')).toEqual([480, 120]);
+  });
+
   it('reports where the match is so it can be wrapped', () => {
     const text = '煮 3 分钟后捞出';
     const [d] = findDurations(text);
@@ -42,6 +50,14 @@ describe('findDurations in English', () => {
       ['1.5 hours', 5400, undefined],
       ['1 hour 20 minutes', 4800, undefined],
     ]);
+  });
+
+  it('reads "N more minutes" as the Chinese 再炒 N 分钟 is read', () => {
+    expect(findDurations('Stir-fry 3–4 more minutes, then simmer 10 more minutes.').map((d) => [d.text, d.seconds, d.maxSeconds])).toEqual([
+      ['3–4 more minutes', 180, 240],
+      ['10 more minutes', 600, undefined],
+    ]);
+    expect(findDurations('Bake for 1 more hour.').map((d) => d.seconds)).toEqual([3600]);
   });
 
   it('takes hyphenated forms and skips rhythms and short spans', () => {

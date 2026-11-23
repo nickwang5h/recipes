@@ -51,6 +51,11 @@ export interface MatchOptions {
   maxMissing: number;
 }
 
+/** The catalog substitute the cook has for a missing ingredient, if any. */
+export function substituteFor(id: string, has: (id: string) => boolean, substitutes: Record<string, string[]>): string | undefined {
+  return substitutes[id]?.find(has);
+}
+
 export function matchRecipes<R extends MatchableRecipe>(recipes: R[], opts: MatchOptions): Match<R>[] {
   const { chosen, staples, substitutes, maxMissing } = opts;
   const has = (id: string) => chosen.has(id) || staples.has(id) || ALWAYS_HAVE.includes(id);
@@ -63,7 +68,7 @@ export function matchRecipes<R extends MatchableRecipe>(recipes: R[], opts: Matc
     for (const id of recipe.req) {
       if (chosen.has(id)) used++;
       if (has(id)) continue;
-      const sub = substitutes[id]?.find(has);
+      const sub = substituteFor(id, has, substitutes);
       if (sub) {
         swaps.push([id, sub]);
         if (chosen.has(sub)) used++;

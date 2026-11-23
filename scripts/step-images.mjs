@@ -30,6 +30,7 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync
 import { parse } from 'yaml';
 import sharp from 'sharp';
 import { parseRecipe } from './cook-links.mjs';
+import { parseArgs } from './step-images-args.mjs';
 
 const root = new URL('../', import.meta.url).pathname;
 const zhDir = `${root}src/content/recipes/zh/`;
@@ -399,8 +400,7 @@ async function sheet(slug) {
   return out;
 }
 
-const [cmd, ...rest] = process.argv.slice(2);
-const slugs = rest.filter((a) => !a.startsWith('--'));
+const { cmd, slugs } = parseArgs(process.argv.slice(2));
 if (cmd === 'status') status();
 else if (cmd === 'prompt') console.log(prompt(load(slugs[0]), null));
 else if (cmd === 'draw') for (const s of slugs) log(`${s}: ${await draw(s, option('--model', 'gpt-6.1-terra'))}`);

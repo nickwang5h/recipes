@@ -15,8 +15,8 @@ export interface Duration {
 const UNIT: Record<string, number> = { 秒: 1, 分钟: 60, 小时: 3600, second: 1, minute: 60, hour: 3600 };
 const PATTERNS = [
   /(\d+(?:\.\d+)?)(?:\s*[–—~-]\s*(\d+(?:\.\d+)?))?\s*(秒|分钟|小时)(?:\s*(\d+)\s*分钟)?/g,
-  // "8 minutes", "12–15 minutes", "1.5–2 hours", "1 hour 20 minutes", "a 10-minute rest"
-  /(\d+(?:\.\d+)?)(?:\s*(?:[–—~-]|to)\s*(\d+(?:\.\d+)?))?[\s-]*(second|minute|hour)s?\b(?:\s*(?:and\s*)?(\d+)\s*minutes?\b)?/gi,
+  // "8 minutes", "12–15 minutes", "1.5–2 hours", "1 hour 20 minutes", "a 10-minute rest", "3–4 more minutes"
+  /(\d+(?:\.\d+)?)(?:\s*(?:[–—~-]|to)\s*(\d+(?:\.\d+)?))?(?:\s+more)?[\s-]*(second|minute|hour)s?\b(?:\s*(?:and\s*)?(\d+)\s*minutes?\b)?/gi,
 ];
 /** Shorter than this isn't worth reaching for the phone. */
 const MIN_SECONDS = 30;
@@ -26,8 +26,9 @@ export function findDurations(text: string): Duration[] {
   for (const pattern of PATTERNS) {
     for (const m of text.matchAll(pattern)) {
       const [whole, low, high, unit, extraMinutes] = m;
-      // "每 30 秒翻动一次", "every 30 seconds" is a rhythm, not something to count down once.
-      if (/(每|every)\s*$/i.test(text.slice(0, m.index))) continue;
+      // "每 30 秒翻动一次", "每隔约 10 分钟淋一次", "every 30 seconds" is a rhythm, not something to
+      // count down once. (每批, 每面 are: a batch or a side takes that long.)
+      if (/(每\s*(?:隔\s*)?(?:大?约\s*)?|every\s*)$/i.test(text.slice(0, m.index))) continue;
       const per = UNIT[unit.toLowerCase()];
       const extra = extraMinutes ? Number(extraMinutes) * 60 : 0;
       const seconds = Math.round(Number(low) * per) + extra;

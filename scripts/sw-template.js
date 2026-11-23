@@ -1,17 +1,20 @@
 // Service worker template. scripts/build-sw.mjs fills in VERSION, PRECACHE and
-// PAGE_LIST and writes the result to dist/sw.js.
+// PAGE_LIST, appends the picture helpers from scripts/sw-images.mjs (imageFamily, sameImage,
+// pageImages) and writes the result to dist/sw.js.
 //
 // Caches:
 //   static-<VERSION>  hashed CSS/JS, icons, the offline page; replaced on each deploy
 //   pages             HTML; network first, so a visited page is always the newest copy
 //                     the reader has seen, and it survives deploys
-//   images, fonts     immutable files; cache first
+//   images, fonts     immutable files; cache first. `images` keeps the last MAX_IMAGES seen
+//   saved-images      pictures saved on purpose (the offline page's, "save everything"); never trimmed
 const VERSION = '__VERSION__';
 const PRECACHE = __PRECACHE__;
 const PAGE_LIST = '__PAGE_LIST__';
 const STATIC = `static-${VERSION}`;
 const PAGES = 'pages';
 const IMAGES = 'images';
+const SAVED_IMAGES = 'saved-images';
 const FONTS = 'fonts';
 const OFFLINE = '/offline/';
 const NETWORK_TIMEOUT = 4000;
@@ -27,10 +30,10 @@ self.addEventListener('install', (event) => {
       await pages.put(OFFLINE, (await cache.match(OFFLINE)).clone());
       // Its pictures (the cat, the logo) have to be there when the network isn't.
       const html = await (await cache.match(OFFLINE)).text();
-      const images = await caches.open(IMAGES);
-      for (const src of html.matchAll(/<img[^>]+src="(\/_astro\/[^"]+)"/g)) {
-        const image = await fetch(src[1]);
-        if (image.ok) await images.put(src[1], image);
+      const images = await caches.open(SAVED_IMAGES);
+      for (const [src] of pageImages(html)) {
+        const image = await fetch(src);
+        if (image.ok) await images.put(src, image);
       }
       await self.skipWaiting();
     })(),
@@ -60,7 +63,7 @@ self.addEventListener('fetch', (event) => {
   } else if (url.pathname.startsWith('/fonts/')) {
     event.respondWith(cacheFirst(request, FONTS));
   } else if (/\.(webp|png|jpe?g|svg)$/.test(url.pathname)) {
-    event.respondWith(cacheFirst(request, IMAGES, MAX_IMAGES));
+    event.respondWith(image(request));
   } else if (url.pathname.startsWith('/_astro/')) {
     event.respondWith(cacheFirst(request, STATIC));
   }
@@ -101,16 +104,36 @@ function pageKey(href) {
   return url.href;
 }
 
-async function cacheFirst(request, name, max) {
+async function cacheFirst(request, name) {
   const cache = await caches.open(name);
   const hit = await cache.match(request);
   if (hit) return hit;
   const response = await fetch(request);
-  if (response.ok) {
-    await cache.put(request, response.clone());
-    if (max) trim(cache, max);
-  }
+  if (response.ok) await cache.put(request, response.clone());
   return response;
+}
+
+// Cache first, from the saved pictures or the recent ones. Offline, another width of the same picture
+// will do: the browser picks a width from srcset by screen, and "save everything" keeps only one.
+async function image(request) {
+  const saved = await caches.open(SAVED_IMAGES);
+  const recent = await caches.open(IMAGES);
+  const hit = (await saved.match(request)) || (await recent.match(request));
+  if (hit) return hit;
+  try {
+    const response = await fetch(request);
+    if (response.ok) {
+      await recent.put(request, response.clone());
+      trim(recent, MAX_IMAGES);
+    }
+    return response;
+  } catch (error) {
+    for (const cache of [saved, recent]) {
+      const key = sameImage((await cache.keys()).map((k) => k.url), request.url);
+      if (key) return cache.match(key);
+    }
+    throw error;
+  }
 }
 
 async function trim(cache, max) {
@@ -128,8 +151,10 @@ function withTimeout(promise, ms) {
   });
 }
 
-// "Save everything for offline": fetch every page (and the images it shows) into the
-// caches, reporting progress to the page that asked.
+// "Save everything for offline": fetch every page into the caches, with one copy of each picture
+// it shows (covers, cards, cats; offline-images.json, made by scripts/build-sw.mjs, says which and
+// where). Step pictures are left out: all of them together are well over 100 MB. Progress goes to
+// the page that asked.
 self.addEventListener('message', (event) => {
   if (event.data?.type !== 'save-all') return;
   const client = event.source;
@@ -140,8 +165,13 @@ self.addEventListener('message', (event) => {
 
 async function saveAll(client, list) {
   const urls = await (await fetch(list, { cache: 'no-store' })).json();
+  // Without the picture list (an older deploy) the pages are still saved.
+  const pictures = await fetch(list.replace(/offline-pages\.json$/, 'offline-images.json'), { cache: 'no-store' })
+    .then((r) => (r.ok ? r.json() : {}))
+    .catch(() => ({}));
   const pages = await caches.open(PAGES);
-  const images = await caches.open(IMAGES);
+  const images = await caches.open(SAVED_IMAGES);
+  const recent = await caches.open(IMAGES);
   let done = 0;
   let failed = 0;
   const queue = [...urls];
@@ -151,12 +181,11 @@ async function saveAll(client, list) {
       try {
         const response = await fetch(path, { cache: 'no-cache' });
         if (!response.ok) throw new Error(String(response.status));
-        const html = await response.clone().text();
         await pages.put(pageKey(new URL(path, self.location.origin).href), response);
-        for (const src of html.matchAll(/<img[^>]+src="(\/_astro\/[^"]+)"/g)) {
-          if (!(await images.match(src[1]))) {
-            const image = await fetch(src[1]);
-            if (image.ok) await images.put(src[1], image);
+        for (const src of pictures[path] ?? []) {
+          if (!(await images.match(src))) {
+            const image = (await recent.match(src)) || (await fetch(src));
+            if (image.ok) await images.put(src, image);
           }
         }
       } catch {
