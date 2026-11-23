@@ -1,7 +1,7 @@
 ---
 title: Egg-Filled Flatbread
 original: 鸡蛋灌饼
-summary: Soft dough wraps a paste of flour and oil and is griddled until it puffs into a hollow, then a slit is opened and scallion egg is poured in. Both sides turn golden and the egg sets inside the layers.
+summary: Soft dough wraps a paste of flour and oil and is griddled until it puffs into a hollow, then a slit is opened and egg with chopped green onion is poured in. Both sides turn golden and the egg sets inside the layers.
 coverAlt: Illustration of egg-filled flatbread plated
 ingredients:
   - group: Dough

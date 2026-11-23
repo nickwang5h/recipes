@@ -2,9 +2,9 @@
 title: Mỡ Hành
 original: Mỡ hành
 summary: Green onions are taken off the heat just as they wilt in hot oil, and the green onion and oil are spooned together over grilled-meat rice, grilled eggplant or thin rice noodles.
-coverAlt: Illustration of Vietnamese scallion oil served in a small bowl
+coverAlt: Illustration of Vietnamese green onion oil served in a small bowl
 ingredients:
-  - group: Scallion oil
+  - group: Green onion oil
     items:
       - { name: green onions, note: weight after trimming the roots; use both the white and green parts }
       - { name: vegetable oil, note: plain canola or vegetable oil }
@@ -12,7 +12,7 @@ ingredients:
 translated: 2026-10-02
 ---
 
-*Mỡ hành* is a Vietnamese scallion oil eaten together with the green onion pieces. Chopped green onions go into hot oil for a short time and come off the heat the moment they wilt. The result has bright green pieces in clear oil, and it is spooned over [Cơm Tấm Sườn Nướng](/recipes/com-tam-suon-nuong/), and often over grilled eggplant, grilled corn and thin Vietnamese rice noodles.
+*Mỡ hành* is a Vietnamese green onion oil eaten together with the green onion pieces. Chopped green onions go into hot oil for a short time and come off the heat the moment they wilt. The result has bright green pieces in clear oil, and it is spooned over [Cơm Tấm Sườn Nướng](/recipes/com-tam-suon-nuong/), and often over grilled eggplant, grilled corn and thin Vietnamese rice noodles.
 
 Hot oil heats the cut green onion quickly and carries its aroma into the fat (see [Spices and Aromatics](/principles/aromatics/)). The time is short, so the green onion's sharpness mellows while soft pieces remain. A thick pan keeps heating after it leaves the burner (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)), so move the pieces to a bowl as soon as you see them slump, and the colour and texture stop changing.
 

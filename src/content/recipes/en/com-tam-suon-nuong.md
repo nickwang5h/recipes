@@ -1,7 +1,7 @@
 ---
 title: Cơm Tấm Sườn Nướng
 original: Cơm tấm sườn nướng
-summary: Broken rice is topped with lemongrass-marinated grilled pork chops, served with scallion oil, pickled carrot and daikon, and fish sauce dressing. The chops are grilled to a brown aroma first, then cooked through next to the bone.
+summary: Broken rice is topped with lemongrass-marinated grilled pork chops, served with green onion oil, pickled carrot and daikon, and fish sauce dressing. The chops are grilled to a brown aroma first, then cooked through next to the bone.
 coverAlt: Illustration of broken rice with grilled pork chops on a plate
 ingredients:
   - group: Grilled pork chops
@@ -9,13 +9,13 @@ ingredients:
       - { name: pork chops, note: 4 bone-in chops about 1.5 cm thick; choose ones with fat along the edge }
       - { name: "minced lemongrass", note: "use only the tender lower part of the stalk, cut very fine" }
       - { name: minced garlic }
-      - { name: ["green onion", "green onions"], note: "the white part goes into the marinade, the green part into the scallion oil" }
+      - { name: ["green onion", "green onions"], note: "the white part goes into the marinade, the green part into the green onion oil" }
       - { name: fish sauce }
       - { name: oyster sauce }
       - { name: sugar }
       - { name: honey }
       - { name: black pepper, note: freshly ground }
-      - { name: vegetable oil, note: 10 ml each for the marinade and the scallion oil }
+      - { name: vegetable oil, note: 10 ml each for the marinade and the green onion oil }
       - { name: vegetable oil, note: for brushing the grill }
   - group: Broken rice and fresh vegetables
     items:
@@ -42,7 +42,7 @@ ingredients:
 translated: 2026-10-02
 ---
 
-*Cơm tấm sườn nướng* is a southern Vietnamese dish of broken rice and grilled pork chops. Broken rice is rice whose grains broke during milling. Once cooked, it is topped with lemongrass pork chops and scallion oil and served with pickled daikon and carrot, cucumber and fish sauce dressing. The star of the plate is the bone-in pork chop: the marinade is sweet, the grilled surface should be browned and fragrant, and the meat next to the bone must be cooked through.
+*Cơm tấm sườn nướng* is a southern Vietnamese dish of broken rice and grilled pork chops. Broken rice is rice whose grains broke during milling. Once cooked, it is topped with lemongrass pork chops and green onion oil and served with pickled daikon and carrot, cucumber and fish sauce dressing. The star of the plate is the bone-in pork chop: the marinade is sweet, the grilled surface should be browned and fragrant, and the meat next to the bone must be cooked through.
 
 The grilled aroma of the meat comes from the [Maillard reaction](/principles/maillard-reaction/), and the thickness decides how long heat takes to reach the centre (see [heat transfer](/principles/heat-transfer/)). The broken rice goes into the rice cooker at roughly 1:1 with water by volume and softens through [starch gelatinization](/principles/starch-gelatinization/). Drain it well after rinsing, so leftover water does not dilute that ratio.
 
@@ -55,7 +55,7 @@ The grilled aroma of the meat comes from the [Maillard reaction](/principles/mai
 5. Preheat the grill over medium-high heat for about 10 minutes, until the grate is hot enough that the meat sizzles when it goes on, and brush with 1 tsp of oil. Scrape off the thick pile of lemongrass and garlic from the surface of the chops, drain off the extra marinade, and lay the four chops out.
 6. Grill the chops for about 8 minutes per side, until dark brown grill marks form and the edges are slightly charred. If the colour is deep enough but the centre is not cooked, move them to a cooler part of the grill and cook 2 minutes more at a time. Test the thickest part from the side, away from the bone, and take them off when they reach 71°C (160°F).
 7. Rest the chops loosely covered for 5 minutes, until little juice runs out when cut. Put the green part of the green onion and the remaining 10 ml of oil in a small pot and heat over medium heat for about 1 minute, until the green onion is soft and the oil bubbles lightly, then take it off the heat.
-8. On each of four plates, put broken rice, a pork chop and fresh vegetables, add drained pickled daikon and carrot, and spoon on the scallion oil. Serve the fish sauce dressing on the side, to spoon over the rice a little at a time as you eat.
+8. On each of four plates, put broken rice, a pork chop and fresh vegetables, add drained pickled daikon and carrot, and spoon on the green onion oil. Serve the fish sauce dressing on the side, to spoon over the rice a little at a time as you eat.
 
 ## Key points
 
