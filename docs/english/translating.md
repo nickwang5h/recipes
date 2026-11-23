@@ -222,6 +222,7 @@ Principle titles (use them in link text too):
 | gluten | Gluten |
 | heat-transfer | Heat Transfer: Conduction, Convection and Radiation |
 | knife-work | Knife Work and Cooking |
+| leavening | Leavening: Yeast, Baking Soda and Baking Powder |
 | maillard-reaction | The Maillard Reaction |
 | oil-temperature | Oil Temperature and Deep Frying |
 | protein-coagulation | Protein Denaturation and Coagulation |
