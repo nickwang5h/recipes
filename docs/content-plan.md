@@ -67,3 +67,18 @@ slug 一旦发布就不改。✅ = 已发布。
 ## 第八轮：工作日能吃的菜
 
 清单见 `docs/round8/selection.json`（60 道，偏向能带饭、一锅出和鸡翅，七个菜系都有）。菜谱新增 `tags`（`bento` 能带饭、`one-pot` 一锅出）和 `minor`（小菜降权）两个字段，旧菜谱按 `docs/round8/tag-existing.py` 补标。标准和审稿记录见 `docs/round8/README.md`。
+
+## 草稿：overnight/new-pages（2026-11-22，待审）
+
+补站里已经提到、却还没有页面的条目，并给两类没有原理页的做法（发面、打发）各写一篇原理。没有封面、步骤图和营养数据。
+
+| slug | 标题 | 类型 | 菜系 / category | 缺口 |
+|---|---|---|---|---|
+| leavening | 膨松：酵母、小苏打与泡打粉 | 原理 | reactions | 17 道用酵母、泡打粉或小苏打的菜没有对应原理 |
+| foams | 泡沫：打发蛋白、全蛋与奶油 | 原理 | colloids | 舒芙蕾、慕斯、沙巴雍等打发的菜没有对应原理 |
+| veloute | 天鹅绒酱 | 菜谱 | french | 法餐页母酱表和淀粉糊化页提到，没有菜谱 |
+| longjing-xia-ren | 龙井虾仁 | 菜谱 | chinese | 浙菜页第一节讲它，没有菜谱 |
+| cha-shao-bao | 叉烧包 | 菜谱 | chinese | 示范 leavening：酵母加泡打粉 |
+| seolleongtang | 雪浓汤 | 菜谱 | korean | 乳化页韩国条目提到，没有菜谱 |
+| sushi-meshi | 寿司醋饭 | 菜谱 | japanese | 酸页日本条目提到，没有菜谱 |
+| pan-di-spagna | 意式海绵蛋糕 | 菜谱 | italian | 示范 foams：全蛋打发 |

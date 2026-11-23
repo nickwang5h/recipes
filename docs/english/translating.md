@@ -219,9 +219,11 @@ Principle titles (use them in link text too):
 | collagen-gelatin | Collagen and Gelatin |
 | emulsification | Emulsification |
 | fermentation | Fermented Seasonings |
+| foams | Foams: Whipped Egg Whites, Whole Eggs and Cream |
 | gluten | Gluten |
 | heat-transfer | Heat Transfer: Conduction, Convection and Radiation |
 | knife-work | Knife Work and Cooking |
+| leavening | Leavening: Yeast, Baking Soda and Baking Powder |
 | maillard-reaction | The Maillard Reaction |
 | oil-temperature | Oil Temperature and Deep Frying |
 | protein-coagulation | Protein Denaturation and Coagulation |

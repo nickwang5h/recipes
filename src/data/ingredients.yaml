@@ -628,3 +628,4 @@
 - { id: morteau-sausage, zh: 莫尔托香肠, aliases: [Morteau 香肠, 法式莫尔托烟熏香肠, Saucisse de Morteau], en: Morteau smoked pork sausage (raw), kind: meat, where: specialty, substitutes: [] }
 - { id: bayonne-ham, zh: 巴约讷火腿, aliases: [Jambon de Bayonne], en: Bayonne ham, kind: meat, where: specialty, pantry: false, substitutes: [prosciutto] }
 - { id: kiriboshi-daikon, zh: 干萝卜丝, aliases: [切干萝卜, 切り干し大根, 切干大根, Kiriboshi daikon, 日式萝卜丝干], en: Kiriboshi daikon / Dried shredded daikon radish (unseasoned), kind: dried, where: asian, pantry: true, substitutes: [] }
+- { id: green-tea, zh: 绿茶, aliases: [龙井, 龙井茶, 西湖龙井, Longjing, Dragon Well tea], en: Chinese green tea (loose leaf; Longjing / Dragon Well), kind: dried, where: asian, pantry: true, substitutes: [] }
