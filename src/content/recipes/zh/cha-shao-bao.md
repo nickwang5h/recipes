@@ -25,7 +25,7 @@ ingredients:
       - { ref: shaoxing-wine, qty: 2, unit: 汤匙 }
       - { ref: sugar, qty: 1, unit: 汤匙 }
       - { ref: garlic, qty: 1, unit: 瓣, note: 磨成泥 }
-      - { ref: five-spice, qty: 0.125, unit: 茶匙 }
+      - { ref: five-spice, note: 一小撮 }
       - { ref: cornstarch, qty: 1.5, unit: 汤匙, note: 和 1 汤匙冷水调匀 }
   - group: 蒸制
     items:
