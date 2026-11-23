@@ -1,6 +1,6 @@
 ---
 title: Ojingeo Bokkeum
-original: 辣炒鱿鱼
+original: 오징어볶음
 summary: Squid is stir-fried quickly with onion, carrot and zucchini and coated in a sweet and spicy sauce of chili paste and chili flakes. As soon as the flesh turns white and curls, it is ready to come out.
 coverAlt: Illustration of spicy stir-fried squid plated
 ingredients:

@@ -1,6 +1,6 @@
 ---
 title: Bò Kho
-original: 越南炖牛肉
+original: Bò kho
 summary: Beef brisket is stewed slowly with lemongrass, star anise and cassia on a tomato base, with the carrots added late; once the sinew softens, the broth turns silky.
 coverAlt: Illustration of Vietnamese beef stew plated
 ingredients:

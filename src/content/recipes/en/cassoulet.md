@@ -1,6 +1,6 @@
 ---
 title: Cassoulet
-original: 卡酥来砂锅
+original: Cassoulet
 summary: White beans are cooked through first, then lamb, pork belly and garlic sausage go into the pot in layers; gelatin from the pork rind ties the bean liquid together, and a slow bake makes a thin, crisp top.
 coverAlt: Illustration of cassoulet casserole, plated
 ingredients:

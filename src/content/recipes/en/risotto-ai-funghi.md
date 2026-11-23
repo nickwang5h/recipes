@@ -1,6 +1,6 @@
 ---
 title: Mushroom Risotto
-original: 蘑菇烩饭
+original: Risotto ai funghi
 summary: Dried porcini and their strained soaking liquid give the mushroom aroma, while starch released from the rice and butter stirred in off the heat make a thick, silky sauce.
 coverAlt: Illustration of mushroom risotto plated
 ingredients:

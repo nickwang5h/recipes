@@ -1,6 +1,6 @@
 ---
 title: Nikujaga
-original: 土豆炖肉
+original: Nikujaga
 summary: Thin beef, potatoes and onion are stir-fried and then simmered, and the sweet and salty liquid is concentrated in stages. The potatoes end up soft all the way through and still hold their shape.
 coverAlt: Illustration of nikujaga plated
 ingredients:

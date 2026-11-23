@@ -1,6 +1,6 @@
 ---
 title: Bossam
-original: 菜包白切肉
+original: 보쌈
 summary: Pork belly is simmered tender in a broth of doenjang, green onion, ginger and garlic, sliced thin while warm, and eaten wrapped in lettuce with kimchi and salted baby shrimp.
 coverAlt: Illustration of bossam plated
 ingredients:

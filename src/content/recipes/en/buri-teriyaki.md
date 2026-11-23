@@ -1,6 +1,6 @@
 ---
 title: Buri Teriyaki
-original: 照烧鰤鱼
+original: ぶりの照り焼き
 summary: Yellowtail is lightly dredged in flour and pan-fried, then glazed with sake, mirin, soy sauce and sugar reduced to a shine; turn it as little as possible so the fillets stay whole.
 coverAlt: Illustration of yellowtail teriyaki plated
 ingredients:

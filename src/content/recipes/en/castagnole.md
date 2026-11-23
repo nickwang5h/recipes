@@ -1,6 +1,6 @@
 ---
 title: Castagnole
-original: 狂欢节小炸球
+original: Castagnole
 summary: Walnut-sized balls of sweet dough, fried until golden outside and soft inside. Lemon zest and anise liqueur provide the aroma, and the oil temperature decides whether they cook through inside and out together.
 coverAlt: Illustration of carnival fried dough balls, plated
 ingredients:

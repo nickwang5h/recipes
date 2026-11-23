@@ -1,6 +1,6 @@
 ---
 title: Ratatouille
-original: 普罗旺斯炖菜
+original: Ratatouille
 summary: Eggplant and zucchini are fried in batches and the tomatoes are reduced separately to a thick juice, then everything simmers gently together so the vegetables turn soft and keep their shape.
 coverAlt: Illustration of ratatouille plated
 ingredients:

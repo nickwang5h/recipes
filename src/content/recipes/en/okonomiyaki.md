@@ -1,6 +1,6 @@
 ---
 title: Okonomiyaki
-original: 大阪烧
+original: Okonomiyaki
 summary: Osaka-style mixed buta-tama. Cabbage is folded into a batter with a little grated yam, topped with pork belly, and pan-fried to a fragrant crust and a fluffy centre.
 coverAlt: Illustration of okonomiyaki plated
 ingredients:

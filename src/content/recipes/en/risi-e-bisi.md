@@ -1,6 +1,6 @@
 ---
 title: Risi e Bisi
-original: 威尼斯豌豆饭
+original: Risi e bisi
 summary: Rice and young peas are cooked together in stock, keeping a thick soup you can eat with a spoon; pea pods add sweet aroma, and butter and Parmigiano finish it.
 coverAlt: Illustration of risi e bisi plated
 ingredients:

@@ -1,6 +1,6 @@
 ---
 title: Nước Chấm
-original: 越南鱼露蘸汁
+original: Nước chấm
 summary: Fish sauce, lime, sugar and water make a sour, sweet, salty and savoury dipping sauce. Balance the sour and sweet first, add the fish sauce in stages, and taste it with rice noodles or fresh vegetables.
 coverAlt: Illustration of Vietnamese fish sauce dipping sauce plated
 ingredients:

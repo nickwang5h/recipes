@@ -1,6 +1,6 @@
 ---
 title: Bò Lúc Lắc
-original: 越南骰子牛肉
+original: Bò lúc lắc
 summary: Garlicky beef cubes are seared in a hot pan until browned, then turned, and served over sweet-sour watercress with the pan juices tossed through.
 coverAlt: Illustration of Vietnamese shaking beef plated
 ingredients:

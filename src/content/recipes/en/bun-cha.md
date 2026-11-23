@@ -1,6 +1,6 @@
 ---
 title: Bún Chả
-original: 烤肉米线
+original: Bún chả
 summary: Grilled pork slices and small meat patties sit in a sweet-sour fish sauce dip, with rice noodles, lettuce and herbs served separately to dip and eat as you go.
 coverAlt: Illustration of bún chả plated
 ingredients:

@@ -1,6 +1,6 @@
 ---
 title: Goong Ob Woonsen (Shrimp and Glass Noodles in a Clay Pot)
-original: 砂锅虾粉丝
+original: กุ้งอบวุ้นเส้น
 summary: Ginger, garlic and pepper line the pot, and shell-on shrimp and mung bean glass noodles braise under a lid until the noodles take up all the savoury sauce.
 coverAlt: Illustration of shrimp and glass noodles in a clay pot, plated
 ingredients:

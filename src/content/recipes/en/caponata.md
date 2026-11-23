@@ -1,6 +1,6 @@
 ---
 title: Sicilian Caponata
-original: 西西里酸甜茄子
+original: Caponata
 summary: Fried eggplant is combined with tomato, celery, green olives and capers, with sugar and vinegar at the end; the eggplant softens first, the acid goes in later, and it is eaten cooled.
 coverAlt: Illustration of Sicilian sweet-and-sour eggplant, plated
 ingredients:

@@ -1,6 +1,6 @@
 ---
 title: Asparagus Pork Rolls
-original: 芦笋肉卷
+original: アスパラの肉巻き
 summary: Thin pork loin is rolled around asparagus, lightly dusted with starch and pan-cooked, then reduced with equal parts soy sauce and mirin to a glossy, sweet and salty thin glaze.
 coverAlt: Illustration of asparagus pork rolls plated
 ingredients:

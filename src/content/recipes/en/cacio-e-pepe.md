@@ -1,6 +1,6 @@
 ---
 title: Cacio e Pepe
-original: 黑胡椒奶酪意面
+original: Cacio e pepe
 summary: "Only pasta, Pecorino, black pepper and pasta water. Whether the sauce comes out smooth depends on two things: enough starch, and how hot the pan is when the cheese goes in."
 coverAlt: Illustration of cacio e pepe pasta, plated
 ingredients:

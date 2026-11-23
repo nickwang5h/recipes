@@ -1,6 +1,6 @@
 ---
 title: Bún Riêu
-original: 蟹肉番茄米线
+original: Bún riêu
 summary: Rice field crab is mixed with water and strained into a crab slurry, then heated gently until it sets into soft crab clumps; tomato, fermented rice vinegar and shrimp sauce build a sour, savoury broth.
 coverAlt: Illustration of crab and tomato noodle soup plated
 ingredients:

@@ -1,6 +1,6 @@
 ---
 title: Gratin Dauphinois
-original: 多菲内焗土豆
+original: Gratin dauphinois
 summary: Thin potato slices bake soft in milk and butter, with a golden top and a rich, creamy bottom. This is the milk version without cheese.
 coverAlt: Illustration of gratin dauphinois plated
 ingredients:

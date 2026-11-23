@@ -1,6 +1,6 @@
 ---
 title: Bún Thịt Nướng
-original: 烤猪肉米线沙拉
+original: Bún thịt nướng
 summary: Garlicky five-spice grilled pork goes over room-temperature rice noodles and fresh vegetables, tossed with a sweet-sour fish sauce dressing; the pork should have grilled flavour and the noodles should be loose and well drained.
 coverAlt: Illustration of grilled pork noodle salad plated
 ingredients:

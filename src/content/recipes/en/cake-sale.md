@@ -1,6 +1,6 @@
 ---
 title: Cake Salé
-original: 法式咸蛋糕
+original: cake salé
 summary: Ham and Gruyère are stirred into an egg batter and baked in a loaf pan into a soft savoury cake that is also good sliced cold.
 coverAlt: Illustration of French savoury cake, plated
 ingredients:

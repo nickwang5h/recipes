@@ -1,6 +1,6 @@
 ---
 title: Spinach and Ricotta Ravioli
-original: 菠菜乳清奶酪饺
+original: Ravioli ricotta e spinaci
 summary: Thin egg pasta wraps squeezed-dry spinach, ricotta and Parmigiano, served with sage butter; the filling must be dry and the seal pressed free of air.
 coverAlt: Illustration of spinach and ricotta ravioli plated
 ingredients:

@@ -1,6 +1,6 @@
 ---
 title: Budae Jjigae
-original: 部队锅
+original: 부대찌개
 summary: Luncheon meat, hot dogs and sour, ripe kimchi simmer together while tofu soaks up the broth; instant noodles go in last to keep their spring and the broth.
 coverAlt: Illustration of budae jjigae plated
 ingredients:

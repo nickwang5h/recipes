@@ -1,6 +1,6 @@
 ---
 title: Oden
-original: 关东煮
+original: おでん
 summary: Daikon, eggs, konnyaku and fish cakes sit in a light soy sauce dashi. The daikon is cooked soft first and the fish cakes go in later, which keeps the broth clear and the pieces whole.
 coverAlt: Illustration of oden plated
 ingredients:

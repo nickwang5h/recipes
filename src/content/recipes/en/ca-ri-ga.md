@@ -1,6 +1,6 @@
 ---
 title: Cà Ri Gà
-original: 越南咖喱鸡
+original: Cà ri gà
 summary: Bone-in chicken legs are braised with lemongrass and Madras curry powder, then coconut milk and potatoes go in at the end; the broth stays loose and rich, good for dipping a baguette.
 coverAlt: Illustration of Vietnamese chicken curry, plated
 ingredients:

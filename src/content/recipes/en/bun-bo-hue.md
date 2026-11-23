@@ -1,6 +1,6 @@
 ---
 title: Bún Bò Huế
-original: 顺化牛肉米线
+original: Bún bò Huế
 summary: Beef shank and pork trotter make a hearty broth, and lemongrass, Huế shrimp paste and chili-lemongrass oil give the thick round rice noodles savour, heat and fragrance.
 coverAlt: Illustration of bún bò Huế plated
 ingredients:

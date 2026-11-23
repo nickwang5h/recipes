@@ -1,6 +1,6 @@
 ---
 title: Canh Khổ Qua
-original: 苦瓜酿肉汤
+original: Canh khổ qua
 summary: Bitter melon is filled with pork, wood ear and glass noodle stuffing and simmered over low heat until the flesh is soft; the clear broth keeps its bitterness and the filling stays in one piece.
 coverAlt: Illustration of stuffed bitter melon soup, served
 ingredients:

@@ -1,6 +1,6 @@
 ---
 title: Onigiri
-original: 饭团
+original: Onigiri
 summary: Warm short-grain rice is wrapped around a little bonito and soy sauce filling and pressed lightly so the grains stick together, then wrapped in nori before eating. Success depends on the moisture in the rice and a light hand.
 coverAlt: Illustration of onigiri plated
 ingredients:

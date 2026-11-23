@@ -1,6 +1,6 @@
 ---
 title: Lemon Granita
-original: 柠檬冰沙
+original: Granita al limone
 summary: Fresh lemon juice, sugar and water are frozen into fine ice crystals. Sugar controls the hardness, a shallow pan and repeated scraping control the crystal size, and the lemon juice goes in only once the syrup has cooled.
 coverAlt: Illustration of lemon granita served
 ingredients:

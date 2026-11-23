@@ -1,6 +1,6 @@
 ---
 title: Thai Red Curry with Pork
-original: 红咖喱猪肉
+original: Kaeng phet mu
 summary: Dried red chili curry paste is fried until fragrant, then coconut milk is added to cook sliced pork and round eggplant, and makrut lime leaves and sweet basil seal in the aroma at the end.
 coverAlt: Illustration of red curry with pork plated
 ingredients:

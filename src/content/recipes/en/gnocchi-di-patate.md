@@ -1,6 +1,6 @@
 ---
 title: Potato Gnocchi
-original: 土豆团子
+original: Gnocchi di patate
 summary: Hot potatoes are riced and mixed with flour into small dumplings, boiled and tossed with butter and cheese. Control the potatoes' water and knead little so they do not turn into heavy lumps of dough.
 coverAlt: Illustration of potato gnocchi plated
 ingredients:

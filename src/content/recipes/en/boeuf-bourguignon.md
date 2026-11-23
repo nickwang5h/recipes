@@ -1,6 +1,6 @@
 ---
 title: Beef Bourguignon
-original: 勃艮第红酒炖牛肉
+original: Bœuf bourguignon
 summary: Beef is browned for flavour, then stewed slowly in red wine and stock so the connective tissue of the chuck turns into silky gelatin.
 coverAlt: Illustration of beef bourguignon plated
 ingredients:

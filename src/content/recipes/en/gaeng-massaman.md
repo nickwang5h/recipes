@@ -1,6 +1,6 @@
 ---
 title: Massaman Curry
-original: 马沙文咖喱
+original: Kaeng matsaman
 summary: Beef shank is stewed slowly in coconut milk, cassia, cardamom and star anise build the aroma, and tamarind brings a sourness to the sweet, salty, rich sauce.
 coverAlt: Illustration of massaman curry plated
 ingredients:

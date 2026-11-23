@@ -1,6 +1,6 @@
 ---
 title: Ragù alla Bolognese
-original: 博洛尼亚肉酱
+original: Ragù alla bolognese
 summary: Coarsely ground beef is browned first, then simmered slowly with a little tomato; the connective tissue softens, and the meat and thick sauce cling to wide pasta together.
 coverAlt: Illustration of ragù alla bolognese plated
 ingredients:

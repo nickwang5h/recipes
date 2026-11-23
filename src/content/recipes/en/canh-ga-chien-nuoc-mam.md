@@ -1,6 +1,6 @@
 ---
 title: Cánh Gà Chiên Nước Mắm
-original: 越南鱼露鸡翅
+original: cánh gà chiên nước mắm
 summary: Chicken wings are marinated through in garlic water and fish sauce, thinly coated in rice flour and fried, then the salty-sweet liquid is reduced into a sticky, glossy coat.
 coverAlt: Illustration of Vietnamese fish sauce chicken wings, plated
 ingredients:
