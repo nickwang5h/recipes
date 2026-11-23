@@ -38,7 +38,7 @@ Dried rice noodles are soaked only until pliable, then cooked through in the pan
 
 ## Steps
 
-1. Soak the rice noodles in room-temperature water for about 30–40 minutes, until they bend around a finger without breaking. Drain and cut them into lengths of about 15 cm.
+1. Soak the rice noodles in room-temperature water for about 30–40 minutes, until they bend around a finger without breaking. Drain and cut them into lengths of about 15 cm. At this point the noodles are soft but still raw to the bite.
 2. Knead the tamarind apart in 30 ml of hot water, strain, and measure out 2 tbsp of juice, topping up with water if short. Stir it with the palm sugar and fish sauce until the sugar dissolves. Cut all the ingredients and set them beside the stove.
 3. Add 3 tbsp of the oil to the wok, put in the noodles over medium-high heat, and toss for about 1 minute, until they are coated in oil and more pliable. Pour in the sauce and toss for about 1 minute more, so every noodle takes up the liquid.
 4. Push the noodles to one side. Add the remaining 2 tbsp oil to the empty space, and add the shallot, garlic, preserved radish, tofu and dried shrimp. Stir-fry for about 1 minute. Add the fresh shrimp and toss until they have just started to change colour and are not yet cooked in the centre.
