@@ -8,7 +8,7 @@ course: soup
 tags: [one-pot]
 summary: 花芸豆、少量猪排骨和蔬菜先煮出底味，压碎一部分豆子，再在同锅煮短面，让汤自然变浓。
 servings: 6
-time: { prep: 15, cook: 120 }
+time: { prep: 495, cook: 120 }
 principles: [starch-gelatinization, aromatics]
 ingredients:
   - group: 豆子与面

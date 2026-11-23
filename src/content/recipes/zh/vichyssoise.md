@@ -7,7 +7,7 @@ cuisine: french
 course: soup
 summary: 韭葱和土豆在鸡汤里煮软、磨细，再加奶油冷藏；细滑靠土豆的淀粉，清甜靠韭葱白。
 servings: 6
-time: { prep: 20, cook: 50 }
+time: { prep: 260, cook: 50 }
 principles: [starch-gelatinization, heat-transfer]
 ingredients:
   - group: 汤底

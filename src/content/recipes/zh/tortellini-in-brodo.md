@@ -7,7 +7,7 @@ cuisine: italian
 course: soup
 summary: 薄鸡蛋面皮包住猪肉、风干火腿和 mortadella，直接在牛肉与鸡的清汤里煮熟，封口和汤的火候决定成败。
 servings: 6
-time: { prep: 90, cook: 20 }
+time: { prep: 810, cook: 20 }
 principles: [gluten, protein-coagulation]
 ingredients:
   - group: 面皮

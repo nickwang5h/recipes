@@ -6,7 +6,7 @@ cuisine: chinese
 course: meat
 summary: 用香料、糖色和几种酱料卤牛腱，冷藏浸味后切片，筋软而肉片完整。
 servings: 3
-time: { prep: 200, cook: 50 }
+time: { prep: 680, cook: 50 }
 principles: [collagen-gelatin, caramelization, salt]
 ingredients:
   - group: 牛肉与香料

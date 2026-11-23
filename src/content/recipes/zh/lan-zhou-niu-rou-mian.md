@@ -6,7 +6,7 @@ cuisine: chinese
 course: staple
 summary: 牛肉与牛骨轻煨成清汤，配白萝卜、现拉面条、牛肉片和红油；先把汤熬清，再分锅煮面。
 servings: 6
-time: { prep: 100, cook: 240 }
+time: { prep: 580, cook: 240 }
 principles: [collagen-gelatin, gluten, aromatics]
 ingredients:
   - group: 牛肉清汤

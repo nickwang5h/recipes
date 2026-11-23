@@ -8,7 +8,7 @@ course: meat
 tags: [bento]
 summary: 整块小牛腿肉煮熟冷切，盖上金枪鱼、凤尾鱼、刺山柑和柠檬调成的酱，冷藏后吃。
 servings: 6
-time: { prep: 25, cook: 90 }
+time: { prep: 745, cook: 90 }
 principles: [protein-coagulation, acid, umami]
 ingredients:
   - group: 小牛肉与煮肉水

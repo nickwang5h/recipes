@@ -8,7 +8,7 @@ course: soup
 tags: [one-pot]
 summary: 蒜和迷迭香在橄榄油里带出香气，番茄煮成底味，鹰嘴豆泥与同锅煮的短面把汤连成浓稠的一体。
 servings: 4
-time: { prep: 15, cook: 150 }
+time: { prep: 495, cook: 150 }
 principles: [aromatics, starch-gelatinization]
 ingredients:
   - group: 豆子与面

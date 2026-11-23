@@ -7,7 +7,7 @@ course: meat
 tags: [bento]
 summary: 蛋清淀粉上浆的里脊丝，配胡萝卜、青椒和木耳，最后用酸甜碗汁迅速裹芡。
 servings: 2
-time: { prep: 30, cook: 10 }
+time: { prep: 270, cook: 10 }
 principles: [starch-gelatinization, protein-coagulation, acid]
 ingredients:
   - group: 主料

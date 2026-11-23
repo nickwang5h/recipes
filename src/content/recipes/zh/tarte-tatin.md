@@ -7,7 +7,7 @@ cuisine: french
 course: dessert
 summary: 苹果与黄油、糖放在下面，酥皮盖在上面烤；等果汁收成褐色糖浆，再倒扣出一面焦糖苹果。
 servings: 8
-time: { prep: 35, cook: 60 }
+time: { prep: 155, cook: 60 }
 principles: [caramelization, gluten, heat-transfer]
 ingredients:
   - group: 甜酥皮

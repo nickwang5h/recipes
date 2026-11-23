@@ -7,7 +7,7 @@ cuisine: italian
 course: dessert
 summary: 咖啡润湿的手指饼干叠上蛋黄、糖和 mascarpone 奶酪霜；快蘸保持支撑，冷藏让水分分布均匀。
 servings: 8
-time: { prep: 20, cook: 0 }
+time: { prep: 200, cook: 0 }
 principles: [emulsification]
 ingredients:
   - group: 奶酪霜

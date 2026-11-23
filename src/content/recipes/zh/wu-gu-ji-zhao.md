@@ -6,7 +6,7 @@ cuisine: chinese
 course: meat
 summary: 鸡爪煮熟后迅速冷却、分批去骨，再冷藏拌入柠檬陈醋和辣椒蒜末。
 servings: 3
-time: { prep: 140, cook: 15 }
+time: { prep: 500, cook: 15 }
 principles: [collagen-gelatin, acid, salt]
 ingredients:
   - group: 煮鸡爪
