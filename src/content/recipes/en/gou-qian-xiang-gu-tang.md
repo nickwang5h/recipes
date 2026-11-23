@@ -2,6 +2,7 @@
 title: Silky Shiitake Mushroom Soup
 original: 勾芡香菇汤
 summary: Fresh shiitake are simmered briefly for flavour, and potato starch goes in last to turn a clear broth into a smooth soup that thinly coats a spoon.
+coverAlt: Illustration of silky shiitake mushroom soup served
 ingredients:
   - group: Soup base
     items:

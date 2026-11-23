@@ -13,7 +13,7 @@ ingredients:
       - { name: shallot, note: measured after finely chopping }
       - { name: unsalted butter }
       - { name: ["parsley sprig", "parsley sprigs"], note: "with leaves, used to cook the wine broth" }
-      - { name: [bay leaf, bay leaves] }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: thyme, note: dried thyme }
       - { name: black pepper, note: a little }
   - group: To finish
@@ -39,6 +39,6 @@ The lid keeps the steam in the pot and carries the heat to the shells on top; a 
 ## Key points
 
 - **The bottom layer is overcooked while the top layer stays closed**: the pot was too full, and steam and hot liquid could not reach the top (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). Cook in separate pots, cover tightly and turn the mussels halfway through so each layer heats evenly.
-- **The meat shrinks into hard little lumps**: continued heating tightens the protein and squeezes out water (see [Protein Denaturation and Coagulation](/principles/protein-coagulation/)). Start checking at 4 minutes, and turn off the heat once the meat is cooked through, without cooking it further.
+- **The meat shrinks into hard little lumps**: continued heating tightens the protein and squeezes out water (see [Protein Denaturation and Coagulation](/principles/protein-coagulation/)). Start checking after 4–9 minutes of steaming, and turn off the heat once the meat is cooked through, without cooking it further.
 - **Grit in the broth, and a bitter saltiness**: the shells were not scrubbed clean, or all the sediment was poured into the bowl; reducing the broth for a long time also concentrates the salt. Drain after scrubbing, let the grit settle when serving, and taste the cooked broth before adding salt.
 - **Still not opening after long cooking**: following Health Canada's guidance for steaming, discard any that stay closed after cooking. When buying fresh mussels for eating, also remove any with broken shells or that do not close when tapped while raw.

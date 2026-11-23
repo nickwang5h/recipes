@@ -9,7 +9,7 @@ ingredients:
       - { name: dry white wine }
       - { name: white wine vinegar }
       - { name: shallot, note: "measured after mincing finely" }
-      - { name: tarragon, note: "fresh leaves, chopped, for the reduction; half a tablespoon of dried tarragon can replace it" }
+      - { name: tarragon, note: "fresh leaves, chopped, for the reduction; 0.5 tbsp of dried tarragon can replace it" }
       - { name: black pepper, note: "coarsely crushed, a little" }
       - { name: salt, note: "a little; taste again at the end" }
   - group: Butter and egg sauce

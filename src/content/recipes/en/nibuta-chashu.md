@@ -1,7 +1,7 @@
 ---
 title: Nibuta Chashu
-original: 日式叉烧
-summary: A pork belly roll is seared and then simmered, and two hours of moist heat soften the connective tissue. It is chilled to set so that it can be cut into whole, thin slices.
+original: チャーシュー
+summary: A pork belly roll is seared and then simmered, and 2 hours of moist heat soften the connective tissue. It is chilled to set so that it can be cut into whole, thin slices.
 coverAlt: Illustration of Japanese chashu pork plated
 ingredients:
   - group: Pork and aromatics

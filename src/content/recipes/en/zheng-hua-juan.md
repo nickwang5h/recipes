@@ -2,6 +2,7 @@
 title: Steamed Flower Rolls
 original: 蒸花卷
 summary: Frozen flower rolls are reheated with steam. Once the surface softens, check the centre too, so the outside is not hot while the inside is cold.
+coverAlt: Illustration of steamed flower rolls plated
 ingredients:
   - items:
       - { name: [frozen cooked flower roll, frozen cooked flower rolls], note: "choose frozen rolls that are already steamed; if you have no flower rolls, use frozen cooked mantou and adjust the time by the package" }

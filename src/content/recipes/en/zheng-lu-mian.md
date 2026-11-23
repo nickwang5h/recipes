@@ -2,6 +2,7 @@
 title: Steamed Noodles with Pork and Celery
 original: 蒸卤面
 summary: Thin fresh noodles are steamed first, tossed with a pork belly and celery sauce, then steamed again until dry, soft and chewy, and evenly seasoned.
+coverAlt: Illustration of steamed noodles with pork and celery plated
 ingredients:
   - group: Noodles and braised vegetables
     items:

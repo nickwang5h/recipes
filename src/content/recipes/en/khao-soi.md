@@ -30,7 +30,7 @@ ingredients:
       - { name: shallots, note: "diced small, raw, to eat with the noodles" }
       - { name: [lime, limes], note: cut into 4 wedges }
       - { name: cilantro, note: "chopped, for garnish" }
-      - { name: chili flakes, note: "fried with 10 ml oil and served in the bowl so each person can add heat" }
+      - { name: chili flakes, note: "fried with 10 ml oil and served on the side so each person can add heat" }
 translated: 2026-10-02
 ---
 
@@ -53,4 +53,4 @@ Tsaoko and coriander seeds are toasted first, and the ginger and shallots are ch
 
 - **Thin-tasting curry broth**: the spices were not toasted or the paste was not fried long enough. Take the dry spices out as soon as they darken slightly, and fry the paste until thick before adding liquid (see [spices and aromatics](/principles/aromatics/)).
 - **Fried noodles golden but chewy**: the surface coloured first and the inside still held water. Fry a little at a time, lift out when the bubbles have almost gone, and lower the heat if they darken too fast (see [oil temperature and deep frying](/principles/oil-temperature/)).
-- **Heavy and greasy by the end**: there are too few pickled mustard greens and too little lime, so the rich coconut milk has no sour balance. Serve the toppings in the bowl so every bite picks up a little sour crunch (see [acid](/principles/acid/)).
+- **Heavy and greasy by the end**: there are too few pickled mustard greens and too little lime, so the rich coconut milk has no sour balance. Serve the toppings alongside each bowl so every bite picks up a little sour crunch (see [acid](/principles/acid/)).

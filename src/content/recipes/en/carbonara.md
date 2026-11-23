@@ -1,6 +1,6 @@
 ---
 title: Spaghetti Carbonara
-original: 罗马蛋黄培根意面
+original: Carbonara
 summary: Egg yolks, Pecorino, cured pork cheek and black pepper, with no cream. The rich, silky sauce relies on thickening the yolks with residual heat off the burner, just enough.
 coverAlt: Illustration of Roman egg yolk and guanciale pasta, plated
 ingredients:

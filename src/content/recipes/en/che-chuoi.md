@@ -32,6 +32,6 @@ The "sago" here is made from tapioca starch, so look for Small Tapioca Pearls on
 
 ## Key points
 
-- **Pearls are clear but hard in the centre**: the outside took up water first and the centre has not fully gelatinized (see [starch gelatinization](/principles/starch-gelatinization/)). Taste a pearl to check, and keep cooking over low heat in 2-minute steps. Do not judge by the outer ring alone.
+- **Pearls are clear but hard in the centre**: the outside took up water first and the centre has not fully gelatinized (see [starch gelatinization](/principles/starch-gelatinization/)). Taste a pearl to check, and keep cooking over low heat, 2 minutes at a time. Do not judge by the outer ring alone.
 - **A layer sticks to the bottom and smells scorched**: gelatinized pearls and starch settle on the bottom (see [starch gelatinization](/principles/starch-gelatinization/)). Use a heavy-bottomed pot, keep the spoon touching the bottom as you stir, and do not scrape the scorched layer into the soup.
 - **Large pools of coconut oil on top**: the coconut milk boiled for too long and the emulsion separated (see [emulsification](/principles/emulsification/)). Keep it at a bare simmer with gentle stirring, and do not use high heat to reduce the soup to a thick sauce.

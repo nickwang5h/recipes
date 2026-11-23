@@ -1,6 +1,6 @@
 ---
 title: Cá Kho Tộ
-original: 砂锅焦糖焖鱼
+original: Cá kho tộ
 summary: Bone-in catfish steaks are braised slowly in dark caramel, fish sauce, green onion and garlic, and the sauce is reduced until it lightly coats the fish.
 coverAlt: Illustration of caramel-braised fish in a clay pot, plated
 ingredients:

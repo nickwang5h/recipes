@@ -29,7 +29,7 @@ translated: 2026-10-01
 
 Boneless chicken feet are a sour and spicy cold dish, with soft skin and chewy tendons that are springy when eaten cold. The skin and tendons of the feet soften when cooked and spring back after cooling, because of changes in [collagen and gelatin](/principles/collagen-gelatin/). To debone them whole, the feet must be cooked through and cooled completely, with the skin and flesh still firm; if they break at a pinch, they have been cooked too long.
 
-Aged vinegar and lemon juice give the sourness, while garlic, chili and Sichuan pepper oil add fragrance. Judge the sourness in portions as you mix the dressing (see [acid](/principles/acid/)). Deboning takes about two hours and the mixed dish needs at least 6 hours in the refrigerator, so plan ahead; while deboning, keep most of the feet in the refrigerator and take out only a few at a time.
+Aged vinegar and lemon juice give the sourness, while garlic, chili and Sichuan pepper oil add fragrance. Judge the sourness in portions as you mix the dressing (see [acid](/principles/acid/)). Deboning takes about 2 hours and the mixed dish needs at least 6 hours in the refrigerator, so plan ahead; while deboning, keep most of the feet in the refrigerator and take out only a few at a time.
 
 ## Steps
 

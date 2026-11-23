@@ -21,7 +21,7 @@ ingredients:
       - { name: [tsaoko pod, tsaoko pods], note: cracked with seeds removed }
       - { name: [piece of cassia bark, pieces of cassia bark], note: "a small piece about 4 cm long" }
       - { name: star anise, unit: '' }
-      - { name: [bay leaf, bay leaves] }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: [dried chili, dried chilies] }
   - group: Vegetables added later and seasoning
     items:

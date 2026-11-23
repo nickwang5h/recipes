@@ -1,7 +1,7 @@
 ---
 title: Umami
 aliases: [Savoury taste, Fifth taste]
-summary: Free glutamate brings umami, and it reinforces each other when paired with the umami nucleotides in meat, fish or mushrooms. Fermentation, ageing and reducing make these flavours easier to get into a bite of food.
+summary: Free glutamate brings umami; paired with the umami nucleotides in meat, fish or mushrooms, the two reinforce each other. Fermentation, ageing and reducing make these flavours easier to get into a bite of food.
 translated: 2026-10-01
 ---
 

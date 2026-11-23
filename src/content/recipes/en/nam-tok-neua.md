@@ -1,6 +1,6 @@
 ---
 title: Nam Tok Neua
-original: 泰式烤牛肉沙拉
+original: น้ำตกเนื้อ
 summary: Grilled steak is sliced thin and tossed at the last minute with lime, fish sauce, toasted rice powder and mint. The juices stay in the bowl and the herbs go in last.
 coverAlt: Illustration of Thai grilled beef salad plated
 ingredients:

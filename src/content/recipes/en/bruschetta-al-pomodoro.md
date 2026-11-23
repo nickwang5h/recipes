@@ -1,6 +1,6 @@
 ---
 title: Bruschetta al Pomodoro
-original: 番茄烤面包
+original: Bruschetta al pomodoro
 summary: Thick slices of bread are toasted golden, rubbed with garlic while hot, then topped with raw tomato, basil and olive oil; assemble just before eating to keep the underside crisp.
 coverAlt: Illustration of tomato bruschetta plated
 ingredients:

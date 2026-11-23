@@ -13,7 +13,7 @@ ingredients:
     items:
       - { name: extra virgin olive oil }
       - { name: garlic, note: peeled and lightly smashed }
-      - { name: fresh sage leaves }
+      - { name: [fresh sage leaf, fresh sage leaves], unit: '' }
       - { name: salt, note: to taste }
       - { name: black pepper, note: freshly ground; to taste }
 translated: 2026-10-01

@@ -16,7 +16,7 @@ ingredients:
     items:
       - { name: [green onion, green onions] }
       - { name: [cilantro sprig, cilantro sprigs] }
-      - { name: [lettuce leaf, lettuce leaves], note: "washed and shredded" }
+      - { name: [lettuce leaf, lettuce leaves], unit: '', note: "washed and shredded" }
       - { name: light soy sauce }
       - { name: oyster sauce }
       - { name: salt, note: "added at the end to taste; you need not use it all" }

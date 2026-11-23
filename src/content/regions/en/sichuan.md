@@ -2,6 +2,7 @@
 title: Sichuan
 original: Chuāncài · Sichuan cuisine
 summary: Dry-frying cooks the water out, quick stir-frying coats the food fast with a premixed sauce, and the red oil from chili bean paste and the peppercorn fragrance added at the end build different flavours in layers.
+coverAlt: "A claypot of mapo tofu, dried chilies, Sichuan peppercorns and a wok"
 translated: 2026-10-01
 ---
 

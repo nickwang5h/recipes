@@ -1,6 +1,6 @@
 ---
 title: Ragù Napoletano
-original: 那不勒斯肉酱
+original: Ragù napoletano
 summary: Large pieces of beef and pork are simmered slowly with onion and tomato paste; once the meat is tender it comes out, and the sauce keeps reducing until deep red and glossy, with the meat and the pasta sauce served separately.
 coverAlt: Illustration of ragù napoletano plated
 ingredients:

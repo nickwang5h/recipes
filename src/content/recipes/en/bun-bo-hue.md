@@ -1,6 +1,6 @@
 ---
 title: Bún Bò Huế
-original: 顺化牛肉米线
+original: Bún bò Huế
 summary: Beef shank and pork trotter make a hearty broth, and lemongrass, Huế shrimp paste and chili-lemongrass oil give the thick round rice noodles savour, heat and fragrance.
 coverAlt: Illustration of bún bò Huế plated
 ingredients:
@@ -9,7 +9,7 @@ ingredients:
       - { name: beef leg bones, note: ask the butcher counter to saw them into short pieces }
       - { name: "beef shank", note: "boneless, with the connective tissue kept on" }
       - { name: pork trotter, note: buy at the T&T butcher counter and ask the staff to chop it into pieces; unsmoked skin-on pork hock also works }
-      - { name: water, note: 2500 ml for the broth; another 2000 ml for blanching the bones }
+      - { name: water, note: for the broth; another 2000 ml for blanching the bones }
       - { name: [onion, onions] }
       - { name: ["lemongrass stalk", "lemongrass stalks"], note: "remove the tough outer layer, cut into lengths and smash to crack" }
       - { name: salt }

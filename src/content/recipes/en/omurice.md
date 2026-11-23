@@ -1,6 +1,6 @@
 ---
 title: Omurice
-original: 蛋包饭
+original: オムライス
 summary: Chicken and tomato fried rice is wrapped in a soft, thin omelette. The excess moisture is cooked out of the sauce first, then the egg is cooked until set but still foldable.
 coverAlt: Illustration of omurice plated
 ingredients:

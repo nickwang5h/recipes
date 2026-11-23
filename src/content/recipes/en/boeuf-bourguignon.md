@@ -1,6 +1,6 @@
 ---
 title: Beef Bourguignon
-original: 勃艮第红酒炖牛肉
+original: Bœuf bourguignon
 summary: Beef is browned for flavour, then stewed slowly in red wine and stock so the connective tissue of the chuck turns into silky gelatin.
 coverAlt: Illustration of beef bourguignon plated
 ingredients:
@@ -17,7 +17,7 @@ ingredients:
       - { name: tomato paste }
       - { name: garlic, note: crushed }
       - { name: dried thyme }
-      - { name: bay leaf }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: salt, note: as needed }
       - { name: black pepper, note: as needed }
   - group: Garnish
@@ -41,7 +41,7 @@ The dish rests on two things. The [Maillard reaction](/principles/maillard-react
 2. Brown the beef in batches. When the oil in the pot is hot, add the dried pieces of beef with gaps between them, and brown them on all sides before taking them out. After each batch, wait for the pot to heat up again before starting the next.
 3. In the same pot, brown the carrot and onion, then pour off the excess oil. Return the beef and bacon, and toss with a little salt, black pepper and the flour. Roast uncovered in the oven for about 4 minutes, stir, roast for about 4 minutes more, then take the pot out and lower the oven to about 160°C (325°F).
 4. Add the red wine and enough stock to just cover the meat, scrape up the brown film from the bottom of the pot, and stir in the tomato paste, garlic, thyme and bay leaf. Bring to a gentle simmer on the stove.
-5. Cover, move to the oven, and adjust the stovetop heat as needed so the liquid only bubbles lightly. After about 2.5–3 hours, test the meat with a fork. It is done when the fork goes in easily and a twist of the fork loosens the piece.
+5. Cover, move to the oven, and adjust the oven temperature so the liquid only bubbles lightly. After about 2.5–3 hours, test the meat with a fork. It is done when the fork goes in easily and a twist of the fork loosens the piece.
 6. In another pot, use part of the butter and oil to brown the pearl onions on the surface, add the garnish stock, cover and braise over low heat until the centres are soft and the onions still hold their shape, then cook off the extra liquid at the end.
 7. In one more pot, use the rest of the butter and oil to stir-fry the mushrooms in batches, until the steam has cleared and the surface is golden, then set aside. If the pot is crowded, do two batches so the mushrooms do not sit in their own juices.
 8. Lift out the meat and bacon, strain the braising liquid into a small pot and skim off the fat. Reduce it if it is too thin, or add stock if it is too thick, until it coats the back of a spoon in a thin layer, then season with salt and black pepper.

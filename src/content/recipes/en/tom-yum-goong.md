@@ -15,7 +15,7 @@ ingredients:
     items:
       - { name: ["lemongrass stalk", "lemongrass stalks"], note: "tough outer layers removed, tender lower core smashed" }
       - { name: galangal, note: fresh galangal sliced thin; fresh or frozen slices from an Asian supermarket }
-      - { name: [makrut lime leaf, makrut lime leaves], note: torn; look for fresh or frozen at an Asian supermarket }
+      - { name: [makrut lime leaf, makrut lime leaves], unit: '', note: torn; look for fresh or frozen at an Asian supermarket }
       - { name: garlic, note: smashed }
       - { name: [Thai chili, Thai chilies], note: smashed; use fewer if you do not like heat }
       - { name: fish sauce }

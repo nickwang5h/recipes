@@ -1,6 +1,6 @@
 ---
 title: Canh Chua Cá
-original: 越南酸鱼汤
+original: Canh chua cá
 summary: Tamarind and fresh pineapple carry a sweet-sour base, and the fish, okra, tomato and bean sprouts go in in stages to keep each one tender or crisp.
 coverAlt: Illustration of Vietnamese sour fish soup, served
 ingredients:

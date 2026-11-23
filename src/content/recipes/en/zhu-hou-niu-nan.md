@@ -10,7 +10,7 @@ ingredients:
       - { name: ginger }
       - { name: garlic, note: "about half a head" }
       - { name: [Thai chili, Thai chilies] }
-      - { name: [bay leaf, bay leaves] }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: Sichuan peppercorns }
       - { name: [star anise, star anise] }
       - { name: [dried red chili, dried red chilies] }

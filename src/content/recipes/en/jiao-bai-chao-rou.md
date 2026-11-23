@@ -16,7 +16,7 @@ ingredients:
     items:
       - { name: vegetable oil, note: 15 ml each for the pork and the water bamboo }
       - { name: "ginger", note: "about 1 slice, cut into fine shreds" }
-      - { name: "garlic", note: "1 clove, minced" }
+      - { name: "garlic", note: "minced" }
       - { name: chicken bouillon powder }
       - { name: water, note: for combining everything in the pan }
       - { name: "water", note: "for blanching the water bamboo; enough to cover it, adjust to your pot" }

@@ -1,5 +1,5 @@
 ---
-title: Liangfen (Cold Mung Bean Jelly)
+title: Liangfen (Cold Pea Starch Jelly)
 original: 凉粉
 summary: Pea starch is mixed with cold water, stirred and cooked into an even paste, then chilled to set and cut into strips, and tossed in a garlic, chili and vinegar dressing.
 coverAlt: Illustration of liangfen plated

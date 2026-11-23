@@ -2,6 +2,7 @@
 title: Japchae
 original: Japchae
 summary: Sweet potato glass noodles are boiled until clear and chewy, the vegetables and beef are cooked separately, and everything is tossed with soy sauce, sugar and toasted sesame oil.
+coverAlt: Illustration of japchae plated
 ingredients:
   - group: Noodles and vegetables
     items:

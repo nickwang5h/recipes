@@ -10,7 +10,7 @@ ingredients:
       - { name: "ginger", note: "sliced; half for blanching, half for braising" }
       - { name: white part of Chinese leek, note: cut into sections; the white part of green onion also works }
       - { name: garlic, note: smashed }
-      - { name: [bay leaf, bay leaves] }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: [star anise, star anise] }
       - { name: dried chili }
       - { name: vegetable oil }

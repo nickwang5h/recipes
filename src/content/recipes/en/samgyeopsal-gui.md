@@ -13,7 +13,7 @@ ingredients:
   - group: For wrapping
     items:
       - { name: "lettuce", unit: "leaf", note: "choose soft-leaved green leaf or red leaf lettuce, washed and dried" }
-      - { name: Korean perilla leaf, unit: leaf, note: buy fresh kkaennip at H Mart; use lettuce only if you have none }
+      - { name: [Korean perilla leaf, Korean perilla leaves], unit: '', note: buy fresh kkaennip at H Mart; use lettuce only if you have none }
       - { name: "ssamjang", note: "make it from this site's ssamjang recipe, or buy ready-made ssamjang at H Mart or T&T" }
 translated: 2026-10-02
 ---

@@ -1,6 +1,6 @@
 ---
 title: Yukgaejang
-original: 辣牛肉汤
+original: 육개장
 summary: Beef brisket is simmered until it shreds, then cooked with fernbrake, bean sprouts and plenty of green onion. Toasted sesame oil first draws out the aroma of the Korean chili flakes, giving a red soup and tender meat.
 coverAlt: Illustration of yukgaejang plated
 ingredients:

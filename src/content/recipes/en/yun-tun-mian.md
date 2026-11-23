@@ -8,7 +8,7 @@ ingredients:
     items:
       - { name: ground pork, note: choose ground pork with a little fat }
       - { name: peeled shrimp, note: "raw shrimp, deveined and patted dry" }
-      - { name: thin egg wonton wrapper, note: "choose thin, yellow, square wrappers; if your mainstream supermarket only has thick white ones, look for Hong Kong style wonton wrappers in the refrigerated section at T&T" }
+      - { name: [thin egg wonton wrapper, thin egg wonton wrappers], unit: '', note: "choose thin, yellow, square wrappers; if your mainstream supermarket only has thick white ones, look for Hong Kong style wonton wrappers in the refrigerated section at T&T" }
       - { name: salt }
       - { name: sugar }
       - { name: toasted sesame oil }

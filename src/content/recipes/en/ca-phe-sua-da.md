@@ -1,6 +1,6 @@
 ---
 title: Cà Phê Sữa Đá
-original: 越南冰咖啡
+original: Cà phê sữa đá
 summary: Dark-roast coffee drips slowly through a Vietnamese metal filter, is stirred with sweetened condensed milk and poured over ice, so strong bitterness and milky sweetness balance each other.
 coverAlt: Illustration of Vietnamese iced coffee, served
 ingredients:

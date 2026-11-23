@@ -9,7 +9,7 @@ ingredients:
       - { name: ["bone-in, skin-on chicken thigh", "bone-in, skin-on chicken thighs"], note: use upper thighs; labelled "bone-in skin-on chicken thighs" on mainstream supermarket shelves }
   - group: Lemongrass marinade
     items:
-      - { name: "lemongrass", note: "remove the tough outer leaves, take the white and pale green tender part, and mince it finely" }
+      - { name: lemongrass, unit: stalk, note: "remove the tough outer leaves, take the white and pale green tender part, and mince it finely" }
       - { name: garlic, note: finely minced }
       - { name: fish sauce }
       - { name: sugar }
@@ -28,7 +28,7 @@ In the oven the moist chicken skin first loses water, and then the [Maillard rea
 1. Prepare the lemongrass. Cut off the root end and the dark green tough leaves and peel off the dry, hard outer layers. Slice the tender part thin across the stalk, then chop it fine. Mix with the garlic, shallot, fish sauce, sugar, oil and pepper into a wet marinade that spreads.
 2. Marinate the thighs. Pat the thighs dry with paper towels and cut 2 shallow slashes in the thick part of the meat. Rub the marinade over the skin, the underside and the cuts, cover and refrigerate for 30 minutes, until the surface is evenly coated and the sugar grains have mostly dissolved.
 3. Preheat the oven. Set it to 200°C (400°F) and preheat for about 10–15 minutes, until the preheat indicator shows a steady temperature. Put an oven-safe rack on a baking sheet to catch the juices. Arrange the thighs skin side up, scraping off clumps of lemongrass and garlic but leaving a thin layer clinging, with about 2 cm between the pieces.
-4. Roast. Roast on the middle rack for 30–40 minutes, until the skin is golden brown with slightly charred spots at the edges. Insert a thermometer into the thickest part, away from the bone. At 74°C (165°F) the chicken is done. At the 20-minute mark, check the colour. If the skin is already deep brown but the inside is not cooked, cover loosely with a sheet of foil and keep roasting, measuring again every 5 minutes.
+4. Roast. Roast on the middle rack for 30–40 minutes, until the skin is golden brown with slightly charred spots at the edges. Insert a thermometer into the thickest part, away from the bone. At 74°C (165°F) the chicken is done. After 20 minutes, check the colour. If the skin is already deep brown but the inside is not cooked, cover loosely with a sheet of foil and keep roasting, measuring again every 5 minutes.
 5. Rest. Move the thighs to a clean plate and rest for 5 minutes, until the steam on the surface eases and less juice runs out when cut. Serve whole, or cut the meat off along the bone in slices, and eat with white rice. The knife and board used to cut the chicken should be separate from those used for raw chicken.
 
 ## Key points

@@ -18,7 +18,7 @@ ingredients:
       - { name: ["head of garlic", "heads of garlic"], note: "a whole head, peeled and minced" }
       - { name: [Thai chili, Thai chilies], note: finely chopped; remove the seeds to lower the heat }
       - { name: ["cilantro stem", "cilantro stems"], note: "tender stems and leaves, chopped" }
-      - { name: ["Chinese celery stalk", "Chinese celery stalks"], note: "with leaves, cut into pieces about 2.5 cm long; T&T sells it as celery, and if you have none use celery with leaves" }
+      - { name: ["Chinese celery stalk", "Chinese celery stalks"], note: "with leaves, cut into pieces about 2.5 cm long; buy Chinese celery at T&T, or use celery with its leaves if you have none" }
 translated: 2026-10-02
 ---
 

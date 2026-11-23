@@ -1,6 +1,6 @@
 ---
 title: Cacio e Pepe
-original: 黑胡椒奶酪意面
+original: Cacio e pepe
 summary: "Only pasta, Pecorino, black pepper and pasta water. Whether the sauce comes out smooth depends on two things: enough starch, and how hot the pan is when the cheese goes in."
 coverAlt: Illustration of cacio e pepe pasta, plated
 ingredients:
@@ -31,7 +31,7 @@ translated: 2026-09-30
 
 ## Key points
 
-- **Clumping, stringy cheese**: it is too hot. The proteins in the cheese tighten with heat, stick together and squeeze out the fat. The 2025 physics paper in the sources calls this state the "mozzarella phase": without starch it appears at about 65°C. So always take the pan off the heat and let it cool a little before adding the cheese.
+- **Clumping, stringy cheese**: it is too hot. The proteins in the cheese tighten with heat, stick together and squeeze out the fat. The 2025 physics paper in the sources calls this state the "mozzarella phase": without starch it appears at about 65°C (150°F). So always take the pan off the heat and let it cool a little before adding the cheese.
 - **Starch is the stabilizer**: starch wraps around the cheese proteins and stops them sticking together. The same paper found that with starch below 1% of the cheese weight, the whole sauce seized into large clumps; at 2–3% it was both stable and good in the mouth. The starch concentration of home pasta water is hard to control, so the "insurance" in step 2 is worth trying. See [starch gelatinization](/principles/starch-gelatinization/).
 - **Too dry, too thick**: not enough pasta water, or it was reduced too far. Add a small spoonful of pasta water at a time, stirring as you add.
 - **Can you swap in Parmigiano**: you can, but it is no longer this dish. Pecorino Romano is a sheep's-milk cheese, saltier and sharper, and the flavour of the dish depends on it.

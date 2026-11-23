@@ -1,6 +1,6 @@
 ---
 title: Goong Ob Woonsen (Shrimp and Glass Noodles in a Clay Pot)
-original: 砂锅虾粉丝
+original: กุ้งอบวุ้นเส้น
 summary: Ginger, garlic and pepper line the pot, and shell-on shrimp and mung bean glass noodles braise under a lid until the noodles take up all the savoury sauce.
 coverAlt: Illustration of shrimp and glass noodles in a clay pot, plated
 ingredients:
@@ -8,7 +8,7 @@ ingredients:
     items:
       - { name: dried mung bean glass noodles, note: choose bean thread vermicelli whose ingredients are mainly mung bean starch; do not use Korean sweet potato starch noodles }
       - { name: ["shell-on raw shrimp", "shell-on raw shrimp"], note: "medium size, head-on is better; buy head-on shrimp at T&T, or use headless shell-on raw shrimp from a mainstream supermarket" }
-      - { name: ginger slices, note: each about 2 mm thick }
+      - { name: ginger, note: each about 2 mm thick }
       - { name: garlic }
       - { name: [coarse cilantro stem, coarse cilantro stems] }
       - { name: whole black peppercorns, note: crushed }

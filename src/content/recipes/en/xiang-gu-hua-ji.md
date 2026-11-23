@@ -11,7 +11,7 @@ ingredients:
       - { name: water, note: "for soaking the mushrooms; strain and keep it as cooking liquid; add more water if there is not enough to soak them soft" }
       - { name: ginger, note: "about two slices, cut into small pieces" }
       - { name: [green onion, green onions], note: "white part cut into sections, green part chopped" }
-      - { name: [garlic clove, garlic cloves], note: "halved" }
+      - { name: garlic, note: "halved" }
   - group: Seasoning
     items:
       - { name: vegetable oil }

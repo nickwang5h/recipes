@@ -1,6 +1,6 @@
 ---
 title: Bossam
-original: 菜包白切肉
+original: 보쌈
 summary: Pork belly is simmered tender in a broth of doenjang, green onion, ginger and garlic, sliced thin while warm, and eaten wrapped in lettuce with kimchi and salted baby shrimp.
 coverAlt: Illustration of bossam plated
 ingredients:
@@ -18,7 +18,7 @@ ingredients:
       - { name: salt }
   - group: Wrapping ingredients
     items:
-      - { name: "leaf lettuce", unit: "leaf", note: "green leaf or red leaf lettuce, washed and drained" }
+      - { name: [lettuce leaf, lettuce leaves], unit: '', note: "green leaf or red leaf lettuce, washed and drained" }
       - { name: kimchi, note: cut into pieces that wrap in one bite }
       - { name: salted fermented baby shrimp (saeujeot), note: buy Salted fermented shrimp from the refrigerated section at H Mart and take it with a little of its brine; not shrimp paste or dried shrimp }
 translated: 2026-10-02

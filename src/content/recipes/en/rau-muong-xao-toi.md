@@ -1,6 +1,6 @@
 ---
 title: Rau Muống Xào Tỏi
-original: 蒜炒空心菜
+original: Rau muống xào tỏi
 summary: Water spinach is blanched briefly and drained well, then stir-fried quickly in garlic oil and oyster sauce, so the leaves are glossy and the tender stems stay crisp.
 coverAlt: Illustration of stir-fried garlic water spinach plated
 ingredients:

@@ -8,7 +8,7 @@ ingredients:
     items:
       - { name: water spinach, note: "weight after removing tough stems; T&T often labels it water spinach or ong choy; spinach can replace it, with a softer texture" }
       - { name: garlic, note: lightly crushed }
-      - { name: long red chili, note: "lightly crushed; if you cannot find it use Fresno chili from a mainstream supermarket" }
+      - { name: [long red chili, long red chilies], note: "lightly crushed; if you cannot find it use Fresno chili from a mainstream supermarket" }
   - group: Seasoning
     items:
       - { name: Thai fermented soybean paste (tao chiao), note: "choose a thin paste with whole beans, and take out the beans, rinse and drain them; sold as soy bean paste or yellow bean sauce" }

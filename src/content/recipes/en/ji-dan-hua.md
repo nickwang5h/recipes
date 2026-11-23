@@ -2,6 +2,7 @@
 title: Sweet or Savoury Egg Flower Drink
 original: 鸡蛋花
 summary: One egg and a little water cook into soft egg ribbons, sweet or salty as you like. Pouring the egg in a thin stream while the pot keeps heating gives both the texture and the doneness.
+coverAlt: Illustration of sweet or savoury egg flower drink served
 ingredients:
   - items:
       - { name: [egg, eggs], note: "about 50 g without the shell" }

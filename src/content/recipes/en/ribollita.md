@@ -1,6 +1,6 @@
 ---
 title: Ribollita
-original: 托斯卡纳面包蔬菜汤
+original: Ribollita
 summary: A thick soup of lacinato kale, white beans and day-old bread, chilled overnight and cooked again so the bread soaks up the bean broth.
 coverAlt: Illustration of ribollita plated
 ingredients:

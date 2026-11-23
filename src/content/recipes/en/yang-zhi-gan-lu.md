@@ -32,7 +32,7 @@ The gel on the surface of chia seeds thickens as it absorbs water, so there must
 
 ## Key points
 
-- **Seeds clump and are still dry inside**: stirring at the start was not enough, and the gel on the outside wrapped the dry seeds. After ten minutes of soaking, break up the clumps and stir again, then keep refrigerating until the water is absorbed evenly.
+- **Seeds clump and are still dry inside**: stirring at the start was not enough, and the gel on the outside wrapped the dry seeds. After 10 minutes of soaking, break up the clumps and stir again, then keep refrigerating until the water is absorbed evenly.
 - **Oil floats on top of the milk base and the bottom is thin**: the coconut milk had separated, and only the watery part was poured out when measuring (see [emulsification](/principles/emulsification/)). Stir the can well when you open it, and stir the finished cup before drinking.
 - **Bitter taste and a dull fruit flavour**: the white pith of the grapefruit got blended into the purée. Take only the segments and put them in the glass, and blend the mango on its own.
 - **Curdled bits in the milk**: a lot of sour juice met warm milk directly, and the proteins clump into small bits (see [acid](/principles/acid/)). Chill all the ingredients, and mix in the grapefruit segments last.

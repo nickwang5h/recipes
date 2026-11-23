@@ -22,7 +22,7 @@ ingredients:
       - { name: black pepper, note: as needed }
   - group: Wrapping
     items:
-      - { name: smoked bacon slices }
+      - { name: smoked bacon }
 translated: 2026-10-28
 ---
 

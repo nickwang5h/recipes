@@ -2,6 +2,7 @@
 title: Cantonese Braised Beef Brisket with Daikon
 original: 广式萝卜牛腩
 summary: Beef brisket is braised slowly with chu hou paste and red fermented bean curd, and the daikon goes in late, so it has soaked up the broth just as the tendon in the meat turns soft.
+coverAlt: Illustration of Cantonese braised beef brisket with daikon plated
 ingredients:
   - group: Main ingredients
     items:

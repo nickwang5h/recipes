@@ -1,6 +1,6 @@
 ---
 title: Cantucci
-original: 意式杏仁脆饼
+original: Cantucci
 summary: An almond dough is baked into logs, then sliced and baked again; the second bake drives the moisture out of the cut surfaces and leaves a crisp biscuit made for dipping.
 coverAlt: Illustration of Italian almond biscotti, plated
 ingredients:

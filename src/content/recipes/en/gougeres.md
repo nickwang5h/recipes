@@ -1,6 +1,6 @@
 ---
 title: Gougères
-original: 奶酪泡芙
+original: Gougères
 summary: Gruyère is mixed into a cooked choux paste, puffed by steam and baked into small puffs with a crisp, savoury shell and a light, hollow centre.
 coverAlt: Illustration of gougères plated
 ingredients:

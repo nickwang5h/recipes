@@ -1,6 +1,6 @@
 ---
 title: Cassoulet
-original: 卡酥来砂锅
+original: Cassoulet
 summary: White beans are cooked through first, then lamb, pork belly and garlic sausage go into the pot in layers; gelatin from the pork rind ties the bean liquid together, and a slow bake makes a thin, crisp top.
 coverAlt: Illustration of cassoulet casserole, plated
 ingredients:
@@ -32,7 +32,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-*Cassoulet* is a pot of white beans and meat from Languedoc in France: beans and meats are each cooked through, then layered in a clay pot and baked slowly. The meats vary by region; here I use the classic combination of lamb, pork belly and garlic sausage. The liquid comes from the bean cooking water, and long-stewed pork rind gives off [gelatin](/principles/collagen-gelatin/), which binds the liquid between the beans and meats.
+*Cassoulet* is a pot of white beans and meat from Languedoc in France: beans and meats are each cooked through, then layered in a clay pot and baked slowly. The meats vary by region; here it is the classic combination of lamb, pork belly and garlic sausage. The liquid comes from the bean cooking water, and long-stewed pork rind gives off [gelatin](/principles/collagen-gelatin/), which binds the liquid between the beans and meats.
 
 The beans must be cooked until soft in the centre before they go in the oven. The starch in the beans [gelatinizes](/principles/starch-gelatinization/), so they eat soft and creamy, and the surface slowly loses water and colours in the oven, with the roasted aroma of the [Maillard reaction](/principles/maillard-reaction/). A finished cassoulet can be spooned out with whole beans and tender meat, moist inside with a thin crisp top. The beans must be soaked overnight, and cooking and baking also need half a day.
 
@@ -48,7 +48,7 @@ The beans must be cooked until soft in the centre before they go in the oven. Th
 
 ## Key points
 
-- **Meat is tender but the centre of the beans is hard**: the beans were baked with acidic tomato before they were cooked through, and the cell walls would not soften. Cook the bean liquid on its own until there is no hard core, and put tomato only in the meat pot. See [starch gelatinization](/principles/starch-gelatinization/).
+- **Meat is tender but the centre of the beans is hard**: the beans were baked with acidic tomato before they were cooked through, and the cell walls would not soften. Cook the beans in their liquid on their own until there is no hard core, and put tomato only in the meat pot. See [starch gelatinization](/principles/starch-gelatinization/).
 - **Inner layers dry and loose, meat tough**: the liquid level was too low, and the liquid kept evaporating during the slow bake. Top up with hot bean liquid down the side, so the gelatin stays in a moist liquid. See [collagen and gelatin](/principles/collagen-gelatin/).
 - **Bean skins break and the whole pot turns to mush**: it was cooked too hard, or stirred too often. After the initial boil, switch to a gentle simmer, and spoon the layers in when assembling instead of stirring back and forth. See [starch gelatinization](/principles/starch-gelatinization/).
 - **The beans soak up the liquid and the lunch box turns dry**: the beans keep absorbing liquid in the fridge, and the gelatin from the pork rind sets what is left (see [collagen and gelatin](/principles/collagen-gelatin/)). Add an extra spoonful of bean liquid when packing, divide into shallow containers and refrigerate promptly; the crisp top softens overnight. The next day, add a tablespoon or two of water, reheat with the lid ajar, stir once halfway, and bring the centre to 74°C (165°F).

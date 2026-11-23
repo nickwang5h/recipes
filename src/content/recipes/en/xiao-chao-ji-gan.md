@@ -1,5 +1,5 @@
 ---
-title: Stir-fried Chicken Liver with Garlic Scapes
+title: Stir-fried Chicken Liver with Garlic Shoots
 original: 小炒鸡肝
 summary: Chicken liver is first boiled with ginger and green onion until cooked through and drained, then stir-fried briefly with green garlic, cutting the gamey smell and keeping the texture soft.
 coverAlt: Illustration of stir-fried chicken liver plated

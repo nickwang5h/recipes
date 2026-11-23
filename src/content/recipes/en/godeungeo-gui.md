@@ -1,6 +1,6 @@
 ---
 title: Godeungeo Gui (Grilled Mackerel)
-original: 烤青花鱼
+original: 고등어구이
 summary: Skin-on mackerel is salted briefly and grilled under the oven broiler until the skin blisters and the flesh flakes. Drying the surface and stopping on time decide the grilled flavour and the tenderness.
 coverAlt: Illustration of grilled mackerel plated
 ingredients:

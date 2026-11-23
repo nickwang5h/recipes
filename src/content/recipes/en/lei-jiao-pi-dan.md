@@ -8,7 +8,7 @@ ingredients:
     items:
       - { name: [century egg, century eggs] }
       - { name: [long green pepper, long green peppers], note: "about 10–15 cm long; if you have none use jalapeños, which differ in heat" }
-      - { name: green onion green, note: "about 10 cm, cut into short sections" }
+      - { name: [green onion (green part), green onions (green part)], note: "about 10 cm, cut into short sections" }
       - { name: garlic, note: "minced; can be raised to 4 cloves" }
       - { name: [Thai chili, Thai chilies], note: "cut into short sections; raise to 4 if you like it hot" }
       - { name: vegetable oil, note: "for frying the peppers" }

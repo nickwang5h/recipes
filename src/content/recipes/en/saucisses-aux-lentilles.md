@@ -15,7 +15,7 @@ ingredients:
       - { name: onion, note: thinly sliced }
       - { name: garlic, note: crushed }
       - { name: [whole clove, whole cloves] }
-      - { name: [bay leaf, bay leaves] }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: thyme, unit: sprig, note: fresh thyme }
       - { name: water, note: cold water }
       - { name: Dijon mustard }

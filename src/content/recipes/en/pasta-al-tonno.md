@@ -13,7 +13,7 @@ ingredients:
     items:
       - { name: extra virgin olive oil }
       - { name: garlic, note: smashed }
-      - { name: [anchovy fillet, anchovy fillets], note: oil-packed anchovy fillets }
+      - { name: [anchovy fillet, anchovy fillets], unit: '', note: oil-packed anchovy fillets }
       - { name: parsley, note: chopped }
   - group: Seasoning
     items:

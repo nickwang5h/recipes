@@ -7,7 +7,7 @@ ingredients:
     items:
       - { name: razor clams, note: weighed in the shell; choose fresh clams that have been purged }
       - { name: [egg, eggs] }
-      - { name: onion, note: finely diced }
+      - { name: [onion, onions], note: finely diced }
       - { name: potato starch }
       - { name: light soy sauce }
       - { name: "chicken bouillon powder", note: "level measuring spoon, about 5 ml by volume; reduce or leave out if the dish is already salty" }

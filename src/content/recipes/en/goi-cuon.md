@@ -21,7 +21,7 @@ ingredients:
       - { name: ["chicken liver", "chicken livers"], note: "large livers, trimmed of membrane and blended fine" }
       - { name: "water", note: "30 ml for blending the livers, 240 ml for cooking the sauce" }
       - { name: vegetable oil }
-      - { name: "garlic", note: "1 large clove, finely minced" }
+      - { name: "garlic", note: "large, finely minced" }
       - { name: "dried chili flakes", note: "unsalted, snipped small" }
       - { name: tomato paste }
       - { name: hoisin sauce, note: after tasting you can increase to 8 tbsp }

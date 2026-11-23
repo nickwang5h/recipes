@@ -1,6 +1,6 @@
 ---
 title: Gimbap
-original: 紫菜包饭
+original: 김밥
 summary: Short-grain rice seasoned with toasted sesame oil is rolled around beef, egg, spinach, carrot and pickled radish. Drain the fillings and spread the rice thin so the roll cuts firm.
 coverAlt: Illustration of gimbap plated
 ingredients:

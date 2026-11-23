@@ -14,7 +14,7 @@ ingredients:
       - { name: garlic }
       - { name: [dried chili, dried chilies] }
       - { name: [whole clove, whole cloves] }
-      - { name: [bay leaf, bay leaves] }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: Sichuan peppercorns }
       - { name: fennel seeds }
       - { name: [nutmeg, nutmegs], note: use a whole one }

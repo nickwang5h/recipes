@@ -1,6 +1,6 @@
 ---
 title: Gỏi Gà
-original: 鸡丝卷心菜沙拉
+original: Gỏi gà
 summary: Gently cooked chicken is shredded and tossed with finely sliced cabbage, quick-pickled onion and Vietnamese coriander. The fish sauce dressing goes on only at serving time to keep the crunch.
 coverAlt: Illustration of chicken and cabbage salad plated
 ingredients:

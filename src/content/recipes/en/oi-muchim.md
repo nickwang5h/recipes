@@ -1,6 +1,6 @@
 ---
 title: Oi Muchim
-original: 辣拌黄瓜
+original: 오이무침
 summary: Thin cucumber slices are tossed just before eating with Korean chili flakes, soy sauce and toasted sesame oil. They are juicy and crisp, and go to the table as soon as they are mixed.
 coverAlt: Illustration of spicy cucumber salad plated
 ingredients:

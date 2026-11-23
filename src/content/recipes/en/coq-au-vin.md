@@ -1,6 +1,6 @@
 ---
 title: Coq au Vin
-original: 红酒烩鸡
+original: Coq au vin
 summary: Chicken pieces are browned first, then gently simmered in red wine; pearl onions and mushrooms are cooked separately, and a butter and flour paste finishes the sauce so it coats a spoon.
 coverAlt: Illustration of coq au vin plated
 ingredients:

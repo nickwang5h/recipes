@@ -9,7 +9,7 @@ ingredients:
       - { name: jasmine rice }
       - { name: canned tuna, note: "packed in oil, drained and flaked" }
       - { name: [cherry tomato, cherry tomatoes], note: halved }
-      - { name: [anchovy fillet, anchovy fillets], note: chopped }
+      - { name: [anchovy fillet, anchovy fillets], unit: '', note: chopped }
       - { name: "black olives", note: "smoked black olives, pitted" }
       - { name: "parsley", note: "chopped, as needed" }
       - { name: extra virgin olive oil, note: as needed }

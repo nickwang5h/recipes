@@ -1,8 +1,8 @@
 ---
-title: Braised Lamb Chops with Noodles
+title: Braised Lamb Ribs with Noodles
 original: 羊排焖面
 summary: The lamb ribs are stewed until the sinew and meat turn tender, then thin, wide noodle sheets go in to absorb the broth; the meat needs enough stewing, and the noodles need enough liquid to braise through.
-coverAlt: Illustration of braised lamb chops with noodles plated
+coverAlt: Illustration of braised lamb ribs with noodles plated
 ingredients:
   - group: Lamb ribs and vegetables
     items:
@@ -27,7 +27,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-In braised lamb chops with noodles, the lamb is tender enough to come away from the bone, and the noodle sheets are soaked with lamb broth. The meat has to turn soft first, then the noodles are cooked: the sinew, skin and connective tissue of the ribs soften slowly in moist heat, and part of the collagen turns into gelatin, which is what lets the meat leave the bone (see [collagen and gelatin](/principles/collagen-gelatin/)).
+In braised lamb ribs with noodles, the lamb is tender enough to come away from the bone, and the noodle sheets are soaked with lamb broth. The meat has to turn soft first, then the noodles are cooked: the sinew, skin and connective tissue of the ribs soften slowly in moist heat, and part of the collagen turns into gelatin, which is what lets the meat leave the bone (see [collagen and gelatin](/principles/collagen-gelatin/)).
 
 The dough for the wide noodles is made soft. Resting it twice and oiling it makes it easy to roll into thin sheets (see [gluten](/principles/gluten/)). The sheets are finished by braising in the lamb broth: as they absorb water, the [starch gelatinizes](/principles/starch-gelatinization/) and the broth slowly thickens. Keep the broth before the noodles go in, and do not reduce the lamb dry beforehand.
 
@@ -46,5 +46,5 @@ The dough for the wide noodles is made soft. Resting it twice and oiling it make
 
 - **Lamb is cooked but still hard to bite**: the collagen has not had enough moist heat (see [collagen and gelatin](/principles/collagen-gelatin/)). Stew the meat until soft before adding the vegetables and noodles, and top up with water in time while stewing.
 - **Noodle sheets shrink back and the edges crack**: the dough was not rested enough, or too much dry flour was added to stop sticking (see [gluten](/principles/gluten/)). Keep the planned amount of water, knead evenly, cover and rest, and rub with a thin film of oil before rolling.
-- **Noodles are gummy on the surface but raw in the centre**: the sheets were stacked, or there was not enough broth, so the centre did not absorb enough water and heat (see [starch gelatinization](/principles/starch-gelatinization/)). Lay the sheets in one at a time and gently spread them apart. After four minutes, cut one open to check, and reduce the sauce only once it is cooked through.
+- **Noodles are gummy on the surface but raw in the centre**: the sheets were stacked, or there was not enough broth, so the centre did not absorb enough water and heat (see [starch gelatinization](/principles/starch-gelatinization/)). Lay the sheets in one at a time and gently spread them apart. After 4 minutes, cut one open to check, and reduce the sauce only once it is cooked through.
 - **The noodle sheets soak up the broth and stick to the lamb in one lump**: the noodles keep absorbing broth, their starch retrogrades in the fridge so the whole box sets hard, and the lamb fat sets on top (see [starch gelatinization](/principles/starch-gelatinization/)). Take all the broth left in the pot into the box, take the lamb off the bone if you like, and spread it in shallow containers to cool before refrigerating. The next day, add a tablespoon or two of water, reheat covered, separate the noodle sheets halfway, and bring the centre to 74°C (165°F).

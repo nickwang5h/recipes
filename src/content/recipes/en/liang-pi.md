@@ -39,7 +39,7 @@ Crushed garlic releases its sharpness more easily (see [spices and aromatics](/p
 
 ## Steps
 
-1. Read the serving instructions on the liangpi and cooked gluten packages. Cut the liangpi into wide strips and the gluten into small pieces. Anything that needs heating is prepared as directed, then cooled.
+1. Read the serving instructions on the liangpi and cooked gluten packages. Cut the liangpi into wide strips and the gluten into small pieces. Anything that needs heating is prepared as directed, then cooled. Ready-to-eat liangpi does not need repeated soaking to wash off the oil.
 2. Bring the water for the sprouts to a boil, add the washed bean sprouts and cook over high heat for about 60 seconds, until they are hot through and the stems are slightly soft. Lift out, cool with cooled boiled water and drain.
 3. Wash the cucumber, cut it into fine shreds and put it on a clean plate. If the cucumber and sprouts are wet, drain them first so they don't dilute the dressing.
 4. Mash the garlic to a fine paste and stir in the water for the garlic water. Separately mix the water for the dressing, light soy sauce, dark soy sauce, toasted sesame oil, oyster sauce, vinegar and chicken bouillon powder until no grains are left.

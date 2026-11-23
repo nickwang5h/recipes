@@ -10,7 +10,7 @@ ingredients:
       - { name: [chaotian chili, chaotian chilies], note: "cut on the diagonal; 8 chilies in total with the bird's eye chilies, fewer if you want less heat" }
       - { name: [bird's eye chili, bird's eye chilies], note: "cut on the diagonal" }
       - { name: [green onion, green onions], note: "cut into sections" }
-      - { name: [garlic clove, garlic cloves], note: "cracked" }
+      - { name: garlic, note: "cracked" }
   - group: Marinade and stir-fry
     items:
       - { name: dark soy sauce }

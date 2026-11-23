@@ -13,12 +13,12 @@ ingredients:
   - group: Seasoning
     items:
       - { name: extra virgin olive oil }
-      - { name: [anchovy fillet, anchovy fillets], note: "oil-cured anchovy fillets, drained; rinse and bone salt-packed ones first" }
+      - { name: [anchovy fillet, anchovy fillets], unit: '', note: "oil-cured anchovy fillets, drained; rinse and bone salt-packed ones first" }
       - { name: dry white wine }
       - { name: parsley, note: "leaves, finely chopped" }
       - { name: celery leaves, note: finely chopped }
       - { name: [rosemary sprig, rosemary sprigs], note: "a small sprig, tied together with the bay leaves" }
-      - { name: [bay leaf, bay leaves] }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: basil, note: "fresh leaves, chopped just before the pan comes off the heat" }
       - { name: salt, note: "as needed; the anchovies are already salty" }
 translated: 2026-10-01

@@ -14,7 +14,7 @@ ingredients:
     items:
       - { name: sugar }
       - { name: water, note: "for the syrup" }
-      - { name: pandan leaf, unit: '', note: "1 leaf for the syrup and 1 for the coconut milk; look for pandan leaves in the frozen section of an Asian supermarket; frozen leaves can be used as they are" }
+      - { name: [pandan leaf, pandan leaves], unit: '', note: "1 leaf for the syrup and 1 for the coconut milk; look for pandan leaves in the frozen section of an Asian supermarket; frozen leaves can be used as they are" }
       - { name: coconut milk, note: "unsweetened full-fat coconut milk, stirred after opening the can" }
       - { name: water, note: "for the coconut milk" }
       - { name: salt }

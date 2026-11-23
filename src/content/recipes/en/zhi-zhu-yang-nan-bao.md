@@ -22,7 +22,7 @@ ingredients:
       - { name: red fermented bean curd }
       - { name: dark soy sauce }
       - { name: rock sugar, note: "if you have none, use sugar" }
-      - { name: [bay leaf, bay leaves] }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: [star anise, star anise] }
       - { name: cassia bark }
   - group: Finishing fermented bean curd sauce

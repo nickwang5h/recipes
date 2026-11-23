@@ -1,6 +1,6 @@
 ---
 title: Bún Bò Xào
-original: 牛肉拌米线
+original: Bún bò xào
 summary: Quick-fried lemongrass and garlic beef goes over rice noodles and fresh vegetables with peanuts, fried shallots and a sweet-sour fish sauce dressing; the beef is cooked in batches and the noodles and vegetables are drained well before tossing.
 coverAlt: Illustration of bún bò xào plated
 ingredients:

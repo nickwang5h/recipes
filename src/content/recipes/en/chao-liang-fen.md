@@ -39,5 +39,5 @@ Warm liangfen breaks easily, so stir with pushing and lifting motions. Add a lit
 ## Key points
 
 - **Liangfen turns to crumbled mush**: hot gel is soft and falls apart if stirred hard (see [starch gelatinization](/principles/starch-gelatinization/)). Lift or push with a wide spatula instead of repeatedly cutting and pressing.
-- **Scalding outside, still cold inside**: the centres of the blocks heat slowly, and a few 10-second tosses will not heat them through (see [heat transfer](/principles/heat-transfer/)). Add a little water and braise covered, then check the centre.
+- **Scalding outside, still cold inside**: the centres of the blocks heat slowly, and tossing a few times for 10 seconds will not heat them through (see [heat transfer](/principles/heat-transfer/)). Add a little water and braise covered, then check the centre.
 - **Sauce is too strong and gets saltier as it reduces**: the salt in the doubanjiang and soy sauces concentrates as the sauce reduces (see [salt](/principles/salt/)). Leave salt for last and stop heating as soon as the sauce clings to the liangfen; if it is too salty, add water to dilute it.

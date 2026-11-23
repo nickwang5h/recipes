@@ -9,7 +9,7 @@ ingredients:
       - { name: Chinese cured pork, note: "choose Hunan smoked cured pork; ask in the cured meat section at T&T, and avoid the sweeter Cantonese cured pork" }
       - { name: Chinese cured chicken, note: "boneless net weight; ask for Hunan smoked cured chicken at a Chinese cured meat specialty shop" }
       - { name: Chinese cured fish, note: "boneless net weight; ask for smoked cured fish at a Chinese cured meat specialty shop or an Asian supermarket" }
-      - { name: water, note: "1500 ml for washing and pre-boiling, discarded; add another 2000 ml of water to the steamer, with 1000 ml of boiling water ready for topping up" }
+      - { name: water, note: "for washing and pre-boiling, discarded; add another 2000 ml of water to the steamer, with 1000 ml of boiling water ready for topping up" }
   - group: Steaming
     items:
       - { name: Shaoxing wine, note: from the condiment aisle of an Asian supermarket }

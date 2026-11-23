@@ -2,6 +2,7 @@
 title: Sweet and Sour Pork
 original: 咕噜肉
 summary: Pork shoulder is coated in starch, fried through, then fried again to crisp it, and briefly tossed in a tomato sweet and sour sauce with bell pepper and pineapple.
+coverAlt: Illustration of sweet and sour pork plated
 ingredients:
   - group: Meat and vegetables
     items:

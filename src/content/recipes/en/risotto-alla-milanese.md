@@ -1,6 +1,6 @@
 ---
 title: Risotto alla Milanese
-original: 米兰烩饭
+original: Risotto alla milanese
 summary: Saffron colours the rice, and beef marrow and butter hold the aroma; the rice releases starch into the hot stock, forming a thick, flowing sauce.
 coverAlt: Illustration of risotto alla milanese plated
 ingredients:

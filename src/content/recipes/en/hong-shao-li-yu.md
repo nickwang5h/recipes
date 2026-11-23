@@ -16,7 +16,7 @@ ingredients:
   - group: Braising sauce
     items:
       - { name: Shaoxing wine, note: dry sherry if you have none }
-      - { name: Chinese aged vinegar, note: balsamic-style vinegar if you have none }
+      - { name: Chinese aged vinegar, note: use Chinkiang black vinegar if you have none }
       - { name: light soy sauce }
       - { name: dark soy sauce }
       - { name: oyster sauce }

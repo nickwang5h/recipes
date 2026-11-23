@@ -1,6 +1,6 @@
 ---
 title: Chả Cá Lã Vọng
-original: 河内姜黄莳萝鱼
+original: Chả cá Lã Vọng
 summary: Fish pieces are marinated in turmeric, galangal and sour fermented rice, grilled, then pan-fried hot with plenty of green onion and dill, and served with rice noodles, peanuts and a mắm tôm dipping sauce.
 coverAlt: Illustration of Hanoi turmeric and dill fish, plated
 ingredients:
