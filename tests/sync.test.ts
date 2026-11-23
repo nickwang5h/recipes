@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { DatabaseSync } from 'node:sqlite';
 import { describe, expect, it } from 'vitest';
-import { formatFamilyCode, invalid, merge, newFamilyCode, normalizeFamilyCode, prune, type Doc } from '../src/lib/sync';
+import { LIMITS, MAX_TIME, formatFamilyCode, invalid, merge, newFamilyCode, normalizeFamilyCode, prune, repair, tooDeep, type Doc } from '../src/lib/sync';
 import { d1Store, type D1 } from '../src/lib/sync-d1';
 import { handleSync, type BlobStore } from '../src/lib/sync-server';
 
@@ -34,6 +34,29 @@ describe('prune and limits', () => {
     expect(invalid({ k: { v: 1, t: 1 } })).toBeNull();
     expect(invalid({ k: { v: 1 } })).toMatch(/bad entry/);
     expect(invalid([])).toBe('not an object');
+  });
+
+  it('takes only write times a Date can hold', () => {
+    for (const t of [0, 1, Date.now(), MAX_TIME]) expect(invalid({ k: { v: 1, t } }), String(t)).toBeNull();
+    for (const t of [Infinity, -Infinity, NaN, -1, MAX_TIME + 1, '1', null]) expect(invalid({ k: { v: 1, t } }), String(t)).toMatch(/bad entry/);
+  });
+
+  it('refuses values nested past the limit, without overflowing on them', () => {
+    const nest = (n: number) => JSON.parse(`${'['.repeat(n)}${']'.repeat(n)}`);
+    expect(invalid({ 'list:egg': { v: { for: ['mapo-tofu'], bought: false }, t: 1 } })).toBeNull();
+    expect(invalid({ k: { v: nest(LIMITS.depth - 1), t: 1 } })).toBeNull();
+    expect(invalid({ k: { v: nest(LIMITS.depth), t: 1 } })).toMatch(/too deep/);
+    expect(invalid({ k: { v: nest(20_000), t: 1 } })).toMatch(/too deep/);
+    expect(invalid({ k: { v: 1, t: 1, extra: nest(20_000) } })).toMatch(/too deep/);   // beside v, too
+    expect(tooDeep(nest(200_000), 16)).toBe(true);
+  });
+
+  it('repairs entries stored with a lost time instead of failing the whole doc', () => {
+    const stored = { a: { v: 'x', t: null }, b: { v: null, t: null }, c: { v: 1, t: 5 }, d: 'junk' } as unknown;
+    const fixed = repair(stored);
+    expect(fixed).toEqual({ a: { v: 'x', t: 0 }, b: { v: null, t: 0 }, c: { v: 1, t: 5 } });
+    expect(invalid(prune(fixed, 100 * 86_400_000))).toBeNull();
+    expect(repair(null)).toEqual({});
   });
 });
 
@@ -125,6 +148,34 @@ describe('sync endpoint', () => {
     expect((await handleSync(new Request('https://x/api/sync'), store)).status).toBe(405);
   });
 
+  it('refuses a time of 1e999 instead of storing it as null', async () => {
+    const store = fakeStore();
+    const body = `{"family":"${family}","entries":{"k":{"v":1,"t":1e999}}}`;
+    expect((await handleSync(new Request('https://x/api/sync', { method: 'POST', body }), store)).status).toBe(400);
+    expect(store.blobs.size).toBe(0);
+  });
+
+  it('answers 400, not 500, to a value nested twenty thousand deep', async () => {
+    const store = fakeStore();
+    const body = `{"family":"${family}","entries":{"k":{"t":1,"v":${'['.repeat(20_000)}${']'.repeat(20_000)}}}}`;
+    const res = await handleSync(new Request('https://x/api/sync', { method: 'POST', body }), store);
+    expect(res.status).toBe(400);
+    expect((await res.json()).error).toMatch(/too deep/);
+  });
+
+  it('heals a family whose stored doc has an entry with a lost time', async () => {
+    const store = fakeStore();
+    await handleSync(post({ family, entries: { a: { v: 'x', t: 1 } } }), store);
+    const [key] = store.blobs.keys();
+    store.blobs.set(key, { data: { a: { v: 'x', t: null }, gone: { v: null, t: null }, c: { v: 1, t: 2 } }, etag: 'old' });
+    const res = await handleSync(post({ family, entries: {} }), store);
+    expect(res.status).toBe(200);
+    expect((await res.json()).entries).toEqual({ a: { v: 'x', t: 0 }, c: { v: 1, t: 2 } });
+    expect(store.blobs.get(key)!.data).toEqual({ a: { v: 'x', t: 0 }, c: { v: 1, t: 2 } });   // written back
+    const later = await handleSync(post({ family, entries: { a: { v: 'y', t: 3 } } }), store);
+    expect((await later.json()).entries.a).toEqual({ v: 'y', t: 3 });
+  });
+
   it('answers 400, not 500, to a body that is JSON but not an object', async () => {
     const store = fakeStore();
     for (const body of ['null', '5', '"x"', '[]', 'true']) {
@@ -162,5 +213,17 @@ describe('D1 store', () => {
     expect(await store.setJSON(key, {}, { onlyIfNew: true })).toEqual({ modified: false });
     expect(await store.setJSON(key, {}, { onlyIfMatch: current!.etag })).toEqual({ modified: true });
     expect(await store.setJSON(key, {}, { onlyIfMatch: current!.etag })).toEqual({ modified: false });
+  });
+
+  it('syncs again after a time of 1e999 was saved as null, as the deployed store did', async () => {
+    const { db, d1 } = sqliteD1();
+    const store = d1Store(d1);
+    await handleSync(post({ family, entries: { a: { v: 1, t: 1 } } }), store);
+    db.prepare('UPDATE families SET data = ?').run(JSON.stringify({ a: { v: 1, t: Infinity } }));   // stored as "t":null
+    const res = await handleSync(post({ family, entries: { b: { v: 2, t: 2 } } }), store);
+    expect(res.status).toBe(200);
+    expect((await res.json()).entries).toEqual({ a: { v: 1, t: 0 }, b: { v: 2, t: 2 } });
+    const { data } = db.prepare('SELECT data FROM families').get() as { data: string };
+    expect(JSON.parse(data).a).toEqual({ v: 1, t: 0 });
   });
 });

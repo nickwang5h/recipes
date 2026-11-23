@@ -1,7 +1,7 @@
 // The /api/sync endpoint, kept free of platform imports so it can be tested with a fake store.
 // A client posts the entries it changed; the server merges them into the family's doc and
 // returns the whole merged doc. Concurrent posts are serialized with an etag check and retry.
-import { FAMILY_PATTERN, invalid, merge, prune, type Doc } from './sync';
+import { FAMILY_PATTERN, invalid, merge, prune, repair, type Doc } from './sync';
 
 export interface BlobStore {
   getWithMetadata(key: string, options: { type: 'json' }): Promise<{ data: unknown; etag?: string } | null>;
@@ -36,11 +36,12 @@ export async function handleSync(request: Request, store: BlobStore, now = Date.
   const key = await blobKey(body.family);
   for (let attempt = 0; attempt < 5; attempt++) {
     const current = await store.getWithMetadata(key, { type: 'json' });
-    const base = (current?.data as Doc | undefined) ?? {};
+    // Entries stored before times were checked can be broken; repairing them here heals the family on its next sync.
+    const base = repair(current?.data);
     const merged = prune(merge(base, incoming as Doc), now);
     if (invalid(merged)) return json({ error: 'family data is full' }, 413);
-    // Nothing new: answer without a write.
-    if (current && JSON.stringify(merged) === JSON.stringify(base)) return json({ entries: merged });
+    // Nothing new, and nothing repaired: answer without a write.
+    if (current && JSON.stringify(merged) === JSON.stringify(current.data)) return json({ entries: merged });
     // Some stores (the local dev sandbox) return no etag on read. The write is then unconditional;
     // a lost update is repaired by clients, which resend any entry the server turns out to lack.
     const condition = !current ? { onlyIfNew: true } : current.etag ? { onlyIfMatch: current.etag } : {};
