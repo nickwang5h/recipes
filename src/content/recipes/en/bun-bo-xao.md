@@ -34,7 +34,7 @@ ingredients:
       - { name: fish sauce }
       - { name: garlic, note: finely minced }
       - { name: [Thai chili, Thai chilis], note: thinly sliced into rings; optional }
-translated: 2026-10-02
+translated: 2026-11-22
 ---
 
 *Bún bò xào* lays lemongrass-and-garlic stir-fried beef over rice noodles, fresh vegetables and herbs, with peanuts and fried shallots on top, and a sweet-sour fish sauce dressing tossed in as you eat. The beef is sliced thin and stir-fried quickly, while the noodles and vegetables are cooled and drained, so one bowl has both the aroma of hot meat and the crunch of fresh vegetables.
@@ -48,7 +48,7 @@ The beef goes into the pan in batches so the pan stays hot enough, and the surfa
 3. Stir the lime juice, sugar and warm water for 1 minute, until the sugar has dissolved, then add the fish sauce, garlic and chili. Dip a piece of cucumber in it to taste; the sour, sweet and salty notes should all be clear. Pour into a small bowl to serve on the side.
 4. Cover a pot of water and bring it to a boil over high heat for about 8–10 minutes, until it boils continuously. Blanch the bean sprouts first for 1–2 minutes, until the whole sprout is scalding hot and the beans no longer taste raw, then lift them out, spread them out for 5 minutes until they stop steaming, and drain.
 5. Bring the pot water back to a boil for about 1 minute and add the rice noodles. Check against the package; they usually take 3–5 minutes, until there is no hard core in the centre and they bend softly. Lift them out at once and rinse under cold water for about 1 minute, until no longer warm, drain for 5 minutes, until the bottom of the sieve stops dripping, and loosen them gently.
-6. Into each of three large bowls put noodles, lettuce, cucumber, carrot, bean sprouts and herbs. Preheat a wok or frying pan over medium-high heat for about 2 minutes, until a drop of water on the surface evaporates quickly; add 1 tsp of the beef-frying oil and a third of the lemongrass and stir for 30 seconds, until the lemongrass gives off its fragrance.
+6. Into each of two large bowls put noodles, lettuce, cucumber, carrot, bean sprouts and herbs. Preheat a wok or frying pan over medium-high heat for about 2 minutes, until a drop of water on the surface evaporates quickly; add 1 tsp of the beef-frying oil and a third of the lemongrass and stir for 30 seconds, until the lemongrass gives off its fragrance.
 7. Add a third of the beef in a single layer and let it sear for 30 seconds, until the contact side starts to change colour, then add a third of the fish sauce for the stir-fry and stir-fry for about 1 minute, until the slices are cooked through and slightly browned at the edges, then take them out right away. Cook the other two batches with the same amount of oil, lemongrass and fish sauce.
 8. Divide the beef and the cooked juices from the pan over the noodles, and sprinkle with the peanuts and fried shallots. Pour over some of the fish sauce dressing first, lift the noodles and vegetables from the bottom of the bowl to toss, taste, and add more if needed; eat while the beef is still warm.
 
