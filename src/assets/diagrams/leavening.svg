@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="t d" data-narrow="340 516">
   <title id="t">气从三处来，被面筋兜住，受热撑大再定形</title>
   <desc id="d">左边是三种气源：酵母发酵放出二氧化碳，小苏打遇酸放出二氧化碳，打发带进空气。中间是面筋网络兜住的小气泡。右边是受热后变大的气泡，泡壁已经变硬。下方列出酵母最活跃和死亡的温度。</desc>
   <style>
@@ -14,45 +14,60 @@
     .muted { fill: var(--muted, #625d53); font-size: 13px; }
   </style>
   <rect class="bg" width="600" height="420" rx="12"/>
-  <text class="label" x="32" y="42">先有气，再兜住，最后受热撑大、定形</text>
+  <!-- Wide: three columns left to right. Phone: the sources on top, then each stage as a row, the dough on the
+       left and its words beside it, joined by downward arrows. -->
+  <g class="lead">
+    <text class="label" x="32" y="42">先有气，再兜住，最后受热撑大、定形</text>
+  </g>
+  <g class="narrow-only">
+    <path class="line" d="M82 172 V196 M75 189 L82 196 L89 189 M82 332 V358 M75 351 L82 358 L89 351"/>
+  </g>
 
-  <text class="label" x="92" y="84" text-anchor="middle">气从哪里来</text>
-  <ellipse class="line" cx="50" cy="118" rx="14" ry="10"/>
-  <circle class="gas" cx="78" cy="110" r="4"/>
-  <circle class="gas" cx="90" cy="120" r="3"/>
-  <text class="label muted" x="102" y="124">酵母吃糖</text>
-  <path class="line" d="M38 168 h22 M49 157 v22"/>
-  <text class="label muted" x="66" y="174">小苏打＋酸</text>
-  <circle class="gas" cx="148" cy="160" r="4"/>
-  <path class="line" d="M40 212 q12 -22 24 0 q12 22 24 0"/>
-  <text class="label muted" x="96" y="218">打发带进空气</text>
+  <text class="label narrow-start" x="92" y="84" text-anchor="middle" data-narrow="-76 -58">气从哪里来</text>
+  <g data-narrow="-18 -58">
+    <ellipse class="line" cx="50" cy="118" rx="14" ry="10"/>
+    <circle class="gas" cx="78" cy="110" r="4"/>
+    <circle class="gas" cx="90" cy="120" r="3"/>
+    <text class="label muted" x="102" y="124">酵母吃糖</text>
+    <path class="line" d="M38 168 h22 M49 157 v22"/>
+    <text class="label muted" x="66" y="174">小苏打＋酸</text>
+    <circle class="gas" cx="148" cy="160" r="4"/>
+    <path class="line" d="M40 212 q12 -22 24 0 q12 22 24 0"/>
+    <text class="label muted" x="96" y="218">打发带进空气</text>
+  </g>
 
-  <path class="line" d="M196 168 H222 M214 160 L222 168 L214 176"/>
+  <path class="line wide-only" d="M196 168 H222 M214 160 L222 168 L214 176"/>
 
-  <text class="label" x="316" y="84" text-anchor="middle">面筋网兜住小气泡</text>
-  <rect class="dough" x="246" y="108" width="140" height="120" rx="20"/>
-  <path class="net" d="M252 130 Q290 118 316 134 T380 128 M252 168 Q290 156 316 172 T380 166 M252 206 Q290 194 316 210 T380 204 M270 112 Q260 168 272 226 M316 110 Q330 168 314 226 M360 112 Q350 168 364 226"/>
-  <circle class="bubble" cx="292" cy="150" r="7"/>
-  <circle class="bubble" cx="340" cy="146" r="6"/>
-  <circle class="bubble" cx="300" cy="196" r="6"/>
-  <circle class="bubble" cx="348" cy="188" r="8"/>
-  <circle class="bubble" cx="270" cy="176" r="5"/>
-  <text class="label muted" x="316" y="252" text-anchor="middle">蛋糕里靠蛋的蛋白质</text>
+  <text class="label narrow-start" x="316" y="84" text-anchor="middle" data-narrow="-152 140">面筋网兜住小气泡</text>
+  <g data-narrow="-234 96">
+    <rect class="dough" x="246" y="108" width="140" height="120" rx="20"/>
+    <path class="net" d="M252 130 Q290 118 316 134 T380 128 M252 168 Q290 156 316 172 T380 166 M252 206 Q290 194 316 210 T380 204 M270 112 Q260 168 272 226 M316 110 Q330 168 314 226 M360 112 Q350 168 364 226"/>
+    <circle class="bubble" cx="292" cy="150" r="7"/>
+    <circle class="bubble" cx="340" cy="146" r="6"/>
+    <circle class="bubble" cx="300" cy="196" r="6"/>
+    <circle class="bubble" cx="348" cy="188" r="8"/>
+    <circle class="bubble" cx="270" cy="176" r="5"/>
+  </g>
+  <text class="label muted narrow-start" x="316" y="252" text-anchor="middle" data-narrow="-152 -4">蛋糕里靠蛋的蛋白质</text>
 
-  <path class="line" d="M400 168 H426 M418 160 L426 168 L418 176"/>
-  <text class="label muted" x="413" y="146" text-anchor="middle">加热</text>
+  <path class="line wide-only" d="M400 168 H426 M418 160 L426 168 L418 176"/>
+  <text class="label muted narrow-start" x="413" y="146" text-anchor="middle" data-narrow="-319 202">加热</text>
 
-  <text class="label" x="502" y="84" text-anchor="middle">气泡撑大，泡壁定形</text>
-  <rect class="dough" x="440" y="100" width="124" height="136" rx="24"/>
-  <circle class="set" cx="476" cy="140" r="16"/>
-  <circle class="set" cx="530" cy="136" r="14"/>
-  <circle class="set" cx="486" cy="198" r="15"/>
-  <circle class="set" cx="536" cy="194" r="17"/>
-  <text class="label muted" x="502" y="260" text-anchor="middle">蛋白质凝固，淀粉糊化</text>
+  <text class="label narrow-start" x="502" y="84" text-anchor="middle" data-narrow="-338 302">气泡撑大，泡壁定形</text>
+  <g data-narrow="-420 266">
+    <rect class="dough" x="440" y="100" width="124" height="136" rx="24"/>
+    <circle class="set" cx="476" cy="140" r="16"/>
+    <circle class="set" cx="530" cy="136" r="14"/>
+    <circle class="set" cx="486" cy="198" r="15"/>
+    <circle class="set" cx="536" cy="194" r="17"/>
+  </g>
+  <text class="label muted narrow-start" x="502" y="260" text-anchor="middle" data-narrow="-338 150">蛋白质凝固，淀粉糊化</text>
 
-  <path class="border" d="M32 296 H568"/>
-  <text class="label muted" x="32" y="326">约 27–35°C：酵母发酵最旺。</text>
-  <text class="label muted" x="32" y="352">约 55–60°C：酵母死亡，不再产气。</text>
-  <text class="label muted" x="32" y="378">泡打粉：一部分遇水就放气，一部分要又湿又热。</text>
-  <text class="label muted" x="32" y="404">约 93°C：刚烤好的面包中心。</text>
+  <path class="border wide-only" d="M32 296 H568"/>
+  <g class="notes">
+    <text class="label muted" x="32" y="326">约 27–35°C：酵母发酵最旺。</text>
+    <text class="label muted" x="32" y="352">约 55–60°C：酵母死亡，不再产气。</text>
+    <text class="label muted" x="32" y="378">泡打粉：一部分遇水就放气，一部分要又湿又热。</text>
+    <text class="label muted" x="32" y="404">约 93°C：刚烤好的面包中心。</text>
+  </g>
 </svg>
