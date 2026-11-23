@@ -29,11 +29,11 @@ Both kinds of steaming work at home. A shallow plate, small portions and steady 
 
 ## *Wok hei*: drying the surface in a short time
 
-Dry-fried beef chow fun stir-fries beef, rice noodles and vegetables briefly, and asks for whole noodles with a dry surface. It is the classic dish for watching *wok hei*. A professional kitchen uses strong heat to quickly make up the heat the wok loses, so the surface of the food heats up and loses water, and a fried fragrance develops.
+[Dry-fried Beef Chow Fun](/recipes/gan-chao-niu-he/) stir-fries beef, rice noodles and vegetables briefly, and asks for whole noodles with a dry surface. It is the classic dish for watching *wok hei*. A professional kitchen uses strong heat to quickly make up the heat the wok loses, so the surface of the food heats up and loses water, and a fried fragrance develops.
 
 Water soaks up a lot of heat. Once liquid collects in the wok, the food is mostly heated in moist heat; see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/). Only after the surface has gradually dried does the aroma of the [Maillard reaction](/principles/maillard-reaction/) develop more easily. *Wok hei* also includes other aromas formed by fat and brief frying at high temperature, so "the wok was very hot" doesn't explain all of the flavour.
 
-What you can practise at home is draining the ingredients, loosening cooked rice noodles, and stir-frying briefly in batches, so the finished dish has no pooled liquid and doesn't stick into clumps. The instant of aroma from a restaurant's strong fire is hard to reproduce fully, and there is no need to chase flames leaping into the wok. The site's stir-fried flat rice noodles contain cumin and gluten; that is a different home-style combination, not classic dry-fried beef chow fun.
+What you can practise at home is draining the ingredients, loosening cooked rice noodles, and stir-frying briefly in batches, so the finished dish has no pooled liquid and doesn't stick into clumps. The instant of aroma from a restaurant's strong fire is hard to reproduce fully, and there is no need to chase flames leaping into the wok. The site's [Stir-fried Flat Rice Noodles](/recipes/chao-he-fen/) contain cumin and gluten, a different home-style combination.
 
 ## Trying it at home
 
