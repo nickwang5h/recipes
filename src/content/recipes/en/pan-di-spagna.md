@@ -22,7 +22,7 @@ translated: 2026-11-22
 
 *Pan di Spagna* is a basic sponge cake used throughout Italian desserts: fine-textured, light and springy, not very sweet and almost free of fat. It is rarely eaten on its own; it is usually split into layers, brushed with syrup or sweet wine, and filled with cream, custard or fruit to make layered cakes.
 
-There is no baking powder in it; all the volume comes from whipped eggs. Whole eggs and sugar are beaten together for a quarter of an hour or more, and the egg proteins unfold at the surface of countless small bubbles and link into thin films that hold the air in the batter (see [foams](/principles/foams/)). In the oven the bubbles expand with heat, while the proteins set and the starch gelatinizes, fixing the risen shape (see [protein denaturation and coagulation](/principles/protein-coagulation/) and [starch gelatinization](/principles/starch-gelatinization/)). The proportions are old: Artusi's 1891 recipe uses about 28 g sugar and 28 g flour per egg; today's recipes use 30 g sugar and 30 g of flour per egg, with half the flour replaced by starch for a softer crumb.
+There is no baking powder in it; all the volume comes from whipped eggs. Whole eggs and sugar are beaten together for a quarter of an hour or more, and the egg proteins unfold at the surface of countless small bubbles and link into thin films that hold the air in the batter (see [foams](/principles/foams/)). In the oven the bubbles expand with heat, while the proteins set and the starch gelatinizes, fixing the risen shape (see [protein denaturation and coagulation](/principles/protein-coagulation/) and [starch gelatinization](/principles/starch-gelatinization/)). Replacing half the flour with starch gives a softer crumb.
 
 ## Steps
 
