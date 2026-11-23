@@ -41,7 +41,7 @@ The flour clings to the chicken first and the egg wraps around it, then sets wit
 
 ## Steps
 
-1. Put the eggs for the tartar sauce in a small pot, add the boiling water and heat over medium heat for 4–5 minutes, until the water boils. Turn the heat to low and cook for 12 minutes, until the whites and yolks are fully set. Move the eggs to ice-cold water for 5 minutes, until the shells no longer feel hot, then peel and chop them.
+1. Put the eggs for the tartar sauce in a small pot, add the water for boiling the eggs and heat over medium heat for 4–5 minutes, until it boils. Turn the heat to low and cook for 12 minutes, until the whites and yolks are fully set. Move the eggs to ice-cold water for 5 minutes, until the shells no longer feel hot, then peel and chop them.
 2. While the eggs cook, finely chop the onion and soak it in 300 ml of cold water for 5–10 minutes, until the sharp smell fades, then lift it out and squeeze dry. Seed the cucumber and chop it finely. Mix with the chopped egg, onion, mayonnaise, the rice vinegar from the tartar sauce group, salt and pepper. Cover and refrigerate for at least 10 minutes, until the sauce is cold through.
 3. Put all the nanban vinegar ingredients in a small pot and cook over medium heat for 2–3 minutes, until the sugar dissolves and gentle bubbles form at the edge. Turn off the heat right away and pour into a shallow dish big enough to lay out the chicken.
 4. Slice the chicken breast horizontally and open it out, then divide it into 2 pieces and pound lightly to about 1 cm thick. Season both sides with salt and pepper, dredge lightly in flour and shake off the extra. Beat the egg for coating in another shallow bowl.
