@@ -225,6 +225,7 @@ Principle titles (use them in link text too):
 | knife-work | Knife Work and Cooking |
 | leavening | Leavening: Yeast, Baking Soda and Baking Powder |
 | maillard-reaction | The Maillard Reaction |
+| meat-paste | Fish and Meat Pastes: Salt, Mixing and Gelling |
 | oil-temperature | Oil Temperature and Deep Frying |
 | protein-coagulation | Protein Denaturation and Coagulation |
 | salt | Salt: Seasoning, Osmosis and Curing |
