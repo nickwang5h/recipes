@@ -20,9 +20,9 @@ ingredients:
     items:
       - { ref: cornstarch, qty: 0.5, unit: 茶匙 }
       - { ref: light-soy-sauce, qty: 0.25, unit: 茶匙 }
-      - { ref: dark-soy-sauce, qty: 0.3125, unit: ml }
+      - { ref: dark-soy-sauce, note: 几滴 }
       - { ref: shaoxing-wine, qty: 0.5, unit: 茶匙 }
-      - { ref: sugar, qty: 0.3125, unit: ml }
+      - { ref: sugar, note: 一小撮 }
   - group: 炒面
     items:
       - { ref: vegetable-oil, qty: 1.5, unit: 汤匙, note: 拌面 0.25 汤匙，炒肉 0.5 汤匙，炒菇与面 0.75 汤匙 }
@@ -37,7 +37,7 @@ sources:
   - title: Safe cooking temperatures
     author: Health Canada
     url: https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html
-updated: 2026-10-28
+updated: 2026-11-22
 ---
 
 上海粗炒面用粗圆麦面配猪肉丝、香菇和青菜，酱油色深，面条仍要根根分开。生抽给咸味，老抽上色，少量糖把味道接起来。鲜香菇切薄片就能直接炒，和肉丝、青菜在一口锅里完成一餐。
