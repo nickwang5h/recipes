@@ -11,8 +11,8 @@ ingredients:
       - { name: pine nuts, note: "plain raw pine nuts, not toasted" }
       - { name: Parmigiano Reggiano, note: "freshly grated fine, loosely packed" }
       - { name: Fiore Sardo, note: "freshly grated fine, loosely packed; if you cannot find it, use Pecorino Romano from a mainstream supermarket, which is saltier, so add less salt at first" }
-      - { name: "coarse salt", note: "a small amount, since the cheese is already salty" }
       - { name: extra virgin olive oil, note: "choose a mild one, stirred in in stages" }
+      - { name: "coarse salt", note: "a small amount, since the cheese is already salty" }
   - group: For serving
     items:
       - { name: pasta cooking water, note: "add according to thickness, starting with 1 tablespoon" }
