@@ -24,8 +24,8 @@ ingredients:
 sources:
   - { title: "HowToCook：蛏抱蛋的做法", author: HowToCook 社区, url: "https://github.com/Anduin2017/HowToCook/blob/master/dishes/aquatic/蛏抱蛋/蛏抱蛋.md" }
   - { title: "Selecting and Serving Fresh and Frozen Seafood Safely", author: FDA, url: "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely" }
-  - { title: "Cook to a Safe Minimum Internal Temperature", author: FoodSafety.gov, url: "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" }
-updated: 2026-10-01
+  - { title: "Safe cooking temperatures", author: Health Canada, url: "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html" }
+updated: 2026-11-22
 ---
 
 蛏抱蛋是把蛏肉拌进蛋糊煎成的蛋饼，边缘微脆，里面软嫩，洋葱细丁带一点甜香。蛏子要先焯水开壳，才好取肉、清掉泥沙，见[焯水与去腥](/principles/blanching/)。焯过的蛏肉得沥干，带进去的水多了，蛋糊会变稀，下锅还容易溅油。
@@ -39,7 +39,7 @@ updated: 2026-10-01
 3. 洋葱切细丁，与蛏肉、生抽、料酒、鸡精和淀粉拌匀，拌到淀粉都被润湿、看不到干粉团。打入鸡蛋搅匀，蛋液裹住蛏肉和洋葱，就是均匀的蛋糊。
 4. 小平底锅加植物油，中火加热，滴一点蛋糊进去，立刻起细泡并慢慢凝住，油就热了。把蛋糊摊成厚薄均匀的一层。锅小或做多份就分批煎，别堆成厚饼。
 5. 转中小火，让底部先定形。边缘金黄、铲子能托起完整蛋片时再翻面。整片太大就先分成几块，用宽铲逐块翻，别让没凝固的蛋液流进油里。
-6. 继续煎到另一面金黄。最厚处的蛋液要完全凝固、不再湿黏，蛏肉也要热透：温度计插进蛋饼中心，到 71°C 就熟了。外面上色太快就降火，让中心继续受热。
+6. 继续煎到另一面金黄。最厚处的蛋液要完全凝固、不再湿黏，蛏肉也要热透：温度计插进蛋饼中心，到 74°C 就熟了。外面上色太快就降火，让中心继续受热。
 7. 用漏铲取出，稍沥油，放在厨房纸上吸去余油，再装盘上桌。蛋饼别泡在油里等其他菜，离锅后边缘才能保持干爽。
 
 ## 要点
