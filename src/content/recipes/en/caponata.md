@@ -8,7 +8,7 @@ ingredients:
     items:
       - { name: "eggplant", note: "large purple eggplant, cut with the skin on into pieces about 2 cm" }
       - { name: "tomato", note: "ripe sauce tomatoes, loose seeds and pulp removed, flesh cut into strips" }
-      - { name: "red onion", note: "medium, thinly sliced" }
+      - { name: [red onion, red onions], note: "medium, thinly sliced" }
       - { name: "celery", note: "tender centre stalks and a few tender leaves, thinly sliced" }
   - group: Savoury, sweet and sour
     items:

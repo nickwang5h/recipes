@@ -9,7 +9,7 @@ ingredients:
       - { name: ["bone-in, skin-on chicken thigh", "bone-in, skin-on chicken thighs"], note: use upper thighs; labelled "bone-in skin-on chicken thighs" on mainstream supermarket shelves }
   - group: Lemongrass marinade
     items:
-      - { name: "lemongrass", note: "remove the tough outer leaves, take the white and pale green tender part, and mince it finely" }
+      - { name: lemongrass, unit: stalk, note: "remove the tough outer leaves, take the white and pale green tender part, and mince it finely" }
       - { name: garlic, note: finely minced }
       - { name: fish sauce }
       - { name: sugar }

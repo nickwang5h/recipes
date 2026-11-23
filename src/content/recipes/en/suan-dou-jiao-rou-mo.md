@@ -8,8 +8,8 @@ ingredients:
     items:
       - { name: pickled long beans, note: "weight after draining; look for bagged or bottled pickled long beans at Asian supermarkets such as T&T" }
       - { name: ground pork, note: choose ground pork with a little fat }
-      - { name: green bell pepper, unit: '', note: "a small one, stem and seeds removed, cut into small dice" }
-      - { name: red bell pepper, unit: '', note: "a small one, stem and seeds removed, cut into small dice" }
+      - { name: [green bell pepper, green bell peppers], unit: '', note: "a small one, stem and seeds removed, cut into small dice" }
+      - { name: [red bell pepper, red bell peppers], unit: '', note: "a small one, stem and seeds removed, cut into small dice" }
   - group: Marinating and stir-frying
     items:
       - { name: "vegetable oil", note: "1 tbsp for mixing with the meat, 2 tbsp for stir-frying" }

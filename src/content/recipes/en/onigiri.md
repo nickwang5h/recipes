@@ -7,7 +7,7 @@ ingredients:
   - group: Rice and nori
     items:
       - { name: cooked Japanese short-grain rice, note: "about 5 North American cups, kept warm; weighed here as cooked rice, for about 10 onigiri" }
-      - { name: sheet of nori, unit: '', note: "large sheets of plain sushi nori, cut into strips about 2.5 cm wide; keep the rest of the nori separately" }
+      - { name: nori, unit: sheet, note: "large sheets of plain sushi nori, cut into strips about 2.5 cm wide; keep the rest of the nori separately" }
       - { name: "salt", note: "a little, rubbed on slightly damp palms" }
       - { name: "water", note: "a little, for wetting your hands" }
   - group: Bonito and soy sauce filling

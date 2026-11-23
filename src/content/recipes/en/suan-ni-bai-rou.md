@@ -27,7 +27,7 @@ ingredients:
       - { name: [bay leaf, bay leaves], unit: '' }
       - { name: cassia }
       - { name: fennel seed }
-      - { name: clove }
+      - { name: [clove, cloves] }
       - { name: dried tangerine peel, note: sold in the dried goods section of T&T }
       - { name: tsaoko, note: smashed to crack; sold in the spice section of T&T }
   - group: Garlic sauce

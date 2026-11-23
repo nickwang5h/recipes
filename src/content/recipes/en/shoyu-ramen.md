@@ -25,7 +25,7 @@ ingredients:
       - { name: fresh ramen noodles, note: buy plain fresh alkaline ramen noodles from the refrigerated section of an Asian supermarket }
       - { name: "noodle cooking water", note: "as needed, in a separate pot" }
       - { name: menma, note: buy menma from the Japanese seasonings aisle of an Asian supermarket or a Japanese food shop; drain before using }
-      - { name: "green onion", note: "green part only, thinly sliced" }
+      - { name: [green onion, green onions], note: "green part only, thinly sliced" }
       - { name: nori, note: each sheet cut into four pieces }
   - group: Cooling
     items:

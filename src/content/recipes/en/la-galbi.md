@@ -10,7 +10,7 @@ ingredients:
   - group: Marinade
     items:
       - { name: pear, note: "peeled and cored weight; use Asian pear, or the same amount of apple if you have none" }
-      - { name: "onion", note: "medium, grated to a purée" }
+      - { name: [onion, onions], note: "medium, grated to a purée" }
       - { name: minced garlic }
       - { name: minced ginger }
       - { name: light soy sauce, note: "ordinary brewed soy sauce or jin ganjang; don't use dark soy sauce or Korean soup soy sauce" }

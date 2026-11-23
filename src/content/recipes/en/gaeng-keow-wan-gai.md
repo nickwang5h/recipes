@@ -8,7 +8,7 @@ ingredients:
     items:
       - { name: "boneless skinless chicken thighs", note: "cut into thin, bite-sized slices" }
       - { name: "Thai eggplant", note: "stemmed and cut into quarters; if you can't find it, use mainstream supermarket eggplant cut into small pieces and cook it slightly less" }
-      - { name: "lemon", note: "squeeze into the water for soaking the eggplant, then drain before it goes in the pot" }
+      - { name: [lemon, lemons], note: "squeeze into the water for soaking the eggplant, then drain before it goes in the pot" }
       - { name: ["long green chili", "long green chilies"], note: "cut into diagonal strips; if you can't find it, use half a green bell pepper, which has a different aroma but gives a crisp-tender bite" }
       - { name: Thai basil, note: leaves only; look for Thai basil }
   - group: Curry sauce

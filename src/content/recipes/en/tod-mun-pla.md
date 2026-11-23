@@ -19,7 +19,7 @@ ingredients:
   - group: Cucumber dipping sauce
     items:
       - { name: garlic }
-      - { name: "mild long red chili", note: "choose prik chee fah at an Asian supermarket, or use 1 red Fresno chili" }
+      - { name: [mild long red chili, mild long red chilies], note: "choose prik chee fah at an Asian supermarket, or use 1 red Fresno chili" }
       - { name: sugar }
       - { name: salt }
       - { name: white vinegar }

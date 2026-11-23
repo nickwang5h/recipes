@@ -14,7 +14,7 @@ ingredients:
     items:
       - { name: "skinless, boneless sea bass fillet", note: "weight of the cleaned fish meat; you can ask the fish counter to slice it, or buy grouper slices at T&T" }
       - { name: cornstarch }
-      - { name: egg white, note: use only the white of one large egg }
+      - { name: [egg white, egg whites], note: use only the white of one large egg }
       - { name: water, note: for mixing the coating }
       - { name: vegetable oil }
       - { name: salt }

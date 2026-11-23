@@ -28,7 +28,7 @@ ingredients:
       - { name: water, note: room-temperature water for soaking the noodles; pour it away afterward }
       - { name: soft tofu, note: cut into pieces of about 2 cm }
       - { name: napa cabbage, note: cut into pieces of about 3 cm }
-      - { name: green onion, note: chopped }
+      - { name: [green onion, green onions], note: chopped }
   - group: Crispy garlic
     items:
       - { name: garlic, note: chopped into bits of about 2–3 mm }
