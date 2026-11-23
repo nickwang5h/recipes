@@ -44,6 +44,6 @@ The story goes that the dish came from a small eatery outside the north gate of 
 ## Key points
 
 - **Sauce is cloudy and tastes of raw starch**: the sauce was not boiling when the slurry went in, so the starch did not fully gelatinize. Wait for the sauce to return to a boil before each addition. See [starch gelatinization](/principles/starch-gelatinization/).
-- **Sauce thins out and weeps after serving**: it cooked too long after thickening or was pushed too hard, which broke the swollen potato starch granules. Take the dish off the heat as soon as it is thickened.
+- **Sauce thins out and weeps after serving**: it cooked too long after thickening or was pushed too hard, which broke the swollen potato starch granules. Take the dish off the heat as soon as it is thickened. A night in the fridge for a lunch box makes the sauce weep the same way: pack it in a shallow container and refrigerate promptly, then the next day reheat covered at medium power to 74°C (165°F) in the centre, pushing it gently just once, and sprinkle on the ground Sichuan peppercorns before eating.
 - **Meat is not fragrant**: the chili bean paste went in before the moisture had cooked off, so the meat was boiling rather than frying and the [Maillard reaction](/principles/maillard-reaction/) could not get going.
 - **Tofu breaks up**: tofu blanched in salted water has a firmer outer layer. Once it is in the wok, only push it, do not turn it.
