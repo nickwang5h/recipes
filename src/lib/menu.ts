@@ -58,7 +58,7 @@ export function suggestDish(recipes: MenuRecipe[], slot: SlotId, options: Sugges
   const { favorites, planned, maxMinutes, cuisine, month, random = Math.random } = options;
   const courses: readonly string[] = SLOTS.find((s) => s.id === slot)!.courses;
   const pool = recipes.filter(
-    (r) => forDinner(r) && courses.includes(r.course) && !planned.has(r.id) && !exclude.has(r.id) && (!maxMinutes || r.minutes <= maxMinutes),
+    (r) => !r.component && !r.minor && courses.includes(r.course) && !planned.has(r.id) && !exclude.has(r.id) && (!maxMinutes || r.minutes <= maxMinutes),
   );
   return pickWeighted(
     pool,

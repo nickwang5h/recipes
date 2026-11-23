@@ -32,9 +32,15 @@ describe('suggesting a table', () => {
     for (let i = 0; i < 20; i++) expect(suggestDish(recipes, 'veg', { ...none, random: () => i / 20 })?.component).toBe(false);
   });
 
-  it('never suggests minor dishes or ones over three hours, by the same rule as 今天', () => {
-    const veg = [{ ...r('tang-ban-xi-hong-shi', 'veg'), minor: true }, r('slow-veg', 'veg', 'chinese', 240), r('tomato-egg', 'veg')];
+  it('never suggests minor dishes', () => {
+    const veg = [{ ...r('tang-ban-xi-hong-shi', 'veg'), minor: true }, r('tomato-egg', 'veg')];
     for (let i = 0; i < 20; i++) expect(suggestDish(veg, 'veg', { ...none, random: () => i / 20 })?.id).toBe('tomato-egg');
+  });
+
+  it('still suggests long dishes when no time limit is chosen', () => {
+    const veg = [r('slow-veg', 'veg', 'chinese', 240)];
+    expect(suggestDish(veg, 'veg', { ...none, random: () => 0 })?.id).toBe('slow-veg');
+    expect(suggestDish(veg, 'veg', { ...none, maxMinutes: 60, random: () => 0 })).toBeUndefined();
   });
 
   it('prefers the main dish cuisine for the other slots', () => {
