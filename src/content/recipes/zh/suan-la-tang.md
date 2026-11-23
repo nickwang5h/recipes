@@ -25,7 +25,7 @@ ingredients:
       - { ref: salt, qty: 0.25, unit: 茶匙, note: 腌肉用；汤里另按口味调盐 }
       - { ref: cornstarch, qty: 0.5, unit: 汤匙, note: 腌肉用 }
       - { ref: chicken-stock, qty: 950, unit: ml, note: 低钠 }
-      - { ref: water, qty: 1440, unit: ml, note: 分三碗泡干货；保留黄花菜泡发水 500 ml 入汤 }
+      - { ref: water, qty: 1440, unit: ml, note: 分三碗泡干货；保留黄花菜泡发水，补清水到 500 ml 入汤 }
       - { ref: light-soy-sauce, qty: 1, unit: 汤匙 }
       - { ref: cornstarch, qty: 3, unit: 汤匙, note: 勾芡用 }
       - { ref: water, qty: 60, unit: ml, note: 调水淀粉 }
@@ -39,7 +39,7 @@ sources:
   - title: Authentic Hot and Sour Soup (酸辣汤)
     author: Maggie Zhu，Omnivore's Cookbook
     url: https://omnivorescookbook.com/authentic-hot-and-sour-soup/
-updated: 2026-10-02
+updated: 2026-11-22
 ---
 
 酸辣汤用醋取酸，用白胡椒取辣，豆腐、肉丝、木耳和黄花菜给汤添入口感。汤应略稠，舀起仍能顺畅流下；每一勺能带起汤料，喝完没有一层厚糊留在嘴里。
@@ -48,7 +48,7 @@ updated: 2026-10-02
 
 ## 步骤
 
-1. 分别洗净干香菇、木耳和黄花菜，各用 480 ml 温水泡 30–60 分钟，到香菇中心软、木耳完全舒展、黄花菜能弯折。木耳剪去硬根，香菇去柄，黄花菜剪掉硬端，都切成短条；滤出黄花菜泡发水 500 ml，其余泡水弃去。
+1. 分别洗净干香菇、木耳和黄花菜，各用 480 ml 温水泡 30–60 分钟，到香菇中心软、木耳完全舒展、黄花菜能弯折。木耳剪去硬根，香菇去柄，黄花菜剪掉硬端，都切成短条；滤出黄花菜泡发水，加清水补到 500 ml，其余泡水弃去。
 2. 肉丝拌入绍兴酒、腌肉盐和 0.5 汤匙淀粉，冷藏腌 10–15 分钟，到表面均匀挂着薄浆。把香醋和白胡椒在小碗里搅匀，留到出锅前使用。
 3. 锅中放鸡汤、黄花菜泡发水、姜末和葱白，中大火加热 5–7 分钟，到汤开始冒泡。加入香菇、木耳、黄花菜、豆腐和生抽，小火煮 5 分钟，到汤料热透、香菇条柔软。
 4. 把勾芡淀粉和 60 ml 冷水搅匀，边推汤边分次淋入，小火煮 1 分钟，到汤变亮、略能挂勺。每次倒入前都搅起碗底的淀粉，避免最后一股过稠。
