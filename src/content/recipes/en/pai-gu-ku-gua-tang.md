@@ -34,5 +34,5 @@ The ribs are first [blanched](/principles/blanching/) to clean the surface, then
 ## Key points
 
 - **Grey scum floats on the soup**: the surface was not cleaned in blanching, or the ribs lifted out were not rinsed well (see [Blanching and Removing Off-Odours](/principles/blanching/)). Change the water and simmer gently, and skim new scum promptly afterward.
-- **The soup has simmered a long time but the ribs are still hard to bite**: the cut and the size of the pieces change how long it takes the connective tissue to soften (see [Collagen and Gelatin](/principles/collagen-gelatin/)). Start looking at 120 minutes, and stop once the meat is soft; there is no need to fill four hours.
+- **The soup has simmered a long time but the ribs are still hard to bite**: the cut and the size of the pieces change how long it takes the connective tissue to soften (see [Collagen and Gelatin](/principles/collagen-gelatin/)). Start looking at 120 minutes, and stop once the meat is soft; there is no need to fill 4 hours.
 - **The dried shrimp are too strong and the soup too salty**: both the amount and the saltiness of the dried shrimp affect the soup (see [Umami](/principles/umami/)). Start with the middle of the range, and add salt according to the final soup volume and your tasting, rather than all at once from the starting water.

@@ -22,7 +22,7 @@ Whisking breaks the oil into fine droplets that are temporarily dispersed in the
 
 1. Put the wine vinegar and a little salt in a bowl and whisk until no salt grains are visible. Taste a drop to make sure there is saltiness within the sourness, then start adding the oil.
 2. Pour the oil in slowly while whisking. Start with a thin stream, and speed up gradually once the liquid turns cloudy and the oil droplets are fine, each time letting the newly added oil be broken up.
-3. Add freshly ground pepper and keep whisking until the colour is even and only fine oil droplets show on the surface. You can also put the ingredients in a jar with a lid, screw it tight and shake hard for about half a minute until it is an even, cloudy dressing.
+3. Add freshly ground pepper and keep whisking until the colour is even and only fine oil droplets show on the surface. You can also put the ingredients in a jar with a lid, screw it tight and shake hard for about 30 seconds until it is an even, cloudy dressing.
 4. Dip a dried leaf into the dressing to taste and add a little salt to your taste. If using parsley, stir it in now. If the dressing has stood for a while, whisk it again before tasting.
 5. Just before serving, pour the dressing over the leaves and toss gently until every leaf is thinly glossy. Use part of it first and add more if it is not enough after tossing; there should be no pool of dressing at the bottom of the bowl.
 

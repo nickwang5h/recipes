@@ -1,7 +1,7 @@
 ---
 title: Pad Kana Moo
 original: ผัดคะน้าหมู
-summary: Sliced pork with crisp-tender gai lan, garlic and chili coarsely pounded and fried until fragrant, and oyster sauce, light soy sauce and sugar reduced to a little thin sauce, ready in two or three minutes.
+summary: Sliced pork with crisp-tender gai lan, garlic and chili coarsely pounded and fried until fragrant, and oyster sauce, light soy sauce and sugar reduced to a little thin sauce, ready in 2–3 minutes.
 coverAlt: Illustration of stir-fried gai lan with pork plated
 ingredients:
   - group: Main ingredients

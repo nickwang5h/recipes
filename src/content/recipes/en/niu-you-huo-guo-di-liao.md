@@ -51,7 +51,7 @@ This is the quantity for a whole batch, with more than 10 kg of ingredients, so 
 4. Add the doubanjiang and stir to break it up, scraping the bottom of the pot over medium-low heat, until the steam lessens, the oil is a bright red and you can smell the sauce aroma. The solids should be loose, with no burnt black spots.
 5. Add the remaining ginger and garlic slices and stir-fry until fragrant for about 15 seconds, then add the fermented black beans, dou mu zi, red Sichuan peppercorns and all the dry spices. Keep the heat low and stir until the spices are evenly spread and their aroma is released (see [spices and aromatics](/principles/aromatics/)).
 6. Turn off the heat and move the pot away, away from open flame, then add the baijiu in several additions, stirring as you add. Once the vigorous foaming has died down, stir-fry over low heat until there is no free water and the oil and solids are evenly mixed.
-7. Pack into shallow containers and cool them promptly. Refrigerate within two hours of making it; use it within 2–3 days of refrigeration and freeze the rest. To use, simmer it with water until it boils, and taste the broth before adjusting the salt.
+7. Pack into shallow containers and cool them promptly. Refrigerate within 2 hours of making it; use it within 2–3 days of refrigeration and freeze the rest. To use, simmer it with water until it boils, and taste the broth before adjusting the salt.
 
 ## Key points
 

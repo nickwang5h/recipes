@@ -13,7 +13,7 @@ translated: 2026-10-01
 
 In a soft-boiled egg the white holds its shape while the centre of the yolk still flows. Heat travels from the shell toward the centre, so the outer white warms first and the yolk at the centre follows more slowly (see [heat transfer](/principles/heat-transfer/)); different proteins also set in different ways (see [protein denaturation and coagulation](/principles/protein-coagulation/)). A short cook makes use of this gap between outside and inside.
 
-Bring the water to a bare simmer before the egg goes in, and count the time from the moment the egg enters the water. Starting in cold water and then turning off the heat to soak depends on how fast your stove heats up, how much heat the pot holds and how much water there is, and the same six minutes can give very different results. For a large refrigerated egg, six minutes is a starting point; if you change to an extra-large egg or a room-temperature egg, or put in many eggs at once, check the doneness again.
+Bring the water to a bare simmer before the egg goes in, and count the time from the moment the egg enters the water. Starting in cold water and then turning off the heat to soak depends on how fast your stove heats up, how much heat the pot holds and how much water there is, and the same 6 minutes can give very different results. For a large refrigerated egg, 6 minutes is a starting point; if you change to an extra-large egg or a room-temperature egg, or put in many eggs at once, check the doneness again.
 
 ## Steps
 

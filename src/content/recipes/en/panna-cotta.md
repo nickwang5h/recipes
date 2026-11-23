@@ -14,7 +14,7 @@ ingredients:
 translated: 2026-10-01
 ---
 
-*Panna cotta* is a cream dessert from Piedmont. Vanilla, sugar and cream give it flavour and gelatin gives it shape. Once chilled, it stands up, trembles when the plate is shaken, and is soft to the bite as the cream flavour slowly spreads. Heating and handling take about twenty minutes, and then it needs at least six hours in the refrigerator, so it suits making half a day ahead.
+*Panna cotta* is a cream dessert from Piedmont. Vanilla, sugar and cream give it flavour and gelatin gives it shape. Once chilled, it stands up, trembles when the plate is shaken, and is soft to the bite as the cream flavour slowly spreads. Heating and handling take about 20 minutes, and then it needs at least 6 hours in the refrigerator, so it suits making half a day ahead.
 
 It depends on [gelatin setting](/principles/collagen-gelatin/): the gelatin first absorbs water and dissolves in the hot cream, then on cooling it weaves into a network that traps the liquid. When the temperature rises the network loosens again. Heating is only to dissolve the sugar and gelatin. If the cream is boiled too long, water evaporates and the concentration rises, so the same gelatin sets harder. In the refrigerator, heat has to leave slowly from the walls of the cup and from the centre (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)).
 

@@ -20,7 +20,7 @@ translated: 2026-10-01
 
 Fried milk has a golden, crisp shell and, when you bite it open, a warm, smooth milky centre. The method is to cook milk first into a custard that can be cut, then coat it in flour, beaten egg and bread crumbs and fry it briefly until golden. The custard holds its shape through [starch gelatinization](/principles/starch-gelatinization/) plus the gel structure that forms as it cools; chilling milk alone will not set it.
 
-With 250 ml of milk to 30 g of cornstarch, the milk paste has to be cooked through for the custard to hold up. The oil only sets the outer layer and dries it; the milk centre was already cooked long before. Fry in batches and hold the [oil temperature](/principles/oil-temperature/), so the strips spend less time in the oil. This batch makes about twelve strips and needs at least two hours of chilling, so plan ahead.
+With 250 ml of milk to 30 g of cornstarch, the milk paste has to be cooked through for the custard to hold up. The oil only sets the outer layer and dries it; the milk centre was already cooked long before. Fry in batches and hold the [oil temperature](/principles/oil-temperature/), so the strips spend less time in the oil. This batch makes about twelve strips and needs at least 2 hours of chilling, so plan ahead.
 
 ## Steps
 
