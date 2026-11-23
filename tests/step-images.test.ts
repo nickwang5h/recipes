@@ -9,7 +9,8 @@ const dir = 'src/content/recipes/zh/';
 const slugs = readdirSync(dir).filter((f) => f.endsWith('.md')).map((f) => f.slice(0, -3));
 
 describe('step pictures', () => {
-  it('reads steps the way the drawing script does', () => {
+  // Reads every recipe in one test, which can pass vitest's default 5 s on a busy machine.
+  it('reads steps the way the drawing script does', { timeout: 30_000 }, () => {
     for (const slug of slugs) {
       const src = readFileSync(`${dir}${slug}.md`, 'utf8');
       const body = src.replace(/^---\n[\s\S]*?\n---\n/, '');
