@@ -219,6 +219,7 @@ Principle titles (use them in link text too):
 | collagen-gelatin | Collagen and Gelatin |
 | emulsification | Emulsification |
 | fermentation | Fermented Seasonings |
+| foams | Foams: Whipped Egg Whites, Whole Eggs and Cream |
 | gluten | Gluten |
 | heat-transfer | Heat Transfer: Conduction, Convection and Radiation |
 | knife-work | Knife Work and Cooking |

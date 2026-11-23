@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="t d">
+  <title id="t">Egg white foam relies on unfolded proteins; cream foam on clustered fat globules</title>
+  <desc id="d">On the left, an air bubble lined with unfolded proteins, one end reaching into the air and one staying in the water, linked to each other. In the middle, fat has taken over the bubble surface and the proteins cannot form a network. On the right, a bubble wrapped in partly clustered fat globules linked in a chain. Notes below: whipping cream is about 35% fat and must be cold, and egg whites can grow six to eight times in volume.</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .water { fill: #9cc3d9; fill-opacity: .45; }
+    .air { fill: var(--surface, #e9e5dc); stroke: var(--accent-blue, #2f6fca); stroke-width: 2; }
+    .protein { stroke: var(--primary, #b83e30); stroke-width: 3; fill: none; stroke-linecap: round; }
+    .fat { fill: #f1d27a; stroke: #b8892b; stroke-width: 1.5; }
+    .oil { fill: #e2b23c; fill-opacity: .8; }
+    .line { stroke: var(--text, #24221e); stroke-width: 2; fill: none; stroke-linecap: round; }
+    .border { stroke: var(--border, #d3ccbe); stroke-width: 2; fill: none; }
+    .label { font: 15px "Helvetica Neue", Arial, "Source Han Sans SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+  </style>
+  <rect class="bg" width="600" height="420" rx="12"/>
+  <text class="label" x="32" y="42">Every bubble needs a wall</text>
+
+  <text class="label" x="110" y="84" text-anchor="middle">Egg white: proteins unfold</text>
+  <rect class="water" x="30" y="100" width="160" height="150" rx="10"/>
+  <circle class="air" cx="110" cy="175" r="44"/>
+  <g class="protein">
+    <path d="M110 125 v12 M110 225 v-12 M60 175 h12 M160 175 h-12 M75 140 l8 8 M145 140 l-8 8 M75 210 l8 -8 M145 210 l-8 -8"/>
+    <path d="M110 125 Q130 126 145 140 Q160 156 160 175 Q160 194 145 210 Q130 224 110 225 Q90 224 75 210 Q60 194 60 175 Q60 156 75 140 Q90 126 110 125"/>
+  </g>
+  <text class="label muted" x="110" y="180" text-anchor="middle">Air</text>
+  <text class="label muted" x="110" y="272" text-anchor="middle">One end in air, one in water</text>
+
+  <text class="label" x="300" y="84" text-anchor="middle">A trace of fat</text>
+  <rect class="water" x="236" y="100" width="128" height="150" rx="10"/>
+  <circle class="air" cx="300" cy="175" r="36"/>
+  <path class="oil" d="M266 160 a36 36 0 0 1 22 -20 l6 12 a22 22 0 0 0 -16 14 z"/>
+  <path class="oil" d="M326 196 a36 36 0 0 1 -18 14 l-4 -12 a22 22 0 0 0 12 -10 z"/>
+  <path class="protein" d="M276 222 q8 6 16 0 M314 132 q8 -6 14 2"/>
+  <text class="label muted" x="300" y="272" text-anchor="middle">Fat takes the surface</text>
+
+  <text class="label" x="490" y="84" text-anchor="middle">Cream: fat globules cluster</text>
+  <rect class="water" x="410" y="100" width="160" height="150" rx="10"/>
+  <circle class="air" cx="490" cy="175" r="40"/>
+  <g>
+    <circle class="fat" cx="490" cy="129" r="9"/><circle class="fat" cx="508" cy="133" r="8"/><circle class="fat" cx="524" cy="146" r="9"/>
+    <circle class="fat" cx="533" cy="163" r="8"/><circle class="fat" cx="535" cy="181" r="9"/><circle class="fat" cx="528" cy="199" r="8"/>
+    <circle class="fat" cx="514" cy="213" r="9"/><circle class="fat" cx="496" cy="221" r="8"/><circle class="fat" cx="477" cy="220" r="9"/>
+    <circle class="fat" cx="460" cy="210" r="8"/><circle class="fat" cx="448" cy="194" r="9"/><circle class="fat" cx="445" cy="175" r="8"/>
+    <circle class="fat" cx="449" cy="157" r="9"/><circle class="fat" cx="459" cy="142" r="8"/><circle class="fat" cx="473" cy="132" r="9"/>
+  </g>
+  <text class="label muted" x="490" y="180" text-anchor="middle">Air</text>
+  <text class="label muted" x="490" y="272" text-anchor="middle">Only partly solid fat sticks</text>
+
+  <path class="border" d="M32 304 H568"/>
+  <text class="label muted" x="32" y="334">Egg whites: grow six to eight times; a trace of yolk or grease stops them.</text>
+  <text class="label muted" x="32" y="360">Whipping cream: about 35% fat, must be cold; overwhipped, it turns to butter.</text>
+  <text class="label muted" x="32" y="386">In the oven: bubbles expand, proteins set, and the foam holds its shape.</text>
+</svg>
