@@ -2,6 +2,7 @@
 title: Pad Kra Pao
 original: Phat kaphrao mu sap
 summary: Garlic, chili and holy basil lift the ground pork, and the seasoning is reduced to a glossy coat and served over hot rice.
+coverAlt: Illustration of pad kra pao with rice plated
 ingredients:
   - group: Main ingredients
     items:

@@ -2,6 +2,7 @@
 title: Oyakodon
 original: Oyakodon
 summary: Chicken and green onion are cooked in a sweet and savoury dashi, then beaten egg is set into a soft layer and the whole thing, sauce included, goes over hot white rice.
+coverAlt: Illustration of oyakodon plated
 ingredients:
   - group: Rice and topping
     items:

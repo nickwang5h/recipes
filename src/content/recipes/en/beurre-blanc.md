@@ -2,6 +2,7 @@
 title: Beurre Blanc
 original: Beurre blanc
 summary: A butter sauce from the lower Loire, in which a spoonful of sharp reduction carries a whole block of butter. Success depends only on temperature.
+coverAlt: Illustration of beurre blanc plated
 ingredients:
   - group: Reduction
     items:

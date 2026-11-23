@@ -2,6 +2,7 @@
 title: Guilin Eighteen Stuffed Delicacies
 original: 桂林十八酿
 summary: Pork-stuffed green peppers show how Guilin stuffed dishes are filled, pan-fried to set and braised covered until cooked, leaving a firm, juicy filling.
+coverAlt: Illustration of Guilin eighteen stuffed delicacies plated
 ingredients:
   - group: Green peppers and pork filling
     items:

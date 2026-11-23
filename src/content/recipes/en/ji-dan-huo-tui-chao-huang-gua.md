@@ -2,6 +2,7 @@
 title: Stir-fried Cucumber with Eggs and Ham
 original: 鸡蛋火腿炒黄瓜
 summary: Cucumber slices are stir-fried for one minute over high heat, then folded together with just-set egg and cooked ham sausage. The short cooking keeps the cucumber crisp and tender.
+coverAlt: Illustration of stir-fried cucumber with eggs and ham plated
 ingredients:
   - items:
       - { name: cucumber, note: "about 1, cut into half-moon slices" }

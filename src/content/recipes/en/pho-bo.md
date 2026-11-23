@@ -2,6 +2,7 @@
 title: Phở Bò
 original: Phở bò
 summary: Beef bones and beef are simmered slowly into a clear broth, charred ginger and onion with a few whole spices back up the beef flavour, and the rice noodles are softened only just before eating.
+coverAlt: Illustration of phở bò served
 ingredients:
   - group: Broth
     items:
