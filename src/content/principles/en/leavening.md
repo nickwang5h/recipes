@@ -7,7 +7,7 @@ translated: 2026-11-22
 
 ## What it is
 
-A piece of dough swells in the steamer because its countless small bubbles expand with heat. **Leavening** means getting gas into a dough or batter first, then letting heat expand it and set it. The gas comes from three places: carbon dioxide released by **yeast** as it ferments, carbon dioxide released when **baking soda** reacts with acid, and air beaten in by whipping (see [foams](/principles/foams/)).
+A piece of dough swells in the steamer because its countless small bubbles expand with heat. **Leavening** means getting gas into a dough or batter first, then letting heat expand it and set it. The gas comes from several places: carbon dioxide released by fermenting **yeast** and by **baking soda** meeting acid, air beaten in by whipping (see [foams](/principles/foams/)), and steam from the water in the dough as it heats, which is what gives a [cheese soufflé](/recipes/souffle-au-fromage/) its last lift.
 
 Gas alone is not enough; something has to hold it. In bread and steamed buns, the [gluten](/principles/gluten/) network holds it; in cakes, it is mainly egg protein. Lots of gas that cannot be held makes the dough collapse; plenty of structure with too little gas makes it dense.
 
@@ -20,10 +20,10 @@ Yeast is alive and fussy about temperature:
 | Temperature | What the yeast is doing |
 |---|---|
 | About 4°C (39°F, refrigerator) | Too cold; barely working |
-| About 27–35°C (80–95°F) | Fermenting fastest; any warmer, it rises faster but the flavour thins |
+| About 27–35°C (80–95°F) | Making gas fastest, but the faster it rises the thinner the flavour; for a fuller flavour, keep the dough cooler and let it rise slowly |
 | About 41–46°C (105–115°F) | Water for dissolving active dry yeast |
 | About 55–60°C (130–140°F) | The yeast dies and stops making gas |
-| About 100°C (212°F) | The centre of a just-baked loaf or just-steamed bun |
+| About 93°C (200°F) | The centre of a just-baked loaf |
 
 Active dry yeast must be dissolved in warm water first; instant yeast can be mixed straight into the flour.
 
@@ -41,7 +41,7 @@ Active dry yeast must be dissolved in warm water first; instant yeast can be mix
 
 ## Heat expands the bubbles, then sets them
 
-As soon as the dough heats, the gas in the bubbles expands and the dough grows taller; at 55–60°C the yeast dies and stops making gas. As the temperature keeps rising, egg proteins set (see [protein denaturation and coagulation](/principles/protein-coagulation/)), the starch takes up water and gelatinizes, the bubble walls firm up and the shape is fixed. Open the oven door or lift the steamer lid before that, or let the steam stop, and the risen dough falls back.
+As soon as the dough heats, the gas in the bubbles expands, water turns to steam and the dough grows taller; at 55–60°C (130–140°F) the yeast dies and stops making gas. As the temperature keeps rising, egg proteins set (see [protein denaturation and coagulation](/principles/protein-coagulation/)), the starch takes up water and gelatinizes, the bubble walls firm up and the shape is fixed. Open the oven door or lift the steamer lid before that, or let the steam stop, and the risen dough falls back.
 
 ## Across cuisines
 
