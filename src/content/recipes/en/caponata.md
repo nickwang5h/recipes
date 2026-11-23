@@ -17,13 +17,13 @@ ingredients:
       - { name: pine nuts }
       - { name: ["basil leaf", "basil leaves"], note: "fresh basil leaves, torn" }
       - { name: white wine vinegar }
-      - { name: sugar }
+      - { name: brown sugar }
       - { name: "salt", note: "for salting the eggplant and for seasoning at the end, as needed" }
   - group: Oil
     items:
       - { name: extra-virgin olive oil, note: for cooking the onion and other ingredients }
       - { name: "extra-virgin olive oil", note: "oil set aside for frying the eggplant; it should be about 2–3 cm deep in a deep pot about 20 cm wide, adjusted to the shape of your pot" }
-translated: 2026-10-01
+translated: 2026-11-22
 ---
 
 *Caponata* is a Sicilian sweet-and-sour vegetable dish, rich with oil, savoury and a little sharp: fried eggplant is combined with tomato, celery, green olives and capers, and sugar and wine vinegar bring out the sweet-sour flavour. The eggplant must be fried until soft before the acid goes in, because vegetables are very hard to soften again in acid; see [acid](/principles/acid/).
