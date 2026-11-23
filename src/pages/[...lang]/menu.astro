@@ -87,6 +87,7 @@ const t = T[lang];
     const byId = new Map(data.recipes.map((r) => [r.id, r]));
     const dishes = data.recipes.filter((r) => !r.component);
     const catalog = new Map(Object.entries(data.ingredients));
+    const substitutes = Object.fromEntries(Object.entries(data.ingredients).flatMap(([id, i]) => (i.subs ? [[id, i.subs]] : [])));
     const today = new Date();
     const days = upcoming(today);
 
@@ -214,7 +215,7 @@ const t = T[lang];
     function renderNeeds() {
       const planned = days.flatMap((d) => menuOf(dayKey(d))).map((id) => byId.get(id)!);
       const staples = new Set(data.staples.filter((id) => get('staple-off:' + id) !== true));
-      const needs = weekNeeds(planned, new Set(keys('have:')), staples);
+      const needs = weekNeeds(planned, new Set(keys('have:')), staples, substitutes);
       const listed = new Set(listItems().map((i) => i.id));
       const items = [...needs].map(([id, titles]) => ({ id, for: titles, bought: false }));
       $('[data-needs-wrap]').hidden = items.length === 0;

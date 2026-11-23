@@ -1,5 +1,6 @@
 // Weekly menu logic: suggesting a table of dishes for a day, and working out what the week's
 // dishes still need from the shops.
+import { ALWAYS_HAVE, substituteFor } from './fridge';
 
 export interface MenuRecipe {
   id: string;
@@ -78,13 +79,14 @@ export function suggestTable(recipes: MenuRecipe[], options: SuggestOptions): Pa
   return table;
 }
 
-/** Ingredients the planned dishes need that aren't in the fridge or among the staples,
- *  each with the dishes that need it. */
-export function weekNeeds(dishes: MenuRecipe[], have: Set<string>, staples: Set<string>): Map<string, string[]> {
+/** Ingredients the planned dishes need that aren't in the fridge or among the staples, each with
+ *  the dishes that need it. A catalog substitute on hand counts as having it, as on the fridge page. */
+export function weekNeeds(dishes: MenuRecipe[], have: Set<string>, staples: Set<string>, substitutes: Record<string, string[]> = {}): Map<string, string[]> {
   const needs = new Map<string, string[]>();
+  const has = (id: string) => have.has(id) || staples.has(id) || ALWAYS_HAVE.includes(id);
   for (const dish of dishes) {
     for (const id of dish.req) {
-      if (id === 'water' || have.has(id) || staples.has(id)) continue;
+      if (has(id) || substituteFor(id, has, substitutes)) continue;
       const titles = needs.get(id) ?? [];
       if (!titles.includes(dish.title)) titles.push(dish.title);
       needs.set(id, titles);

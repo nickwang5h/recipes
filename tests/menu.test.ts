@@ -50,6 +50,12 @@ describe('what the week needs', () => {
     const needs = weekNeeds(dishes, new Set(['egg']), new Set(['salt']));
     expect([...needs]).toEqual([['tomato', ['a', 'b']], ['scallion', ['b']]]);
   });
+
+  it('counts a catalog substitute on hand as having it, as the fridge does', () => {
+    const dishes = [r('a', 'veg', 'chinese', 10, ['shallot', 'tomato'])];
+    const needs = weekNeeds(dishes, new Set(['onion']), new Set(), { shallot: ['onion'], tomato: ['cherry-tomato'] });
+    expect([...needs.keys()]).toEqual(['tomato']);
+  });
 });
 
 describe('season', () => {
