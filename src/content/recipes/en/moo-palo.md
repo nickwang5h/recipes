@@ -30,10 +30,10 @@ ingredients:
       - { name: white pepper }
       - { name: garlic, note: smashed }
       - { name: ["cilantro root", "cilantro roots"], note: "smashed; if you have none, use 10 cilantro stems" }
-translated: 2026-10-28
+translated: 2026-11-22
 ---
 
-*Moo palo* is a sweet-salty braise common in Thai homes and canteens: pork belly stewed until tender, eggs stained brown, and tofu puffs that soak up the five-spice broth. The braising liquid is not reduced dry. Spoon it over rice and mix it in, and it tastes better after a few hours or overnight.
+*Moo palo* is a sweet-salty braise common in Thai homes and canteens: pork belly stewed until tender, eggs stained brown, and tofu puffs that soak up the five-spice broth. The braising liquid is not reduced dry. Spoon it over rice and mix it in; it tastes better after a night in the fridge.
 
 The pork is browned first, then a dark palm sugar base is cooked, which gives the aroma of [Caramelization](/principles/caramelization/); soy sauce supplies the rest of the salt and the colour. The pork skin and connective tissue need time to soften (see [Collagen and Gelatin](/principles/collagen-gelatin/)). The spices go in a bag and simmer slowly, and are fished out all at once before serving (see [Spices and Aromatics](/principles/aromatics/)).
 
@@ -45,7 +45,7 @@ The pork is browned first, then a dark palm sugar base is cooked, which gives th
 4. Return the pork to the pot, add the two soy sauces, Golden Mountain sauce, oyster sauce and white pepper, then add the spice bag, garlic and cilantro roots. Bring to a gentle simmer, turning now and then. The sugar clumps first and then slowly dissolves.
 5. Cover and stew over low heat for 1.5–2 hours, until a fork slides easily into a piece of pork. Keep the surface bubbling gently the whole time. When the liquid drops low enough to expose most of the pork, top it up with water or chicken stock.
 6. While the pork stews, cook the eggs: put the eggs in a pot with water covering them by more than 2.5 cm, bring to a full boil over high heat, cook for 8 minutes, lift them into cold water, and peel them under cold water.
-7. Remove the spice bag and cilantro roots, add the eggs and tofu puffs, and simmer gently over low heat for 8 minutes. Turn off the heat and taste, adding more salt if needed. Let it stand for a few hours or overnight so the eggs take on more flavour, then serve with rice.
+7. Remove the spice bag and cilantro roots, add the eggs and tofu puffs, and simmer gently over low heat for 8 minutes. Turn off the heat and taste, adding more salt if needed. Serve with rice right away, or, for eggs with more flavour, divide everything with its liquid into shallow containers, refrigerate once the steam stops, leave overnight and reheat to 74°C (165°F) in the centre before eating.
 
 ## Key points
 
