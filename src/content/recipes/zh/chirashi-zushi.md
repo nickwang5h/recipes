@@ -34,7 +34,7 @@ ingredients:
       - { ref: egg, qty: 3, unit: 个, note: 大号 }
       - { ref: mirin, qty: 1, unit: 汤匙 }
       - { ref: potato-starch, qty: 1, unit: 茶匙, note: 和 1 茶匙水调匀；也可用玉米淀粉 }
-      - { ref: salt, qty: 0.125, unit: 茶匙, note: 细盐 }
+      - { ref: salt, note: 细盐，一小撮 }
       - { ref: vegetable-oil, qty: 2, unit: 茶匙 }
   - group: 面料
     items:
