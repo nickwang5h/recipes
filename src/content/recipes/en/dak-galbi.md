@@ -10,7 +10,7 @@ ingredients:
       - { name: "cabbage", note: "hard core removed, cut into pieces about 4 cm" }
       - { name: "Korean sweet potato", note: "cut into half-moon slices about 5 mm thick; buy goguma at H Mart, or use white- or orange-fleshed sweet potato from a mainstream supermarket" }
       - { name: sliced Korean rice cakes, note: buy from the refrigerated section at T&T or H Mart; not sweet glutinous rice cakes }
-      - { name: "perilla leaf", unit: "leaf", note: "buy in the vegetable section at H Mart, wash and cut into wide strips" }
+      - { name: [perilla leaf, perilla leaves], unit: '', note: "buy in the vegetable section at H Mart, wash and cut into wide strips" }
       - { name: [green onion, green onions], note: cut into pieces about 4 cm }
   - group: Chili sauce
     items:

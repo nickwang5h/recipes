@@ -23,7 +23,7 @@ ingredients:
     items:
       - { name: [large dried anchovy, large dried anchovies], note: "large anchovies for making stock, with heads and guts removed; if you have none, use 475 ml low-sodium chicken stock directly and skip the whole stock-making step" }
       - { name: daikon radish, note: thin slices }
-      - { name: [dried kombu sheet, dried kombu sheets], note: "each sheet about 10 × 13 cm" }
+      - { name: dried kombu, unit: sheet, note: "each sheet about 10 × 13 cm" }
       - { name: water, note: "for making the stock; strain it, measure out 475 ml for the stew and keep the rest of the stock for another use" }
 translated: 2026-10-01
 ---

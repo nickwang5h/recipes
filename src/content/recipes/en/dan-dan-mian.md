@@ -23,7 +23,7 @@ ingredients:
     items:
       - { name: sesame paste, note: buy Chinese sesame paste made from toasted sesame seeds at T&T; stir well before using }
       - { name: warm water for loosening the paste }
-      - { name: [clove garlic, cloves garlic], note: finely minced }
+      - { name: garlic, note: finely minced }
       - { name: light soy sauce }
       - { name: Chinkiang black vinegar, note: buy Chinkiang black vinegar at T&T }
       - { name: ground Sichuan peppercorns, note: buy Sichuan peppercorn powder at T&T; choose pure unsalted peppercorn powder }

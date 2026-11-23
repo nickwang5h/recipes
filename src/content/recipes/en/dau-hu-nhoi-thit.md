@@ -18,7 +18,7 @@ ingredients:
   - group: Frying oil and tomato sauce
     items:
       - { name: vegetable oil }
-      - { name: [clove garlic, cloves garlic], note: minced }
+      - { name: garlic, note: minced }
       - { name: "tomatoes", note: "ripe fresh tomatoes, weight after peeling and seeding, finely chopped" }
       - { name: water, note: for the tomato sauce }
       - { name: fish sauce, note: for the tomato sauce }

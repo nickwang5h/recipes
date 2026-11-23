@@ -6,7 +6,7 @@ coverAlt: Illustration of garlic-infused soy sauce served
 ingredients:
   - group: Dipping sauce
     items:
-      - { name: "garlic cloves", note: "smashed and cut into small pieces, surface patted dry" }
+      - { name: garlic, note: "smashed and cut into small pieces, surface patted dry" }
       - { name: toasted white sesame seeds }
       - { name: peanut oil, note: canola oil also works }
       - { name: light soy sauce }

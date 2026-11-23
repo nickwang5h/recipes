@@ -16,7 +16,7 @@ ingredients:
       - { name: MSG }
       - { name: Shaoxing wine, note: "if you have none, dry white wine works but the aroma will differ" }
       - { name: ginger, note: "about 2 slices" }
-      - { name: [garlic clove, garlic cloves], note: "smashed" }
+      - { name: garlic, note: "smashed" }
       - { name: doubanjiang, note: "stir-fried after the pork to make the dip, spread thinly on the leaves" }
 translated: 2026-10-01
 ---

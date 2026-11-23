@@ -11,7 +11,7 @@ ingredients:
       - { name: ["yellow onion", "yellow onions"], note: "medium, cut in two" }
       - { name: [green onion, green onions], note: white parts }
       - { name: daikon radish, note: "cut into large chunks; use Korean radish if you have it" }
-      - { name: [garlic clove, garlic cloves], note: "large cloves, peeled and left whole" }
+      - { name: garlic, note: "large cloves, peeled and left whole" }
       - { name: ginger, note: each slice about 2 mm thick }
       - { name: black peppercorns, note: whole }
   - group: Braising liquid

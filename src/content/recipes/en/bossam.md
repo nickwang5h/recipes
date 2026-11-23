@@ -18,7 +18,7 @@ ingredients:
       - { name: salt }
   - group: Wrapping ingredients
     items:
-      - { name: "leaf lettuce", unit: "leaf", note: "green leaf or red leaf lettuce, washed and drained" }
+      - { name: [lettuce leaf, lettuce leaves], unit: '', note: "green leaf or red leaf lettuce, washed and drained" }
       - { name: kimchi, note: cut into pieces that wrap in one bite }
       - { name: salted fermented baby shrimp (saeujeot), note: buy Salted fermented shrimp from the refrigerated section at H Mart and take it with a little of its brine; not shrimp paste or dried shrimp }
 translated: 2026-10-02

@@ -16,7 +16,7 @@ ingredients:
       - { name: dried bullet chilies, note: "if you have none, use ordinary dried red chilies" }
       - { name: [leek, leeks], note: "cut into sections about 2 cm" }
       - { name: ginger, note: "minced" }
-      - { name: [garlic clove, garlic cloves], note: "minced" }
+      - { name: garlic, note: "minced" }
   - group: Braising sauce
     items:
       - { name: doubanjiang, note: "finely chopped" }

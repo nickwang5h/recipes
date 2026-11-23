@@ -11,7 +11,7 @@ ingredients:
   - group: Aromatics
     items:
       - { name: extra virgin olive oil }
-      - { name: clove garlic, note: minced }
+      - { name: garlic, note: minced }
       - { name: dried chili flakes, note: to taste }
   - group: Seasoning
     items:

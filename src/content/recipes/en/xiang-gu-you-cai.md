@@ -8,7 +8,7 @@ ingredients:
     items:
       - { name: dried shiitake mushrooms, note: "choose small caps, from the dried goods aisle at T&T or H Mart; large thick caps need a different soaking time than given here" }
       - { name: baby bok choy, note: "choose small heads with pale green stems; net weight after trimming old leaves" }
-      - { name: [garlic clove, garlic cloves], note: "minced" }
+      - { name: garlic, note: "minced" }
   - group: Seasoning and glaze
     items:
       - { name: vegetable oil, note: "0.5 tbsp for blanching the greens, 1 tbsp for stir-frying the mushrooms" }

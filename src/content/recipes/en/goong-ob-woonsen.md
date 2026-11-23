@@ -8,7 +8,7 @@ ingredients:
     items:
       - { name: dried mung bean glass noodles, note: choose bean thread vermicelli whose ingredients are mainly mung bean starch; do not use Korean sweet potato starch noodles }
       - { name: ["shell-on raw shrimp", "shell-on raw shrimp"], note: "medium size, head-on is better; buy head-on shrimp at T&T, or use headless shell-on raw shrimp from a mainstream supermarket" }
-      - { name: ginger slices, note: each about 2 mm thick }
+      - { name: ginger, note: each about 2 mm thick }
       - { name: garlic }
       - { name: [coarse cilantro stem, coarse cilantro stems] }
       - { name: whole black peppercorns, note: crushed }

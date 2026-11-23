@@ -14,8 +14,8 @@ ingredients:
       - { name: ground white pepper, note: to taste }
   - group: Sandwich
     items:
-      - { name: ["slice white sandwich bread", "slices white sandwich bread"], note: "plain white sandwich bread without sweet filling, about 1 cm thick" }
-      - { name: ["slice cooked ham", "slices cooked ham"], note: "cooked ham or jambon blanc, about 30 g per slice; no cured raw ham" }
+      - { name: white sandwich bread, note: "plain white sandwich bread without sweet filling, about 1 cm thick" }
+      - { name: cooked ham, note: "cooked ham or jambon blanc, about 30 g per slice; no cured raw ham" }
       - { name: Gruyère, note: grated }
       - { name: "Dijon mustard", note: "regular Dijon mustard, not honey mustard" }
 translated: 2026-10-01
