@@ -32,6 +32,11 @@ describe('suggesting a table', () => {
     for (let i = 0; i < 20; i++) expect(suggestDish(recipes, 'veg', { ...none, random: () => i / 20 })?.component).toBe(false);
   });
 
+  it('never suggests minor dishes or ones over three hours, by the same rule as 今天', () => {
+    const veg = [{ ...r('tang-ban-xi-hong-shi', 'veg'), minor: true }, r('slow-veg', 'veg', 'chinese', 240), r('tomato-egg', 'veg')];
+    for (let i = 0; i < 20; i++) expect(suggestDish(veg, 'veg', { ...none, random: () => i / 20 })?.id).toBe('tomato-egg');
+  });
+
   it('prefers the main dish cuisine for the other slots', () => {
     // With random just below 1, an unweighted pick would land on the last veg (french).
     const veg = suggestDish(recipes, 'veg', { ...none, cuisine: 'chinese', random: () => 0.6 });
