@@ -52,6 +52,14 @@ describe('findDurations in English', () => {
     ]);
   });
 
+  it('reads "N more minutes" as the Chinese 再炒 N 分钟 is read', () => {
+    expect(findDurations('Stir-fry 3–4 more minutes, then simmer 10 more minutes.').map((d) => [d.text, d.seconds, d.maxSeconds])).toEqual([
+      ['3–4 more minutes', 180, 240],
+      ['10 more minutes', 600, undefined],
+    ]);
+    expect(findDurations('Bake for 1 more hour.').map((d) => d.seconds)).toEqual([3600]);
+  });
+
   it('takes hyphenated forms and skips rhythms and short spans', () => {
     expect(findDurations('Give it a 10-minute rest.').map((d) => d.seconds)).toEqual([600]);
     expect(findDurations('Stir every 30 seconds for 5 minutes.').map((d) => d.text)).toEqual(['5 minutes']);

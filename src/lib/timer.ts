@@ -15,8 +15,8 @@ export interface Duration {
 const UNIT: Record<string, number> = { 秒: 1, 分钟: 60, 小时: 3600, second: 1, minute: 60, hour: 3600 };
 const PATTERNS = [
   /(\d+(?:\.\d+)?)(?:\s*[–—~-]\s*(\d+(?:\.\d+)?))?\s*(秒|分钟|小时)(?:\s*(\d+)\s*分钟)?/g,
-  // "8 minutes", "12–15 minutes", "1.5–2 hours", "1 hour 20 minutes", "a 10-minute rest"
-  /(\d+(?:\.\d+)?)(?:\s*(?:[–—~-]|to)\s*(\d+(?:\.\d+)?))?[\s-]*(second|minute|hour)s?\b(?:\s*(?:and\s*)?(\d+)\s*minutes?\b)?/gi,
+  // "8 minutes", "12–15 minutes", "1.5–2 hours", "1 hour 20 minutes", "a 10-minute rest", "3–4 more minutes"
+  /(\d+(?:\.\d+)?)(?:\s*(?:[–—~-]|to)\s*(\d+(?:\.\d+)?))?(?:\s+more)?[\s-]*(second|minute|hour)s?\b(?:\s*(?:and\s*)?(\d+)\s*minutes?\b)?/gi,
 ];
 /** Shorter than this isn't worth reaching for the phone. */
 const MIN_SECONDS = 30;
