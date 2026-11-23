@@ -16,21 +16,21 @@ ingredients:
       - { ref: whole-milk, qty: 500, unit: ml }
       - { ref: vanilla-extract, note: 少量 }
 sources:
-  - title: "La scienza in cucina e l'arte di mangiar bene（1891），675. Zuppa inglese（crema pasticcera）"
+  - title: "La scienza in cucina e l'arte di mangiar bene（1891），675. Zuppa inglese（crema pasticcera）、685. Crema"
     author: Pellegrino Artusi
     url: https://www.gutenberg.org/ebooks/59047
   - title: "Crema pasticcera"
     author: Redazione GialloZafferano
     url: https://ricette.giallozafferano.it/Crema-pasticcera.html
-  - title: "Le Guide culinaire（1903）；英译本 A Guide to Modern Cookery，2397 Crème anglaise"
-    author: Auguste Escoffier
-    url: https://www.gutenberg.org/ebooks/71395
+  - title: "Safe cooking temperatures"
+    author: Health Canada
+    url: https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html
 updated: 2026-11-23
 ---
 
 *Crema pasticcera* 是意大利甜点里最常用的奶油馅：蛋黄、糖、牛奶加一点淀粉煮成，浓稠、光滑，舀起来能在勺上堆住。夹海绵蛋糕、填果挞、做 *zuppa inglese* 都用它。意大利厨师叫它“甜点师的奶油”，是为了和不放淀粉、稀得能倒的 *crema* 区分开。
 
-两者差在淀粉。不放淀粉的蛋奶酱只靠蛋黄的[蛋白质凝固](/principles/protein-coagulation/)变稠，一烫过头就结蛋花，见[英式蛋奶酱](/recipes/creme-anglaise/)。加了淀粉，淀粉吸水[糊化](/principles/starch-gelatinization/)，把酱撑得更稠，也让蛋奶酱经得起更高的火，所以能先用大火，变稠以后还要在火上多搅几分钟。[意式海绵蛋糕](/recipes/pan-di-spagna/)切片后夹的，常常就是它。
+两者差在淀粉。不放淀粉的蛋奶酱只靠蛋黄的[蛋白质凝固](/principles/protein-coagulation/)变稠，一烫过头就结蛋花，见[英式蛋奶酱](/recipes/creme-anglaise/)。加了淀粉，淀粉吸水[糊化](/principles/starch-gelatinization/)，把酱撑得更稠；变稠以后还能在火上多搅几分钟，不放淀粉的那种挂住勺就得停。[意式海绵蛋糕](/recipes/pan-di-spagna/)切片后夹的，常常就是它。
 
 ## 步骤
 

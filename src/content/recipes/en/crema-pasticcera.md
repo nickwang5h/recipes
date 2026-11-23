@@ -14,7 +14,7 @@ translated: 2026-11-23
 
 *Crema pasticcera* is the workhorse cream of Italian pastry: egg yolks, sugar and milk cooked with a little starch until thick and glossy, so it holds a heap on a spoon. It fills sponge cakes and fruit tarts and goes into *zuppa inglese*. Italian cooks call it "pastry cook's cream" to tell it apart from *crema* made without starch, which is thin enough to pour.
 
-The difference is the starch. A custard without starch thickens only as the yolk [proteins coagulate](/principles/protein-coagulation/), and if it gets too hot it curdles (see [crème anglaise](/recipes/creme-anglaise/)). With starch, the starch takes up water and [gelatinizes](/principles/starch-gelatinization/), thickening the cream further and letting it stand more heat, so it can start over high heat and keep cooking for a few minutes after it thickens. It is often what goes between the layers of a sliced [Pan di Spagna](/recipes/pan-di-spagna/).
+The difference is the starch. A custard without starch thickens only as the yolk [proteins coagulate](/principles/protein-coagulation/), and if it gets too hot it curdles (see [crème anglaise](/recipes/creme-anglaise/)). With starch, the starch takes up water and [gelatinizes](/principles/starch-gelatinization/), thickening the cream further; it can keep cooking for a few minutes after it thickens, while the starch-free kind has to stop as soon as it coats the spoon. It is often what goes between the layers of a sliced [Pan di Spagna](/recipes/pan-di-spagna/).
 
 ## Steps
 
