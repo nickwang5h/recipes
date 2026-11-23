@@ -3,7 +3,7 @@ title: Sichuan
 original: Chuāncài · Sichuan cuisine
 summary: Dry-frying cooks the water out, quick stir-frying coats the food fast with a premixed sauce, and the red oil from chili bean paste and the peppercorn fragrance added at the end build different flavours in layers.
 coverAlt: "A claypot of mapo tofu, dried chilies, Sichuan peppercorns and a wok"
-translated: 2026-10-01
+translated: 2026-11-23
 ---
 
 The Sichuan Basin has vegetables and meat, and fermented seasonings such as chili bean paste and pickles, which is the usual kitchen base of Sichuan cooking. Its skill lies in getting different textures and flavours from the same ingredients: some are dry-fried to a dry fragrance, some are stir-fried briefly to stay tender, and chilies and Sichuan peppercorns each have their own moment to go in the pan.
@@ -16,7 +16,7 @@ When the ingredient first goes in the pan, the heat goes into warming it and eva
 
 Here is how to tell it is done: the shreds of meat go from wet and soft to firm, no free liquid is left on the bottom of the pan, and the spices cling evenly to the meat. Fry further and the meat turns hard and the spices bitter and burnt, so even dry fragrance has a point to stop. At home, fry a small amount at a time so the steam has somewhere to go; if the heat is low, give the water more time to cook off, and add the spices when the main ingredient is nearly there.
 
-The site's [Dry-fried Chicken](/recipes/gan-bian-zi-ji/) is a variation: chicken pieces and potato are fried first and then coated in a sweet and hot sauce. It lets you practise frying and reducing the sauce, but the texture of traditional dry-fried shredded beef comes from continuous dehydration.
+The site's [Dry-fried Green Beans](/recipes/gan-bian-si-ji-dou/) use exactly this continuous dry-frying: the beans are fried in an open wok until wrinkled and lightly browned, and once everything is combined no loose liquid is left in the wok, so it is a good way to practise telling when dry-frying is done. [Dry-fried Chicken](/recipes/gan-bian-zi-ji/) is a variation: chicken pieces and potato are fried first and then coated in a sweet and hot sauce, which lets you practise frying and reducing the sauce.
 
 ## Quick stir-frying and the bowl sauce: finish tenderness and seasoning together
 
