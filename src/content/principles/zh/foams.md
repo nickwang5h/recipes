@@ -54,5 +54,5 @@ updated: 2026-11-22
 
 - **法餐**：[奶酪舒芙蕾](/recipes/souffle-au-fromage/)和[巧克力慕斯](/recipes/mousse-au-chocolat/)都靠拌进去的蛋白泡沫变轻。把软蛋白霜舀成椭圆、在微滚的水里煮熟，浮在[英式蛋奶酱](/recipes/creme-anglaise/)上，就是“雪蛋”（*œufs à la neige*，又叫漂浮岛）。
 - **意大利菜**：[沙巴雍](/recipes/zabaione/)把蛋黄、糖和 Marsala 隔水边加热边打，打成温热的蛋黄泡沫。[意式海绵蛋糕](/recipes/pan-di-spagna/)不用泡打粉，全蛋加糖打上一刻多钟，靠全蛋泡沫撑起整个蛋糕。
-- **中餐**：家里做的[马拉糕](/recipes/ma-la-gao/)先把全蛋和红糖打到发白起泡，再加泡打粉；[芋泥雪媚娘](/recipes/yu-ni-xue-mei-niang/)里包的是打发的淡奶油，要等皮和馅凉透再放，热了奶油就塌。
+- **中餐**：家里做的[马拉糕](/recipes/ma-la-gao/)先把全蛋和红糖打到颜色变浅、满是细泡，再加泡打粉；[芋泥雪媚娘](/recipes/yu-ni-xue-mei-niang/)里包的是打发的淡奶油，要等皮和馅凉透再放，热了奶油就塌。
 - **日本料理**：[铜锣烧](/recipes/dorayaki/)先把鸡蛋、糖和蜂蜜打到颜色变浅、能落成带状，饼皮才松软。
