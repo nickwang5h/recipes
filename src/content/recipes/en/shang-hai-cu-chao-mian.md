@@ -14,9 +14,9 @@ ingredients:
     items:
       - { name: cornstarch }
       - { name: light soy sauce }
-      - { name: dark soy sauce }
+      - { name: dark soy sauce, note: a few drops }
       - { name: Shaoxing wine }
-      - { name: sugar }
+      - { name: sugar, note: a pinch }
   - group: Stir-fried noodles
     items:
       - { name: "vegetable oil", note: "0.25 tbsp for tossing the noodles, 0.5 tbsp for cooking the pork, 0.75 tbsp for cooking the mushrooms and noodles" }
@@ -24,7 +24,7 @@ ingredients:
       - { name: dark soy sauce }
       - { name: sugar }
       - { name: "water", note: "for boiling the noodles, as needed" }
-translated: 2026-10-28
+translated: 2026-11-22
 ---
 
 Shanghai thick stir-fried noodles uses thick, round wheat noodles with shredded pork, shiitake mushrooms and greens. The soy sauce colour is deep, but the noodles must still stay in separate strands. Light soy sauce gives the saltiness, dark soy sauce gives the colour, and a little sugar ties the flavours together. Fresh shiitake sliced thin can go straight into the wok, so the shredded pork, greens and mushrooms make a whole meal in one pot.

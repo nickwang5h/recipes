@@ -12,10 +12,10 @@ ingredients:
       - { name: [ophiopogon root, ophiopogon roots], note: dried }
       - { name: water, note: for inside the stewing pot; the outer pot and blanching water are counted separately; leave plenty of room in the pot }
       - { name: "salt", note: "to taste; add after stewing, once you have tasted" }
-translated: 2026-10-01
+translated: 2026-11-22
 ---
 
-Pork rib soup with aged tangerine peel is clear, not cloudy. The ribs are soft without falling apart, and the soup carries the herbal fragrance of the tangerine peel and a few dried herbs. It is made by double-steaming: the stewing pot sits in the hot water of an outer pot, so the soup inside only gets gently hot and never rolls (see [heat transfer](/principles/heat-transfer/)).
+Pork rib soup with aged tangerine peel is clear, not cloudy. The ribs are soft without falling apart, and the soup carries the herbal fragrance of the tangerine peel and a few dried herbs. It is made by double-steaming: the stewing pot sits in the hot water of an outer pot, so the soup inside slowly heats to just below boiling but never rolls (see [heat transfer](/principles/heat-transfer/)).
 
 The ribs are [blanched](/principles/blanching/) first and rinsed of foam, so the finished soup has no grey specks. Then a long, gentle stew slowly softens the connective tissue on the ribs, and part of the collagen turns to gelatin, which gives the soup and meat their soft mouthfeel (see [collagen and gelatin](/principles/collagen-gelatin/)). The pieces vary in size, so once the time is up, check the thickest one. A hot soup does not mean tender meat.
 

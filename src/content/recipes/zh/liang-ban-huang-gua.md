@@ -16,7 +16,7 @@ ingredients:
       - { ref: sugar, qty: 5, unit: g, note: 短时腌黄瓜用，部分随渗水倒去 }
   - group: 拌汁
     items:
-      - { ref: aged-vinegar, qty: 11.5, unit: ml, note: 没有可用米醋，风味会变化 }
+      - { ref: aged-vinegar, qty: 12, unit: ml, note: 没有可用米醋，风味会变化 }
       - { ref: light-soy-sauce, qty: 7.5, unit: ml }
       - { ref: salt, qty: 0.6, unit: g, note: 分次补，酱汁够咸可少用 }
       - { ref: sesame-oil, qty: 7, unit: ml }
@@ -24,7 +24,7 @@ ingredients:
 sources:
   - { title: "HowToCook：凉拌黄瓜的做法", author: HowToCook 社区, url: "https://github.com/Anduin2017/HowToCook/blob/master/dishes/vegetable_dish/凉拌黄瓜.md" }
   - { title: "On Food and Cooking: The Science and Lore of the Kitchen（修订版，2004）", author: Harold McGee }
-updated: 2026-10-01
+updated: 2026-11-22
 ---
 
 凉拌黄瓜脆、凉、蒜醋味足，靠的是拍裂的断口挂住汁。拍到裂开再切块，比拍成泥更留得住脆劲，原理见[刀工与受热](/principles/knife-work/)。块形不规则没关系，大小接近就行，免得碎的太咸、大块没味。

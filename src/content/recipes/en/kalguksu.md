@@ -29,7 +29,7 @@ ingredients:
       - { name: toasted sesame oil }
       - { name: onion, note: cut into thin slices }
       - { name: zucchini, note: cut into thin strips }
-translated: 2026-10-02
+translated: 2026-11-22
 ---
 
 Kalguksu (*kalguksu*) rolls a wheat dough thin, folds it, cuts it into strips with a knife and cooks them in broth. Common broths are chicken, dried anchovy and clam; below uses chicken broth, with torn chicken and zucchini. The noodles vary a little in thickness and have a soft chew in the mouth.

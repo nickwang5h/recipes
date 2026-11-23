@@ -20,7 +20,7 @@ ingredients:
       - { name: salt, note: for marinating the pork; season the soup separately to taste }
       - { name: cornstarch, note: for marinating the pork }
       - { name: chicken stock, note: low sodium }
-      - { name: water, note: for soaking the dried ingredients in three bowls; keep 500 ml of the daylily soaking water for the soup }
+      - { name: water, note: "for soaking the dried ingredients in three bowls; keep the daylily soaking water and top it up with water to 500 ml for the soup" }
       - { name: light soy sauce }
       - { name: cornstarch, note: for thickening }
       - { name: water, note: to mix the starch slurry }
@@ -30,7 +30,7 @@ ingredients:
       - { name: white pepper }
       - { name: toasted sesame oil }
       - { name: salt, note: to taste; add after tasting the stock }
-translated: 2026-10-02
+translated: 2026-11-22
 ---
 
 Hot and sour soup gets its sourness from vinegar and its heat from white pepper. Tofu, shredded pork, wood ear and daylily buds give it texture. The soup should be slightly thick but still pour smoothly off a spoon. Each spoonful lifts some of the ingredients, and no thick paste coats your mouth afterwards.
@@ -39,7 +39,7 @@ That smooth feel comes from [starch gelatinization](/principles/starch-gelatiniz
 
 ## Steps
 
-1. Rinse the dried shiitake, wood ear and daylily buds separately. Soak each in 480 ml of warm water for 30–60 minutes, until the shiitake are soft in the centre, the wood ear is fully open and the daylily buds bend. Snip the hard base off the wood ear, remove the shiitake stems and snip the hard ends off the daylily buds. Cut everything into short strips. Strain and keep 500 ml of the daylily soaking water; discard the rest.
+1. Rinse the dried shiitake, wood ear and daylily buds separately. Soak each in 480 ml of warm water for 30–60 minutes, until the shiitake are soft in the centre, the wood ear is fully open and the daylily buds bend. Snip the hard base off the wood ear, remove the shiitake stems and snip the hard ends off the daylily buds. Cut everything into short strips. Strain the daylily soaking water and top it up with water to 500 ml; discard the rest.
 2. Toss the pork with the Shaoxing wine, the marinade salt and 0.5 tbsp of the starch. Refrigerate for 10–15 minutes, until the surface is evenly coated in a thin layer. Stir the vinegar and white pepper together in a small bowl and set aside for just before serving.
 3. Put the chicken stock, daylily soaking water, ginger and the white part of the green onion in a pot. Heat over medium-high for 5–7 minutes, until the soup starts to bubble. Add the shiitake, wood ear, daylily buds, tofu and light soy sauce. Simmer over low heat for 5 minutes, until the ingredients are heated through and the shiitake strips are soft.
 4. Stir the thickening starch and 60 ml of cold water together. Pour it in a few additions while stirring the soup, and cook over low heat for 1 minute, until the soup turns glossy and lightly coats a spoon. Stir up the starch from the bottom of the bowl before each pour, so the last pour is not too thick.

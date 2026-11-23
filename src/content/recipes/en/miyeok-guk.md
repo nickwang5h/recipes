@@ -18,7 +18,7 @@ ingredients:
       - { name: "Korean soup soy sauce", note: "buy guk-ganjang in the seasoning aisle at H Mart; if you have none, use 1 tbsp light soy sauce and make up the saltiness with salt at the end" }
       - { name: "salt", note: "to taste, added at the end after tasting the soup" }
       - { name: black pepper, note: to taste }
-translated: 2026-10-02
+translated: 2026-11-22
 ---
 
 *Miyeok guk* is a Korean soup made with wakame: once soaked, the fronds are thin and soft, and cooked with beef they are silky in the mouth. In Korea it is also a common birthday soup. The beef is stir-fried before simmering, so the broth carries tiny drops of oil and stays pale in colour.

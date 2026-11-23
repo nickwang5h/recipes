@@ -35,11 +35,11 @@ ingredients:
       - { name: sugar }
   - group: Noodles and greens
     items:
-      - { name: fresh wheat noodles, note: "fresh wheat noodles from the T&T refrigerated section, or use 600 g dried wheat noodles" }
+      - { name: fresh wheat noodles, note: "fresh wheat noodles from the T&T refrigerated section, or use 400 g dried wheat noodles" }
       - { name: bok choy, note: halved }
       - { name: [green onion, green onions], note: chopped }
       - { name: water, note: for cooking the noodles; as needed }
-translated: 2026-10-02
+translated: 2026-11-22
 ---
 
 Taiwanese red-braised beef noodle soup builds a red-braised soup on chili bean paste and soy sauce. Beef shank is stewed slowly until the tendon is soft and the meat is tender, and served with wheat noodles, greens and stir-fried pickled mustard greens. The tomato and daikon are simmered into the soup, then strained out at the end, so the beef and noodles in the bowl are easier to pick up.

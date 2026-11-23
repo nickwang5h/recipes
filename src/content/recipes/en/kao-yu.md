@@ -41,7 +41,7 @@ ingredients:
       - { name: sesame seeds, note: toasted white sesame }
       - { name: "green onion", note: "a little chopped, for garnish" }
       - { name: "cilantro", note: "a little, for garnish" }
-translated: 2026-10-01
+translated: 2026-11-22
 ---
 
 Sichuan-style grilled fish is first roasted in the oven for fragrance, and then the fish and the vegetables go together into a spicy broth for a short simmer: the underside of the fish soaks up the broth and turns soft, while the skin facing up keeps a little of the roasted aroma. The surface must lose water first before the [Maillard reaction](/principles/maillard-reaction/) can happen, and that is what gives the roasted layer its aroma.
@@ -54,7 +54,7 @@ Roasting and simmering are kept separate so the thick parts of the whole fish ar
 2. Blanch the bean sprouts until cooked and the tofu sheet until soft, then cut the tofu sheet into strips, drain and set aside. Cut the celery into sections and the onion into strips, have the green onion, garlic and dried spices ready, and wipe the surface water off the chilies and peppercorns.
 3. Preheat the oven to 220°C (425°F). Brush the baking pan with oil, lay the fish skin-side up and flat, and brush the fish skin thinly with the rest of the oil set aside for the pan. Roast for about 25–35 minutes, watching partway through. Once light golden spots appear on the skin, sprinkle on the cumin; the meat at the thickest part should be fully opaque and flake into pieces. If it browns too fast, cover loosely with foil.
 4. In a shallow pot big enough for the whole fish, heat 20 ml of oil and stir-fry the green onion, garlic, star anise, bay leaves and cassia bark over medium-low heat. When you smell the fragrance, add the hot pot base and doubanjiang and stir-fry until they melt apart and the oil turns red, then add the sugar, light soy sauce and 600 ml of water and bring to a boil.
-5. Add the celery, bean sprouts and tofu sheet, and once the celery has softened a little, lay the onion on top, then set the roasted fish in, skin-side up. The broth should reach the vegetables at the bottom, with room left in the pot for it to bubble; taste the broth first, then decide whether to add another 10 g of salt.
+5. Add the celery, bean sprouts and tofu sheet, and once the celery has softened a little, lay the onion on top, then set the roasted fish in, skin-side up. The broth should reach the vegetables at the bottom, with room left in the pot for it to bubble. Taste the broth first: the hot pot base and bean paste are already salty, so add a little salt only if it tastes flat.
 6. Put the chilies and green Sichuan peppercorns on the fish. In a separate pan, heat 20 ml of oil until it flows freely and isn't smoking, take it off the heat, test with a small pour first, and once the spices sizzle and smell fragrant, pour over the rest in stages. Keep the shallow pot at a gentle simmer for 5–6 minutes, until the celery and onion are soft, then serve with the optional peanuts, sesame seeds, green onion and cilantro on top.
 
 ## Key points

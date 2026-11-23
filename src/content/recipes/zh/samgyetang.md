@@ -7,7 +7,7 @@ cuisine: korean
 course: soup
 summary: 小整鸡填入泡好的糯米，与人参、蒜和红枣同煮；鸡肉软到容易离骨，腹腔里的米也要熟透。
 servings: 2
-time: { prep: 70, cook: 60 }
+time: { prep: 70, cook: 80 }
 principles: [collagen-gelatin, starch-gelatinization, aromatics]
 ingredients:
   - group: 鸡与填料
@@ -36,7 +36,7 @@ sources:
   - title: "Safe cooking temperatures"
     author: Health Canada
     url: https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html
-updated: 2026-10-02
+updated: 2026-11-22
 ---
 
 *삼계탕* 是把糯米填进小整鸡，与人参、蒜和红枣一起煮的汤。端上桌时鸡仍完整，拨开腹腔能舀出吸了鸡汤的软米。鸡皮和关节处的结缔组织经湿热逐渐软化，汤也有了稠滑感，见[胶原与明胶](/principles/collagen-gelatin/)。

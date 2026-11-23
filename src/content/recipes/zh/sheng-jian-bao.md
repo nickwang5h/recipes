@@ -26,7 +26,7 @@ ingredients:
       - { ref: salt, qty: 0.25, unit: 茶匙 }
       - { ref: water, qty: 55, unit: ml }
       - { ref: flour, name: 手粉, note: 备 10 g，只薄撒防粘 }
-      - { ref: vegetable-oil, name: 涂面用油, note: 备 0.75 ml，薄刷面团表面 }
+      - { ref: vegetable-oil, name: 涂面用油, note: 少许，薄刷面团表面 }
   - group: 鲜肉馅
     items:
       - { ref: ground-pork, qty: 135, unit: g, note: 选约七瘦三肥的肉馅 }
@@ -35,9 +35,9 @@ ingredients:
       - { ref: light-soy-sauce, qty: 0.5, unit: 汤匙 }
       - { ref: dark-soy-sauce, qty: 0.25, unit: 茶匙 }
       - { ref: sesame-oil, qty: 0.25, unit: 茶匙 }
-      - { ref: sugar, qty: 3.9, unit: g }
+      - { ref: sugar, qty: 4, unit: g }
       - { ref: salt, qty: 0.25, unit: 茶匙 }
-      - { ref: white-pepper, qty: 0.375, unit: ml }
+      - { ref: white-pepper, note: 一小撮 }
       - { ref: ginger, name: 姜末, qty: 0.5, unit: 汤匙 }
       - { ref: scallion, name: 葱末, qty: 20, unit: ml }
   - group: 煎制与装饰
@@ -50,12 +50,12 @@ sources:
   - { title: "Shanghai Pan-fried Pork Buns (生煎馒头)", author: Judy Leung, url: "https://thewoksoflife.com/shanghai-pan-fried-pork-buns-shengjian-mantou/" }
   - { title: "Safe cooking temperatures", author: Health Canada, url: "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html" }
   - { title: "Food safety tips for leftovers", author: Health Canada, url: "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/food-safety-tips-leftovers.html" }
-updated: 2026-10-02
+updated: 2026-11-22
 ---
 
 生煎包是上海早餐，面皮略发，底部金黄，咬开有热汤。酵母[发酵](/principles/fermentation/)让皮稍松；汤靠皮冻包在馅里，猪皮中的[胶原转成明胶](/principles/collagen-gelatin/)，冷藏成冻，煎熟时再融化。
 
-先煎底，再用蒸汽焖熟，最后收干；底面干了，才会发生[美拉德反应](/principles/maillard-reaction/)。一份做 15 只，用带盖的不粘锅。
+先煎底，再用蒸汽焖熟，最后收干；底面干了，才会发生[美拉德反应](/principles/maillard-reaction/)。一份做 9 只，用带盖的不粘锅。
 
 ## 步骤
 
@@ -64,7 +64,7 @@ updated: 2026-10-02
 3. 汤倒进浅容器，放冷水浴降温约 20–30 分钟，不再大量冒汽就冷藏 8 小时。冷却总共不超过 2 小时，别在台面放一夜。
 4. 猪肉加全部馅料调味，朝同一方向搅打 5 分钟，到发黏、碗底没有游离水。皮冻切成约 0.5 cm 小丁，取 110 ml 轻拌进去，冷藏 1 小时，馅冷而能成团。
 5. 两种面粉、酵母、盐和 55 ml 水混合，揉 15 分钟，揉到柔软光滑。表面刷薄油，盖住发 30 分钟，到略膨松；再揉 5 分钟排掉大气泡，做成细密的半发面。
-6. 面团分成 15 份，每份约 18 g，擀成约 10 cm 的圆皮，中间稍厚。馅也分成 15 份，每份约 35 g，逐只包入、捏紧收口。没用的皮盖住，馅碗架在冰水上保持冷硬。
+6. 面团分成 9 份，每份约 20 g，擀成约 10 cm 的圆皮，中间稍厚。馅也分成 9 份，每份约 35 g，逐只包入、捏紧收口。没用的皮盖住，馅碗架在冰水上保持冷硬。
 7. 28 cm 不粘锅薄刷煎油，排入包子，彼此留约 1 cm 空隙，其余煎油沿锅边加入。中火煎 8–10 分钟，到底边浅金黄、四周油泡均匀。
 8. 沿锅边缓缓倒入热水到约 1.25 cm 深，立即盖锅，中小火焖 8–10 分钟，到面皮蓬起、锅里水几乎收尽。量一只最大包子的肉馅中心，至少 71°C；不够就补 30 ml 热水，再焖 2 分钟。
 9. 撒芝麻和葱花，再盖锅煎约 5 分钟，到水干透、底部金黄，声音变成细密的滋滋声。宽铲托底盛出。先咬个小口放出热汤。

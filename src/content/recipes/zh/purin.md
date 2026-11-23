@@ -6,7 +6,7 @@ original: プリン
 cuisine: japanese
 course: dessert
 summary: 全蛋、牛奶和糖隔水烤成细滑布丁，倒扣后焦糖流下来。水浴放慢受热，凝固到能撑住形状就停。
-servings: 5
+servings: 6
 time: { prep: 170, cook: 50 }
 principles: [protein-coagulation, caramelization, heat-transfer]
 ingredients:
@@ -32,7 +32,7 @@ sources:
   - title: "Safe cooking temperatures"
     author: Health Canada
     url: https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html
-updated: 2026-10-02
+updated: 2026-11-22
 ---
 
 日式焦糖布丁（*プリン*）凝得软而紧，倒扣后褐色的糖汁流到盘底。它用全蛋、全脂牛奶和糖，冷藏后吃。布丁靠[蛋白质凝固](/principles/protein-coagulation/)定形；焦糖的苦香来自熬糖时的[焦糖化](/principles/caramelization/)。

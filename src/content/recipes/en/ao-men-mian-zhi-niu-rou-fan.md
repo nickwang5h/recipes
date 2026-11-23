@@ -23,12 +23,12 @@ ingredients:
       - { name: "ground black pepper", note: "2 g for marinating the meat, 2 g for the sauce; the finished dish is quite peppery" }
       - { name: potato starch, note: cornstarch can be used }
       - { name: water, note: mixed with the starch and added in portions }
-translated: 2026-10-01
+translated: 2026-11-22
 ---
 
-The meat is loose, the sauce is a thin layer clinging to the rice, and an egg with a yolk you can break sits on top: this is the "wet" version of Macanese minced meat rice. The traditional combination is minced meat, onion, fried potatoes and egg; here it uses ground beef, ketchup and a starch-thickened sauce, with more sauce. The starch in the meat juices [gelatinizes](/principles/starch-gelatinization/) with heat and thickens the liquid, thick enough to cling to the rice but still flowing.
+The meat is loose, the sauce is a thin layer clinging to the rice, and an egg fried on both sides sits on top: this is the "wet" version of Macanese minced meat rice. The traditional combination is minced meat, onion, fried potatoes and egg; here it uses ground beef, ketchup and a starch-thickened sauce, with more sauce. The starch in the meat juices [gelatinizes](/principles/starch-gelatinization/) with heat and thickens the liquid, thick enough to cling to the rice but still flowing.
 
-The ground beef has to be broken up before the sauce thickens to stay as loose small crumbs; a sauce that is too thick will glue the meat into lumps, so the starch slurry goes in a little at a time and you do not have to use all of it. The white and yolk of the fried egg set through [protein denaturation and coagulation](/principles/protein-coagulation/), and a broken yolk mixed into the rice makes it silkier.
+The ground beef has to be broken up before the sauce thickens to stay as loose small crumbs; a sauce that is too thick will glue the meat into lumps, so the starch slurry goes in a little at a time and you do not have to use all of it. The white and yolk of the fried egg set through [protein denaturation and coagulation](/principles/protein-coagulation/); cut it up and mix it into the rice.
 
 ## Steps
 

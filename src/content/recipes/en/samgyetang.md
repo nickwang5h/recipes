@@ -20,7 +20,7 @@ ingredients:
     items:
       - { name: "salt", note: "to taste, added after dividing into bowls" }
       - { name: "black pepper", note: "freshly ground, to taste" }
-translated: 2026-10-02
+translated: 2026-11-22
 ---
 
 Samgyetang is a soup in which small whole chickens are stuffed with glutinous rice and cooked with ginseng, garlic and jujubes. The chicken is still whole when it comes to the table, and when you open the cavity you can spoon out soft rice that has absorbed the broth. The skin and the connective tissue at the joints soften gradually in moist heat, and the broth turns thick and silky (see [Collagen and Gelatin](/principles/collagen-gelatin/)).

@@ -26,7 +26,7 @@ ingredients:
       - { name: toasted sesame oil }
       - { name: salt, note: "half for marinating the chicken and half for the rice; the stock and soy sauce are already salty" }
       - { name: white pepper }
-translated: 2026-10-28
+translated: 2026-11-22
 ---
 
 In chicken and shiitake rice, the grains soak up the chicken juices, the chicken is tender and the mushroom slices are soft and juicy. The method is to lay chicken thigh and fresh shiitake, tossed in a thin starch coating, over uncooked rice and braise them together. Cut the chicken small and even so it cooks through at the same time as the rice.
@@ -40,7 +40,7 @@ The starch in the coating [gelatinizes](/principles/starch-gelatinization/) as i
 3. Remove the hard stems from the shiitake, slice them and mix into the marinated chicken. Wash the bok choy, rinsing out the grit at the cut ends, and drain for 2 minutes, until it no longer drips continuously. Shred the ginger and chop the green onions.
 4. In a heavy-bottomed pot about 20 cm wide with a tight-fitting lid, mix the drained rice, 240 ml of low-sodium chicken stock, the vegetable oil and the rest of the salt, and spread it level. Spread the shiitake chicken evenly over the rice, with the chicken pieces overlapping as little as possible, and sprinkle with the ginger and the white part of the green onion.
 5. Cover and heat over medium-high heat for about 3–4 minutes, until steam is coming out steadily at the rim and you can hear a gentle bubbling. Turn the heat to its lowest and braise for 25 minutes. The pot should keep a faint sound of steam and should never smell scorched.
-6. Lift the lid. The rice should have no hard core. Insert a thermometer into the thickest piece of chicken; at 74°C (165°F) it is done. If not, cover and cook 3–5 more minutes before adding the greens. Lay the bok choy over the rice, cover again and braise over low heat for 18–20 minutes, until the leaves collapse and the stems can just be bitten through.
+6. Lift the lid. The rice should have no hard core. Insert a thermometer into the thickest piece of chicken; at 74°C (165°F) it is done. If not, cover and cook 3–5 more minutes before adding the greens. Lay the bok choy over the rice, cover again and braise over low heat for 3–5 minutes, until the leaves collapse and the stems can just be bitten through.
 7. Turn off the heat and move the pot off the still-hot burner. Leave it covered for 5 minutes so the rice surface absorbs the leftover water. Open the lid, sprinkle with the green part of the green onion, and gently fluff the rice from the edge of the pot. Divide the chicken, shiitake and greens between two portions.
 
 ## Key points

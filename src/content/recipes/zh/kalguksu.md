@@ -7,7 +7,7 @@ cuisine: korean
 course: staple
 summary: 面团揉匀、醒松，擀薄后折叠切条，配鸡汤、鸡丝和西葫芦；嚼劲靠面筋，汤的稠度靠控制浮粉。
 servings: 4
-time: { prep: 50, cook: 60 }
+time: { prep: 50, cook: 85 }
 principles: [gluten, starch-gelatinization, umami]
 ingredients:
   - group: 手擀面
@@ -45,7 +45,7 @@ sources:
   - title: "Safe cooking temperatures"
     author: Health Canada
     url: https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html
-updated: 2026-10-02
+updated: 2026-11-22
 ---
 
 刀切面（칼국수）把小麦面团擀薄、折叠，再用刀切成条，下汤煮熟。常见的汤底有鸡汤、鳀鱼汤和蛤蜊汤，下面用鸡汤，配撕开的鸡丝和西葫芦。面条厚薄略有差异，入口有柔软的嚼劲。

@@ -24,7 +24,7 @@ ingredients:
       - { name: water for cooking noodles and wontons, note: as needed; use a wide pot so the noodles and wontons can spread out }
       - { name: salt, note: "for the broth, to taste" }
       - { name: chopped green onion, note: "to taste, for garnish" }
-translated: 2026-10-02
+translated: 2026-11-22
 ---
 
 Wonton noodle soup has thin-skinned, small-filled wontons that bite open to crisp, springy pieces of shrimp, with thin alkaline noodles and a bowl of clear broth. The filling is stirred until sticky, so that once cooked it holds together in one mass and still keeps the texture of the shrimp pieces (see [protein denaturation and coagulation](/principles/protein-coagulation/)). A thin wrapper and a small filling are also what let the wontons cook through in a short time.
@@ -37,7 +37,7 @@ The noodles and wontons are cooked in plain water, and the chicken stock is heat
 2. Divide the filling into 36 portions of about 11 g each. Take a wrapper, put the filling in the centre, brush the edge lightly with the water set aside for wetting, fold into a triangle, squeeze out the air around the filling, then bring the two corners together and press firmly. Arrange the finished wontons in a single layer on parchment paper and cover, so the air does not dry them out.
 3. Put the chicken stock in a small pot and heat over medium heat for about 5–8 minutes, until the surface keeps producing small bubbles. Taste and season with salt. Keep it at a gentle simmer on low heat, and do not let the broth reduce.
 4. Bring the water in a wide pot to a boil over high heat, about 8–10 minutes, until it is at a rolling boil. Add the wontons in two batches, nudge them gently off the bottom, and cook each batch for 4–5 minutes, until the wrapper clings to the filling and the wontons float. Take the largest one and check the filling: at 74°C (165°F) it is done; if not, cook 1 minute more each time and check again.
-5. Divide the wontons among four bowls. Bring the water back to a boil for about 1 minute and add the loosened fresh noodles in two batches, cooking each for about 1 minute, until the strands separate and there is no starchy raw core when you bite one. Lift them into cold water for about 15 seconds, then dunk them back in the boiling water for about 15 seconds, so the noodles are hot through.
+5. Divide the wontons among six bowls. Bring the water back to a boil for about 1 minute and add the loosened fresh noodles in two batches, cooking each for about 1 minute, until the strands separate and there is no starchy raw core when you bite one. Lift them into cold water for about 15 seconds, then dunk them back in the boiling water for about 15 seconds, so the noodles are hot through.
 6. Drain the noodles and divide among the bowls, then pour in the boiling hot chicken stock at once and sprinkle with the optional chopped green onion. The noodles should sit fluffy in a pile, the wonton wrappers intact and the broth clear. Serve as soon as they are assembled.
 
 ## Key points

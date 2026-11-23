@@ -25,7 +25,7 @@ ingredients:
       - { name: water for blanching shepherd's purse, note: skip the blanching if the frozen shepherd's purse is already blanched }
       - { name: water for cooking the wontons }
       - { name: cold water to calm the boil, note: add when the water is boiling hard }
-translated: 2026-10-02
+translated: 2026-11-22
 ---
 
 Large pork and shepherd's purse wontons are a common vegetable-and-meat wonton in Shanghai and the Jiangnan region. White square wrappers enclose a filling of shepherd's purse and pork, plump at the bottom with two corners overlapped. Once cooked, the wrapper is silky, the filling is tender, and the clear broth carries the greens' fragrance. The shepherd's purse is squeezed dry first, and the pork is stirred with salt and soy sauce until sticky. [Salt](/principles/salt/) draws some of the protein out of the meat, which binds the chopped greens, fat and meat together.
@@ -39,7 +39,7 @@ The filling cooks in water through [protein denaturation and coagulation](/princ
 3. Put about 2 tsp of filling in the centre of each wrapper. Dab the edge with sealing water and fold in half into a rectangle. Press out the air around the filling and press the three edges tight. Bend the two corners of the filled side toward each other, overlap them with a dab of water and pinch firmly. Make about 48 wontons and set them apart on a tray lined with parchment paper. If you wrap in batches, keep the unused filling in the fridge.
 4. Heat the chicken stock over medium heat for about 6 minutes, until small bubbles rise steadily around the edge. Add the 2 tsp toasted sesame oil, the salt and the pepper for the broth, and keep it hot. In another pot, heat 3000 ml of water for about 10 minutes until boiling.
 5. Cook the wontons in two batches, nudging the bottom of the pot so they do not stick. Each batch takes about 5–7 minutes in total, including 1–2 minutes at a gentle simmer after they float, until the wrapper is soft but still whole. If the water is boiling hard, add 120 ml of cold water each time to calm it; you will use 240 ml in total. Lift out the largest wonton and measure the centre of the filling: at 71°C (160°F) they are done; if not, cook 1 minute more.
-6. Lift the wontons out with a slotted spoon, drain off the cooking water and divide among four bowls. Ladle a quarter of the hot broth into each bowl, sprinkle with green onion and serve right away, because the wrappers turn too soft if left to sit.
+6. Lift the wontons out with a slotted spoon, drain off the cooking water and divide among six bowls. Ladle a sixth of the hot broth into each bowl, sprinkle with green onion and serve right away, because the wrappers turn too soft if left to sit.
 
 ## Key points
 

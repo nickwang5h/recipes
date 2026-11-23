@@ -21,7 +21,7 @@ ingredients:
       - { name: salt }
       - { name: water }
       - { name: "dusting flour", note: "prepare 10 g, sprinkle only thinly to prevent sticking" }
-      - { name: "oil for coating the dough", note: "prepare 0.75 ml, brush thinly over the surface of the dough" }
+      - { name: "oil for coating the dough", note: "a little, brushed thinly over the surface of the dough" }
   - group: Fresh pork filling
     items:
       - { name: ground pork, note: choose ground pork that is about 70% lean and 30% fat }
@@ -32,7 +32,7 @@ ingredients:
       - { name: toasted sesame oil }
       - { name: sugar }
       - { name: salt }
-      - { name: white pepper }
+      - { name: white pepper, note: a pinch }
       - { name: minced ginger }
       - { name: minced green onion }
   - group: Frying and garnish
@@ -41,12 +41,12 @@ ingredients:
       - { name: "water for braising", note: "prepare 240 ml of hot water, enough to come about 1.25 cm up the pan; does not scale with the number of buns" }
       - { name: toasted white sesame seeds }
       - { name: chopped green onion }
-translated: 2026-10-02
+translated: 2026-11-22
 ---
 
 Shengjian bao is a Shanghai breakfast: a lightly leavened wrapper, a golden base and hot soup when you bite in. Yeast [fermentation](/principles/fermentation/) makes the wrapper a little airy, and the soup is held in the filling as aspic: the [collagen in the pork skin turns to gelatin](/principles/collagen-gelatin/), sets when chilled and melts again as the buns cook.
 
-The base is fried first, then the buns are braised in steam until cooked and finally fried dry; the [Maillard reaction](/principles/maillard-reaction/) only happens once the bottom is dry. One batch makes 15 buns, in a nonstick skillet with a lid.
+The base is fried first, then the buns are braised in steam until cooked and finally fried dry; the [Maillard reaction](/principles/maillard-reaction/) only happens once the bottom is dry. One batch makes 9 buns, in a nonstick skillet with a lid.
 
 ## Steps
 
@@ -55,7 +55,7 @@ The base is fried first, then the buns are braised in steam until cooked and fin
 3. Pour the broth into a shallow container, set it in a cold water bath to cool for about 20–30 minutes, and once it no longer steams much, refrigerate for 8 hours. Cooling must take no more than 2 hours in total; do not leave it on the counter overnight.
 4. Add all the filling seasonings to the pork and beat in one direction for 5 minutes, until sticky and no free liquid is left at the bottom of the bowl. Cut the aspic into small dice of about 0.5 cm, fold in 110 ml of it gently and refrigerate for 1 hour, so the filling is cold and holds together.
 5. Mix the two flours, yeast, salt and 55 ml of water and knead for 15 minutes, until soft and smooth. Brush the surface with a thin layer of oil, cover and let rise for 30 minutes, until slightly puffy; knead for 5 more minutes to push out the large bubbles, making a fine, tight semi-leavened dough.
-6. Divide the dough into 15 pieces of about 18 g each and roll each into a round wrapper of about 10 cm, a little thicker in the middle. Divide the filling into 15 portions of about 35 g each and wrap them one at a time, pinching the seam tight. Keep unused wrappers covered, and keep the bowl of filling set over ice water so it stays cold and firm.
+6. Divide the dough into 9 pieces of about 20 g each and roll each into a round wrapper of about 10 cm, a little thicker in the middle. Divide the filling into 9 portions of about 35 g each and wrap them one at a time, pinching the seam tight. Keep unused wrappers covered, and keep the bowl of filling set over ice water so it stays cold and firm.
 7. Brush a 28 cm nonstick skillet thinly with frying oil and arrange the buns with gaps of about 1 cm between them; add the rest of the frying oil along the edge of the pan. Fry over medium heat for 8–10 minutes, until the bottom edges are light golden and the oil bubbles around them are even.
 8. Pour hot water slowly along the edge of the pan to about 1.25 cm deep, cover at once and braise over medium-low heat for 8–10 minutes, until the wrappers have puffed up and the water is almost gone. Measure the centre of the filling in the largest bun; it must be at least 71°C (160°F). If not, add 30 ml of hot water and braise for 2 more minutes.
 9. Sprinkle with the sesame seeds and green onion, cover again and fry for about 5 minutes, until the water has dried completely and the bottoms are golden, with the sound turning to a fine sizzle. Lift out with a wide spatula under the base. Bite a small opening first to let the hot soup out.

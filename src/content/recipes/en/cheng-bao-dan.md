@@ -15,7 +15,7 @@ ingredients:
   - group: Shallow-frying
     items:
       - { name: vegetable oil, note: for shallow-frying in a small skillet; drain off the extra oil after removing }
-translated: 2026-10-01
+translated: 2026-11-22
 ---
 
 Razor clam and egg pancakes are egg pancakes made by mixing razor clam meat into an egg batter and pan-frying it. The edges are slightly crisp, the inside is soft and tender, and the finely diced onion adds a little sweetness. The clams must be blanched open first, which makes it easy to take out the meat and clear away the sand (see [blanching and removing off-odours](/principles/blanching/)). Drain the blanched meat well: too much water carried in thins the batter and makes the oil spatter when it goes in the pan.
@@ -29,7 +29,7 @@ Eggs set under heat into a protein network that holds up the clam meat (see [pro
 3. Finely dice the onion and mix it with the clam meat, light soy sauce, Shaoxing wine, chicken bouillon powder and starch, until all the starch is moistened and there are no dry lumps. Crack in the eggs and stir well. The egg coats the clam meat and onion, making an even batter.
 4. Add the vegetable oil to a small skillet and heat over medium heat. Drop in a little batter: when it immediately forms fine bubbles and slowly sets, the oil is hot. Spread the batter into a layer of even thickness. If the pan is small or you are making more, fry in batches and do not stack it into a thick cake.
 5. Turn the heat to medium-low and let the bottom set first. Flip when the edges are golden and a spatula can lift the whole sheet of egg. If the sheet is too big, divide it into pieces first and turn them one at a time with a wide spatula, so no unset egg runs into the oil.
-6. Keep frying until the other side is golden. The egg in the thickest part must be fully set and no longer wet and sticky, and the clam meat must be hot through: insert a thermometer into the centre of the pancake, and at 71°C (160°F) it is done. If the outside is browning too fast, lower the heat and let the centre keep heating.
+6. Keep frying until the other side is golden. The egg in the thickest part must be fully set and no longer wet and sticky, and the clam meat must be hot through: insert a thermometer into the centre of the pancake, and at 74°C (165°F) it is done. If the outside is browning too fast, lower the heat and let the centre keep heating.
 7. Lift out with a slotted spatula, drain briefly, and blot off the extra oil on paper towels before plating and serving. Do not leave the pancake sitting in oil while you finish other dishes; away from the pan, the edges stay dry.
 
 ## Key points

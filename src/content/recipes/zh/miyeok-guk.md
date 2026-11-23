@@ -7,7 +7,7 @@ cuisine: korean
 course: soup
 summary: 牛肉薄片与泡开的裙带菜先用香油炒，再加水煮到柔软；汤酱油补咸鲜，汤色保持浅淡。
 servings: 6
-time: { prep: 30, cook: 45 }
+time: { prep: 30, cook: 70 }
 principles: [umami, salt, knife-work]
 ingredients:
   - group: 汤料
@@ -31,7 +31,7 @@ sources:
   - title: "Seaweed soup with beef (Miyeokguk)"
     author: Maangchi
     url: https://www.maangchi.com/recipe/miyeokguk
-updated: 2026-10-02
+updated: 2026-11-22
 ---
 
 *미역국* 在中文里常叫海带汤，用的是裙带菜：泡开后叶片薄而柔软，和牛肉同煮，入口滑润。在韩国，它也是常见的生日汤。牛肉先炒后煮，汤里有细小油花，颜色浅淡。

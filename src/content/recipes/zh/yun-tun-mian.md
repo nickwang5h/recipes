@@ -33,7 +33,7 @@ sources:
   - { title: Cantonese Wonton Noodle Soup, author: The Woks of Life, url: "https://thewoksoflife.com/cantonese-wonton-noodle-soup/" }
   - { title: Wonton Noodle Soup, author: Daddy Lau，Made With Lau, url: "https://www.madewithlau.com/recipes/wonton-noodle-soup" }
   - { title: Safe cooking temperatures, author: Health Canada, url: "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html" }
-updated: 2026-10-02
+updated: 2026-11-22
 ---
 
 云吞面的云吞皮薄馅小，咬开有虾粒的脆弹，配细碱水面和一碗清汤。馅先搅到发黏，煮熟后才连成一团，又留着虾粒的口感，见[蛋白质变性与凝固](/principles/protein-coagulation/)。皮薄、馅小，也才能在短时间里煮透。
@@ -46,7 +46,7 @@ updated: 2026-10-02
 2. 把馅分成 36 份，每份约 11 g。取一张皮，中央放馅，用配好的润边水薄薄涂湿皮边，对折成三角形，挤掉馅周围的空气，再把两角合拢压紧。包好的云吞单层排在烘焙纸上，盖住，别让风吹干。
 3. 小锅放鸡汤，中火加热约 5–8 分钟，到汤面连续冒小泡，尝味后用盐调味。保持小火微沸，汤别煮少了。
 4. 宽锅的水大火烧约 8–10 分钟，到水面翻滚。云吞分两批下锅，轻推让它们离开锅底，每批煮 4–5 分钟，到皮贴住馅、云吞浮起。取一只最大的，测馅心到 74°C 就熟了；没到就每次再煮 1 分钟，再测。
-5. 云吞分入四碗。水重新烧滚约 1 分钟，把拨松的鲜面分两批下锅，各煮约 1 分钟，到面丝散开、咬开没有生粉芯。捞入冷水中过水约 15 秒，再回沸水烫约 15 秒，面条就热透了。
+5. 云吞分入六碗。水重新烧滚约 1 分钟，把拨松的鲜面分两批下锅，各煮约 1 分钟，到面丝散开、咬开没有生粉芯。捞入冷水中过水约 15 秒，再回沸水烫约 15 秒，面条就热透了。
 6. 面沥干后分入碗中，立即浇入滚热鸡汤，撒可选的葱花。面蓬松地堆起，云吞皮完整，汤清亮，装好就吃。
 
 ## 要点

@@ -24,7 +24,7 @@ ingredients:
       - { ref: pine-nut, qty: 40, unit: g }
       - { ref: basil, qty: 10, unit: 片, note: 新鲜罗勒叶，撕碎 }
       - { ref: white-wine-vinegar, qty: 60, unit: ml }
-      - { ref: sugar, qty: 1, unit: 汤匙 }
+      - { ref: brown-sugar, qty: 1, unit: 汤匙 }
       - { ref: salt, note: 腌茄子及收尾调味，适量 }
   - group: 油脂
     items:
@@ -39,7 +39,7 @@ sources:
     url: https://accademia1953.it/it/ricette/ricetta/caponata
   - title: "On Food and Cooking: The Science and Lore of the Kitchen（修订版，2004）"
     author: Harold McGee
-updated: 2026-10-01
+updated: 2026-11-22
 ---
 
 *Caponata* 是西西里的酸甜蔬菜，油润，咸香，带点酸：炸茄子与番茄、西芹、绿橄榄、酸豆合锅，糖和葡萄酒醋提出酸甜味。茄子要先炸到软再加酸，因为蔬菜在酸里很难再变软，见[酸](/principles/acid/)。

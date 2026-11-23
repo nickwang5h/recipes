@@ -32,12 +32,12 @@ sources:
   - { title: "HowToCook：澳门湿版免治牛肉饭的做法", author: HowToCook 社区, url: https://github.com/Anduin2017/HowToCook/blob/master/dishes/meat_dish/澳门湿版免治牛肉饭/澳门湿版免治牛肉饭.md }
   - { title: "Macanese & Portuguese Dishes：Minchi, Macao Style", author: 澳门特别行政区政府旅游局, url: https://www.macaotourism.gov.mo/en/dining/taste-of-macao/macanese-and-portuguese-dishes }
   - { title: "Safe cooking temperatures", author: Health Canada, url: https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html }
-updated: 2026-10-01
+updated: 2026-11-22
 ---
 
-肉末松软，酱汁薄薄一层，裹着米饭，上面盖一只蛋黄能压散的煎蛋，这是澳门免治肉饭的“湿版”。传统组合是肉末、洋葱、炸土豆和鸡蛋，这里用牛肉末、番茄酱和芡汁，酱汁多一些。肉汁里的淀粉受热[糊化](/principles/starch-gelatinization/)，把汁变稠，稠到能挂在饭上，又还能流动。
+肉末松软，酱汁薄薄一层，裹着米饭，上面盖一只两面煎熟的煎蛋，这是澳门免治肉饭的“湿版”。传统组合是肉末、洋葱、炸土豆和鸡蛋，这里用牛肉末、番茄酱和芡汁，酱汁多一些。肉汁里的淀粉受热[糊化](/principles/starch-gelatinization/)，把汁变稠，稠到能挂在饭上，又还能流动。
 
-牛肉末要在汁变稠之前炒散，才是松软的小粒；芡汁太厚会把肉粘成团，所以水淀粉分次倒，不必倒完。煎蛋的蛋白和蛋黄靠[蛋白质变性与凝固](/principles/protein-coagulation/)定形，蛋黄压散后拌进饭里，更柔润。
+牛肉末要在汁变稠之前炒散，才是松软的小粒；芡汁太厚会把肉粘成团，所以水淀粉分次倒，不必倒完。煎蛋的蛋白和蛋黄靠[蛋白质变性与凝固](/principles/protein-coagulation/)定形，切开拌进饭里一起吃。
 
 ## 步骤
 
