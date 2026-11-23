@@ -20,7 +20,7 @@ ingredients:
       - { name: canola oil }
       - { name: tomato ketchup, note: added for a sweet version }
       - { name: "Shaoxing wine", note: "if you have none, use dry sherry" }
-translated: 2026-10-01
+translated: 2026-11-22
 ---
 
 Stewed crab has tender, salty and savoury meat, and the sauce on the plate is thick, for dipping the crab in. The crab is laid on a fried bean sauce and steamed, so all of its juices stay on the plate. Homemade doubanjiang from Pinghu is strongly salty and savoury, and that taste comes from the flavour compounds in [fermented seasonings](/principles/fermentation/). Here a mild yellow soybean paste stands in for it, and adding rock sugar and ketchup makes the dish sweeter; salty or sweet is a matter of taste.
@@ -34,7 +34,7 @@ The crab pieces go cut side down, so their juices meet the bean paste on the bot
 3. Stir in the dark soy sauce and Shaoxing wine, bring briefly to a boil and take off the heat. The paste is already salty, so use little dark soy sauce at first and stop when the colour is deep enough. Taste a bit of the fried sauce for saltiness, then spread the sauce on the bottom of a shallow heatproof plate, keeping some back to spoon over the crab.
 4. If using ground pork, spread it thinly over the sauce, not in a thick lump; arrange the crab pieces neatly cut side down, spoon the reserved sauce over them, and add the green onion pieces and ginger slices. If using the egg, crack it into a gap at the edge of the plate and spread it out so the crab shell does not cover it entirely.
 5. Bring water to a boil in the steamer and put in the crab plate, leaving space around the edge of the plate for steam to pass. Cover, keep the water boiling and steam for about 10–12 minutes, until the thick meat of the largest crab piece is completely opaque. If the larger pieces are not done, keep steaming; do not go by the shell turning red alone.
-6. If you added egg or pork, check the centre of that part separately: the egg must be fully set and the pork must have no raw, soft spots. Measure the centre with a thermometer; it is cooked at 71°C (160°F). When done, take out the plate, sprinkle with the chopped green onion, and serve the sauce on the plate together with the crab.
+6. If you added egg or pork, check the centre of that part separately: the egg must be fully set and the pork must have no raw, soft spots. Measure the centre with a thermometer: the egg is cooked at 74°C (165°F), the pork at 71°C (160°F). When done, take out the plate, sprinkle with the chopped green onion, and serve the sauce on the plate together with the crab.
 
 ## Key points
 

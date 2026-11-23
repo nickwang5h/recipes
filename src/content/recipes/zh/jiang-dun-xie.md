@@ -28,8 +28,9 @@ ingredients:
 sources:
   - { title: "HowToCook：酱炖蟹的做法", author: HowToCook 社区, url: "https://github.com/Anduin2017/HowToCook/blob/master/dishes/aquatic/酱炖蟹.md" }
   - { title: "秋风起，平湖这道美味很下饭", author: 马欣奕、张旭东（潮新闻）, url: "https://tidenews.com.cn/news.html?id=2925971" }
+  - { title: "Safe cooking temperatures", author: Health Canada, url: "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html" }
   - { title: "Cook to a Safe Minimum Internal Temperature", author: FoodSafety.gov, url: "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" }
-updated: 2026-10-01
+updated: 2026-11-22
 ---
 
 酱炖蟹的蟹肉嫩而咸鲜，盘底的酱汁浓厚，拿蟹肉蘸着吃。做法是把蟹铺在炒香的酱上，用蒸汽蒸熟，蟹汁都留在盘里。平湖当地的家酿豆瓣酱咸鲜味重，这种味道来自[发酵调味料](/principles/fermentation/)里的呈味物质；这里用不辣的黄豆酱近似替代，加冰糖和番茄酱就偏甜，咸口还是甜口随个人。
@@ -43,7 +44,7 @@ updated: 2026-10-01
 3. 加入老抽和料酒拌匀，短暂煮开后离火。酱本身已经有咸味，老抽先少放，颜色够了就停。取一点炒好的酱尝咸淡，再把酱铺在耐热浅盘底部，留一部分用来淋蟹。
 4. 用肉末的话，把肉末薄薄铺在酱上，别堆成厚团；蟹块切面朝下整齐摆好，淋上留下的酱，放葱段和姜片。用鸡蛋的话，在盘边的空隙磕入鸡蛋，尽量摊开，别被蟹壳完全盖住。
 5. 蒸锅加水烧开，放入蟹盘，盘边留出蒸汽通道。加盖后保持水沸，蒸约 10–12 分钟，到最大蟹块的厚肉处完全不透明；较大的蟹块没熟就继续蒸，别只看壳变红。
-6. 加了鸡蛋或肉末，要另外看这部分的中心：鸡蛋完全凝固，肉末没有生软的地方，温度计量中心，到 71°C 才熟。熟了取盘，撒葱花，盘底的酱汁随蟹一起上桌。
+6. 加了鸡蛋或肉末，要另外看这部分的中心：鸡蛋完全凝固，肉末没有生软的地方，温度计量中心，鸡蛋到 74°C、肉末到 71°C 才熟。熟了取盘，撒葱花，盘底的酱汁随蟹一起上桌。
 
 ## 要点
 
