@@ -22,7 +22,7 @@ order: 2
 
 ## 五个母酱
 
-Carême 最早把法式酱汁分成几大类。Escoffier 在《烹饪指南》（*Le Guide culinaire*，1903）里理出了沿用至今的五个**母酱**：
+Carême 最早把法式酱汁分成几大类。Escoffier 在《烹饪指南》（*Le Guide culinaire*，1903）里列了几种**基础大酱**（*grandes sauces de base*），其中有 Espagnole、Velouté、Béchamel 和 Sauce tomate；荷兰酱在法文原版里归在派生的小酱里。1907 年的英译本把荷兰酱也列进了基础酱汁，今天通行的五个**母酱**一般认为就出自这里：
 
 | 母酱 | 液体 | 增稠方式 |
 |---|---|---|
@@ -50,3 +50,4 @@ Carême 最早把法式酱汁分成几大类。Escoffier 在《烹饪指南》�
 
 - Julia Child、Louisette Bertholle、Simone Beck，*Mastering the Art of French Cooking*（第 1 卷，1961）。
 - Auguste Escoffier，*Le Guide culinaire*（1903）。
+- Auguste Escoffier，*A Guide to Modern Cookery*（英译本，1907）。

@@ -18,7 +18,7 @@ After searing meat, a brown layer sticks to the bottom of the pan. The French ca
 
 ## Five mother sauces
 
-Carême was the first to sort French sauces into a few large families. In *Le Guide culinaire* (1903), Escoffier set out the five **mother sauces** still used today:
+Carême was the first to sort French sauces into a few large families. In *Le Guide culinaire* (1903), Escoffier listed several **basic sauces** (*grandes sauces de base*), among them espagnole, velouté, béchamel and sauce tomate; in the French original, hollandaise sat among the small, derived sauces. The 1907 English translation also put hollandaise among the basic sauces, and that is generally taken to be where today's five **mother sauces** come from:
 
 | Mother sauce | Liquid | How it is thickened |
 |---|---|---|
@@ -46,3 +46,4 @@ A last step often follows, *monter au beurre*: take the sauce off the heat and s
 
 - Julia Child, Louisette Bertholle and Simone Beck, *Mastering the Art of French Cooking* (vol. 1, 1961).
 - Auguste Escoffier, *Le Guide culinaire* (1903).
+- Auguste Escoffier, *A Guide to Modern Cookery* (English translation, 1907).
