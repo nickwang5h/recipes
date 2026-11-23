@@ -13,7 +13,7 @@ ingredients:
       - { name: shallot, note: measured after finely chopping }
       - { name: unsalted butter }
       - { name: ["parsley sprig", "parsley sprigs"], note: "with leaves, used to cook the wine broth" }
-      - { name: [bay leaf, bay leaves] }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: thyme, note: dried thyme }
       - { name: black pepper, note: a little }
   - group: To finish

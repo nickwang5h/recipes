@@ -6,7 +6,7 @@ coverAlt: Illustration of wontons in chili oil plated
 ingredients:
   - group: Wontons
     items:
-      - { name: ["wonton wrapper", "wonton wrappers"], note: "choose thin, square white wonton wrappers; also sold in the refrigerated or frozen section of Asian supermarkets" }
+      - { name: ["wonton wrapper", "wonton wrappers"], unit: '', note: "choose thin, square white wonton wrappers; also sold in the refrigerated or frozen section of Asian supermarkets" }
       - { name: ground pork, note: pork with a little fat }
       - { name: [egg, eggs], note: medium }
       - { name: [green onion, green onions], note: white parts soaked in water; green parts minced to finish }

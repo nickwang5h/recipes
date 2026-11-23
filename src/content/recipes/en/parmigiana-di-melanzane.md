@@ -16,7 +16,7 @@ ingredients:
       - { name: extra virgin olive oil }
       - { name: fresh mozzarella, note: "fresh cow's milk mozzarella, drained, blotted dry and thinly sliced" }
       - { name: Parmigiano Reggiano, note: finely grated }
-      - { name: [basil leaf, basil leaves], note: fresh basil leaves }
+      - { name: [basil leaf, basil leaves], unit: '', note: fresh basil leaves }
       - { name: unsalted butter, note: to coat the baking dish thinly }
 translated: 2026-10-01
 ---

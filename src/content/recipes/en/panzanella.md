@@ -10,7 +10,7 @@ ingredients:
       - { name: [tomato, tomatoes], note: "medium; ripe and firm; diced, keeping the juice" }
       - { name: [red onion, red onions], note: "medium; thinly sliced" }
       - { name: [cucumber, cucumbers], note: "small; peeled and thinly sliced" }
-      - { name: [basil leaf, basil leaves], note: "fresh; dried off and torn" }
+      - { name: [basil leaf, basil leaves], unit: '', note: "fresh; dried off and torn" }
       - { name: water, note: "for soaking the bread; enough to cover it" }
   - group: Seasoning
     items:

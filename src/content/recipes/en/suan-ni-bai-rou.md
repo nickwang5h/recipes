@@ -24,7 +24,7 @@ ingredients:
       - { name: ginger, note: smashed to crack }
       - { name: [green onion, green onions] }
       - { name: star anise }
-      - { name: bay leaf }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: cassia }
       - { name: fennel seed }
       - { name: clove }

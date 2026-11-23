@@ -15,7 +15,7 @@ ingredients:
       - { name: ["green olive", "green olives"], note: "brine-cured green olives, pitted and drained" }
       - { name: "capers", note: "rinse salt-packed capers to remove the salt; brined or vinegar-packed capers from a mainstream supermarket also work, measured after draining and rinsing" }
       - { name: pine nuts }
-      - { name: ["basil leaf", "basil leaves"], note: "fresh basil leaves, torn" }
+      - { name: ["basil leaf", "basil leaves"], unit: '', note: "fresh basil leaves, torn" }
       - { name: white wine vinegar }
       - { name: brown sugar }
       - { name: "salt", note: "for salting the eggplant and for seasoning at the end, as needed" }

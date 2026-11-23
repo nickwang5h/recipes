@@ -6,7 +6,7 @@ coverAlt: Illustration of Korean dumplings plated
 ingredients:
   - group: Wrappers and filling
     items:
-      - { name: [mandu wrapper, mandu wrappers], note: choose round mandu skins about 10 cm across; buy them in the refrigerated or frozen section at H Mart or T&T }
+      - { name: [mandu wrapper, mandu wrappers], unit: '', note: choose round mandu skins about 10 cm across; buy them in the refrigerated or frozen section at H Mart or T&T }
       - { name: ground pork, note: choose ground pork with some fat }
       - { name: "firm tofu", note: "squeeze out the water with a cloth, then crumble" }
       - { name: "zucchini", note: "cut into thin shreds, then cut short" }

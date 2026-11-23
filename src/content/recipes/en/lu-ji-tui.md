@@ -10,7 +10,7 @@ ingredients:
       - { name: [green onion, green onions], note: cut into long pieces }
       - { name: ginger, note: sliced }
       - { name: [star anise, star anise] }
-      - { name: [bay leaf, bay leaves] }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: vegetable oil }
   - group: Braising liquid
     items:

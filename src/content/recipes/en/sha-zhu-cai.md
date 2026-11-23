@@ -13,7 +13,7 @@ ingredients:
       - { name: garlic }
       - { name: ground ginger }
       - { name: [dried chili, dried chilies] }
-      - { name: [bay leaf, bay leaves] }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: [star anise, star anise] }
       - { name: [green onion, green onions], note: tied in a knot }
       - { name: toasted sesame oil }

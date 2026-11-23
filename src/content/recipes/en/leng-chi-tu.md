@@ -21,7 +21,7 @@ ingredients:
       - { name: green Sichuan peppercorns, note: "if you have none use red Sichuan peppercorns, which taste different" }
       - { name: [star anise, star anise] }
       - { name: cassia bark, note: a small piece }
-      - { name: [bay leaf, bay leaves] }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: sand ginger, note: "a small piece; can be left out" }
       - { name: [white cardamom pod, white cardamom pods], note: "lightly crushed to split; can be left out" }
       - { name: fennel seeds, note: "a fairly strong fennel flavour" }

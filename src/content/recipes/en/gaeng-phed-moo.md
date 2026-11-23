@@ -9,7 +9,7 @@ ingredients:
       - { name: "pork shoulder", note: "skin removed, sliced against the grain into thin slices of about 3 mm; choose a tender cut with a little fat" }
       - { name: "Thai eggplant", note: "stem removed and cut into wedges; if you have none, use mainstream-supermarket eggplant in small pieces and check for softness earlier" }
       - { name: ["long red chili", "long red chilies"], note: "cut on the diagonal; use Fresno chilies if you have none, and the heat will change" }
-      - { name: ["makrut lime leaf", "makrut lime leaves"], note: "hard centre vein removed and torn; frozen leaves are fine, and ordinary lime leaves smell different" }
+      - { name: ["makrut lime leaf", "makrut lime leaves"], unit: '', note: "hard centre vein removed and torn; frozen leaves are fine, and ordinary lime leaves smell different" }
       - { name: Thai basil, note: leaves picked off and measured loosely packed }
   - group: Curry sauce
     items:

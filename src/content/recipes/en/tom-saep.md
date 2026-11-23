@@ -12,7 +12,7 @@ ingredients:
       - { name: salt }
       - { name: ["lemongrass stalk", "lemongrass stalks"], note: "use the lower half, smashed and cut into long lengths" }
       - { name: galangal, note: cut about 3 mm thick; look for fresh or frozen galangal at T&T or a Southeast Asian grocery }
-      - { name: [makrut lime leaf, makrut lime leaves], note: torn; look for fresh or frozen leaves at an Asian supermarket }
+      - { name: [makrut lime leaf, makrut lime leaves], unit: '', note: torn; look for fresh or frozen leaves at an Asian supermarket }
       - { name: garlic, note: smashed }
   - group: Vegetables and hot-sour seasoning
     items:

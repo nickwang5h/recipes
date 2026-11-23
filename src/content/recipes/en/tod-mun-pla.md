@@ -12,7 +12,7 @@ ingredients:
       - { name: sugar }
       - { name: "Chinese long beans", note: "cut into rings 2–3 mm wide; sold at Asian supermarkets, or use the same amount of green beans" }
       - { name: "Thai basil leaves", note: "about one third of a cup, loosely packed; buy Thai basil at an Asian supermarket, or use the same amount of regular sweet basil" }
-      - { name: ["makrut lime leaf", "makrut lime leaves"], note: "fresh or frozen, central vein removed and cut into very fine shreds; look for makrut lime leaves at an Asian supermarket" }
+      - { name: ["makrut lime leaf", "makrut lime leaves"], unit: '', note: "fresh or frozen, central vein removed and cut into very fine shreds; look for makrut lime leaves at an Asian supermarket" }
       - { name: fish sauce, note: add only if a small test piece tastes bland once cooked; leave out if the curry paste is salty enough }
       - { name: "vegetable oil", note: "about 600 ml for frying, in a deep pot about 20 cm wide, with oil about 2 cm deep; frying oil does not scale with the number of servings" }
       - { name: "water", note: "300 ml of cold water for wetting your hands, not mixed into the fish paste; does not scale with the number of servings" }

@@ -14,7 +14,7 @@ ingredients:
     items:
       - { name: "galangal", note: "a piece about 5 cm long, thinly sliced; look for fresh or frozen slices at Asian supermarkets such as T&T" }
       - { name: ["lemongrass stalk", "lemongrass stalks"], note: "use the tender lower core, cut into lengths and smashed to split" }
-      - { name: [makrut lime leaf, makrut lime leaves], note: torn; fresh or frozen from an Asian supermarket }
+      - { name: [makrut lime leaf, makrut lime leaves], unit: '', note: torn; fresh or frozen from an Asian supermarket }
       - { name: fish sauce }
       - { name: lime juice, note: freshly squeezed }
       - { name: [Thai chili, Thai chilies], note: lightly smashed to split; use fewer if you do not like heat }

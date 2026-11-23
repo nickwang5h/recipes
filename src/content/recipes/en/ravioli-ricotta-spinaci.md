@@ -21,7 +21,7 @@ ingredients:
   - group: Sage butter
     items:
       - { name: unsalted butter }
-      - { name: [sage leaf, sage leaves], note: fresh leaves }
+      - { name: [sage leaf, sage leaves], unit: '', note: fresh leaves }
 translated: 2026-10-01
 ---
 

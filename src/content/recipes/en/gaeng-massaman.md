@@ -22,7 +22,7 @@ ingredients:
       - { name: cassia, note: a piece of cassia bark about 5 cm long }
       - { name: ["white cardamom pod", "white cardamom pods"], note: "cracked open; look for Thai / Siam cardamom first, and use green cardamom from a mainstream supermarket if you cannot find it, with a slightly different aroma" }
       - { name: [star anise, star anise] }
-      - { name: [bay leaf, bay leaves] }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: "tamarind pulp", note: "seedless pulp block; rub it apart in the hot water listed below, strain, and measure 2 tbsp of juice" }
       - { name: "water", note: "for extracting the tamarind; after straining, measure 2 tbsp, and top up with plain water if short" }
       - { name: palm sugar, note: grated; use 50 g brown sugar if you have none }

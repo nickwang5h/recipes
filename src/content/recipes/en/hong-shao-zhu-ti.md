@@ -14,7 +14,7 @@ ingredients:
     items:
       - { name: "ginger", note: "about 5 slices; 6 g for blanching, 9 g for stewing" }
       - { name: [green onion, green onions], note: for blanching }
-      - { name: [bay leaf, bay leaves] }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: cassia bark, note: about 1 small piece }
       - { name: [star anise, star anise] }
       - { name: "Shaoxing wine", note: "20 ml for blanching, 10 ml for stewing" }

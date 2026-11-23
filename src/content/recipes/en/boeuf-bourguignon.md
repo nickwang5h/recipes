@@ -17,7 +17,7 @@ ingredients:
       - { name: tomato paste }
       - { name: garlic, note: crushed }
       - { name: dried thyme }
-      - { name: bay leaf }
+      - { name: [bay leaf, bay leaves], unit: '' }
       - { name: salt, note: as needed }
       - { name: black pepper, note: as needed }
   - group: Garnish
