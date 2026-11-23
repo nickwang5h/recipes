@@ -29,7 +29,7 @@ ingredients:
       - { name: [egg, eggs], note: large }
       - { name: mirin }
       - { name: potato starch, note: "mixed with 1 tsp water; cornstarch also works" }
-      - { name: salt, note: fine salt }
+      - { name: salt, note: "fine salt, a pinch" }
       - { name: vegetable oil }
   - group: Toppings
     items:
