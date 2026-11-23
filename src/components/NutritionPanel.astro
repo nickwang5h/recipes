@@ -4,7 +4,7 @@ import data from '../data/nutrition.json';
 import lighterEn from '../data/nutrition-en.json';
 import { joinList, langOf, type Both } from '../i18n';
 import { unitLabel } from '../lib/scale';
-import { LIGHTER_LABELS, dailyValue, lighterItems, perServing, safetyNotes, worthShowing, type Foods, type Key, type Lighter, type Marks } from '../lib/nutrition';
+import { KEYS, LIGHTER_LABELS, complete, dailyValue, lighterItems, perServing, safetyNotes, worthShowing, type Counted, type Foods, type Key, type Lighter, type Marks } from '../lib/nutrition';
 
 interface Props {
   recipe: CollectionEntry<'recipes'>;
@@ -20,9 +20,12 @@ const T = {
     basis: `按加拿大营养成分数据库估算，${servings} 人份平分；百分比是占每日营养标签参考值的比例。`,
     eaten: (names: string, share: number) => `${names}按吃进约 ${share}% 计。`,
     leftOut: (names: string) => `没有计入：${names}（没有定量或缺少数据）。`,
+    lacking: (names: string, nutrients: string) => `${names}缺少${nutrients}数据。`,
+    floor: '标“≥”的是下限：缺数据的配料没有算进去，实际可能更高。',
+    nutrients: { kcal: '热量', protein: '蛋白质', fat: '脂肪', satfat: '饱和脂肪', carb: '碳水化合物', sugar: '糖', fiber: '膳食纤维', sodium: '钠' },
     remove: (name: string) => `不放${name}`,
     add: (name: string) => `加 ${name}`,
-    after: (nutrient: string, from: string, to: string, kcal: number) => `改完每份${nutrient}约 ${from} → ${to}，热量约 ${kcal} 千卡。`,
+    after: (nutrient: string, from: string, to: string, kcal: string) => `改完每份${nutrient}约 ${from} → ${to}，热量约 ${kcal} 千卡。`,
     probe: (temps: string) => `用食物温度计测最厚处中心：${temps}。`,
     vulnerable: '孕妇、幼儿、老人和免疫力低的人宜吃全熟。',
     rice: '米饭和剩菜两小时内放凉冷藏，三天内吃完；复热到中心 74℃。',
@@ -31,12 +34,15 @@ const T = {
   en: {
     title: 'Nutrition per serving', kcal: 'kcal', safety: 'Food safety',
     rows: ['Protein', 'Fat', 'of which saturated', 'Carbohydrate', 'of which sugars', 'Fibre', 'Sodium'],
-    basis: `Estimated from the Canadian Nutrient File, divided into ${servings} servings; percentages are of the daily values on Canadian nutrition labels.`,
+    basis: `Estimated from the Canadian Nutrient File, divided into ${servings} servings; percentages are of the daily values on Canadian nutrition labels. `,
     eaten: (names: string, share: number) => `${names}: counted as about ${share}% eaten. `,
-    leftOut: (names: string) => `Not counted: ${names} (no amount given, or no data).`,
+    leftOut: (names: string) => `Not counted: ${names} (no amount given, or no data). `,
+    lacking: (names: string, nutrients: string) => `No ${nutrients} figures for ${names}. `,
+    floor: 'Figures marked ≥ are lower bounds: ingredients without data are not counted, so the real amount may be higher.',
+    nutrients: { kcal: 'energy', protein: 'protein', fat: 'fat', satfat: 'saturated fat', carb: 'carbohydrate', sugar: 'sugars', fiber: 'fibre', sodium: 'sodium' },
     remove: (name: string) => `Leave out the ${name}`,
     add: (name: string) => `Add ${name}`,
-    after: (nutrient: string, from: string, to: string, kcal: number) => `Per serving, ${nutrient} goes from about ${from} to ${to}, at about ${kcal} kcal.`,
+    after: (nutrient: string, from: string, to: string, kcal: string) => `Per serving, ${nutrient} goes from about ${from} to ${to}, at about ${kcal} kcal.`,
     probe: (temps: string) => `Check the centre of the thickest part with a food thermometer: ${temps}.`,
     vulnerable: 'Pregnant women, young children, older adults and people with weakened immunity should eat it fully cooked.',
     rice: 'Cool rice and leftovers and refrigerate them within 2 hours; eat within 3 days, and reheat to 74°C (165°F) at the centre.',
@@ -74,6 +80,22 @@ const itemText = (key: string) => {
 const unitOf = (unit: string | undefined, qty: number | undefined) => (lang === 'zh' ? unit ?? '' : unitLabel(unit, qty ?? 1, lang));
 
 const amount = (value: number, unit: string) => `${value >= 10 || unit === 'mg' ? Math.round(value) : Math.round(value * 10) / 10} ${unit}`;
+// A figure with too much of the dish missing data is a lower bound (see GAP_LIMIT in src/lib/nutrition.ts).
+const floor = (counted: Counted, key: Key) => (complete(counted, key) ? '' : '≥ ');
+const either = (words: string[]) => (words.length > 1 ? `${joinList(words.slice(0, -1), lang)}${lang === 'zh' ? '和' : ' or '}${words.at(-1)}` : words[0]);
+const floors = result ? KEYS.filter((key) => !complete(result, key)) : [];
+// Items that were counted but have no figure for some of those nutrients, grouped by what they lack; items not counted
+// at all are already named in the "not counted" sentence.
+const lacking = new Map<string, { names: string[]; keys: Key[] }>();
+if (result) {
+  const byItem = new Map<string, Key[]>();
+  for (const key of floors) for (const item of result.gaps[key]) if (!result.leftOut.includes(item)) byItem.set(item, [...(byItem.get(item) ?? []), key]);
+  for (const [item, keys] of byItem) {
+    const group = lacking.get(keys.join()) ?? { names: [], keys };
+    if (!group.names.includes(nameOf(item))) group.names.push(nameOf(item));
+    lacking.set(keys.join(), group);
+  }
+}
 const rows: { label: string; key: Key; unit: string; sub?: boolean }[] = [
   { label: t.rows[0], key: 'protein', unit: 'g' },
   { label: t.rows[1], key: 'fat', unit: 'g' },
@@ -97,7 +119,7 @@ for (const [key, fraction] of Object.entries(marks?.eaten ?? {})) {
 {result && (
   <section class="nutrition" aria-labelledby="nutrition-title">
     <h2 class="section-title" id="nutrition-title">{t.title}</h2>
-    <p class="nutrition-energy"><strong>{Math.round(result.per.kcal)}</strong> {t.kcal}</p>
+    <p class="nutrition-energy">{floor(result, 'kcal')}<strong>{Math.round(result.per.kcal)}</strong> {t.kcal}</p>
     <table class="nutrition-table">
       <tbody>
         {rows.map((row) => {
@@ -106,8 +128,8 @@ for (const [key, fraction] of Object.entries(marks?.eaten ?? {})) {
           return (
             <tr class={row.sub ? 'sub' : undefined}>
               <th scope="row">{row.label}</th>
-              <td>{amount(value, row.unit)}</td>
-              <td class="dv">{dv !== null && `${dv}%`}</td>
+              <td>{floor(result, row.key)}{amount(value, row.unit)}</td>
+              <td class="dv">{dv !== null && `${floor(result, row.key)}${dv}%`}</td>
             </tr>
           );
         })}
@@ -117,6 +139,8 @@ for (const [key, fraction] of Object.entries(marks?.eaten ?? {})) {
       {t.basis}
       {[...shares].map(([share, names]) => <>{t.eaten(joinList(names, lang), share)}</>)}
       {result.leftOut.length > 0 && <>{t.leftOut(joinList(result.leftOut.map(nameOf), lang))}</>}
+      {[...lacking.values()].map(({ names, keys }) => <>{t.lacking(joinList(names, lang), either(keys.map((key) => t.nutrients[key])))}</>)}
+      {floors.length > 0 && <>{t.floor}</>}
     </p>
     {lighter && lighterAfter && (() => {
       const { label, nutrient, unit } = LIGHTER_LABELS[lang][lighter.target];
@@ -128,7 +152,7 @@ for (const [key, fraction] of Object.entries(marks?.eaten ?? {})) {
             {lighter.add.map((extra) => <li>{t.add(lighterCatalog.get(extra.ref)?.data[lang].toLowerCase() ?? extra.ref)} {extra.qty} {unitOf(extra.unit, extra.qty)}{extra.note && t.twin(extra.note)}</li>)}
           </ul>
           <p>{lighter.how}</p>
-          <p class="nutrition-note">{t.after(nutrient, amount(result.per[lighter.target], unit), amount(lighterAfter.per[lighter.target], unit), Math.round(lighterAfter.per.kcal))}</p>
+          <p class="nutrition-note">{t.after(nutrient, floor(result, lighter.target) + amount(result.per[lighter.target], unit), floor(lighterAfter, lighter.target) + amount(lighterAfter.per[lighter.target], unit), floor(lighterAfter, 'kcal') + Math.round(lighterAfter.per.kcal))}</p>
         </div>
       );
     })()}

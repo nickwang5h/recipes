@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { dailyValue, lighterItems, perServing, safetyNotes, worthShowing, type Foods } from '../src/lib/nutrition';
+import { GAP_LIMIT, SHOW_LIMIT, complete, dailyValue, gapShare, lighterItems, perServing, safetyNotes, worthShowing, type Foods } from '../src/lib/nutrition';
 
 const foods: Foods = {
   'chicken-thigh': { per100g: { kcal: 121, protein: 19.7, fat: 4.1, satfat: 1, carb: 0, sugar: 0, fiber: 0, sodium: 95 }, grams: {}, density: null, safety: 'poultry' },
@@ -54,6 +54,82 @@ describe('nutrition per serving', () => {
     expect(dailyValue('sodium', 1150)).toBe(50);
     expect(dailyValue('fiber', 7)).toBe(25);
     expect(dailyValue('kcal', 500)).toBeNull();
+  });
+});
+
+describe('figures with ingredients missing data', () => {
+  const coconut = { per100g: { kcal: 230, protein: 2.3, fat: 24, satfat: 21, carb: 5.5, sugar: null, fiber: null, sodium: 15 }, grams: {}, density: 1, safety: 'none' };
+  const dish = (extra: { key: string; ref: string; qty?: number; unit?: string }[]) => [{ key: '0-0', ref: 'chicken-thigh', qty: 900, unit: 'g' }, ...extra];
+
+  it('weighs, per nutrient, what has a figure and what has none', () => {
+    const made = perServing(dish([{ key: '0-1', ref: 'coconut-milk', qty: 100, unit: 'ml' }]), 4, { ...foods, 'coconut-milk': coconut }, undefined)!;
+    expect(made.weighed.sugar).toEqual({ known: 900, missing: 100 });
+    expect(made.weighed.fat).toEqual({ known: 1000, missing: 0 });
+    expect(made.gaps.sugar).toEqual(['0-1']);
+    expect(made.gaps.fat).toEqual([]);
+    expect(gapShare(made, 'sugar')).toBeCloseTo(0.1, 6);
+    expect(made.leftOut).toEqual([]);   // counted for everything it has
+  });
+
+  it('keeps a figure as an estimate under the limit and makes it a lower bound over it', () => {
+    const small = perServing(dish([{ key: '0-1', ref: 'coconut-milk', qty: 30, unit: 'g' }]), 4, { ...foods, 'coconut-milk': coconut }, undefined)!;
+    expect(gapShare(small, 'sugar')).toBeLessThan(GAP_LIMIT.sugar);
+    expect(complete(small, 'sugar')).toBe(true);
+    const large = perServing(dish([{ key: '0-1', ref: 'coconut-milk', qty: 400, unit: 'ml' }]), 4, { ...foods, 'coconut-milk': coconut }, undefined)!;
+    expect(complete(large, 'sugar')).toBe(false);
+    expect(complete(large, 'fiber')).toBe(false);
+    expect(complete(large, 'satfat')).toBe(true);
+    expect(large.per.sugar).toBe(0);   // the chicken's sugar: a floor, not the dish's sugar
+  });
+
+  it('counts an ingredient missing from the data as missing every figure, by its written weight', () => {
+    const made = perServing(dish([{ key: '0-1', ref: 'dried-pickled-radish', qty: 100, unit: 'g' }]), 4, foods, undefined)!;
+    expect(made.leftOut).toEqual(['0-1']);
+    expect(made.unknown).toEqual([]);   // its weight is known, so how much is missing is known too
+    for (const key of ['kcal', 'sodium', 'protein'] as const) {
+      expect(made.weighed[key]).toEqual({ known: 900, missing: 100 });
+      expect(complete(made, key)).toBe(false);
+    }
+  });
+
+  it('guesses spoons of an ingredient without data at 1 g/ml, and leaves counts it cannot weigh as unknown', () => {
+    const made = perServing(dish([{ key: '0-1', ref: 'sichuan-pepper', qty: 1, unit: '茶匙' }, { key: '0-2', ref: 'clove', qty: 2, unit: '个' }]), 4, foods, undefined)!;
+    expect(made.weighed.kcal.missing).toBe(5);
+    expect(made.unknown).toEqual(['0-2']);
+    expect(complete(made, 'kcal')).toBe(true);   // a pinch of spice in 900 g of chicken
+  });
+
+  it('holds sodium to a tighter limit: a spoon of an unmeasured sauce can carry much of the salt', () => {
+    const made = perServing(dish([{ key: '0-1', ref: 'chili-garlic-sauce', qty: 20, unit: 'g' }]), 4, foods, undefined)!;
+    expect(gapShare(made, 'sodium')).toBeGreaterThan(GAP_LIMIT.sodium);
+    expect(complete(made, 'sodium')).toBe(false);
+    expect(complete(made, 'kcal')).toBe(true);
+  });
+
+  it('weighs only what is eaten, and not water', () => {
+    const water = { per100g: { kcal: 0, protein: 0, fat: 0, satfat: 0, carb: 0, sugar: 0, fiber: 0, sodium: 0 }, grams: {}, density: 1, safety: 'none' };
+    const made = perServing(dish([{ key: '0-1', ref: 'ice-jelly-seed', qty: 50, unit: 'g' }, { key: '0-2', ref: 'water', qty: 1000, unit: 'ml' }]), 4, { ...foods, water }, { eaten: { '0-1': 0.1 }, raw: [] })!;
+    expect(made.weighed.kcal).toEqual({ known: 900, missing: 5 });
+  });
+
+  it('shows the panel with lower bounds when a main ingredient lacks data, and leaves it out only past the show limit', () => {
+    const kind = (ref: string) => (ref === 'clove' ? 'seasoning' : 'meat');
+    const sausage = dish([{ key: '0-1', ref: 'morteau-sausage', qty: 300, unit: 'g' }]);
+    const some = perServing(sausage, 4, foods, undefined)!;
+    expect(complete(some, 'kcal')).toBe(false);
+    expect(worthShowing(some, sausage, kind)).toBe(true);
+    const mostly = dish([{ key: '0-1', ref: 'morteau-sausage', qty: 1000, unit: 'g' }]);
+    const most = perServing(mostly, 4, foods, undefined)!;
+    expect(gapShare(most, 'kcal')).toBeGreaterThan(SHOW_LIMIT);
+    expect(worthShowing(most, mostly, kind)).toBe(false);
+  });
+
+  it('leaves the panel out when a main ingredient cannot even be weighed, but not for a few cloves', () => {
+    const kind = (ref: string) => (ref === 'clove' ? 'seasoning' : 'meat');
+    const cloves = dish([{ key: '0-1', ref: 'clove', qty: 2, unit: '个' }]);
+    expect(worthShowing(perServing(cloves, 4, foods, undefined)!, cloves, kind)).toBe(true);
+    const sausages = dish([{ key: '0-1', ref: 'fresh-pork-sausage', qty: 4, unit: '个' }]);
+    expect(worthShowing(perServing(sausages, 4, foods, undefined)!, sausages, kind)).toBe(false);
   });
 });
 
