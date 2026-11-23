@@ -16,7 +16,7 @@ ingredients:
       - { name: salt, note: "add in stages; use less if the dressing is salty enough" }
       - { name: toasted sesame oil }
       - { name: oyster sauce }
-translated: 2026-10-01
+translated: 2026-11-22
 ---
 
 Chinese cucumber salad is crisp, cool and strong in garlic and vinegar, and it depends on the cracked edges of the smashed cucumber to hold the dressing. Cucumber smashed until it splits and then cut into pieces keeps its crunch better than cucumber smashed to a pulp; for the principle see [Knife Work and Cooking](/principles/knife-work/). Irregular pieces are fine as long as they are close in size, so small bits aren't too salty and large pieces aren't bland.
