@@ -18,7 +18,7 @@ ingredients:
     items:
       - { name: "canned tuna", note: "packed in olive oil, weighed after draining" }
       - { name: ["cured anchovy fillet", "cured anchovy fillets"], unit: "", note: "oil-packed fillets drained; for salt-packed fillets, rinse off the surface salt first" }
-      - { name: "black olives", note: "small Niçoise olives; use Kalamata if you cannot get them, and warn people about the pits if they are pitted-in" }
+      - { name: "black olives", note: "small Niçoise olives; use Kalamata if you cannot get them, and if they still have their pits, warn people before eating" }
       - { name: [egg, eggs] }
       - { name: "garlic", note: "cut open, for rubbing the platter" }
       - { name: extra virgin olive oil }
