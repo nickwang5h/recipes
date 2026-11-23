@@ -7,7 +7,7 @@ translated: 2026-11-22
 
 ## What it is
 
-Beat a few egg whites in a bowl for a few minutes and their volume can grow six to eight times. Everything added is air. A **foam** is bubbles packed closely through a liquid that do not burst right away.
+Whipped egg whites can grow to six to eight times their volume, and everything added is air. A **foam** is bubbles packed closely through a liquid that do not burst right away.
 
 For the bubbles to last, each one needs a wall around it. Everything that whips has some ingredient that moves to the surface of the bubbles and builds that wall. In the kitchen, two things build it: **proteins** (egg white, whole egg, yolk) and **fat globules** (whipping cream).
 
@@ -15,20 +15,11 @@ For the bubbles to last, each one needs a wall around it. Everything that whips 
 
 The proteins in egg white start out curled into small balls, with some parts that like water and some that avoid it. When you whip, a protein that lands on a bubble has half of itself in air and half in water, so it unfolds and lets its water-avoiding parts reach into the air. The unfolded proteins then link to one another into a network that holds the bubbles. It is much like egg white setting when heated (see [protein denaturation and coagulation](/principles/protein-coagulation/)).
 
-As you keep beating, egg whites go through stages:
-
-| Stage | What it looks like | Used for |
-|---|---|---|
-| Foamy | Large bubbles, still flows | Egg wash |
-| Soft peaks | Peaks form but fold over | The point to start adding other ingredients |
-| Stiff peaks | Peaks stand straight up | Hard meringues baked dry |
-| Overbeaten | Dry and lumpy, water pooling in the bowl | Ruined |
-
-Overbeaten whites are proteins denatured too far: the foam turns dry and the water is squeezed out to the bottom of the bowl.
+Beaten until glossy, with peaks that curl over when you lift the beaters, the whites are at soft peaks; when the peaks stand straight up, they are at stiff peaks.
 
 ## Egg white foams hate fat and like a little acid
 
-A tiny amount of fat stops egg whites from whipping: the fat takes over the bubble surfaces and the proteins cannot build their network. A trace of yolk or a film of grease on the bowl is enough to keep whites from foaming; plastic bowls tend to hold grease, so use stainless steel or glass.
+A tiny amount of fat stops egg whites from whipping: a trace of yolk or a film of grease on the bowl is enough. Plastic bowls tend to hold grease, so use stainless steel or glass.
 
 A few other things change the result:
 

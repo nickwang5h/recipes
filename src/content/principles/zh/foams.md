@@ -8,9 +8,6 @@ sources:
   - title: "Science of Eggs: Egg Science"
     author: Exploratorium
     url: https://annex.exploratorium.edu/cooking/eggs/eggscience.html
-  - title: "Food Preparation Lab Manual for FSHN 1150，9.1 Introduction to Egg White Foams"
-    author: Iowa State University, Department of Food Science and Human Nutrition
-    url: https://iastate.pressbooks.pub/fshn115/chapter/egg-white-foams/
   - title: "How to Make Soft Meringue: Recipe & Tips"
     author: American Egg Board，Incredible Egg
     url: https://www.incredibleegg.org/recipes/cooking-school/how-to-make-soft-meringues/
@@ -22,7 +19,7 @@ updated: 2026-11-22
 
 ## 是什么
 
-几个蛋白在碗里打几分钟，体积能涨到原来的六到八倍。多出来的全是空气。**泡沫**就是气泡密密地散在液体里，而且一时不破。
+蛋白打发后，体积能涨到原来的六到八倍，多出来的全是空气。**泡沫**就是气泡密密地散在液体里，而且一时不破。
 
 气泡要留得住，外面得有一层壁。能打发的东西，都有一种成分会跑到气泡表面，把这层壁搭起来。厨房里搭壁的有两种：**蛋白质**（蛋白、全蛋、蛋黄）和**脂肪球**（淡奶油）。
 
@@ -30,20 +27,11 @@ updated: 2026-11-22
 
 蛋白里的蛋白质原本卷成一团小球，一部分喜欢水，一部分怕水。搅打时，一个蛋白质贴到气泡上，一半在空气里、一半在水里，它就松开，让怕水的部分伸进空气。松开的蛋白质再彼此连起来，结成一张网，把气泡兜住。这和加热时蛋白凝固很像，见[蛋白质变性与凝固](/principles/protein-coagulation/)。
 
-蛋白一路打下去，状态会一步步变：
-
-| 状态 | 看起来 | 用在哪里 |
-|---|---|---|
-| 粗泡 | 大气泡，还能流动 | 刷面的蛋液 |
-| 湿性发泡 | 提起有尖，尖会弯下去 | 开始拌进其他材料 |
-| 硬性发泡 | 尖角直立，不弯 | 烤干的硬蛋白霜 |
-| 打过头 | 发干、结块，碗底析出水 | 已经打坏 |
-
-打过头，是蛋白质变性得太过，泡沫发干，水分被挤到碗底。
+打到发亮、提起打蛋器时尖角弯下来，是湿性发泡；尖角笔直立住，是硬性发泡。
 
 ## 蛋白泡沫怕油，要一点酸
 
-一点点油脂就会妨碍蛋白打发：油会抢着占住气泡表面，蛋白质搭不成网。混进一丝蛋黄、碗上留着油膜，蛋白都打不起来；塑料碗容易残留油，最好用不锈钢或玻璃碗。
+一点点油脂就会让蛋白打不起来：混进一丝蛋黄、碗上留着油膜都不行。塑料碗容易残留油，最好用不锈钢或玻璃碗。
 
 另外几样东西也会改变结果：
 

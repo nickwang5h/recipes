@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="t d">
   <title id="t">蛋白泡沫靠展开的蛋白质，奶油泡沫靠粘连的脂肪球</title>
-  <desc id="d">左边一个气泡，表面排着展开的蛋白质，一头伸进空气，一头留在水里，彼此相连。中间是混进油脂后，油占住气泡表面，蛋白质搭不成网。右边一个气泡被部分粘连的脂肪球包住，脂肪球之间连成链。下方注明淡奶油约 35% 脂肪、要冷，以及蛋白体积可涨到六到八倍。</desc>
+  <desc id="d">左边一个气泡，表面排着展开的蛋白质，一头伸进空气，一头留在水里，彼此相连。中间是混进了油脂的蛋白，打不起来。右边一个气泡被部分粘连的脂肪球包住，脂肪球之间连成链。下方注明淡奶油约 35% 脂肪、要冷，以及蛋白体积可涨到六到八倍。</desc>
   <style>
     .bg { fill: var(--surface, #e9e5dc); }
     .water { fill: #9cc3d9; fill-opacity: .45; }
@@ -32,7 +32,7 @@
   <path class="oil" d="M266 160 a36 36 0 0 1 22 -20 l6 12 a22 22 0 0 0 -16 14 z"/>
   <path class="oil" d="M326 196 a36 36 0 0 1 -18 14 l-4 -12 a22 22 0 0 0 12 -10 z"/>
   <path class="protein" d="M276 222 q8 6 16 0 M314 132 q8 -6 14 2"/>
-  <text class="label muted" x="300" y="272" text-anchor="middle">油占住表面，搭不成网</text>
+  <text class="label muted" x="300" y="272" text-anchor="middle">混进油脂就打不起来</text>
 
   <text class="label" x="490" y="84" text-anchor="middle">奶油：脂肪球粘成链</text>
   <rect class="water" x="410" y="100" width="160" height="150" rx="10"/>

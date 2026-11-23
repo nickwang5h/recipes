@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="t d">
   <title id="t">Egg white foam relies on unfolded proteins; cream foam on clustered fat globules</title>
-  <desc id="d">On the left, an air bubble lined with unfolded proteins, one end reaching into the air and one staying in the water, linked to each other. In the middle, fat has taken over the bubble surface and the proteins cannot form a network. On the right, a bubble wrapped in partly clustered fat globules linked in a chain. Notes below: whipping cream is about 35% fat and must be cold, and egg whites can grow six to eight times in volume.</desc>
+  <desc id="d">On the left, an air bubble lined with unfolded proteins, one end reaching into the air and one staying in the water, linked to each other. In the middle, egg white with a trace of fat, which will not whip. On the right, a bubble wrapped in partly clustered fat globules linked in a chain. Notes below: whipping cream is about 35% fat and must be cold, and egg whites can grow six to eight times in volume.</desc>
   <style>
     .bg { fill: var(--surface, #e9e5dc); }
     .water { fill: #9cc3d9; fill-opacity: .45; }
@@ -32,7 +32,7 @@
   <path class="oil" d="M266 160 a36 36 0 0 1 22 -20 l6 12 a22 22 0 0 0 -16 14 z"/>
   <path class="oil" d="M326 196 a36 36 0 0 1 -18 14 l-4 -12 a22 22 0 0 0 12 -10 z"/>
   <path class="protein" d="M276 222 q8 6 16 0 M314 132 q8 -6 14 2"/>
-  <text class="label muted" x="300" y="272" text-anchor="middle">Fat takes the surface</text>
+  <text class="label muted" x="300" y="272" text-anchor="middle">Fat stops the whipping</text>
 
   <text class="label" x="490" y="84" text-anchor="middle">Cream: fat globules cluster</text>
   <rect class="water" x="410" y="100" width="160" height="150" rx="10"/>
