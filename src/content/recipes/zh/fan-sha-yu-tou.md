@@ -7,7 +7,7 @@ course: dessert
 summary: 芋条炸透后裹浓糖液，离火翻拌让糖结成白色细砂，入口先酥甜再粉糯。
 servings: 2
 time: { prep: 10, cook: 15 }
-principles: [oil-temperature, starch-gelatinization, caramelization]
+principles: [oil-temperature, starch-gelatinization, caramelization, sugar-syrup]
 ingredients:
   - items:
       - { ref: taro, name: 粉质大芋头, qty: 200, unit: g, note: 去皮后的重量，选荔浦芋头一类粉质品种 }

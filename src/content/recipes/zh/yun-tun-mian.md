@@ -7,7 +7,7 @@ course: staple
 summary: 虾肉猪肉云吞配细碱水面，清汤另煮，面条短烫回热，留住弹性和清鲜。
 servings: 6
 time: { prep: 50, cook: 25 }
-principles: [protein-coagulation, starch-gelatinization, heat-transfer]
+principles: [protein-coagulation, starch-gelatinization, heat-transfer, meat-paste]
 ingredients:
   - group: 云吞
     items:

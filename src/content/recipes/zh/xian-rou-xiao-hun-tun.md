@@ -7,7 +7,7 @@ course: staple
 summary: 极薄的皮只包一点鲜肉，轻轻捏合后短煮，另浇鸡骨与猪骨熬的清汤，入口轻软。
 servings: 4
 time: { prep: 50, cook: 250 }
-principles: [salt, protein-coagulation, heat-transfer]
+principles: [salt, protein-coagulation, heat-transfer, meat-paste]
 ingredients:
   - group: 清汤
     items:

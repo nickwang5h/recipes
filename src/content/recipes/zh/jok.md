@@ -8,7 +8,7 @@ course: breakfast
 summary: 香米煮到米粒散成细粥，再用猪骨汤调开，加入嫩肉丸；姜丝和白胡椒在上桌时添香。
 servings: 4
 time: { prep: 10, cook: 70 }
-principles: [starch-gelatinization, salt, protein-coagulation]
+principles: [starch-gelatinization, salt, protein-coagulation, meat-paste]
 ingredients:
   - group: 粥底
     items:

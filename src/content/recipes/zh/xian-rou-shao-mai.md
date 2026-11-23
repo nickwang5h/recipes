@@ -7,7 +7,7 @@ course: staple
 summary: 猪肉馅先搅到发黏，再分次吸收高汤，薄皮收成开口小杯，蒸熟后软嫩多汁。
 servings: 3
 time: { prep: 50, cook: 20 }
-principles: [salt, protein-coagulation, heat-transfer]
+principles: [salt, protein-coagulation, heat-transfer, meat-paste]
 ingredients:
   - group: 皮与肉馅
     items:

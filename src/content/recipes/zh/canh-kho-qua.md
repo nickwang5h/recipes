@@ -8,7 +8,7 @@ course: soup
 summary: 苦瓜填入猪肉、木耳和粉丝馅，小火煮到瓜肉软透；清汤留着苦味，肉馅保持成块。
 servings: 4
 time: { prep: 25, cook: 40 }
-principles: [protein-coagulation, heat-transfer]
+principles: [protein-coagulation, heat-transfer, meat-paste]
 ingredients:
   - group: 酿苦瓜
     items:

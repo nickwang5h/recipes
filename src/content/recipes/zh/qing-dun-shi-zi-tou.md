@@ -7,7 +7,7 @@ course: meat
 summary: 五花肉手切成小粒，分次打水拌到发黏，做成大肉圆，以白菜护住，小火清炖到能用勺分开。
 servings: 4
 time: { prep: 90, cook: 130 }
-principles: [knife-work, salt, protein-coagulation]
+principles: [knife-work, salt, protein-coagulation, meat-paste]
 ingredients:
   - group: 肉圆
     items:

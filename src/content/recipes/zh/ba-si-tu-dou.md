@@ -7,7 +7,7 @@ course: veg
 summary: 土豆炸到中心熟软、表面金黄，再裹刚转浅金色的浓糖液，趁热夹起能拉出细丝。
 servings: 2
 time: { prep: 10, cook: 20 }
-principles: [oil-temperature, caramelization, starch-gelatinization]
+principles: [oil-temperature, caramelization, starch-gelatinization, sugar-syrup]
 ingredients:
   - group: 炸土豆
     items:

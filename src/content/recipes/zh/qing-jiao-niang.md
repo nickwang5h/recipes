@@ -8,7 +8,7 @@ tags: [bento]
 summary: 肉馅搅到发黏后酿入尖椒，先煎出虎皮，再加酱汁焖熟；椒皮有焦香，肉馅紧实而多汁。
 servings: 2
 time: { prep: 25, cook: 20 }
-principles: [salt, heat-transfer, starch-gelatinization]
+principles: [salt, heat-transfer, starch-gelatinization, meat-paste]
 ingredients:
   - group: 青椒与肉馅
     items:

@@ -7,7 +7,7 @@ course: meat
 summary: 用青椒猪肉酿示范桂林酿菜的填馅、煎定形和加盖焖熟，肉馅紧实多汁。
 servings: 3
 time: { prep: 25, cook: 20 }
-principles: [salt, protein-coagulation, heat-transfer]
+principles: [salt, protein-coagulation, heat-transfer, meat-paste]
 ingredients:
   - group: 青椒与肉馅
     items:

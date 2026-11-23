@@ -7,7 +7,7 @@ course: dessert
 summary: 酸山楂裹一层清亮脆糖，关键是把糖液熬到冷水中能脆断，再迅速蘸裹。
 servings: 6
 time: { prep: 25, cook: 10 }
-principles: [caramelization, heat-transfer]
+principles: [caramelization, heat-transfer, sugar-syrup]
 ingredients:
   - group: 果串
     items:

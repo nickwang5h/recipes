@@ -7,7 +7,7 @@ course: soup
 summary: 肉馅加盐打水至发黏，在微沸汤中定形；木耳、黄花菜和粉丝先煮熟再入碗。
 servings: 4
 time: { prep: 40, cook: 20 }
-principles: [salt, protein-coagulation, starch-gelatinization]
+principles: [salt, protein-coagulation, starch-gelatinization, meat-paste]
 ingredients:
   - group: 丸子
     items:

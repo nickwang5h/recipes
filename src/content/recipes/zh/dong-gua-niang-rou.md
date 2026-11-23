@@ -7,7 +7,7 @@ course: meat
 summary: 薄冬瓜片卷住肉馅，蒸到瓜肉半透明，再用盘里的鲜汁勾一层薄芡。
 servings: 2
 time: { prep: 20, cook: 20 }
-principles: [salt, protein-coagulation, starch-gelatinization]
+principles: [salt, protein-coagulation, starch-gelatinization, meat-paste]
 ingredients:
   - group: 瓜卷与肉馅
     items:

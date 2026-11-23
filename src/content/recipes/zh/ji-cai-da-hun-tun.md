@@ -7,7 +7,7 @@ course: staple
 summary: 荠菜挤水切碎，与带脂肪的猪肉拌成黏馅；白色方皮包得饱满，清汤托出菜香。
 servings: 6
 time: { prep: 80, cook: 30 }
-principles: [salt, protein-coagulation, heat-transfer]
+principles: [salt, protein-coagulation, heat-transfer, meat-paste]
 ingredients:
   - group: 馅与皮
     items:

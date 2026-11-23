@@ -7,7 +7,7 @@ course: staple
 summary: 薄皮裹住柔软猪肉馅，煮熟后拌蒜香红油汁。肉馅先搅到能吸水，皮才嫩、馅才多汁。
 servings: 4
 time: { prep: 35, cook: 15 }
-principles: [salt, protein-coagulation, aromatics]
+principles: [salt, protein-coagulation, aromatics, meat-paste]
 ingredients:
   - group: 抄手
     items:

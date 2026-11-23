@@ -8,7 +8,7 @@ course: seafood
 summary: 鱼肉与红咖喱酱打成黏稠鱼浆，拌豆角和马蜂橙叶炸成弹韧小饼，配酸甜黄瓜蘸汁。
 servings: 4
 time: { prep: 25, cook: 20 }
-principles: [protein-coagulation, oil-temperature, aromatics]
+principles: [protein-coagulation, oil-temperature, aromatics, meat-paste]
 ingredients:
   - group: 鱼饼
     items:
