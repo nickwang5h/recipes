@@ -10,7 +10,7 @@ ingredients:
   - group: Broth
     items:
       - { name: water, note: "for soaking and blanching, enough to cover the bones; poured off afterwards" }
-      - { name: water, note: "cold, for the broth itself; use a pot of 8 L or more, and top up with boiling water as it cooks" }
+      - { name: water, note: "cold, for the broth itself, filled to within a few centimetres of the rim; use a pot of 8 L or more, and top up with boiling water as it cooks" }
   - group: At the table
     items:
       - { name: [green onion, green onions], note: "chopped" }
@@ -28,7 +28,7 @@ For the broth to turn white, the heat has to stay high enough to keep it at a ro
 
 1. Put the bones in a large bowl, cover with cold water and soak in the refrigerator for 1–3 hours, changing the water once, until it turns pale pink. Soak the brisket in a separate bowl of cold water in the refrigerator for 1 hour.
 2. Drain the bones, put them in the stockpot and cover with cold water. Bring to a boil over high heat, then boil over medium heat for 5 minutes, until a lot of scum rises. Pour off the water, rinse each bone clean, and scrub the brown bits off the sides and bottom of the pot.
-3. Return the bones to the pot, add 6000 ml of cold water, bring to a boil over high heat and skim. Turn to medium, cover, and keep the broth at a rolling boil, not a gentle bubble. Boil for 5 hours, topping up with boiling water when the level nears the tops of the bones, usually once or twice. If the broth is still clear after 2–3 hours, turn the heat up a little.
+3. Return the bones to the pot, add cold water to within a few centimetres of the rim, leaving room for it to boil, bring to a boil over high heat and skim. Turn to medium, cover, and keep the broth at a rolling boil, not a gentle bubble. Boil for 5 hours, topping up with boiling water when the level nears the tops of the bones, usually once or twice. If the broth is still clear after 2–3 hours, turn the heat up a little.
 4. Once the broth is white, like thin milk, add the drained brisket, topping up with boiling water to cover it. Keep boiling over medium heat for 1.5–2 hours, until chopsticks slide easily into the thickest part of the brisket.
 5. Lift out the brisket, let it cool, and slice it thinly across the grain.
 6. Strain the broth through a fine sieve into another pot and discard the bones. For a richer broth, first return the bones to the pot with fresh cold water, boil another 3–5 hours, strain, and combine with the first batch.
