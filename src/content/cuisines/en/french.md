@@ -23,7 +23,7 @@ Carême was the first to sort French sauces into a few large families. In *Le Gu
 | Mother sauce | Liquid | How it is thickened |
 |---|---|---|
 | [Béchamel](/recipes/bechamel/) | Milk | White roux |
-| Velouté | White stock | Blond roux |
+| [Velouté](/recipes/veloute/) | White stock | Blond roux |
 | Espagnole | Brown stock | Brown roux |
 | Sauce tomate | Tomato | Reduction (traditionally also roux) |
 | [Hollandaise](/recipes/hollandaise/) | Butter | Egg yolk emulsion |

@@ -27,7 +27,7 @@ Carême 最早把法式酱汁分成几大类。Escoffier 在《烹饪指南》�
 | 母酱 | 液体 | 增稠方式 |
 |---|---|---|
 | [Béchamel](/recipes/bechamel/) | 牛奶 | 白 roux |
-| Velouté | 白色高汤 | 金 roux |
+| [Velouté](/recipes/veloute/) | 白色高汤 | 金 roux |
 | Espagnole | 褐色高汤 | 褐 roux |
 | Sauce tomate | 番茄 | 收汁（传统上也用 roux） |
 | [Hollandaise](/recipes/hollandaise/) | 黄油 | 蛋黄乳化 |
