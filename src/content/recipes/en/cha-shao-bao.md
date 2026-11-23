@@ -20,7 +20,7 @@ ingredients:
       - { name: Shaoxing wine }
       - { name: sugar }
       - { name: garlic, note: "grated" }
-      - { name: five spice powder }
+      - { name: five spice powder, note: a pinch }
       - { name: cornstarch, note: "mixed with 1 tbsp cold water" }
   - group: Steaming
     items:
