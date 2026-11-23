@@ -7,7 +7,7 @@ ingredients:
   - group: Half-scalded dough
     items:
       - { name: all-purpose flour }
-      - { name: hot water, note: about 80°C }
+      - { name: hot water, note: "about 80°C (175°F)" }
       - { name: cold water }
   - group: Oil paste and griddling
     items:
