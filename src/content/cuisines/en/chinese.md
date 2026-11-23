@@ -17,7 +17,7 @@ A home stove has limited power, so to get *wok hei* you must not let the wok coo
 
 ## Oil carries flavour into the dish
 
-The heat of chilies and the numbing of Sichuan peppercorns dissolve in oil, not in water. Sizzling aromatics in oil, stir-frying until fragrant and cooking out red oil all start by pulling these flavours into hot oil (for oil temperature, see [Oil Temperature and Deep Frying](/principles/oil-temperature/)), then letting the oil coat the main ingredient (see [Spices and Aromatics](/principles/aromatics/)). That is why Sichuan cooking so often begins by frying chili bean paste and chilies until the oil is red and glossy. The salty, savoury base of chili bean paste, fermented black beans and fermented tofu comes from [fermentation](/principles/fermentation/).
+The heat of chilies, the numbing of Sichuan peppercorns and the aroma compounds of many spices dissolve more readily in oil than in water. Sizzling aromatics in oil, stir-frying until fragrant and cooking out red oil all start by pulling these flavours into hot oil (for oil temperature, see [Oil Temperature and Deep Frying](/principles/oil-temperature/)), then letting the oil coat the main ingredient (see [Spices and Aromatics](/principles/aromatics/)). That is why Sichuan cooking so often begins by frying chili bean paste and chilies until the oil is red and glossy. The salty, savoury base of chili bean paste, fermented black beans and fermented tofu comes from [fermentation](/principles/fermentation/).
 
 ## Seasoning means picking a "flavour profile", not one taste
 
