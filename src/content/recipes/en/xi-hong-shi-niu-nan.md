@@ -41,7 +41,7 @@ Tomato braised beef brisket is made by cooking the beef and the tomatoes separat
 
 ## Key points
 
-- **Brisket is cooked but not tender**: the muscle is cooked but the tendon has not finished softening (see [Collagen and Gelatin](/principles/collagen-gelatin/)). Keep simmering the beef in the clear broth until the tendon is soft.
-- **Tomato sauce is like thin soup**: too much cooking liquid was added when combining (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). Add it only up to the level of the meat, and reduce uncovered.
+- **Brisket is cooked but not tender**: the muscle is cooked but the tendon has not finished softening (see [Collagen and Gelatin](/principles/collagen-gelatin/)). Keep simmering the beef in the clear broth; do not rely on a few minutes of stir-frying at the end to fix it.
+- **Tomato sauce is like thin soup**: too much cooking liquid was added when combining (see [Heat Transfer: Conduction, Convection and Radiation](/principles/heat-transfer/)). Add it only up to the level of the meat, and reduce uncovered; do not thin the whole pot just to use up the cooking liquid.
 - **Lots of grey scum on the surface**: the particles after blanching were not cleaned off (see [Blanching and Removing Off-Odours](/principles/blanching/)). Clean the meat and the pot, stew in fresh water, and keep it at a gentle simmer afterwards.
 - **The tomato sauce seeps into the rice in a lunch box**: left overnight, the sweet-sour sauce soaks the rice underneath it. Pack the brisket with its sauce in a lidded compartment, the rice separately, and refrigerate promptly. The next day, add a tablespoon of the cooking broth or water, reheat with the lid ajar, stir once halfway, and bring the brisket to 74°C (165°F) in the centre; keep leftover broth in the fridge for thinning the sauce when reheating.
