@@ -34,10 +34,59 @@ function grams(item: Item, food: Food | undefined): number | null {
   return weight ? item.qty * weight : null;
 }
 
-/** Amounts per serving, the keys of required items left out, and of those the ones that had a quantity (no data or no
- *  weight for their unit); null when no item could be weighed. */
-export function perServing(items: Item[], servings: number, foods: Foods, marks: Marks | undefined) {
+/** A guess at the weight of an item that cannot be counted, only to judge how much of the dish lacks data: grams as
+ *  written, spoons and millilitres at 1 g/ml. A count (2 cloves, 4 sausages) without a known piece weight is null. */
+function roughGrams(item: Item): number | null {
+  if (item.qty === undefined) return null;
+  if (item.unit === 'g') return item.qty;
+  if (item.unit && item.unit in VOLUME) return item.qty * VOLUME[item.unit];
+  return null;
+}
+
+/**
+ * How much of what is eaten may lack data for a figure, as a share of the weight that was weighed, before the figure
+ * is shown as a lower bound ("≥ …") instead of an estimate. Items without data add nothing to the sum, so the sum is
+ * always a floor; the question is only how far below the truth it can be.
+ *
+ * 5% for most figures. If the missing items are about as rich in a nutrient as the rest of the dish, 5% of the weight
+ * puts the figure about 5% low, less than the error already in matching foods and guessing how much is eaten; to be 20%
+ * low they would have to be about four times as rich. In the November 2026 data the whole spices the data lacks
+ * (Sichuan pepper, cassia, cloves, white pepper's sugar) stay under 5% of every dish and mostly under 1%, while the
+ * main ingredients without a figure (coconut milk's sugar and fibre, noodles' sugar, shiitake's saturated fat, a 50 g
+ * pickle, a 300 g sausage) mostly run from 10% to the whole dish. A 2% limit would flag 19 more dishes, nearly all for
+ * a little shiitake (saturated fat), pickled chili or sesame paste (sugar), which have little of either; 10% would let
+ * through 12, such as the sugar of the coconut milk in bánh xèo or of the bean sprouts in bibimbap.
+ * Sodium is held to 1%: it comes mostly from salty condiments that weigh little, so a spoon of an unmeasured sauce
+ * (1.7% of a dish by weight) can carry a large part of the salt. `node scripts/nutrition-gaps.mjs` lists what each
+ * limit flags.
+ */
+export const GAP_LIMIT: Record<Key, number> = { kcal: 0.05, protein: 0.05, fat: 0.05, satfat: 0.05, carb: 0.05, sugar: 0.05, fiber: 0.05, sodium: 0.01 };
+
+/**
+ * Past this share of the weight without data for energy, even the floors say little (a dish whose main ingredient has
+ * no data would show a fraction of its calories), so the panel is left out. Nothing on the site comes near it today:
+ * the largest is a third (the Morteau sausage in saucisses-aux-lentilles).
+ */
+export const SHOW_LIMIT = 0.5;
+
+export interface Counted {
+  /** Amounts per serving, of the items with data. */
+  per: Record<Key, number>;
+  /** Required items not counted at all: no quantity, no data, or no weight for their unit. */
+  leftOut: string[];
+  /** Of those, the ones with a quantity whose weight cannot even be guessed (a count without a piece weight). */
+  unknown: string[];
+  /** Per nutrient, grams eaten with data and grams eaten without (a guess for items that cannot be weighed). */
+  weighed: Record<Key, { known: number; missing: number }>;
+  /** Per nutrient, the measured items that have no figure for it. */
+  gaps: Record<Key, string[]>;
+}
+
+/** Amounts per serving and how much of the dish each amount covers; null when no item could be weighed. */
+export function perServing(items: Item[], servings: number, foods: Foods, marks: Marks | undefined): Counted | null {
   const total = Object.fromEntries(KEYS.map((key) => [key, 0])) as Record<Key, number>;
+  const weighed = Object.fromEntries(KEYS.map((key) => [key, { known: 0, missing: 0 }])) as Counted['weighed'];
+  const gaps = Object.fromEntries(KEYS.map((key) => [key, [] as string[]])) as Counted['gaps'];
   const leftOut: string[] = [];
   const unknown: string[] = [];
   let counted = 0;
@@ -45,23 +94,58 @@ export function perServing(items: Item[], servings: number, foods: Foods, marks:
     if (item.optional) continue;
     const food = foods[item.ref];
     const weight = grams(item, food);
+    const share = marks?.eaten[item.key] ?? 1;
     if (weight === null) {
       leftOut.push(item.key);
-      if (item.qty !== undefined) unknown.push(item.key);
+      if (item.qty === undefined) continue;   // "salt to taste": named in the note, nothing to weigh
+      const rough = roughGrams(item);
+      if (rough === null) {
+        unknown.push(item.key);
+        continue;
+      }
+      for (const key of KEYS) {
+        weighed[key].missing += rough * share;
+        if (rough * share > 0) gaps[key].push(item.key);
+      }
       continue;
     }
     counted += 1;
-    const share = marks?.eaten[item.key] ?? 1;
-    for (const key of KEYS) total[key] += (weight / 100) * (food.per100g[key] ?? 0) * share;
+    for (const key of KEYS) {
+      const value = food!.per100g[key];
+      if (value === null || value === undefined) {
+        weighed[key].missing += weight * share;
+        if (weight * share > 0) gaps[key].push(item.key);
+        continue;
+      }
+      total[key] += (weight / 100) * value * share;
+      weighed[key].known += weight * share;
+    }
   }
   if (!counted) return null;
   const per = Object.fromEntries(KEYS.map((key) => [key, total[key] / servings])) as Record<Key, number>;
-  return { per, leftOut, unknown };
+  return { per, leftOut, unknown, weighed, gaps };
 }
 
-/** The numbers mean something only when every measured ingredient without data is a seasoning, small by weight. */
-export function worthShowing(result: { unknown: string[] }, items: Item[], kindOf: (ref: string) => string): boolean {
-  return result.unknown.every((key) => kindOf(items.find((item) => item.key === key)!.ref) === 'seasoning');
+/** The share of the weighed weight that has no data for this nutrient, 0–1. */
+export function gapShare(result: Pick<Counted, 'weighed'>, key: Key): number {
+  const { known, missing } = result.weighed[key];
+  return known + missing > 0 ? missing / (known + missing) : 0;
+}
+
+/** Whether the figure is an estimate (true) or only a lower bound (false). */
+export function complete(result: Pick<Counted, 'weighed'>, key: Key): boolean {
+  return gapShare(result, key) <= GAP_LIMIT[key];
+}
+
+/**
+ * Whether the panel is shown at all. Each figure is kept honest on its own by `complete`, so the panel is left out
+ * only when the floors would say little: more than SHOW_LIMIT of the weight without data for energy, or an item whose
+ * weight cannot even be guessed (a count with no piece weight), unless that item is a seasoning (a few cloves, a stick
+ * of cassia, a sprig of thyme).
+ */
+export function worthShowing(result: Pick<Counted, 'weighed' | 'unknown'>, items: Item[], kindOf: (ref: string) => string): boolean {
+  return gapShare(result, 'kcal') <= SHOW_LIMIT
+    && result.unknown.every((key) => kindOf(items.find((item) => item.key === key)!.ref) === 'seasoning');
 }
 
 // Health Canada, "Safe internal cooking temperatures".

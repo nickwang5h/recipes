@@ -25,6 +25,8 @@ Planned and published slugs live in `docs/content-plan.md`.
   --to ~/Projects/recipes/src/data`): each catalog ingredient matched to a Canadian Nutrient File food with piece
   weights and densities, and per recipe what is not all eaten and what is served raw. `src/lib/nutrition.ts` sums it
   per serving; `NutritionPanel.astro` shows it with food-safety notes. New ingredients or recipes need a re-run.
+  A figure whose ingredients without data pass `GAP_LIMIT` shows as a lower bound (“≥”); `node scripts/nutrition-gaps.mjs`
+  lists those recipes and the ingredients whose data would close the most gaps.
 - Principles: explain *why*; link recipes and other principles with `/principles/<slug>/` paths.
   "用到它的菜" is generated from recipe front matter — do not write it by hand.
 - Every principle and recipe needs at least one reliable source. Do not invent personal experience.
