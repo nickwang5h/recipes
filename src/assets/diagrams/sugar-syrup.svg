@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" role="img" aria-labelledby="t d">
+  <title id="t">糖浆熬得越久，水越少、温度越高，凉下来越硬</title>
+  <desc id="d">一根竖着的温度计，从下往上标出拉丝 110–113°C、软球 113–116°C、硬球 121–129°C、软脆 132–143°C、硬脆 149–154°C，再往上 160°C 没有水、170°C 变褐、177°C 以上焦苦。右边写着每一档滴进冷水的样子和糖的浓度，颜色从透明渐渐变成琥珀和深褐。</desc>
+  <style>
+    .bg { fill: var(--surface, #e9e5dc); }
+    .tube { fill: none; stroke: var(--text, #24221e); stroke-width: 2; }
+    .tick { stroke: var(--text, #24221e); stroke-width: 2; }
+    .label { font: 15px "Source Han Sans SC", "PingFang SC", sans-serif; fill: var(--text, #24221e); }
+    .muted { fill: var(--muted, #625d53); font-size: 13px; }
+    .strong { fill: var(--primary, #b83e30); }
+    .border { stroke: var(--border, #d3ccbe); stroke-width: 2; fill: none; }
+  </style>
+  <rect class="bg" width="600" height="440" rx="12"/>
+  <text class="label" x="32" y="40">温度越高，水越少，凉了越硬</text>
+
+  <!-- syrup colour column: clear at bottom, amber and brown at top -->
+  <rect x="60" y="66" width="34" height="330" rx="6" fill="#f6eed6"/>
+  <rect x="60" y="66" width="34" height="62" fill="#c98a2b"/>
+  <rect x="60" y="66" width="34" height="26" fill="#7a3d14"/>
+  <rect x="60" y="128" width="34" height="34" fill="#e8c27a"/>
+  <rect class="tube" x="60" y="66" width="34" height="330" rx="6"/>
+
+  <g class="tick">
+    <path d="M94 372 h14 M94 336 h14 M94 286 h14 M94 230 h14 M94 176 h14 M94 146 h14 M94 116 h14 M94 84 h14"/>
+  </g>
+
+  <text class="label" x="118" y="377">110–113°C 拉丝</text>
+  <text class="label muted" x="300" y="377">约 80%：成细丝，团不成球</text>
+
+  <text class="label" x="118" y="341">113–116°C 软球</text>
+  <text class="label muted" x="300" y="341">约 85%：软球，拿出来就摊平</text>
+
+  <text class="label" x="118" y="291">121–129°C 硬球</text>
+  <text class="label muted" x="300" y="291">约 92%：硬球，用力捏还能变形</text>
+
+  <text class="label" x="118" y="235">132–143°C 软脆</text>
+  <text class="label muted" x="300" y="235">约 95%：细丝弯一下再断</text>
+
+  <text class="label" x="118" y="181">149–154°C 硬脆</text>
+  <text class="label muted" x="300" y="181">约 99%：硬丝，一弯就断</text>
+
+  <text class="label" x="118" y="151">约 160°C 没有水了</text>
+  <text class="label muted" x="300" y="151">浅琥珀色的液体</text>
+
+  <text class="label" x="118" y="121">约 170°C 开始变褐</text>
+  <text class="label muted" x="300" y="121">焦糖化</text>
+
+  <text class="label strong" x="118" y="89">约 177°C 以上 焦苦</text>
+
+  <path class="border" d="M32 410 H568"/>
+  <text class="label muted" x="32" y="430">温度按海平面算；温度计先在沸水里试，应读 100°C。</text>
+</svg>

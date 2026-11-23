@@ -229,6 +229,7 @@ Principle titles (use them in link text too):
 | protein-coagulation | Protein Denaturation and Coagulation |
 | salt | Salt: Seasoning, Osmosis and Curing |
 | starch-gelatinization | Starch Gelatinization |
+| sugar-syrup | Sugar Syrup: Concentration, Temperature and Crystals |
 | umami | Umami |
 
 Cuisines: Chinese, French, Italian, Japanese, Korean, Thai, Vietnamese. Chinese regional cuisines:
