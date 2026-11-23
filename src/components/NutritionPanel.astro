@@ -34,8 +34,8 @@ const T = {
   en: {
     title: 'Nutrition per serving', kcal: 'kcal', safety: 'Food safety',
     rows: ['Protein', 'Fat', 'of which saturated', 'Carbohydrate', 'of which sugars', 'Fibre', 'Sodium'],
-    basis: `Estimated from the Canadian Nutrient File, divided into ${servings} servings; percentages are of the daily values on Canadian nutrition labels. `,
-    eaten: (names: string, share: number) => `${names}: counted as about ${share}% eaten. `,
+    basis: `Estimated from the Canadian Nutrient File, divided into ${servings} ${servings === 1 ? 'serving' : 'servings'}; percentages are of the daily values on Canadian nutrition labels. `,
+    eaten: (names: string, share: number) => `Counted as about ${share}% eaten: ${names}. `,
     leftOut: (names: string) => `Not counted: ${names} (no amount given, or no data). `,
     lacking: (names: string, nutrients: string) => `No ${nutrients} figures for ${names}. `,
     floor: 'Figures marked ≥ are lower bounds: ingredients without data are not counted, so the real amount may be higher.',
