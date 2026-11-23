@@ -1,8 +1,8 @@
 ---
-title: Stewed Lamb Chops with Daikon
+title: Stewed Lamb Ribs with Daikon
 original: 萝卜炖羊排
 summary: The lamb ribs are stewed until the sinew and meat are tender, and the daikon goes in later, keeping the broth clear and the daikon pieces whole and full of broth.
-coverAlt: Illustration of stewed lamb chops with daikon plated
+coverAlt: Illustration of stewed lamb ribs with daikon plated
 ingredients:
   - group: Main ingredients
     items:
