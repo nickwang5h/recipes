@@ -2,7 +2,7 @@
 // and writes (favorites, notes, menu, fridge, shopping list). Writes are local and instant;
 // when the device has joined a family, changed keys are posted to /api/sync in the background
 // and the merged doc comes back. Without a family code nothing leaves the device.
-import { merge, newFamilyCode, prune, type Doc } from '../lib/sync';
+import { merge, newFamilyCode, prune, repair, type Doc } from '../lib/sync';
 
 const DOC = 'recipes:v2:doc';
 const PENDING = 'recipes:v2:pending';
@@ -25,7 +25,9 @@ const write = (key: string, value: unknown) => {
   } catch {}
 };
 
-let doc: Doc = read<Doc>(DOC, {});
+// A device that synced while the server still saved a time of 1e999 as null holds that entry too; sending it back
+// would be refused, so it is repaired the way the server repairs its copy.
+let doc: Doc = repair(read<Doc>(DOC, {}));
 let pending = new Set<string>(read<string[]>(PENDING, []));
 let family: string | null = read<string | null>(FAMILY, null);
 let state: SyncState = family ? 'synced' : 'local';
@@ -125,7 +127,7 @@ export async function syncNow(): Promise<void> {
       });
       if (!res.ok) throw new Error(String(res.status));
       const body = (await res.json()) as { entries: Doc };
-      doc = prune(merge(doc, body.entries), Date.now());
+      doc = prune(merge(doc, repair(body.entries)), Date.now());
       // Keys edited again while the request was out stay pending.
       for (const [k, e] of Object.entries(sent)) if (doc[k]?.t === e.t) pending.delete(k);
       // Anything the server lacks or has an older copy of goes out next time, so a write lost
