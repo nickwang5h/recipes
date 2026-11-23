@@ -1,5 +1,5 @@
 ---
-title: Shiitake Mushrooms with Choy Sum
+title: Shiitake Mushrooms with Baby Bok Choy
 original: 香菇油菜
 summary: Soaked shiitake are braised in a savoury sauce and spooned over freshly blanched bok choy. The greens are drained first and the glaze thickened last, for a thin, glossy coating.
 coverAlt: Illustration of shiitake mushrooms with bok choy plated
