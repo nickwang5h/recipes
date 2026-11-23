@@ -4560,7 +4560,9 @@
         "fiber": 0,
         "sodium": 49
       },
-      "grams": {},
+      "grams": {
+        "条": 2750
+      },
       "density": null,
       "safety": "fish",
       "food": null,
@@ -4728,6 +4730,24 @@
       },
       "grams": {},
       "density": 0.921,
+      "safety": "none",
+      "food": null,
+      "name": null,
+      "estimated": true
+    },
+    "green-tea": {
+      "per100g": {
+        "kcal": 300,
+        "protein": 25,
+        "fat": 5,
+        "satfat": 1,
+        "carb": 50,
+        "sugar": 0,
+        "fiber": 30,
+        "sodium": 10
+      },
+      "grams": {},
+      "density": 0.2,
       "safety": "none",
       "food": null,
       "name": null,
@@ -5210,6 +5230,24 @@
       "safety": "none",
       "food": 1584,
       "name": "Jujube (chinese date), dried",
+      "estimated": false
+    },
+    "kanpyo": {
+      "per100g": {
+        "kcal": 258.0,
+        "protein": 8.58,
+        "fat": 0.56,
+        "satfat": 0.045,
+        "carb": 65.03,
+        "sugar": null,
+        "fiber": 9.8,
+        "sodium": 15.0
+      },
+      "grams": {},
+      "density": null,
+      "safety": "none",
+      "food": 2108,
+      "name": "Kanpyo (dried gourd strips)",
       "estimated": false
     },
     "karashi-powder": {
@@ -11580,6 +11618,12 @@
       },
       "raw": []
     },
+    "cha-shao-bao": {
+      "eaten": {
+        "2-0": 0
+      },
+      "raw": []
+    },
     "cha-trung-hap": {
       "eaten": {
         "1-0": 0.1,
@@ -11781,6 +11825,26 @@
       },
       "raw": []
     },
+    "chirashi-zushi": {
+      "eaten": {
+        "0-2": 0,
+        "1-0": 0.85,
+        "1-1": 0.9,
+        "1-2": 0.95,
+        "1-4": 0.02,
+        "1-6": 0.9,
+        "1-7": 0.9,
+        "1-8": 0.9,
+        "1-9": 0.9,
+        "1-10": 0.9,
+        "2-4": 0.5,
+        "3-0": 0.95,
+        "3-1": 0.65,
+        "3-2": 0.05,
+        "3-3": 0.02
+      },
+      "raw": []
+    },
     "chong-qing-la-zi-ji": {
       "eaten": {
         "0-0": 0.7,
@@ -11971,6 +12035,10 @@
       },
       "raw": []
     },
+    "crema-pasticcera": {
+      "eaten": {},
+      "raw": []
+    },
     "creme-anglaise": {
       "eaten": {
         "0-3": 0.1
@@ -11991,6 +12059,10 @@
       "eaten": {
         "1-0": 0.5
       },
+      "raw": []
+    },
+    "croccante": {
+      "eaten": {},
       "raw": []
     },
     "croque-monsieur": {
@@ -13365,6 +13437,33 @@
       },
       "raw": []
     },
+    "jokbal": {
+      "eaten": {
+        "0-0": 0.65,
+        "0-1": 0,
+        "1-0": 0.05,
+        "1-1": 0.1,
+        "1-2": 0.1,
+        "1-3": 0.1,
+        "1-4": 0.1,
+        "1-5": 0.1,
+        "1-6": 0.1,
+        "2-0": 0.05,
+        "2-1": 0.05,
+        "2-2": 0.02,
+        "2-3": 0.02,
+        "2-4": 0.05,
+        "2-5": 0.02,
+        "2-6": 0.02,
+        "2-7": 0,
+        "2-8": 0,
+        "2-9": 0,
+        "2-10": 0.1
+      },
+      "raw": [
+        "3-0"
+      ]
+    },
     "jun-gu-dun-ru-ge": {
       "eaten": {
         "0-0": 0.65,
@@ -13907,6 +14006,14 @@
       },
       "raw": []
     },
+    "longjing-xia-ren": {
+      "eaten": {
+        "1-1": 0.5,
+        "2-0": 0.1,
+        "2-3": 0.5
+      },
+      "raw": []
+    },
     "lu-cai": {
       "eaten": {
         "0-1": 0.05,
@@ -14326,6 +14433,13 @@
       },
       "raw": []
     },
+    "oeufs-a-la-neige": {
+      "eaten": {
+        "0-2": 0.1,
+        "1-3": 0
+      },
+      "raw": []
+    },
     "oi-muchim": {
       "eaten": {
         "0-0": 0.98
@@ -14454,6 +14568,13 @@
         "0-3": 0.75,
         "0-4": 0.75,
         "0-5": 0.8
+      },
+      "raw": []
+    },
+    "pan-di-spagna": {
+      "eaten": {
+        "0-3": 0.05,
+        "2-1": 0.5
       },
       "raw": []
     },
@@ -14826,6 +14947,14 @@
       },
       "raw": []
     },
+    "qing-tang-yu-yuan": {
+      "eaten": {
+        "0-0": 0.4,
+        "0-1": 0.1,
+        "0-2": 0.1
+      },
+      "raw": []
+    },
     "qing-zheng-nan-gua": {
       "eaten": {
         "0-1": 0
@@ -15127,6 +15256,13 @@
       "eaten": {
         "0-1": 0.5,
         "1-2": 0
+      },
+      "raw": []
+    },
+    "seolleongtang": {
+      "eaten": {
+        "0-0": 0.1,
+        "1-0": 0
       },
       "raw": []
     },
@@ -15581,6 +15717,12 @@
       },
       "raw": []
     },
+    "sushi-meshi": {
+      "eaten": {
+        "0-2": 0
+      },
+      "raw": []
+    },
     "tai-shi-lu-rou-fan": {
       "eaten": {
         "1-5": 0,
@@ -15890,6 +16032,12 @@
     },
     "tuong-dau-phong": {
       "eaten": {},
+      "raw": []
+    },
+    "veloute": {
+      "eaten": {
+        "2-0": 0.1
+      },
       "raw": []
     },
     "vichyssoise": {
