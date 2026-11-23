@@ -21,10 +21,10 @@ ingredients:
 sources:
   - { title: "HowToCook：陈皮排骨汤的做法", author: HowToCook 社区, url: "https://github.com/Anduin2017/HowToCook/blob/master/dishes/soup/陈皮排骨汤.md" }
   - { title: "On Food and Cooking: The Science and Lore of the Kitchen（修订版，2004）", author: Harold McGee }
-updated: 2026-10-01
+updated: 2026-11-22
 ---
 
-陈皮排骨汤清亮不浑，排骨软而不散，汤里带着陈皮和几味干货的草木香。它靠隔水炖成：炖盅坐在外锅的热水里，盅里的汤只是微微发热，不会翻滚，见[传热](/principles/heat-transfer/)。
+陈皮排骨汤清亮不浑，排骨软而不散，汤里带着陈皮和几味干货的草木香。它靠隔水炖成：炖盅坐在外锅的热水里，盅里的汤慢慢热到接近沸点，却不会翻滚，见[传热](/principles/heat-transfer/)。
 
 排骨先[焯水](/principles/blanching/)、洗掉浮沫，炖出来的汤才没有灰色小颗粒。接着长时间温和地炖，排骨上的结缔组织慢慢软化，一部分胶原转为明胶，汤和肉才有柔和的口感，见[胶原与明胶](/principles/collagen-gelatin/)。肉块有大有小，炖够时间后要挑最厚的一块检查，汤烫了不等于肉烂了。
 
