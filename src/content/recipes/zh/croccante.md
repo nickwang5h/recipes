@@ -3,8 +3,8 @@ title: 杏仁脆糖
 original: Croccante alle mandorle
 cuisine: italian
 course: dessert
-summary: 烤香的杏仁倒进熬到 140°C 的糖和蜂蜜里，拌到约 170°C、颜色转成浅琥珀就离火，摊薄放凉，切成长条。一咬就脆，满是杏仁香。
-servings: 6
+summary: 烤香的杏仁倒进熬到 140°C 的糖和蜂蜜里，拌到约 170°C 离火，颜色先转成浅琥珀就提前离火，摊薄放凉，切成长条。一咬就脆，满是杏仁香。
+servings: 24
 time: { prep: 35, cook: 15 }
 principles: [sugar-syrup, caramelization]
 ingredients:

@@ -1,7 +1,7 @@
 ---
 title: Croccante (Italian Almond Brittle)
 original: Croccante alle mandorle
-summary: Toasted almonds go into sugar and honey cooked to 140°C (285°F), and are stirred until about 170°C (340°F), when the colour turns light amber; then it comes off the heat, is spread thin to cool and cut into bars. It snaps cleanly and tastes of toasted almonds.
+summary: Toasted almonds go into sugar and honey cooked to 140°C (285°F), and are stirred until about 170°C (340°F), or until the colour turns light amber if that comes first; then it comes off the heat, is spread thin to cool and cut into bars. It snaps cleanly and tastes of toasted almonds.
 ingredients:
   - items:
       - { name: almonds, note: blanched }
