@@ -55,7 +55,7 @@ The rice is made the same way as [sushi rice](/recipes/sushi-meshi/): the vinega
 5. Boil the kanpyo for 3 minutes, transfer to iced water, squeeze dry and cut into short pieces.
 6. Cut the carrot into fine julienne.
 7. Put the shiitake, drained burdock and kanpyo in a medium saucepan, add the dashi, shiitake soaking water, sake, mirin, 1 tbsp sugar and soy sauce, bring to a simmer over medium heat and skim off the foam.
-8. Turn the heat to low, set a drop lid on top and simmer; when the liquid is nearly gone, add the carrot and cook until almost no liquid is left, about 20–25 minutes in all. Spread it on a plate and let it cool completely.
+8. Turn the heat to low, set a drop lid (a small lid resting right on the food) on top and simmer; when the liquid is nearly gone, add the carrot and cook until almost no liquid is left, about 20–25 minutes in all. Spread it on a plate and let it cool completely.
 9. Make the sushi rice as in the sushi rice recipe, using the rice, water, kombu and sushi vinegar listed here, and fan it until it is about body temperature.
 10. Whisk the eggs, mirin, salt and starch slurry together and strain through a fine sieve.
 11. Heat a nonstick pan over medium heat, wipe it with a paper towel dipped in the oil, turn to medium-low, pour in just enough egg to cover the bottom and tilt the pan to spread it. Cover and cook about 1 minute, until the surface is no longer wet. Take it out to cool and cook the rest the same way.

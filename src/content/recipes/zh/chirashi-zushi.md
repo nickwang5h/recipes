@@ -45,7 +45,7 @@ ingredients:
       - { ref: sesame-seed, qty: 0.5, unit: 汤匙, note: 炒香的白芝麻 }
       - { ref: nori, name: 海苔丝, qty: 2, unit: 汤匙 }
 sources:
-  - title: "Chirashi Sushi (ちらし寿司)"
+  - title: "Chirashi Sushi 五目ちらし寿司"
     author: Namiko Hirasawa Chen，Just One Cookbook
     url: https://www.justonecookbook.com/chirashi-sushi/
   - title: "Safe cooking temperatures"
@@ -70,7 +70,7 @@ updated: 2026-11-23
 5. 干瓢放进开水煮 3 分钟，捞进冰水，挤干，切小段。
 6. 胡萝卜切细丝。
 7. 香菇、沥干的牛蒡和干瓢放进中号锅，加高汤、泡香菇的水、清酒、味醂、1 汤匙糖和酱油，中火煮到微滚，撇去浮沫。
-8. 转小火，盖上落盖，煮到汤汁快收干时放胡萝卜，再煮到几乎没有汤汁，前后约 20–25 分钟。倒在盘里放到凉透。
+8. 转小火，盖上落盖（直接压在菜面上的小盖），煮到汤汁快收干时放胡萝卜，再煮到几乎没有汤汁，前后约 20–25 分钟。倒在盘里放到凉透。
 9. 照寿司醋饭的做法，用配料表里的米、水、昆布和寿司醋做好醋饭，扇到和体温差不多。
 10. 鸡蛋、味醂、盐和淀粉水搅匀，过细筛。
 11. 不粘锅中火烧热，用蘸油的厨房纸擦一层油，转中小火，倒入刚好铺满锅底的蛋液，转锅摊匀，盖上盖煎约 1 分钟，到表面不再湿。取出放凉，照样煎完。
