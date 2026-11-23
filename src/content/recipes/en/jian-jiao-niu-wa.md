@@ -32,9 +32,9 @@ Spicy braised bullfrog is hot, savoury and fragrant with the sour of pickled pep
 
 ## Steps
 
-1. Use bullfrog that has been skinned, gutted and cleaned. Pick out any bone fragments and pat the surface dry. To rinse off residue, wash it in a basin without splashing water around, then drain and pat dry.
+1. Use bullfrog that has been skinned, gutted and cleaned. Pick out any bone fragments and pat the surface dry. To rinse off residue, wash it in a basin without splashing water around, then drain and pat dry. Do not scrub it repeatedly with salt and beer.
 2. Add a little salt, 30 g of starch, 10 ml of Shaoxing wine and the 5 g of white pepper for the marinade, and toss until each piece carries a thin coat of batter. Refrigerate for 5–10 minutes. Drain and chop the pickled ginger and the two kinds of pickled chilies, smash the garlic and cut the bell peppers.
-3. Pour 200 ml of oil into the pan and heat until ripples show on the surface without smoking. Try one small piece first: the coating should set quickly. Then add the bullfrog in batches, nudging the pieces apart. Fry for about 10 seconds, and lift them out the moment the coating sets.
+3. Pour 200 ml of oil into the pan and heat until ripples show on the surface without smoking. Try one small piece first: the coating should set quickly. Then add the bullfrog in batches, nudging the pieces apart. Fry for about 10 seconds, and lift them out the moment the coating sets; the meat is still raw at this point.
 4. Turn off the heat. Spoon the extra oil into a dry heatproof container and leave 30 ml in the pan, then add the optional 20 ml of lard. If you are not using lard, leave 50 ml of vegetable oil in total. Heat again over medium heat.
 5. Add the pickled ginger, pickled chilies, wild mountain chilies and garlic and stir-fry until fragrant, then add the doubanjiang. Stir-fry for about 30 seconds, until the oil turns red and the paste loosens. Slowly pour the beer in along the edge of the pan and cook until it returns to a boil.
 6. Add the passed-through-oil bullfrog and the white pepper for the braising liquid, and nudge gently so the liquid coats all the pieces. Braise over medium heat for 3 minutes, then insert a thermometer into the centre of the thickest leg, away from the bone: it is done at 75°C (165°F). If not, keep braising, and keep liquid in the pan the whole time.
