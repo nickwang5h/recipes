@@ -13,7 +13,7 @@ sources:
   - title: "Protein: coagulation"
     author: Institute of Food Science & Technology
     url: https://www.ifst.org/lovefoodlovescience/resources/protein-coagulation
-updated: 2026-10-01
+updated: 2026-11-22
 ---
 
 ## 是什么
@@ -48,7 +48,7 @@ updated: 2026-10-01
 
 ## 在各个菜系里
 
-- **中餐**：蒸蛋靠稀释后的蛋白质网络留住水；[番茄炒蛋](/recipes/tomato-egg/)要在蛋液刚凝成大块时出锅；[清蒸鱼](/recipes/steamed-fish/)要在鱼肉刚变白、贴骨处还略带透明时关火。
+- **中餐**：蒸蛋靠稀释后的蛋白质网络留住水；[番茄炒蛋](/recipes/tomato-egg/)要在蛋液刚凝成大块时出锅；[清蒸鱼](/recipes/steamed-fish/)要在贴骨的鱼肉刚变白、能轻易离骨时关火。
 - **法餐**：[法式蛋卷](/recipes/french-omelette/)靠快速搅拌，让蛋液凝成细小的凝乳，外面定形，里面仍软；[荷兰酱](/recipes/hollandaise/)既用蛋黄增稠，也用[乳化](/principles/emulsification/)，所以要边搅边温和加热。
 - **意大利菜**：[罗马蛋黄培根意面](/recipes/carbonara/)靠热面和温热的锅，让蛋黄酱慢慢变稠；离火翻拌，停在顺滑裹面的时候。
 - **日本料理**：[茶碗蒸](/recipes/chawanmushi/)用出汁稀释蛋液，再温和蒸凝，蛋白质网络托住汤汁，成了细滑的咸蛋羹。蒸汽太猛或蒸得太久，网络收紧，蛋羹就粗硬、出水。

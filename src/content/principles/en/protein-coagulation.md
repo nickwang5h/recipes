@@ -2,7 +2,7 @@
 title: Protein Denaturation and Coagulation
 aliases: [Protein denaturation, Protein coagulation]
 summary: Heat makes proteins unfold and then link into a network that holds water. Temperature, time and water decide whether a bowl of beaten egg sets tender and smooth, or turns grainy and weeps.
-translated: 2026-10-01
+translated: 2026-11-22
 ---
 
 ## What it is
@@ -37,7 +37,7 @@ Protein molecules carry a charge on their surface, so they repel one another. Sa
 
 ## Across cuisines
 
-- **Chinese**: steamed egg relies on a diluted protein network to hold water; [Stir-fried Tomatoes and Eggs](/recipes/tomato-egg/) comes out of the pan just as the egg sets into large curds; [Steamed Whole Fish with Ginger and Green Onion](/recipes/steamed-fish/) comes off the heat when the flesh has just turned white and the part next to the bone is still slightly translucent.
+- **Chinese**: steamed egg relies on a diluted protein network to hold water; [Stir-fried Tomatoes and Eggs](/recipes/tomato-egg/) comes out of the pan just as the egg sets into large curds; [Steamed Whole Fish with Ginger and Green Onion](/recipes/steamed-fish/) comes off the heat when the flesh next to the bone has just turned white and lifts easily off the bone.
 - **French**: a [French Omelette](/recipes/french-omelette/) relies on fast stirring to set the egg into fine curds, set outside and still soft inside; [Hollandaise Sauce](/recipes/hollandaise/) uses both the thickening of the yolk and [emulsification](/principles/emulsification/), so it is heated gently while you stir.
 - **Italian**: [Spaghetti Carbonara](/recipes/carbonara/) uses hot pasta and a warm pan to thicken the yolk sauce slowly; toss it off the heat and stop when it is smooth and coats the pasta.
 - **Japanese**: [Chawanmushi](/recipes/chawanmushi/) dilutes the egg with *dashi* and steams it gently until set, so the protein network holds the broth and makes a fine, smooth savoury custard. If the steam is too strong or the steaming goes on too long, the network tightens and the custard turns coarse, hard and weepy.
